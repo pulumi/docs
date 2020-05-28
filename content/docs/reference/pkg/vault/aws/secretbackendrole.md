@@ -196,7 +196,9 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-required"
             title="Required">
-        <span>Backend</span>
+        <span id="backend_csharp">
+<a href="#backend_csharp" style="color: inherit; text-decoration: inherit;">Backend</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -206,7 +208,9 @@ with no leading or trailing `/`s.
 
     <dt class="property-required"
             title="Required">
-        <span>Credential<wbr>Type</span>
+        <span id="credentialtype_csharp">
+<a href="#credentialtype_csharp" style="color: inherit; text-decoration: inherit;">Credential<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -217,7 +221,9 @@ retrieving credentials from the role. Must be one of `iam_user`, `assumed_role`,
 
     <dt class="property-optional"
             title="Optional">
-        <span>Default<wbr>Sts<wbr>Ttl</span>
+        <span id="defaultststtl_csharp">
+<a href="#defaultststtl_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Sts<wbr>Ttl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -230,7 +236,9 @@ then this default TTL will be used. Valid only when `credential_type` is one of
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Sts<wbr>Ttl</span>
+        <span id="maxststtl_csharp">
+<a href="#maxststtl_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Sts<wbr>Ttl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -241,7 +249,9 @@ one of `assumed_role` or `federation_token`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -251,7 +261,9 @@ Must be unique within the backend.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Policy<wbr>Arns</span>
+        <span id="policyarns_csharp">
+<a href="#policyarns_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Arns</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -266,7 +278,9 @@ be specified.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Policy<wbr>Document</span>
+        <span id="policydocument_csharp">
+<a href="#policydocument_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Document</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -279,7 +293,9 @@ act as a filter on what the credentials can do, similar to `policy_arns`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Role<wbr>Arns</span>
+        <span id="rolearns_csharp">
+<a href="#rolearns_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Arns</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -297,7 +313,9 @@ prohibited otherwise.
 
     <dt class="property-required"
             title="Required">
-        <span>Backend</span>
+        <span id="backend_go">
+<a href="#backend_go" style="color: inherit; text-decoration: inherit;">Backend</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -307,7 +325,9 @@ with no leading or trailing `/`s.
 
     <dt class="property-required"
             title="Required">
-        <span>Credential<wbr>Type</span>
+        <span id="credentialtype_go">
+<a href="#credentialtype_go" style="color: inherit; text-decoration: inherit;">Credential<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -318,7 +338,9 @@ retrieving credentials from the role. Must be one of `iam_user`, `assumed_role`,
 
     <dt class="property-optional"
             title="Optional">
-        <span>Default<wbr>Sts<wbr>Ttl</span>
+        <span id="defaultststtl_go">
+<a href="#defaultststtl_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Sts<wbr>Ttl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -331,7 +353,9 @@ then this default TTL will be used. Valid only when `credential_type` is one of
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Sts<wbr>Ttl</span>
+        <span id="maxststtl_go">
+<a href="#maxststtl_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Sts<wbr>Ttl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -342,7 +366,9 @@ one of `assumed_role` or `federation_token`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -352,7 +378,9 @@ Must be unique within the backend.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Policy<wbr>Arns</span>
+        <span id="policyarns_go">
+<a href="#policyarns_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Arns</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -367,7 +395,9 @@ be specified.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Policy<wbr>Document</span>
+        <span id="policydocument_go">
+<a href="#policydocument_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Document</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -380,7 +410,9 @@ act as a filter on what the credentials can do, similar to `policy_arns`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Role<wbr>Arns</span>
+        <span id="rolearns_go">
+<a href="#rolearns_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Arns</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -398,7 +430,9 @@ prohibited otherwise.
 
     <dt class="property-required"
             title="Required">
-        <span>backend</span>
+        <span id="backend_nodejs">
+<a href="#backend_nodejs" style="color: inherit; text-decoration: inherit;">backend</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -408,7 +442,9 @@ with no leading or trailing `/`s.
 
     <dt class="property-required"
             title="Required">
-        <span>credential<wbr>Type</span>
+        <span id="credentialtype_nodejs">
+<a href="#credentialtype_nodejs" style="color: inherit; text-decoration: inherit;">credential<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -419,7 +455,9 @@ retrieving credentials from the role. Must be one of `iam_user`, `assumed_role`,
 
     <dt class="property-optional"
             title="Optional">
-        <span>default<wbr>Sts<wbr>Ttl</span>
+        <span id="defaultststtl_nodejs">
+<a href="#defaultststtl_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Sts<wbr>Ttl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -432,7 +470,9 @@ then this default TTL will be used. Valid only when `credential_type` is one of
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Sts<wbr>Ttl</span>
+        <span id="maxststtl_nodejs">
+<a href="#maxststtl_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Sts<wbr>Ttl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -443,7 +483,9 @@ one of `assumed_role` or `federation_token`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -453,7 +495,9 @@ Must be unique within the backend.
 
     <dt class="property-optional"
             title="Optional">
-        <span>policy<wbr>Arns</span>
+        <span id="policyarns_nodejs">
+<a href="#policyarns_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Arns</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -468,7 +512,9 @@ be specified.
 
     <dt class="property-optional"
             title="Optional">
-        <span>policy<wbr>Document</span>
+        <span id="policydocument_nodejs">
+<a href="#policydocument_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Document</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -481,7 +527,9 @@ act as a filter on what the credentials can do, similar to `policy_arns`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>role<wbr>Arns</span>
+        <span id="rolearns_nodejs">
+<a href="#rolearns_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Arns</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -499,7 +547,9 @@ prohibited otherwise.
 
     <dt class="property-required"
             title="Required">
-        <span>backend</span>
+        <span id="backend_python">
+<a href="#backend_python" style="color: inherit; text-decoration: inherit;">backend</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -509,7 +559,9 @@ with no leading or trailing `/`s.
 
     <dt class="property-required"
             title="Required">
-        <span>credential_<wbr>type</span>
+        <span id="credential_type_python">
+<a href="#credential_type_python" style="color: inherit; text-decoration: inherit;">credential_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -520,7 +572,9 @@ retrieving credentials from the role. Must be one of `iam_user`, `assumed_role`,
 
     <dt class="property-optional"
             title="Optional">
-        <span>default_<wbr>sts_<wbr>ttl</span>
+        <span id="default_sts_ttl_python">
+<a href="#default_sts_ttl_python" style="color: inherit; text-decoration: inherit;">default_<wbr>sts_<wbr>ttl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -533,7 +587,9 @@ then this default TTL will be used. Valid only when `credential_type` is one of
 
     <dt class="property-optional"
             title="Optional">
-        <span>max_<wbr>sts_<wbr>ttl</span>
+        <span id="max_sts_ttl_python">
+<a href="#max_sts_ttl_python" style="color: inherit; text-decoration: inherit;">max_<wbr>sts_<wbr>ttl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -544,7 +600,9 @@ one of `assumed_role` or `federation_token`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -554,7 +612,9 @@ Must be unique within the backend.
 
     <dt class="property-optional"
             title="Optional">
-        <span>policy_<wbr>arns</span>
+        <span id="policy_arns_python">
+<a href="#policy_arns_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>arns</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -569,7 +629,9 @@ be specified.
 
     <dt class="property-optional"
             title="Optional">
-        <span>policy_<wbr>document</span>
+        <span id="policy_document_python">
+<a href="#policy_document_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>document</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -582,7 +644,9 @@ act as a filter on what the credentials can do, similar to `policy_arns`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>role_<wbr>arns</span>
+        <span id="role_arns_python">
+<a href="#role_arns_python" style="color: inherit; text-decoration: inherit;">role_<wbr>arns</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -611,7 +675,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -626,7 +692,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -641,7 +709,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -656,7 +726,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -797,7 +869,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Backend</span>
+        <span id="state_backend_csharp">
+<a href="#state_backend_csharp" style="color: inherit; text-decoration: inherit;">Backend</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -807,7 +881,9 @@ with no leading or trailing `/`s.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Credential<wbr>Type</span>
+        <span id="state_credentialtype_csharp">
+<a href="#state_credentialtype_csharp" style="color: inherit; text-decoration: inherit;">Credential<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -818,7 +894,9 @@ retrieving credentials from the role. Must be one of `iam_user`, `assumed_role`,
 
     <dt class="property-optional"
             title="Optional">
-        <span>Default<wbr>Sts<wbr>Ttl</span>
+        <span id="state_defaultststtl_csharp">
+<a href="#state_defaultststtl_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Sts<wbr>Ttl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -831,7 +909,9 @@ then this default TTL will be used. Valid only when `credential_type` is one of
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Sts<wbr>Ttl</span>
+        <span id="state_maxststtl_csharp">
+<a href="#state_maxststtl_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Sts<wbr>Ttl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -842,7 +922,9 @@ one of `assumed_role` or `federation_token`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -852,7 +934,9 @@ Must be unique within the backend.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Policy<wbr>Arns</span>
+        <span id="state_policyarns_csharp">
+<a href="#state_policyarns_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Arns</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -867,7 +951,9 @@ be specified.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Policy<wbr>Document</span>
+        <span id="state_policydocument_csharp">
+<a href="#state_policydocument_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Document</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -880,7 +966,9 @@ act as a filter on what the credentials can do, similar to `policy_arns`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Role<wbr>Arns</span>
+        <span id="state_rolearns_csharp">
+<a href="#state_rolearns_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Arns</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -898,7 +986,9 @@ prohibited otherwise.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Backend</span>
+        <span id="state_backend_go">
+<a href="#state_backend_go" style="color: inherit; text-decoration: inherit;">Backend</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -908,7 +998,9 @@ with no leading or trailing `/`s.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Credential<wbr>Type</span>
+        <span id="state_credentialtype_go">
+<a href="#state_credentialtype_go" style="color: inherit; text-decoration: inherit;">Credential<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -919,7 +1011,9 @@ retrieving credentials from the role. Must be one of `iam_user`, `assumed_role`,
 
     <dt class="property-optional"
             title="Optional">
-        <span>Default<wbr>Sts<wbr>Ttl</span>
+        <span id="state_defaultststtl_go">
+<a href="#state_defaultststtl_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Sts<wbr>Ttl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -932,7 +1026,9 @@ then this default TTL will be used. Valid only when `credential_type` is one of
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Sts<wbr>Ttl</span>
+        <span id="state_maxststtl_go">
+<a href="#state_maxststtl_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Sts<wbr>Ttl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -943,7 +1039,9 @@ one of `assumed_role` or `federation_token`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -953,7 +1051,9 @@ Must be unique within the backend.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Policy<wbr>Arns</span>
+        <span id="state_policyarns_go">
+<a href="#state_policyarns_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Arns</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -968,7 +1068,9 @@ be specified.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Policy<wbr>Document</span>
+        <span id="state_policydocument_go">
+<a href="#state_policydocument_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Document</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -981,7 +1083,9 @@ act as a filter on what the credentials can do, similar to `policy_arns`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Role<wbr>Arns</span>
+        <span id="state_rolearns_go">
+<a href="#state_rolearns_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Arns</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -999,7 +1103,9 @@ prohibited otherwise.
 
     <dt class="property-optional"
             title="Optional">
-        <span>backend</span>
+        <span id="state_backend_nodejs">
+<a href="#state_backend_nodejs" style="color: inherit; text-decoration: inherit;">backend</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1009,7 +1115,9 @@ with no leading or trailing `/`s.
 
     <dt class="property-optional"
             title="Optional">
-        <span>credential<wbr>Type</span>
+        <span id="state_credentialtype_nodejs">
+<a href="#state_credentialtype_nodejs" style="color: inherit; text-decoration: inherit;">credential<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1020,7 +1128,9 @@ retrieving credentials from the role. Must be one of `iam_user`, `assumed_role`,
 
     <dt class="property-optional"
             title="Optional">
-        <span>default<wbr>Sts<wbr>Ttl</span>
+        <span id="state_defaultststtl_nodejs">
+<a href="#state_defaultststtl_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Sts<wbr>Ttl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1033,7 +1143,9 @@ then this default TTL will be used. Valid only when `credential_type` is one of
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Sts<wbr>Ttl</span>
+        <span id="state_maxststtl_nodejs">
+<a href="#state_maxststtl_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Sts<wbr>Ttl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1044,7 +1156,9 @@ one of `assumed_role` or `federation_token`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1054,7 +1168,9 @@ Must be unique within the backend.
 
     <dt class="property-optional"
             title="Optional">
-        <span>policy<wbr>Arns</span>
+        <span id="state_policyarns_nodejs">
+<a href="#state_policyarns_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Arns</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1069,7 +1185,9 @@ be specified.
 
     <dt class="property-optional"
             title="Optional">
-        <span>policy<wbr>Document</span>
+        <span id="state_policydocument_nodejs">
+<a href="#state_policydocument_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Document</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1082,7 +1200,9 @@ act as a filter on what the credentials can do, similar to `policy_arns`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>role<wbr>Arns</span>
+        <span id="state_rolearns_nodejs">
+<a href="#state_rolearns_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Arns</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1100,7 +1220,9 @@ prohibited otherwise.
 
     <dt class="property-optional"
             title="Optional">
-        <span>backend</span>
+        <span id="state_backend_python">
+<a href="#state_backend_python" style="color: inherit; text-decoration: inherit;">backend</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1110,7 +1232,9 @@ with no leading or trailing `/`s.
 
     <dt class="property-optional"
             title="Optional">
-        <span>credential_<wbr>type</span>
+        <span id="state_credential_type_python">
+<a href="#state_credential_type_python" style="color: inherit; text-decoration: inherit;">credential_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1121,7 +1245,9 @@ retrieving credentials from the role. Must be one of `iam_user`, `assumed_role`,
 
     <dt class="property-optional"
             title="Optional">
-        <span>default_<wbr>sts_<wbr>ttl</span>
+        <span id="state_default_sts_ttl_python">
+<a href="#state_default_sts_ttl_python" style="color: inherit; text-decoration: inherit;">default_<wbr>sts_<wbr>ttl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1134,7 +1260,9 @@ then this default TTL will be used. Valid only when `credential_type` is one of
 
     <dt class="property-optional"
             title="Optional">
-        <span>max_<wbr>sts_<wbr>ttl</span>
+        <span id="state_max_sts_ttl_python">
+<a href="#state_max_sts_ttl_python" style="color: inherit; text-decoration: inherit;">max_<wbr>sts_<wbr>ttl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1145,7 +1273,9 @@ one of `assumed_role` or `federation_token`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1155,7 +1285,9 @@ Must be unique within the backend.
 
     <dt class="property-optional"
             title="Optional">
-        <span>policy_<wbr>arns</span>
+        <span id="state_policy_arns_python">
+<a href="#state_policy_arns_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>arns</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1170,7 +1302,9 @@ be specified.
 
     <dt class="property-optional"
             title="Optional">
-        <span>policy_<wbr>document</span>
+        <span id="state_policy_document_python">
+<a href="#state_policy_document_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>document</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1183,7 +1317,9 @@ act as a filter on what the credentials can do, similar to `policy_arns`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>role_<wbr>arns</span>
+        <span id="state_role_arns_python">
+<a href="#state_role_arns_python" style="color: inherit; text-decoration: inherit;">role_<wbr>arns</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>

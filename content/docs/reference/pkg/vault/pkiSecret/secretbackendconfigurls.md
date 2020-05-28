@@ -20,7 +20,32 @@ Allows setting the issuing certificate endpoints, CRL distribution points, and O
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Vault = Pulumi.Vault;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var pki = new Vault.PkiSecret.SecretBackend("pki", new Vault.PkiSecret.SecretBackendArgs
+        {
+            DefaultLeaseTtlSeconds = 3600,
+            MaxLeaseTtlSeconds = 86400,
+            Path = "%s",
+        });
+        var configUrls = new Vault.PkiSecret.SecretBackendConfigUrls("configUrls", new Vault.PkiSecret.SecretBackendConfigUrlsArgs
+        {
+            Backend = pki.Path,
+            IssuingCertificates = 
+            {
+                "http://127.0.0.1:8200/v1/pki/ca",
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -245,7 +270,9 @@ The SecretBackendConfigUrls resource accepts the following [input]({{< relref "/
 
     <dt class="property-required"
             title="Required">
-        <span>Backend</span>
+        <span id="backend_csharp">
+<a href="#backend_csharp" style="color: inherit; text-decoration: inherit;">Backend</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -254,7 +281,9 @@ The SecretBackendConfigUrls resource accepts the following [input]({{< relref "/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Crl<wbr>Distribution<wbr>Points</span>
+        <span id="crldistributionpoints_csharp">
+<a href="#crldistributionpoints_csharp" style="color: inherit; text-decoration: inherit;">Crl<wbr>Distribution<wbr>Points</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -263,7 +292,9 @@ The SecretBackendConfigUrls resource accepts the following [input]({{< relref "/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Issuing<wbr>Certificates</span>
+        <span id="issuingcertificates_csharp">
+<a href="#issuingcertificates_csharp" style="color: inherit; text-decoration: inherit;">Issuing<wbr>Certificates</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -272,7 +303,9 @@ The SecretBackendConfigUrls resource accepts the following [input]({{< relref "/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ocsp<wbr>Servers</span>
+        <span id="ocspservers_csharp">
+<a href="#ocspservers_csharp" style="color: inherit; text-decoration: inherit;">Ocsp<wbr>Servers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -288,7 +321,9 @@ The SecretBackendConfigUrls resource accepts the following [input]({{< relref "/
 
     <dt class="property-required"
             title="Required">
-        <span>Backend</span>
+        <span id="backend_go">
+<a href="#backend_go" style="color: inherit; text-decoration: inherit;">Backend</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -297,7 +332,9 @@ The SecretBackendConfigUrls resource accepts the following [input]({{< relref "/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Crl<wbr>Distribution<wbr>Points</span>
+        <span id="crldistributionpoints_go">
+<a href="#crldistributionpoints_go" style="color: inherit; text-decoration: inherit;">Crl<wbr>Distribution<wbr>Points</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -306,7 +343,9 @@ The SecretBackendConfigUrls resource accepts the following [input]({{< relref "/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Issuing<wbr>Certificates</span>
+        <span id="issuingcertificates_go">
+<a href="#issuingcertificates_go" style="color: inherit; text-decoration: inherit;">Issuing<wbr>Certificates</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -315,7 +354,9 @@ The SecretBackendConfigUrls resource accepts the following [input]({{< relref "/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ocsp<wbr>Servers</span>
+        <span id="ocspservers_go">
+<a href="#ocspservers_go" style="color: inherit; text-decoration: inherit;">Ocsp<wbr>Servers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -331,7 +372,9 @@ The SecretBackendConfigUrls resource accepts the following [input]({{< relref "/
 
     <dt class="property-required"
             title="Required">
-        <span>backend</span>
+        <span id="backend_nodejs">
+<a href="#backend_nodejs" style="color: inherit; text-decoration: inherit;">backend</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -340,7 +383,9 @@ The SecretBackendConfigUrls resource accepts the following [input]({{< relref "/
 
     <dt class="property-optional"
             title="Optional">
-        <span>crl<wbr>Distribution<wbr>Points</span>
+        <span id="crldistributionpoints_nodejs">
+<a href="#crldistributionpoints_nodejs" style="color: inherit; text-decoration: inherit;">crl<wbr>Distribution<wbr>Points</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -349,7 +394,9 @@ The SecretBackendConfigUrls resource accepts the following [input]({{< relref "/
 
     <dt class="property-optional"
             title="Optional">
-        <span>issuing<wbr>Certificates</span>
+        <span id="issuingcertificates_nodejs">
+<a href="#issuingcertificates_nodejs" style="color: inherit; text-decoration: inherit;">issuing<wbr>Certificates</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -358,7 +405,9 @@ The SecretBackendConfigUrls resource accepts the following [input]({{< relref "/
 
     <dt class="property-optional"
             title="Optional">
-        <span>ocsp<wbr>Servers</span>
+        <span id="ocspservers_nodejs">
+<a href="#ocspservers_nodejs" style="color: inherit; text-decoration: inherit;">ocsp<wbr>Servers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -374,7 +423,9 @@ The SecretBackendConfigUrls resource accepts the following [input]({{< relref "/
 
     <dt class="property-required"
             title="Required">
-        <span>backend</span>
+        <span id="backend_python">
+<a href="#backend_python" style="color: inherit; text-decoration: inherit;">backend</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -383,7 +434,9 @@ The SecretBackendConfigUrls resource accepts the following [input]({{< relref "/
 
     <dt class="property-optional"
             title="Optional">
-        <span>crl_<wbr>distribution_<wbr>points</span>
+        <span id="crl_distribution_points_python">
+<a href="#crl_distribution_points_python" style="color: inherit; text-decoration: inherit;">crl_<wbr>distribution_<wbr>points</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -392,7 +445,9 @@ The SecretBackendConfigUrls resource accepts the following [input]({{< relref "/
 
     <dt class="property-optional"
             title="Optional">
-        <span>issuing_<wbr>certificates</span>
+        <span id="issuing_certificates_python">
+<a href="#issuing_certificates_python" style="color: inherit; text-decoration: inherit;">issuing_<wbr>certificates</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -401,7 +456,9 @@ The SecretBackendConfigUrls resource accepts the following [input]({{< relref "/
 
     <dt class="property-optional"
             title="Optional">
-        <span>ocsp_<wbr>servers</span>
+        <span id="ocsp_servers_python">
+<a href="#ocsp_servers_python" style="color: inherit; text-decoration: inherit;">ocsp_<wbr>servers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -428,7 +485,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -443,7 +502,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -458,7 +519,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -473,7 +536,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -614,7 +679,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Backend</span>
+        <span id="state_backend_csharp">
+<a href="#state_backend_csharp" style="color: inherit; text-decoration: inherit;">Backend</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -623,7 +690,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Crl<wbr>Distribution<wbr>Points</span>
+        <span id="state_crldistributionpoints_csharp">
+<a href="#state_crldistributionpoints_csharp" style="color: inherit; text-decoration: inherit;">Crl<wbr>Distribution<wbr>Points</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -632,7 +701,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Issuing<wbr>Certificates</span>
+        <span id="state_issuingcertificates_csharp">
+<a href="#state_issuingcertificates_csharp" style="color: inherit; text-decoration: inherit;">Issuing<wbr>Certificates</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -641,7 +712,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ocsp<wbr>Servers</span>
+        <span id="state_ocspservers_csharp">
+<a href="#state_ocspservers_csharp" style="color: inherit; text-decoration: inherit;">Ocsp<wbr>Servers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -657,7 +730,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Backend</span>
+        <span id="state_backend_go">
+<a href="#state_backend_go" style="color: inherit; text-decoration: inherit;">Backend</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -666,7 +741,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Crl<wbr>Distribution<wbr>Points</span>
+        <span id="state_crldistributionpoints_go">
+<a href="#state_crldistributionpoints_go" style="color: inherit; text-decoration: inherit;">Crl<wbr>Distribution<wbr>Points</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -675,7 +752,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Issuing<wbr>Certificates</span>
+        <span id="state_issuingcertificates_go">
+<a href="#state_issuingcertificates_go" style="color: inherit; text-decoration: inherit;">Issuing<wbr>Certificates</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -684,7 +763,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ocsp<wbr>Servers</span>
+        <span id="state_ocspservers_go">
+<a href="#state_ocspservers_go" style="color: inherit; text-decoration: inherit;">Ocsp<wbr>Servers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -700,7 +781,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>backend</span>
+        <span id="state_backend_nodejs">
+<a href="#state_backend_nodejs" style="color: inherit; text-decoration: inherit;">backend</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -709,7 +792,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>crl<wbr>Distribution<wbr>Points</span>
+        <span id="state_crldistributionpoints_nodejs">
+<a href="#state_crldistributionpoints_nodejs" style="color: inherit; text-decoration: inherit;">crl<wbr>Distribution<wbr>Points</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -718,7 +803,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>issuing<wbr>Certificates</span>
+        <span id="state_issuingcertificates_nodejs">
+<a href="#state_issuingcertificates_nodejs" style="color: inherit; text-decoration: inherit;">issuing<wbr>Certificates</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -727,7 +814,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>ocsp<wbr>Servers</span>
+        <span id="state_ocspservers_nodejs">
+<a href="#state_ocspservers_nodejs" style="color: inherit; text-decoration: inherit;">ocsp<wbr>Servers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -743,7 +832,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>backend</span>
+        <span id="state_backend_python">
+<a href="#state_backend_python" style="color: inherit; text-decoration: inherit;">backend</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -752,7 +843,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>crl_<wbr>distribution_<wbr>points</span>
+        <span id="state_crl_distribution_points_python">
+<a href="#state_crl_distribution_points_python" style="color: inherit; text-decoration: inherit;">crl_<wbr>distribution_<wbr>points</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -761,7 +854,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>issuing_<wbr>certificates</span>
+        <span id="state_issuing_certificates_python">
+<a href="#state_issuing_certificates_python" style="color: inherit; text-decoration: inherit;">issuing_<wbr>certificates</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -770,7 +865,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>ocsp_<wbr>servers</span>
+        <span id="state_ocsp_servers_python">
+<a href="#state_ocsp_servers_python" style="color: inherit; text-decoration: inherit;">ocsp_<wbr>servers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>

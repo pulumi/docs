@@ -11,7 +11,7 @@ meta_desc: "Explore the AuthBackendLogin resource of the appRole module, includi
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Logs into Vault using the AppRole auth backend. See the [Vault
-documentation](https://www.vaultproject.io/docs/auth/approle.html) for more
+documentation](https://www.vaultproject.io/docs/auth/approle) for more
 information.
 
 
@@ -22,7 +22,44 @@ information.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Vault = Pulumi.Vault;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var approle = new Vault.AuthBackend("approle", new Vault.AuthBackendArgs
+        {
+            Type = "approle",
+        });
+        var example = new Vault.AppRole.AuthBackendRole("example", new Vault.AppRole.AuthBackendRoleArgs
+        {
+            Backend = approle.Path,
+            Policies = 
+            {
+                "default",
+                "dev",
+                "prod",
+            },
+            RoleName = "test-role",
+        });
+        var id = new Vault.AppRole.AuthBackendRoleSecretID("id", new Vault.AppRole.AuthBackendRoleSecretIDArgs
+        {
+            Backend = approle.Path,
+            RoleName = example.RoleName,
+        });
+        var login = new Vault.AppRole.AuthBackendLogin("login", new Vault.AppRole.AuthBackendLoginArgs
+        {
+            Backend = approle.Path,
+            RoleId = example.RoleId,
+            SecretId = id.SecretId,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -268,7 +305,9 @@ The AuthBackendLogin resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-required"
             title="Required">
-        <span>Role<wbr>Id</span>
+        <span id="roleid_csharp">
+<a href="#roleid_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -277,7 +316,9 @@ The AuthBackendLogin resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>Backend</span>
+        <span id="backend_csharp">
+<a href="#backend_csharp" style="color: inherit; text-decoration: inherit;">Backend</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -286,7 +327,9 @@ The AuthBackendLogin resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>Secret<wbr>Id</span>
+        <span id="secretid_csharp">
+<a href="#secretid_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -303,7 +346,9 @@ unless `bind_secret_id` is set to false on the role.
 
     <dt class="property-required"
             title="Required">
-        <span>Role<wbr>Id</span>
+        <span id="roleid_go">
+<a href="#roleid_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -312,7 +357,9 @@ unless `bind_secret_id` is set to false on the role.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Backend</span>
+        <span id="backend_go">
+<a href="#backend_go" style="color: inherit; text-decoration: inherit;">Backend</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -321,7 +368,9 @@ unless `bind_secret_id` is set to false on the role.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Secret<wbr>Id</span>
+        <span id="secretid_go">
+<a href="#secretid_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -338,7 +387,9 @@ unless `bind_secret_id` is set to false on the role.
 
     <dt class="property-required"
             title="Required">
-        <span>role<wbr>Id</span>
+        <span id="roleid_nodejs">
+<a href="#roleid_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -347,7 +398,9 @@ unless `bind_secret_id` is set to false on the role.
 
     <dt class="property-optional"
             title="Optional">
-        <span>backend</span>
+        <span id="backend_nodejs">
+<a href="#backend_nodejs" style="color: inherit; text-decoration: inherit;">backend</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -356,7 +409,9 @@ unless `bind_secret_id` is set to false on the role.
 
     <dt class="property-optional"
             title="Optional">
-        <span>secret<wbr>Id</span>
+        <span id="secretid_nodejs">
+<a href="#secretid_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -373,7 +428,9 @@ unless `bind_secret_id` is set to false on the role.
 
     <dt class="property-required"
             title="Required">
-        <span>role_<wbr>id</span>
+        <span id="role_id_python">
+<a href="#role_id_python" style="color: inherit; text-decoration: inherit;">role_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -382,7 +439,9 @@ unless `bind_secret_id` is set to false on the role.
 
     <dt class="property-optional"
             title="Optional">
-        <span>backend</span>
+        <span id="backend_python">
+<a href="#backend_python" style="color: inherit; text-decoration: inherit;">backend</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -391,7 +450,9 @@ unless `bind_secret_id` is set to false on the role.
 
     <dt class="property-optional"
             title="Optional">
-        <span>secret_<wbr>id</span>
+        <span id="secret_id_python">
+<a href="#secret_id_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -419,7 +480,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Accessor</span>
+        <span id="accessor_csharp">
+<a href="#accessor_csharp" style="color: inherit; text-decoration: inherit;">Accessor</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -428,7 +491,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Client<wbr>Token</span>
+        <span id="clienttoken_csharp">
+<a href="#clienttoken_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Token</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -437,7 +502,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -445,7 +512,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Lease<wbr>Duration</span>
+        <span id="leaseduration_csharp">
+<a href="#leaseduration_csharp" style="color: inherit; text-decoration: inherit;">Lease<wbr>Duration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -454,7 +523,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Lease<wbr>Started</span>
+        <span id="leasestarted_csharp">
+<a href="#leasestarted_csharp" style="color: inherit; text-decoration: inherit;">Lease<wbr>Started</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -463,7 +534,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Metadata</span>
+        <span id="metadata_csharp">
+<a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -472,7 +545,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Policies</span>
+        <span id="policies_csharp">
+<a href="#policies_csharp" style="color: inherit; text-decoration: inherit;">Policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -481,7 +556,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Renewable</span>
+        <span id="renewable_csharp">
+<a href="#renewable_csharp" style="color: inherit; text-decoration: inherit;">Renewable</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -497,7 +574,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Accessor</span>
+        <span id="accessor_go">
+<a href="#accessor_go" style="color: inherit; text-decoration: inherit;">Accessor</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -506,7 +585,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Client<wbr>Token</span>
+        <span id="clienttoken_go">
+<a href="#clienttoken_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Token</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -515,7 +596,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -523,7 +606,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Lease<wbr>Duration</span>
+        <span id="leaseduration_go">
+<a href="#leaseduration_go" style="color: inherit; text-decoration: inherit;">Lease<wbr>Duration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -532,7 +617,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Lease<wbr>Started</span>
+        <span id="leasestarted_go">
+<a href="#leasestarted_go" style="color: inherit; text-decoration: inherit;">Lease<wbr>Started</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -541,7 +628,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Metadata</span>
+        <span id="metadata_go">
+<a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -550,7 +639,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Policies</span>
+        <span id="policies_go">
+<a href="#policies_go" style="color: inherit; text-decoration: inherit;">Policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -559,7 +650,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Renewable</span>
+        <span id="renewable_go">
+<a href="#renewable_go" style="color: inherit; text-decoration: inherit;">Renewable</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -575,7 +668,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>accessor</span>
+        <span id="accessor_nodejs">
+<a href="#accessor_nodejs" style="color: inherit; text-decoration: inherit;">accessor</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -584,7 +679,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>client<wbr>Token</span>
+        <span id="clienttoken_nodejs">
+<a href="#clienttoken_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Token</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -593,7 +690,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -601,7 +700,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>lease<wbr>Duration</span>
+        <span id="leaseduration_nodejs">
+<a href="#leaseduration_nodejs" style="color: inherit; text-decoration: inherit;">lease<wbr>Duration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -610,7 +711,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>lease<wbr>Started</span>
+        <span id="leasestarted_nodejs">
+<a href="#leasestarted_nodejs" style="color: inherit; text-decoration: inherit;">lease<wbr>Started</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -619,7 +722,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>metadata</span>
+        <span id="metadata_nodejs">
+<a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -628,7 +733,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>policies</span>
+        <span id="policies_nodejs">
+<a href="#policies_nodejs" style="color: inherit; text-decoration: inherit;">policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -637,7 +744,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>renewable</span>
+        <span id="renewable_nodejs">
+<a href="#renewable_nodejs" style="color: inherit; text-decoration: inherit;">renewable</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -653,7 +762,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>accessor</span>
+        <span id="accessor_python">
+<a href="#accessor_python" style="color: inherit; text-decoration: inherit;">accessor</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -662,7 +773,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>client_<wbr>token</span>
+        <span id="client_token_python">
+<a href="#client_token_python" style="color: inherit; text-decoration: inherit;">client_<wbr>token</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -671,7 +784,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -679,7 +794,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>lease_<wbr>duration</span>
+        <span id="lease_duration_python">
+<a href="#lease_duration_python" style="color: inherit; text-decoration: inherit;">lease_<wbr>duration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -688,7 +805,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>lease_<wbr>started</span>
+        <span id="lease_started_python">
+<a href="#lease_started_python" style="color: inherit; text-decoration: inherit;">lease_<wbr>started</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -697,7 +816,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>metadata</span>
+        <span id="metadata_python">
+<a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -706,7 +827,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>policies</span>
+        <span id="policies_python">
+<a href="#policies_python" style="color: inherit; text-decoration: inherit;">policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -715,7 +838,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>renewable</span>
+        <span id="renewable_python">
+<a href="#renewable_python" style="color: inherit; text-decoration: inherit;">renewable</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -857,7 +982,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Accessor</span>
+        <span id="state_accessor_csharp">
+<a href="#state_accessor_csharp" style="color: inherit; text-decoration: inherit;">Accessor</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -866,7 +993,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Backend</span>
+        <span id="state_backend_csharp">
+<a href="#state_backend_csharp" style="color: inherit; text-decoration: inherit;">Backend</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -875,7 +1004,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Client<wbr>Token</span>
+        <span id="state_clienttoken_csharp">
+<a href="#state_clienttoken_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Token</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -884,7 +1015,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Lease<wbr>Duration</span>
+        <span id="state_leaseduration_csharp">
+<a href="#state_leaseduration_csharp" style="color: inherit; text-decoration: inherit;">Lease<wbr>Duration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -893,7 +1026,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Lease<wbr>Started</span>
+        <span id="state_leasestarted_csharp">
+<a href="#state_leasestarted_csharp" style="color: inherit; text-decoration: inherit;">Lease<wbr>Started</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -902,7 +1037,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Metadata</span>
+        <span id="state_metadata_csharp">
+<a href="#state_metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -911,7 +1048,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Policies</span>
+        <span id="state_policies_csharp">
+<a href="#state_policies_csharp" style="color: inherit; text-decoration: inherit;">Policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -920,7 +1059,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Renewable</span>
+        <span id="state_renewable_csharp">
+<a href="#state_renewable_csharp" style="color: inherit; text-decoration: inherit;">Renewable</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -929,7 +1070,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Role<wbr>Id</span>
+        <span id="state_roleid_csharp">
+<a href="#state_roleid_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -938,7 +1081,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Secret<wbr>Id</span>
+        <span id="state_secretid_csharp">
+<a href="#state_secretid_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -955,7 +1100,9 @@ unless `bind_secret_id` is set to false on the role.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Accessor</span>
+        <span id="state_accessor_go">
+<a href="#state_accessor_go" style="color: inherit; text-decoration: inherit;">Accessor</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -964,7 +1111,9 @@ unless `bind_secret_id` is set to false on the role.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Backend</span>
+        <span id="state_backend_go">
+<a href="#state_backend_go" style="color: inherit; text-decoration: inherit;">Backend</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -973,7 +1122,9 @@ unless `bind_secret_id` is set to false on the role.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Client<wbr>Token</span>
+        <span id="state_clienttoken_go">
+<a href="#state_clienttoken_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Token</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -982,7 +1133,9 @@ unless `bind_secret_id` is set to false on the role.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Lease<wbr>Duration</span>
+        <span id="state_leaseduration_go">
+<a href="#state_leaseduration_go" style="color: inherit; text-decoration: inherit;">Lease<wbr>Duration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -991,7 +1144,9 @@ unless `bind_secret_id` is set to false on the role.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Lease<wbr>Started</span>
+        <span id="state_leasestarted_go">
+<a href="#state_leasestarted_go" style="color: inherit; text-decoration: inherit;">Lease<wbr>Started</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1000,7 +1155,9 @@ unless `bind_secret_id` is set to false on the role.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Metadata</span>
+        <span id="state_metadata_go">
+<a href="#state_metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -1009,7 +1166,9 @@ unless `bind_secret_id` is set to false on the role.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Policies</span>
+        <span id="state_policies_go">
+<a href="#state_policies_go" style="color: inherit; text-decoration: inherit;">Policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1018,7 +1177,9 @@ unless `bind_secret_id` is set to false on the role.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Renewable</span>
+        <span id="state_renewable_go">
+<a href="#state_renewable_go" style="color: inherit; text-decoration: inherit;">Renewable</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1027,7 +1188,9 @@ unless `bind_secret_id` is set to false on the role.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Role<wbr>Id</span>
+        <span id="state_roleid_go">
+<a href="#state_roleid_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1036,7 +1199,9 @@ unless `bind_secret_id` is set to false on the role.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Secret<wbr>Id</span>
+        <span id="state_secretid_go">
+<a href="#state_secretid_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1053,7 +1218,9 @@ unless `bind_secret_id` is set to false on the role.
 
     <dt class="property-optional"
             title="Optional">
-        <span>accessor</span>
+        <span id="state_accessor_nodejs">
+<a href="#state_accessor_nodejs" style="color: inherit; text-decoration: inherit;">accessor</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1062,7 +1229,9 @@ unless `bind_secret_id` is set to false on the role.
 
     <dt class="property-optional"
             title="Optional">
-        <span>backend</span>
+        <span id="state_backend_nodejs">
+<a href="#state_backend_nodejs" style="color: inherit; text-decoration: inherit;">backend</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1071,7 +1240,9 @@ unless `bind_secret_id` is set to false on the role.
 
     <dt class="property-optional"
             title="Optional">
-        <span>client<wbr>Token</span>
+        <span id="state_clienttoken_nodejs">
+<a href="#state_clienttoken_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Token</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1080,7 +1251,9 @@ unless `bind_secret_id` is set to false on the role.
 
     <dt class="property-optional"
             title="Optional">
-        <span>lease<wbr>Duration</span>
+        <span id="state_leaseduration_nodejs">
+<a href="#state_leaseduration_nodejs" style="color: inherit; text-decoration: inherit;">lease<wbr>Duration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1089,7 +1262,9 @@ unless `bind_secret_id` is set to false on the role.
 
     <dt class="property-optional"
             title="Optional">
-        <span>lease<wbr>Started</span>
+        <span id="state_leasestarted_nodejs">
+<a href="#state_leasestarted_nodejs" style="color: inherit; text-decoration: inherit;">lease<wbr>Started</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1098,7 +1273,9 @@ unless `bind_secret_id` is set to false on the role.
 
     <dt class="property-optional"
             title="Optional">
-        <span>metadata</span>
+        <span id="state_metadata_nodejs">
+<a href="#state_metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -1107,7 +1284,9 @@ unless `bind_secret_id` is set to false on the role.
 
     <dt class="property-optional"
             title="Optional">
-        <span>policies</span>
+        <span id="state_policies_nodejs">
+<a href="#state_policies_nodejs" style="color: inherit; text-decoration: inherit;">policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1116,7 +1295,9 @@ unless `bind_secret_id` is set to false on the role.
 
     <dt class="property-optional"
             title="Optional">
-        <span>renewable</span>
+        <span id="state_renewable_nodejs">
+<a href="#state_renewable_nodejs" style="color: inherit; text-decoration: inherit;">renewable</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1125,7 +1306,9 @@ unless `bind_secret_id` is set to false on the role.
 
     <dt class="property-optional"
             title="Optional">
-        <span>role<wbr>Id</span>
+        <span id="state_roleid_nodejs">
+<a href="#state_roleid_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1134,7 +1317,9 @@ unless `bind_secret_id` is set to false on the role.
 
     <dt class="property-optional"
             title="Optional">
-        <span>secret<wbr>Id</span>
+        <span id="state_secretid_nodejs">
+<a href="#state_secretid_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1151,7 +1336,9 @@ unless `bind_secret_id` is set to false on the role.
 
     <dt class="property-optional"
             title="Optional">
-        <span>accessor</span>
+        <span id="state_accessor_python">
+<a href="#state_accessor_python" style="color: inherit; text-decoration: inherit;">accessor</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1160,7 +1347,9 @@ unless `bind_secret_id` is set to false on the role.
 
     <dt class="property-optional"
             title="Optional">
-        <span>backend</span>
+        <span id="state_backend_python">
+<a href="#state_backend_python" style="color: inherit; text-decoration: inherit;">backend</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1169,7 +1358,9 @@ unless `bind_secret_id` is set to false on the role.
 
     <dt class="property-optional"
             title="Optional">
-        <span>client_<wbr>token</span>
+        <span id="state_client_token_python">
+<a href="#state_client_token_python" style="color: inherit; text-decoration: inherit;">client_<wbr>token</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1178,7 +1369,9 @@ unless `bind_secret_id` is set to false on the role.
 
     <dt class="property-optional"
             title="Optional">
-        <span>lease_<wbr>duration</span>
+        <span id="state_lease_duration_python">
+<a href="#state_lease_duration_python" style="color: inherit; text-decoration: inherit;">lease_<wbr>duration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1187,7 +1380,9 @@ unless `bind_secret_id` is set to false on the role.
 
     <dt class="property-optional"
             title="Optional">
-        <span>lease_<wbr>started</span>
+        <span id="state_lease_started_python">
+<a href="#state_lease_started_python" style="color: inherit; text-decoration: inherit;">lease_<wbr>started</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1196,7 +1391,9 @@ unless `bind_secret_id` is set to false on the role.
 
     <dt class="property-optional"
             title="Optional">
-        <span>metadata</span>
+        <span id="state_metadata_python">
+<a href="#state_metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -1205,7 +1402,9 @@ unless `bind_secret_id` is set to false on the role.
 
     <dt class="property-optional"
             title="Optional">
-        <span>policies</span>
+        <span id="state_policies_python">
+<a href="#state_policies_python" style="color: inherit; text-decoration: inherit;">policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1214,7 +1413,9 @@ unless `bind_secret_id` is set to false on the role.
 
     <dt class="property-optional"
             title="Optional">
-        <span>renewable</span>
+        <span id="state_renewable_python">
+<a href="#state_renewable_python" style="color: inherit; text-decoration: inherit;">renewable</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1223,7 +1424,9 @@ unless `bind_secret_id` is set to false on the role.
 
     <dt class="property-optional"
             title="Optional">
-        <span>role_<wbr>id</span>
+        <span id="state_role_id_python">
+<a href="#state_role_id_python" style="color: inherit; text-decoration: inherit;">role_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1232,7 +1435,9 @@ unless `bind_secret_id` is set to false on the role.
 
     <dt class="property-optional"
             title="Optional">
-        <span>secret_<wbr>id</span>
+        <span id="state_secret_id_python">
+<a href="#state_secret_id_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

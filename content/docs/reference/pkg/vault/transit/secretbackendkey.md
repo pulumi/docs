@@ -20,7 +20,30 @@ Creates an Encryption Keyring on a Transit Secret Backend for Vault.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Vault = Pulumi.Vault;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var transit = new Vault.Mount("transit", new Vault.MountArgs
+        {
+            DefaultLeaseTtlSeconds = 3600,
+            Description = "Example description",
+            MaxLeaseTtlSeconds = 86400,
+            Path = "transit",
+            Type = "transit",
+        });
+        var key = new Vault.Transit.SecretBackendKey("key", new Vault.Transit.SecretBackendKeyArgs
+        {
+            Backend = transit.Path,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -246,7 +269,9 @@ The SecretBackendKey resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-required"
             title="Required">
-        <span>Backend</span>
+        <span id="backend_csharp">
+<a href="#backend_csharp" style="color: inherit; text-decoration: inherit;">Backend</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -255,17 +280,21 @@ The SecretBackendKey resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>Allow<wbr>Plaintext<wbr>Backup</span>
+        <span id="allowplaintextbackup_csharp">
+<a href="#allowplaintextbackup_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Plaintext<wbr>Backup</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Enables taking backup of entire keyring in the plaintext format. Once set, this cannot be disabled.
-* Refer to Vault API documentation on key backups for more information: [Backup Key](https://www.vaultproject.io/api/secret/transit/index.html#backup-key)
+* Refer to Vault API documentation on key backups for more information: [Backup Key](https://www.vaultproject.io/api-docs/secret/transit#backup-key)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Convergent<wbr>Encryption</span>
+        <span id="convergentencryption_csharp">
+<a href="#convergentencryption_csharp" style="color: inherit; text-decoration: inherit;">Convergent<wbr>Encryption</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -274,7 +303,9 @@ The SecretBackendKey resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>Deletion<wbr>Allowed</span>
+        <span id="deletionallowed_csharp">
+<a href="#deletionallowed_csharp" style="color: inherit; text-decoration: inherit;">Deletion<wbr>Allowed</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -283,7 +314,9 @@ The SecretBackendKey resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>Derived</span>
+        <span id="derived_csharp">
+<a href="#derived_csharp" style="color: inherit; text-decoration: inherit;">Derived</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -292,7 +325,9 @@ The SecretBackendKey resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>Exportable</span>
+        <span id="exportable_csharp">
+<a href="#exportable_csharp" style="color: inherit; text-decoration: inherit;">Exportable</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -301,7 +336,9 @@ The SecretBackendKey resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>Min<wbr>Decryption<wbr>Version</span>
+        <span id="mindecryptionversion_csharp">
+<a href="#mindecryptionversion_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Decryption<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -310,7 +347,9 @@ The SecretBackendKey resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>Min<wbr>Encryption<wbr>Version</span>
+        <span id="minencryptionversion_csharp">
+<a href="#minencryptionversion_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Encryption<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -319,7 +358,9 @@ The SecretBackendKey resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -328,12 +369,14 @@ The SecretBackendKey resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>Type</span>
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the type of key to create. The currently-supported types are: `aes256-gcm96` (default), `chacha20-poly1305`, `ed25519`, `ecdsa-p256`, `rsa-2048` and `rsa-4096`. 
-* Refer to the Vault documentation on transit key types for more information: [Key Types](https://www.vaultproject.io/docs/secrets/transit/index.html#key-types)
+* Refer to the Vault documentation on transit key types for more information: [Key Types](https://www.vaultproject.io/docs/secrets/transit#key-types)
 {{% /md %}}</dd>
 
 </dl>
@@ -345,7 +388,9 @@ The SecretBackendKey resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-required"
             title="Required">
-        <span>Backend</span>
+        <span id="backend_go">
+<a href="#backend_go" style="color: inherit; text-decoration: inherit;">Backend</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -354,17 +399,21 @@ The SecretBackendKey resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>Allow<wbr>Plaintext<wbr>Backup</span>
+        <span id="allowplaintextbackup_go">
+<a href="#allowplaintextbackup_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Plaintext<wbr>Backup</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Enables taking backup of entire keyring in the plaintext format. Once set, this cannot be disabled.
-* Refer to Vault API documentation on key backups for more information: [Backup Key](https://www.vaultproject.io/api/secret/transit/index.html#backup-key)
+* Refer to Vault API documentation on key backups for more information: [Backup Key](https://www.vaultproject.io/api-docs/secret/transit#backup-key)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Convergent<wbr>Encryption</span>
+        <span id="convergentencryption_go">
+<a href="#convergentencryption_go" style="color: inherit; text-decoration: inherit;">Convergent<wbr>Encryption</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -373,7 +422,9 @@ The SecretBackendKey resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>Deletion<wbr>Allowed</span>
+        <span id="deletionallowed_go">
+<a href="#deletionallowed_go" style="color: inherit; text-decoration: inherit;">Deletion<wbr>Allowed</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -382,7 +433,9 @@ The SecretBackendKey resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>Derived</span>
+        <span id="derived_go">
+<a href="#derived_go" style="color: inherit; text-decoration: inherit;">Derived</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -391,7 +444,9 @@ The SecretBackendKey resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>Exportable</span>
+        <span id="exportable_go">
+<a href="#exportable_go" style="color: inherit; text-decoration: inherit;">Exportable</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -400,7 +455,9 @@ The SecretBackendKey resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>Min<wbr>Decryption<wbr>Version</span>
+        <span id="mindecryptionversion_go">
+<a href="#mindecryptionversion_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Decryption<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -409,7 +466,9 @@ The SecretBackendKey resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>Min<wbr>Encryption<wbr>Version</span>
+        <span id="minencryptionversion_go">
+<a href="#minencryptionversion_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Encryption<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -418,7 +477,9 @@ The SecretBackendKey resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -427,12 +488,14 @@ The SecretBackendKey resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>Type</span>
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the type of key to create. The currently-supported types are: `aes256-gcm96` (default), `chacha20-poly1305`, `ed25519`, `ecdsa-p256`, `rsa-2048` and `rsa-4096`. 
-* Refer to the Vault documentation on transit key types for more information: [Key Types](https://www.vaultproject.io/docs/secrets/transit/index.html#key-types)
+* Refer to the Vault documentation on transit key types for more information: [Key Types](https://www.vaultproject.io/docs/secrets/transit#key-types)
 {{% /md %}}</dd>
 
 </dl>
@@ -444,7 +507,9 @@ The SecretBackendKey resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-required"
             title="Required">
-        <span>backend</span>
+        <span id="backend_nodejs">
+<a href="#backend_nodejs" style="color: inherit; text-decoration: inherit;">backend</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -453,17 +518,21 @@ The SecretBackendKey resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>allow<wbr>Plaintext<wbr>Backup</span>
+        <span id="allowplaintextbackup_nodejs">
+<a href="#allowplaintextbackup_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Plaintext<wbr>Backup</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Enables taking backup of entire keyring in the plaintext format. Once set, this cannot be disabled.
-* Refer to Vault API documentation on key backups for more information: [Backup Key](https://www.vaultproject.io/api/secret/transit/index.html#backup-key)
+* Refer to Vault API documentation on key backups for more information: [Backup Key](https://www.vaultproject.io/api-docs/secret/transit#backup-key)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>convergent<wbr>Encryption</span>
+        <span id="convergentencryption_nodejs">
+<a href="#convergentencryption_nodejs" style="color: inherit; text-decoration: inherit;">convergent<wbr>Encryption</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -472,7 +541,9 @@ The SecretBackendKey resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>deletion<wbr>Allowed</span>
+        <span id="deletionallowed_nodejs">
+<a href="#deletionallowed_nodejs" style="color: inherit; text-decoration: inherit;">deletion<wbr>Allowed</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -481,7 +552,9 @@ The SecretBackendKey resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>derived</span>
+        <span id="derived_nodejs">
+<a href="#derived_nodejs" style="color: inherit; text-decoration: inherit;">derived</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -490,7 +563,9 @@ The SecretBackendKey resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>exportable</span>
+        <span id="exportable_nodejs">
+<a href="#exportable_nodejs" style="color: inherit; text-decoration: inherit;">exportable</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -499,7 +574,9 @@ The SecretBackendKey resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>min<wbr>Decryption<wbr>Version</span>
+        <span id="mindecryptionversion_nodejs">
+<a href="#mindecryptionversion_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Decryption<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -508,7 +585,9 @@ The SecretBackendKey resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>min<wbr>Encryption<wbr>Version</span>
+        <span id="minencryptionversion_nodejs">
+<a href="#minencryptionversion_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Encryption<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -517,7 +596,9 @@ The SecretBackendKey resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -526,12 +607,14 @@ The SecretBackendKey resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>type</span>
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the type of key to create. The currently-supported types are: `aes256-gcm96` (default), `chacha20-poly1305`, `ed25519`, `ecdsa-p256`, `rsa-2048` and `rsa-4096`. 
-* Refer to the Vault documentation on transit key types for more information: [Key Types](https://www.vaultproject.io/docs/secrets/transit/index.html#key-types)
+* Refer to the Vault documentation on transit key types for more information: [Key Types](https://www.vaultproject.io/docs/secrets/transit#key-types)
 {{% /md %}}</dd>
 
 </dl>
@@ -543,7 +626,9 @@ The SecretBackendKey resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-required"
             title="Required">
-        <span>backend</span>
+        <span id="backend_python">
+<a href="#backend_python" style="color: inherit; text-decoration: inherit;">backend</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -552,17 +637,21 @@ The SecretBackendKey resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>allow_<wbr>plaintext_<wbr>backup</span>
+        <span id="allow_plaintext_backup_python">
+<a href="#allow_plaintext_backup_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>plaintext_<wbr>backup</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Enables taking backup of entire keyring in the plaintext format. Once set, this cannot be disabled.
-* Refer to Vault API documentation on key backups for more information: [Backup Key](https://www.vaultproject.io/api/secret/transit/index.html#backup-key)
+* Refer to Vault API documentation on key backups for more information: [Backup Key](https://www.vaultproject.io/api-docs/secret/transit#backup-key)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>convergent_<wbr>encryption</span>
+        <span id="convergent_encryption_python">
+<a href="#convergent_encryption_python" style="color: inherit; text-decoration: inherit;">convergent_<wbr>encryption</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -571,7 +660,9 @@ The SecretBackendKey resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>deletion_<wbr>allowed</span>
+        <span id="deletion_allowed_python">
+<a href="#deletion_allowed_python" style="color: inherit; text-decoration: inherit;">deletion_<wbr>allowed</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -580,7 +671,9 @@ The SecretBackendKey resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>derived</span>
+        <span id="derived_python">
+<a href="#derived_python" style="color: inherit; text-decoration: inherit;">derived</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -589,7 +682,9 @@ The SecretBackendKey resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>exportable</span>
+        <span id="exportable_python">
+<a href="#exportable_python" style="color: inherit; text-decoration: inherit;">exportable</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -598,7 +693,9 @@ The SecretBackendKey resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>min_<wbr>decryption_<wbr>version</span>
+        <span id="min_decryption_version_python">
+<a href="#min_decryption_version_python" style="color: inherit; text-decoration: inherit;">min_<wbr>decryption_<wbr>version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -607,7 +704,9 @@ The SecretBackendKey resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>min_<wbr>encryption_<wbr>version</span>
+        <span id="min_encryption_version_python">
+<a href="#min_encryption_version_python" style="color: inherit; text-decoration: inherit;">min_<wbr>encryption_<wbr>version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -616,7 +715,9 @@ The SecretBackendKey resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -625,12 +726,14 @@ The SecretBackendKey resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>type</span>
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Specifies the type of key to create. The currently-supported types are: `aes256-gcm96` (default), `chacha20-poly1305`, `ed25519`, `ecdsa-p256`, `rsa-2048` and `rsa-4096`. 
-* Refer to the Vault documentation on transit key types for more information: [Key Types](https://www.vaultproject.io/docs/secrets/transit/index.html#key-types)
+* Refer to the Vault documentation on transit key types for more information: [Key Types](https://www.vaultproject.io/docs/secrets/transit#key-types)
 {{% /md %}}</dd>
 
 </dl>
@@ -653,7 +756,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -661,7 +766,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Keys</span>
+        <span id="keys_csharp">
+<a href="#keys_csharp" style="color: inherit; text-decoration: inherit;">Keys</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;Immutable<wbr>Dictionary&lt;string, object&gt;&gt;</span>
     </dt>
@@ -672,7 +779,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Latest<wbr>Version</span>
+        <span id="latestversion_csharp">
+<a href="#latestversion_csharp" style="color: inherit; text-decoration: inherit;">Latest<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -681,7 +790,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Min<wbr>Available<wbr>Version</span>
+        <span id="minavailableversion_csharp">
+<a href="#minavailableversion_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Available<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -690,7 +801,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Supports<wbr>Decryption</span>
+        <span id="supportsdecryption_csharp">
+<a href="#supportsdecryption_csharp" style="color: inherit; text-decoration: inherit;">Supports<wbr>Decryption</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -699,7 +812,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Supports<wbr>Derivation</span>
+        <span id="supportsderivation_csharp">
+<a href="#supportsderivation_csharp" style="color: inherit; text-decoration: inherit;">Supports<wbr>Derivation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -708,7 +823,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Supports<wbr>Encryption</span>
+        <span id="supportsencryption_csharp">
+<a href="#supportsencryption_csharp" style="color: inherit; text-decoration: inherit;">Supports<wbr>Encryption</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -717,7 +834,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Supports<wbr>Signing</span>
+        <span id="supportssigning_csharp">
+<a href="#supportssigning_csharp" style="color: inherit; text-decoration: inherit;">Supports<wbr>Signing</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -733,7 +852,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -741,7 +862,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Keys</span>
+        <span id="keys_go">
+<a href="#keys_go" style="color: inherit; text-decoration: inherit;">Keys</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">[]map[string]interface{}</span>
     </dt>
@@ -752,7 +875,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Latest<wbr>Version</span>
+        <span id="latestversion_go">
+<a href="#latestversion_go" style="color: inherit; text-decoration: inherit;">Latest<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -761,7 +886,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Min<wbr>Available<wbr>Version</span>
+        <span id="minavailableversion_go">
+<a href="#minavailableversion_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Available<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -770,7 +897,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Supports<wbr>Decryption</span>
+        <span id="supportsdecryption_go">
+<a href="#supportsdecryption_go" style="color: inherit; text-decoration: inherit;">Supports<wbr>Decryption</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -779,7 +908,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Supports<wbr>Derivation</span>
+        <span id="supportsderivation_go">
+<a href="#supportsderivation_go" style="color: inherit; text-decoration: inherit;">Supports<wbr>Derivation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -788,7 +919,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Supports<wbr>Encryption</span>
+        <span id="supportsencryption_go">
+<a href="#supportsencryption_go" style="color: inherit; text-decoration: inherit;">Supports<wbr>Encryption</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -797,7 +930,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Supports<wbr>Signing</span>
+        <span id="supportssigning_go">
+<a href="#supportssigning_go" style="color: inherit; text-decoration: inherit;">Supports<wbr>Signing</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -813,7 +948,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -821,7 +958,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>keys</span>
+        <span id="keys_nodejs">
+<a href="#keys_nodejs" style="color: inherit; text-decoration: inherit;">keys</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}[]</span>
     </dt>
@@ -832,7 +971,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>latest<wbr>Version</span>
+        <span id="latestversion_nodejs">
+<a href="#latestversion_nodejs" style="color: inherit; text-decoration: inherit;">latest<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -841,7 +982,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>min<wbr>Available<wbr>Version</span>
+        <span id="minavailableversion_nodejs">
+<a href="#minavailableversion_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Available<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -850,7 +993,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>supports<wbr>Decryption</span>
+        <span id="supportsdecryption_nodejs">
+<a href="#supportsdecryption_nodejs" style="color: inherit; text-decoration: inherit;">supports<wbr>Decryption</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -859,7 +1004,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>supports<wbr>Derivation</span>
+        <span id="supportsderivation_nodejs">
+<a href="#supportsderivation_nodejs" style="color: inherit; text-decoration: inherit;">supports<wbr>Derivation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -868,7 +1015,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>supports<wbr>Encryption</span>
+        <span id="supportsencryption_nodejs">
+<a href="#supportsencryption_nodejs" style="color: inherit; text-decoration: inherit;">supports<wbr>Encryption</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -877,7 +1026,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>supports<wbr>Signing</span>
+        <span id="supportssigning_nodejs">
+<a href="#supportssigning_nodejs" style="color: inherit; text-decoration: inherit;">supports<wbr>Signing</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -893,7 +1044,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -901,7 +1054,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>keys</span>
+        <span id="keys_python">
+<a href="#keys_python" style="color: inherit; text-decoration: inherit;">keys</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">List[Any>]</span>
     </dt>
@@ -912,7 +1067,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>latest_<wbr>version</span>
+        <span id="latest_version_python">
+<a href="#latest_version_python" style="color: inherit; text-decoration: inherit;">latest_<wbr>version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -921,7 +1078,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>min_<wbr>available_<wbr>version</span>
+        <span id="min_available_version_python">
+<a href="#min_available_version_python" style="color: inherit; text-decoration: inherit;">min_<wbr>available_<wbr>version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -930,7 +1089,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>supports_<wbr>decryption</span>
+        <span id="supports_decryption_python">
+<a href="#supports_decryption_python" style="color: inherit; text-decoration: inherit;">supports_<wbr>decryption</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -939,7 +1100,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>supports_<wbr>derivation</span>
+        <span id="supports_derivation_python">
+<a href="#supports_derivation_python" style="color: inherit; text-decoration: inherit;">supports_<wbr>derivation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -948,7 +1111,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>supports_<wbr>encryption</span>
+        <span id="supports_encryption_python">
+<a href="#supports_encryption_python" style="color: inherit; text-decoration: inherit;">supports_<wbr>encryption</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -957,7 +1122,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>supports_<wbr>signing</span>
+        <span id="supports_signing_python">
+<a href="#supports_signing_python" style="color: inherit; text-decoration: inherit;">supports_<wbr>signing</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1099,17 +1266,21 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Allow<wbr>Plaintext<wbr>Backup</span>
+        <span id="state_allowplaintextbackup_csharp">
+<a href="#state_allowplaintextbackup_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Plaintext<wbr>Backup</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Enables taking backup of entire keyring in the plaintext format. Once set, this cannot be disabled.
-* Refer to Vault API documentation on key backups for more information: [Backup Key](https://www.vaultproject.io/api/secret/transit/index.html#backup-key)
+* Refer to Vault API documentation on key backups for more information: [Backup Key](https://www.vaultproject.io/api-docs/secret/transit#backup-key)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Backend</span>
+        <span id="state_backend_csharp">
+<a href="#state_backend_csharp" style="color: inherit; text-decoration: inherit;">Backend</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1118,7 +1289,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Convergent<wbr>Encryption</span>
+        <span id="state_convergentencryption_csharp">
+<a href="#state_convergentencryption_csharp" style="color: inherit; text-decoration: inherit;">Convergent<wbr>Encryption</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1127,7 +1300,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Deletion<wbr>Allowed</span>
+        <span id="state_deletionallowed_csharp">
+<a href="#state_deletionallowed_csharp" style="color: inherit; text-decoration: inherit;">Deletion<wbr>Allowed</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1136,7 +1311,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Derived</span>
+        <span id="state_derived_csharp">
+<a href="#state_derived_csharp" style="color: inherit; text-decoration: inherit;">Derived</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1145,7 +1322,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Exportable</span>
+        <span id="state_exportable_csharp">
+<a href="#state_exportable_csharp" style="color: inherit; text-decoration: inherit;">Exportable</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1154,7 +1333,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Keys</span>
+        <span id="state_keys_csharp">
+<a href="#state_keys_csharp" style="color: inherit; text-decoration: inherit;">Keys</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;Immutable<wbr>Dictionary&lt;string, object&gt;&gt;</span>
     </dt>
@@ -1165,7 +1346,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Latest<wbr>Version</span>
+        <span id="state_latestversion_csharp">
+<a href="#state_latestversion_csharp" style="color: inherit; text-decoration: inherit;">Latest<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1174,7 +1357,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Min<wbr>Available<wbr>Version</span>
+        <span id="state_minavailableversion_csharp">
+<a href="#state_minavailableversion_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Available<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1183,7 +1368,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Min<wbr>Decryption<wbr>Version</span>
+        <span id="state_mindecryptionversion_csharp">
+<a href="#state_mindecryptionversion_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Decryption<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1192,7 +1379,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Min<wbr>Encryption<wbr>Version</span>
+        <span id="state_minencryptionversion_csharp">
+<a href="#state_minencryptionversion_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Encryption<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1201,7 +1390,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1210,7 +1401,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Supports<wbr>Decryption</span>
+        <span id="state_supportsdecryption_csharp">
+<a href="#state_supportsdecryption_csharp" style="color: inherit; text-decoration: inherit;">Supports<wbr>Decryption</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1219,7 +1412,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Supports<wbr>Derivation</span>
+        <span id="state_supportsderivation_csharp">
+<a href="#state_supportsderivation_csharp" style="color: inherit; text-decoration: inherit;">Supports<wbr>Derivation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1228,7 +1423,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Supports<wbr>Encryption</span>
+        <span id="state_supportsencryption_csharp">
+<a href="#state_supportsencryption_csharp" style="color: inherit; text-decoration: inherit;">Supports<wbr>Encryption</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1237,7 +1434,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Supports<wbr>Signing</span>
+        <span id="state_supportssigning_csharp">
+<a href="#state_supportssigning_csharp" style="color: inherit; text-decoration: inherit;">Supports<wbr>Signing</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1246,12 +1445,14 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Type</span>
+        <span id="state_type_csharp">
+<a href="#state_type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the type of key to create. The currently-supported types are: `aes256-gcm96` (default), `chacha20-poly1305`, `ed25519`, `ecdsa-p256`, `rsa-2048` and `rsa-4096`. 
-* Refer to the Vault documentation on transit key types for more information: [Key Types](https://www.vaultproject.io/docs/secrets/transit/index.html#key-types)
+* Refer to the Vault documentation on transit key types for more information: [Key Types](https://www.vaultproject.io/docs/secrets/transit#key-types)
 {{% /md %}}</dd>
 
 </dl>
@@ -1263,17 +1464,21 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Allow<wbr>Plaintext<wbr>Backup</span>
+        <span id="state_allowplaintextbackup_go">
+<a href="#state_allowplaintextbackup_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Plaintext<wbr>Backup</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Enables taking backup of entire keyring in the plaintext format. Once set, this cannot be disabled.
-* Refer to Vault API documentation on key backups for more information: [Backup Key](https://www.vaultproject.io/api/secret/transit/index.html#backup-key)
+* Refer to Vault API documentation on key backups for more information: [Backup Key](https://www.vaultproject.io/api-docs/secret/transit#backup-key)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Backend</span>
+        <span id="state_backend_go">
+<a href="#state_backend_go" style="color: inherit; text-decoration: inherit;">Backend</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1282,7 +1487,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Convergent<wbr>Encryption</span>
+        <span id="state_convergentencryption_go">
+<a href="#state_convergentencryption_go" style="color: inherit; text-decoration: inherit;">Convergent<wbr>Encryption</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1291,7 +1498,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Deletion<wbr>Allowed</span>
+        <span id="state_deletionallowed_go">
+<a href="#state_deletionallowed_go" style="color: inherit; text-decoration: inherit;">Deletion<wbr>Allowed</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1300,7 +1509,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Derived</span>
+        <span id="state_derived_go">
+<a href="#state_derived_go" style="color: inherit; text-decoration: inherit;">Derived</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1309,7 +1520,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Exportable</span>
+        <span id="state_exportable_go">
+<a href="#state_exportable_go" style="color: inherit; text-decoration: inherit;">Exportable</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1318,7 +1531,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Keys</span>
+        <span id="state_keys_go">
+<a href="#state_keys_go" style="color: inherit; text-decoration: inherit;">Keys</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">[]map[string]interface{}</span>
     </dt>
@@ -1329,7 +1544,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Latest<wbr>Version</span>
+        <span id="state_latestversion_go">
+<a href="#state_latestversion_go" style="color: inherit; text-decoration: inherit;">Latest<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1338,7 +1555,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Min<wbr>Available<wbr>Version</span>
+        <span id="state_minavailableversion_go">
+<a href="#state_minavailableversion_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Available<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1347,7 +1566,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Min<wbr>Decryption<wbr>Version</span>
+        <span id="state_mindecryptionversion_go">
+<a href="#state_mindecryptionversion_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Decryption<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1356,7 +1577,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Min<wbr>Encryption<wbr>Version</span>
+        <span id="state_minencryptionversion_go">
+<a href="#state_minencryptionversion_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Encryption<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1365,7 +1588,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1374,7 +1599,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Supports<wbr>Decryption</span>
+        <span id="state_supportsdecryption_go">
+<a href="#state_supportsdecryption_go" style="color: inherit; text-decoration: inherit;">Supports<wbr>Decryption</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1383,7 +1610,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Supports<wbr>Derivation</span>
+        <span id="state_supportsderivation_go">
+<a href="#state_supportsderivation_go" style="color: inherit; text-decoration: inherit;">Supports<wbr>Derivation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1392,7 +1621,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Supports<wbr>Encryption</span>
+        <span id="state_supportsencryption_go">
+<a href="#state_supportsencryption_go" style="color: inherit; text-decoration: inherit;">Supports<wbr>Encryption</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1401,7 +1632,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Supports<wbr>Signing</span>
+        <span id="state_supportssigning_go">
+<a href="#state_supportssigning_go" style="color: inherit; text-decoration: inherit;">Supports<wbr>Signing</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1410,12 +1643,14 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Type</span>
+        <span id="state_type_go">
+<a href="#state_type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the type of key to create. The currently-supported types are: `aes256-gcm96` (default), `chacha20-poly1305`, `ed25519`, `ecdsa-p256`, `rsa-2048` and `rsa-4096`. 
-* Refer to the Vault documentation on transit key types for more information: [Key Types](https://www.vaultproject.io/docs/secrets/transit/index.html#key-types)
+* Refer to the Vault documentation on transit key types for more information: [Key Types](https://www.vaultproject.io/docs/secrets/transit#key-types)
 {{% /md %}}</dd>
 
 </dl>
@@ -1427,17 +1662,21 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>allow<wbr>Plaintext<wbr>Backup</span>
+        <span id="state_allowplaintextbackup_nodejs">
+<a href="#state_allowplaintextbackup_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Plaintext<wbr>Backup</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Enables taking backup of entire keyring in the plaintext format. Once set, this cannot be disabled.
-* Refer to Vault API documentation on key backups for more information: [Backup Key](https://www.vaultproject.io/api/secret/transit/index.html#backup-key)
+* Refer to Vault API documentation on key backups for more information: [Backup Key](https://www.vaultproject.io/api-docs/secret/transit#backup-key)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>backend</span>
+        <span id="state_backend_nodejs">
+<a href="#state_backend_nodejs" style="color: inherit; text-decoration: inherit;">backend</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1446,7 +1685,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>convergent<wbr>Encryption</span>
+        <span id="state_convergentencryption_nodejs">
+<a href="#state_convergentencryption_nodejs" style="color: inherit; text-decoration: inherit;">convergent<wbr>Encryption</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1455,7 +1696,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>deletion<wbr>Allowed</span>
+        <span id="state_deletionallowed_nodejs">
+<a href="#state_deletionallowed_nodejs" style="color: inherit; text-decoration: inherit;">deletion<wbr>Allowed</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1464,7 +1707,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>derived</span>
+        <span id="state_derived_nodejs">
+<a href="#state_derived_nodejs" style="color: inherit; text-decoration: inherit;">derived</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1473,7 +1718,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>exportable</span>
+        <span id="state_exportable_nodejs">
+<a href="#state_exportable_nodejs" style="color: inherit; text-decoration: inherit;">exportable</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1482,7 +1729,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>keys</span>
+        <span id="state_keys_nodejs">
+<a href="#state_keys_nodejs" style="color: inherit; text-decoration: inherit;">keys</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}[]</span>
     </dt>
@@ -1493,7 +1742,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>latest<wbr>Version</span>
+        <span id="state_latestversion_nodejs">
+<a href="#state_latestversion_nodejs" style="color: inherit; text-decoration: inherit;">latest<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1502,7 +1753,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>min<wbr>Available<wbr>Version</span>
+        <span id="state_minavailableversion_nodejs">
+<a href="#state_minavailableversion_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Available<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1511,7 +1764,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>min<wbr>Decryption<wbr>Version</span>
+        <span id="state_mindecryptionversion_nodejs">
+<a href="#state_mindecryptionversion_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Decryption<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1520,7 +1775,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>min<wbr>Encryption<wbr>Version</span>
+        <span id="state_minencryptionversion_nodejs">
+<a href="#state_minencryptionversion_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Encryption<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1529,7 +1786,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1538,7 +1797,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>supports<wbr>Decryption</span>
+        <span id="state_supportsdecryption_nodejs">
+<a href="#state_supportsdecryption_nodejs" style="color: inherit; text-decoration: inherit;">supports<wbr>Decryption</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1547,7 +1808,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>supports<wbr>Derivation</span>
+        <span id="state_supportsderivation_nodejs">
+<a href="#state_supportsderivation_nodejs" style="color: inherit; text-decoration: inherit;">supports<wbr>Derivation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1556,7 +1819,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>supports<wbr>Encryption</span>
+        <span id="state_supportsencryption_nodejs">
+<a href="#state_supportsencryption_nodejs" style="color: inherit; text-decoration: inherit;">supports<wbr>Encryption</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1565,7 +1830,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>supports<wbr>Signing</span>
+        <span id="state_supportssigning_nodejs">
+<a href="#state_supportssigning_nodejs" style="color: inherit; text-decoration: inherit;">supports<wbr>Signing</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1574,12 +1841,14 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>type</span>
+        <span id="state_type_nodejs">
+<a href="#state_type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the type of key to create. The currently-supported types are: `aes256-gcm96` (default), `chacha20-poly1305`, `ed25519`, `ecdsa-p256`, `rsa-2048` and `rsa-4096`. 
-* Refer to the Vault documentation on transit key types for more information: [Key Types](https://www.vaultproject.io/docs/secrets/transit/index.html#key-types)
+* Refer to the Vault documentation on transit key types for more information: [Key Types](https://www.vaultproject.io/docs/secrets/transit#key-types)
 {{% /md %}}</dd>
 
 </dl>
@@ -1591,17 +1860,21 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>allow_<wbr>plaintext_<wbr>backup</span>
+        <span id="state_allow_plaintext_backup_python">
+<a href="#state_allow_plaintext_backup_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>plaintext_<wbr>backup</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Enables taking backup of entire keyring in the plaintext format. Once set, this cannot be disabled.
-* Refer to Vault API documentation on key backups for more information: [Backup Key](https://www.vaultproject.io/api/secret/transit/index.html#backup-key)
+* Refer to Vault API documentation on key backups for more information: [Backup Key](https://www.vaultproject.io/api-docs/secret/transit#backup-key)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>backend</span>
+        <span id="state_backend_python">
+<a href="#state_backend_python" style="color: inherit; text-decoration: inherit;">backend</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1610,7 +1883,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>convergent_<wbr>encryption</span>
+        <span id="state_convergent_encryption_python">
+<a href="#state_convergent_encryption_python" style="color: inherit; text-decoration: inherit;">convergent_<wbr>encryption</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1619,7 +1894,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>deletion_<wbr>allowed</span>
+        <span id="state_deletion_allowed_python">
+<a href="#state_deletion_allowed_python" style="color: inherit; text-decoration: inherit;">deletion_<wbr>allowed</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1628,7 +1905,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>derived</span>
+        <span id="state_derived_python">
+<a href="#state_derived_python" style="color: inherit; text-decoration: inherit;">derived</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1637,7 +1916,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>exportable</span>
+        <span id="state_exportable_python">
+<a href="#state_exportable_python" style="color: inherit; text-decoration: inherit;">exportable</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1646,7 +1927,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>keys</span>
+        <span id="state_keys_python">
+<a href="#state_keys_python" style="color: inherit; text-decoration: inherit;">keys</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">List[Any>]</span>
     </dt>
@@ -1657,7 +1940,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>latest_<wbr>version</span>
+        <span id="state_latest_version_python">
+<a href="#state_latest_version_python" style="color: inherit; text-decoration: inherit;">latest_<wbr>version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1666,7 +1951,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>min_<wbr>available_<wbr>version</span>
+        <span id="state_min_available_version_python">
+<a href="#state_min_available_version_python" style="color: inherit; text-decoration: inherit;">min_<wbr>available_<wbr>version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1675,7 +1962,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>min_<wbr>decryption_<wbr>version</span>
+        <span id="state_min_decryption_version_python">
+<a href="#state_min_decryption_version_python" style="color: inherit; text-decoration: inherit;">min_<wbr>decryption_<wbr>version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1684,7 +1973,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>min_<wbr>encryption_<wbr>version</span>
+        <span id="state_min_encryption_version_python">
+<a href="#state_min_encryption_version_python" style="color: inherit; text-decoration: inherit;">min_<wbr>encryption_<wbr>version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1693,7 +1984,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1702,7 +1995,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>supports_<wbr>decryption</span>
+        <span id="state_supports_decryption_python">
+<a href="#state_supports_decryption_python" style="color: inherit; text-decoration: inherit;">supports_<wbr>decryption</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1711,7 +2006,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>supports_<wbr>derivation</span>
+        <span id="state_supports_derivation_python">
+<a href="#state_supports_derivation_python" style="color: inherit; text-decoration: inherit;">supports_<wbr>derivation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1720,7 +2017,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>supports_<wbr>encryption</span>
+        <span id="state_supports_encryption_python">
+<a href="#state_supports_encryption_python" style="color: inherit; text-decoration: inherit;">supports_<wbr>encryption</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1729,7 +2028,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>supports_<wbr>signing</span>
+        <span id="state_supports_signing_python">
+<a href="#state_supports_signing_python" style="color: inherit; text-decoration: inherit;">supports_<wbr>signing</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1738,12 +2039,14 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>type</span>
+        <span id="state_type_python">
+<a href="#state_type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Specifies the type of key to create. The currently-supported types are: `aes256-gcm96` (default), `chacha20-poly1305`, `ed25519`, `ecdsa-p256`, `rsa-2048` and `rsa-4096`. 
-* Refer to the Vault documentation on transit key types for more information: [Key Types](https://www.vaultproject.io/docs/secrets/transit/index.html#key-types)
+* Refer to the Vault documentation on transit key types for more information: [Key Types](https://www.vaultproject.io/docs/secrets/transit#key-types)
 {{% /md %}}</dd>
 
 </dl>

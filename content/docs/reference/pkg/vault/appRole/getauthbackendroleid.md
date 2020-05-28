@@ -20,7 +20,26 @@ Reads the Role ID of an AppRole from a Vault server.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Vault = Pulumi.Vault;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var role = Output.Create(Vault.AppRole.GetAuthBackendRoleId.InvokeAsync(new Vault.AppRole.GetAuthBackendRoleIdArgs
+        {
+            Backend = "my-approle-backend",
+            RoleName = "my-role",
+        }));
+        this.Role_id = role.Apply(role => role.RoleId);
+    }
+
+    [Output("role-id")]
+    public Output<string> Role_id { get; set; }
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -93,7 +112,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Role<wbr>Name</span>
+        <span id="rolename_csharp">
+<a href="#rolename_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -102,7 +123,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Backend</span>
+        <span id="backend_csharp">
+<a href="#backend_csharp" style="color: inherit; text-decoration: inherit;">Backend</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -119,7 +142,9 @@ retrieve a RoleID for resides in. Defaults to "approle".
 
     <dt class="property-required"
             title="Required">
-        <span>Role<wbr>Name</span>
+        <span id="rolename_go">
+<a href="#rolename_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -128,7 +153,9 @@ retrieve a RoleID for resides in. Defaults to "approle".
 
     <dt class="property-optional"
             title="Optional">
-        <span>Backend</span>
+        <span id="backend_go">
+<a href="#backend_go" style="color: inherit; text-decoration: inherit;">Backend</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -145,7 +172,9 @@ retrieve a RoleID for resides in. Defaults to "approle".
 
     <dt class="property-required"
             title="Required">
-        <span>role<wbr>Name</span>
+        <span id="rolename_nodejs">
+<a href="#rolename_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -154,7 +183,9 @@ retrieve a RoleID for resides in. Defaults to "approle".
 
     <dt class="property-optional"
             title="Optional">
-        <span>backend</span>
+        <span id="backend_nodejs">
+<a href="#backend_nodejs" style="color: inherit; text-decoration: inherit;">backend</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -171,7 +202,9 @@ retrieve a RoleID for resides in. Defaults to "approle".
 
     <dt class="property-required"
             title="Required">
-        <span>role_<wbr>name</span>
+        <span id="role_name_python">
+<a href="#role_name_python" style="color: inherit; text-decoration: inherit;">role_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -180,7 +213,9 @@ retrieve a RoleID for resides in. Defaults to "approle".
 
     <dt class="property-optional"
             title="Optional">
-        <span>backend</span>
+        <span id="backend_python">
+<a href="#backend_python" style="color: inherit; text-decoration: inherit;">backend</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -210,7 +245,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -219,7 +256,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Role<wbr>Id</span>
+        <span id="roleid_csharp">
+<a href="#roleid_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -228,7 +267,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Role<wbr>Name</span>
+        <span id="rolename_csharp">
+<a href="#rolename_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -236,7 +277,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Backend</span>
+        <span id="backend_csharp">
+<a href="#backend_csharp" style="color: inherit; text-decoration: inherit;">Backend</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -251,7 +294,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -260,7 +305,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Role<wbr>Id</span>
+        <span id="roleid_go">
+<a href="#roleid_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -269,7 +316,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Role<wbr>Name</span>
+        <span id="rolename_go">
+<a href="#rolename_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -277,7 +326,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Backend</span>
+        <span id="backend_go">
+<a href="#backend_go" style="color: inherit; text-decoration: inherit;">Backend</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -292,7 +343,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -301,7 +354,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>role<wbr>Id</span>
+        <span id="roleid_nodejs">
+<a href="#roleid_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -310,7 +365,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>role<wbr>Name</span>
+        <span id="rolename_nodejs">
+<a href="#rolename_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -318,7 +375,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>backend</span>
+        <span id="backend_nodejs">
+<a href="#backend_nodejs" style="color: inherit; text-decoration: inherit;">backend</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -333,7 +392,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -342,7 +403,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>role_<wbr>id</span>
+        <span id="role_id_python">
+<a href="#role_id_python" style="color: inherit; text-decoration: inherit;">role_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -351,7 +414,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>role_<wbr>name</span>
+        <span id="role_name_python">
+<a href="#role_name_python" style="color: inherit; text-decoration: inherit;">role_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -359,7 +424,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>backend</span>
+        <span id="backend_python">
+<a href="#backend_python" style="color: inherit; text-decoration: inherit;">backend</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

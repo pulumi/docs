@@ -16,7 +16,7 @@ anything, please consult the source <a class="reference external" href="https://
 <span class="target" id="module-pulumi_vault.app_role"></span><dl class="py class">
 <dt id="pulumi_vault.app_role.AuthBackendLogin">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.app_role.</code><code class="sig-name descname">AuthBackendLogin</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">backend</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">secret_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.app_role.AuthBackendLogin" title="Permalink to this definition">¶</a></dt>
-<dd><p>Logs into Vault using the AppRole auth backend. See the <a class="reference external" href="https://www.vaultproject.io/docs/auth/approle.html">Vault
+<dd><p>Logs into Vault using the AppRole auth backend. See the <a class="reference external" href="https://www.vaultproject.io/docs/auth/approle">Vault
 documentation</a> for more
 information.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
@@ -181,7 +181,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_vault.app_role.AuthBackendRole">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.app_role.</code><code class="sig-name descname">AuthBackendRole</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">backend</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">bind_secret_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">bound_cidr_lists</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">period</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policies</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">secret_id_bound_cidrs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">secret_id_num_uses</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">secret_id_ttl</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">token_bound_cidrs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">token_explicit_max_ttl</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">token_max_ttl</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">token_no_default_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">token_num_uses</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">token_period</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">token_policies</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">token_ttl</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">token_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.app_role.AuthBackendRole" title="Permalink to this definition">¶</a></dt>
-<dd><p>Manages an AppRole auth backend role in a Vault server. See the <a class="reference external" href="https://www.vaultproject.io/docs/auth/approle.html">Vault
+<dd><p>Manages an AppRole auth backend role in a Vault server. See the <a class="reference external" href="https://www.vaultproject.io/docs/auth/approle">Vault
 documentation</a> for more
 information.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
@@ -507,7 +507,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_vault.app_role.AuthBackendRoleSecretID">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.app_role.</code><code class="sig-name descname">AuthBackendRoleSecretID</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">backend</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cidr_lists</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">metadata</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">secret_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">wrapping_ttl</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.app_role.AuthBackendRoleSecretID" title="Permalink to this definition">¶</a></dt>
-<dd><p>Manages an AppRole auth backend SecretID in a Vault server. See the <a class="reference external" href="https://www.vaultproject.io/docs/auth/approle.html">Vault
+<dd><p>Manages an AppRole auth backend SecretID in a Vault server. See the <a class="reference external" href="https://www.vaultproject.io/docs/auth/approle">Vault
 documentation</a> for more
 information.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
@@ -546,7 +546,7 @@ key-value pairs to be set on tokens issued with this SecretID.</p></li>
 <li><p><strong>secret_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The SecretID to be created. If set, uses “Push”
 mode.  Defaults to Vault auto-generating SecretIDs.</p></li>
 <li><p><strong>wrapping_ttl</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – If set, the SecretID response will be
-<a class="reference external" href="https://www.vaultproject.io/docs/concepts/response-wrapping.html">response-wrapped</a>
+<a class="reference external" href="https://www.vaultproject.io/docs/concepts/response-wrapping">response-wrapped</a>
 and available for the duration specified. Only a single unwrapping of the
 token is allowed.</p></li>
 </ul>
@@ -608,7 +608,7 @@ be safely logged.</p>
 <dt id="pulumi_vault.app_role.AuthBackendRoleSecretID.wrapping_ttl">
 <code class="sig-name descname">wrapping_ttl</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.app_role.AuthBackendRoleSecretID.wrapping_ttl" title="Permalink to this definition">¶</a></dt>
 <dd><p>If set, the SecretID response will be
-<a class="reference external" href="https://www.vaultproject.io/docs/concepts/response-wrapping.html">response-wrapped</a>
+<a class="reference external" href="https://www.vaultproject.io/docs/concepts/response-wrapping">response-wrapped</a>
 and available for the duration specified. Only a single unwrapping of the
 token is allowed.</p>
 </dd></dl>
@@ -637,7 +637,7 @@ mode.  Defaults to Vault auto-generating SecretIDs.</p></li>
 be safely logged.</p></li>
 <li><p><strong>wrapping_token</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The token used to retrieve a response-wrapped SecretID.</p></li>
 <li><p><strong>wrapping_ttl</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>If set, the SecretID response will be
-<a class="reference external" href="https://www.vaultproject.io/docs/concepts/response-wrapping.html">response-wrapped</a>
+<a class="reference external" href="https://www.vaultproject.io/docs/concepts/response-wrapping">response-wrapped</a>
 and available for the duration specified. Only a single unwrapping of the
 token is allowed.</p>
 </p></li>

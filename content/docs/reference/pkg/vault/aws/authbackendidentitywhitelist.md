@@ -13,7 +13,7 @@ meta_desc: "Explore the AuthBackendIdentityWhitelist resource of the aws module,
 Configures the periodic tidying operation of the whitelisted identity entries.
 
 For more information, see the
-[Vault docs](https://www.vaultproject.io/api/auth/aws/index.html#configure-identity-whitelist-tidy-operation).
+[Vault docs](https://www.vaultproject.io/api-docs/auth/aws#configure-identity-whitelist-tidy-operation).
 
 
 
@@ -23,7 +23,27 @@ For more information, see the
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Vault = Pulumi.Vault;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleAuthBackend = new Vault.AuthBackend("exampleAuthBackend", new Vault.AuthBackendArgs
+        {
+            Type = "aws",
+        });
+        var exampleAuthBackendIdentityWhitelist = new Vault.Aws.AuthBackendIdentityWhitelist("exampleAuthBackendIdentityWhitelist", new Vault.Aws.AuthBackendIdentityWhitelistArgs
+        {
+            Backend = exampleAuthBackend.Path,
+            SafetyBuffer = 3600,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -243,7 +263,9 @@ The AuthBackendIdentityWhitelist resource accepts the following [input]({{< relr
 
     <dt class="property-optional"
             title="Optional">
-        <span>Backend</span>
+        <span id="backend_csharp">
+<a href="#backend_csharp" style="color: inherit; text-decoration: inherit;">Backend</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -252,7 +274,9 @@ The AuthBackendIdentityWhitelist resource accepts the following [input]({{< relr
 
     <dt class="property-optional"
             title="Optional">
-        <span>Disable<wbr>Periodic<wbr>Tidy</span>
+        <span id="disableperiodictidy_csharp">
+<a href="#disableperiodictidy_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Periodic<wbr>Tidy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -262,7 +286,9 @@ tidying of the identity-whitelist entries.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Safety<wbr>Buffer</span>
+        <span id="safetybuffer_csharp">
+<a href="#safetybuffer_csharp" style="color: inherit; text-decoration: inherit;">Safety<wbr>Buffer</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -280,7 +306,9 @@ backend storage.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Backend</span>
+        <span id="backend_go">
+<a href="#backend_go" style="color: inherit; text-decoration: inherit;">Backend</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -289,7 +317,9 @@ backend storage.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Disable<wbr>Periodic<wbr>Tidy</span>
+        <span id="disableperiodictidy_go">
+<a href="#disableperiodictidy_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Periodic<wbr>Tidy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -299,7 +329,9 @@ tidying of the identity-whitelist entries.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Safety<wbr>Buffer</span>
+        <span id="safetybuffer_go">
+<a href="#safetybuffer_go" style="color: inherit; text-decoration: inherit;">Safety<wbr>Buffer</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -317,7 +349,9 @@ backend storage.
 
     <dt class="property-optional"
             title="Optional">
-        <span>backend</span>
+        <span id="backend_nodejs">
+<a href="#backend_nodejs" style="color: inherit; text-decoration: inherit;">backend</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -326,7 +360,9 @@ backend storage.
 
     <dt class="property-optional"
             title="Optional">
-        <span>disable<wbr>Periodic<wbr>Tidy</span>
+        <span id="disableperiodictidy_nodejs">
+<a href="#disableperiodictidy_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Periodic<wbr>Tidy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -336,7 +372,9 @@ tidying of the identity-whitelist entries.
 
     <dt class="property-optional"
             title="Optional">
-        <span>safety<wbr>Buffer</span>
+        <span id="safetybuffer_nodejs">
+<a href="#safetybuffer_nodejs" style="color: inherit; text-decoration: inherit;">safety<wbr>Buffer</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -354,7 +392,9 @@ backend storage.
 
     <dt class="property-optional"
             title="Optional">
-        <span>backend</span>
+        <span id="backend_python">
+<a href="#backend_python" style="color: inherit; text-decoration: inherit;">backend</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -363,7 +403,9 @@ backend storage.
 
     <dt class="property-optional"
             title="Optional">
-        <span>disable_<wbr>periodic_<wbr>tidy</span>
+        <span id="disable_periodic_tidy_python">
+<a href="#disable_periodic_tidy_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>periodic_<wbr>tidy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -373,7 +415,9 @@ tidying of the identity-whitelist entries.
 
     <dt class="property-optional"
             title="Optional">
-        <span>safety_<wbr>buffer</span>
+        <span id="safety_buffer_python">
+<a href="#safety_buffer_python" style="color: inherit; text-decoration: inherit;">safety_<wbr>buffer</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -402,7 +446,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -417,7 +463,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -432,7 +480,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -447,7 +497,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -588,7 +640,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Backend</span>
+        <span id="state_backend_csharp">
+<a href="#state_backend_csharp" style="color: inherit; text-decoration: inherit;">Backend</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -597,7 +651,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Disable<wbr>Periodic<wbr>Tidy</span>
+        <span id="state_disableperiodictidy_csharp">
+<a href="#state_disableperiodictidy_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Periodic<wbr>Tidy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -607,7 +663,9 @@ tidying of the identity-whitelist entries.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Safety<wbr>Buffer</span>
+        <span id="state_safetybuffer_csharp">
+<a href="#state_safetybuffer_csharp" style="color: inherit; text-decoration: inherit;">Safety<wbr>Buffer</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -625,7 +683,9 @@ backend storage.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Backend</span>
+        <span id="state_backend_go">
+<a href="#state_backend_go" style="color: inherit; text-decoration: inherit;">Backend</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -634,7 +694,9 @@ backend storage.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Disable<wbr>Periodic<wbr>Tidy</span>
+        <span id="state_disableperiodictidy_go">
+<a href="#state_disableperiodictidy_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Periodic<wbr>Tidy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -644,7 +706,9 @@ tidying of the identity-whitelist entries.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Safety<wbr>Buffer</span>
+        <span id="state_safetybuffer_go">
+<a href="#state_safetybuffer_go" style="color: inherit; text-decoration: inherit;">Safety<wbr>Buffer</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -662,7 +726,9 @@ backend storage.
 
     <dt class="property-optional"
             title="Optional">
-        <span>backend</span>
+        <span id="state_backend_nodejs">
+<a href="#state_backend_nodejs" style="color: inherit; text-decoration: inherit;">backend</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -671,7 +737,9 @@ backend storage.
 
     <dt class="property-optional"
             title="Optional">
-        <span>disable<wbr>Periodic<wbr>Tidy</span>
+        <span id="state_disableperiodictidy_nodejs">
+<a href="#state_disableperiodictidy_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Periodic<wbr>Tidy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -681,7 +749,9 @@ tidying of the identity-whitelist entries.
 
     <dt class="property-optional"
             title="Optional">
-        <span>safety<wbr>Buffer</span>
+        <span id="state_safetybuffer_nodejs">
+<a href="#state_safetybuffer_nodejs" style="color: inherit; text-decoration: inherit;">safety<wbr>Buffer</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -699,7 +769,9 @@ backend storage.
 
     <dt class="property-optional"
             title="Optional">
-        <span>backend</span>
+        <span id="state_backend_python">
+<a href="#state_backend_python" style="color: inherit; text-decoration: inherit;">backend</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -708,7 +780,9 @@ backend storage.
 
     <dt class="property-optional"
             title="Optional">
-        <span>disable_<wbr>periodic_<wbr>tidy</span>
+        <span id="state_disable_periodic_tidy_python">
+<a href="#state_disable_periodic_tidy_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>periodic_<wbr>tidy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -718,7 +792,9 @@ tidying of the identity-whitelist entries.
 
     <dt class="property-optional"
             title="Optional">
-        <span>safety_<wbr>buffer</span>
+        <span id="state_safety_buffer_python">
+<a href="#state_safety_buffer_python" style="color: inherit; text-decoration: inherit;">safety_<wbr>buffer</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>

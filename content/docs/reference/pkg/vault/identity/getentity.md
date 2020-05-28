@@ -53,7 +53,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Alias<wbr>Id</span>
+        <span id="aliasid_csharp">
+<a href="#aliasid_csharp" style="color: inherit; text-decoration: inherit;">Alias<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -62,7 +64,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Alias<wbr>Mount<wbr>Accessor</span>
+        <span id="aliasmountaccessor_csharp">
+<a href="#aliasmountaccessor_csharp" style="color: inherit; text-decoration: inherit;">Alias<wbr>Mount<wbr>Accessor</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -72,7 +76,9 @@ This should be supplied in conjunction with `alias_name`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Alias<wbr>Name</span>
+        <span id="aliasname_csharp">
+<a href="#aliasname_csharp" style="color: inherit; text-decoration: inherit;">Alias<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -82,7 +88,9 @@ This should be supplied in conjunction with `alias_name`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Entity<wbr>Id</span>
+        <span id="entityid_csharp">
+<a href="#entityid_csharp" style="color: inherit; text-decoration: inherit;">Entity<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -91,7 +99,9 @@ This should be supplied in conjunction with `alias_name`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Entity<wbr>Name</span>
+        <span id="entityname_csharp">
+<a href="#entityname_csharp" style="color: inherit; text-decoration: inherit;">Entity<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -107,7 +117,9 @@ This should be supplied in conjunction with `alias_name`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Alias<wbr>Id</span>
+        <span id="aliasid_go">
+<a href="#aliasid_go" style="color: inherit; text-decoration: inherit;">Alias<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -116,7 +128,9 @@ This should be supplied in conjunction with `alias_name`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Alias<wbr>Mount<wbr>Accessor</span>
+        <span id="aliasmountaccessor_go">
+<a href="#aliasmountaccessor_go" style="color: inherit; text-decoration: inherit;">Alias<wbr>Mount<wbr>Accessor</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -126,7 +140,9 @@ This should be supplied in conjunction with `alias_name`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Alias<wbr>Name</span>
+        <span id="aliasname_go">
+<a href="#aliasname_go" style="color: inherit; text-decoration: inherit;">Alias<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -136,7 +152,9 @@ This should be supplied in conjunction with `alias_name`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Entity<wbr>Id</span>
+        <span id="entityid_go">
+<a href="#entityid_go" style="color: inherit; text-decoration: inherit;">Entity<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -145,7 +163,9 @@ This should be supplied in conjunction with `alias_name`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Entity<wbr>Name</span>
+        <span id="entityname_go">
+<a href="#entityname_go" style="color: inherit; text-decoration: inherit;">Entity<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -161,7 +181,9 @@ This should be supplied in conjunction with `alias_name`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>alias<wbr>Id</span>
+        <span id="aliasid_nodejs">
+<a href="#aliasid_nodejs" style="color: inherit; text-decoration: inherit;">alias<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -170,7 +192,9 @@ This should be supplied in conjunction with `alias_name`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>alias<wbr>Mount<wbr>Accessor</span>
+        <span id="aliasmountaccessor_nodejs">
+<a href="#aliasmountaccessor_nodejs" style="color: inherit; text-decoration: inherit;">alias<wbr>Mount<wbr>Accessor</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -180,7 +204,9 @@ This should be supplied in conjunction with `alias_name`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>alias<wbr>Name</span>
+        <span id="aliasname_nodejs">
+<a href="#aliasname_nodejs" style="color: inherit; text-decoration: inherit;">alias<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -190,7 +216,9 @@ This should be supplied in conjunction with `alias_name`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>entity<wbr>Id</span>
+        <span id="entityid_nodejs">
+<a href="#entityid_nodejs" style="color: inherit; text-decoration: inherit;">entity<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -199,7 +227,9 @@ This should be supplied in conjunction with `alias_name`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>entity<wbr>Name</span>
+        <span id="entityname_nodejs">
+<a href="#entityname_nodejs" style="color: inherit; text-decoration: inherit;">entity<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -215,7 +245,9 @@ This should be supplied in conjunction with `alias_name`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>alias_<wbr>id</span>
+        <span id="alias_id_python">
+<a href="#alias_id_python" style="color: inherit; text-decoration: inherit;">alias_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -224,7 +256,9 @@ This should be supplied in conjunction with `alias_name`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>alias_<wbr>mount_<wbr>accessor</span>
+        <span id="alias_mount_accessor_python">
+<a href="#alias_mount_accessor_python" style="color: inherit; text-decoration: inherit;">alias_<wbr>mount_<wbr>accessor</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -234,7 +268,9 @@ This should be supplied in conjunction with `alias_name`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>alias_<wbr>name</span>
+        <span id="alias_name_python">
+<a href="#alias_name_python" style="color: inherit; text-decoration: inherit;">alias_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -244,7 +280,9 @@ This should be supplied in conjunction with `alias_name`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>entity_<wbr>id</span>
+        <span id="entity_id_python">
+<a href="#entity_id_python" style="color: inherit; text-decoration: inherit;">entity_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -253,7 +291,9 @@ This should be supplied in conjunction with `alias_name`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>entity_<wbr>name</span>
+        <span id="entity_name_python">
+<a href="#entity_name_python" style="color: inherit; text-decoration: inherit;">entity_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -282,7 +322,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Alias<wbr>Id</span>
+        <span id="aliasid_csharp">
+<a href="#aliasid_csharp" style="color: inherit; text-decoration: inherit;">Alias<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -290,7 +332,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Alias<wbr>Mount<wbr>Accessor</span>
+        <span id="aliasmountaccessor_csharp">
+<a href="#aliasmountaccessor_csharp" style="color: inherit; text-decoration: inherit;">Alias<wbr>Mount<wbr>Accessor</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -298,7 +342,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Alias<wbr>Name</span>
+        <span id="aliasname_csharp">
+<a href="#aliasname_csharp" style="color: inherit; text-decoration: inherit;">Alias<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -306,7 +352,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Aliases</span>
+        <span id="aliases_csharp">
+<a href="#aliases_csharp" style="color: inherit; text-decoration: inherit;">Aliases</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getentityalias">List&lt;Get<wbr>Entity<wbr>Alias&gt;</a></span>
     </dt>
@@ -315,7 +363,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Creation<wbr>Time</span>
+        <span id="creationtime_csharp">
+<a href="#creationtime_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -324,7 +374,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Data<wbr>Json</span>
+        <span id="datajson_csharp">
+<a href="#datajson_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Json</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -334,7 +386,9 @@ Vault, serialized in JSON format.
 
     <dt class="property-"
             title="">
-        <span>Direct<wbr>Group<wbr>Ids</span>
+        <span id="directgroupids_csharp">
+<a href="#directgroupids_csharp" style="color: inherit; text-decoration: inherit;">Direct<wbr>Group<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -343,7 +397,9 @@ Vault, serialized in JSON format.
 
     <dt class="property-"
             title="">
-        <span>Disabled</span>
+        <span id="disabled_csharp">
+<a href="#disabled_csharp" style="color: inherit; text-decoration: inherit;">Disabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -352,7 +408,9 @@ Vault, serialized in JSON format.
 
     <dt class="property-"
             title="">
-        <span>Entity<wbr>Id</span>
+        <span id="entityid_csharp">
+<a href="#entityid_csharp" style="color: inherit; text-decoration: inherit;">Entity<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -360,7 +418,9 @@ Vault, serialized in JSON format.
 
     <dt class="property-"
             title="">
-        <span>Entity<wbr>Name</span>
+        <span id="entityname_csharp">
+<a href="#entityname_csharp" style="color: inherit; text-decoration: inherit;">Entity<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -368,7 +428,9 @@ Vault, serialized in JSON format.
 
     <dt class="property-"
             title="">
-        <span>Group<wbr>Ids</span>
+        <span id="groupids_csharp">
+<a href="#groupids_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -377,7 +439,9 @@ Vault, serialized in JSON format.
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -386,7 +450,9 @@ Vault, serialized in JSON format.
 
     <dt class="property-"
             title="">
-        <span>Inherited<wbr>Group<wbr>Ids</span>
+        <span id="inheritedgroupids_csharp">
+<a href="#inheritedgroupids_csharp" style="color: inherit; text-decoration: inherit;">Inherited<wbr>Group<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -395,7 +461,9 @@ Vault, serialized in JSON format.
 
     <dt class="property-"
             title="">
-        <span>Last<wbr>Update<wbr>Time</span>
+        <span id="lastupdatetime_csharp">
+<a href="#lastupdatetime_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Update<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -404,7 +472,9 @@ Vault, serialized in JSON format.
 
     <dt class="property-"
             title="">
-        <span>Merged<wbr>Entity<wbr>Ids</span>
+        <span id="mergedentityids_csharp">
+<a href="#mergedentityids_csharp" style="color: inherit; text-decoration: inherit;">Merged<wbr>Entity<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -413,7 +483,9 @@ Vault, serialized in JSON format.
 
     <dt class="property-"
             title="">
-        <span>Metadata</span>
+        <span id="metadata_csharp">
+<a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -422,7 +494,9 @@ Vault, serialized in JSON format.
 
     <dt class="property-"
             title="">
-        <span>Namespace<wbr>Id</span>
+        <span id="namespaceid_csharp">
+<a href="#namespaceid_csharp" style="color: inherit; text-decoration: inherit;">Namespace<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -431,7 +505,9 @@ Vault, serialized in JSON format.
 
     <dt class="property-"
             title="">
-        <span>Policies</span>
+        <span id="policies_csharp">
+<a href="#policies_csharp" style="color: inherit; text-decoration: inherit;">Policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -447,7 +523,9 @@ Vault, serialized in JSON format.
 
     <dt class="property-"
             title="">
-        <span>Alias<wbr>Id</span>
+        <span id="aliasid_go">
+<a href="#aliasid_go" style="color: inherit; text-decoration: inherit;">Alias<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -455,7 +533,9 @@ Vault, serialized in JSON format.
 
     <dt class="property-"
             title="">
-        <span>Alias<wbr>Mount<wbr>Accessor</span>
+        <span id="aliasmountaccessor_go">
+<a href="#aliasmountaccessor_go" style="color: inherit; text-decoration: inherit;">Alias<wbr>Mount<wbr>Accessor</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -463,7 +543,9 @@ Vault, serialized in JSON format.
 
     <dt class="property-"
             title="">
-        <span>Alias<wbr>Name</span>
+        <span id="aliasname_go">
+<a href="#aliasname_go" style="color: inherit; text-decoration: inherit;">Alias<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -471,7 +553,9 @@ Vault, serialized in JSON format.
 
     <dt class="property-"
             title="">
-        <span>Aliases</span>
+        <span id="aliases_go">
+<a href="#aliases_go" style="color: inherit; text-decoration: inherit;">Aliases</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getentityalias">[]Get<wbr>Entity<wbr>Alias<wbr>Type</a></span>
     </dt>
@@ -480,7 +564,9 @@ Vault, serialized in JSON format.
 
     <dt class="property-"
             title="">
-        <span>Creation<wbr>Time</span>
+        <span id="creationtime_go">
+<a href="#creationtime_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -489,7 +575,9 @@ Vault, serialized in JSON format.
 
     <dt class="property-"
             title="">
-        <span>Data<wbr>Json</span>
+        <span id="datajson_go">
+<a href="#datajson_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Json</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -499,7 +587,9 @@ Vault, serialized in JSON format.
 
     <dt class="property-"
             title="">
-        <span>Direct<wbr>Group<wbr>Ids</span>
+        <span id="directgroupids_go">
+<a href="#directgroupids_go" style="color: inherit; text-decoration: inherit;">Direct<wbr>Group<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -508,7 +598,9 @@ Vault, serialized in JSON format.
 
     <dt class="property-"
             title="">
-        <span>Disabled</span>
+        <span id="disabled_go">
+<a href="#disabled_go" style="color: inherit; text-decoration: inherit;">Disabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -517,7 +609,9 @@ Vault, serialized in JSON format.
 
     <dt class="property-"
             title="">
-        <span>Entity<wbr>Id</span>
+        <span id="entityid_go">
+<a href="#entityid_go" style="color: inherit; text-decoration: inherit;">Entity<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -525,7 +619,9 @@ Vault, serialized in JSON format.
 
     <dt class="property-"
             title="">
-        <span>Entity<wbr>Name</span>
+        <span id="entityname_go">
+<a href="#entityname_go" style="color: inherit; text-decoration: inherit;">Entity<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -533,7 +629,9 @@ Vault, serialized in JSON format.
 
     <dt class="property-"
             title="">
-        <span>Group<wbr>Ids</span>
+        <span id="groupids_go">
+<a href="#groupids_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -542,7 +640,9 @@ Vault, serialized in JSON format.
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -551,7 +651,9 @@ Vault, serialized in JSON format.
 
     <dt class="property-"
             title="">
-        <span>Inherited<wbr>Group<wbr>Ids</span>
+        <span id="inheritedgroupids_go">
+<a href="#inheritedgroupids_go" style="color: inherit; text-decoration: inherit;">Inherited<wbr>Group<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -560,7 +662,9 @@ Vault, serialized in JSON format.
 
     <dt class="property-"
             title="">
-        <span>Last<wbr>Update<wbr>Time</span>
+        <span id="lastupdatetime_go">
+<a href="#lastupdatetime_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Update<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -569,7 +673,9 @@ Vault, serialized in JSON format.
 
     <dt class="property-"
             title="">
-        <span>Merged<wbr>Entity<wbr>Ids</span>
+        <span id="mergedentityids_go">
+<a href="#mergedentityids_go" style="color: inherit; text-decoration: inherit;">Merged<wbr>Entity<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -578,7 +684,9 @@ Vault, serialized in JSON format.
 
     <dt class="property-"
             title="">
-        <span>Metadata</span>
+        <span id="metadata_go">
+<a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -587,7 +695,9 @@ Vault, serialized in JSON format.
 
     <dt class="property-"
             title="">
-        <span>Namespace<wbr>Id</span>
+        <span id="namespaceid_go">
+<a href="#namespaceid_go" style="color: inherit; text-decoration: inherit;">Namespace<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -596,7 +706,9 @@ Vault, serialized in JSON format.
 
     <dt class="property-"
             title="">
-        <span>Policies</span>
+        <span id="policies_go">
+<a href="#policies_go" style="color: inherit; text-decoration: inherit;">Policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -612,7 +724,9 @@ Vault, serialized in JSON format.
 
     <dt class="property-"
             title="">
-        <span>alias<wbr>Id</span>
+        <span id="aliasid_nodejs">
+<a href="#aliasid_nodejs" style="color: inherit; text-decoration: inherit;">alias<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -620,7 +734,9 @@ Vault, serialized in JSON format.
 
     <dt class="property-"
             title="">
-        <span>alias<wbr>Mount<wbr>Accessor</span>
+        <span id="aliasmountaccessor_nodejs">
+<a href="#aliasmountaccessor_nodejs" style="color: inherit; text-decoration: inherit;">alias<wbr>Mount<wbr>Accessor</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -628,7 +744,9 @@ Vault, serialized in JSON format.
 
     <dt class="property-"
             title="">
-        <span>alias<wbr>Name</span>
+        <span id="aliasname_nodejs">
+<a href="#aliasname_nodejs" style="color: inherit; text-decoration: inherit;">alias<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -636,7 +754,9 @@ Vault, serialized in JSON format.
 
     <dt class="property-"
             title="">
-        <span>aliases</span>
+        <span id="aliases_nodejs">
+<a href="#aliases_nodejs" style="color: inherit; text-decoration: inherit;">aliases</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getentityalias">Get<wbr>Entity<wbr>Alias[]</a></span>
     </dt>
@@ -645,7 +765,9 @@ Vault, serialized in JSON format.
 
     <dt class="property-"
             title="">
-        <span>creation<wbr>Time</span>
+        <span id="creationtime_nodejs">
+<a href="#creationtime_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -654,7 +776,9 @@ Vault, serialized in JSON format.
 
     <dt class="property-"
             title="">
-        <span>data<wbr>Json</span>
+        <span id="datajson_nodejs">
+<a href="#datajson_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Json</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -664,7 +788,9 @@ Vault, serialized in JSON format.
 
     <dt class="property-"
             title="">
-        <span>direct<wbr>Group<wbr>Ids</span>
+        <span id="directgroupids_nodejs">
+<a href="#directgroupids_nodejs" style="color: inherit; text-decoration: inherit;">direct<wbr>Group<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -673,7 +799,9 @@ Vault, serialized in JSON format.
 
     <dt class="property-"
             title="">
-        <span>disabled</span>
+        <span id="disabled_nodejs">
+<a href="#disabled_nodejs" style="color: inherit; text-decoration: inherit;">disabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -682,7 +810,9 @@ Vault, serialized in JSON format.
 
     <dt class="property-"
             title="">
-        <span>entity<wbr>Id</span>
+        <span id="entityid_nodejs">
+<a href="#entityid_nodejs" style="color: inherit; text-decoration: inherit;">entity<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -690,7 +820,9 @@ Vault, serialized in JSON format.
 
     <dt class="property-"
             title="">
-        <span>entity<wbr>Name</span>
+        <span id="entityname_nodejs">
+<a href="#entityname_nodejs" style="color: inherit; text-decoration: inherit;">entity<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -698,7 +830,9 @@ Vault, serialized in JSON format.
 
     <dt class="property-"
             title="">
-        <span>group<wbr>Ids</span>
+        <span id="groupids_nodejs">
+<a href="#groupids_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -707,7 +841,9 @@ Vault, serialized in JSON format.
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -716,7 +852,9 @@ Vault, serialized in JSON format.
 
     <dt class="property-"
             title="">
-        <span>inherited<wbr>Group<wbr>Ids</span>
+        <span id="inheritedgroupids_nodejs">
+<a href="#inheritedgroupids_nodejs" style="color: inherit; text-decoration: inherit;">inherited<wbr>Group<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -725,7 +863,9 @@ Vault, serialized in JSON format.
 
     <dt class="property-"
             title="">
-        <span>last<wbr>Update<wbr>Time</span>
+        <span id="lastupdatetime_nodejs">
+<a href="#lastupdatetime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Update<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -734,7 +874,9 @@ Vault, serialized in JSON format.
 
     <dt class="property-"
             title="">
-        <span>merged<wbr>Entity<wbr>Ids</span>
+        <span id="mergedentityids_nodejs">
+<a href="#mergedentityids_nodejs" style="color: inherit; text-decoration: inherit;">merged<wbr>Entity<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -743,7 +885,9 @@ Vault, serialized in JSON format.
 
     <dt class="property-"
             title="">
-        <span>metadata</span>
+        <span id="metadata_nodejs">
+<a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -752,7 +896,9 @@ Vault, serialized in JSON format.
 
     <dt class="property-"
             title="">
-        <span>namespace<wbr>Id</span>
+        <span id="namespaceid_nodejs">
+<a href="#namespaceid_nodejs" style="color: inherit; text-decoration: inherit;">namespace<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -761,7 +907,9 @@ Vault, serialized in JSON format.
 
     <dt class="property-"
             title="">
-        <span>policies</span>
+        <span id="policies_nodejs">
+<a href="#policies_nodejs" style="color: inherit; text-decoration: inherit;">policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -777,7 +925,9 @@ Vault, serialized in JSON format.
 
     <dt class="property-"
             title="">
-        <span>alias_<wbr>id</span>
+        <span id="alias_id_python">
+<a href="#alias_id_python" style="color: inherit; text-decoration: inherit;">alias_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -785,7 +935,9 @@ Vault, serialized in JSON format.
 
     <dt class="property-"
             title="">
-        <span>alias_<wbr>mount_<wbr>accessor</span>
+        <span id="alias_mount_accessor_python">
+<a href="#alias_mount_accessor_python" style="color: inherit; text-decoration: inherit;">alias_<wbr>mount_<wbr>accessor</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -793,7 +945,9 @@ Vault, serialized in JSON format.
 
     <dt class="property-"
             title="">
-        <span>alias_<wbr>name</span>
+        <span id="alias_name_python">
+<a href="#alias_name_python" style="color: inherit; text-decoration: inherit;">alias_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -801,7 +955,9 @@ Vault, serialized in JSON format.
 
     <dt class="property-"
             title="">
-        <span>aliases</span>
+        <span id="aliases_python">
+<a href="#aliases_python" style="color: inherit; text-decoration: inherit;">aliases</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getentityalias">List[Get<wbr>Entity<wbr>Alias]</a></span>
     </dt>
@@ -810,7 +966,9 @@ Vault, serialized in JSON format.
 
     <dt class="property-"
             title="">
-        <span>creation_<wbr>time</span>
+        <span id="creation_time_python">
+<a href="#creation_time_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -819,7 +977,9 @@ Vault, serialized in JSON format.
 
     <dt class="property-"
             title="">
-        <span>data_<wbr>json</span>
+        <span id="data_json_python">
+<a href="#data_json_python" style="color: inherit; text-decoration: inherit;">data_<wbr>json</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -829,7 +989,9 @@ Vault, serialized in JSON format.
 
     <dt class="property-"
             title="">
-        <span>direct_<wbr>group_<wbr>ids</span>
+        <span id="direct_group_ids_python">
+<a href="#direct_group_ids_python" style="color: inherit; text-decoration: inherit;">direct_<wbr>group_<wbr>ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -838,7 +1000,9 @@ Vault, serialized in JSON format.
 
     <dt class="property-"
             title="">
-        <span>disabled</span>
+        <span id="disabled_python">
+<a href="#disabled_python" style="color: inherit; text-decoration: inherit;">disabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -847,7 +1011,9 @@ Vault, serialized in JSON format.
 
     <dt class="property-"
             title="">
-        <span>entity_<wbr>id</span>
+        <span id="entity_id_python">
+<a href="#entity_id_python" style="color: inherit; text-decoration: inherit;">entity_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -855,7 +1021,9 @@ Vault, serialized in JSON format.
 
     <dt class="property-"
             title="">
-        <span>entity_<wbr>name</span>
+        <span id="entity_name_python">
+<a href="#entity_name_python" style="color: inherit; text-decoration: inherit;">entity_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -863,7 +1031,9 @@ Vault, serialized in JSON format.
 
     <dt class="property-"
             title="">
-        <span>group_<wbr>ids</span>
+        <span id="group_ids_python">
+<a href="#group_ids_python" style="color: inherit; text-decoration: inherit;">group_<wbr>ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -872,7 +1042,9 @@ Vault, serialized in JSON format.
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -881,7 +1053,9 @@ Vault, serialized in JSON format.
 
     <dt class="property-"
             title="">
-        <span>inherited_<wbr>group_<wbr>ids</span>
+        <span id="inherited_group_ids_python">
+<a href="#inherited_group_ids_python" style="color: inherit; text-decoration: inherit;">inherited_<wbr>group_<wbr>ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -890,7 +1064,9 @@ Vault, serialized in JSON format.
 
     <dt class="property-"
             title="">
-        <span>last_<wbr>update_<wbr>time</span>
+        <span id="last_update_time_python">
+<a href="#last_update_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>update_<wbr>time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -899,7 +1075,9 @@ Vault, serialized in JSON format.
 
     <dt class="property-"
             title="">
-        <span>merged_<wbr>entity_<wbr>ids</span>
+        <span id="merged_entity_ids_python">
+<a href="#merged_entity_ids_python" style="color: inherit; text-decoration: inherit;">merged_<wbr>entity_<wbr>ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -908,7 +1086,9 @@ Vault, serialized in JSON format.
 
     <dt class="property-"
             title="">
-        <span>metadata</span>
+        <span id="metadata_python">
+<a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -917,7 +1097,9 @@ Vault, serialized in JSON format.
 
     <dt class="property-"
             title="">
-        <span>namespace_<wbr>id</span>
+        <span id="namespace_id_python">
+<a href="#namespace_id_python" style="color: inherit; text-decoration: inherit;">namespace_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -926,7 +1108,9 @@ Vault, serialized in JSON format.
 
     <dt class="property-"
             title="">
-        <span>policies</span>
+        <span id="policies_python">
+<a href="#policies_python" style="color: inherit; text-decoration: inherit;">policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -966,7 +1150,9 @@ Vault, serialized in JSON format.
 
     <dt class="property-required"
             title="Required">
-        <span>Canonical<wbr>Id</span>
+        <span id="canonicalid_csharp">
+<a href="#canonicalid_csharp" style="color: inherit; text-decoration: inherit;">Canonical<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -975,7 +1161,9 @@ Vault, serialized in JSON format.
 
     <dt class="property-required"
             title="Required">
-        <span>Creation<wbr>Time</span>
+        <span id="creationtime_csharp">
+<a href="#creationtime_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -984,7 +1172,9 @@ Vault, serialized in JSON format.
 
     <dt class="property-required"
             title="Required">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -993,7 +1183,9 @@ Vault, serialized in JSON format.
 
     <dt class="property-required"
             title="Required">
-        <span>Last<wbr>Update<wbr>Time</span>
+        <span id="lastupdatetime_csharp">
+<a href="#lastupdatetime_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Update<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1002,7 +1194,9 @@ Vault, serialized in JSON format.
 
     <dt class="property-required"
             title="Required">
-        <span>Merged<wbr>From<wbr>Canonical<wbr>Ids</span>
+        <span id="mergedfromcanonicalids_csharp">
+<a href="#mergedfromcanonicalids_csharp" style="color: inherit; text-decoration: inherit;">Merged<wbr>From<wbr>Canonical<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1011,7 +1205,9 @@ Vault, serialized in JSON format.
 
     <dt class="property-required"
             title="Required">
-        <span>Metadata</span>
+        <span id="metadata_csharp">
+<a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -1020,7 +1216,9 @@ Vault, serialized in JSON format.
 
     <dt class="property-required"
             title="Required">
-        <span>Mount<wbr>Accessor</span>
+        <span id="mountaccessor_csharp">
+<a href="#mountaccessor_csharp" style="color: inherit; text-decoration: inherit;">Mount<wbr>Accessor</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1029,7 +1227,9 @@ Vault, serialized in JSON format.
 
     <dt class="property-required"
             title="Required">
-        <span>Mount<wbr>Path</span>
+        <span id="mountpath_csharp">
+<a href="#mountpath_csharp" style="color: inherit; text-decoration: inherit;">Mount<wbr>Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1038,7 +1238,9 @@ Vault, serialized in JSON format.
 
     <dt class="property-required"
             title="Required">
-        <span>Mount<wbr>Type</span>
+        <span id="mounttype_csharp">
+<a href="#mounttype_csharp" style="color: inherit; text-decoration: inherit;">Mount<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1047,7 +1249,9 @@ Vault, serialized in JSON format.
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1063,7 +1267,9 @@ Vault, serialized in JSON format.
 
     <dt class="property-required"
             title="Required">
-        <span>Canonical<wbr>Id</span>
+        <span id="canonicalid_go">
+<a href="#canonicalid_go" style="color: inherit; text-decoration: inherit;">Canonical<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1072,7 +1278,9 @@ Vault, serialized in JSON format.
 
     <dt class="property-required"
             title="Required">
-        <span>Creation<wbr>Time</span>
+        <span id="creationtime_go">
+<a href="#creationtime_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1081,7 +1289,9 @@ Vault, serialized in JSON format.
 
     <dt class="property-required"
             title="Required">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1090,7 +1300,9 @@ Vault, serialized in JSON format.
 
     <dt class="property-required"
             title="Required">
-        <span>Last<wbr>Update<wbr>Time</span>
+        <span id="lastupdatetime_go">
+<a href="#lastupdatetime_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Update<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1099,7 +1311,9 @@ Vault, serialized in JSON format.
 
     <dt class="property-required"
             title="Required">
-        <span>Merged<wbr>From<wbr>Canonical<wbr>Ids</span>
+        <span id="mergedfromcanonicalids_go">
+<a href="#mergedfromcanonicalids_go" style="color: inherit; text-decoration: inherit;">Merged<wbr>From<wbr>Canonical<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1108,7 +1322,9 @@ Vault, serialized in JSON format.
 
     <dt class="property-required"
             title="Required">
-        <span>Metadata</span>
+        <span id="metadata_go">
+<a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -1117,7 +1333,9 @@ Vault, serialized in JSON format.
 
     <dt class="property-required"
             title="Required">
-        <span>Mount<wbr>Accessor</span>
+        <span id="mountaccessor_go">
+<a href="#mountaccessor_go" style="color: inherit; text-decoration: inherit;">Mount<wbr>Accessor</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1126,7 +1344,9 @@ Vault, serialized in JSON format.
 
     <dt class="property-required"
             title="Required">
-        <span>Mount<wbr>Path</span>
+        <span id="mountpath_go">
+<a href="#mountpath_go" style="color: inherit; text-decoration: inherit;">Mount<wbr>Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1135,7 +1355,9 @@ Vault, serialized in JSON format.
 
     <dt class="property-required"
             title="Required">
-        <span>Mount<wbr>Type</span>
+        <span id="mounttype_go">
+<a href="#mounttype_go" style="color: inherit; text-decoration: inherit;">Mount<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1144,7 +1366,9 @@ Vault, serialized in JSON format.
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1160,7 +1384,9 @@ Vault, serialized in JSON format.
 
     <dt class="property-required"
             title="Required">
-        <span>canonical<wbr>Id</span>
+        <span id="canonicalid_nodejs">
+<a href="#canonicalid_nodejs" style="color: inherit; text-decoration: inherit;">canonical<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1169,7 +1395,9 @@ Vault, serialized in JSON format.
 
     <dt class="property-required"
             title="Required">
-        <span>creation<wbr>Time</span>
+        <span id="creationtime_nodejs">
+<a href="#creationtime_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1178,7 +1406,9 @@ Vault, serialized in JSON format.
 
     <dt class="property-required"
             title="Required">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1187,7 +1417,9 @@ Vault, serialized in JSON format.
 
     <dt class="property-required"
             title="Required">
-        <span>last<wbr>Update<wbr>Time</span>
+        <span id="lastupdatetime_nodejs">
+<a href="#lastupdatetime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Update<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1196,7 +1428,9 @@ Vault, serialized in JSON format.
 
     <dt class="property-required"
             title="Required">
-        <span>merged<wbr>From<wbr>Canonical<wbr>Ids</span>
+        <span id="mergedfromcanonicalids_nodejs">
+<a href="#mergedfromcanonicalids_nodejs" style="color: inherit; text-decoration: inherit;">merged<wbr>From<wbr>Canonical<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1205,7 +1439,9 @@ Vault, serialized in JSON format.
 
     <dt class="property-required"
             title="Required">
-        <span>metadata</span>
+        <span id="metadata_nodejs">
+<a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -1214,7 +1450,9 @@ Vault, serialized in JSON format.
 
     <dt class="property-required"
             title="Required">
-        <span>mount<wbr>Accessor</span>
+        <span id="mountaccessor_nodejs">
+<a href="#mountaccessor_nodejs" style="color: inherit; text-decoration: inherit;">mount<wbr>Accessor</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1223,7 +1461,9 @@ Vault, serialized in JSON format.
 
     <dt class="property-required"
             title="Required">
-        <span>mount<wbr>Path</span>
+        <span id="mountpath_nodejs">
+<a href="#mountpath_nodejs" style="color: inherit; text-decoration: inherit;">mount<wbr>Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1232,7 +1472,9 @@ Vault, serialized in JSON format.
 
     <dt class="property-required"
             title="Required">
-        <span>mount<wbr>Type</span>
+        <span id="mounttype_nodejs">
+<a href="#mounttype_nodejs" style="color: inherit; text-decoration: inherit;">mount<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1241,7 +1483,9 @@ Vault, serialized in JSON format.
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1257,7 +1501,9 @@ Vault, serialized in JSON format.
 
     <dt class="property-required"
             title="Required">
-        <span>canonical_<wbr>id</span>
+        <span id="canonical_id_python">
+<a href="#canonical_id_python" style="color: inherit; text-decoration: inherit;">canonical_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1266,7 +1512,9 @@ Vault, serialized in JSON format.
 
     <dt class="property-required"
             title="Required">
-        <span>creation<wbr>Time</span>
+        <span id="creationtime_python">
+<a href="#creationtime_python" style="color: inherit; text-decoration: inherit;">creation<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1275,7 +1523,9 @@ Vault, serialized in JSON format.
 
     <dt class="property-required"
             title="Required">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1284,7 +1534,9 @@ Vault, serialized in JSON format.
 
     <dt class="property-required"
             title="Required">
-        <span>last<wbr>Update<wbr>Time</span>
+        <span id="lastupdatetime_python">
+<a href="#lastupdatetime_python" style="color: inherit; text-decoration: inherit;">last<wbr>Update<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1293,7 +1545,9 @@ Vault, serialized in JSON format.
 
     <dt class="property-required"
             title="Required">
-        <span>merged<wbr>From<wbr>Canonical<wbr>Ids</span>
+        <span id="mergedfromcanonicalids_python">
+<a href="#mergedfromcanonicalids_python" style="color: inherit; text-decoration: inherit;">merged<wbr>From<wbr>Canonical<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1302,7 +1556,9 @@ Vault, serialized in JSON format.
 
     <dt class="property-required"
             title="Required">
-        <span>metadata</span>
+        <span id="metadata_python">
+<a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -1311,7 +1567,9 @@ Vault, serialized in JSON format.
 
     <dt class="property-required"
             title="Required">
-        <span>mount<wbr>Path</span>
+        <span id="mountpath_python">
+<a href="#mountpath_python" style="color: inherit; text-decoration: inherit;">mount<wbr>Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1320,7 +1578,9 @@ Vault, serialized in JSON format.
 
     <dt class="property-required"
             title="Required">
-        <span>mount<wbr>Type</span>
+        <span id="mounttype_python">
+<a href="#mounttype_python" style="color: inherit; text-decoration: inherit;">mount<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1329,7 +1589,9 @@ Vault, serialized in JSON format.
 
     <dt class="property-required"
             title="Required">
-        <span>mount_<wbr>accessor</span>
+        <span id="mount_accessor_python">
+<a href="#mount_accessor_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>accessor</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1338,7 +1600,9 @@ Vault, serialized in JSON format.
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

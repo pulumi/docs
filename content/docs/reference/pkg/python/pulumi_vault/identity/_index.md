@@ -577,7 +577,7 @@ Vault, serialized in JSON format.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>external_policies</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – <code class="docutils literal notranslate"><span class="pre">false</span></code> by default. If set to <code class="docutils literal notranslate"><span class="pre">true</span></code>, this resource will ignore any policies return from Vault or specified in the resource. You can use <code class="docutils literal notranslate"><span class="pre">identity.GroupPolicies</span></code> to manage policies for this group in a decoupled manner.</p></li>
 <li><p><strong>member_entity_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of Entity IDs to be assigned as group members. Not allowed on <code class="docutils literal notranslate"><span class="pre">external</span></code> groups.</p></li>
-<li><p><strong>member_group_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of Group IDs to be assigned as group members.</p></li>
+<li><p><strong>member_group_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of Group IDs to be assigned as group members. Not allowed on <code class="docutils literal notranslate"><span class="pre">external</span></code> groups.</p></li>
 <li><p><strong>metadata</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A Map of additional metadata to associate with the group.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the identity group to create.</p></li>
 <li><p><strong>policies</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of policies to apply to the group.</p></li>
@@ -600,7 +600,7 @@ Vault, serialized in JSON format.</p>
 <dl class="py attribute">
 <dt id="pulumi_vault.identity.Group.member_group_ids">
 <code class="sig-name descname">member_group_ids</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.identity.Group.member_group_ids" title="Permalink to this definition">¶</a></dt>
-<dd><p>A list of Group IDs to be assigned as group members.</p>
+<dd><p>A list of Group IDs to be assigned as group members. Not allowed on <code class="docutils literal notranslate"><span class="pre">external</span></code> groups.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -640,7 +640,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>external_policies</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – <code class="docutils literal notranslate"><span class="pre">false</span></code> by default. If set to <code class="docutils literal notranslate"><span class="pre">true</span></code>, this resource will ignore any policies return from Vault or specified in the resource. You can use <code class="docutils literal notranslate"><span class="pre">identity.GroupPolicies</span></code> to manage policies for this group in a decoupled manner.</p></li>
 <li><p><strong>member_entity_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of Entity IDs to be assigned as group members. Not allowed on <code class="docutils literal notranslate"><span class="pre">external</span></code> groups.</p></li>
-<li><p><strong>member_group_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of Group IDs to be assigned as group members.</p></li>
+<li><p><strong>member_group_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of Group IDs to be assigned as group members. Not allowed on <code class="docutils literal notranslate"><span class="pre">external</span></code> groups.</p></li>
 <li><p><strong>metadata</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A Map of additional metadata to associate with the group.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the identity group to create.</p></li>
 <li><p><strong>policies</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of policies to apply to the group.</p></li>

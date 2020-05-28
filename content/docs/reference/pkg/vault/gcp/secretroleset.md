@@ -22,7 +22,47 @@ Each Roleset is [tied](https://www.vaultproject.io/docs/secrets/gcp/index.html#s
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using System.IO;
+using Pulumi;
+using Vault = Pulumi.Vault;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var project = "my-awesome-project";
+        var gcp = new Vault.Gcp.SecretBackend("gcp", new Vault.Gcp.SecretBackendArgs
+        {
+            Credentials = File.ReadAllText("credentials.json"),
+            Path = "gcp",
+        });
+        var roleset = new Vault.Gcp.SecretRoleset("roleset", new Vault.Gcp.SecretRolesetArgs
+        {
+            Backend = gcp.Path,
+            Bindings = 
+            {
+                new Vault.Gcp.Inputs.SecretRolesetBindingArgs
+                {
+                    Resource = $"//cloudresourcemanager.googleapis.com/projects/{project}",
+                    Roles = 
+                    {
+                        "roles/viewer",
+                    },
+                },
+            },
+            Project = project,
+            Roleset = "project_viewer",
+            SecretType = "access_token",
+            TokenScopes = 
+            {
+                "https://www.googleapis.com/auth/cloud-platform",
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -262,7 +302,9 @@ The SecretRoleset resource accepts the following [input]({{< relref "/docs/intro
 
     <dt class="property-required"
             title="Required">
-        <span>Backend</span>
+        <span id="backend_csharp">
+<a href="#backend_csharp" style="color: inherit; text-decoration: inherit;">Backend</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -271,7 +313,9 @@ The SecretRoleset resource accepts the following [input]({{< relref "/docs/intro
 
     <dt class="property-required"
             title="Required">
-        <span>Bindings</span>
+        <span id="bindings_csharp">
+<a href="#bindings_csharp" style="color: inherit; text-decoration: inherit;">Bindings</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretrolesetbinding">List&lt;Secret<wbr>Roleset<wbr>Binding<wbr>Args&gt;</a></span>
     </dt>
@@ -280,7 +324,9 @@ The SecretRoleset resource accepts the following [input]({{< relref "/docs/intro
 
     <dt class="property-required"
             title="Required">
-        <span>Project</span>
+        <span id="project_csharp">
+<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -289,7 +335,9 @@ The SecretRoleset resource accepts the following [input]({{< relref "/docs/intro
 
     <dt class="property-required"
             title="Required">
-        <span>Roleset</span>
+        <span id="roleset_csharp">
+<a href="#roleset_csharp" style="color: inherit; text-decoration: inherit;">Roleset</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -298,7 +346,9 @@ The SecretRoleset resource accepts the following [input]({{< relref "/docs/intro
 
     <dt class="property-optional"
             title="Optional">
-        <span>Secret<wbr>Type</span>
+        <span id="secrettype_csharp">
+<a href="#secrettype_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -307,7 +357,9 @@ The SecretRoleset resource accepts the following [input]({{< relref "/docs/intro
 
     <dt class="property-optional"
             title="Optional">
-        <span>Token<wbr>Scopes</span>
+        <span id="tokenscopes_csharp">
+<a href="#tokenscopes_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Scopes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -323,7 +375,9 @@ The SecretRoleset resource accepts the following [input]({{< relref "/docs/intro
 
     <dt class="property-required"
             title="Required">
-        <span>Backend</span>
+        <span id="backend_go">
+<a href="#backend_go" style="color: inherit; text-decoration: inherit;">Backend</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -332,7 +386,9 @@ The SecretRoleset resource accepts the following [input]({{< relref "/docs/intro
 
     <dt class="property-required"
             title="Required">
-        <span>Bindings</span>
+        <span id="bindings_go">
+<a href="#bindings_go" style="color: inherit; text-decoration: inherit;">Bindings</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretrolesetbinding">[]Secret<wbr>Roleset<wbr>Binding</a></span>
     </dt>
@@ -341,7 +397,9 @@ The SecretRoleset resource accepts the following [input]({{< relref "/docs/intro
 
     <dt class="property-required"
             title="Required">
-        <span>Project</span>
+        <span id="project_go">
+<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -350,7 +408,9 @@ The SecretRoleset resource accepts the following [input]({{< relref "/docs/intro
 
     <dt class="property-required"
             title="Required">
-        <span>Roleset</span>
+        <span id="roleset_go">
+<a href="#roleset_go" style="color: inherit; text-decoration: inherit;">Roleset</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -359,7 +419,9 @@ The SecretRoleset resource accepts the following [input]({{< relref "/docs/intro
 
     <dt class="property-optional"
             title="Optional">
-        <span>Secret<wbr>Type</span>
+        <span id="secrettype_go">
+<a href="#secrettype_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -368,7 +430,9 @@ The SecretRoleset resource accepts the following [input]({{< relref "/docs/intro
 
     <dt class="property-optional"
             title="Optional">
-        <span>Token<wbr>Scopes</span>
+        <span id="tokenscopes_go">
+<a href="#tokenscopes_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Scopes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -384,7 +448,9 @@ The SecretRoleset resource accepts the following [input]({{< relref "/docs/intro
 
     <dt class="property-required"
             title="Required">
-        <span>backend</span>
+        <span id="backend_nodejs">
+<a href="#backend_nodejs" style="color: inherit; text-decoration: inherit;">backend</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -393,7 +459,9 @@ The SecretRoleset resource accepts the following [input]({{< relref "/docs/intro
 
     <dt class="property-required"
             title="Required">
-        <span>bindings</span>
+        <span id="bindings_nodejs">
+<a href="#bindings_nodejs" style="color: inherit; text-decoration: inherit;">bindings</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretrolesetbinding">Secret<wbr>Roleset<wbr>Binding[]</a></span>
     </dt>
@@ -402,7 +470,9 @@ The SecretRoleset resource accepts the following [input]({{< relref "/docs/intro
 
     <dt class="property-required"
             title="Required">
-        <span>project</span>
+        <span id="project_nodejs">
+<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -411,7 +481,9 @@ The SecretRoleset resource accepts the following [input]({{< relref "/docs/intro
 
     <dt class="property-required"
             title="Required">
-        <span>roleset</span>
+        <span id="roleset_nodejs">
+<a href="#roleset_nodejs" style="color: inherit; text-decoration: inherit;">roleset</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -420,7 +492,9 @@ The SecretRoleset resource accepts the following [input]({{< relref "/docs/intro
 
     <dt class="property-optional"
             title="Optional">
-        <span>secret<wbr>Type</span>
+        <span id="secrettype_nodejs">
+<a href="#secrettype_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -429,7 +503,9 @@ The SecretRoleset resource accepts the following [input]({{< relref "/docs/intro
 
     <dt class="property-optional"
             title="Optional">
-        <span>token<wbr>Scopes</span>
+        <span id="tokenscopes_nodejs">
+<a href="#tokenscopes_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Scopes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -445,7 +521,9 @@ The SecretRoleset resource accepts the following [input]({{< relref "/docs/intro
 
     <dt class="property-required"
             title="Required">
-        <span>backend</span>
+        <span id="backend_python">
+<a href="#backend_python" style="color: inherit; text-decoration: inherit;">backend</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -454,7 +532,9 @@ The SecretRoleset resource accepts the following [input]({{< relref "/docs/intro
 
     <dt class="property-required"
             title="Required">
-        <span>bindings</span>
+        <span id="bindings_python">
+<a href="#bindings_python" style="color: inherit; text-decoration: inherit;">bindings</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretrolesetbinding">List[Secret<wbr>Roleset<wbr>Binding]</a></span>
     </dt>
@@ -463,7 +543,9 @@ The SecretRoleset resource accepts the following [input]({{< relref "/docs/intro
 
     <dt class="property-required"
             title="Required">
-        <span>project</span>
+        <span id="project_python">
+<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -472,7 +554,9 @@ The SecretRoleset resource accepts the following [input]({{< relref "/docs/intro
 
     <dt class="property-required"
             title="Required">
-        <span>roleset</span>
+        <span id="roleset_python">
+<a href="#roleset_python" style="color: inherit; text-decoration: inherit;">roleset</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -481,7 +565,9 @@ The SecretRoleset resource accepts the following [input]({{< relref "/docs/intro
 
     <dt class="property-optional"
             title="Optional">
-        <span>secret_<wbr>type</span>
+        <span id="secret_type_python">
+<a href="#secret_type_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -490,7 +576,9 @@ The SecretRoleset resource accepts the following [input]({{< relref "/docs/intro
 
     <dt class="property-optional"
             title="Optional">
-        <span>token_<wbr>scopes</span>
+        <span id="token_scopes_python">
+<a href="#token_scopes_python" style="color: inherit; text-decoration: inherit;">token_<wbr>scopes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -517,7 +605,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -525,7 +615,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Service<wbr>Account<wbr>Email</span>
+        <span id="serviceaccountemail_csharp">
+<a href="#serviceaccountemail_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Account<wbr>Email</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -541,7 +633,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -549,7 +643,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Service<wbr>Account<wbr>Email</span>
+        <span id="serviceaccountemail_go">
+<a href="#serviceaccountemail_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Account<wbr>Email</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -565,7 +661,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -573,7 +671,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>service<wbr>Account<wbr>Email</span>
+        <span id="serviceaccountemail_nodejs">
+<a href="#serviceaccountemail_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Account<wbr>Email</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -589,7 +689,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -597,7 +699,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>service_<wbr>account_<wbr>email</span>
+        <span id="service_account_email_python">
+<a href="#service_account_email_python" style="color: inherit; text-decoration: inherit;">service_<wbr>account_<wbr>email</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -739,7 +843,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Backend</span>
+        <span id="state_backend_csharp">
+<a href="#state_backend_csharp" style="color: inherit; text-decoration: inherit;">Backend</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -748,7 +854,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Bindings</span>
+        <span id="state_bindings_csharp">
+<a href="#state_bindings_csharp" style="color: inherit; text-decoration: inherit;">Bindings</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretrolesetbinding">List&lt;Secret<wbr>Roleset<wbr>Binding<wbr>Args&gt;</a></span>
     </dt>
@@ -757,7 +865,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project</span>
+        <span id="state_project_csharp">
+<a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -766,7 +876,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Roleset</span>
+        <span id="state_roleset_csharp">
+<a href="#state_roleset_csharp" style="color: inherit; text-decoration: inherit;">Roleset</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -775,7 +887,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Secret<wbr>Type</span>
+        <span id="state_secrettype_csharp">
+<a href="#state_secrettype_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -784,7 +898,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Service<wbr>Account<wbr>Email</span>
+        <span id="state_serviceaccountemail_csharp">
+<a href="#state_serviceaccountemail_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Account<wbr>Email</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -793,7 +909,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Token<wbr>Scopes</span>
+        <span id="state_tokenscopes_csharp">
+<a href="#state_tokenscopes_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Scopes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -809,7 +927,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Backend</span>
+        <span id="state_backend_go">
+<a href="#state_backend_go" style="color: inherit; text-decoration: inherit;">Backend</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -818,7 +938,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Bindings</span>
+        <span id="state_bindings_go">
+<a href="#state_bindings_go" style="color: inherit; text-decoration: inherit;">Bindings</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretrolesetbinding">[]Secret<wbr>Roleset<wbr>Binding</a></span>
     </dt>
@@ -827,7 +949,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project</span>
+        <span id="state_project_go">
+<a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -836,7 +960,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Roleset</span>
+        <span id="state_roleset_go">
+<a href="#state_roleset_go" style="color: inherit; text-decoration: inherit;">Roleset</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -845,7 +971,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Secret<wbr>Type</span>
+        <span id="state_secrettype_go">
+<a href="#state_secrettype_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -854,7 +982,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Service<wbr>Account<wbr>Email</span>
+        <span id="state_serviceaccountemail_go">
+<a href="#state_serviceaccountemail_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Account<wbr>Email</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -863,7 +993,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Token<wbr>Scopes</span>
+        <span id="state_tokenscopes_go">
+<a href="#state_tokenscopes_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Scopes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -879,7 +1011,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>backend</span>
+        <span id="state_backend_nodejs">
+<a href="#state_backend_nodejs" style="color: inherit; text-decoration: inherit;">backend</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -888,7 +1022,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>bindings</span>
+        <span id="state_bindings_nodejs">
+<a href="#state_bindings_nodejs" style="color: inherit; text-decoration: inherit;">bindings</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretrolesetbinding">Secret<wbr>Roleset<wbr>Binding[]</a></span>
     </dt>
@@ -897,7 +1033,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>project</span>
+        <span id="state_project_nodejs">
+<a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -906,7 +1044,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>roleset</span>
+        <span id="state_roleset_nodejs">
+<a href="#state_roleset_nodejs" style="color: inherit; text-decoration: inherit;">roleset</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -915,7 +1055,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>secret<wbr>Type</span>
+        <span id="state_secrettype_nodejs">
+<a href="#state_secrettype_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -924,7 +1066,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>service<wbr>Account<wbr>Email</span>
+        <span id="state_serviceaccountemail_nodejs">
+<a href="#state_serviceaccountemail_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Account<wbr>Email</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -933,7 +1077,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>token<wbr>Scopes</span>
+        <span id="state_tokenscopes_nodejs">
+<a href="#state_tokenscopes_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Scopes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -949,7 +1095,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>backend</span>
+        <span id="state_backend_python">
+<a href="#state_backend_python" style="color: inherit; text-decoration: inherit;">backend</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -958,7 +1106,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>bindings</span>
+        <span id="state_bindings_python">
+<a href="#state_bindings_python" style="color: inherit; text-decoration: inherit;">bindings</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretrolesetbinding">List[Secret<wbr>Roleset<wbr>Binding]</a></span>
     </dt>
@@ -967,7 +1117,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>project</span>
+        <span id="state_project_python">
+<a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -976,7 +1128,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>roleset</span>
+        <span id="state_roleset_python">
+<a href="#state_roleset_python" style="color: inherit; text-decoration: inherit;">roleset</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -985,7 +1139,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>secret_<wbr>type</span>
+        <span id="state_secret_type_python">
+<a href="#state_secret_type_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -994,7 +1150,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>service_<wbr>account_<wbr>email</span>
+        <span id="state_service_account_email_python">
+<a href="#state_service_account_email_python" style="color: inherit; text-decoration: inherit;">service_<wbr>account_<wbr>email</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1003,7 +1161,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>token_<wbr>scopes</span>
+        <span id="state_token_scopes_python">
+<a href="#state_token_scopes_python" style="color: inherit; text-decoration: inherit;">token_<wbr>scopes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1045,7 +1205,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Resource</span>
+        <span id="resource_csharp">
+<a href="#resource_csharp" style="color: inherit; text-decoration: inherit;">Resource</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1054,7 +1216,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Roles</span>
+        <span id="roles_csharp">
+<a href="#roles_csharp" style="color: inherit; text-decoration: inherit;">Roles</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1070,7 +1234,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Resource</span>
+        <span id="resource_go">
+<a href="#resource_go" style="color: inherit; text-decoration: inherit;">Resource</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1079,7 +1245,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Roles</span>
+        <span id="roles_go">
+<a href="#roles_go" style="color: inherit; text-decoration: inherit;">Roles</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1095,7 +1263,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>resource</span>
+        <span id="resource_nodejs">
+<a href="#resource_nodejs" style="color: inherit; text-decoration: inherit;">resource</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1104,7 +1274,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>roles</span>
+        <span id="roles_nodejs">
+<a href="#roles_nodejs" style="color: inherit; text-decoration: inherit;">roles</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1120,7 +1292,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>resource</span>
+        <span id="resource_python">
+<a href="#resource_python" style="color: inherit; text-decoration: inherit;">resource</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1129,7 +1303,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>roles</span>
+        <span id="roles_python">
+<a href="#roles_python" style="color: inherit; text-decoration: inherit;">roles</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>

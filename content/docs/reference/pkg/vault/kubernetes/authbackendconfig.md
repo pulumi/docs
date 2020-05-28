@@ -22,7 +22,33 @@ information.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Vault = Pulumi.Vault;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var kubernetes = new Vault.AuthBackend("kubernetes", new Vault.AuthBackendArgs
+        {
+            Type = "kubernetes",
+        });
+        var example = new Vault.Kubernetes.AuthBackendConfig("example", new Vault.Kubernetes.AuthBackendConfigArgs
+        {
+            Backend = kubernetes.Path,
+            Issuer = "api",
+            KubernetesCaCert = @"-----BEGIN CERTIFICATE-----
+example
+-----END CERTIFICATE-----
+",
+            KubernetesHost = "http://example.com:443",
+            TokenReviewerJwt = "ZXhhbXBsZQo=",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -253,7 +279,9 @@ The AuthBackendConfig resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-required"
             title="Required">
-        <span>Kubernetes<wbr>Host</span>
+        <span id="kuberneteshost_csharp">
+<a href="#kuberneteshost_csharp" style="color: inherit; text-decoration: inherit;">Kubernetes<wbr>Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -262,7 +290,9 @@ The AuthBackendConfig resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Backend</span>
+        <span id="backend_csharp">
+<a href="#backend_csharp" style="color: inherit; text-decoration: inherit;">Backend</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -271,7 +301,9 @@ The AuthBackendConfig resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Issuer</span>
+        <span id="issuer_csharp">
+<a href="#issuer_csharp" style="color: inherit; text-decoration: inherit;">Issuer</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -280,7 +312,9 @@ The AuthBackendConfig resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Kubernetes<wbr>Ca<wbr>Cert</span>
+        <span id="kubernetescacert_csharp">
+<a href="#kubernetescacert_csharp" style="color: inherit; text-decoration: inherit;">Kubernetes<wbr>Ca<wbr>Cert</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -289,7 +323,9 @@ The AuthBackendConfig resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Pem<wbr>Keys</span>
+        <span id="pemkeys_csharp">
+<a href="#pemkeys_csharp" style="color: inherit; text-decoration: inherit;">Pem<wbr>Keys</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -298,7 +334,9 @@ The AuthBackendConfig resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Token<wbr>Reviewer<wbr>Jwt</span>
+        <span id="tokenreviewerjwt_csharp">
+<a href="#tokenreviewerjwt_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Reviewer<wbr>Jwt</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -314,7 +352,9 @@ The AuthBackendConfig resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-required"
             title="Required">
-        <span>Kubernetes<wbr>Host</span>
+        <span id="kuberneteshost_go">
+<a href="#kuberneteshost_go" style="color: inherit; text-decoration: inherit;">Kubernetes<wbr>Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -323,7 +363,9 @@ The AuthBackendConfig resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Backend</span>
+        <span id="backend_go">
+<a href="#backend_go" style="color: inherit; text-decoration: inherit;">Backend</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -332,7 +374,9 @@ The AuthBackendConfig resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Issuer</span>
+        <span id="issuer_go">
+<a href="#issuer_go" style="color: inherit; text-decoration: inherit;">Issuer</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -341,7 +385,9 @@ The AuthBackendConfig resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Kubernetes<wbr>Ca<wbr>Cert</span>
+        <span id="kubernetescacert_go">
+<a href="#kubernetescacert_go" style="color: inherit; text-decoration: inherit;">Kubernetes<wbr>Ca<wbr>Cert</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -350,7 +396,9 @@ The AuthBackendConfig resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Pem<wbr>Keys</span>
+        <span id="pemkeys_go">
+<a href="#pemkeys_go" style="color: inherit; text-decoration: inherit;">Pem<wbr>Keys</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -359,7 +407,9 @@ The AuthBackendConfig resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Token<wbr>Reviewer<wbr>Jwt</span>
+        <span id="tokenreviewerjwt_go">
+<a href="#tokenreviewerjwt_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Reviewer<wbr>Jwt</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -375,7 +425,9 @@ The AuthBackendConfig resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-required"
             title="Required">
-        <span>kubernetes<wbr>Host</span>
+        <span id="kuberneteshost_nodejs">
+<a href="#kuberneteshost_nodejs" style="color: inherit; text-decoration: inherit;">kubernetes<wbr>Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -384,7 +436,9 @@ The AuthBackendConfig resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>backend</span>
+        <span id="backend_nodejs">
+<a href="#backend_nodejs" style="color: inherit; text-decoration: inherit;">backend</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -393,7 +447,9 @@ The AuthBackendConfig resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>issuer</span>
+        <span id="issuer_nodejs">
+<a href="#issuer_nodejs" style="color: inherit; text-decoration: inherit;">issuer</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -402,7 +458,9 @@ The AuthBackendConfig resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>kubernetes<wbr>Ca<wbr>Cert</span>
+        <span id="kubernetescacert_nodejs">
+<a href="#kubernetescacert_nodejs" style="color: inherit; text-decoration: inherit;">kubernetes<wbr>Ca<wbr>Cert</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -411,7 +469,9 @@ The AuthBackendConfig resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>pem<wbr>Keys</span>
+        <span id="pemkeys_nodejs">
+<a href="#pemkeys_nodejs" style="color: inherit; text-decoration: inherit;">pem<wbr>Keys</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -420,7 +480,9 @@ The AuthBackendConfig resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>token<wbr>Reviewer<wbr>Jwt</span>
+        <span id="tokenreviewerjwt_nodejs">
+<a href="#tokenreviewerjwt_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Reviewer<wbr>Jwt</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -436,7 +498,9 @@ The AuthBackendConfig resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-required"
             title="Required">
-        <span>kubernetes_<wbr>host</span>
+        <span id="kubernetes_host_python">
+<a href="#kubernetes_host_python" style="color: inherit; text-decoration: inherit;">kubernetes_<wbr>host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -445,7 +509,9 @@ The AuthBackendConfig resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>backend</span>
+        <span id="backend_python">
+<a href="#backend_python" style="color: inherit; text-decoration: inherit;">backend</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -454,7 +520,9 @@ The AuthBackendConfig resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>issuer</span>
+        <span id="issuer_python">
+<a href="#issuer_python" style="color: inherit; text-decoration: inherit;">issuer</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -463,7 +531,9 @@ The AuthBackendConfig resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>kubernetes_<wbr>ca_<wbr>cert</span>
+        <span id="kubernetes_ca_cert_python">
+<a href="#kubernetes_ca_cert_python" style="color: inherit; text-decoration: inherit;">kubernetes_<wbr>ca_<wbr>cert</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -472,7 +542,9 @@ The AuthBackendConfig resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>pem_<wbr>keys</span>
+        <span id="pem_keys_python">
+<a href="#pem_keys_python" style="color: inherit; text-decoration: inherit;">pem_<wbr>keys</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -481,7 +553,9 @@ The AuthBackendConfig resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>token_<wbr>reviewer_<wbr>jwt</span>
+        <span id="token_reviewer_jwt_python">
+<a href="#token_reviewer_jwt_python" style="color: inherit; text-decoration: inherit;">token_<wbr>reviewer_<wbr>jwt</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -508,7 +582,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -523,7 +599,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -538,7 +616,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -553,7 +633,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -694,7 +776,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Backend</span>
+        <span id="state_backend_csharp">
+<a href="#state_backend_csharp" style="color: inherit; text-decoration: inherit;">Backend</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -703,7 +787,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Issuer</span>
+        <span id="state_issuer_csharp">
+<a href="#state_issuer_csharp" style="color: inherit; text-decoration: inherit;">Issuer</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -712,7 +798,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Kubernetes<wbr>Ca<wbr>Cert</span>
+        <span id="state_kubernetescacert_csharp">
+<a href="#state_kubernetescacert_csharp" style="color: inherit; text-decoration: inherit;">Kubernetes<wbr>Ca<wbr>Cert</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -721,7 +809,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Kubernetes<wbr>Host</span>
+        <span id="state_kuberneteshost_csharp">
+<a href="#state_kuberneteshost_csharp" style="color: inherit; text-decoration: inherit;">Kubernetes<wbr>Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -730,7 +820,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Pem<wbr>Keys</span>
+        <span id="state_pemkeys_csharp">
+<a href="#state_pemkeys_csharp" style="color: inherit; text-decoration: inherit;">Pem<wbr>Keys</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -739,7 +831,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Token<wbr>Reviewer<wbr>Jwt</span>
+        <span id="state_tokenreviewerjwt_csharp">
+<a href="#state_tokenreviewerjwt_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Reviewer<wbr>Jwt</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -755,7 +849,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Backend</span>
+        <span id="state_backend_go">
+<a href="#state_backend_go" style="color: inherit; text-decoration: inherit;">Backend</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -764,7 +860,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Issuer</span>
+        <span id="state_issuer_go">
+<a href="#state_issuer_go" style="color: inherit; text-decoration: inherit;">Issuer</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -773,7 +871,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Kubernetes<wbr>Ca<wbr>Cert</span>
+        <span id="state_kubernetescacert_go">
+<a href="#state_kubernetescacert_go" style="color: inherit; text-decoration: inherit;">Kubernetes<wbr>Ca<wbr>Cert</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -782,7 +882,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Kubernetes<wbr>Host</span>
+        <span id="state_kuberneteshost_go">
+<a href="#state_kuberneteshost_go" style="color: inherit; text-decoration: inherit;">Kubernetes<wbr>Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -791,7 +893,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Pem<wbr>Keys</span>
+        <span id="state_pemkeys_go">
+<a href="#state_pemkeys_go" style="color: inherit; text-decoration: inherit;">Pem<wbr>Keys</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -800,7 +904,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Token<wbr>Reviewer<wbr>Jwt</span>
+        <span id="state_tokenreviewerjwt_go">
+<a href="#state_tokenreviewerjwt_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Reviewer<wbr>Jwt</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -816,7 +922,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>backend</span>
+        <span id="state_backend_nodejs">
+<a href="#state_backend_nodejs" style="color: inherit; text-decoration: inherit;">backend</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -825,7 +933,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>issuer</span>
+        <span id="state_issuer_nodejs">
+<a href="#state_issuer_nodejs" style="color: inherit; text-decoration: inherit;">issuer</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -834,7 +944,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>kubernetes<wbr>Ca<wbr>Cert</span>
+        <span id="state_kubernetescacert_nodejs">
+<a href="#state_kubernetescacert_nodejs" style="color: inherit; text-decoration: inherit;">kubernetes<wbr>Ca<wbr>Cert</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -843,7 +955,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>kubernetes<wbr>Host</span>
+        <span id="state_kuberneteshost_nodejs">
+<a href="#state_kuberneteshost_nodejs" style="color: inherit; text-decoration: inherit;">kubernetes<wbr>Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -852,7 +966,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>pem<wbr>Keys</span>
+        <span id="state_pemkeys_nodejs">
+<a href="#state_pemkeys_nodejs" style="color: inherit; text-decoration: inherit;">pem<wbr>Keys</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -861,7 +977,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>token<wbr>Reviewer<wbr>Jwt</span>
+        <span id="state_tokenreviewerjwt_nodejs">
+<a href="#state_tokenreviewerjwt_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Reviewer<wbr>Jwt</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -877,7 +995,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>backend</span>
+        <span id="state_backend_python">
+<a href="#state_backend_python" style="color: inherit; text-decoration: inherit;">backend</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -886,7 +1006,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>issuer</span>
+        <span id="state_issuer_python">
+<a href="#state_issuer_python" style="color: inherit; text-decoration: inherit;">issuer</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -895,7 +1017,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>kubernetes_<wbr>ca_<wbr>cert</span>
+        <span id="state_kubernetes_ca_cert_python">
+<a href="#state_kubernetes_ca_cert_python" style="color: inherit; text-decoration: inherit;">kubernetes_<wbr>ca_<wbr>cert</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -904,7 +1028,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>kubernetes_<wbr>host</span>
+        <span id="state_kubernetes_host_python">
+<a href="#state_kubernetes_host_python" style="color: inherit; text-decoration: inherit;">kubernetes_<wbr>host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -913,7 +1039,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>pem_<wbr>keys</span>
+        <span id="state_pem_keys_python">
+<a href="#state_pem_keys_python" style="color: inherit; text-decoration: inherit;">pem_<wbr>keys</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -922,7 +1050,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>token_<wbr>reviewer_<wbr>jwt</span>
+        <span id="state_token_reviewer_jwt_python">
+<a href="#state_token_reviewer_jwt_python" style="color: inherit; text-decoration: inherit;">token_<wbr>reviewer_<wbr>jwt</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
