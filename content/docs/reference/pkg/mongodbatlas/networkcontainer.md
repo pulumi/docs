@@ -29,7 +29,25 @@ The following table outlines the maximum number of Network Peering containers pe
 {{< chooser language "typescript,python,go,csharp" / >}}
 ### Example with AWS.
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Mongodbatlas = Pulumi.Mongodbatlas;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var test = new Mongodbatlas.NetworkContainer("test", new Mongodbatlas.NetworkContainerArgs
+        {
+            AtlasCidrBlock = "10.8.0.0/21",
+            ProjectId = "<YOUR-PROJECT-ID>",
+            ProviderName = "AWS",
+            RegionName = "US_EAST_1",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -65,7 +83,24 @@ const test = new mongodbatlas.NetworkContainer("test", {
 
 ### Example with GCP
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Mongodbatlas = Pulumi.Mongodbatlas;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var test = new Mongodbatlas.NetworkContainer("test", new Mongodbatlas.NetworkContainerArgs
+        {
+            AtlasCidrBlock = "10.8.0.0/21",
+            ProjectId = "<YOUR-PROJECT-ID>",
+            ProviderName = "GCP",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -99,7 +134,25 @@ const test = new mongodbatlas.NetworkContainer("test", {
 
 ### Example with Azure
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Mongodbatlas = Pulumi.Mongodbatlas;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var test = new Mongodbatlas.NetworkContainer("test", new Mongodbatlas.NetworkContainerArgs
+        {
+            AtlasCidrBlock = "10.8.0.0/21",
+            ProjectId = "<YOUR-PROJECT-ID>",
+            ProviderName = "AZURE",
+            Region = "US_EAST_2",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -319,7 +372,9 @@ The NetworkContainer resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-required"
             title="Required">
-        <span>Atlas<wbr>Cidr<wbr>Block</span>
+        <span id="atlascidrblock_csharp">
+<a href="#atlascidrblock_csharp" style="color: inherit; text-decoration: inherit;">Atlas<wbr>Cidr<wbr>Block</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -328,7 +383,9 @@ The NetworkContainer resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-required"
             title="Required">
-        <span>Project<wbr>Id</span>
+        <span id="projectid_csharp">
+<a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -337,7 +394,9 @@ The NetworkContainer resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>Provider<wbr>Name</span>
+        <span id="providername_csharp">
+<a href="#providername_csharp" style="color: inherit; text-decoration: inherit;">Provider<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -346,7 +405,9 @@ The NetworkContainer resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="region_csharp">
+<a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -355,7 +416,9 @@ The NetworkContainer resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region<wbr>Name</span>
+        <span id="regionname_csharp">
+<a href="#regionname_csharp" style="color: inherit; text-decoration: inherit;">Region<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -371,7 +434,9 @@ The NetworkContainer resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-required"
             title="Required">
-        <span>Atlas<wbr>Cidr<wbr>Block</span>
+        <span id="atlascidrblock_go">
+<a href="#atlascidrblock_go" style="color: inherit; text-decoration: inherit;">Atlas<wbr>Cidr<wbr>Block</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -380,7 +445,9 @@ The NetworkContainer resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-required"
             title="Required">
-        <span>Project<wbr>Id</span>
+        <span id="projectid_go">
+<a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -389,7 +456,9 @@ The NetworkContainer resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>Provider<wbr>Name</span>
+        <span id="providername_go">
+<a href="#providername_go" style="color: inherit; text-decoration: inherit;">Provider<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -398,7 +467,9 @@ The NetworkContainer resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="region_go">
+<a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -407,7 +478,9 @@ The NetworkContainer resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region<wbr>Name</span>
+        <span id="regionname_go">
+<a href="#regionname_go" style="color: inherit; text-decoration: inherit;">Region<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -423,7 +496,9 @@ The NetworkContainer resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-required"
             title="Required">
-        <span>atlas<wbr>Cidr<wbr>Block</span>
+        <span id="atlascidrblock_nodejs">
+<a href="#atlascidrblock_nodejs" style="color: inherit; text-decoration: inherit;">atlas<wbr>Cidr<wbr>Block</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -432,7 +507,9 @@ The NetworkContainer resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-required"
             title="Required">
-        <span>project<wbr>Id</span>
+        <span id="projectid_nodejs">
+<a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -441,7 +518,9 @@ The NetworkContainer resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>provider<wbr>Name</span>
+        <span id="providername_nodejs">
+<a href="#providername_nodejs" style="color: inherit; text-decoration: inherit;">provider<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -450,7 +529,9 @@ The NetworkContainer resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="region_nodejs">
+<a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -459,7 +540,9 @@ The NetworkContainer resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>region<wbr>Name</span>
+        <span id="regionname_nodejs">
+<a href="#regionname_nodejs" style="color: inherit; text-decoration: inherit;">region<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -475,7 +558,9 @@ The NetworkContainer resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-required"
             title="Required">
-        <span>atlas_<wbr>cidr_<wbr>block</span>
+        <span id="atlas_cidr_block_python">
+<a href="#atlas_cidr_block_python" style="color: inherit; text-decoration: inherit;">atlas_<wbr>cidr_<wbr>block</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -484,7 +569,9 @@ The NetworkContainer resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-required"
             title="Required">
-        <span>project_<wbr>id</span>
+        <span id="project_id_python">
+<a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -493,7 +580,9 @@ The NetworkContainer resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>provider_<wbr>name</span>
+        <span id="provider_name_python">
+<a href="#provider_name_python" style="color: inherit; text-decoration: inherit;">provider_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -502,7 +591,9 @@ The NetworkContainer resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="region_python">
+<a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -511,7 +602,9 @@ The NetworkContainer resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>region_<wbr>name</span>
+        <span id="region_name_python">
+<a href="#region_name_python" style="color: inherit; text-decoration: inherit;">region_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -538,7 +631,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Azure<wbr>Subscription<wbr>Id</span>
+        <span id="azuresubscriptionid_csharp">
+<a href="#azuresubscriptionid_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Subscription<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -547,7 +642,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Container<wbr>Id</span>
+        <span id="containerid_csharp">
+<a href="#containerid_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -556,7 +653,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Gcp<wbr>Project<wbr>Id</span>
+        <span id="gcpprojectid_csharp">
+<a href="#gcpprojectid_csharp" style="color: inherit; text-decoration: inherit;">Gcp<wbr>Project<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -565,7 +664,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -573,7 +674,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Network<wbr>Name</span>
+        <span id="networkname_csharp">
+<a href="#networkname_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -582,7 +685,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Provisioned</span>
+        <span id="provisioned_csharp">
+<a href="#provisioned_csharp" style="color: inherit; text-decoration: inherit;">Provisioned</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -591,7 +696,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Vnet<wbr>Name</span>
+        <span id="vnetname_csharp">
+<a href="#vnetname_csharp" style="color: inherit; text-decoration: inherit;">Vnet<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -600,7 +707,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Vpc<wbr>Id</span>
+        <span id="vpcid_csharp">
+<a href="#vpcid_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -616,7 +725,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Azure<wbr>Subscription<wbr>Id</span>
+        <span id="azuresubscriptionid_go">
+<a href="#azuresubscriptionid_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Subscription<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -625,7 +736,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Container<wbr>Id</span>
+        <span id="containerid_go">
+<a href="#containerid_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -634,7 +747,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Gcp<wbr>Project<wbr>Id</span>
+        <span id="gcpprojectid_go">
+<a href="#gcpprojectid_go" style="color: inherit; text-decoration: inherit;">Gcp<wbr>Project<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -643,7 +758,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -651,7 +768,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Network<wbr>Name</span>
+        <span id="networkname_go">
+<a href="#networkname_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -660,7 +779,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Provisioned</span>
+        <span id="provisioned_go">
+<a href="#provisioned_go" style="color: inherit; text-decoration: inherit;">Provisioned</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -669,7 +790,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Vnet<wbr>Name</span>
+        <span id="vnetname_go">
+<a href="#vnetname_go" style="color: inherit; text-decoration: inherit;">Vnet<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -678,7 +801,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Vpc<wbr>Id</span>
+        <span id="vpcid_go">
+<a href="#vpcid_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -694,7 +819,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>azure<wbr>Subscription<wbr>Id</span>
+        <span id="azuresubscriptionid_nodejs">
+<a href="#azuresubscriptionid_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Subscription<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -703,7 +830,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>container<wbr>Id</span>
+        <span id="containerid_nodejs">
+<a href="#containerid_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -712,7 +841,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>gcp<wbr>Project<wbr>Id</span>
+        <span id="gcpprojectid_nodejs">
+<a href="#gcpprojectid_nodejs" style="color: inherit; text-decoration: inherit;">gcp<wbr>Project<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -721,7 +852,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -729,7 +862,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>network<wbr>Name</span>
+        <span id="networkname_nodejs">
+<a href="#networkname_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -738,7 +873,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>provisioned</span>
+        <span id="provisioned_nodejs">
+<a href="#provisioned_nodejs" style="color: inherit; text-decoration: inherit;">provisioned</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -747,7 +884,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>vnet<wbr>Name</span>
+        <span id="vnetname_nodejs">
+<a href="#vnetname_nodejs" style="color: inherit; text-decoration: inherit;">vnet<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -756,7 +895,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>vpc<wbr>Id</span>
+        <span id="vpcid_nodejs">
+<a href="#vpcid_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -772,7 +913,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>azure_<wbr>subscription_<wbr>id</span>
+        <span id="azure_subscription_id_python">
+<a href="#azure_subscription_id_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>subscription_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -781,7 +924,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>container_<wbr>id</span>
+        <span id="container_id_python">
+<a href="#container_id_python" style="color: inherit; text-decoration: inherit;">container_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -790,7 +935,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>gcp_<wbr>project_<wbr>id</span>
+        <span id="gcp_project_id_python">
+<a href="#gcp_project_id_python" style="color: inherit; text-decoration: inherit;">gcp_<wbr>project_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -799,7 +946,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -807,7 +956,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>network_<wbr>name</span>
+        <span id="network_name_python">
+<a href="#network_name_python" style="color: inherit; text-decoration: inherit;">network_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -816,7 +967,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>provisioned</span>
+        <span id="provisioned_python">
+<a href="#provisioned_python" style="color: inherit; text-decoration: inherit;">provisioned</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -825,7 +978,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>vnet_<wbr>name</span>
+        <span id="vnet_name_python">
+<a href="#vnet_name_python" style="color: inherit; text-decoration: inherit;">vnet_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -834,7 +989,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>vpc_<wbr>id</span>
+        <span id="vpc_id_python">
+<a href="#vpc_id_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -976,7 +1133,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Atlas<wbr>Cidr<wbr>Block</span>
+        <span id="state_atlascidrblock_csharp">
+<a href="#state_atlascidrblock_csharp" style="color: inherit; text-decoration: inherit;">Atlas<wbr>Cidr<wbr>Block</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -985,7 +1144,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Azure<wbr>Subscription<wbr>Id</span>
+        <span id="state_azuresubscriptionid_csharp">
+<a href="#state_azuresubscriptionid_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Subscription<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -994,7 +1155,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Container<wbr>Id</span>
+        <span id="state_containerid_csharp">
+<a href="#state_containerid_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1003,7 +1166,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Gcp<wbr>Project<wbr>Id</span>
+        <span id="state_gcpprojectid_csharp">
+<a href="#state_gcpprojectid_csharp" style="color: inherit; text-decoration: inherit;">Gcp<wbr>Project<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1012,7 +1177,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Network<wbr>Name</span>
+        <span id="state_networkname_csharp">
+<a href="#state_networkname_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1021,7 +1188,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project<wbr>Id</span>
+        <span id="state_projectid_csharp">
+<a href="#state_projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1030,7 +1199,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Provider<wbr>Name</span>
+        <span id="state_providername_csharp">
+<a href="#state_providername_csharp" style="color: inherit; text-decoration: inherit;">Provider<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1039,7 +1210,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Provisioned</span>
+        <span id="state_provisioned_csharp">
+<a href="#state_provisioned_csharp" style="color: inherit; text-decoration: inherit;">Provisioned</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1048,7 +1221,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="state_region_csharp">
+<a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1057,7 +1232,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region<wbr>Name</span>
+        <span id="state_regionname_csharp">
+<a href="#state_regionname_csharp" style="color: inherit; text-decoration: inherit;">Region<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1066,7 +1243,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vnet<wbr>Name</span>
+        <span id="state_vnetname_csharp">
+<a href="#state_vnetname_csharp" style="color: inherit; text-decoration: inherit;">Vnet<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1075,7 +1254,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vpc<wbr>Id</span>
+        <span id="state_vpcid_csharp">
+<a href="#state_vpcid_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1091,7 +1272,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Atlas<wbr>Cidr<wbr>Block</span>
+        <span id="state_atlascidrblock_go">
+<a href="#state_atlascidrblock_go" style="color: inherit; text-decoration: inherit;">Atlas<wbr>Cidr<wbr>Block</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1100,7 +1283,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Azure<wbr>Subscription<wbr>Id</span>
+        <span id="state_azuresubscriptionid_go">
+<a href="#state_azuresubscriptionid_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Subscription<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1109,7 +1294,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Container<wbr>Id</span>
+        <span id="state_containerid_go">
+<a href="#state_containerid_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1118,7 +1305,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Gcp<wbr>Project<wbr>Id</span>
+        <span id="state_gcpprojectid_go">
+<a href="#state_gcpprojectid_go" style="color: inherit; text-decoration: inherit;">Gcp<wbr>Project<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1127,7 +1316,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Network<wbr>Name</span>
+        <span id="state_networkname_go">
+<a href="#state_networkname_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1136,7 +1327,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project<wbr>Id</span>
+        <span id="state_projectid_go">
+<a href="#state_projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1145,7 +1338,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Provider<wbr>Name</span>
+        <span id="state_providername_go">
+<a href="#state_providername_go" style="color: inherit; text-decoration: inherit;">Provider<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1154,7 +1349,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Provisioned</span>
+        <span id="state_provisioned_go">
+<a href="#state_provisioned_go" style="color: inherit; text-decoration: inherit;">Provisioned</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1163,7 +1360,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="state_region_go">
+<a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1172,7 +1371,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region<wbr>Name</span>
+        <span id="state_regionname_go">
+<a href="#state_regionname_go" style="color: inherit; text-decoration: inherit;">Region<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1181,7 +1382,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vnet<wbr>Name</span>
+        <span id="state_vnetname_go">
+<a href="#state_vnetname_go" style="color: inherit; text-decoration: inherit;">Vnet<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1190,7 +1393,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vpc<wbr>Id</span>
+        <span id="state_vpcid_go">
+<a href="#state_vpcid_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1206,7 +1411,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>atlas<wbr>Cidr<wbr>Block</span>
+        <span id="state_atlascidrblock_nodejs">
+<a href="#state_atlascidrblock_nodejs" style="color: inherit; text-decoration: inherit;">atlas<wbr>Cidr<wbr>Block</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1215,7 +1422,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>azure<wbr>Subscription<wbr>Id</span>
+        <span id="state_azuresubscriptionid_nodejs">
+<a href="#state_azuresubscriptionid_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Subscription<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1224,7 +1433,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>container<wbr>Id</span>
+        <span id="state_containerid_nodejs">
+<a href="#state_containerid_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1233,7 +1444,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>gcp<wbr>Project<wbr>Id</span>
+        <span id="state_gcpprojectid_nodejs">
+<a href="#state_gcpprojectid_nodejs" style="color: inherit; text-decoration: inherit;">gcp<wbr>Project<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1242,7 +1455,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>network<wbr>Name</span>
+        <span id="state_networkname_nodejs">
+<a href="#state_networkname_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1251,7 +1466,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>project<wbr>Id</span>
+        <span id="state_projectid_nodejs">
+<a href="#state_projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1260,7 +1477,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>provider<wbr>Name</span>
+        <span id="state_providername_nodejs">
+<a href="#state_providername_nodejs" style="color: inherit; text-decoration: inherit;">provider<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1269,7 +1488,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>provisioned</span>
+        <span id="state_provisioned_nodejs">
+<a href="#state_provisioned_nodejs" style="color: inherit; text-decoration: inherit;">provisioned</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1278,7 +1499,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="state_region_nodejs">
+<a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1287,7 +1510,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>region<wbr>Name</span>
+        <span id="state_regionname_nodejs">
+<a href="#state_regionname_nodejs" style="color: inherit; text-decoration: inherit;">region<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1296,7 +1521,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>vnet<wbr>Name</span>
+        <span id="state_vnetname_nodejs">
+<a href="#state_vnetname_nodejs" style="color: inherit; text-decoration: inherit;">vnet<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1305,7 +1532,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>vpc<wbr>Id</span>
+        <span id="state_vpcid_nodejs">
+<a href="#state_vpcid_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1321,7 +1550,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>atlas_<wbr>cidr_<wbr>block</span>
+        <span id="state_atlas_cidr_block_python">
+<a href="#state_atlas_cidr_block_python" style="color: inherit; text-decoration: inherit;">atlas_<wbr>cidr_<wbr>block</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1330,7 +1561,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>azure_<wbr>subscription_<wbr>id</span>
+        <span id="state_azure_subscription_id_python">
+<a href="#state_azure_subscription_id_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>subscription_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1339,7 +1572,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>container_<wbr>id</span>
+        <span id="state_container_id_python">
+<a href="#state_container_id_python" style="color: inherit; text-decoration: inherit;">container_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1348,7 +1583,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>gcp_<wbr>project_<wbr>id</span>
+        <span id="state_gcp_project_id_python">
+<a href="#state_gcp_project_id_python" style="color: inherit; text-decoration: inherit;">gcp_<wbr>project_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1357,7 +1594,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>network_<wbr>name</span>
+        <span id="state_network_name_python">
+<a href="#state_network_name_python" style="color: inherit; text-decoration: inherit;">network_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1366,7 +1605,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>project_<wbr>id</span>
+        <span id="state_project_id_python">
+<a href="#state_project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1375,7 +1616,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>provider_<wbr>name</span>
+        <span id="state_provider_name_python">
+<a href="#state_provider_name_python" style="color: inherit; text-decoration: inherit;">provider_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1384,7 +1627,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>provisioned</span>
+        <span id="state_provisioned_python">
+<a href="#state_provisioned_python" style="color: inherit; text-decoration: inherit;">provisioned</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1393,7 +1638,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="state_region_python">
+<a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1402,7 +1649,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>region_<wbr>name</span>
+        <span id="state_region_name_python">
+<a href="#state_region_name_python" style="color: inherit; text-decoration: inherit;">region_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1411,7 +1660,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>vnet_<wbr>name</span>
+        <span id="state_vnet_name_python">
+<a href="#state_vnet_name_python" style="color: inherit; text-decoration: inherit;">vnet_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1420,7 +1671,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>vpc_<wbr>id</span>
+        <span id="state_vpc_id_python">
+<a href="#state_vpc_id_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

@@ -26,7 +26,24 @@ When you remove an entry from the whitelist, existing connections from the remov
 {{< chooser language "typescript,python,go,csharp" / >}}
 ### Using CIDR Block
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Mongodbatlas = Pulumi.Mongodbatlas;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var test = new Mongodbatlas.ProjectIpWhitelist("test", new Mongodbatlas.ProjectIpWhitelistArgs
+        {
+            CidrBlock = "1.2.3.4/32",
+            Comment = "cidr block for tf acc testing",
+            ProjectId = "<PROJECT-ID>",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -60,7 +77,24 @@ const test = new mongodbatlas.ProjectIpWhitelist("test", {
 
 ### Using IP Address
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Mongodbatlas = Pulumi.Mongodbatlas;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var test = new Mongodbatlas.ProjectIpWhitelist("test", new Mongodbatlas.ProjectIpWhitelistArgs
+        {
+            Comment = "ip address for tf acc testing",
+            IpAddress = "2.3.4.5",
+            ProjectId = "<PROJECT-ID>",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -94,7 +128,41 @@ const test = new mongodbatlas.ProjectIpWhitelist("test", {
 
 ### Using an AWS Security Group
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Mongodbatlas = Pulumi.Mongodbatlas;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var testNetworkContainer = new Mongodbatlas.NetworkContainer("testNetworkContainer", new Mongodbatlas.NetworkContainerArgs
+        {
+            ProjectId = "<PROJECT-ID>",
+            AtlasCidrBlock = "192.168.208.0/21",
+            ProviderName = "AWS",
+            RegionName = "US_EAST_1",
+        });
+        var testNetworkPeering = new Mongodbatlas.NetworkPeering("testNetworkPeering", new Mongodbatlas.NetworkPeeringArgs
+        {
+            ProjectId = "<PROJECT-ID>",
+            ContainerId = testNetworkContainer.ContainerId,
+            AccepterRegionName = "us-east-1",
+            ProviderName = "AWS",
+            RouteTableCidrBlock = "172.31.0.0/16",
+            VpcId = "vpc-0d93d6f69f1578bd8",
+            AwsAccountId = "232589400519",
+        });
+        var testProjectIpWhitelist = new Mongodbatlas.ProjectIpWhitelist("testProjectIpWhitelist", new Mongodbatlas.ProjectIpWhitelistArgs
+        {
+            ProjectId = "<PROJECT-ID>",
+            AwsSecurityGroup = "sg-0026348ec11780bd1",
+            Comment = "TestAcc for awsSecurityGroup",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -340,7 +408,9 @@ The ProjectIpWhitelist resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-required"
             title="Required">
-        <span>Project<wbr>Id</span>
+        <span id="projectid_csharp">
+<a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -349,7 +419,9 @@ The ProjectIpWhitelist resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Aws<wbr>Security<wbr>Group</span>
+        <span id="awssecuritygroup_csharp">
+<a href="#awssecuritygroup_csharp" style="color: inherit; text-decoration: inherit;">Aws<wbr>Security<wbr>Group</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -358,7 +430,9 @@ The ProjectIpWhitelist resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cidr<wbr>Block</span>
+        <span id="cidrblock_csharp">
+<a href="#cidrblock_csharp" style="color: inherit; text-decoration: inherit;">Cidr<wbr>Block</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -367,7 +441,9 @@ The ProjectIpWhitelist resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Comment</span>
+        <span id="comment_csharp">
+<a href="#comment_csharp" style="color: inherit; text-decoration: inherit;">Comment</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -376,7 +452,9 @@ The ProjectIpWhitelist resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ip<wbr>Address</span>
+        <span id="ipaddress_csharp">
+<a href="#ipaddress_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -392,7 +470,9 @@ The ProjectIpWhitelist resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-required"
             title="Required">
-        <span>Project<wbr>Id</span>
+        <span id="projectid_go">
+<a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -401,7 +481,9 @@ The ProjectIpWhitelist resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Aws<wbr>Security<wbr>Group</span>
+        <span id="awssecuritygroup_go">
+<a href="#awssecuritygroup_go" style="color: inherit; text-decoration: inherit;">Aws<wbr>Security<wbr>Group</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -410,7 +492,9 @@ The ProjectIpWhitelist resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cidr<wbr>Block</span>
+        <span id="cidrblock_go">
+<a href="#cidrblock_go" style="color: inherit; text-decoration: inherit;">Cidr<wbr>Block</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -419,7 +503,9 @@ The ProjectIpWhitelist resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Comment</span>
+        <span id="comment_go">
+<a href="#comment_go" style="color: inherit; text-decoration: inherit;">Comment</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -428,7 +514,9 @@ The ProjectIpWhitelist resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ip<wbr>Address</span>
+        <span id="ipaddress_go">
+<a href="#ipaddress_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -444,7 +532,9 @@ The ProjectIpWhitelist resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-required"
             title="Required">
-        <span>project<wbr>Id</span>
+        <span id="projectid_nodejs">
+<a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -453,7 +543,9 @@ The ProjectIpWhitelist resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-optional"
             title="Optional">
-        <span>aws<wbr>Security<wbr>Group</span>
+        <span id="awssecuritygroup_nodejs">
+<a href="#awssecuritygroup_nodejs" style="color: inherit; text-decoration: inherit;">aws<wbr>Security<wbr>Group</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -462,7 +554,9 @@ The ProjectIpWhitelist resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-optional"
             title="Optional">
-        <span>cidr<wbr>Block</span>
+        <span id="cidrblock_nodejs">
+<a href="#cidrblock_nodejs" style="color: inherit; text-decoration: inherit;">cidr<wbr>Block</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -471,7 +565,9 @@ The ProjectIpWhitelist resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-optional"
             title="Optional">
-        <span>comment</span>
+        <span id="comment_nodejs">
+<a href="#comment_nodejs" style="color: inherit; text-decoration: inherit;">comment</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -480,7 +576,9 @@ The ProjectIpWhitelist resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-optional"
             title="Optional">
-        <span>ip<wbr>Address</span>
+        <span id="ipaddress_nodejs">
+<a href="#ipaddress_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -496,7 +594,9 @@ The ProjectIpWhitelist resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-required"
             title="Required">
-        <span>project_<wbr>id</span>
+        <span id="project_id_python">
+<a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -505,7 +605,9 @@ The ProjectIpWhitelist resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-optional"
             title="Optional">
-        <span>aws_<wbr>security_<wbr>group</span>
+        <span id="aws_security_group_python">
+<a href="#aws_security_group_python" style="color: inherit; text-decoration: inherit;">aws_<wbr>security_<wbr>group</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -514,7 +616,9 @@ The ProjectIpWhitelist resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-optional"
             title="Optional">
-        <span>cidr_<wbr>block</span>
+        <span id="cidr_block_python">
+<a href="#cidr_block_python" style="color: inherit; text-decoration: inherit;">cidr_<wbr>block</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -523,7 +627,9 @@ The ProjectIpWhitelist resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-optional"
             title="Optional">
-        <span>comment</span>
+        <span id="comment_python">
+<a href="#comment_python" style="color: inherit; text-decoration: inherit;">comment</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -532,7 +638,9 @@ The ProjectIpWhitelist resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-optional"
             title="Optional">
-        <span>ip_<wbr>address</span>
+        <span id="ip_address_python">
+<a href="#ip_address_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -559,7 +667,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -574,7 +684,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -589,7 +701,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -604,7 +718,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -745,7 +861,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Aws<wbr>Security<wbr>Group</span>
+        <span id="state_awssecuritygroup_csharp">
+<a href="#state_awssecuritygroup_csharp" style="color: inherit; text-decoration: inherit;">Aws<wbr>Security<wbr>Group</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -754,7 +872,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cidr<wbr>Block</span>
+        <span id="state_cidrblock_csharp">
+<a href="#state_cidrblock_csharp" style="color: inherit; text-decoration: inherit;">Cidr<wbr>Block</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -763,7 +883,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Comment</span>
+        <span id="state_comment_csharp">
+<a href="#state_comment_csharp" style="color: inherit; text-decoration: inherit;">Comment</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -772,7 +894,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ip<wbr>Address</span>
+        <span id="state_ipaddress_csharp">
+<a href="#state_ipaddress_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -781,7 +905,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project<wbr>Id</span>
+        <span id="state_projectid_csharp">
+<a href="#state_projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -797,7 +923,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Aws<wbr>Security<wbr>Group</span>
+        <span id="state_awssecuritygroup_go">
+<a href="#state_awssecuritygroup_go" style="color: inherit; text-decoration: inherit;">Aws<wbr>Security<wbr>Group</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -806,7 +934,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cidr<wbr>Block</span>
+        <span id="state_cidrblock_go">
+<a href="#state_cidrblock_go" style="color: inherit; text-decoration: inherit;">Cidr<wbr>Block</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -815,7 +945,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Comment</span>
+        <span id="state_comment_go">
+<a href="#state_comment_go" style="color: inherit; text-decoration: inherit;">Comment</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -824,7 +956,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ip<wbr>Address</span>
+        <span id="state_ipaddress_go">
+<a href="#state_ipaddress_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -833,7 +967,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project<wbr>Id</span>
+        <span id="state_projectid_go">
+<a href="#state_projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -849,7 +985,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>aws<wbr>Security<wbr>Group</span>
+        <span id="state_awssecuritygroup_nodejs">
+<a href="#state_awssecuritygroup_nodejs" style="color: inherit; text-decoration: inherit;">aws<wbr>Security<wbr>Group</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -858,7 +996,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>cidr<wbr>Block</span>
+        <span id="state_cidrblock_nodejs">
+<a href="#state_cidrblock_nodejs" style="color: inherit; text-decoration: inherit;">cidr<wbr>Block</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -867,7 +1007,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>comment</span>
+        <span id="state_comment_nodejs">
+<a href="#state_comment_nodejs" style="color: inherit; text-decoration: inherit;">comment</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -876,7 +1018,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>ip<wbr>Address</span>
+        <span id="state_ipaddress_nodejs">
+<a href="#state_ipaddress_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -885,7 +1029,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>project<wbr>Id</span>
+        <span id="state_projectid_nodejs">
+<a href="#state_projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -901,7 +1047,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>aws_<wbr>security_<wbr>group</span>
+        <span id="state_aws_security_group_python">
+<a href="#state_aws_security_group_python" style="color: inherit; text-decoration: inherit;">aws_<wbr>security_<wbr>group</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -910,7 +1058,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>cidr_<wbr>block</span>
+        <span id="state_cidr_block_python">
+<a href="#state_cidr_block_python" style="color: inherit; text-decoration: inherit;">cidr_<wbr>block</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -919,7 +1069,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>comment</span>
+        <span id="state_comment_python">
+<a href="#state_comment_python" style="color: inherit; text-decoration: inherit;">comment</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -928,7 +1080,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>ip_<wbr>address</span>
+        <span id="state_ip_address_python">
+<a href="#state_ip_address_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -937,7 +1091,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>project_<wbr>id</span>
+        <span id="state_project_id_python">
+<a href="#state_project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

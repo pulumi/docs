@@ -103,7 +103,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -112,7 +114,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Results</span>
+        <span id="results_csharp">
+<a href="#results_csharp" style="color: inherit; text-decoration: inherit;">Results</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getprojectsresult">List&lt;Get<wbr>Projects<wbr>Result&gt;</a></span>
     </dt>
@@ -120,7 +124,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Total<wbr>Count</span>
+        <span id="totalcount_csharp">
+<a href="#totalcount_csharp" style="color: inherit; text-decoration: inherit;">Total<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -135,7 +141,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -144,7 +152,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Results</span>
+        <span id="results_go">
+<a href="#results_go" style="color: inherit; text-decoration: inherit;">Results</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getprojectsresult">[]Get<wbr>Projects<wbr>Result<wbr>Type</a></span>
     </dt>
@@ -152,7 +162,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Total<wbr>Count</span>
+        <span id="totalcount_go">
+<a href="#totalcount_go" style="color: inherit; text-decoration: inherit;">Total<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -167,7 +179,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -176,7 +190,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>results</span>
+        <span id="results_nodejs">
+<a href="#results_nodejs" style="color: inherit; text-decoration: inherit;">results</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getprojectsresult">Get<wbr>Projects<wbr>Result[]</a></span>
     </dt>
@@ -184,7 +200,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>total<wbr>Count</span>
+        <span id="totalcount_nodejs">
+<a href="#totalcount_nodejs" style="color: inherit; text-decoration: inherit;">total<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -199,7 +217,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -208,7 +228,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>results</span>
+        <span id="results_python">
+<a href="#results_python" style="color: inherit; text-decoration: inherit;">results</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getprojectsresult">List[Get<wbr>Projects<wbr>Result]</a></span>
     </dt>
@@ -216,7 +238,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>total_<wbr>count</span>
+        <span id="total_count_python">
+<a href="#total_count_python" style="color: inherit; text-decoration: inherit;">total_<wbr>count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -255,7 +279,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Cluster<wbr>Count</span>
+        <span id="clustercount_csharp">
+<a href="#clustercount_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -263,7 +289,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Created</span>
+        <span id="created_csharp">
+<a href="#created_csharp" style="color: inherit; text-decoration: inherit;">Created</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -271,7 +299,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -280,7 +310,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -289,7 +321,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Org<wbr>Id</span>
+        <span id="orgid_csharp">
+<a href="#orgid_csharp" style="color: inherit; text-decoration: inherit;">Org<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -309,7 +343,9 @@ The following are valid roles:
 
     <dt class="property-required"
             title="Required">
-        <span>Teams</span>
+        <span id="teams_csharp">
+<a href="#teams_csharp" style="color: inherit; text-decoration: inherit;">Teams</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getprojectsresultteam">List&lt;Get<wbr>Projects<wbr>Result<wbr>Team<wbr>Args&gt;</a></span>
     </dt>
@@ -324,7 +360,9 @@ The following are valid roles:
 
     <dt class="property-required"
             title="Required">
-        <span>Cluster<wbr>Count</span>
+        <span id="clustercount_go">
+<a href="#clustercount_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -332,7 +370,9 @@ The following are valid roles:
 
     <dt class="property-required"
             title="Required">
-        <span>Created</span>
+        <span id="created_go">
+<a href="#created_go" style="color: inherit; text-decoration: inherit;">Created</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -340,7 +380,9 @@ The following are valid roles:
 
     <dt class="property-required"
             title="Required">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -349,7 +391,9 @@ The following are valid roles:
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -358,7 +402,9 @@ The following are valid roles:
 
     <dt class="property-required"
             title="Required">
-        <span>Org<wbr>Id</span>
+        <span id="orgid_go">
+<a href="#orgid_go" style="color: inherit; text-decoration: inherit;">Org<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -378,7 +424,9 @@ The following are valid roles:
 
     <dt class="property-required"
             title="Required">
-        <span>Teams</span>
+        <span id="teams_go">
+<a href="#teams_go" style="color: inherit; text-decoration: inherit;">Teams</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getprojectsresultteam">[]Get<wbr>Projects<wbr>Result<wbr>Team</a></span>
     </dt>
@@ -393,7 +441,9 @@ The following are valid roles:
 
     <dt class="property-required"
             title="Required">
-        <span>cluster<wbr>Count</span>
+        <span id="clustercount_nodejs">
+<a href="#clustercount_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -401,7 +451,9 @@ The following are valid roles:
 
     <dt class="property-required"
             title="Required">
-        <span>created</span>
+        <span id="created_nodejs">
+<a href="#created_nodejs" style="color: inherit; text-decoration: inherit;">created</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -409,7 +461,9 @@ The following are valid roles:
 
     <dt class="property-required"
             title="Required">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -418,7 +472,9 @@ The following are valid roles:
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -427,7 +483,9 @@ The following are valid roles:
 
     <dt class="property-required"
             title="Required">
-        <span>org<wbr>Id</span>
+        <span id="orgid_nodejs">
+<a href="#orgid_nodejs" style="color: inherit; text-decoration: inherit;">org<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -447,7 +505,9 @@ The following are valid roles:
 
     <dt class="property-required"
             title="Required">
-        <span>teams</span>
+        <span id="teams_nodejs">
+<a href="#teams_nodejs" style="color: inherit; text-decoration: inherit;">teams</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getprojectsresultteam">Get<wbr>Projects<wbr>Result<wbr>Team[]</a></span>
     </dt>
@@ -462,7 +522,9 @@ The following are valid roles:
 
     <dt class="property-required"
             title="Required">
-        <span>cluster_<wbr>count</span>
+        <span id="cluster_count_python">
+<a href="#cluster_count_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -470,7 +532,9 @@ The following are valid roles:
 
     <dt class="property-required"
             title="Required">
-        <span>created</span>
+        <span id="created_python">
+<a href="#created_python" style="color: inherit; text-decoration: inherit;">created</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -478,7 +542,9 @@ The following are valid roles:
 
     <dt class="property-required"
             title="Required">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -487,7 +553,9 @@ The following are valid roles:
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -496,7 +564,9 @@ The following are valid roles:
 
     <dt class="property-required"
             title="Required">
-        <span>org_<wbr>id</span>
+        <span id="org_id_python">
+<a href="#org_id_python" style="color: inherit; text-decoration: inherit;">org_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -516,7 +586,9 @@ The following are valid roles:
 
     <dt class="property-required"
             title="Required">
-        <span>teams</span>
+        <span id="teams_python">
+<a href="#teams_python" style="color: inherit; text-decoration: inherit;">teams</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getprojectsresultteam">List[Get<wbr>Projects<wbr>Result<wbr>Team]</a></span>
     </dt>
@@ -549,7 +621,9 @@ The following are valid roles:
 
     <dt class="property-required"
             title="Required">
-        <span>Role<wbr>Names</span>
+        <span id="rolenames_csharp">
+<a href="#rolenames_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Names</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -557,7 +631,9 @@ The following are valid roles:
 
     <dt class="property-required"
             title="Required">
-        <span>Team<wbr>Id</span>
+        <span id="teamid_csharp">
+<a href="#teamid_csharp" style="color: inherit; text-decoration: inherit;">Team<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -572,7 +648,9 @@ The following are valid roles:
 
     <dt class="property-required"
             title="Required">
-        <span>Role<wbr>Names</span>
+        <span id="rolenames_go">
+<a href="#rolenames_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Names</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -580,7 +658,9 @@ The following are valid roles:
 
     <dt class="property-required"
             title="Required">
-        <span>Team<wbr>Id</span>
+        <span id="teamid_go">
+<a href="#teamid_go" style="color: inherit; text-decoration: inherit;">Team<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -595,7 +675,9 @@ The following are valid roles:
 
     <dt class="property-required"
             title="Required">
-        <span>role<wbr>Names</span>
+        <span id="rolenames_nodejs">
+<a href="#rolenames_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Names</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -603,7 +685,9 @@ The following are valid roles:
 
     <dt class="property-required"
             title="Required">
-        <span>team<wbr>Id</span>
+        <span id="teamid_nodejs">
+<a href="#teamid_nodejs" style="color: inherit; text-decoration: inherit;">team<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -618,7 +702,9 @@ The following are valid roles:
 
     <dt class="property-required"
             title="Required">
-        <span>role<wbr>Names</span>
+        <span id="rolenames_python">
+<a href="#rolenames_python" style="color: inherit; text-decoration: inherit;">role<wbr>Names</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -626,7 +712,9 @@ The following are valid roles:
 
     <dt class="property-required"
             title="Required">
-        <span>team_<wbr>id</span>
+        <span id="team_id_python">
+<a href="#team_id_python" style="color: inherit; text-decoration: inherit;">team_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
