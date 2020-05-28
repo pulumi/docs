@@ -20,7 +20,46 @@ Manages an Azure Container Registry Webhook.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var rg = new Azure.Core.ResourceGroup("rg", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West US",
+        });
+        var acr = new Azure.ContainerService.Registry("acr", new Azure.ContainerService.RegistryArgs
+        {
+            ResourceGroupName = rg.Name,
+            Location = rg.Location,
+            Sku = "Standard",
+            AdminEnabled = false,
+        });
+        var webhook = new Azure.ContainerService.RegistryWebhook("webhook", new Azure.ContainerService.RegistryWebhookArgs
+        {
+            ResourceGroupName = rg.Name,
+            RegistryName = acr.Name,
+            Location = rg.Location,
+            ServiceUri = "https://mywebhookreceiver.example/mytag",
+            Status = "enabled",
+            Scope = "mytag:*",
+            Actions = 
+            {
+                "push",
+            },
+            CustomHeaders = 
+            {
+                { "Content-Type", "application/json" },
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

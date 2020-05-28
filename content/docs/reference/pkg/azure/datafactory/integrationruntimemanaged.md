@@ -20,7 +20,34 @@ Manages an Azure Data Factory Managed Integration Runtime.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "northeurope",
+        });
+        var exampleFactory = new Azure.DataFactory.Factory("exampleFactory", new Azure.DataFactory.FactoryArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+        });
+        var exampleIntegrationRuntimeManaged = new Azure.DataFactory.IntegrationRuntimeManaged("exampleIntegrationRuntimeManaged", new Azure.DataFactory.IntegrationRuntimeManagedArgs
+        {
+            DataFactoryName = exampleFactory.Name,
+            ResourceGroupName = exampleResourceGroup.Name,
+            Location = exampleResourceGroup.Location,
+            NodeSize = "Standard_D8_v3",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

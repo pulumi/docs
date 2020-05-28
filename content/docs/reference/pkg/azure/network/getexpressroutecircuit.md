@@ -20,7 +20,29 @@ Use this data source to access information about an existing ExpressRoute circui
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = Output.Create(Azure.Network.GetExpressRouteCircuit.InvokeAsync(new Azure.Network.GetExpressRouteCircuitArgs
+        {
+            ResourceGroupName = azurerm_resource_group.Example.Name,
+            Name = azurerm_express_route_circuit.Example.Name,
+        }));
+        this.ExpressRouteCircuitId = example.Apply(example => example.Id);
+        this.ServiceKey = example.Apply(example => example.ServiceKey);
+    }
+
+    [Output("expressRouteCircuitId")]
+    public Output<string> ExpressRouteCircuitId { get; set; }
+    [Output("serviceKey")]
+    public Output<string> ServiceKey { get; set; }
+}
+```
 {{% /example %}}
 
 {{% example go %}}

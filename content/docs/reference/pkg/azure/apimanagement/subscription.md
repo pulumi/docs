@@ -21,7 +21,53 @@ Manages a Subscription within a API Management Service.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleService = Output.Create(Azure.ApiManagement.GetService.InvokeAsync(new Azure.ApiManagement.GetServiceArgs
+        {
+            Name = "example-apim",
+            ResourceGroupName = "example-resources",
+        }));
+        var exampleProduct = Output.Tuple(exampleService, exampleService).Apply(values =>
+        {
+            var exampleService = values.Item1;
+            var exampleService1 = values.Item2;
+            return Output.Create(Azure.ApiManagement.GetProduct.InvokeAsync(new Azure.ApiManagement.GetProductArgs
+            {
+                ProductId = "00000000-0000-0000-0000-000000000000",
+                ApiManagementName = exampleService.Name,
+                ResourceGroupName = exampleService1.ResourceGroupName,
+            }));
+        });
+        var exampleUser = Output.Tuple(exampleService, exampleService).Apply(values =>
+        {
+            var exampleService = values.Item1;
+            var exampleService1 = values.Item2;
+            return Output.Create(Azure.ApiManagement.GetUser.InvokeAsync(new Azure.ApiManagement.GetUserArgs
+            {
+                UserId = "11111111-1111-1111-1111-111111111111",
+                ApiManagementName = exampleService.Name,
+                ResourceGroupName = exampleService1.ResourceGroupName,
+            }));
+        });
+        var exampleSubscription = new Azure.ApiManagement.Subscription("exampleSubscription", new Azure.ApiManagement.SubscriptionArgs
+        {
+            ApiManagementName = exampleService.Apply(exampleService => exampleService.Name),
+            ResourceGroupName = exampleService.Apply(exampleService => exampleService.ResourceGroupName),
+            UserId = exampleUser.Apply(exampleUser => exampleUser.Id),
+            ProductId = exampleProduct.Apply(exampleProduct => exampleProduct.Id),
+            DisplayName = "Parser API",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

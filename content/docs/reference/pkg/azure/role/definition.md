@@ -20,7 +20,39 @@ Manages a custom Role Definition, used to assign Roles to Users/Principals. See 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var primary = Output.Create(Azure.Core.GetSubscription.InvokeAsync());
+        var example = new Azure.Authorization.RoleDefinition("example", new Azure.Authorization.RoleDefinitionArgs
+        {
+            Scope = primary.Apply(primary => primary.Id),
+            Description = "This is a custom role created",
+            Permissions = 
+            {
+                new Azure.Authorization.Inputs.RoleDefinitionPermissionArgs
+                {
+                    Actions = 
+                    {
+                        "*",
+                    },
+                    NotActions = {},
+                },
+            },
+            AssignableScopes = 
+            {
+                primary.Apply(primary => primary.Id),
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

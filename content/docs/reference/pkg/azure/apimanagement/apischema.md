@@ -20,7 +20,35 @@ Manages an API Schema within an API Management Service.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using System.IO;
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleApi = Output.Create(Azure.ApiManagement.GetApi.InvokeAsync(new Azure.ApiManagement.GetApiArgs
+        {
+            Name = "search-api",
+            ApiManagementName = "search-api-management",
+            ResourceGroupName = "search-service",
+            Revision = "2",
+        }));
+        var exampleApiSchema = new Azure.ApiManagement.ApiSchema("exampleApiSchema", new Azure.ApiManagement.ApiSchemaArgs
+        {
+            ApiName = exampleApi.Apply(exampleApi => exampleApi.Name),
+            ApiManagementName = exampleApi.Apply(exampleApi => exampleApi.ApiManagementName),
+            ResourceGroupName = exampleApi.Apply(exampleApi => exampleApi.ResourceGroupName),
+            SchemaId = "example-sche,a",
+            ContentType = "application/vnd.ms-azure-apim.xsd+xml",
+            Value = File.ReadAllText("api_management_api_schema.xml"),
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

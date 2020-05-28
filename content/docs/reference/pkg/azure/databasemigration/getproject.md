@@ -20,7 +20,27 @@ Use this data source to access information about an existing Database Migration 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = Output.Create(Azure.DatabaseMigration.GetProject.InvokeAsync(new Azure.DatabaseMigration.GetProjectArgs
+        {
+            Name = "example-dbms-project",
+            ResourceGroupName = "example-rg",
+            ServiceName = "example-dbms",
+        }));
+        this.Name = example.Apply(example => example.Name);
+    }
+
+    [Output("name")]
+    public Output<string> Name { get; set; }
+}
+```
 {{% /example %}}
 
 {{% example go %}}

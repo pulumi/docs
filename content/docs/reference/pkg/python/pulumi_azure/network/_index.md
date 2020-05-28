@@ -54,7 +54,7 @@ anything, please consult the source <a class="reference external" href="https://
     <span class="p">},</span>
     <span class="n">gateway_ip_configuration</span><span class="o">=</span><span class="p">[{</span>
         <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;my-gateway-ip-configuration&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;subnetId&quot;</span><span class="p">:</span> <span class="n">frontend</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;subnet_id&quot;</span><span class="p">:</span> <span class="n">frontend</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
     <span class="p">}],</span>
     <span class="n">frontend_port</span><span class="o">=</span><span class="p">[{</span>
         <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="n">frontend_port_name</span><span class="p">,</span>
@@ -77,7 +77,7 @@ anything, please consult the source <a class="reference external" href="https://
     <span class="p">}],</span>
     <span class="n">http_listener</span><span class="o">=</span><span class="p">[{</span>
         <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="n">listener_name</span><span class="p">,</span>
-        <span class="s2">&quot;frontendIpConfigurationName&quot;</span><span class="p">:</span> <span class="n">frontend_ip_configuration_name</span><span class="p">,</span>
+        <span class="s2">&quot;frontend_ip_configuration_name&quot;</span><span class="p">:</span> <span class="n">frontend_ip_configuration_name</span><span class="p">,</span>
         <span class="s2">&quot;frontendPortName&quot;</span><span class="p">:</span> <span class="n">frontend_port_name</span><span class="p">,</span>
         <span class="s2">&quot;protocol&quot;</span><span class="p">:</span> <span class="s2">&quot;Http&quot;</span><span class="p">,</span>
     <span class="p">}],</span>
@@ -2140,7 +2140,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
     <span class="n">ip_configuration</span><span class="o">=</span><span class="p">[{</span>
         <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;configuration&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;subnetId&quot;</span><span class="p">:</span> <span class="n">example_subnet</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;subnet_id&quot;</span><span class="p">:</span> <span class="n">example_subnet</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
         <span class="s2">&quot;publicIpAddressId&quot;</span><span class="p">:</span> <span class="n">example_public_ip</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
     <span class="p">}])</span>
 </pre></div>
@@ -2301,7 +2301,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
     <span class="n">ip_configuration</span><span class="o">=</span><span class="p">[{</span>
         <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;configuration&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;subnetId&quot;</span><span class="p">:</span> <span class="n">example_subnet</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;subnet_id&quot;</span><span class="p">:</span> <span class="n">example_subnet</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
         <span class="s2">&quot;publicIpAddressId&quot;</span><span class="p">:</span> <span class="n">example_public_ip</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
     <span class="p">}])</span>
 <span class="n">example_firewall_application_rule_collection</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">network</span><span class="o">.</span><span class="n">FirewallApplicationRuleCollection</span><span class="p">(</span><span class="s2">&quot;exampleFirewallApplicationRuleCollection&quot;</span><span class="p">,</span>
@@ -2497,7 +2497,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
     <span class="n">ip_configuration</span><span class="o">=</span><span class="p">[{</span>
         <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;configuration&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;subnetId&quot;</span><span class="p">:</span> <span class="n">example_subnet</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;subnet_id&quot;</span><span class="p">:</span> <span class="n">example_subnet</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
         <span class="s2">&quot;publicIpAddressId&quot;</span><span class="p">:</span> <span class="n">example_public_ip</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
     <span class="p">}])</span>
 <span class="n">example_firewall_nat_rule_collection</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">network</span><span class="o">.</span><span class="n">FirewallNatRuleCollection</span><span class="p">(</span><span class="s2">&quot;exampleFirewallNatRuleCollection&quot;</span><span class="p">,</span>
@@ -2687,7 +2687,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
     <span class="n">ip_configuration</span><span class="o">=</span><span class="p">[{</span>
         <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;configuration&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;subnetId&quot;</span><span class="p">:</span> <span class="n">example_subnet</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;subnet_id&quot;</span><span class="p">:</span> <span class="n">example_subnet</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
         <span class="s2">&quot;publicIpAddressId&quot;</span><span class="p">:</span> <span class="n">example_public_ip</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
     <span class="p">}])</span>
 <span class="n">example_firewall_network_rule_collection</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">network</span><span class="o">.</span><span class="n">FirewallNetworkRuleCollection</span><span class="p">(</span><span class="s2">&quot;exampleFirewallNetworkRuleCollection&quot;</span><span class="p">,</span>
@@ -4064,7 +4064,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
     <span class="n">ip_configuration</span><span class="o">=</span><span class="p">[{</span>
         <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;testconfiguration1&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;subnetId&quot;</span><span class="p">:</span> <span class="n">example_subnet</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;subnet_id&quot;</span><span class="p">:</span> <span class="n">example_subnet</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
         <span class="s2">&quot;privateIpAddressAllocation&quot;</span><span class="p">:</span> <span class="s2">&quot;Dynamic&quot;</span><span class="p">,</span>
     <span class="p">}])</span>
 <span class="n">example_virtual_machine</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">VirtualMachine</span><span class="p">(</span><span class="s2">&quot;exampleVirtualMachine&quot;</span><span class="p">,</span>
@@ -4081,16 +4081,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">storage_os_disk</span><span class="o">=</span><span class="p">{</span>
         <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;osdisk&quot;</span><span class="p">,</span>
         <span class="s2">&quot;caching&quot;</span><span class="p">:</span> <span class="s2">&quot;ReadWrite&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;createOption&quot;</span><span class="p">:</span> <span class="s2">&quot;FromImage&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;create_option&quot;</span><span class="p">:</span> <span class="s2">&quot;FromImage&quot;</span><span class="p">,</span>
         <span class="s2">&quot;managedDiskType&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard_LRS&quot;</span><span class="p">,</span>
     <span class="p">},</span>
     <span class="n">os_profile</span><span class="o">=</span><span class="p">{</span>
-        <span class="s2">&quot;computerName&quot;</span><span class="p">:</span> <span class="s2">&quot;cmtest-vm&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;adminUsername&quot;</span><span class="p">:</span> <span class="s2">&quot;testadmin&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;adminPassword&quot;</span><span class="p">:</span> <span class="s2">&quot;Password1234!&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;computer_name&quot;</span><span class="p">:</span> <span class="s2">&quot;cmtest-vm&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;admin_username&quot;</span><span class="p">:</span> <span class="s2">&quot;testadmin&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;admin_password&quot;</span><span class="p">:</span> <span class="s2">&quot;Password1234!&quot;</span><span class="p">,</span>
     <span class="p">},</span>
     <span class="n">os_profile_linux_config</span><span class="o">=</span><span class="p">{</span>
-        <span class="s2">&quot;disablePasswordAuthentication&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="s2">&quot;disable_password_authentication&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
     <span class="p">})</span>
 <span class="n">example_extension</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Extension</span><span class="p">(</span><span class="s2">&quot;exampleExtension&quot;</span><span class="p">,</span>
     <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
@@ -4105,7 +4105,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
     <span class="n">network_watcher_name</span><span class="o">=</span><span class="n">example_network_watcher</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
     <span class="n">source</span><span class="o">=</span><span class="p">{</span>
-        <span class="s2">&quot;virtualMachineId&quot;</span><span class="p">:</span> <span class="n">example_virtual_machine</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;virtual_machine_id&quot;</span><span class="p">:</span> <span class="n">example_virtual_machine</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
     <span class="p">},</span>
     <span class="n">destination</span><span class="o">=</span><span class="p">{</span>
         <span class="s2">&quot;address&quot;</span><span class="p">:</span> <span class="s2">&quot;exmaple.com&quot;</span><span class="p">,</span>
@@ -4299,7 +4299,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
     <span class="n">ip_configuration</span><span class="o">=</span><span class="p">[{</span>
         <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;internal&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;subnetId&quot;</span><span class="p">:</span> <span class="n">example_subnet</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;subnet_id&quot;</span><span class="p">:</span> <span class="n">example_subnet</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
         <span class="s2">&quot;privateIpAddressAllocation&quot;</span><span class="p">:</span> <span class="s2">&quot;Dynamic&quot;</span><span class="p">,</span>
     <span class="p">}])</span>
 </pre></div>
@@ -4549,7 +4549,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="p">},</span>
     <span class="n">gateway_ip_configuration</span><span class="o">=</span><span class="p">[{</span>
         <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;my-gateway-ip-configuration&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;subnetId&quot;</span><span class="p">:</span> <span class="n">frontend</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;subnet_id&quot;</span><span class="p">:</span> <span class="n">frontend</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
     <span class="p">}],</span>
     <span class="n">frontend_port</span><span class="o">=</span><span class="p">[{</span>
         <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="n">frontend_port_name</span><span class="p">,</span>
@@ -4571,7 +4571,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="p">}],</span>
     <span class="n">http_listener</span><span class="o">=</span><span class="p">[{</span>
         <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="n">listener_name</span><span class="p">,</span>
-        <span class="s2">&quot;frontendIpConfigurationName&quot;</span><span class="p">:</span> <span class="n">frontend_ip_configuration_name</span><span class="p">,</span>
+        <span class="s2">&quot;frontend_ip_configuration_name&quot;</span><span class="p">:</span> <span class="n">frontend_ip_configuration_name</span><span class="p">,</span>
         <span class="s2">&quot;frontendPortName&quot;</span><span class="p">:</span> <span class="n">frontend_port_name</span><span class="p">,</span>
         <span class="s2">&quot;protocol&quot;</span><span class="p">:</span> <span class="s2">&quot;Http&quot;</span><span class="p">,</span>
     <span class="p">}],</span>
@@ -4587,7 +4587,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
     <span class="n">ip_configuration</span><span class="o">=</span><span class="p">[{</span>
         <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;testconfiguration1&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;subnetId&quot;</span><span class="p">:</span> <span class="n">frontend</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;subnet_id&quot;</span><span class="p">:</span> <span class="n">frontend</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
         <span class="s2">&quot;privateIpAddressAllocation&quot;</span><span class="p">:</span> <span class="s2">&quot;Dynamic&quot;</span><span class="p">,</span>
     <span class="p">}])</span>
 <span class="n">example_network_interface_application_gateway_backend_address_pool_association</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">network</span><span class="o">.</span><span class="n">NetworkInterfaceApplicationGatewayBackendAddressPoolAssociation</span><span class="p">(</span><span class="s2">&quot;exampleNetworkInterfaceApplicationGatewayBackendAddressPoolAssociation&quot;</span><span class="p">,</span>
@@ -4706,7 +4706,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
     <span class="n">ip_configuration</span><span class="o">=</span><span class="p">[{</span>
         <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;testconfiguration1&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;subnetId&quot;</span><span class="p">:</span> <span class="n">example_subnet</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;subnet_id&quot;</span><span class="p">:</span> <span class="n">example_subnet</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
         <span class="s2">&quot;privateIpAddressAllocation&quot;</span><span class="p">:</span> <span class="s2">&quot;Dynamic&quot;</span><span class="p">,</span>
         <span class="s2">&quot;applicationSecurityGroupIds&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">example_application_security_group</span><span class="o">.</span><span class="n">id</span><span class="p">],</span>
     <span class="p">}])</span>
@@ -4828,7 +4828,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
     <span class="n">ip_configuration</span><span class="o">=</span><span class="p">[{</span>
         <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;testconfiguration1&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;subnetId&quot;</span><span class="p">:</span> <span class="n">example_subnet</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;subnet_id&quot;</span><span class="p">:</span> <span class="n">example_subnet</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
         <span class="s2">&quot;privateIpAddressAllocation&quot;</span><span class="p">:</span> <span class="s2">&quot;Dynamic&quot;</span><span class="p">,</span>
     <span class="p">}])</span>
 <span class="n">example_network_interface_backend_address_pool_association</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">network</span><span class="o">.</span><span class="n">NetworkInterfaceBackendAddressPoolAssociation</span><span class="p">(</span><span class="s2">&quot;exampleNetworkInterfaceBackendAddressPoolAssociation&quot;</span><span class="p">,</span>
@@ -4962,7 +4962,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
     <span class="n">ip_configuration</span><span class="o">=</span><span class="p">[{</span>
         <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;testconfiguration1&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;subnetId&quot;</span><span class="p">:</span> <span class="n">example_subnet</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;subnet_id&quot;</span><span class="p">:</span> <span class="n">example_subnet</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
         <span class="s2">&quot;privateIpAddressAllocation&quot;</span><span class="p">:</span> <span class="s2">&quot;Dynamic&quot;</span><span class="p">,</span>
     <span class="p">}])</span>
 <span class="n">example_network_interface_nat_rule_association</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">network</span><span class="o">.</span><span class="n">NetworkInterfaceNatRuleAssociation</span><span class="p">(</span><span class="s2">&quot;exampleNetworkInterfaceNatRuleAssociation&quot;</span><span class="p">,</span>
@@ -5081,7 +5081,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
     <span class="n">ip_configuration</span><span class="o">=</span><span class="p">[{</span>
         <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;testconfiguration1&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;subnetId&quot;</span><span class="p">:</span> <span class="n">example_subnet</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;subnet_id&quot;</span><span class="p">:</span> <span class="n">example_subnet</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
         <span class="s2">&quot;privateIpAddressAllocation&quot;</span><span class="p">:</span> <span class="s2">&quot;Dynamic&quot;</span><span class="p">,</span>
     <span class="p">}])</span>
 <span class="n">example_network_interface_security_group_association</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">network</span><span class="o">.</span><span class="n">NetworkInterfaceSecurityGroupAssociation</span><span class="p">(</span><span class="s2">&quot;exampleNetworkInterfaceSecurityGroupAssociation&quot;</span><span class="p">,</span>
@@ -5191,7 +5191,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
     <span class="n">ip_configuration</span><span class="o">=</span><span class="p">[{</span>
         <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;testconfiguration1&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;subnetId&quot;</span><span class="p">:</span> <span class="n">example_subnet</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;subnet_id&quot;</span><span class="p">:</span> <span class="n">example_subnet</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
         <span class="s2">&quot;privateIpAddressAllocation&quot;</span><span class="p">:</span> <span class="s2">&quot;Dynamic&quot;</span><span class="p">,</span>
     <span class="p">}])</span>
 <span class="n">example_virtual_machine</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">VirtualMachine</span><span class="p">(</span><span class="s2">&quot;exampleVirtualMachine&quot;</span><span class="p">,</span>
@@ -5208,16 +5208,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">storage_os_disk</span><span class="o">=</span><span class="p">{</span>
         <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;osdisk&quot;</span><span class="p">,</span>
         <span class="s2">&quot;caching&quot;</span><span class="p">:</span> <span class="s2">&quot;ReadWrite&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;createOption&quot;</span><span class="p">:</span> <span class="s2">&quot;FromImage&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;create_option&quot;</span><span class="p">:</span> <span class="s2">&quot;FromImage&quot;</span><span class="p">,</span>
         <span class="s2">&quot;managedDiskType&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard_LRS&quot;</span><span class="p">,</span>
     <span class="p">},</span>
     <span class="n">os_profile</span><span class="o">=</span><span class="p">{</span>
-        <span class="s2">&quot;computerName&quot;</span><span class="p">:</span> <span class="s2">&quot;pctest-vm&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;adminUsername&quot;</span><span class="p">:</span> <span class="s2">&quot;testadmin&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;adminPassword&quot;</span><span class="p">:</span> <span class="s2">&quot;Password1234!&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;computer_name&quot;</span><span class="p">:</span> <span class="s2">&quot;pctest-vm&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;admin_username&quot;</span><span class="p">:</span> <span class="s2">&quot;testadmin&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;admin_password&quot;</span><span class="p">:</span> <span class="s2">&quot;Password1234!&quot;</span><span class="p">,</span>
     <span class="p">},</span>
     <span class="n">os_profile_linux_config</span><span class="o">=</span><span class="p">{</span>
-        <span class="s2">&quot;disablePasswordAuthentication&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="s2">&quot;disable_password_authentication&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
     <span class="p">})</span>
 <span class="n">example_extension</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Extension</span><span class="p">(</span><span class="s2">&quot;exampleExtension&quot;</span><span class="p">,</span>
     <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
@@ -5237,7 +5237,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
     <span class="n">target_resource_id</span><span class="o">=</span><span class="n">example_virtual_machine</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
     <span class="n">storage_location</span><span class="o">=</span><span class="p">{</span>
-        <span class="s2">&quot;storageAccountId&quot;</span><span class="p">:</span> <span class="n">example_account</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;storage_account_id&quot;</span><span class="p">:</span> <span class="n">example_account</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
     <span class="p">})</span>
 </pre></div>
 </div>
@@ -5437,10 +5437,10 @@ At this time you cannot use a Network Security Group with in-line Network Securi
         <span class="s2">&quot;direction&quot;</span><span class="p">:</span> <span class="s2">&quot;Inbound&quot;</span><span class="p">,</span>
         <span class="s2">&quot;access&quot;</span><span class="p">:</span> <span class="s2">&quot;Allow&quot;</span><span class="p">,</span>
         <span class="s2">&quot;protocol&quot;</span><span class="p">:</span> <span class="s2">&quot;Tcp&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;sourcePortRange&quot;</span><span class="p">:</span> <span class="s2">&quot;*&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;destinationPortRange&quot;</span><span class="p">:</span> <span class="s2">&quot;*&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;sourceAddressPrefix&quot;</span><span class="p">:</span> <span class="s2">&quot;*&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;destinationAddressPrefix&quot;</span><span class="p">:</span> <span class="s2">&quot;*&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;source_port_range&quot;</span><span class="p">:</span> <span class="s2">&quot;*&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;destination_port_range&quot;</span><span class="p">:</span> <span class="s2">&quot;*&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;source_address_prefix&quot;</span><span class="p">:</span> <span class="s2">&quot;*&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;destination_address_prefix&quot;</span><span class="p">:</span> <span class="s2">&quot;*&quot;</span><span class="p">,</span>
     <span class="p">}],</span>
     <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
         <span class="s2">&quot;environment&quot;</span><span class="p">:</span> <span class="s2">&quot;Production&quot;</span><span class="p">,</span>
@@ -5984,9 +5984,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="p">},</span>
     <span class="n">traffic_analytics</span><span class="o">=</span><span class="p">{</span>
         <span class="s2">&quot;enabled&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
-        <span class="s2">&quot;workspaceId&quot;</span><span class="p">:</span> <span class="n">test_analytics_workspace</span><span class="o">.</span><span class="n">workspace_id</span><span class="p">,</span>
+        <span class="s2">&quot;workspace_id&quot;</span><span class="p">:</span> <span class="n">test_analytics_workspace</span><span class="o">.</span><span class="n">workspace_id</span><span class="p">,</span>
         <span class="s2">&quot;workspaceRegion&quot;</span><span class="p">:</span> <span class="n">test_analytics_workspace</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
-        <span class="s2">&quot;workspaceResourceId&quot;</span><span class="p">:</span> <span class="n">test_analytics_workspace</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;workspace_resource_id&quot;</span><span class="p">:</span> <span class="n">test_analytics_workspace</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
         <span class="s2">&quot;intervalInMinutes&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
     <span class="p">})</span>
 </pre></div>
@@ -6181,7 +6181,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
     <span class="n">ip_configuration</span><span class="o">=</span><span class="p">[{</span>
         <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;testconfiguration1&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;subnetId&quot;</span><span class="p">:</span> <span class="n">example_subnet</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;subnet_id&quot;</span><span class="p">:</span> <span class="n">example_subnet</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
         <span class="s2">&quot;privateIpAddressAllocation&quot;</span><span class="p">:</span> <span class="s2">&quot;Dynamic&quot;</span><span class="p">,</span>
     <span class="p">}])</span>
 <span class="n">example_virtual_machine</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">VirtualMachine</span><span class="p">(</span><span class="s2">&quot;exampleVirtualMachine&quot;</span><span class="p">,</span>
@@ -6198,16 +6198,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">storage_os_disk</span><span class="o">=</span><span class="p">{</span>
         <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;osdisk&quot;</span><span class="p">,</span>
         <span class="s2">&quot;caching&quot;</span><span class="p">:</span> <span class="s2">&quot;ReadWrite&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;createOption&quot;</span><span class="p">:</span> <span class="s2">&quot;FromImage&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;create_option&quot;</span><span class="p">:</span> <span class="s2">&quot;FromImage&quot;</span><span class="p">,</span>
         <span class="s2">&quot;managedDiskType&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard_LRS&quot;</span><span class="p">,</span>
     <span class="p">},</span>
     <span class="n">os_profile</span><span class="o">=</span><span class="p">{</span>
-        <span class="s2">&quot;computerName&quot;</span><span class="p">:</span> <span class="s2">&quot;pctest-vm&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;adminUsername&quot;</span><span class="p">:</span> <span class="s2">&quot;testadmin&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;adminPassword&quot;</span><span class="p">:</span> <span class="s2">&quot;Password1234!&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;computer_name&quot;</span><span class="p">:</span> <span class="s2">&quot;pctest-vm&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;admin_username&quot;</span><span class="p">:</span> <span class="s2">&quot;testadmin&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;admin_password&quot;</span><span class="p">:</span> <span class="s2">&quot;Password1234!&quot;</span><span class="p">,</span>
     <span class="p">},</span>
     <span class="n">os_profile_linux_config</span><span class="o">=</span><span class="p">{</span>
-        <span class="s2">&quot;disablePasswordAuthentication&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="s2">&quot;disable_password_authentication&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
     <span class="p">})</span>
 <span class="n">example_extension</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">Extension</span><span class="p">(</span><span class="s2">&quot;exampleExtension&quot;</span><span class="p">,</span>
     <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
@@ -6227,7 +6227,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
     <span class="n">target_resource_id</span><span class="o">=</span><span class="n">example_virtual_machine</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
     <span class="n">storage_location</span><span class="o">=</span><span class="p">{</span>
-        <span class="s2">&quot;storageAccountId&quot;</span><span class="p">:</span> <span class="n">example_account</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;storage_account_id&quot;</span><span class="p">:</span> <span class="n">example_account</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
     <span class="p">})</span>
 </pre></div>
 </div>
@@ -6602,7 +6602,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
         <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;examplecnic&quot;</span><span class="p">,</span>
         <span class="s2">&quot;ip_configuration&quot;</span><span class="p">:</span> <span class="p">[{</span>
             <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;exampleipconfig&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;subnetId&quot;</span><span class="p">:</span> <span class="n">example_subnet</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+            <span class="s2">&quot;subnet_id&quot;</span><span class="p">:</span> <span class="n">example_subnet</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
         <span class="p">}],</span>
     <span class="p">})</span>
 </pre></div>
@@ -7673,10 +7673,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
         <span class="s2">&quot;direction&quot;</span><span class="p">:</span> <span class="s2">&quot;Inbound&quot;</span><span class="p">,</span>
         <span class="s2">&quot;access&quot;</span><span class="p">:</span> <span class="s2">&quot;Allow&quot;</span><span class="p">,</span>
         <span class="s2">&quot;protocol&quot;</span><span class="p">:</span> <span class="s2">&quot;Tcp&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;sourcePortRange&quot;</span><span class="p">:</span> <span class="s2">&quot;*&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;destinationPortRange&quot;</span><span class="p">:</span> <span class="s2">&quot;*&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;sourceAddressPrefix&quot;</span><span class="p">:</span> <span class="s2">&quot;*&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;destinationAddressPrefix&quot;</span><span class="p">:</span> <span class="s2">&quot;*&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;source_port_range&quot;</span><span class="p">:</span> <span class="s2">&quot;*&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;destination_port_range&quot;</span><span class="p">:</span> <span class="s2">&quot;*&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;source_address_prefix&quot;</span><span class="p">:</span> <span class="s2">&quot;*&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;destination_address_prefix&quot;</span><span class="p">:</span> <span class="s2">&quot;*&quot;</span><span class="p">,</span>
     <span class="p">}])</span>
 <span class="n">example_subnet_network_security_group_association</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">network</span><span class="o">.</span><span class="n">SubnetNetworkSecurityGroupAssociation</span><span class="p">(</span><span class="s2">&quot;exampleSubnetNetworkSecurityGroupAssociation&quot;</span><span class="p">,</span>
     <span class="n">subnet_id</span><span class="o">=</span><span class="n">example_subnet</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
@@ -7782,9 +7782,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
     <span class="n">route</span><span class="o">=</span><span class="p">[{</span>
         <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;example&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;addressPrefix&quot;</span><span class="p">:</span> <span class="s2">&quot;10.100.0.0/14&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;nextHopType&quot;</span><span class="p">:</span> <span class="s2">&quot;VirtualAppliance&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;nextHopInIpAddress&quot;</span><span class="p">:</span> <span class="s2">&quot;10.10.1.1&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;address_prefix&quot;</span><span class="p">:</span> <span class="s2">&quot;10.100.0.0/14&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;next_hop_type&quot;</span><span class="p">:</span> <span class="s2">&quot;VirtualAppliance&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;next_hop_in_ip_address&quot;</span><span class="p">:</span> <span class="s2">&quot;10.10.1.1&quot;</span><span class="p">,</span>
     <span class="p">}])</span>
 <span class="n">example_subnet_route_table_association</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">network</span><span class="o">.</span><span class="n">SubnetRouteTableAssociation</span><span class="p">(</span><span class="s2">&quot;exampleSubnetRouteTableAssociation&quot;</span><span class="p">,</span>
     <span class="n">subnet_id</span><span class="o">=</span><span class="n">example_subnet</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
@@ -7894,7 +7894,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
         <span class="s2">&quot;protocol&quot;</span><span class="p">:</span> <span class="s2">&quot;http&quot;</span><span class="p">,</span>
         <span class="s2">&quot;port&quot;</span><span class="p">:</span> <span class="mi">80</span><span class="p">,</span>
         <span class="s2">&quot;path&quot;</span><span class="p">:</span> <span class="s2">&quot;/&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;intervalInSeconds&quot;</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span>
+        <span class="s2">&quot;interval_in_seconds&quot;</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span>
         <span class="s2">&quot;timeoutInSeconds&quot;</span><span class="p">:</span> <span class="mi">9</span><span class="p">,</span>
         <span class="s2">&quot;toleratedNumberOfFailures&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
     <span class="p">},</span>
@@ -8225,7 +8225,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
         <span class="s2">&quot;protocol&quot;</span><span class="p">:</span> <span class="s2">&quot;http&quot;</span><span class="p">,</span>
         <span class="s2">&quot;port&quot;</span><span class="p">:</span> <span class="mi">80</span><span class="p">,</span>
         <span class="s2">&quot;path&quot;</span><span class="p">:</span> <span class="s2">&quot;/&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;intervalInSeconds&quot;</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span>
+        <span class="s2">&quot;interval_in_seconds&quot;</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span>
         <span class="s2">&quot;timeoutInSeconds&quot;</span><span class="p">:</span> <span class="mi">9</span><span class="p">,</span>
         <span class="s2">&quot;toleratedNumberOfFailures&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
     <span class="p">},</span>
@@ -8740,15 +8740,15 @@ At this time you cannot use a Virtual Network with in-line Subnets in conjunctio
     <span class="n">subnet</span><span class="o">=</span><span class="p">[</span>
         <span class="p">{</span>
             <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;subnet1&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;addressPrefix&quot;</span><span class="p">:</span> <span class="s2">&quot;10.0.1.0/24&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;address_prefix&quot;</span><span class="p">:</span> <span class="s2">&quot;10.0.1.0/24&quot;</span><span class="p">,</span>
         <span class="p">},</span>
         <span class="p">{</span>
             <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;subnet2&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;addressPrefix&quot;</span><span class="p">:</span> <span class="s2">&quot;10.0.2.0/24&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;address_prefix&quot;</span><span class="p">:</span> <span class="s2">&quot;10.0.2.0/24&quot;</span><span class="p">,</span>
         <span class="p">},</span>
         <span class="p">{</span>
             <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;subnet3&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;addressPrefix&quot;</span><span class="p">:</span> <span class="s2">&quot;10.0.3.0/24&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;address_prefix&quot;</span><span class="p">:</span> <span class="s2">&quot;10.0.3.0/24&quot;</span><span class="p">,</span>
             <span class="s2">&quot;securityGroup&quot;</span><span class="p">:</span> <span class="n">example_network_security_group</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
         <span class="p">},</span>
     <span class="p">],</span>
@@ -8983,10 +8983,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
         <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;vnetGatewayConfig&quot;</span><span class="p">,</span>
         <span class="s2">&quot;publicIpAddressId&quot;</span><span class="p">:</span> <span class="n">example_public_ip</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
         <span class="s2">&quot;privateIpAddressAllocation&quot;</span><span class="p">:</span> <span class="s2">&quot;Dynamic&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;subnetId&quot;</span><span class="p">:</span> <span class="n">example_subnet</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;subnet_id&quot;</span><span class="p">:</span> <span class="n">example_subnet</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
     <span class="p">}],</span>
     <span class="n">vpn_client_configuration</span><span class="o">=</span><span class="p">{</span>
-        <span class="s2">&quot;addressSpaces&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;10.2.0.0/24&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;address_spaces&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;10.2.0.0/24&quot;</span><span class="p">],</span>
         <span class="s2">&quot;root_certificate&quot;</span><span class="p">:</span> <span class="p">[{</span>
             <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;DigiCert-Federated-ID-Root-CA&quot;</span><span class="p">,</span>
             <span class="s2">&quot;publicCertData&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;&quot;MIIDuzCCAqOgAwIBAgIQCHTZWCM+IlfFIRXIvyKSrjANBgkqhkiG9w0BAQsFADBn</span>
@@ -9437,7 +9437,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">ip_configuration</span><span class="o">=</span><span class="p">[{</span>
         <span class="s2">&quot;publicIpAddressId&quot;</span><span class="p">:</span> <span class="n">example_public_ip</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
         <span class="s2">&quot;privateIpAddressAllocation&quot;</span><span class="p">:</span> <span class="s2">&quot;Dynamic&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;subnetId&quot;</span><span class="p">:</span> <span class="n">example_subnet</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;subnet_id&quot;</span><span class="p">:</span> <span class="n">example_subnet</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
     <span class="p">}])</span>
 <span class="n">onpremise_virtual_network_gateway_connection</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">network</span><span class="o">.</span><span class="n">VirtualNetworkGatewayConnection</span><span class="p">(</span><span class="s2">&quot;onpremiseVirtualNetworkGatewayConnection&quot;</span><span class="p">,</span>
     <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
@@ -9473,7 +9473,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">ip_configuration</span><span class="o">=</span><span class="p">[{</span>
         <span class="s2">&quot;publicIpAddressId&quot;</span><span class="p">:</span> <span class="n">us_public_ip</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
         <span class="s2">&quot;privateIpAddressAllocation&quot;</span><span class="p">:</span> <span class="s2">&quot;Dynamic&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;subnetId&quot;</span><span class="p">:</span> <span class="n">us_gateway</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;subnet_id&quot;</span><span class="p">:</span> <span class="n">us_gateway</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
     <span class="p">}])</span>
 <span class="n">europe_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;europeResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West Europe&quot;</span><span class="p">)</span>
 <span class="n">europe_virtual_network</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">network</span><span class="o">.</span><span class="n">VirtualNetwork</span><span class="p">(</span><span class="s2">&quot;europeVirtualNetwork&quot;</span><span class="p">,</span>
@@ -9497,7 +9497,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">ip_configuration</span><span class="o">=</span><span class="p">[{</span>
         <span class="s2">&quot;publicIpAddressId&quot;</span><span class="p">:</span> <span class="n">europe_public_ip</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
         <span class="s2">&quot;privateIpAddressAllocation&quot;</span><span class="p">:</span> <span class="s2">&quot;Dynamic&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;subnetId&quot;</span><span class="p">:</span> <span class="n">europe_gateway</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;subnet_id&quot;</span><span class="p">:</span> <span class="n">europe_gateway</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
     <span class="p">}])</span>
 <span class="n">us_to_europe</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">network</span><span class="o">.</span><span class="n">VirtualNetworkGatewayConnection</span><span class="p">(</span><span class="s2">&quot;usToEurope&quot;</span><span class="p">,</span>
     <span class="n">location</span><span class="o">=</span><span class="n">us_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
@@ -10946,9 +10946,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
     <span class="n">ip_configuration</span><span class="o">=</span><span class="p">[{</span>
         <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;testconfiguration1&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;subnetId&quot;</span><span class="p">:</span> <span class="n">example_subnet</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;subnet_id&quot;</span><span class="p">:</span> <span class="n">example_subnet</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
         <span class="s2">&quot;privateIpAddressAllocation&quot;</span><span class="p">:</span> <span class="s2">&quot;Static&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;privateIpAddress&quot;</span><span class="p">:</span> <span class="s2">&quot;10.0.2.5&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;private_ip_address&quot;</span><span class="p">:</span> <span class="s2">&quot;10.0.2.5&quot;</span><span class="p">,</span>
         <span class="s2">&quot;publicIpAddressId&quot;</span><span class="p">:</span> <span class="n">example_public_ip</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
     <span class="p">}])</span>
 <span class="n">example_virtual_machine</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">VirtualMachine</span><span class="p">(</span><span class="s2">&quot;exampleVirtualMachine&quot;</span><span class="p">,</span>

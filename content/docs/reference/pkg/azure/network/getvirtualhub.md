@@ -32,6 +32,26 @@ example = azure.network.get_virtual_hub(name="example-hub",
     resource_group_name="example-resources")
 pulumi.export("virtualHubId", example.id)
 ```
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = Output.Create(Azure.Network.GetVirtualHub.InvokeAsync(new Azure.Network.GetVirtualHubArgs
+        {
+            Name = "example-hub",
+            ResourceGroupName = "example-resources",
+        }));
+        this.VirtualHubId = example.Apply(example => example.Id);
+    }
+
+    [Output("virtualHubId")]
+    public Output<string> VirtualHubId { get; set; }
+}
+```
 
 
 

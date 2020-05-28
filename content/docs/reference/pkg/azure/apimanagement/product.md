@@ -20,7 +20,40 @@ Manages an API Management Product.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West Europe",
+        });
+        var exampleService = new Azure.ApiManagement.Service("exampleService", new Azure.ApiManagement.ServiceArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            PublisherName = "My Company",
+            PublisherEmail = "company@exmaple.com",
+            SkuName = "Developer_1",
+        });
+        var exampleProduct = new Azure.ApiManagement.Product("exampleProduct", new Azure.ApiManagement.ProductArgs
+        {
+            ProductId = "test-product",
+            ApiManagementName = exampleService.Name,
+            ResourceGroupName = exampleResourceGroup.Name,
+            DisplayName = "Test Product",
+            SubscriptionRequired = true,
+            ApprovalRequired = true,
+            Published = true,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

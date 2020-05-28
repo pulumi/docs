@@ -20,7 +20,28 @@ Use this data source to retrieve the version of Kubernetes supported by Azure Ku
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var current = Output.Create(Azure.ContainerService.GetKubernetesServiceVersions.InvokeAsync(new Azure.ContainerService.GetKubernetesServiceVersionsArgs
+        {
+            Location = "West Europe",
+        }));
+        this.Versions = current.Apply(current => current.Versions);
+        this.LatestVersion = current.Apply(current => current.LatestVersion);
+    }
+
+    [Output("versions")]
+    public Output<string> Versions { get; set; }
+    [Output("latestVersion")]
+    public Output<string> LatestVersion { get; set; }
+}
+```
 {{% /example %}}
 
 {{% example go %}}

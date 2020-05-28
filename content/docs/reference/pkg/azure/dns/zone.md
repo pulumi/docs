@@ -20,7 +20,30 @@ Enables you to manage DNS zones within Azure DNS. These zones are hosted on Azur
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Azure.Core.ResourceGroup("example", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West US",
+        });
+        var example_public = new Azure.Dns.Zone("example-public", new Azure.Dns.ZoneArgs
+        {
+            ResourceGroupName = example.Name,
+        });
+        var example_private = new Azure.PrivateDns.Zone("example-private", new Azure.PrivateDns.ZoneArgs
+        {
+            ResourceGroupName = example.Name,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -44,8 +67,8 @@ import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
 const example = new azure.core.ResourceGroup("example", {location: "West US"});
-const example-public = new azure.dns.Zone("example-public", {resourceGroupName: example.name});
-const example-private = new azure.privatedns.Zone("example-private", {resourceGroupName: example.name});
+const example_public = new azure.dns.Zone("example-public", {resourceGroupName: example.name});
+const example_private = new azure.privatedns.Zone("example-private", {resourceGroupName: example.name});
 ```
 {{% /example %}}
 

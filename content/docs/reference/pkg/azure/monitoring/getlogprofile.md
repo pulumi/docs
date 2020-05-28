@@ -20,7 +20,25 @@ Use this data source to access the properties of a Log Profile.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = Output.Create(Azure.Monitoring.GetLogProfile.InvokeAsync(new Azure.Monitoring.GetLogProfileArgs
+        {
+            Name = "test-logprofile",
+        }));
+        this.LogProfileStorageAccountId = example.Apply(example => example.StorageAccountId);
+    }
+
+    [Output("logProfileStorageAccountId")]
+    public Output<string> LogProfileStorageAccountId { get; set; }
+}
+```
 {{% /example %}}
 
 {{% example go %}}

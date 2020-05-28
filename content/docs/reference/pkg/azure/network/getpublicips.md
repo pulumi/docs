@@ -20,7 +20,23 @@ Use this data source to access information about a set of existing Public IP Add
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = Output.Create(Azure.Network.GetPublicIPs.InvokeAsync(new Azure.Network.GetPublicIPsArgs
+        {
+            Attached = false,
+            ResourceGroupName = "pip-test",
+        }));
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

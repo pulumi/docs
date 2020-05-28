@@ -24,7 +24,33 @@ Manages the subscription's Security Center Workspace.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "westus",
+        });
+        var exampleAnalyticsWorkspace = new Azure.OperationalInsights.AnalyticsWorkspace("exampleAnalyticsWorkspace", new Azure.OperationalInsights.AnalyticsWorkspaceArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            Sku = "PerGB2018",
+        });
+        var exampleWorkspace = new Azure.SecurityCenter.Workspace("exampleWorkspace", new Azure.SecurityCenter.WorkspaceArgs
+        {
+            Scope = "/subscriptions/00000000-0000-0000-0000-000000000000",
+            WorkspaceId = exampleAnalyticsWorkspace.Id,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

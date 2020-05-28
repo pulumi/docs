@@ -34,6 +34,29 @@ example = azure.authorization.get_user_assigned_identity(name="name_of_user_assi
 pulumi.export("uaiClientId", example.client_id)
 pulumi.export("uaiPrincipalId", example.principal_id)
 ```
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = Output.Create(Azure.Authorization.GetUserAssignedIdentity.InvokeAsync(new Azure.Authorization.GetUserAssignedIdentityArgs
+        {
+            Name = "name_of_user_assigned_identity",
+            ResourceGroupName = "name_of_resource_group",
+        }));
+        this.UaiClientId = example.Apply(example => example.ClientId);
+        this.UaiPrincipalId = example.Apply(example => example.PrincipalId);
+    }
+
+    [Output("uaiClientId")]
+    public Output<string> UaiClientId { get; set; }
+    [Output("uaiPrincipalId")]
+    public Output<string> UaiPrincipalId { get; set; }
+}
+```
 
 <p class="resource-deprecated">Deprecated: {{% md %}}azure.core.getUserAssignedIdentity has been deprecated in favor of azure.authorization.getUserAssignedIdentity{{% /md %}}</p>
 

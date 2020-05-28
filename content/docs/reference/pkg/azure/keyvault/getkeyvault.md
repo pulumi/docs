@@ -20,7 +20,26 @@ Use this data source to access information about an existing Key Vault.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = Output.Create(Azure.KeyVault.GetKeyVault.InvokeAsync(new Azure.KeyVault.GetKeyVaultArgs
+        {
+            Name = "mykeyvault",
+            ResourceGroupName = "some-resource-group",
+        }));
+        this.VaultUri = example.Apply(example => example.VaultUri);
+    }
+
+    [Output("vaultUri")]
+    public Output<string> VaultUri { get; set; }
+}
+```
 {{% /example %}}
 
 {{% example go %}}

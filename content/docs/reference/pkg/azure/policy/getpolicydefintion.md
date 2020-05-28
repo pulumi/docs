@@ -20,7 +20,25 @@ Use this data source to access information about a Policy Definition, both custo
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = Output.Create(Azure.Policy.GetPolicyDefintion.InvokeAsync(new Azure.Policy.GetPolicyDefintionArgs
+        {
+            DisplayName = "Allowed resource types",
+        }));
+        this.Id = example.Apply(example => example.Id);
+    }
+
+    [Output("id")]
+    public Output<string> Id { get; set; }
+}
+```
 {{% /example %}}
 
 {{% example go %}}

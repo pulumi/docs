@@ -20,7 +20,29 @@ Manages an App Service Certificate Order.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West Europe",
+        });
+        var exampleCertificateOrder = new Azure.AppService.CertificateOrder("exampleCertificateOrder", new Azure.AppService.CertificateOrderArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            Location = "global",
+            DistinguishedName = "CN=example.com",
+            ProductType = "Standard",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

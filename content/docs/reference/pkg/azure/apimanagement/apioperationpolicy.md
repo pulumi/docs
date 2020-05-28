@@ -21,7 +21,35 @@ Manages an API Management API Operation Policy
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleApiOperation = new Azure.ApiManagement.ApiOperation("exampleApiOperation", new Azure.ApiManagement.ApiOperationArgs
+        {
+        });
+        //...
+        var exampleApiOperationPolicy = new Azure.ApiManagement.ApiOperationPolicy("exampleApiOperationPolicy", new Azure.ApiManagement.ApiOperationPolicyArgs
+        {
+            ApiName = exampleApiOperation.ApiName,
+            ApiManagementName = exampleApiOperation.ApiManagementName,
+            ResourceGroupName = exampleApiOperation.ResourceGroupName,
+            OperationId = exampleApiOperation.OperationId,
+            XmlContent = @"<policies>
+  <inbound>
+    <find-and-replace from=""xyz"" to=""abc"" />
+  </inbound>
+</policies>
+",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

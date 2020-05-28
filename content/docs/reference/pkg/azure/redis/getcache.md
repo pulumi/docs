@@ -32,6 +32,29 @@ example = azure.redis.get_cache(name="myrediscache",
 pulumi.export("primaryAccessKey", example.primary_access_key)
 pulumi.export("hostname", example.hostname)
 ```
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = Output.Create(Azure.Redis.GetCache.InvokeAsync(new Azure.Redis.GetCacheArgs
+        {
+            Name = "myrediscache",
+            ResourceGroupName = "redis-cache",
+        }));
+        this.PrimaryAccessKey = example.Apply(example => example.PrimaryAccessKey);
+        this.Hostname = example.Apply(example => example.Hostname);
+    }
+
+    [Output("primaryAccessKey")]
+    public Output<string> PrimaryAccessKey { get; set; }
+    [Output("hostname")]
+    public Output<string> Hostname { get; set; }
+}
+```
 
 
 

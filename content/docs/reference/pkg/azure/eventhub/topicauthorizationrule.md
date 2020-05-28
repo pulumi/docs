@@ -20,7 +20,46 @@ Manages a ServiceBus Topic authorization Rule within a ServiceBus Topic.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West US",
+        });
+        var exampleNamespace = new Azure.ServiceBus.Namespace("exampleNamespace", new Azure.ServiceBus.NamespaceArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            Sku = "Standard",
+            Tags = 
+            {
+                { "source", "example" },
+            },
+        });
+        var exampleTopic = new Azure.ServiceBus.Topic("exampleTopic", new Azure.ServiceBus.TopicArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            NamespaceName = exampleNamespace.Name,
+        });
+        var exampleTopicAuthorizationRule = new Azure.ServiceBus.TopicAuthorizationRule("exampleTopicAuthorizationRule", new Azure.ServiceBus.TopicAuthorizationRuleArgs
+        {
+            NamespaceName = exampleNamespace.Name,
+            TopicName = exampleTopic.Name,
+            ResourceGroupName = exampleResourceGroup.Name,
+            Listen = true,
+            Send = false,
+            Manage = false,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

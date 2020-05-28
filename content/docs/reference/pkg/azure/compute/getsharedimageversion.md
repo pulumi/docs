@@ -20,7 +20,25 @@ Use this data source to access information about an existing Version of a Shared
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = Output.Create(Azure.Compute.GetSharedImageVersion.InvokeAsync(new Azure.Compute.GetSharedImageVersionArgs
+        {
+            GalleryName = "my-image-gallery",
+            ImageName = "my-image",
+            Name = "1.0.0",
+            ResourceGroupName = "example-resources",
+        }));
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

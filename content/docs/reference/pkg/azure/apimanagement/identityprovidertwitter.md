@@ -20,7 +20,37 @@ Manages an API Management Twitter Identity Provider.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West Europe",
+        });
+        var exampleService = new Azure.ApiManagement.Service("exampleService", new Azure.ApiManagement.ServiceArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            PublisherName = "My Company",
+            PublisherEmail = "company@mycompany.io",
+            SkuName = "Developer_1",
+        });
+        var exampleIdentityProviderTwitter = new Azure.ApiManagement.IdentityProviderTwitter("exampleIdentityProviderTwitter", new Azure.ApiManagement.IdentityProviderTwitterArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            ApiManagementName = exampleService.Name,
+            ApiKey = "00000000000000000000000000000000",
+            ApiSecretKey = "00000000000000000000000000000000",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

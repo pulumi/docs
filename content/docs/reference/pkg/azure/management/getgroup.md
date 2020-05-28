@@ -20,7 +20,25 @@ Use this data source to access information about an existing Management Group.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = Output.Create(Azure.Management.GetGroup.InvokeAsync(new Azure.Management.GetGroupArgs
+        {
+            Name = "00000000-0000-0000-0000-000000000000",
+        }));
+        this.DisplayName = example.Apply(example => example.DisplayName);
+    }
+
+    [Output("displayName")]
+    public Output<string> DisplayName { get; set; }
+}
+```
 {{% /example %}}
 
 {{% example go %}}

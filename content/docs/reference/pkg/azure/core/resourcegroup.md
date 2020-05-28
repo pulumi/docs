@@ -20,7 +20,22 @@ Manages a Resource Group.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Azure.Core.ResourceGroup("example", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West Europe",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

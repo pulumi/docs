@@ -14,72 +14,9 @@ Manages an Azure File Share Backup Policy within a Recovery Services vault.
 
 > **NOTE:** Azure Backup for Azure File Shares is currently in public preview. During the preview, the service is subject to additional limitations and unsupported backup scenarios. [Read More](https://docs.microsoft.com/en-us/azure/backup/backup-azure-files#limitations-for-azure-file-share-backup-during-preview)
 
-
-
 {{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_azure as azure
-
-rg = azure.core.ResourceGroup("rg", location="West US")
-vault = azure.recoveryservices.Vault("vault",
-    location=rg.location,
-    resource_group_name=rg.name,
-    sku="Standard")
-policy = azure.backup.PolicyFileShare("policy",
-    resource_group_name=rg.name,
-    recovery_vault_name=vault.name,
-    timezone="UTC",
-    backup={
-        "frequency": "Daily",
-        "time": "23:00",
-    },
-    retention_daily={
-        "count": 10,
-    })
-```
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure from "@pulumi/azure";
-
-const rg = new azure.core.ResourceGroup("rg", {location: "West US"});
-const vault = new azure.recoveryservices.Vault("vault", {
-    location: rg.location,
-    resourceGroupName: rg.name,
-    sku: "Standard",
-});
-const policy = new azure.backup.PolicyFileShare("policy", {
-    resourceGroupName: rg.name,
-    recoveryVaultName: vault.name,
-    timezone: "UTC",
-    backup: {
-        frequency: "Daily",
-        time: "23:00",
-    },
-    retention_daily: {
-        count: 10,
-    },
-});
-```
-{{% /example %}}
-
 {{% /examples %}}
+
 
 
 ## Create a PolicyFileShare Resource {#create}

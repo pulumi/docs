@@ -20,7 +20,55 @@ Manages a Stream Analytics Output to Microsoft SQL Server Database.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = Output.Create(Azure.Core.GetResourceGroup.InvokeAsync(new Azure.Core.GetResourceGroupArgs
+        {
+            Name = "example-resources",
+        }));
+        var exampleJob = Output.Create(Azure.StreamAnalytics.GetJob.InvokeAsync(new Azure.StreamAnalytics.GetJobArgs
+        {
+            Name = "example-job",
+            ResourceGroupName = azurerm_resource_group.Example.Name,
+        }));
+        var exampleSqlServer = new Azure.Sql.SqlServer("exampleSqlServer", new Azure.Sql.SqlServerArgs
+        {
+            ResourceGroupName = azurerm_resource_group.Example.Name,
+            Location = azurerm_resource_group.Example.Location,
+            Version = "12.0",
+            AdministratorLogin = "dbadmin",
+            AdministratorLoginPassword = "example-password",
+        });
+        var exampleDatabase = new Azure.Sql.Database("exampleDatabase", new Azure.Sql.DatabaseArgs
+        {
+            ResourceGroupName = azurerm_resource_group.Example.Name,
+            Location = azurerm_resource_group.Example.Location,
+            ServerName = exampleSqlServer.Name,
+            RequestedServiceObjectiveName = "S0",
+            Collation = "SQL_LATIN1_GENERAL_CP1_CI_AS",
+            MaxSizeBytes = "268435456000",
+            CreateMode = "Default",
+        });
+        var exampleOutputMssql = new Azure.StreamAnalytics.OutputMssql("exampleOutputMssql", new Azure.StreamAnalytics.OutputMssqlArgs
+        {
+            StreamAnalyticsJobName = azurerm_stream_analytics_job.Example.Name,
+            ResourceGroupName = azurerm_stream_analytics_job.Example.Resource_group_name,
+            Server = exampleSqlServer.FullyQualifiedDomainName,
+            User = exampleSqlServer.AdministratorLogin,
+            Password = exampleSqlServer.AdministratorLoginPassword,
+            Database = exampleDatabase.Name,
+            Table = "ExampleTable",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

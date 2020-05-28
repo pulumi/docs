@@ -20,7 +20,52 @@ Manages an API Management Product Assignment to a Group.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleService = Output.Create(Azure.ApiManagement.GetService.InvokeAsync(new Azure.ApiManagement.GetServiceArgs
+        {
+            Name = "example-api",
+            ResourceGroupName = "example-resources",
+        }));
+        var exampleProduct = Output.Tuple(exampleService, exampleService).Apply(values =>
+        {
+            var exampleService = values.Item1;
+            var exampleService1 = values.Item2;
+            return Output.Create(Azure.ApiManagement.GetProduct.InvokeAsync(new Azure.ApiManagement.GetProductArgs
+            {
+                ProductId = "my-product",
+                ApiManagementName = exampleService.Name,
+                ResourceGroupName = exampleService1.ResourceGroupName,
+            }));
+        });
+        var exampleGroup = Output.Tuple(exampleService, exampleService).Apply(values =>
+        {
+            var exampleService = values.Item1;
+            var exampleService1 = values.Item2;
+            return Output.Create(Azure.ApiManagement.GetGroup.InvokeAsync(new Azure.ApiManagement.GetGroupArgs
+            {
+                Name = "my-group",
+                ApiManagementName = exampleService.Name,
+                ResourceGroupName = exampleService1.ResourceGroupName,
+            }));
+        });
+        var exampleProductGroup = new Azure.ApiManagement.ProductGroup("exampleProductGroup", new Azure.ApiManagement.ProductGroupArgs
+        {
+            ProductId = exampleProduct.Apply(exampleProduct => exampleProduct.ProductId),
+            GroupName = exampleGroup.Apply(exampleGroup => exampleGroup.Name),
+            ApiManagementName = exampleService.Apply(exampleService => exampleService.Name),
+            ResourceGroupName = exampleService.Apply(exampleService => exampleService.ResourceGroupName),
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

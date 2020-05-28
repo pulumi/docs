@@ -20,7 +20,35 @@ Manage a Dedicated Host within a Dedicated Host Group.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West Europe",
+        });
+        var exampleDedicatedHostGroup = new Azure.Compute.DedicatedHostGroup("exampleDedicatedHostGroup", new Azure.Compute.DedicatedHostGroupArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            Location = exampleResourceGroup.Location,
+            PlatformFaultDomainCount = 2,
+        });
+        var exampleDedicatedHost = new Azure.Compute.DedicatedHost("exampleDedicatedHost", new Azure.Compute.DedicatedHostArgs
+        {
+            Location = exampleResourceGroup.Location,
+            DedicatedHostGroupId = exampleDedicatedHostGroup.Id,
+            SkuName = "DSv3-Type1",
+            PlatformFaultDomain = 1,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

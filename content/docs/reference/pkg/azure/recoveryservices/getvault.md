@@ -20,7 +20,23 @@ Use this data source to access information about an existing Recovery Services V
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var vault = Output.Create(Azure.RecoveryServices.GetVault.InvokeAsync(new Azure.RecoveryServices.GetVaultArgs
+        {
+            Name = "tfex-recovery_vault",
+            ResourceGroupName = "tfex-resource_group",
+        }));
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

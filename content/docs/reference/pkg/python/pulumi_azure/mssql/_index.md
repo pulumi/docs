@@ -51,10 +51,10 @@ anything, please consult the source <a class="reference external" href="https://
     <span class="n">sku_name</span><span class="o">=</span><span class="s2">&quot;BC_Gen5_2&quot;</span><span class="p">,</span>
     <span class="n">zone_redundant</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
     <span class="n">extended_auditing_policy</span><span class="o">=</span><span class="p">{</span>
-        <span class="s2">&quot;storageEndpoint&quot;</span><span class="p">:</span> <span class="n">example_account</span><span class="o">.</span><span class="n">primary_blob_endpoint</span><span class="p">,</span>
-        <span class="s2">&quot;storageAccountAccessKey&quot;</span><span class="p">:</span> <span class="n">example_account</span><span class="o">.</span><span class="n">primary_access_key</span><span class="p">,</span>
+        <span class="s2">&quot;storage_endpoint&quot;</span><span class="p">:</span> <span class="n">example_account</span><span class="o">.</span><span class="n">primary_blob_endpoint</span><span class="p">,</span>
+        <span class="s2">&quot;storage_account_access_key&quot;</span><span class="p">:</span> <span class="n">example_account</span><span class="o">.</span><span class="n">primary_access_key</span><span class="p">,</span>
         <span class="s2">&quot;storageAccountAccessKeyIsSecondary&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
-        <span class="s2">&quot;retentionInDays&quot;</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span>
+        <span class="s2">&quot;retention_in_days&quot;</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span>
     <span class="p">},</span>
     <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
         <span class="s2">&quot;foo&quot;</span><span class="p">:</span> <span class="s2">&quot;bar&quot;</span><span class="p">,</span>
@@ -528,7 +528,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
         <span class="s2">&quot;capacity&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
     <span class="p">},</span>
     <span class="n">per_database_settings</span><span class="o">=</span><span class="p">{</span>
-        <span class="s2">&quot;minCapacity&quot;</span><span class="p">:</span> <span class="mf">0.25</span><span class="p">,</span>
+        <span class="s2">&quot;min_capacity&quot;</span><span class="p">:</span> <span class="mf">0.25</span><span class="p">,</span>
         <span class="s2">&quot;maxCapacity&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
     <span class="p">})</span>
 </pre></div>
@@ -868,13 +868,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">administrator_login_password</span><span class="o">=</span><span class="s2">&quot;thisIsKat11&quot;</span><span class="p">,</span>
     <span class="n">azuread_administrator</span><span class="o">=</span><span class="p">{</span>
         <span class="s2">&quot;loginUsername&quot;</span><span class="p">:</span> <span class="s2">&quot;AzureAD Admin&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;objectId&quot;</span><span class="p">:</span> <span class="s2">&quot;00000000-0000-0000-0000-000000000000&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;object_id&quot;</span><span class="p">:</span> <span class="s2">&quot;00000000-0000-0000-0000-000000000000&quot;</span><span class="p">,</span>
     <span class="p">},</span>
     <span class="n">extended_auditing_policy</span><span class="o">=</span><span class="p">{</span>
-        <span class="s2">&quot;storageEndpoint&quot;</span><span class="p">:</span> <span class="n">example_account</span><span class="o">.</span><span class="n">primary_blob_endpoint</span><span class="p">,</span>
-        <span class="s2">&quot;storageAccountAccessKey&quot;</span><span class="p">:</span> <span class="n">example_account</span><span class="o">.</span><span class="n">primary_access_key</span><span class="p">,</span>
+        <span class="s2">&quot;storage_endpoint&quot;</span><span class="p">:</span> <span class="n">example_account</span><span class="o">.</span><span class="n">primary_blob_endpoint</span><span class="p">,</span>
+        <span class="s2">&quot;storage_account_access_key&quot;</span><span class="p">:</span> <span class="n">example_account</span><span class="o">.</span><span class="n">primary_access_key</span><span class="p">,</span>
         <span class="s2">&quot;storageAccountAccessKeyIsSecondary&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
-        <span class="s2">&quot;retentionInDays&quot;</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span>
+        <span class="s2">&quot;retention_in_days&quot;</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span>
     <span class="p">},</span>
     <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
         <span class="s2">&quot;environment&quot;</span><span class="p">:</span> <span class="s2">&quot;production&quot;</span><span class="p">,</span>

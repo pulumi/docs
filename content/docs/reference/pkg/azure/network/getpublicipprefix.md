@@ -32,6 +32,26 @@ example = azure.network.get_public_ip_prefix(name="name_of_public_ip",
     resource_group_name="name_of_resource_group")
 pulumi.export("publicIpPrefix", example.ip_prefix)
 ```
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = Output.Create(Azure.Network.GetPublicIpPrefix.InvokeAsync(new Azure.Network.GetPublicIpPrefixArgs
+        {
+            Name = "name_of_public_ip",
+            ResourceGroupName = "name_of_resource_group",
+        }));
+        this.PublicIpPrefix = example.Apply(example => example.IpPrefix);
+    }
+
+    [Output("publicIpPrefix")]
+    public Output<string> PublicIpPrefix { get; set; }
+}
+```
 
 
 

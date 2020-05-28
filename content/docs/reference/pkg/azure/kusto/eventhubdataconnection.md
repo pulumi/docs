@@ -20,7 +20,72 @@ Manages a Kusto (also known as Azure Data Explorer) EventHub Data Connection
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var rg = new Azure.Core.ResourceGroup("rg", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "East US",
+        });
+        var cluster = new Azure.Kusto.Cluster("cluster", new Azure.Kusto.ClusterArgs
+        {
+            Location = rg.Location,
+            ResourceGroupName = rg.Name,
+            Sku = new Azure.Kusto.Inputs.ClusterSkuArgs
+            {
+                Name = "Standard_D13_v2",
+                Capacity = 2,
+            },
+        });
+        var database = new Azure.Kusto.Database("database", new Azure.Kusto.DatabaseArgs
+        {
+            ResourceGroupName = rg.Name,
+            Location = rg.Location,
+            ClusterName = cluster.Name,
+            HotCachePeriod = "P7D",
+            SoftDeletePeriod = "P31D",
+        });
+        var eventhubNs = new Azure.EventHub.EventHubNamespace("eventhubNs", new Azure.EventHub.EventHubNamespaceArgs
+        {
+            Location = rg.Location,
+            ResourceGroupName = rg.Name,
+            Sku = "Standard",
+        });
+        var eventhub = new Azure.EventHub.EventHub("eventhub", new Azure.EventHub.EventHubArgs
+        {
+            NamespaceName = eventhubNs.Name,
+            ResourceGroupName = rg.Name,
+            PartitionCount = 1,
+            MessageRetention = 1,
+        });
+        var consumerGroup = new Azure.EventHub.ConsumerGroup("consumerGroup", new Azure.EventHub.ConsumerGroupArgs
+        {
+            NamespaceName = eventhubNs.Name,
+            EventhubName = eventhub.Name,
+            ResourceGroupName = rg.Name,
+        });
+        var eventhubConnection = new Azure.Kusto.EventhubDataConnection("eventhubConnection", new Azure.Kusto.EventhubDataConnectionArgs
+        {
+            ResourceGroupName = rg.Name,
+            Location = rg.Location,
+            ClusterName = cluster.Name,
+            DatabaseName = database.Name,
+            EventhubId = azurerm_eventhub.Evenhub.Id,
+            ConsumerGroup = consumerGroup.Name,
+            TableName = "my-table",
+            MappingRuleName = "my-table-mapping",
+            DataFormat = "JSON",
+        });
+        //(Optional)
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

@@ -20,7 +20,26 @@ Use this data source to access information about an existing Storage Account.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = Output.Create(Azure.Storage.GetAccount.InvokeAsync(new Azure.Storage.GetAccountArgs
+        {
+            Name = "packerimages",
+            ResourceGroupName = "packer-storage",
+        }));
+        this.StorageAccountTier = example.Apply(example => example.AccountTier);
+    }
+
+    [Output("storageAccountTier")]
+    public Output<string> StorageAccountTier { get; set; }
+}
+```
 {{% /example %}}
 
 {{% example go %}}

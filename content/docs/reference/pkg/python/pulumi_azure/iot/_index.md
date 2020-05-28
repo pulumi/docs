@@ -1169,17 +1169,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">endpoint</span><span class="o">=</span><span class="p">[</span>
         <span class="p">{</span>
             <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;AzureIotHub.StorageContainer&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;connectionString&quot;</span><span class="p">:</span> <span class="n">example_account</span><span class="o">.</span><span class="n">primary_blob_connection_string</span><span class="p">,</span>
+            <span class="s2">&quot;connection_string&quot;</span><span class="p">:</span> <span class="n">example_account</span><span class="o">.</span><span class="n">primary_blob_connection_string</span><span class="p">,</span>
             <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;export&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;batchFrequencyInSeconds&quot;</span><span class="p">:</span> <span class="mi">60</span><span class="p">,</span>
-            <span class="s2">&quot;maxChunkSizeInBytes&quot;</span><span class="p">:</span> <span class="mi">10485760</span><span class="p">,</span>
-            <span class="s2">&quot;containerName&quot;</span><span class="p">:</span> <span class="n">example_container</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+            <span class="s2">&quot;batch_frequency_in_seconds&quot;</span><span class="p">:</span> <span class="mi">60</span><span class="p">,</span>
+            <span class="s2">&quot;max_chunk_size_in_bytes&quot;</span><span class="p">:</span> <span class="mi">10485760</span><span class="p">,</span>
+            <span class="s2">&quot;container_name&quot;</span><span class="p">:</span> <span class="n">example_container</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
             <span class="s2">&quot;encoding&quot;</span><span class="p">:</span> <span class="s2">&quot;Avro&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;fileNameFormat&quot;</span><span class="p">:</span> <span class="s2">&quot;</span><span class="si">{iothub}</span><span class="s2">/</span><span class="si">{partition}</span><span class="s2">_</span><span class="si">{YYYY}</span><span class="s2">_</span><span class="si">{MM}</span><span class="s2">_</span><span class="si">{DD}</span><span class="s2">_</span><span class="si">{HH}</span><span class="s2">_</span><span class="si">{mm}</span><span class="s2">&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;file_name_format&quot;</span><span class="p">:</span> <span class="s2">&quot;</span><span class="si">{iothub}</span><span class="s2">/</span><span class="si">{partition}</span><span class="s2">_</span><span class="si">{YYYY}</span><span class="s2">_</span><span class="si">{MM}</span><span class="s2">_</span><span class="si">{DD}</span><span class="s2">_</span><span class="si">{HH}</span><span class="s2">_</span><span class="si">{mm}</span><span class="s2">&quot;</span><span class="p">,</span>
         <span class="p">},</span>
         <span class="p">{</span>
             <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;AzureIotHub.EventHub&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;connectionString&quot;</span><span class="p">:</span> <span class="n">example_authorization_rule</span><span class="o">.</span><span class="n">primary_connection_string</span><span class="p">,</span>
+            <span class="s2">&quot;connection_string&quot;</span><span class="p">:</span> <span class="n">example_authorization_rule</span><span class="o">.</span><span class="n">primary_connection_string</span><span class="p">,</span>
             <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;export2&quot;</span><span class="p">,</span>
         <span class="p">},</span>
     <span class="p">],</span>
@@ -1188,14 +1188,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
             <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;export&quot;</span><span class="p">,</span>
             <span class="s2">&quot;source&quot;</span><span class="p">:</span> <span class="s2">&quot;DeviceMessages&quot;</span><span class="p">,</span>
             <span class="s2">&quot;condition&quot;</span><span class="p">:</span> <span class="s2">&quot;true&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;endpointNames&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;export&quot;</span><span class="p">],</span>
+            <span class="s2">&quot;endpoint_names&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;export&quot;</span><span class="p">],</span>
             <span class="s2">&quot;enabled&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
         <span class="p">},</span>
         <span class="p">{</span>
             <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;export2&quot;</span><span class="p">,</span>
             <span class="s2">&quot;source&quot;</span><span class="p">:</span> <span class="s2">&quot;DeviceMessages&quot;</span><span class="p">,</span>
             <span class="s2">&quot;condition&quot;</span><span class="p">:</span> <span class="s2">&quot;true&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;endpointNames&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;export2&quot;</span><span class="p">],</span>
+            <span class="s2">&quot;endpoint_names&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;export2&quot;</span><span class="p">],</span>
             <span class="s2">&quot;enabled&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
         <span class="p">},</span>
     <span class="p">],</span>

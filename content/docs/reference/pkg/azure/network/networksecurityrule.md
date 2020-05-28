@@ -24,7 +24,40 @@ At this time you cannot use a Network Security Group with in-line Network Securi
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West US",
+        });
+        var exampleNetworkSecurityGroup = new Azure.Network.NetworkSecurityGroup("exampleNetworkSecurityGroup", new Azure.Network.NetworkSecurityGroupArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+        });
+        var exampleNetworkSecurityRule = new Azure.Network.NetworkSecurityRule("exampleNetworkSecurityRule", new Azure.Network.NetworkSecurityRuleArgs
+        {
+            Priority = 100,
+            Direction = "Outbound",
+            Access = "Allow",
+            Protocol = "Tcp",
+            SourcePortRange = "*",
+            DestinationPortRange = "*",
+            SourceAddressPrefix = "*",
+            DestinationAddressPrefix = "*",
+            ResourceGroupName = exampleResourceGroup.Name,
+            NetworkSecurityGroupName = exampleNetworkSecurityGroup.Name,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

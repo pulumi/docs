@@ -24,7 +24,42 @@ Sets a PostgreSQL Configuration value on a PostgreSQL Server.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West Europe",
+        });
+        var exampleServer = new Azure.PostgreSql.Server("exampleServer", new Azure.PostgreSql.ServerArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            SkuName = "B_Gen5_2",
+            StorageMb = 5120,
+            BackupRetentionDays = 7,
+            GeoRedundantBackupEnabled = false,
+            AutoGrowEnabled = true,
+            AdministratorLogin = "psqladminun",
+            AdministratorLoginPassword = "H@Sh1CoR3!",
+            Version = "9.5",
+            SslEnforcementEnabled = true,
+        });
+        var exampleConfiguration = new Azure.PostgreSql.Configuration("exampleConfiguration", new Azure.PostgreSql.ConfigurationArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            ServerName = exampleServer.Name,
+            Value = "on",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

@@ -21,7 +21,27 @@ Use this data source to access information about an existing Automation Int Vari
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = Output.Create(Azure.Automation.GetIntVariable.InvokeAsync(new Azure.Automation.GetIntVariableArgs
+        {
+            Name = "tfex-example-var",
+            ResourceGroupName = "tfex-example-rg",
+            AutomationAccountName = "tfex-example-account",
+        }));
+        this.VariableId = example.Apply(example => example.Id);
+    }
+
+    [Output("variableId")]
+    public Output<string> VariableId { get; set; }
+}
+```
 {{% /example %}}
 
 {{% example go %}}

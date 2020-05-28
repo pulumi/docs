@@ -38,6 +38,29 @@ test = azure.netapp.get_snapshot(resource_group_name="acctestRG",
     volume_name="acctestnetappvolume")
 pulumi.export("netappSnapshotId", data["azure.netapp.Snapshot"]["example"]["id"])
 ```
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var test = Output.Create(Azure.NetApp.GetSnapshot.InvokeAsync(new Azure.NetApp.GetSnapshotArgs
+        {
+            ResourceGroupName = "acctestRG",
+            Name = "acctestnetappsnapshot",
+            AccountName = "acctestnetappaccount",
+            PoolName = "acctestnetapppool",
+            VolumeName = "acctestnetappvolume",
+        }));
+        this.NetappSnapshotId = data.Azurerm_netapp_snapshot.Example.Id;
+    }
+
+    [Output("netappSnapshotId")]
+    public Output<string> NetappSnapshotId { get; set; }
+}
+```
 
 
 

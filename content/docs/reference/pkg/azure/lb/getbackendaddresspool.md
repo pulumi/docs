@@ -20,7 +20,35 @@ Use this data source to access information about an existing Load Balancer's Bac
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using System.Linq;
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleLB = Output.Create(Azure.Lb.GetLB.InvokeAsync(new Azure.Lb.GetLBArgs
+        {
+            Name = "example-lb",
+            ResourceGroupName = "example-resources",
+        }));
+        var exampleBackendAddressPool = exampleLB.Apply(exampleLB => Output.Create(Azure.Lb.GetBackendAddressPool.InvokeAsync(new Azure.Lb.GetBackendAddressPoolArgs
+        {
+            Name = "first",
+            LoadbalancerId = exampleLB.Id,
+        })));
+        this.BackendAddressPoolId = exampleBackendAddressPool.Apply(exampleBackendAddressPool => exampleBackendAddressPool.Id);
+        this.BackendIpConfigurationIds = data.Azurerm_lb_backend_address_pool.Beap.Backend_ip_configurations.Select(__item => __item.Id).ToList();
+    }
+
+    [Output("backendAddressPoolId")]
+    public Output<string> BackendAddressPoolId { get; set; }
+    [Output("backendIpConfigurationIds")]
+    public Output<string> BackendIpConfigurationIds { get; set; }
+}
+```
 {{% /example %}}
 
 {{% example go %}}

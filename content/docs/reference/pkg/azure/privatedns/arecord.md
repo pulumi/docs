@@ -20,7 +20,36 @@ Enables you to manage DNS A Records within Azure Private DNS.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West US",
+        });
+        var exampleZone = new Azure.PrivateDns.Zone("exampleZone", new Azure.PrivateDns.ZoneArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+        });
+        var exampleARecord = new Azure.PrivateDns.ARecord("exampleARecord", new Azure.PrivateDns.ARecordArgs
+        {
+            ZoneName = exampleZone.Name,
+            ResourceGroupName = exampleResourceGroup.Name,
+            Ttl = 300,
+            Records = 
+            {
+                "10.0.180.17",
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

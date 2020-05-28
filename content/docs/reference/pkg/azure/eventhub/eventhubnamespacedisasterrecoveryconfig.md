@@ -20,7 +20,40 @@ Manages an Disaster Recovery Config for an Event Hub Namespace.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West Europe",
+        });
+        var primary = new Azure.EventHub.EventHubNamespace("primary", new Azure.EventHub.EventHubNamespaceArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            Sku = "Standard",
+        });
+        var secondary = new Azure.EventHub.EventHubNamespace("secondary", new Azure.EventHub.EventHubNamespaceArgs
+        {
+            Location = "West US",
+            ResourceGroupName = exampleResourceGroup.Name,
+            Sku = "Standard",
+        });
+        var exampleEventhubNamespaceDisasterRecoveryConfig = new Azure.EventHub.EventhubNamespaceDisasterRecoveryConfig("exampleEventhubNamespaceDisasterRecoveryConfig", new Azure.EventHub.EventhubNamespaceDisasterRecoveryConfigArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            NamespaceName = primary.Name,
+            PartnerNamespaceId = secondary.Id,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

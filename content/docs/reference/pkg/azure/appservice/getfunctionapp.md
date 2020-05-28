@@ -20,7 +20,23 @@ Use this data source to access information about a Function App.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = Output.Create(Azure.AppService.GetFunctionApp.InvokeAsync(new Azure.AppService.GetFunctionAppArgs
+        {
+            Name = "test-azure-functions",
+            ResourceGroupName = azurerm_resource_group.Example.Name,
+        }));
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

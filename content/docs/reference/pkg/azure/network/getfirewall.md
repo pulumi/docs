@@ -20,7 +20,26 @@ Use this data source to access information about an existing Azure Firewall.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = Output.Create(Azure.Network.GetFirewall.InvokeAsync(new Azure.Network.GetFirewallArgs
+        {
+            Name = "firewall1",
+            ResourceGroupName = "firewall-RG",
+        }));
+        this.FirewallPrivateIp = example.Apply(example => example.IpConfigurations[0].PrivateIpAddress);
+    }
+
+    [Output("firewallPrivateIp")]
+    public Output<string> FirewallPrivateIp { get; set; }
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -34,7 +53,7 @@ import pulumi_azure as azure
 
 example = azure.network.get_firewall(name="firewall1",
     resource_group_name="firewall-RG")
-pulumi.export("firewallPrivateIp", example.ip_configurations[0].private_ip_address)
+pulumi.export("firewallPrivateIp", example.ip_configurations[0]["private_ip_address"])
 ```
 {{% /example %}}
 

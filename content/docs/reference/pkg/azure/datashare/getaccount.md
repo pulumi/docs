@@ -20,7 +20,26 @@ Use this data source to access information about an existing Data Share Account.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = Output.Create(Azure.DataShare.GetAccount.InvokeAsync(new Azure.DataShare.GetAccountArgs
+        {
+            Name = "example-account",
+            ResourceGroupName = "example-resource-group",
+        }));
+        this.Id = example.Apply(example => example.Id);
+    }
+
+    [Output("id")]
+    public Output<string> Id { get; set; }
+}
+```
 {{% /example %}}
 
 {{% example go %}}

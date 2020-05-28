@@ -20,7 +20,26 @@ Use this data source to access information about an existing Maintenance Configu
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var existing = Output.Create(Azure.Maintenance.GetConfiguration.InvokeAsync(new Azure.Maintenance.GetConfigurationArgs
+        {
+            Name = "example-mc",
+            ResourceGroupName = "example-resources",
+        }));
+        this.Id = azurerm_maintenance_configuration.Existing.Id;
+    }
+
+    [Output("id")]
+    public Output<string> Id { get; set; }
+}
+```
 {{% /example %}}
 
 {{% example go %}}

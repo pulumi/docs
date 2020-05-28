@@ -20,7 +20,27 @@ Manages an Azure App Configuration.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var rg = new Azure.Core.ResourceGroup("rg", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West Europe",
+        });
+        var appconf = new Azure.AppConfiguration.ConfigurationStore("appconf", new Azure.AppConfiguration.ConfigurationStoreArgs
+        {
+            ResourceGroupName = rg.Name,
+            Location = rg.Location,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

@@ -22,7 +22,38 @@ Manages a MS Teams integration for a Bot Channel
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var current = Output.Create(Azure.Core.GetClientConfig.InvokeAsync());
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "northeurope",
+        });
+        var exampleChannelsRegistration = new Azure.Bot.ChannelsRegistration("exampleChannelsRegistration", new Azure.Bot.ChannelsRegistrationArgs
+        {
+            Location = "global",
+            ResourceGroupName = exampleResourceGroup.Name,
+            Sku = "F0",
+            MicrosoftAppId = current.Apply(current => current.ClientId),
+        });
+        var exampleChannelTeams = new Azure.Bot.ChannelTeams("exampleChannelTeams", new Azure.Bot.ChannelTeamsArgs
+        {
+            BotName = exampleChannelsRegistration.Name,
+            Location = exampleChannelsRegistration.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            CallingWebHook = "https://example2.com/",
+            EnableCalling = false,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

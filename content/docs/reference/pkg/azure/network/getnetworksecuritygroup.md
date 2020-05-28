@@ -20,7 +20,26 @@ Use this data source to access information about an existing Network Security Gr
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = Output.Create(Azure.Network.GetNetworkSecurityGroup.InvokeAsync(new Azure.Network.GetNetworkSecurityGroupArgs
+        {
+            Name = azurerm_network_security_group.Example.Name,
+            ResourceGroupName = azurerm_resource_group.Example.Name,
+        }));
+        this.Location = example.Apply(example => example.Location);
+    }
+
+    [Output("location")]
+    public Output<string> Location { get; set; }
+}
+```
 {{% /example %}}
 
 {{% example go %}}

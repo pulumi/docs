@@ -20,7 +20,26 @@ Use this data source to access information about an existing App Configuration.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = Output.Create(Azure.AppConfiguration.GetConfigurationStore.InvokeAsync(new Azure.AppConfiguration.GetConfigurationStoreArgs
+        {
+            Name = "existing",
+            ResourceGroupName = "existing",
+        }));
+        this.Id = example.Apply(example => example.Id);
+    }
+
+    [Output("id")]
+    public Output<string> Id { get; set; }
+}
+```
 {{% /example %}}
 
 {{% example go %}}

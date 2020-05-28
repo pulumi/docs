@@ -20,7 +20,26 @@ Use this data source to access the properties of an Action Group.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = Output.Create(Azure.Monitoring.GetActionGroup.InvokeAsync(new Azure.Monitoring.GetActionGroupArgs
+        {
+            ResourceGroupName = "example-rg",
+            Name = "tfex-actiongroup",
+        }));
+        this.ActionGroupId = example.Apply(example => example.Id);
+    }
+
+    [Output("actionGroupId")]
+    public Output<string> ActionGroupId { get; set; }
+}
+```
 {{% /example %}}
 
 {{% example go %}}

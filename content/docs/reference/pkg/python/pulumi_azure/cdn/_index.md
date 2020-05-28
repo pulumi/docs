@@ -36,7 +36,7 @@ anything, please consult the source <a class="reference external" href="https://
     <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
     <span class="n">origin</span><span class="o">=</span><span class="p">[{</span>
         <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;example&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;hostName&quot;</span><span class="p">:</span> <span class="s2">&quot;www.example.com&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;host_name&quot;</span><span class="p">:</span> <span class="s2">&quot;www.example.com&quot;</span><span class="p">,</span>
     <span class="p">}])</span>
 </pre></div>
 </div>

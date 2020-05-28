@@ -778,8 +778,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
     <span class="n">sku_name</span><span class="o">=</span><span class="s2">&quot;B_Gen5_2&quot;</span><span class="p">,</span>
     <span class="n">storage_profile</span><span class="o">=</span><span class="p">{</span>
-        <span class="s2">&quot;storageMb&quot;</span><span class="p">:</span> <span class="mi">5120</span><span class="p">,</span>
-        <span class="s2">&quot;backupRetentionDays&quot;</span><span class="p">:</span> <span class="mi">7</span><span class="p">,</span>
+        <span class="s2">&quot;storage_mb&quot;</span><span class="p">:</span> <span class="mi">5120</span><span class="p">,</span>
+        <span class="s2">&quot;backup_retention_days&quot;</span><span class="p">:</span> <span class="mi">7</span><span class="p">,</span>
         <span class="s2">&quot;geoRedundantBackup&quot;</span><span class="p">:</span> <span class="s2">&quot;Disabled&quot;</span><span class="p">,</span>
     <span class="p">},</span>
     <span class="n">administrator_login</span><span class="o">=</span><span class="s2">&quot;psqladminun&quot;</span><span class="p">,</span>

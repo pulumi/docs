@@ -20,7 +20,26 @@ Use this data source to access information about an existing Virtual Network Gat
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = Output.Create(Azure.Network.GetVirtualNetworkGateway.InvokeAsync(new Azure.Network.GetVirtualNetworkGatewayArgs
+        {
+            Name = "production",
+            ResourceGroupName = "networking",
+        }));
+        this.VirtualNetworkGatewayId = example.Apply(example => example.Id);
+    }
+
+    [Output("virtualNetworkGatewayId")]
+    public Output<string> VirtualNetworkGatewayId { get; set; }
+}
+```
 {{% /example %}}
 
 {{% example go %}}

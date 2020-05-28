@@ -20,7 +20,26 @@ Use this data source to access information about an existing Azure Network DDoS 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = Output.Create(Azure.Network.GetNetworkDdosProtectionPlan.InvokeAsync(new Azure.Network.GetNetworkDdosProtectionPlanArgs
+        {
+            Name = azurerm_network_ddos_protection_plan.Example.Name,
+            ResourceGroupName = azurerm_network_ddos_protection_plan.Example.Resource_group_name,
+        }));
+        this.DdosProtectionPlanId = example.Apply(example => example.Id);
+    }
+
+    [Output("ddosProtectionPlanId")]
+    public Output<string> DdosProtectionPlanId { get; set; }
+}
+```
 {{% /example %}}
 
 {{% example go %}}

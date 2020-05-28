@@ -15,56 +15,9 @@ Manages a Azure Data Lake Store File.
 > **Note:** If you want to change the data in the remote file without changing the `local_file_path`, then
 taint the resource so the `azure.datalake.StoreFile` gets recreated with the new data.
 
-
-
 {{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_azure as azure
-
-example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="northeurope")
-example_store = azure.datalake.Store("exampleStore",
-    resource_group_name=example_resource_group.name,
-    location=example_resource_group.location)
-example_store_file = azure.datalake.StoreFile("exampleStoreFile",
-    resource_group_name=example_resource_group.name,
-    local_file_path="/path/to/local/file",
-    remote_file_path="/path/created/for/remote/file")
-```
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure from "@pulumi/azure";
-
-const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "northeurope"});
-const exampleStore = new azure.datalake.Store("exampleStore", {
-    resourceGroupName: exampleResourceGroup.name,
-    location: exampleResourceGroup.location,
-});
-const exampleStoreFile = new azure.datalake.StoreFile("exampleStoreFile", {
-    resourceGroupName: exampleResourceGroup.name,
-    localFilePath: "/path/to/local/file",
-    remoteFilePath: "/path/created/for/remote/file",
-});
-```
-{{% /example %}}
-
 {{% /examples %}}
+
 
 
 ## Create a StoreFile Resource {#create}

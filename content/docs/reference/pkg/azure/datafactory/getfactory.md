@@ -20,7 +20,26 @@ Use this data source to access information about an existing Azure Data Factory 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = Output.Create(Azure.DataFactory.GetFactory.InvokeAsync(new Azure.DataFactory.GetFactoryArgs
+        {
+            Name = azurerm_data_factory.Example.Name,
+            ResourceGroupName = azurerm_data_factory.Example.Resource_group_name,
+        }));
+        this.DataFactoryId = azurerm_data_factory.Example.Id;
+    }
+
+    [Output("dataFactoryId")]
+    public Output<string> DataFactoryId { get; set; }
+}
+```
 {{% /example %}}
 
 {{% example go %}}

@@ -20,7 +20,26 @@ Use this data source to access information about an existing ServiceBus Namespac
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = Output.Create(Azure.ServiceBus.GetNamespace.InvokeAsync(new Azure.ServiceBus.GetNamespaceArgs
+        {
+            Name = "examplenamespace",
+            ResourceGroupName = "example-resources",
+        }));
+        this.Location = example.Apply(example => example.Location);
+    }
+
+    [Output("location")]
+    public Output<string> Location { get; set; }
+}
+```
 {{% /example %}}
 
 {{% example go %}}

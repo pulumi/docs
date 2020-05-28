@@ -20,7 +20,26 @@ Use this data source to access information about an existing EventHub Namespace.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = Output.Create(Azure.EventHub.GetNamespace.InvokeAsync(new Azure.EventHub.GetNamespaceArgs
+        {
+            Name = "search-eventhubns",
+            ResourceGroupName = "search-service",
+        }));
+        this.EventhubNamespaceId = example.Apply(example => example.Id);
+    }
+
+    [Output("eventhubNamespaceId")]
+    public Output<string> EventhubNamespaceId { get; set; }
+}
+```
 {{% /example %}}
 
 {{% example go %}}

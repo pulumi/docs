@@ -63,6 +63,46 @@ example_function_app = azure.appservice.FunctionApp("exampleFunctionApp",
     app_service_plan_id=example_plan.id,
     storage_connection_string=example_account.primary_connection_string)
 ```
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "westus2",
+        });
+        var exampleAccount = new Azure.Storage.Account("exampleAccount", new Azure.Storage.AccountArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            Location = exampleResourceGroup.Location,
+            AccountTier = "Standard",
+            AccountReplicationType = "LRS",
+        });
+        var examplePlan = new Azure.AppService.Plan("examplePlan", new Azure.AppService.PlanArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            Sku = new Azure.AppService.Inputs.PlanSkuArgs
+            {
+                Tier = "Standard",
+                Size = "S1",
+            },
+        });
+        var exampleFunctionApp = new Azure.AppService.FunctionApp("exampleFunctionApp", new Azure.AppService.FunctionAppArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            AppServicePlanId = examplePlan.Id,
+            StorageConnectionString = exampleAccount.PrimaryConnectionString,
+        });
+    }
+
+}
+```
 ## Example Usage (in a Consumption Plan)
 
 ```typescript
@@ -115,6 +155,47 @@ example_function_app = azure.appservice.FunctionApp("exampleFunctionApp",
     resource_group_name=example_resource_group.name,
     app_service_plan_id=example_plan.id,
     storage_connection_string=example_account.primary_connection_string)
+```
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "westus2",
+        });
+        var exampleAccount = new Azure.Storage.Account("exampleAccount", new Azure.Storage.AccountArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            Location = exampleResourceGroup.Location,
+            AccountTier = "Standard",
+            AccountReplicationType = "LRS",
+        });
+        var examplePlan = new Azure.AppService.Plan("examplePlan", new Azure.AppService.PlanArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            Kind = "FunctionApp",
+            Sku = new Azure.AppService.Inputs.PlanSkuArgs
+            {
+                Tier = "Dynamic",
+                Size = "Y1",
+            },
+        });
+        var exampleFunctionApp = new Azure.AppService.FunctionApp("exampleFunctionApp", new Azure.AppService.FunctionAppArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            AppServicePlanId = examplePlan.Id,
+            StorageConnectionString = exampleAccount.PrimaryConnectionString,
+        });
+    }
+
+}
 ```
 
 

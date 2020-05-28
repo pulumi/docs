@@ -20,7 +20,27 @@ Use this data source to access information about an existing Storage Management 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleAccount = Output.Create(Azure.Storage.GetAccount.InvokeAsync(new Azure.Storage.GetAccountArgs
+        {
+            Name = "storageaccountname",
+            ResourceGroupName = "resourcegroupname",
+        }));
+        var examplePolicy = Output.Create(Azure.Storage.GetPolicy.InvokeAsync(new Azure.Storage.GetPolicyArgs
+        {
+            StorageAccountId = azurerm_storage_account.Example.Id,
+        }));
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

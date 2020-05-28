@@ -32,15 +32,15 @@ anything, please consult the source <a class="reference external" href="https://
     <span class="n">automation_runbook_receiver</span><span class="o">=</span><span class="p">[{</span>
         <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;action_name_1&quot;</span><span class="p">,</span>
         <span class="s2">&quot;automationAccountId&quot;</span><span class="p">:</span> <span class="s2">&quot;/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/rg-runbooks/providers/microsoft.automation/automationaccounts/aaa001&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;runbookName&quot;</span><span class="p">:</span> <span class="s2">&quot;my runbook&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;runbook_name&quot;</span><span class="p">:</span> <span class="s2">&quot;my runbook&quot;</span><span class="p">,</span>
         <span class="s2">&quot;webhookResourceId&quot;</span><span class="p">:</span> <span class="s2">&quot;/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/rg-runbooks/providers/microsoft.automation/automationaccounts/aaa001/webhooks/webhook_alert&quot;</span><span class="p">,</span>
         <span class="s2">&quot;isGlobalRunbook&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
-        <span class="s2">&quot;serviceUri&quot;</span><span class="p">:</span> <span class="s2">&quot;https://s13events.azure-automation.net/webhooks?token=randomtoken&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;service_uri&quot;</span><span class="p">:</span> <span class="s2">&quot;https://s13events.azure-automation.net/webhooks?token=randomtoken&quot;</span><span class="p">,</span>
         <span class="s2">&quot;useCommonAlertSchema&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
     <span class="p">}],</span>
     <span class="n">azure_app_push_receiver</span><span class="o">=</span><span class="p">[{</span>
         <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;pushtoadmin&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;emailAddress&quot;</span><span class="p">:</span> <span class="s2">&quot;admin@contoso.com&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;email_address&quot;</span><span class="p">:</span> <span class="s2">&quot;admin@contoso.com&quot;</span><span class="p">,</span>
     <span class="p">}],</span>
     <span class="n">azure_function_receiver</span><span class="o">=</span><span class="p">[{</span>
         <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;funcaction&quot;</span><span class="p">,</span>
@@ -52,24 +52,24 @@ anything, please consult the source <a class="reference external" href="https://
     <span class="n">email_receiver</span><span class="o">=</span><span class="p">[</span>
         <span class="p">{</span>
             <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;sendtoadmin&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;emailAddress&quot;</span><span class="p">:</span> <span class="s2">&quot;admin@contoso.com&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;email_address&quot;</span><span class="p">:</span> <span class="s2">&quot;admin@contoso.com&quot;</span><span class="p">,</span>
         <span class="p">},</span>
         <span class="p">{</span>
             <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;sendtodevops&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;emailAddress&quot;</span><span class="p">:</span> <span class="s2">&quot;devops@contoso.com&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;email_address&quot;</span><span class="p">:</span> <span class="s2">&quot;devops@contoso.com&quot;</span><span class="p">,</span>
             <span class="s2">&quot;useCommonAlertSchema&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
         <span class="p">},</span>
     <span class="p">],</span>
     <span class="n">itsm_receiver</span><span class="o">=</span><span class="p">[{</span>
         <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;createorupdateticket&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;workspaceId&quot;</span><span class="p">:</span> <span class="s2">&quot;6eee3a18-aac3-40e4-b98e-1f309f329816&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;workspace_id&quot;</span><span class="p">:</span> <span class="s2">&quot;6eee3a18-aac3-40e4-b98e-1f309f329816&quot;</span><span class="p">,</span>
         <span class="s2">&quot;connectionId&quot;</span><span class="p">:</span> <span class="s2">&quot;53de6956-42b4-41ba-be3c-b154cdf17b13&quot;</span><span class="p">,</span>
         <span class="s2">&quot;ticketConfiguration&quot;</span><span class="p">:</span> <span class="s2">&quot;</span><span class="si">{}</span><span class="s2">&quot;</span><span class="p">,</span>
         <span class="s2">&quot;region&quot;</span><span class="p">:</span> <span class="s2">&quot;southcentralus&quot;</span><span class="p">,</span>
     <span class="p">}],</span>
     <span class="n">logic_app_receiver</span><span class="o">=</span><span class="p">[{</span>
         <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;logicappaction&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;resourceId&quot;</span><span class="p">:</span> <span class="s2">&quot;/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-logicapp/providers/Microsoft.Logic/workflows/logicapp&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;resource_id&quot;</span><span class="p">:</span> <span class="s2">&quot;/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-logicapp/providers/Microsoft.Logic/workflows/logicapp&quot;</span><span class="p">,</span>
         <span class="s2">&quot;callbackUrl&quot;</span><span class="p">:</span> <span class="s2">&quot;https://logicapptriggerurl/...&quot;</span><span class="p">,</span>
         <span class="s2">&quot;useCommonAlertSchema&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
     <span class="p">}],</span>
@@ -85,7 +85,7 @@ anything, please consult the source <a class="reference external" href="https://
     <span class="p">}],</span>
     <span class="n">webhook_receiver</span><span class="o">=</span><span class="p">[{</span>
         <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;callmyapiaswell&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;serviceUri&quot;</span><span class="p">:</span> <span class="s2">&quot;http://example.com/alert&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;service_uri&quot;</span><span class="p">:</span> <span class="s2">&quot;http://example.com/alert&quot;</span><span class="p">,</span>
         <span class="s2">&quot;useCommonAlertSchema&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
     <span class="p">}])</span>
 </pre></div>
@@ -479,7 +479,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">short_name</span><span class="o">=</span><span class="s2">&quot;p0action&quot;</span><span class="p">,</span>
     <span class="n">webhook_receiver</span><span class="o">=</span><span class="p">[{</span>
         <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;callmyapi&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;serviceUri&quot;</span><span class="p">:</span> <span class="s2">&quot;http://example.com/alert&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;service_uri&quot;</span><span class="p">:</span> <span class="s2">&quot;http://example.com/alert&quot;</span><span class="p">,</span>
     <span class="p">}])</span>
 <span class="n">to_monitor</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">Account</span><span class="p">(</span><span class="s2">&quot;toMonitor&quot;</span><span class="p">,</span>
     <span class="n">resource_group_name</span><span class="o">=</span><span class="n">main_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
@@ -491,7 +491,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">scopes</span><span class="o">=</span><span class="p">[</span><span class="n">main_resource_group</span><span class="o">.</span><span class="n">id</span><span class="p">],</span>
     <span class="n">description</span><span class="o">=</span><span class="s2">&quot;This alert will monitor a specific storage account updates.&quot;</span><span class="p">,</span>
     <span class="n">criteria</span><span class="o">=</span><span class="p">{</span>
-        <span class="s2">&quot;resourceId&quot;</span><span class="p">:</span> <span class="n">to_monitor</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;resource_id&quot;</span><span class="p">:</span> <span class="n">to_monitor</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
         <span class="s2">&quot;operationName&quot;</span><span class="p">:</span> <span class="s2">&quot;Microsoft.Storage/storageAccounts/write&quot;</span><span class="p">,</span>
         <span class="s2">&quot;category&quot;</span><span class="p">:</span> <span class="s2">&quot;Recommendation&quot;</span><span class="p">,</span>
     <span class="p">},</span>
@@ -709,7 +709,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
                     <span class="s2">&quot;metricResourceId&quot;</span><span class="p">:</span> <span class="n">example_scale_set</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
                     <span class="s2">&quot;timeGrain&quot;</span><span class="p">:</span> <span class="s2">&quot;PT1M&quot;</span><span class="p">,</span>
                     <span class="s2">&quot;statistic&quot;</span><span class="p">:</span> <span class="s2">&quot;Average&quot;</span><span class="p">,</span>
-                    <span class="s2">&quot;timeWindow&quot;</span><span class="p">:</span> <span class="s2">&quot;PT5M&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;time_window&quot;</span><span class="p">:</span> <span class="s2">&quot;PT5M&quot;</span><span class="p">,</span>
                     <span class="s2">&quot;timeAggregation&quot;</span><span class="p">:</span> <span class="s2">&quot;Average&quot;</span><span class="p">,</span>
                     <span class="s2">&quot;operator&quot;</span><span class="p">:</span> <span class="s2">&quot;GreaterThan&quot;</span><span class="p">,</span>
                     <span class="s2">&quot;threshold&quot;</span><span class="p">:</span> <span class="mi">75</span><span class="p">,</span>
@@ -727,7 +727,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
                     <span class="s2">&quot;metricResourceId&quot;</span><span class="p">:</span> <span class="n">example_scale_set</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
                     <span class="s2">&quot;timeGrain&quot;</span><span class="p">:</span> <span class="s2">&quot;PT1M&quot;</span><span class="p">,</span>
                     <span class="s2">&quot;statistic&quot;</span><span class="p">:</span> <span class="s2">&quot;Average&quot;</span><span class="p">,</span>
-                    <span class="s2">&quot;timeWindow&quot;</span><span class="p">:</span> <span class="s2">&quot;PT5M&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;time_window&quot;</span><span class="p">:</span> <span class="s2">&quot;PT5M&quot;</span><span class="p">,</span>
                     <span class="s2">&quot;timeAggregation&quot;</span><span class="p">:</span> <span class="s2">&quot;Average&quot;</span><span class="p">,</span>
                     <span class="s2">&quot;operator&quot;</span><span class="p">:</span> <span class="s2">&quot;LessThan&quot;</span><span class="p">,</span>
                     <span class="s2">&quot;threshold&quot;</span><span class="p">:</span> <span class="mi">25</span><span class="p">,</span>
@@ -774,7 +774,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
                     <span class="s2">&quot;metricResourceId&quot;</span><span class="p">:</span> <span class="n">example_scale_set</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
                     <span class="s2">&quot;timeGrain&quot;</span><span class="p">:</span> <span class="s2">&quot;PT1M&quot;</span><span class="p">,</span>
                     <span class="s2">&quot;statistic&quot;</span><span class="p">:</span> <span class="s2">&quot;Average&quot;</span><span class="p">,</span>
-                    <span class="s2">&quot;timeWindow&quot;</span><span class="p">:</span> <span class="s2">&quot;PT5M&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;time_window&quot;</span><span class="p">:</span> <span class="s2">&quot;PT5M&quot;</span><span class="p">,</span>
                     <span class="s2">&quot;timeAggregation&quot;</span><span class="p">:</span> <span class="s2">&quot;Average&quot;</span><span class="p">,</span>
                     <span class="s2">&quot;operator&quot;</span><span class="p">:</span> <span class="s2">&quot;GreaterThan&quot;</span><span class="p">,</span>
                     <span class="s2">&quot;threshold&quot;</span><span class="p">:</span> <span class="mi">90</span><span class="p">,</span>
@@ -792,7 +792,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
                     <span class="s2">&quot;metricResourceId&quot;</span><span class="p">:</span> <span class="n">example_scale_set</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
                     <span class="s2">&quot;timeGrain&quot;</span><span class="p">:</span> <span class="s2">&quot;PT1M&quot;</span><span class="p">,</span>
                     <span class="s2">&quot;statistic&quot;</span><span class="p">:</span> <span class="s2">&quot;Average&quot;</span><span class="p">,</span>
-                    <span class="s2">&quot;timeWindow&quot;</span><span class="p">:</span> <span class="s2">&quot;PT5M&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;time_window&quot;</span><span class="p">:</span> <span class="s2">&quot;PT5M&quot;</span><span class="p">,</span>
                     <span class="s2">&quot;timeAggregation&quot;</span><span class="p">:</span> <span class="s2">&quot;Average&quot;</span><span class="p">,</span>
                     <span class="s2">&quot;operator&quot;</span><span class="p">:</span> <span class="s2">&quot;LessThan&quot;</span><span class="p">,</span>
                     <span class="s2">&quot;threshold&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
@@ -850,7 +850,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
                     <span class="s2">&quot;metricResourceId&quot;</span><span class="p">:</span> <span class="n">example_scale_set</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
                     <span class="s2">&quot;timeGrain&quot;</span><span class="p">:</span> <span class="s2">&quot;PT1M&quot;</span><span class="p">,</span>
                     <span class="s2">&quot;statistic&quot;</span><span class="p">:</span> <span class="s2">&quot;Average&quot;</span><span class="p">,</span>
-                    <span class="s2">&quot;timeWindow&quot;</span><span class="p">:</span> <span class="s2">&quot;PT5M&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;time_window&quot;</span><span class="p">:</span> <span class="s2">&quot;PT5M&quot;</span><span class="p">,</span>
                     <span class="s2">&quot;timeAggregation&quot;</span><span class="p">:</span> <span class="s2">&quot;Average&quot;</span><span class="p">,</span>
                     <span class="s2">&quot;operator&quot;</span><span class="p">:</span> <span class="s2">&quot;GreaterThan&quot;</span><span class="p">,</span>
                     <span class="s2">&quot;threshold&quot;</span><span class="p">:</span> <span class="mi">90</span><span class="p">,</span>
@@ -868,7 +868,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
                     <span class="s2">&quot;metricResourceId&quot;</span><span class="p">:</span> <span class="n">example_scale_set</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
                     <span class="s2">&quot;timeGrain&quot;</span><span class="p">:</span> <span class="s2">&quot;PT1M&quot;</span><span class="p">,</span>
                     <span class="s2">&quot;statistic&quot;</span><span class="p">:</span> <span class="s2">&quot;Average&quot;</span><span class="p">,</span>
-                    <span class="s2">&quot;timeWindow&quot;</span><span class="p">:</span> <span class="s2">&quot;PT5M&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;time_window&quot;</span><span class="p">:</span> <span class="s2">&quot;PT5M&quot;</span><span class="p">,</span>
                     <span class="s2">&quot;timeAggregation&quot;</span><span class="p">:</span> <span class="s2">&quot;Average&quot;</span><span class="p">,</span>
                     <span class="s2">&quot;operator&quot;</span><span class="p">:</span> <span class="s2">&quot;LessThan&quot;</span><span class="p">,</span>
                     <span class="s2">&quot;threshold&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
@@ -1925,7 +1925,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">short_name</span><span class="o">=</span><span class="s2">&quot;exampleact&quot;</span><span class="p">,</span>
     <span class="n">webhook_receiver</span><span class="o">=</span><span class="p">[{</span>
         <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;callmyapi&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;serviceUri&quot;</span><span class="p">:</span> <span class="s2">&quot;http://example.com/alert&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;service_uri&quot;</span><span class="p">:</span> <span class="s2">&quot;http://example.com/alert&quot;</span><span class="p">,</span>
     <span class="p">}])</span>
 <span class="n">example</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">monitoring</span><span class="o">.</span><span class="n">MetricAlert</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
     <span class="n">resource_group_name</span><span class="o">=</span><span class="n">main_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>

@@ -21,7 +21,31 @@ Manages an API Management User Assignment to a Group.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleUser = Output.Create(Azure.ApiManagement.GetUser.InvokeAsync(new Azure.ApiManagement.GetUserArgs
+        {
+            UserId = "my-user",
+            ApiManagementName = "example-apim",
+            ResourceGroupName = "search-service",
+        }));
+        var exampleGroupUser = new Azure.ApiManagement.GroupUser("exampleGroupUser", new Azure.ApiManagement.GroupUserArgs
+        {
+            UserId = exampleUser.Apply(exampleUser => exampleUser.Id),
+            GroupName = "example-group",
+            ResourceGroupName = exampleUser.Apply(exampleUser => exampleUser.ResourceGroupName),
+            ApiManagementName = exampleUser.Apply(exampleUser => exampleUser.ApiManagementName),
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

@@ -30,6 +30,26 @@ existing = azure.machinelearning.get_workspace(name="example-workspace",
     resource_group_name="example-resources")
 pulumi.export("id", azurerm_machine_learning_workspace["existing"]["id"])
 ```
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var existing = Output.Create(Azure.MachineLearning.GetWorkspace.InvokeAsync(new Azure.MachineLearning.GetWorkspaceArgs
+        {
+            Name = "example-workspace",
+            ResourceGroupName = "example-resources",
+        }));
+        this.Id = azurerm_machine_learning_workspace.Existing.Id;
+    }
+
+    [Output("id")]
+    public Output<string> Id { get; set; }
+}
+```
 
 
 

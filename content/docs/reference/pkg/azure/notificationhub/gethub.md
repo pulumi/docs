@@ -20,7 +20,27 @@ Use this data source to access information about an existing Notification Hub wi
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = Output.Create(Azure.NotificationHub.GetHub.InvokeAsync(new Azure.NotificationHub.GetHubArgs
+        {
+            Name = "notification-hub",
+            NamespaceName = "namespace-name",
+            ResourceGroupName = "resource-group-name",
+        }));
+        this.Id = example.Apply(example => example.Id);
+    }
+
+    [Output("id")]
+    public Output<string> Id { get; set; }
+}
+```
 {{% /example %}}
 
 {{% example go %}}

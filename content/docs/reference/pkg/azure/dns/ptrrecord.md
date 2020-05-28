@@ -20,7 +20,36 @@ Enables you to manage DNS PTR Records within Azure DNS.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West US",
+        });
+        var exampleZone = new Azure.Dns.Zone("exampleZone", new Azure.Dns.ZoneArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+        });
+        var examplePtrRecord = new Azure.Dns.PtrRecord("examplePtrRecord", new Azure.Dns.PtrRecordArgs
+        {
+            ZoneName = exampleZone.Name,
+            ResourceGroupName = exampleResourceGroup.Name,
+            Ttl = 300,
+            Records = 
+            {
+                "yourdomain.com",
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

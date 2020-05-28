@@ -480,16 +480,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">nat_ip_configuration</span><span class="o">=</span><span class="p">[</span>
         <span class="p">{</span>
             <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;primary&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;privateIpAddress&quot;</span><span class="p">:</span> <span class="s2">&quot;10.5.1.17&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;private_ip_address&quot;</span><span class="p">:</span> <span class="s2">&quot;10.5.1.17&quot;</span><span class="p">,</span>
             <span class="s2">&quot;privateIpAddressVersion&quot;</span><span class="p">:</span> <span class="s2">&quot;IPv4&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;subnetId&quot;</span><span class="p">:</span> <span class="n">example_subnet</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+            <span class="s2">&quot;subnet_id&quot;</span><span class="p">:</span> <span class="n">example_subnet</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
             <span class="s2">&quot;primary&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
         <span class="p">},</span>
         <span class="p">{</span>
             <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;secondary&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;privateIpAddress&quot;</span><span class="p">:</span> <span class="s2">&quot;10.5.1.18&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;private_ip_address&quot;</span><span class="p">:</span> <span class="s2">&quot;10.5.1.18&quot;</span><span class="p">,</span>
             <span class="s2">&quot;privateIpAddressVersion&quot;</span><span class="p">:</span> <span class="s2">&quot;IPv4&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;subnetId&quot;</span><span class="p">:</span> <span class="n">example_subnet</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+            <span class="s2">&quot;subnet_id&quot;</span><span class="p">:</span> <span class="n">example_subnet</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
             <span class="s2">&quot;primary&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
         <span class="p">},</span>
     <span class="p">])</span>

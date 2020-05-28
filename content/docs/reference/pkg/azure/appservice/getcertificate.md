@@ -20,7 +20,26 @@ Use this data source to access information about an App Service Certificate.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = Output.Create(Azure.AppService.GetCertificate.InvokeAsync(new Azure.AppService.GetCertificateArgs
+        {
+            Name = "example-app-service-certificate",
+            ResourceGroupName = "example-rg",
+        }));
+        this.AppServiceCertificateId = example.Apply(example => example.Id);
+    }
+
+    [Output("appServiceCertificateId")]
+    public Output<string> AppServiceCertificateId { get; set; }
+}
+```
 {{% /example %}}
 
 {{% example go %}}

@@ -20,7 +20,33 @@ Manages an Azure Data Lake Analytics Account.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "northeurope",
+        });
+        var exampleStore = new Azure.DataLake.Store("exampleStore", new Azure.DataLake.StoreArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            Location = exampleResourceGroup.Location,
+        });
+        var exampleAnalyticsAccount = new Azure.DataLake.AnalyticsAccount("exampleAnalyticsAccount", new Azure.DataLake.AnalyticsAccountArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            Location = exampleResourceGroup.Location,
+            DefaultStoreAccountName = exampleStore.Name,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

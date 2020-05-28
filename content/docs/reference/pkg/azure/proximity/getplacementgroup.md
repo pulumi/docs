@@ -20,7 +20,26 @@ Use this data source to access information about an existing Proximity Placement
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = Output.Create(Azure.Proximity.GetPlacementGroup.InvokeAsync(new Azure.Proximity.GetPlacementGroupArgs
+        {
+            Name = "tf-appsecuritygroup",
+            ResourceGroupName = "my-resource-group",
+        }));
+        this.ProximityPlacementGroupId = example.Apply(example => example.Id);
+    }
+
+    [Output("proximityPlacementGroupId")]
+    public Output<string> ProximityPlacementGroupId { get; set; }
+}
+```
 {{% /example %}}
 
 {{% example go %}}

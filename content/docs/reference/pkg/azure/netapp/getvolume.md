@@ -36,6 +36,28 @@ example = azure.netapp.get_volume(resource_group_name="acctestRG",
     name="example-volume")
 pulumi.export("netappVolumeId", example.id)
 ```
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = Output.Create(Azure.NetApp.GetVolume.InvokeAsync(new Azure.NetApp.GetVolumeArgs
+        {
+            ResourceGroupName = "acctestRG",
+            AccountName = "acctestnetappaccount",
+            PoolName = "acctestnetapppool",
+            Name = "example-volume",
+        }));
+        this.NetappVolumeId = example.Apply(example => example.Id);
+    }
+
+    [Output("netappVolumeId")]
+    public Output<string> NetappVolumeId { get; set; }
+}
+```
 
 
 

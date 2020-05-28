@@ -51,6 +51,40 @@ example_a_record = azure.dns.ARecord("exampleARecord",
     ttl=300,
     target_resource_id=example_public_ip.id)
 ```
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West US",
+        });
+        var exampleZone = new Azure.Dns.Zone("exampleZone", new Azure.Dns.ZoneArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+        });
+        var examplePublicIp = new Azure.Network.PublicIp("examplePublicIp", new Azure.Network.PublicIpArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            AllocationMethod = "Dynamic",
+            IpVersion = "IPv4",
+        });
+        var exampleARecord = new Azure.Dns.ARecord("exampleARecord", new Azure.Dns.ARecordArgs
+        {
+            ZoneName = exampleZone.Name,
+            ResourceGroupName = exampleResourceGroup.Name,
+            Ttl = 300,
+            TargetResourceId = examplePublicIp.Id,
+        });
+    }
+
+}
+```
 
 {{% examples %}}
 ## Example Usage
@@ -58,7 +92,36 @@ example_a_record = azure.dns.ARecord("exampleARecord",
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West US",
+        });
+        var exampleZone = new Azure.Dns.Zone("exampleZone", new Azure.Dns.ZoneArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+        });
+        var exampleARecord = new Azure.Dns.ARecord("exampleARecord", new Azure.Dns.ARecordArgs
+        {
+            ZoneName = exampleZone.Name,
+            ResourceGroupName = exampleResourceGroup.Name,
+            Ttl = 300,
+            Records = 
+            {
+                "10.0.180.17",
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

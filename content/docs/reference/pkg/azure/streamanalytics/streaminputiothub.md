@@ -20,7 +20,52 @@ Manages a Stream Analytics Stream Input IoTHub.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = Output.Create(Azure.Core.GetResourceGroup.InvokeAsync(new Azure.Core.GetResourceGroupArgs
+        {
+            Name = "example-resources",
+        }));
+        var exampleJob = Output.Create(Azure.StreamAnalytics.GetJob.InvokeAsync(new Azure.StreamAnalytics.GetJobArgs
+        {
+            Name = "example-job",
+            ResourceGroupName = azurerm_resource_group.Example.Name,
+        }));
+        var exampleIoTHub = new Azure.Iot.IoTHub("exampleIoTHub", new Azure.Iot.IoTHubArgs
+        {
+            ResourceGroupName = azurerm_resource_group.Example.Name,
+            Location = azurerm_resource_group.Example.Location,
+            Sku = new Azure.Iot.Inputs.IoTHubSkuArgs
+            {
+                Name = "S1",
+                Capacity = "1",
+            },
+        });
+        var exampleStreamInputIotHub = new Azure.StreamAnalytics.StreamInputIotHub("exampleStreamInputIotHub", new Azure.StreamAnalytics.StreamInputIotHubArgs
+        {
+            StreamAnalyticsJobName = exampleJob.Apply(exampleJob => exampleJob.Name),
+            ResourceGroupName = exampleJob.Apply(exampleJob => exampleJob.ResourceGroupName),
+            Endpoint = "messages/events",
+            EventhubConsumerGroupName = "$Default",
+            IothubNamespace = exampleIoTHub.Name,
+            SharedAccessPolicyKey = exampleIoTHub.SharedAccessPolicies.Apply(sharedAccessPolicies => sharedAccessPolicies[0].PrimaryKey),
+            SharedAccessPolicyName = "iothubowner",
+            Serialization = new Azure.StreamAnalytics.Inputs.StreamInputIotHubSerializationArgs
+            {
+                Type = "Json",
+                Encoding = "UTF8",
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -48,7 +93,7 @@ example_stream_input_iot_hub = azure.streamanalytics.StreamInputIotHub("exampleS
     endpoint="messages/events",
     eventhub_consumer_group_name="$Default",
     iothub_namespace=example_io_t_hub.name,
-    shared_access_policy_key=example_io_t_hub.shared_access_policies[0].primary_key,
+    shared_access_policy_key=example_io_t_hub.shared_access_policies[0]["primary_key"],
     shared_access_policy_name="iothubowner",
     serialization={
         "type": "Json",

@@ -20,7 +20,40 @@ Manages a Event Hubs as a nested resource within a Event Hubs namespace.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West US",
+        });
+        var exampleEventHubNamespace = new Azure.EventHub.EventHubNamespace("exampleEventHubNamespace", new Azure.EventHub.EventHubNamespaceArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            Sku = "Standard",
+            Capacity = 1,
+            Tags = 
+            {
+                { "environment", "Production" },
+            },
+        });
+        var exampleEventHub = new Azure.EventHub.EventHub("exampleEventHub", new Azure.EventHub.EventHubArgs
+        {
+            NamespaceName = exampleEventHubNamespace.Name,
+            ResourceGroupName = exampleResourceGroup.Name,
+            PartitionCount = 2,
+            MessageRetention = 1,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

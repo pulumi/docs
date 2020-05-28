@@ -215,9 +215,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">tenant_id</span><span class="o">=</span><span class="n">current</span><span class="o">.</span><span class="n">tenant_id</span><span class="p">,</span>
     <span class="n">sku_name</span><span class="o">=</span><span class="s2">&quot;standard&quot;</span><span class="p">,</span>
     <span class="n">access_policy</span><span class="o">=</span><span class="p">[{</span>
-        <span class="s2">&quot;tenantId&quot;</span><span class="p">:</span> <span class="n">current</span><span class="o">.</span><span class="n">tenant_id</span><span class="p">,</span>
-        <span class="s2">&quot;objectId&quot;</span><span class="p">:</span> <span class="n">current</span><span class="o">.</span><span class="n">object_id</span><span class="p">,</span>
-        <span class="s2">&quot;certificatePermissions&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">&quot;tenant_id&quot;</span><span class="p">:</span> <span class="n">current</span><span class="o">.</span><span class="n">tenant_id</span><span class="p">,</span>
+        <span class="s2">&quot;object_id&quot;</span><span class="p">:</span> <span class="n">current</span><span class="o">.</span><span class="n">object_id</span><span class="p">,</span>
+        <span class="s2">&quot;certificate_permissions&quot;</span><span class="p">:</span> <span class="p">[</span>
             <span class="s2">&quot;create&quot;</span><span class="p">,</span>
             <span class="s2">&quot;delete&quot;</span><span class="p">,</span>
             <span class="s2">&quot;deleteissuers&quot;</span><span class="p">,</span>
@@ -231,7 +231,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
             <span class="s2">&quot;setissuers&quot;</span><span class="p">,</span>
             <span class="s2">&quot;update&quot;</span><span class="p">,</span>
         <span class="p">],</span>
-        <span class="s2">&quot;keyPermissions&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">&quot;key_permissions&quot;</span><span class="p">:</span> <span class="p">[</span>
             <span class="s2">&quot;backup&quot;</span><span class="p">,</span>
             <span class="s2">&quot;create&quot;</span><span class="p">,</span>
             <span class="s2">&quot;decrypt&quot;</span><span class="p">,</span>
@@ -249,7 +249,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
             <span class="s2">&quot;verify&quot;</span><span class="p">,</span>
             <span class="s2">&quot;wrapKey&quot;</span><span class="p">,</span>
         <span class="p">],</span>
-        <span class="s2">&quot;secretPermissions&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">&quot;secret_permissions&quot;</span><span class="p">:</span> <span class="p">[</span>
             <span class="s2">&quot;backup&quot;</span><span class="p">,</span>
             <span class="s2">&quot;delete&quot;</span><span class="p">,</span>
             <span class="s2">&quot;get&quot;</span><span class="p">,</span>
@@ -271,8 +271,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
         <span class="p">},</span>
         <span class="s2">&quot;key_properties&quot;</span><span class="p">:</span> <span class="p">{</span>
             <span class="s2">&quot;exportable&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
-            <span class="s2">&quot;keySize&quot;</span><span class="p">:</span> <span class="mi">2048</span><span class="p">,</span>
-            <span class="s2">&quot;keyType&quot;</span><span class="p">:</span> <span class="s2">&quot;RSA&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;key_size&quot;</span><span class="p">:</span> <span class="mi">2048</span><span class="p">,</span>
+            <span class="s2">&quot;key_type&quot;</span><span class="p">:</span> <span class="s2">&quot;RSA&quot;</span><span class="p">,</span>
             <span class="s2">&quot;reuseKey&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
         <span class="p">},</span>
         <span class="s2">&quot;lifetime_action&quot;</span><span class="p">:</span> <span class="p">[{</span>
@@ -284,7 +284,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
             <span class="p">},</span>
         <span class="p">}],</span>
         <span class="s2">&quot;secret_properties&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="s2">&quot;contentType&quot;</span><span class="p">:</span> <span class="s2">&quot;application/x-pkcs12&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;content_type&quot;</span><span class="p">:</span> <span class="s2">&quot;application/x-pkcs12&quot;</span><span class="p">,</span>
         <span class="p">},</span>
         <span class="s2">&quot;x509_certificate_properties&quot;</span><span class="p">:</span> <span class="p">{</span>
             <span class="s2">&quot;extendedKeyUsages&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;1.3.6.1.5.5.7.3.1&quot;</span><span class="p">],</span>
@@ -619,9 +619,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">tenant_id</span><span class="o">=</span><span class="n">current</span><span class="o">.</span><span class="n">tenant_id</span><span class="p">,</span>
     <span class="n">sku_name</span><span class="o">=</span><span class="s2">&quot;standard&quot;</span><span class="p">,</span>
     <span class="n">access_policy</span><span class="o">=</span><span class="p">[{</span>
-        <span class="s2">&quot;tenantId&quot;</span><span class="p">:</span> <span class="n">current</span><span class="o">.</span><span class="n">tenant_id</span><span class="p">,</span>
-        <span class="s2">&quot;objectId&quot;</span><span class="p">:</span> <span class="n">current</span><span class="o">.</span><span class="n">object_id</span><span class="p">,</span>
-        <span class="s2">&quot;certificatePermissions&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">&quot;tenant_id&quot;</span><span class="p">:</span> <span class="n">current</span><span class="o">.</span><span class="n">tenant_id</span><span class="p">,</span>
+        <span class="s2">&quot;object_id&quot;</span><span class="p">:</span> <span class="n">current</span><span class="o">.</span><span class="n">object_id</span><span class="p">,</span>
+        <span class="s2">&quot;certificate_permissions&quot;</span><span class="p">:</span> <span class="p">[</span>
             <span class="s2">&quot;create&quot;</span><span class="p">,</span>
             <span class="s2">&quot;delete&quot;</span><span class="p">,</span>
             <span class="s2">&quot;deleteissuers&quot;</span><span class="p">,</span>
@@ -635,7 +635,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
             <span class="s2">&quot;setissuers&quot;</span><span class="p">,</span>
             <span class="s2">&quot;update&quot;</span><span class="p">,</span>
         <span class="p">],</span>
-        <span class="s2">&quot;keyPermissions&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">&quot;key_permissions&quot;</span><span class="p">:</span> <span class="p">[</span>
             <span class="s2">&quot;backup&quot;</span><span class="p">,</span>
             <span class="s2">&quot;create&quot;</span><span class="p">,</span>
             <span class="s2">&quot;decrypt&quot;</span><span class="p">,</span>
@@ -653,7 +653,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
             <span class="s2">&quot;verify&quot;</span><span class="p">,</span>
             <span class="s2">&quot;wrapKey&quot;</span><span class="p">,</span>
         <span class="p">],</span>
-        <span class="s2">&quot;secretPermissions&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">&quot;secret_permissions&quot;</span><span class="p">:</span> <span class="p">[</span>
             <span class="s2">&quot;backup&quot;</span><span class="p">,</span>
             <span class="s2">&quot;delete&quot;</span><span class="p">,</span>
             <span class="s2">&quot;get&quot;</span><span class="p">,</span>
@@ -675,8 +675,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
         <span class="p">},</span>
         <span class="s2">&quot;key_properties&quot;</span><span class="p">:</span> <span class="p">{</span>
             <span class="s2">&quot;exportable&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
-            <span class="s2">&quot;keySize&quot;</span><span class="p">:</span> <span class="mi">2048</span><span class="p">,</span>
-            <span class="s2">&quot;keyType&quot;</span><span class="p">:</span> <span class="s2">&quot;RSA&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;key_size&quot;</span><span class="p">:</span> <span class="mi">2048</span><span class="p">,</span>
+            <span class="s2">&quot;key_type&quot;</span><span class="p">:</span> <span class="s2">&quot;RSA&quot;</span><span class="p">,</span>
             <span class="s2">&quot;reuseKey&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
         <span class="p">},</span>
         <span class="s2">&quot;lifetime_action&quot;</span><span class="p">:</span> <span class="p">[{</span>
@@ -688,7 +688,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
             <span class="p">},</span>
         <span class="p">}],</span>
         <span class="s2">&quot;secret_properties&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="s2">&quot;contentType&quot;</span><span class="p">:</span> <span class="s2">&quot;application/x-pkcs12&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;content_type&quot;</span><span class="p">:</span> <span class="s2">&quot;application/x-pkcs12&quot;</span><span class="p">,</span>
         <span class="p">},</span>
         <span class="s2">&quot;x509_certificate_properties&quot;</span><span class="p">:</span> <span class="p">{</span>
             <span class="s2">&quot;extendedKeyUsages&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;1.3.6.1.5.5.7.3.1&quot;</span><span class="p">],</span>
@@ -1227,13 +1227,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">tenant_id</span><span class="o">=</span><span class="n">current</span><span class="o">.</span><span class="n">tenant_id</span><span class="p">,</span>
     <span class="n">sku_name</span><span class="o">=</span><span class="s2">&quot;premium&quot;</span><span class="p">,</span>
     <span class="n">access_policy</span><span class="o">=</span><span class="p">[{</span>
-        <span class="s2">&quot;tenantId&quot;</span><span class="p">:</span> <span class="n">current</span><span class="o">.</span><span class="n">tenant_id</span><span class="p">,</span>
-        <span class="s2">&quot;objectId&quot;</span><span class="p">:</span> <span class="n">current</span><span class="o">.</span><span class="n">object_id</span><span class="p">,</span>
-        <span class="s2">&quot;keyPermissions&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">&quot;tenant_id&quot;</span><span class="p">:</span> <span class="n">current</span><span class="o">.</span><span class="n">tenant_id</span><span class="p">,</span>
+        <span class="s2">&quot;object_id&quot;</span><span class="p">:</span> <span class="n">current</span><span class="o">.</span><span class="n">object_id</span><span class="p">,</span>
+        <span class="s2">&quot;key_permissions&quot;</span><span class="p">:</span> <span class="p">[</span>
             <span class="s2">&quot;create&quot;</span><span class="p">,</span>
             <span class="s2">&quot;get&quot;</span><span class="p">,</span>
         <span class="p">],</span>
-        <span class="s2">&quot;secretPermissions&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;set&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;secret_permissions&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;set&quot;</span><span class="p">],</span>
     <span class="p">}],</span>
     <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
         <span class="s2">&quot;environment&quot;</span><span class="p">:</span> <span class="s2">&quot;Production&quot;</span><span class="p">,</span>
@@ -1443,14 +1443,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">purge_protection_enabled</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
     <span class="n">sku_name</span><span class="o">=</span><span class="s2">&quot;standard&quot;</span><span class="p">,</span>
     <span class="n">access_policy</span><span class="o">=</span><span class="p">[{</span>
-        <span class="s2">&quot;tenantId&quot;</span><span class="p">:</span> <span class="n">current</span><span class="o">.</span><span class="n">tenant_id</span><span class="p">,</span>
-        <span class="s2">&quot;objectId&quot;</span><span class="p">:</span> <span class="n">current</span><span class="o">.</span><span class="n">object_id</span><span class="p">,</span>
-        <span class="s2">&quot;keyPermissions&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;get&quot;</span><span class="p">],</span>
-        <span class="s2">&quot;secretPermissions&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;get&quot;</span><span class="p">],</span>
-        <span class="s2">&quot;storagePermissions&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;get&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;tenant_id&quot;</span><span class="p">:</span> <span class="n">current</span><span class="o">.</span><span class="n">tenant_id</span><span class="p">,</span>
+        <span class="s2">&quot;object_id&quot;</span><span class="p">:</span> <span class="n">current</span><span class="o">.</span><span class="n">object_id</span><span class="p">,</span>
+        <span class="s2">&quot;key_permissions&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;get&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;secret_permissions&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;get&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;storage_permissions&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;get&quot;</span><span class="p">],</span>
     <span class="p">}],</span>
     <span class="n">network_acls</span><span class="o">=</span><span class="p">{</span>
-        <span class="s2">&quot;defaultAction&quot;</span><span class="p">:</span> <span class="s2">&quot;Deny&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;default_action&quot;</span><span class="p">:</span> <span class="s2">&quot;Deny&quot;</span><span class="p">,</span>
         <span class="s2">&quot;bypass&quot;</span><span class="p">:</span> <span class="s2">&quot;AzureServices&quot;</span><span class="p">,</span>
     <span class="p">},</span>
     <span class="n">tags</span><span class="o">=</span><span class="p">{</span>

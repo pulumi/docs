@@ -20,7 +20,38 @@ Manages a PostgreSQL Server.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West Europe",
+        });
+        var exampleServer = new Azure.PostgreSql.Server("exampleServer", new Azure.PostgreSql.ServerArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            AdministratorLogin = "psqladminun",
+            AdministratorLoginPassword = "H@Sh1CoR3!",
+            SkuName = "GP_Gen5_4",
+            Version = "9.6",
+            StorageMb = 640000,
+            BackupRetentionDays = 7,
+            GeoRedundantBackupEnabled = true,
+            AutoGrowEnabled = true,
+            PublicNetworkAccessEnabled = false,
+            SslEnforcementEnabled = true,
+            SslMinimalTlsVersionEnforced = "TLS1_2",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

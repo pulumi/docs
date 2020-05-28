@@ -20,7 +20,38 @@ Manages a Azure Site Recovery Replication Fabric within a Recovery Services vaul
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var primary = new Azure.Core.ResourceGroup("primary", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West US",
+        });
+        var secondary = new Azure.Core.ResourceGroup("secondary", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "East US",
+        });
+        var vault = new Azure.RecoveryServices.Vault("vault", new Azure.RecoveryServices.VaultArgs
+        {
+            Location = secondary.Location,
+            ResourceGroupName = secondary.Name,
+            Sku = "Standard",
+        });
+        var fabric = new Azure.SiteRecovery.Fabric("fabric", new Azure.SiteRecovery.FabricArgs
+        {
+            ResourceGroupName = secondary.Name,
+            RecoveryVaultName = vault.Name,
+            Location = primary.Location,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

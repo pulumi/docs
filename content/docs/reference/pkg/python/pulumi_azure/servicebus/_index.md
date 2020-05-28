@@ -533,8 +533,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
     <span class="n">default_action</span><span class="o">=</span><span class="s2">&quot;Deny&quot;</span><span class="p">,</span>
     <span class="n">network_rules</span><span class="o">=</span><span class="p">[{</span>
-        <span class="s2">&quot;subnetId&quot;</span><span class="p">:</span> <span class="n">example_subnet</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
-        <span class="s2">&quot;ignoreMissingVnetServiceEndpoint&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="s2">&quot;subnet_id&quot;</span><span class="p">:</span> <span class="n">example_subnet</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;ignore_missing_vnet_service_endpoint&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
     <span class="p">}],</span>
     <span class="n">ip_rules</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;1.1.1.1&quot;</span><span class="p">])</span>
 </pre></div>

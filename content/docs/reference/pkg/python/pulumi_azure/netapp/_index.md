@@ -31,7 +31,7 @@ anything, please consult the source <a class="reference external" href="https://
         <span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;aduser&quot;</span><span class="p">,</span>
         <span class="s2">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;aduserpwd&quot;</span><span class="p">,</span>
         <span class="s2">&quot;smbServerName&quot;</span><span class="p">:</span> <span class="s2">&quot;SMBSERVER&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;dnsServers&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;1.2.3.4&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;dns_servers&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;1.2.3.4&quot;</span><span class="p">],</span>
         <span class="s2">&quot;domain&quot;</span><span class="p">:</span> <span class="s2">&quot;westcentralus.com&quot;</span><span class="p">,</span>
         <span class="s2">&quot;organizationalUnit&quot;</span><span class="p">:</span> <span class="s2">&quot;OU=FirstLevel&quot;</span><span class="p">,</span>
     <span class="p">})</span>

@@ -20,7 +20,26 @@ Use this data source to access information about an existing Image.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var search = Output.Create(Azure.Compute.GetImage.InvokeAsync(new Azure.Compute.GetImageArgs
+        {
+            Name = "search-api",
+            ResourceGroupName = "packerimages",
+        }));
+        this.ImageId = search.Apply(search => search.Id);
+    }
+
+    [Output("imageId")]
+    public Output<string> ImageId { get; set; }
+}
+```
 {{% /example %}}
 
 {{% example go %}}

@@ -20,7 +20,26 @@ Use this data source to access information about an existing Container Registry.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = Output.Create(Azure.ContainerService.GetRegistry.InvokeAsync(new Azure.ContainerService.GetRegistryArgs
+        {
+            Name = "testacr",
+            ResourceGroupName = "test",
+        }));
+        this.LoginServer = example.Apply(example => example.LoginServer);
+    }
+
+    [Output("loginServer")]
+    public Output<string> LoginServer { get; set; }
+}
+```
 {{% /example %}}
 
 {{% example go %}}

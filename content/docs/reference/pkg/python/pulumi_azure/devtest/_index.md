@@ -709,7 +709,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">lab_name</span><span class="o">=</span><span class="n">sample_lab</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
     <span class="n">weekly_recurrence</span><span class="o">=</span><span class="p">{</span>
         <span class="s2">&quot;time&quot;</span><span class="p">:</span> <span class="s2">&quot;1100&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;weekDays&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">&quot;week_days&quot;</span><span class="p">:</span> <span class="p">[</span>
             <span class="s2">&quot;Monday&quot;</span><span class="p">,</span>
             <span class="s2">&quot;Tuesday&quot;</span><span class="p">,</span>
         <span class="p">],</span>

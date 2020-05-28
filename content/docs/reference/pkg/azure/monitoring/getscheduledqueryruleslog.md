@@ -20,7 +20,26 @@ Use this data source to access the properties of a LogToMetricAction scheduled q
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = Output.Create(Azure.Monitoring.GetScheduledQueryRulesLog.InvokeAsync(new Azure.Monitoring.GetScheduledQueryRulesLogArgs
+        {
+            Name = "tfex-queryrule",
+            ResourceGroupName = "example-rg",
+        }));
+        this.QueryRuleId = example.Apply(example => example.Id);
+    }
+
+    [Output("queryRuleId")]
+    public Output<string> QueryRuleId { get; set; }
+}
+```
 {{% /example %}}
 
 {{% example go %}}

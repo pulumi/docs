@@ -21,7 +21,37 @@ Manages an API Management Named Value.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West US",
+        });
+        var exampleService = new Azure.ApiManagement.Service("exampleService", new Azure.ApiManagement.ServiceArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            PublisherName = "pub1",
+            PublisherEmail = "pub1@email.com",
+            SkuName = "Developer_1",
+        });
+        var exampleNamedValue = new Azure.ApiManagement.NamedValue("exampleNamedValue", new Azure.ApiManagement.NamedValueArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            ApiManagementName = exampleService.Name,
+            DisplayName = "ExampleProperty",
+            Value = "Example Value",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

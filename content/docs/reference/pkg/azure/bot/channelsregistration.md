@@ -20,7 +20,30 @@ Manages a Bot Channels Registration.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var current = Output.Create(Azure.Core.GetClientConfig.InvokeAsync());
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "northeurope",
+        });
+        var exampleChannelsRegistration = new Azure.Bot.ChannelsRegistration("exampleChannelsRegistration", new Azure.Bot.ChannelsRegistrationArgs
+        {
+            Location = "global",
+            ResourceGroupName = exampleResourceGroup.Name,
+            Sku = "F0",
+            MicrosoftAppId = current.Apply(current => current.ClientId),
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

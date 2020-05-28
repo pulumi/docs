@@ -20,7 +20,23 @@ Use this data source to access information about an existing Shared Image Galler
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = Output.Create(Azure.Compute.GetSharedImageGallery.InvokeAsync(new Azure.Compute.GetSharedImageGalleryArgs
+        {
+            Name = "my-image-gallery",
+            ResourceGroupName = "example-resources",
+        }));
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

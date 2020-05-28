@@ -20,7 +20,40 @@ Manages an API Management Service.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West Europe",
+        });
+        var exampleService = new Azure.ApiManagement.Service("exampleService", new Azure.ApiManagement.ServiceArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            PublisherName = "My Company",
+            PublisherEmail = "company@exmaple.com",
+            SkuName = "Developer_1",
+            Policy = new Azure.ApiManagement.Inputs.ServicePolicyArgs
+            {
+                XmlContent = @"    <policies>
+      <inbound />
+      <backend />
+      <outbound />
+      <on-error />
+    </policies>
+",
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -40,7 +73,7 @@ example_service = azure.apimanagement.Service("exampleService",
     publisher_email="company@exmaple.com",
     sku_name="Developer_1",
     policy={
-        "xmlContent": """    <policies>
+        "xml_content": """    <policies>
       <inbound />
       <backend />
       <outbound />

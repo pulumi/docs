@@ -20,7 +20,25 @@ Use this data source to access information about all the Subscriptions currently
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var available = Output.Create(Azure.Core.GetSubscriptions.InvokeAsync());
+        this.AvailableSubscriptions = available.Apply(available => available.Subscriptions);
+        this.FirstAvailableSubscriptionDisplayName = available.Apply(available => available.Subscriptions[0].DisplayName);
+    }
+
+    [Output("availableSubscriptions")]
+    public Output<string> AvailableSubscriptions { get; set; }
+    [Output("firstAvailableSubscriptionDisplayName")]
+    public Output<string> FirstAvailableSubscriptionDisplayName { get; set; }
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -34,7 +52,7 @@ import pulumi_azure as azure
 
 available = azure.core.get_subscriptions()
 pulumi.export("availableSubscriptions", available.subscriptions)
-pulumi.export("firstAvailableSubscriptionDisplayName", available.subscriptions[0].display_name)
+pulumi.export("firstAvailableSubscriptionDisplayName", available.subscriptions[0]["display_name"])
 ```
 {{% /example %}}
 

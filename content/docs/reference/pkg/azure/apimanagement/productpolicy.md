@@ -21,7 +21,36 @@ Manages an API Management Product Policy
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleProduct = Output.Create(Azure.ApiManagement.GetProduct.InvokeAsync(new Azure.ApiManagement.GetProductArgs
+        {
+            ProductId = "my-product",
+            ApiManagementName = "example-apim",
+            ResourceGroupName = "search-service",
+        }));
+        var exampleProductPolicy = new Azure.ApiManagement.ProductPolicy("exampleProductPolicy", new Azure.ApiManagement.ProductPolicyArgs
+        {
+            ProductId = exampleProduct.Apply(exampleProduct => exampleProduct.ProductId),
+            ApiManagementName = exampleProduct.Apply(exampleProduct => exampleProduct.ApiManagementName),
+            ResourceGroupName = exampleProduct.Apply(exampleProduct => exampleProduct.ResourceGroupName),
+            XmlContent = @"<policies>
+  <inbound>
+    <find-and-replace from=""xyz"" to=""abc"" />
+  </inbound>
+</policies>
+",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

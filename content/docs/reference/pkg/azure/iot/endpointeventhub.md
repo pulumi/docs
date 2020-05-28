@@ -22,7 +22,65 @@ Manages an IotHub EventHub Endpoint
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "East US",
+        });
+        var exampleEventHubNamespace = new Azure.EventHub.EventHubNamespace("exampleEventHubNamespace", new Azure.EventHub.EventHubNamespaceArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            Sku = "Basic",
+        });
+        var exampleEventHub = new Azure.EventHub.EventHub("exampleEventHub", new Azure.EventHub.EventHubArgs
+        {
+            NamespaceName = exampleEventHubNamespace.Name,
+            ResourceGroupName = exampleResourceGroup.Name,
+            PartitionCount = 2,
+            MessageRetention = 1,
+        });
+        var exampleAuthorizationRule = new Azure.EventHub.AuthorizationRule("exampleAuthorizationRule", new Azure.EventHub.AuthorizationRuleArgs
+        {
+            NamespaceName = exampleEventHubNamespace.Name,
+            EventhubName = exampleEventHub.Name,
+            ResourceGroupName = exampleResourceGroup.Name,
+            Listen = false,
+            Send = true,
+            Manage = false,
+        });
+        var exampleIoTHub = new Azure.Iot.IoTHub("exampleIoTHub", new Azure.Iot.IoTHubArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            Location = exampleResourceGroup.Location,
+            Sku = new Azure.Iot.Inputs.IoTHubSkuArgs
+            {
+                Name = "B1",
+                Tier = "Basic",
+                Capacity = "1",
+            },
+            Tags = 
+            {
+                { "purpose", "example" },
+            },
+        });
+        var exampleEndpointEventhub = new Azure.Iot.EndpointEventhub("exampleEndpointEventhub", new Azure.Iot.EndpointEventhubArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            IothubName = exampleIoTHub.Name,
+            ConnectionString = exampleAuthorizationRule.PrimaryConnectionString,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

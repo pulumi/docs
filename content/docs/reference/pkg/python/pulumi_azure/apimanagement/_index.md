@@ -1889,7 +1889,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">api_management_name</span><span class="o">=</span><span class="n">example_service</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
     <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
     <span class="n">application_insights</span><span class="o">=</span><span class="p">{</span>
-        <span class="s2">&quot;instrumentationKey&quot;</span><span class="p">:</span> <span class="n">example_insights</span><span class="o">.</span><span class="n">instrumentation_key</span><span class="p">,</span>
+        <span class="s2">&quot;instrumentation_key&quot;</span><span class="p">:</span> <span class="n">example_insights</span><span class="o">.</span><span class="n">instrumentation_key</span><span class="p">,</span>
     <span class="p">})</span>
 <span class="n">example_diagnostic</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">apimanagement</span><span class="o">.</span><span class="n">Diagnostic</span><span class="p">(</span><span class="s2">&quot;exampleDiagnostic&quot;</span><span class="p">,</span>
     <span class="n">identifier</span><span class="o">=</span><span class="s2">&quot;applicationinsights&quot;</span><span class="p">,</span>
@@ -3196,7 +3196,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">api_management_name</span><span class="o">=</span><span class="n">example_service</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
     <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
     <span class="n">application_insights</span><span class="o">=</span><span class="p">{</span>
-        <span class="s2">&quot;instrumentationKey&quot;</span><span class="p">:</span> <span class="n">example_insights</span><span class="o">.</span><span class="n">instrumentation_key</span><span class="p">,</span>
+        <span class="s2">&quot;instrumentation_key&quot;</span><span class="p">:</span> <span class="n">example_insights</span><span class="o">.</span><span class="n">instrumentation_key</span><span class="p">,</span>
     <span class="p">})</span>
 </pre></div>
 </div>
@@ -4307,7 +4307,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">publisher_email</span><span class="o">=</span><span class="s2">&quot;company@exmaple.com&quot;</span><span class="p">,</span>
     <span class="n">sku_name</span><span class="o">=</span><span class="s2">&quot;Developer_1&quot;</span><span class="p">,</span>
     <span class="n">policy</span><span class="o">=</span><span class="p">{</span>
-        <span class="s2">&quot;xmlContent&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;&quot;    &lt;policies&gt;</span>
+        <span class="s2">&quot;xml_content&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;&quot;    &lt;policies&gt;</span>
 <span class="s2">      &lt;inbound /&gt;</span>
 <span class="s2">      &lt;backend /&gt;</span>
 <span class="s2">      &lt;outbound /&gt;</span>

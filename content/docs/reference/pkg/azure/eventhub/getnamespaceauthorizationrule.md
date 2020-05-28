@@ -20,7 +20,27 @@ Use this data source to access information about an Authorization Rule for an Ev
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = Output.Create(Azure.EventHub.GetNamespaceAuthorizationRule.InvokeAsync(new Azure.EventHub.GetNamespaceAuthorizationRuleArgs
+        {
+            Name = "navi",
+            ResourceGroupName = "example-resources",
+            NamespaceName = "example-ns",
+        }));
+        this.EventhubAuthorizationRuleId = data.Azurem_eventhub_namespace_authorization_rule.Example.Id;
+    }
+
+    [Output("eventhubAuthorizationRuleId")]
+    public Output<string> EventhubAuthorizationRuleId { get; set; }
+}
+```
 {{% /example %}}
 
 {{% example go %}}

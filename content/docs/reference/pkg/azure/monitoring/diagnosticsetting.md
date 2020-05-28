@@ -12,85 +12,9 @@ meta_desc: "Explore the DiagnosticSetting resource of the monitoring module, inc
 
 Manages a Diagnostic Setting for an existing Resource.
 
-
-
 {{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_azure as azure
-
-example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
-example_account = example_resource_group.name.apply(lambda name: azure.storage.get_account(name="examplestoracc",
-    resource_group_name=name))
-example_key_vault = example_resource_group.name.apply(lambda name: azure.keyvault.get_key_vault(name="example-vault",
-    resource_group_name=name))
-example_diagnostic_setting = azure.monitoring.DiagnosticSetting("exampleDiagnosticSetting",
-    target_resource_id=example_key_vault.id,
-    storage_account_id=example_account.id,
-    log=[{
-        "category": "AuditEvent",
-        "enabled": False,
-        "retention_policy": {
-            "enabled": False,
-        },
-    }],
-    metric=[{
-        "category": "AllMetrics",
-        "retention_policy": {
-            "enabled": False,
-        },
-    }])
-```
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure from "@pulumi/azure";
-
-const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
-const exampleAccount = exampleResourceGroup.name.apply(name => azure.storage.getAccount({
-    name: "examplestoracc",
-    resourceGroupName: name,
-}));
-const exampleKeyVault = exampleResourceGroup.name.apply(name => azure.keyvault.getKeyVault({
-    name: "example-vault",
-    resourceGroupName: name,
-}));
-const exampleDiagnosticSetting = new azure.monitoring.DiagnosticSetting("exampleDiagnosticSetting", {
-    targetResourceId: exampleKeyVault.id,
-    storageAccountId: exampleAccount.id,
-    log: [{
-        category: "AuditEvent",
-        enabled: false,
-        retention_policy: {
-            enabled: false,
-        },
-    }],
-    metric: [{
-        category: "AllMetrics",
-        retention_policy: {
-            enabled: false,
-        },
-    }],
-});
-```
-{{% /example %}}
-
 {{% /examples %}}
+
 
 
 ## Create a DiagnosticSetting Resource {#create}

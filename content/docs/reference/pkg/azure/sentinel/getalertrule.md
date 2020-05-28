@@ -20,7 +20,31 @@ Use this data source to access information about an existing Sentinel Alert Rule
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleAnalyticsWorkspace = Output.Create(Azure.OperationalInsights.GetAnalyticsWorkspace.InvokeAsync(new Azure.OperationalInsights.GetAnalyticsWorkspaceArgs
+        {
+            Name = "example",
+            ResourceGroupName = "example-resources",
+        }));
+        var exampleAlertRule = exampleAnalyticsWorkspace.Apply(exampleAnalyticsWorkspace => Output.Create(Azure.Sentinel.GetAlertRule.InvokeAsync(new Azure.Sentinel.GetAlertRuleArgs
+        {
+            Name = "existing",
+            LogAnalyticsWorkspaceId = exampleAnalyticsWorkspace.Id,
+        })));
+        this.Id = exampleAlertRule.Apply(exampleAlertRule => exampleAlertRule.Id);
+    }
+
+    [Output("id")]
+    public Output<string> Id { get; set; }
+}
+```
 {{% /example %}}
 
 {{% example go %}}

@@ -22,7 +22,63 @@ Manages an IotHub ServiceBus Topic Endpoint
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "East US",
+        });
+        var exampleNamespace = new Azure.ServiceBus.Namespace("exampleNamespace", new Azure.ServiceBus.NamespaceArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            Sku = "Standard",
+        });
+        var exampleTopic = new Azure.ServiceBus.Topic("exampleTopic", new Azure.ServiceBus.TopicArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            NamespaceName = exampleNamespace.Name,
+        });
+        var exampleTopicAuthorizationRule = new Azure.ServiceBus.TopicAuthorizationRule("exampleTopicAuthorizationRule", new Azure.ServiceBus.TopicAuthorizationRuleArgs
+        {
+            NamespaceName = exampleNamespace.Name,
+            TopicName = exampleTopic.Name,
+            ResourceGroupName = exampleResourceGroup.Name,
+            Listen = false,
+            Send = true,
+            Manage = false,
+        });
+        var exampleIoTHub = new Azure.Iot.IoTHub("exampleIoTHub", new Azure.Iot.IoTHubArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            Location = exampleResourceGroup.Location,
+            Sku = new Azure.Iot.Inputs.IoTHubSkuArgs
+            {
+                Name = "B1",
+                Tier = "Basic",
+                Capacity = "1",
+            },
+            Tags = 
+            {
+                { "purpose", "example" },
+            },
+        });
+        var exampleEndpointServicebusTopic = new Azure.Iot.EndpointServicebusTopic("exampleEndpointServicebusTopic", new Azure.Iot.EndpointServicebusTopicArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            IothubName = exampleIoTHub.Name,
+            ConnectionString = exampleTopicAuthorizationRule.PrimaryConnectionString,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

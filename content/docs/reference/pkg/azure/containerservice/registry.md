@@ -20,7 +20,34 @@ Manages an Azure Container Registry.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var rg = new Azure.Core.ResourceGroup("rg", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West US",
+        });
+        var acr = new Azure.ContainerService.Registry("acr", new Azure.ContainerService.RegistryArgs
+        {
+            ResourceGroupName = rg.Name,
+            Location = rg.Location,
+            Sku = "Premium",
+            AdminEnabled = false,
+            GeoreplicationLocations = 
+            {
+                "East US",
+                "West Europe",
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

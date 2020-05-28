@@ -1652,8 +1652,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <span class="n">default_event_subscription</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">eventgrid</span><span class="o">.</span><span class="n">EventSubscription</span><span class="p">(</span><span class="s2">&quot;defaultEventSubscription&quot;</span><span class="p">,</span>
     <span class="n">scope</span><span class="o">=</span><span class="n">default_resource_group</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
     <span class="n">storage_queue_endpoint</span><span class="o">=</span><span class="p">{</span>
-        <span class="s2">&quot;storageAccountId&quot;</span><span class="p">:</span> <span class="n">default_account</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
-        <span class="s2">&quot;queueName&quot;</span><span class="p">:</span> <span class="n">default_queue</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+        <span class="s2">&quot;storage_account_id&quot;</span><span class="p">:</span> <span class="n">default_account</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;queue_name&quot;</span><span class="p">:</span> <span class="n">default_queue</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
     <span class="p">})</span>
 </pre></div>
 </div>

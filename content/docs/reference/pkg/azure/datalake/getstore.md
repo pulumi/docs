@@ -20,7 +20,26 @@ Use this data source to access information about an existing Data Lake Store.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = Output.Create(Azure.DataLake.GetStore.InvokeAsync(new Azure.DataLake.GetStoreArgs
+        {
+            Name = "testdatalake",
+            ResourceGroupName = "testdatalake",
+        }));
+        this.DataLakeStoreId = example.Apply(example => example.Id);
+    }
+
+    [Output("dataLakeStoreId")]
+    public Output<string> DataLakeStoreId { get; set; }
+}
+```
 {{% /example %}}
 
 {{% example go %}}

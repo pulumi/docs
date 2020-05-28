@@ -31,8 +31,8 @@ anything, please consult the source <a class="reference external" href="https://
     <span class="n">display_name</span><span class="o">=</span><span class="s2">&quot;TestManagedAppDefinition&quot;</span><span class="p">,</span>
     <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Test Managed App Definition&quot;</span><span class="p">,</span>
     <span class="n">authorization</span><span class="o">=</span><span class="p">[{</span>
-        <span class="s2">&quot;servicePrincipalId&quot;</span><span class="p">:</span> <span class="n">current</span><span class="o">.</span><span class="n">object_id</span><span class="p">,</span>
-        <span class="s2">&quot;roleDefinitionId&quot;</span><span class="p">:</span> <span class="n">builtin</span><span class="o">.</span><span class="n">id</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">)[</span><span class="nb">len</span><span class="p">(</span><span class="n">builtin</span><span class="o">.</span><span class="n">id</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">))</span> <span class="o">-</span> <span class="mi">1</span><span class="p">],</span>
+        <span class="s2">&quot;service_principal_id&quot;</span><span class="p">:</span> <span class="n">current</span><span class="o">.</span><span class="n">object_id</span><span class="p">,</span>
+        <span class="s2">&quot;role_definition_id&quot;</span><span class="p">:</span> <span class="n">builtin</span><span class="o">.</span><span class="n">id</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">)[</span><span class="nb">len</span><span class="p">(</span><span class="n">builtin</span><span class="o">.</span><span class="n">id</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">))</span> <span class="o">-</span> <span class="mi">1</span><span class="p">],</span>
     <span class="p">}])</span>
 <span class="n">example_application</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">managedapplication</span><span class="o">.</span><span class="n">Application</span><span class="p">(</span><span class="s2">&quot;exampleApplication&quot;</span><span class="p">,</span>
     <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
@@ -43,7 +43,7 @@ anything, please consult the source <a class="reference external" href="https://
     <span class="n">parameters</span><span class="o">=</span><span class="p">{</span>
         <span class="s2">&quot;location&quot;</span><span class="p">:</span> <span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
         <span class="s2">&quot;storageAccountNamePrefix&quot;</span><span class="p">:</span> <span class="s2">&quot;storeNamePrefix&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;storageAccountType&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard_LRS&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;storage_account_type&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard_LRS&quot;</span><span class="p">,</span>
     <span class="p">})</span>
 </pre></div>
 </div>
@@ -233,8 +233,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">display_name</span><span class="o">=</span><span class="s2">&quot;TestManagedApplicationDefinition&quot;</span><span class="p">,</span>
     <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Test Managed Application Definition&quot;</span><span class="p">,</span>
     <span class="n">authorization</span><span class="o">=</span><span class="p">[{</span>
-        <span class="s2">&quot;servicePrincipalId&quot;</span><span class="p">:</span> <span class="n">current</span><span class="o">.</span><span class="n">object_id</span><span class="p">,</span>
-        <span class="s2">&quot;roleDefinitionId&quot;</span><span class="p">:</span> <span class="s2">&quot;a094b430-dad3-424d-ae58-13f72fd72591&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;service_principal_id&quot;</span><span class="p">:</span> <span class="n">current</span><span class="o">.</span><span class="n">object_id</span><span class="p">,</span>
+        <span class="s2">&quot;role_definition_id&quot;</span><span class="p">:</span> <span class="s2">&quot;a094b430-dad3-424d-ae58-13f72fd72591&quot;</span><span class="p">,</span>
     <span class="p">}])</span>
 </pre></div>
 </div>

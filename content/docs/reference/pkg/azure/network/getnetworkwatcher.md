@@ -20,7 +20,26 @@ Use this data source to access information about an existing Network Watcher.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = Output.Create(Azure.Network.GetNetworkWatcher.InvokeAsync(new Azure.Network.GetNetworkWatcherArgs
+        {
+            Name = azurerm_network_watcher.Example.Name,
+            ResourceGroupName = azurerm_resource_group.Example.Name,
+        }));
+        this.NetworkWatcherId = example.Apply(example => example.Id);
+    }
+
+    [Output("networkWatcherId")]
+    public Output<string> NetworkWatcherId { get; set; }
+}
+```
 {{% /example %}}
 
 {{% example go %}}

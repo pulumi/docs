@@ -20,7 +20,24 @@ Use this data source to access information about an existing IotHub Shared Acces
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = Output.Create(Azure.Iot.GetSharedAccessPolicy.InvokeAsync(new Azure.Iot.GetSharedAccessPolicyArgs
+        {
+            Name = "example",
+            ResourceGroupName = azurerm_resource_group.Example.Name,
+            IothubName = azurerm_iothub.Example.Name,
+        }));
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

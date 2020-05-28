@@ -22,7 +22,26 @@ Use this data source to access the connection status information about an existi
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = Output.Create(Azure.PrivateLink.GetEndpointConnection.InvokeAsync(new Azure.PrivateLink.GetEndpointConnectionArgs
+        {
+            Name = "example-private-endpoint",
+            ResourceGroupName = "example-rg",
+        }));
+        this.PrivateEndpointStatus = example.Apply(example => example.PrivateServiceConnections[0].Status);
+    }
+
+    [Output("privateEndpointStatus")]
+    public Output<string> PrivateEndpointStatus { get; set; }
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -36,7 +55,7 @@ import pulumi_azure as azure
 
 example = azure.privatelink.get_endpoint_connection(name="example-private-endpoint",
     resource_group_name="example-rg")
-pulumi.export("privateEndpointStatus", example.private_service_connections[0].status)
+pulumi.export("privateEndpointStatus", example.private_service_connections[0]["status"])
 ```
 {{% /example %}}
 

@@ -32,8 +32,8 @@ anything, please consult the source <a class="reference external" href="https://
     <span class="n">recurrence_period_start</span><span class="o">=</span><span class="s2">&quot;2020-08-18T00:00:00Z&quot;</span><span class="p">,</span>
     <span class="n">recurrence_period_end</span><span class="o">=</span><span class="s2">&quot;2020-09-18T00:00:00Z&quot;</span><span class="p">,</span>
     <span class="n">delivery_info</span><span class="o">=</span><span class="p">{</span>
-        <span class="s2">&quot;storageAccountId&quot;</span><span class="p">:</span> <span class="n">example_account</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
-        <span class="s2">&quot;containerName&quot;</span><span class="p">:</span> <span class="s2">&quot;examplecontainer&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;storage_account_id&quot;</span><span class="p">:</span> <span class="n">example_account</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;container_name&quot;</span><span class="p">:</span> <span class="s2">&quot;examplecontainer&quot;</span><span class="p">,</span>
         <span class="s2">&quot;rootFolderPath&quot;</span><span class="p">:</span> <span class="s2">&quot;/root/updated&quot;</span><span class="p">,</span>
     <span class="p">},</span>
     <span class="n">query</span><span class="o">=</span><span class="p">{</span>

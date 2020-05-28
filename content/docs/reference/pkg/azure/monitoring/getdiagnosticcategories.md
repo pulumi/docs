@@ -20,7 +20,27 @@ Use this data source to access information about the Monitor Diagnostics Categor
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleKeyVault = Output.Create(Azure.KeyVault.GetKeyVault.InvokeAsync(new Azure.KeyVault.GetKeyVaultArgs
+        {
+            Name = azurerm_key_vault.Example.Name,
+            ResourceGroupName = azurerm_key_vault.Example.Resource_group_name,
+        }));
+        var exampleDiagnosticCategories = exampleKeyVault.Apply(exampleKeyVault => Output.Create(Azure.Monitoring.GetDiagnosticCategories.InvokeAsync(new Azure.Monitoring.GetDiagnosticCategoriesArgs
+        {
+            ResourceId = exampleKeyVault.Id,
+        })));
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

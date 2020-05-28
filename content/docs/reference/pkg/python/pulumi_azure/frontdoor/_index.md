@@ -89,7 +89,7 @@ anything, please consult the source <a class="reference external" href="https://
                 <span class="p">{</span>
                     <span class="s2">&quot;ruleGroupName&quot;</span><span class="p">:</span> <span class="s2">&quot;PHP&quot;</span><span class="p">,</span>
                     <span class="s2">&quot;rule&quot;</span><span class="p">:</span> <span class="p">[{</span>
-                        <span class="s2">&quot;ruleId&quot;</span><span class="p">:</span> <span class="s2">&quot;933100&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;rule_id&quot;</span><span class="p">:</span> <span class="s2">&quot;933100&quot;</span><span class="p">,</span>
                         <span class="s2">&quot;enabled&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
                         <span class="s2">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;Block&quot;</span><span class="p">,</span>
                     <span class="p">}],</span>
@@ -102,7 +102,7 @@ anything, please consult the source <a class="reference external" href="https://
                         <span class="s2">&quot;selector&quot;</span><span class="p">:</span> <span class="s2">&quot;really_not_suspicious&quot;</span><span class="p">,</span>
                     <span class="p">}],</span>
                     <span class="s2">&quot;rule&quot;</span><span class="p">:</span> <span class="p">[{</span>
-                        <span class="s2">&quot;ruleId&quot;</span><span class="p">:</span> <span class="s2">&quot;942200&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;rule_id&quot;</span><span class="p">:</span> <span class="s2">&quot;942200&quot;</span><span class="p">,</span>
                         <span class="s2">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;Block&quot;</span><span class="p">,</span>
                         <span class="s2">&quot;exclusion&quot;</span><span class="p">:</span> <span class="p">[{</span>
                             <span class="s2">&quot;matchVariable&quot;</span><span class="p">:</span> <span class="s2">&quot;QueryStringArgNames&quot;</span><span class="p">,</span>
@@ -473,7 +473,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
             <span class="s2">&quot;Https&quot;</span><span class="p">,</span>
         <span class="p">],</span>
         <span class="s2">&quot;patternsToMatches&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;/*&quot;</span><span class="p">],</span>
-        <span class="s2">&quot;frontendEndpoints&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;exampleFrontendEndpoint1&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;frontend_endpoints&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;exampleFrontendEndpoint1&quot;</span><span class="p">],</span>
         <span class="s2">&quot;forwarding_configuration&quot;</span><span class="p">:</span> <span class="p">{</span>
             <span class="s2">&quot;forwardingProtocol&quot;</span><span class="p">:</span> <span class="s2">&quot;MatchRequest&quot;</span><span class="p">,</span>
             <span class="s2">&quot;backendPoolName&quot;</span><span class="p">:</span> <span class="s2">&quot;exampleBackendBing&quot;</span><span class="p">,</span>
@@ -498,7 +498,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="p">}],</span>
     <span class="n">frontend_endpoint</span><span class="o">=</span><span class="p">[{</span>
         <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;exampleFrontendEndpoint1&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;hostName&quot;</span><span class="p">:</span> <span class="s2">&quot;example-FrontDoor.azurefd.net&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;host_name&quot;</span><span class="p">:</span> <span class="s2">&quot;example-FrontDoor.azurefd.net&quot;</span><span class="p">,</span>
         <span class="s2">&quot;customHttpsProvisioningEnabled&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
     <span class="p">}])</span>
 </pre></div>

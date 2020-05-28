@@ -20,7 +20,51 @@ Manages a Kusto (also known as Azure Data Explorer) Database Principal
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var current = Output.Create(Azure.Core.GetClientConfig.InvokeAsync());
+        var rg = new Azure.Core.ResourceGroup("rg", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "East US",
+        });
+        var cluster = new Azure.Kusto.Cluster("cluster", new Azure.Kusto.ClusterArgs
+        {
+            Location = rg.Location,
+            ResourceGroupName = rg.Name,
+            Sku = new Azure.Kusto.Inputs.ClusterSkuArgs
+            {
+                Name = "Standard_D13_v2",
+                Capacity = 2,
+            },
+        });
+        var database = new Azure.Kusto.Database("database", new Azure.Kusto.DatabaseArgs
+        {
+            ResourceGroupName = rg.Name,
+            Location = rg.Location,
+            ClusterName = cluster.Name,
+            HotCachePeriod = "P7D",
+            SoftDeletePeriod = "P31D",
+        });
+        var principal = new Azure.Kusto.DatabasePrincipal("principal", new Azure.Kusto.DatabasePrincipalArgs
+        {
+            ResourceGroupName = rg.Name,
+            ClusterName = cluster.Name,
+            DatabaseName = azurerm_kusto_database.Test.Name,
+            Role = "Viewer",
+            Type = "User",
+            ClientId = current.Apply(current => current.TenantId),
+            ObjectId = current.Apply(current => current.ClientId),
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

@@ -20,7 +20,26 @@ Use this data source to access information about an existing Key Vault Key.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = Output.Create(Azure.KeyVault.GetKey.InvokeAsync(new Azure.KeyVault.GetKeyArgs
+        {
+            Name = "secret-sauce",
+            KeyVaultId = data.Azurerm_key_vault.Existing.Id,
+        }));
+        this.KeyType = example.Apply(example => example.KeyType);
+    }
+
+    [Output("keyType")]
+    public Output<string> KeyType { get; set; }
+}
+```
 {{% /example %}}
 
 {{% example go %}}

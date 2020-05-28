@@ -20,7 +20,26 @@ Use this data source to access information about an existing MariaDB Server.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var dbServer = Output.Create(Azure.MariaDB.GetMariaDbServer.InvokeAsync(new Azure.MariaDB.GetMariaDbServerArgs
+        {
+            Name = "mariadb-server",
+            ResourceGroupName = azurerm_mariadb_server.Example.Resource_group_name,
+        }));
+        this.MariadbServerId = data.Azurerm_mariadb_server.Example.Id;
+    }
+
+    [Output("mariadbServerId")]
+    public Output<string> MariadbServerId { get; set; }
+}
+```
 {{% /example %}}
 
 {{% example go %}}

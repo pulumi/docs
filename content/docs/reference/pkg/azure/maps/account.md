@@ -20,7 +20,31 @@ Manages an Azure Maps Account.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West Europe",
+        });
+        var exampleAccount = new Azure.Maps.Account("exampleAccount", new Azure.Maps.AccountArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            SkuName = "S1",
+            Tags = 
+            {
+                { "environment", "Test" },
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

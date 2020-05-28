@@ -20,7 +20,28 @@ Use this data source to access information about a ServiceBus Topic Authorizatio
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = Output.Create(Azure.ServiceBus.GetTopicAuthorizationRule.InvokeAsync(new Azure.ServiceBus.GetTopicAuthorizationRuleArgs
+        {
+            Name = "example-tfex_name",
+            NamespaceName = "example-namespace",
+            ResourceGroupName = "example-resources",
+            TopicName = "example-servicebus_topic",
+        }));
+        this.ServicebusAuthorizationRuleId = data.Azurem_servicebus_topic_authorization_rule.Example.Id;
+    }
+
+    [Output("servicebusAuthorizationRuleId")]
+    public Output<string> ServicebusAuthorizationRuleId { get; set; }
+}
+```
 {{% /example %}}
 
 {{% example go %}}
