@@ -20,7 +20,39 @@ With this resource, you can set up APIs that can be consumed from your authorize
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Auth0 = Pulumi.Auth0;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var myResourceServer = new Auth0.ResourceServer("myResourceServer", new Auth0.ResourceServerArgs
+        {
+            AllowOfflineAccess = true,
+            Identifier = "https://api.example.com",
+            Scopes = 
+            {
+                new Auth0.Inputs.ResourceServerScopeArgs
+                {
+                    Description = "Create foos",
+                    Value = "create:foo",
+                },
+                new Auth0.Inputs.ResourceServerScopeArgs
+                {
+                    Description = "Create bars",
+                    Value = "create:bar",
+                },
+            },
+            SigningAlg = "RS256",
+            SkipConsentForVerifiableFirstPartyClients = true,
+            TokenLifetime = 8600,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -84,19 +116,19 @@ const myResourceServer = new auth0.ResourceServer("my_resource_server", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/auth0/#ResourceServer">ResourceServer</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/auth0/#ResourceServerArgs">ResourceServerArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/auth0/#ResourceServer">ResourceServer</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/auth0/#ResourceServerArgs">ResourceServerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ResourceServer</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>allow_offline_access=None<span class="p">, </span>enforce_policies=None<span class="p">, </span>identifier=None<span class="p">, </span>name=None<span class="p">, </span>options=None<span class="p">, </span>scopes=None<span class="p">, </span>signing_alg=None<span class="p">, </span>signing_secret=None<span class="p">, </span>skip_consent_for_verifiable_first_party_clients=None<span class="p">, </span>token_dialect=None<span class="p">, </span>token_lifetime=None<span class="p">, </span>token_lifetime_for_web=None<span class="p">, </span>verification_location=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/auth0/#ResourceServer">ResourceServer</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>allow_offline_access=None<span class="p">, </span>enforce_policies=None<span class="p">, </span>identifier=None<span class="p">, </span>name=None<span class="p">, </span>options=None<span class="p">, </span>scopes=None<span class="p">, </span>signing_alg=None<span class="p">, </span>signing_secret=None<span class="p">, </span>skip_consent_for_verifiable_first_party_clients=None<span class="p">, </span>token_dialect=None<span class="p">, </span>token_lifetime=None<span class="p">, </span>token_lifetime_for_web=None<span class="p">, </span>verification_location=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewResourceServer<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-auth0/sdk/go/auth0/?tab=doc#ResourceServerArgs">ResourceServerArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-auth0/sdk/go/auth0/?tab=doc#ResourceServer">ResourceServer</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-auth0/sdk/go/auth0/?tab=doc#ResourceServer">NewResourceServer</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-auth0/sdk/go/auth0/?tab=doc#ResourceServerArgs">ResourceServerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-auth0/sdk/go/auth0/?tab=doc#ResourceServer">ResourceServer</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Auth0/Pulumi.Auth0.ResourceServer.html">ResourceServer</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Auth0/Pulumi.Auth0.ResourceServerArgs.html">ResourceServerArgs</a></span>? <span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Auth0/Pulumi.Auth0.ResourceServer.html">ResourceServer</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Auth0/Pulumi.Auth0.ResourceServerArgs.html">ResourceServerArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -262,7 +294,9 @@ The ResourceServer resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>Allow<wbr>Offline<wbr>Access</span>
+        <span id="allowofflineaccess_csharp">
+<a href="#allowofflineaccess_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Offline<wbr>Access</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -271,7 +305,9 @@ The ResourceServer resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enforce<wbr>Policies</span>
+        <span id="enforcepolicies_csharp">
+<a href="#enforcepolicies_csharp" style="color: inherit; text-decoration: inherit;">Enforce<wbr>Policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -280,7 +316,9 @@ The ResourceServer resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>Identifier</span>
+        <span id="identifier_csharp">
+<a href="#identifier_csharp" style="color: inherit; text-decoration: inherit;">Identifier</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -289,7 +327,9 @@ The ResourceServer resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -298,7 +338,9 @@ The ResourceServer resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>Options</span>
+        <span id="options_csharp">
+<a href="#options_csharp" style="color: inherit; text-decoration: inherit;">Options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -307,7 +349,9 @@ The ResourceServer resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>Scopes</span>
+        <span id="scopes_csharp">
+<a href="#scopes_csharp" style="color: inherit; text-decoration: inherit;">Scopes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceserverscope">List&lt;Resource<wbr>Server<wbr>Scope<wbr>Args&gt;</a></span>
     </dt>
@@ -316,7 +360,9 @@ The ResourceServer resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>Signing<wbr>Alg</span>
+        <span id="signingalg_csharp">
+<a href="#signingalg_csharp" style="color: inherit; text-decoration: inherit;">Signing<wbr>Alg</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -325,7 +371,9 @@ The ResourceServer resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>Signing<wbr>Secret</span>
+        <span id="signingsecret_csharp">
+<a href="#signingsecret_csharp" style="color: inherit; text-decoration: inherit;">Signing<wbr>Secret</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -334,7 +382,9 @@ The ResourceServer resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>Skip<wbr>Consent<wbr>For<wbr>Verifiable<wbr>First<wbr>Party<wbr>Clients</span>
+        <span id="skipconsentforverifiablefirstpartyclients_csharp">
+<a href="#skipconsentforverifiablefirstpartyclients_csharp" style="color: inherit; text-decoration: inherit;">Skip<wbr>Consent<wbr>For<wbr>Verifiable<wbr>First<wbr>Party<wbr>Clients</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -343,7 +393,9 @@ The ResourceServer resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>Token<wbr>Dialect</span>
+        <span id="tokendialect_csharp">
+<a href="#tokendialect_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Dialect</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -352,7 +404,9 @@ The ResourceServer resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>Token<wbr>Lifetime</span>
+        <span id="tokenlifetime_csharp">
+<a href="#tokenlifetime_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Lifetime</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -361,7 +415,9 @@ The ResourceServer resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>Token<wbr>Lifetime<wbr>For<wbr>Web</span>
+        <span id="tokenlifetimeforweb_csharp">
+<a href="#tokenlifetimeforweb_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Lifetime<wbr>For<wbr>Web</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -370,7 +426,9 @@ The ResourceServer resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>Verification<wbr>Location</span>
+        <span id="verificationlocation_csharp">
+<a href="#verificationlocation_csharp" style="color: inherit; text-decoration: inherit;">Verification<wbr>Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -386,7 +444,9 @@ The ResourceServer resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>Allow<wbr>Offline<wbr>Access</span>
+        <span id="allowofflineaccess_go">
+<a href="#allowofflineaccess_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Offline<wbr>Access</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -395,7 +455,9 @@ The ResourceServer resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enforce<wbr>Policies</span>
+        <span id="enforcepolicies_go">
+<a href="#enforcepolicies_go" style="color: inherit; text-decoration: inherit;">Enforce<wbr>Policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -404,7 +466,9 @@ The ResourceServer resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>Identifier</span>
+        <span id="identifier_go">
+<a href="#identifier_go" style="color: inherit; text-decoration: inherit;">Identifier</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -413,7 +477,9 @@ The ResourceServer resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -422,7 +488,9 @@ The ResourceServer resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>Options</span>
+        <span id="options_go">
+<a href="#options_go" style="color: inherit; text-decoration: inherit;">Options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -431,7 +499,9 @@ The ResourceServer resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>Scopes</span>
+        <span id="scopes_go">
+<a href="#scopes_go" style="color: inherit; text-decoration: inherit;">Scopes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceserverscope">[]Resource<wbr>Server<wbr>Scope</a></span>
     </dt>
@@ -440,7 +510,9 @@ The ResourceServer resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>Signing<wbr>Alg</span>
+        <span id="signingalg_go">
+<a href="#signingalg_go" style="color: inherit; text-decoration: inherit;">Signing<wbr>Alg</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -449,7 +521,9 @@ The ResourceServer resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>Signing<wbr>Secret</span>
+        <span id="signingsecret_go">
+<a href="#signingsecret_go" style="color: inherit; text-decoration: inherit;">Signing<wbr>Secret</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -458,7 +532,9 @@ The ResourceServer resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>Skip<wbr>Consent<wbr>For<wbr>Verifiable<wbr>First<wbr>Party<wbr>Clients</span>
+        <span id="skipconsentforverifiablefirstpartyclients_go">
+<a href="#skipconsentforverifiablefirstpartyclients_go" style="color: inherit; text-decoration: inherit;">Skip<wbr>Consent<wbr>For<wbr>Verifiable<wbr>First<wbr>Party<wbr>Clients</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -467,7 +543,9 @@ The ResourceServer resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>Token<wbr>Dialect</span>
+        <span id="tokendialect_go">
+<a href="#tokendialect_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Dialect</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -476,7 +554,9 @@ The ResourceServer resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>Token<wbr>Lifetime</span>
+        <span id="tokenlifetime_go">
+<a href="#tokenlifetime_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Lifetime</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -485,7 +565,9 @@ The ResourceServer resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>Token<wbr>Lifetime<wbr>For<wbr>Web</span>
+        <span id="tokenlifetimeforweb_go">
+<a href="#tokenlifetimeforweb_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Lifetime<wbr>For<wbr>Web</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -494,7 +576,9 @@ The ResourceServer resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>Verification<wbr>Location</span>
+        <span id="verificationlocation_go">
+<a href="#verificationlocation_go" style="color: inherit; text-decoration: inherit;">Verification<wbr>Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -510,7 +594,9 @@ The ResourceServer resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>allow<wbr>Offline<wbr>Access</span>
+        <span id="allowofflineaccess_nodejs">
+<a href="#allowofflineaccess_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Offline<wbr>Access</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -519,7 +605,9 @@ The ResourceServer resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>enforce<wbr>Policies</span>
+        <span id="enforcepolicies_nodejs">
+<a href="#enforcepolicies_nodejs" style="color: inherit; text-decoration: inherit;">enforce<wbr>Policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -528,7 +616,9 @@ The ResourceServer resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>identifier</span>
+        <span id="identifier_nodejs">
+<a href="#identifier_nodejs" style="color: inherit; text-decoration: inherit;">identifier</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -537,7 +627,9 @@ The ResourceServer resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -546,7 +638,9 @@ The ResourceServer resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>options</span>
+        <span id="options_nodejs">
+<a href="#options_nodejs" style="color: inherit; text-decoration: inherit;">options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -555,7 +649,9 @@ The ResourceServer resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>scopes</span>
+        <span id="scopes_nodejs">
+<a href="#scopes_nodejs" style="color: inherit; text-decoration: inherit;">scopes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceserverscope">Resource<wbr>Server<wbr>Scope[]</a></span>
     </dt>
@@ -564,7 +660,9 @@ The ResourceServer resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>signing<wbr>Alg</span>
+        <span id="signingalg_nodejs">
+<a href="#signingalg_nodejs" style="color: inherit; text-decoration: inherit;">signing<wbr>Alg</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -573,7 +671,9 @@ The ResourceServer resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>signing<wbr>Secret</span>
+        <span id="signingsecret_nodejs">
+<a href="#signingsecret_nodejs" style="color: inherit; text-decoration: inherit;">signing<wbr>Secret</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -582,7 +682,9 @@ The ResourceServer resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>skip<wbr>Consent<wbr>For<wbr>Verifiable<wbr>First<wbr>Party<wbr>Clients</span>
+        <span id="skipconsentforverifiablefirstpartyclients_nodejs">
+<a href="#skipconsentforverifiablefirstpartyclients_nodejs" style="color: inherit; text-decoration: inherit;">skip<wbr>Consent<wbr>For<wbr>Verifiable<wbr>First<wbr>Party<wbr>Clients</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -591,7 +693,9 @@ The ResourceServer resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>token<wbr>Dialect</span>
+        <span id="tokendialect_nodejs">
+<a href="#tokendialect_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Dialect</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -600,7 +704,9 @@ The ResourceServer resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>token<wbr>Lifetime</span>
+        <span id="tokenlifetime_nodejs">
+<a href="#tokenlifetime_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Lifetime</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -609,7 +715,9 @@ The ResourceServer resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>token<wbr>Lifetime<wbr>For<wbr>Web</span>
+        <span id="tokenlifetimeforweb_nodejs">
+<a href="#tokenlifetimeforweb_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Lifetime<wbr>For<wbr>Web</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -618,7 +726,9 @@ The ResourceServer resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>verification<wbr>Location</span>
+        <span id="verificationlocation_nodejs">
+<a href="#verificationlocation_nodejs" style="color: inherit; text-decoration: inherit;">verification<wbr>Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -634,7 +744,9 @@ The ResourceServer resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>allow_<wbr>offline_<wbr>access</span>
+        <span id="allow_offline_access_python">
+<a href="#allow_offline_access_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>offline_<wbr>access</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -643,7 +755,9 @@ The ResourceServer resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>enforce_<wbr>policies</span>
+        <span id="enforce_policies_python">
+<a href="#enforce_policies_python" style="color: inherit; text-decoration: inherit;">enforce_<wbr>policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -652,7 +766,9 @@ The ResourceServer resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>identifier</span>
+        <span id="identifier_python">
+<a href="#identifier_python" style="color: inherit; text-decoration: inherit;">identifier</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -661,7 +777,9 @@ The ResourceServer resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -670,7 +788,9 @@ The ResourceServer resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>options</span>
+        <span id="options_python">
+<a href="#options_python" style="color: inherit; text-decoration: inherit;">options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -679,7 +799,9 @@ The ResourceServer resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>scopes</span>
+        <span id="scopes_python">
+<a href="#scopes_python" style="color: inherit; text-decoration: inherit;">scopes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceserverscope">List[Resource<wbr>Server<wbr>Scope]</a></span>
     </dt>
@@ -688,7 +810,9 @@ The ResourceServer resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>signing_<wbr>alg</span>
+        <span id="signing_alg_python">
+<a href="#signing_alg_python" style="color: inherit; text-decoration: inherit;">signing_<wbr>alg</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -697,7 +821,9 @@ The ResourceServer resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>signing_<wbr>secret</span>
+        <span id="signing_secret_python">
+<a href="#signing_secret_python" style="color: inherit; text-decoration: inherit;">signing_<wbr>secret</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -706,7 +832,9 @@ The ResourceServer resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>skip_<wbr>consent_<wbr>for_<wbr>verifiable_<wbr>first_<wbr>party_<wbr>clients</span>
+        <span id="skip_consent_for_verifiable_first_party_clients_python">
+<a href="#skip_consent_for_verifiable_first_party_clients_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>consent_<wbr>for_<wbr>verifiable_<wbr>first_<wbr>party_<wbr>clients</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -715,7 +843,9 @@ The ResourceServer resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>token_<wbr>dialect</span>
+        <span id="token_dialect_python">
+<a href="#token_dialect_python" style="color: inherit; text-decoration: inherit;">token_<wbr>dialect</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -724,7 +854,9 @@ The ResourceServer resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>token_<wbr>lifetime</span>
+        <span id="token_lifetime_python">
+<a href="#token_lifetime_python" style="color: inherit; text-decoration: inherit;">token_<wbr>lifetime</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -733,7 +865,9 @@ The ResourceServer resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>token_<wbr>lifetime_<wbr>for_<wbr>web</span>
+        <span id="token_lifetime_for_web_python">
+<a href="#token_lifetime_for_web_python" style="color: inherit; text-decoration: inherit;">token_<wbr>lifetime_<wbr>for_<wbr>web</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -742,7 +876,9 @@ The ResourceServer resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>verification_<wbr>location</span>
+        <span id="verification_location_python">
+<a href="#verification_location_python" style="color: inherit; text-decoration: inherit;">verification_<wbr>location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -769,7 +905,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -784,7 +922,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -799,7 +939,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -814,7 +956,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -835,7 +979,7 @@ Get an existing ResourceServer resource's state with the given name, ID, and opt
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/auth0/#ResourceServerState">ResourceServerState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/auth0/#ResourceServer">ResourceServer</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/auth0/#ResourceServerState">ResourceServerState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/auth0/#ResourceServer">ResourceServer</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -843,11 +987,11 @@ Get an existing ResourceServer resource's state with the given name, ID, and opt
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetResourceServer<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-auth0/sdk/go/auth0/?tab=doc#ResourceServerState">ResourceServerState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-auth0/sdk/go/auth0/?tab=doc#ResourceServer">ResourceServer</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetResourceServer<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-auth0/sdk/go/auth0/?tab=doc#ResourceServerState">ResourceServerState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-auth0/sdk/go/auth0/?tab=doc#ResourceServer">ResourceServer</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Auth0/Pulumi.Auth0.ResourceServer.html">ResourceServer</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Auth0/Pulumi.Auth0..ResourceServerState.html">ResourceServerState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Auth0/Pulumi.Auth0.ResourceServer.html">ResourceServer</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Auth0/Pulumi.Auth0..ResourceServerState.html">ResourceServerState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -955,7 +1099,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Allow<wbr>Offline<wbr>Access</span>
+        <span id="state_allowofflineaccess_csharp">
+<a href="#state_allowofflineaccess_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Offline<wbr>Access</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -964,7 +1110,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enforce<wbr>Policies</span>
+        <span id="state_enforcepolicies_csharp">
+<a href="#state_enforcepolicies_csharp" style="color: inherit; text-decoration: inherit;">Enforce<wbr>Policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -973,7 +1121,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Identifier</span>
+        <span id="state_identifier_csharp">
+<a href="#state_identifier_csharp" style="color: inherit; text-decoration: inherit;">Identifier</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -982,7 +1132,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -991,7 +1143,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Options</span>
+        <span id="state_options_csharp">
+<a href="#state_options_csharp" style="color: inherit; text-decoration: inherit;">Options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -1000,7 +1154,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Scopes</span>
+        <span id="state_scopes_csharp">
+<a href="#state_scopes_csharp" style="color: inherit; text-decoration: inherit;">Scopes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceserverscope">List&lt;Resource<wbr>Server<wbr>Scope<wbr>Args&gt;</a></span>
     </dt>
@@ -1009,7 +1165,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Signing<wbr>Alg</span>
+        <span id="state_signingalg_csharp">
+<a href="#state_signingalg_csharp" style="color: inherit; text-decoration: inherit;">Signing<wbr>Alg</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1018,7 +1176,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Signing<wbr>Secret</span>
+        <span id="state_signingsecret_csharp">
+<a href="#state_signingsecret_csharp" style="color: inherit; text-decoration: inherit;">Signing<wbr>Secret</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1027,7 +1187,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Skip<wbr>Consent<wbr>For<wbr>Verifiable<wbr>First<wbr>Party<wbr>Clients</span>
+        <span id="state_skipconsentforverifiablefirstpartyclients_csharp">
+<a href="#state_skipconsentforverifiablefirstpartyclients_csharp" style="color: inherit; text-decoration: inherit;">Skip<wbr>Consent<wbr>For<wbr>Verifiable<wbr>First<wbr>Party<wbr>Clients</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1036,7 +1198,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Token<wbr>Dialect</span>
+        <span id="state_tokendialect_csharp">
+<a href="#state_tokendialect_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Dialect</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1045,7 +1209,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Token<wbr>Lifetime</span>
+        <span id="state_tokenlifetime_csharp">
+<a href="#state_tokenlifetime_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Lifetime</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1054,7 +1220,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Token<wbr>Lifetime<wbr>For<wbr>Web</span>
+        <span id="state_tokenlifetimeforweb_csharp">
+<a href="#state_tokenlifetimeforweb_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Lifetime<wbr>For<wbr>Web</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1063,7 +1231,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Verification<wbr>Location</span>
+        <span id="state_verificationlocation_csharp">
+<a href="#state_verificationlocation_csharp" style="color: inherit; text-decoration: inherit;">Verification<wbr>Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1079,7 +1249,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Allow<wbr>Offline<wbr>Access</span>
+        <span id="state_allowofflineaccess_go">
+<a href="#state_allowofflineaccess_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Offline<wbr>Access</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1088,7 +1260,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enforce<wbr>Policies</span>
+        <span id="state_enforcepolicies_go">
+<a href="#state_enforcepolicies_go" style="color: inherit; text-decoration: inherit;">Enforce<wbr>Policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1097,7 +1271,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Identifier</span>
+        <span id="state_identifier_go">
+<a href="#state_identifier_go" style="color: inherit; text-decoration: inherit;">Identifier</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1106,7 +1282,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1115,7 +1293,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Options</span>
+        <span id="state_options_go">
+<a href="#state_options_go" style="color: inherit; text-decoration: inherit;">Options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -1124,7 +1304,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Scopes</span>
+        <span id="state_scopes_go">
+<a href="#state_scopes_go" style="color: inherit; text-decoration: inherit;">Scopes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceserverscope">[]Resource<wbr>Server<wbr>Scope</a></span>
     </dt>
@@ -1133,7 +1315,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Signing<wbr>Alg</span>
+        <span id="state_signingalg_go">
+<a href="#state_signingalg_go" style="color: inherit; text-decoration: inherit;">Signing<wbr>Alg</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1142,7 +1326,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Signing<wbr>Secret</span>
+        <span id="state_signingsecret_go">
+<a href="#state_signingsecret_go" style="color: inherit; text-decoration: inherit;">Signing<wbr>Secret</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1151,7 +1337,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Skip<wbr>Consent<wbr>For<wbr>Verifiable<wbr>First<wbr>Party<wbr>Clients</span>
+        <span id="state_skipconsentforverifiablefirstpartyclients_go">
+<a href="#state_skipconsentforverifiablefirstpartyclients_go" style="color: inherit; text-decoration: inherit;">Skip<wbr>Consent<wbr>For<wbr>Verifiable<wbr>First<wbr>Party<wbr>Clients</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1160,7 +1348,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Token<wbr>Dialect</span>
+        <span id="state_tokendialect_go">
+<a href="#state_tokendialect_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Dialect</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1169,7 +1359,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Token<wbr>Lifetime</span>
+        <span id="state_tokenlifetime_go">
+<a href="#state_tokenlifetime_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Lifetime</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1178,7 +1370,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Token<wbr>Lifetime<wbr>For<wbr>Web</span>
+        <span id="state_tokenlifetimeforweb_go">
+<a href="#state_tokenlifetimeforweb_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Lifetime<wbr>For<wbr>Web</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1187,7 +1381,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Verification<wbr>Location</span>
+        <span id="state_verificationlocation_go">
+<a href="#state_verificationlocation_go" style="color: inherit; text-decoration: inherit;">Verification<wbr>Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1203,7 +1399,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>allow<wbr>Offline<wbr>Access</span>
+        <span id="state_allowofflineaccess_nodejs">
+<a href="#state_allowofflineaccess_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Offline<wbr>Access</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1212,7 +1410,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>enforce<wbr>Policies</span>
+        <span id="state_enforcepolicies_nodejs">
+<a href="#state_enforcepolicies_nodejs" style="color: inherit; text-decoration: inherit;">enforce<wbr>Policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1221,7 +1421,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>identifier</span>
+        <span id="state_identifier_nodejs">
+<a href="#state_identifier_nodejs" style="color: inherit; text-decoration: inherit;">identifier</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1230,7 +1432,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1239,7 +1443,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>options</span>
+        <span id="state_options_nodejs">
+<a href="#state_options_nodejs" style="color: inherit; text-decoration: inherit;">options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -1248,7 +1454,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>scopes</span>
+        <span id="state_scopes_nodejs">
+<a href="#state_scopes_nodejs" style="color: inherit; text-decoration: inherit;">scopes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceserverscope">Resource<wbr>Server<wbr>Scope[]</a></span>
     </dt>
@@ -1257,7 +1465,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>signing<wbr>Alg</span>
+        <span id="state_signingalg_nodejs">
+<a href="#state_signingalg_nodejs" style="color: inherit; text-decoration: inherit;">signing<wbr>Alg</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1266,7 +1476,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>signing<wbr>Secret</span>
+        <span id="state_signingsecret_nodejs">
+<a href="#state_signingsecret_nodejs" style="color: inherit; text-decoration: inherit;">signing<wbr>Secret</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1275,7 +1487,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>skip<wbr>Consent<wbr>For<wbr>Verifiable<wbr>First<wbr>Party<wbr>Clients</span>
+        <span id="state_skipconsentforverifiablefirstpartyclients_nodejs">
+<a href="#state_skipconsentforverifiablefirstpartyclients_nodejs" style="color: inherit; text-decoration: inherit;">skip<wbr>Consent<wbr>For<wbr>Verifiable<wbr>First<wbr>Party<wbr>Clients</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1284,7 +1498,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>token<wbr>Dialect</span>
+        <span id="state_tokendialect_nodejs">
+<a href="#state_tokendialect_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Dialect</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1293,7 +1509,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>token<wbr>Lifetime</span>
+        <span id="state_tokenlifetime_nodejs">
+<a href="#state_tokenlifetime_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Lifetime</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1302,7 +1520,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>token<wbr>Lifetime<wbr>For<wbr>Web</span>
+        <span id="state_tokenlifetimeforweb_nodejs">
+<a href="#state_tokenlifetimeforweb_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Lifetime<wbr>For<wbr>Web</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1311,7 +1531,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>verification<wbr>Location</span>
+        <span id="state_verificationlocation_nodejs">
+<a href="#state_verificationlocation_nodejs" style="color: inherit; text-decoration: inherit;">verification<wbr>Location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1327,7 +1549,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>allow_<wbr>offline_<wbr>access</span>
+        <span id="state_allow_offline_access_python">
+<a href="#state_allow_offline_access_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>offline_<wbr>access</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1336,7 +1560,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>enforce_<wbr>policies</span>
+        <span id="state_enforce_policies_python">
+<a href="#state_enforce_policies_python" style="color: inherit; text-decoration: inherit;">enforce_<wbr>policies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1345,7 +1571,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>identifier</span>
+        <span id="state_identifier_python">
+<a href="#state_identifier_python" style="color: inherit; text-decoration: inherit;">identifier</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1354,7 +1582,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1363,7 +1593,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>options</span>
+        <span id="state_options_python">
+<a href="#state_options_python" style="color: inherit; text-decoration: inherit;">options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -1372,7 +1604,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>scopes</span>
+        <span id="state_scopes_python">
+<a href="#state_scopes_python" style="color: inherit; text-decoration: inherit;">scopes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceserverscope">List[Resource<wbr>Server<wbr>Scope]</a></span>
     </dt>
@@ -1381,7 +1615,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>signing_<wbr>alg</span>
+        <span id="state_signing_alg_python">
+<a href="#state_signing_alg_python" style="color: inherit; text-decoration: inherit;">signing_<wbr>alg</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1390,7 +1626,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>signing_<wbr>secret</span>
+        <span id="state_signing_secret_python">
+<a href="#state_signing_secret_python" style="color: inherit; text-decoration: inherit;">signing_<wbr>secret</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1399,7 +1637,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>skip_<wbr>consent_<wbr>for_<wbr>verifiable_<wbr>first_<wbr>party_<wbr>clients</span>
+        <span id="state_skip_consent_for_verifiable_first_party_clients_python">
+<a href="#state_skip_consent_for_verifiable_first_party_clients_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>consent_<wbr>for_<wbr>verifiable_<wbr>first_<wbr>party_<wbr>clients</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1408,7 +1648,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>token_<wbr>dialect</span>
+        <span id="state_token_dialect_python">
+<a href="#state_token_dialect_python" style="color: inherit; text-decoration: inherit;">token_<wbr>dialect</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1417,7 +1659,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>token_<wbr>lifetime</span>
+        <span id="state_token_lifetime_python">
+<a href="#state_token_lifetime_python" style="color: inherit; text-decoration: inherit;">token_<wbr>lifetime</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1426,7 +1670,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>token_<wbr>lifetime_<wbr>for_<wbr>web</span>
+        <span id="state_token_lifetime_for_web_python">
+<a href="#state_token_lifetime_for_web_python" style="color: inherit; text-decoration: inherit;">token_<wbr>lifetime_<wbr>for_<wbr>web</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1435,7 +1681,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>verification_<wbr>location</span>
+        <span id="state_verification_location_python">
+<a href="#state_verification_location_python" style="color: inherit; text-decoration: inherit;">verification_<wbr>location</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1477,7 +1725,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Value</span>
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1486,7 +1736,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1502,7 +1754,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Value</span>
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1511,7 +1765,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1527,7 +1783,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>value</span>
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1536,7 +1794,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1552,7 +1812,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>value</span>
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1561,7 +1823,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
