@@ -23,9 +23,9 @@ anything, please consult the source <a class="reference external" href="https://
 <span class="n">test_azure_group</span> <span class="o">=</span> <span class="n">spotinst</span><span class="o">.</span><span class="n">azure</span><span class="o">.</span><span class="n">Elastigroup</span><span class="p">(</span><span class="s2">&quot;testAzureGroup&quot;</span><span class="p">,</span>
     <span class="n">desired_capacity</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
     <span class="n">health_check</span><span class="o">=</span><span class="p">{</span>
-        <span class="s2">&quot;autoHealing&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
-        <span class="s2">&quot;gracePeriod&quot;</span><span class="p">:</span> <span class="mi">120</span><span class="p">,</span>
-        <span class="s2">&quot;healthCheckType&quot;</span><span class="p">:</span> <span class="s2">&quot;INSTANCE_STATE&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;auto_healing&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;grace_period&quot;</span><span class="p">:</span> <span class="mi">120</span><span class="p">,</span>
+        <span class="s2">&quot;health_check_type&quot;</span><span class="p">:</span> <span class="s2">&quot;INSTANCE_STATE&quot;</span><span class="p">,</span>
     <span class="p">},</span>
     <span class="n">images</span><span class="o">=</span><span class="p">[{</span>
         <span class="s2">&quot;marketplace&quot;</span><span class="p">:</span> <span class="p">[{</span>
@@ -36,8 +36,8 @@ anything, please consult the source <a class="reference external" href="https://
     <span class="p">}],</span>
     <span class="n">load_balancers</span><span class="o">=</span><span class="p">[{</span>
         <span class="s2">&quot;autoWeight&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
-        <span class="s2">&quot;balancerId&quot;</span><span class="p">:</span> <span class="s2">&quot;lb-1ee2e3q&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;targetSetId&quot;</span><span class="p">:</span> <span class="s2">&quot;ts-3eq&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;balancer_id&quot;</span><span class="p">:</span> <span class="s2">&quot;lb-1ee2e3q&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;target_set_id&quot;</span><span class="p">:</span> <span class="s2">&quot;ts-3eq&quot;</span><span class="p">,</span>
         <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;MULTAI_TARGET_SET&quot;</span><span class="p">,</span>
     <span class="p">}],</span>
     <span class="n">login</span><span class="o">=</span><span class="p">{</span>
@@ -50,13 +50,13 @@ anything, please consult the source <a class="reference external" href="https://
     <span class="p">],</span>
     <span class="n">managed_service_identities</span><span class="o">=</span><span class="p">[{</span>
         <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;example-identity&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;resourceGroupName&quot;</span><span class="p">:</span> <span class="s2">&quot;spotinst-azure&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;resource_group_name&quot;</span><span class="p">:</span> <span class="s2">&quot;spotinst-azure&quot;</span><span class="p">,</span>
     <span class="p">}],</span>
     <span class="n">max_size</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
     <span class="n">min_size</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
     <span class="n">network</span><span class="o">=</span><span class="p">{</span>
         <span class="s2">&quot;assignPublicIp&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
-        <span class="s2">&quot;resourceGroupName&quot;</span><span class="p">:</span> <span class="s2">&quot;subnetResourceGroup&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;resource_group_name&quot;</span><span class="p">:</span> <span class="s2">&quot;subnetResourceGroup&quot;</span><span class="p">,</span>
         <span class="s2">&quot;subnetName&quot;</span><span class="p">:</span> <span class="s2">&quot;my-subnet-name&quot;</span><span class="p">,</span>
         <span class="s2">&quot;virtualNetworkName&quot;</span><span class="p">:</span> <span class="s2">&quot;vname&quot;</span><span class="p">,</span>
     <span class="p">},</span>
@@ -114,7 +114,7 @@ anything, please consult the source <a class="reference external" href="https://
         <span class="s2">&quot;adjustmentPercentage&quot;</span><span class="p">:</span> <span class="mi">50</span><span class="p">,</span>
         <span class="s2">&quot;batchSizePercentage&quot;</span><span class="p">:</span> <span class="mi">33</span><span class="p">,</span>
         <span class="s2">&quot;cronExpression&quot;</span><span class="p">:</span> <span class="s2">&quot;* * * * *&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;gracePeriod&quot;</span><span class="p">:</span> <span class="mi">300</span><span class="p">,</span>
+        <span class="s2">&quot;grace_period&quot;</span><span class="p">:</span> <span class="mi">300</span><span class="p">,</span>
         <span class="s2">&quot;isEnabled&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
         <span class="s2">&quot;scaleMaxCapacity&quot;</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span>
         <span class="s2">&quot;scaleMinCapacity&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
@@ -123,7 +123,7 @@ anything, please consult the source <a class="reference external" href="https://
     <span class="p">}],</span>
     <span class="n">shutdown_script</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
     <span class="n">strategy</span><span class="o">=</span><span class="p">{</span>
-        <span class="s2">&quot;drainingTimeout&quot;</span><span class="p">:</span> <span class="mi">300</span><span class="p">,</span>
+        <span class="s2">&quot;draining_timeout&quot;</span><span class="p">:</span> <span class="mi">300</span><span class="p">,</span>
         <span class="s2">&quot;odCount&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
     <span class="p">},</span>
     <span class="n">user_data</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>

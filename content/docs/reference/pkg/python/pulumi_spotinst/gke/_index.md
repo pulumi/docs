@@ -55,7 +55,7 @@ anything, please consult the source <a class="reference external" href="https://
             <span class="s2">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;label_key&quot;</span><span class="p">,</span>
             <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;label_value&quot;</span><span class="p">,</span>
         <span class="p">}],</span>
-        <span class="s2">&quot;clusterId&quot;</span><span class="p">:</span> <span class="s2">&quot;example-cluster-id&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;cluster_id&quot;</span><span class="p">:</span> <span class="s2">&quot;example-cluster-id&quot;</span><span class="p">,</span>
         <span class="s2">&quot;location&quot;</span><span class="p">:</span> <span class="s2">&quot;us-central1-a&quot;</span><span class="p">,</span>
     <span class="p">},</span>
     <span class="n">max_size</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
