@@ -20,7 +20,49 @@ Use this data source to get information about a specific [team](https://v1.devel
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Pagerduty = Pulumi.Pagerduty;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var me = Output.Create(Pagerduty.GetUser.InvokeAsync(new Pagerduty.GetUserArgs
+        {
+            Email = "me@example.com",
+        }));
+        var devops = Output.Create(Pagerduty.GetTeam.InvokeAsync(new Pagerduty.GetTeamArgs
+        {
+            Name = "devops",
+        }));
+        var foo = new Pagerduty.EscalationPolicy("foo", new Pagerduty.EscalationPolicyArgs
+        {
+            NumLoops = 2,
+            Rules = 
+            {
+                new Pagerduty.Inputs.EscalationPolicyRuleArgs
+                {
+                    EscalationDelayInMinutes = 10,
+                    Target = 
+                    {
+                        
+                        {
+                            { "id", me.Apply(me => me.Id) },
+                            { "type", "user" },
+                        },
+                    },
+                },
+            },
+            Teams = 
+            {
+                devops.Apply(devops => devops.Id),
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

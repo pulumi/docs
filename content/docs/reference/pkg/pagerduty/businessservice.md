@@ -21,7 +21,23 @@ A [business service](https://v2.developer.pagerduty.com/v2/page/api-reference#!/
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Pagerduty = Pulumi.Pagerduty;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Pagerduty.BusinessService("example", new Pagerduty.BusinessServiceArgs
+        {
+            Description = "A very descriptive description of this business service",
+            PointOfContact = "PagerDuty Admin",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

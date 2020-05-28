@@ -20,7 +20,41 @@ Use this data source to get information about a specific [schedule](https://v2.d
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Pagerduty = Pulumi.Pagerduty;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var test = Output.Create(Pagerduty.GetSchedule.InvokeAsync(new Pagerduty.GetScheduleArgs
+        {
+            Name = "Daily Engineering Rotation",
+        }));
+        var foo = new Pagerduty.EscalationPolicy("foo", new Pagerduty.EscalationPolicyArgs
+        {
+            NumLoops = 2,
+            Rules = 
+            {
+                new Pagerduty.Inputs.EscalationPolicyRuleArgs
+                {
+                    EscalationDelayInMinutes = 10,
+                    Target = 
+                    {
+                        
+                        {
+                            { "id", test.Apply(test => test.Id) },
+                            { "type", "schedule" },
+                        },
+                    },
+                },
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

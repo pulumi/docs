@@ -20,7 +20,79 @@ Use this data source to get information about a specific [priority](https://deve
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Pagerduty = Pulumi.Pagerduty;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var p1 = Output.Create(Pagerduty.GetPriority.InvokeAsync(new Pagerduty.GetPriorityArgs
+        {
+            Name = "P1",
+        }));
+        var fooRuleset = new Pagerduty.Ruleset("fooRuleset", new Pagerduty.RulesetArgs
+        {
+        });
+        var fooRulesetRule = new Pagerduty.RulesetRule("fooRulesetRule", new Pagerduty.RulesetRuleArgs
+        {
+            Ruleset = fooRuleset.Id,
+            Position = 0,
+            Disabled = "false",
+            Conditions = new Pagerduty.Inputs.RulesetRuleConditionsArgs
+            {
+                Operator = "and",
+                Subconditions = 
+                {
+                    new Pagerduty.Inputs.RulesetRuleConditionsSubconditionArgs
+                    {
+                        Operator = "contains",
+                        Parameter = 
+                        {
+                            
+                            {
+                                { "value", "disk space" },
+                                { "path", "payload.summary" },
+                            },
+                        },
+                    },
+                    new Pagerduty.Inputs.RulesetRuleConditionsSubconditionArgs
+                    {
+                        Operator = "contains",
+                        Parameter = 
+                        {
+                            
+                            {
+                                { "value", "db" },
+                                { "path", "payload.source" },
+                            },
+                        },
+                    },
+                },
+            },
+            Actions = new Pagerduty.Inputs.RulesetRuleActionsArgs
+            {
+                Route = 
+                {
+                    
+                    {
+                        { "value", "P5DTL0K" },
+                    },
+                },
+                Priority = 
+                {
+                    
+                    {
+                        { "value", pagerduty_priority.P1.Id },
+                    },
+                },
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

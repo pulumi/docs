@@ -21,7 +21,52 @@ A [service](https://v2.developer.pagerduty.com/v2/page/api-reference#!/Services/
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Pagerduty = Pulumi.Pagerduty;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleUser = new Pagerduty.User("exampleUser", new Pagerduty.UserArgs
+        {
+            Email = "125.greenholt.earline@graham.name",
+            Teams = 
+            {
+                pagerduty_team.Example.Id,
+            },
+        });
+        var foo = new Pagerduty.EscalationPolicy("foo", new Pagerduty.EscalationPolicyArgs
+        {
+            NumLoops = 2,
+            Rules = 
+            {
+                new Pagerduty.Inputs.EscalationPolicyRuleArgs
+                {
+                    EscalationDelayInMinutes = 10,
+                    Target = 
+                    {
+                        
+                        {
+                            { "id", exampleUser.Id },
+                            { "type", "user" },
+                        },
+                    },
+                },
+            },
+        });
+        var exampleService = new Pagerduty.Service("exampleService", new Pagerduty.ServiceArgs
+        {
+            AcknowledgementTimeout = 600,
+            AlertCreation = "create_incidents",
+            AutoResolveTimeout = 14400,
+            EscalationPolicy = pagerduty_escalation_policy.Example.Id,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

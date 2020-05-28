@@ -20,7 +20,32 @@ A [team membership](https://v2.developer.pagerduty.com/v2/page/api-reference#!/T
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Pagerduty = Pulumi.Pagerduty;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var fooUser = new Pagerduty.User("fooUser", new Pagerduty.UserArgs
+        {
+            Email = "foo@bar.com",
+        });
+        var fooTeam = new Pagerduty.Team("fooTeam", new Pagerduty.TeamArgs
+        {
+            Description = "foo",
+        });
+        var fooTeamMembership = new Pagerduty.TeamMembership("fooTeamMembership", new Pagerduty.TeamMembershipArgs
+        {
+            Role = "manager",
+            TeamId = fooTeam.Id,
+            UserId = fooUser.Id,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

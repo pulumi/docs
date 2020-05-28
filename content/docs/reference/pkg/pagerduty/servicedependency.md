@@ -13,78 +13,9 @@ meta_desc: "Explore the ServiceDependency resource of the pagerduty package, inc
 A [service dependency](https://developer.pagerduty.com/api-reference/reference/REST/openapiv3.json/paths/~1service_dependencies~1associate/post) is a relationship between a business service and technical and business services that this service uses, or that are used by this service, and are critical for successful operation.
 
 
-
-
 {{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_pagerduty as pagerduty
-
-foo = pagerduty.ServiceDependency("foo", dependency=[{
-    "dependent_service": [{
-        "id": pagerduty_business_service["foo"]["id"],
-        "type": "business_service",
-    }],
-    "supporting_service": [{
-        "id": pagerduty_service["foo"]["id"],
-        "type": "service",
-    }],
-}])
-bar = pagerduty.ServiceDependency("bar", dependency=[{
-    "dependent_service": [{
-        "id": pagerduty_business_service["foo"]["id"],
-        "type": "business_service",
-    }],
-    "supporting_service": [{
-        "id": pagerduty_service["two"]["id"],
-        "type": "service",
-    }],
-}])
-```
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as pagerduty from "@pulumi/pagerduty";
-
-const foo = new pagerduty.ServiceDependency("foo", {dependency: [{
-    dependent_service: [{
-        id: pagerduty_business_service.foo.id,
-        type: "business_service",
-    }],
-    supporting_service: [{
-        id: pagerduty_service.foo.id,
-        type: "service",
-    }],
-}]});
-const bar = new pagerduty.ServiceDependency("bar", {dependency: [{
-    dependent_service: [{
-        id: pagerduty_business_service.foo.id,
-        type: "business_service",
-    }],
-    supporting_service: [{
-        id: pagerduty_service.two.id,
-        type: "service",
-    }],
-}]});
-```
-{{% /example %}}
-
 {{% /examples %}}
+
 
 
 ## Create a ServiceDependency Resource {#create}

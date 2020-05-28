@@ -21,7 +21,53 @@ A [schedule](https://v2.developer.pagerduty.com/v2/page/api-reference#!/Schedule
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Pagerduty = Pulumi.Pagerduty;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Pagerduty.User("example", new Pagerduty.UserArgs
+        {
+            Email = "125.greenholt.earline@graham.name",
+            Teams = 
+            {
+                pagerduty_team.Example.Id,
+            },
+        });
+        var foo = new Pagerduty.Schedule("foo", new Pagerduty.ScheduleArgs
+        {
+            Layers = 
+            {
+                new Pagerduty.Inputs.ScheduleLayerArgs
+                {
+                    Name = "Night Shift",
+                    Restriction = 
+                    {
+                        
+                        {
+                            { "durationSeconds", 32400 },
+                            { "startTimeOfDay", "08:00:00" },
+                            { "type", "daily_restriction" },
+                        },
+                    },
+                    RotationTurnLengthSeconds = 86400,
+                    RotationVirtualStart = "2015-11-06T20:00:00-05:00",
+                    Start = "2015-11-06T20:00:00-05:00",
+                    Users = 
+                    {
+                        pagerduty_user.Foo.Id,
+                    },
+                },
+            },
+            TimeZone = "America/New_York",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

@@ -20,7 +20,22 @@ Use this data source to get information about a specific [business service](http
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Pagerduty = Pulumi.Pagerduty;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = Output.Create(Pagerduty.GetBusinessService.InvokeAsync(new Pagerduty.GetBusinessServiceArgs
+        {
+            Name = "My Service",
+        }));
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

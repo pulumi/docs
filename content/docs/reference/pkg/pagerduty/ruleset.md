@@ -21,7 +21,28 @@ meta_desc: "Explore the Ruleset resource of the pagerduty package, including exa
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Pagerduty = Pulumi.Pagerduty;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var fooTeam = new Pagerduty.Team("fooTeam", new Pagerduty.TeamArgs
+        {
+        });
+        var fooRuleset = new Pagerduty.Ruleset("fooRuleset", new Pagerduty.RulesetArgs
+        {
+            Team = new Pagerduty.Inputs.RulesetTeamArgs
+            {
+                Id = fooTeam.Id,
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
