@@ -89,7 +89,7 @@ export const attachment = new aws.iam.RolePolicyAttachment(
 );
 ```
 
-infra.spec.ts
+**infra.spec.ts**
 
 ```ts
 /**
