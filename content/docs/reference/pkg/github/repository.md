@@ -196,7 +196,9 @@ The Repository resource accepts the following [input]({{< relref "/docs/intro/co
 
     <dt class="property-optional"
             title="Optional">
-        <span>Allow<wbr>Merge<wbr>Commit</span>
+        <span id="allowmergecommit_csharp">
+<a href="#allowmergecommit_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Merge<wbr>Commit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -205,7 +207,9 @@ The Repository resource accepts the following [input]({{< relref "/docs/intro/co
 
     <dt class="property-optional"
             title="Optional">
-        <span>Allow<wbr>Rebase<wbr>Merge</span>
+        <span id="allowrebasemerge_csharp">
+<a href="#allowrebasemerge_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Rebase<wbr>Merge</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -214,7 +218,9 @@ The Repository resource accepts the following [input]({{< relref "/docs/intro/co
 
     <dt class="property-optional"
             title="Optional">
-        <span>Allow<wbr>Squash<wbr>Merge</span>
+        <span id="allowsquashmerge_csharp">
+<a href="#allowsquashmerge_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Squash<wbr>Merge</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -223,7 +229,9 @@ The Repository resource accepts the following [input]({{< relref "/docs/intro/co
 
     <dt class="property-optional"
             title="Optional">
-        <span>Archived</span>
+        <span id="archived_csharp">
+<a href="#archived_csharp" style="color: inherit; text-decoration: inherit;">Archived</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -232,7 +240,9 @@ The Repository resource accepts the following [input]({{< relref "/docs/intro/co
 
     <dt class="property-optional"
             title="Optional">
-        <span>Auto<wbr>Init</span>
+        <span id="autoinit_csharp">
+<a href="#autoinit_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Init</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -241,7 +251,9 @@ The Repository resource accepts the following [input]({{< relref "/docs/intro/co
 
     <dt class="property-optional"
             title="Optional">
-        <span>Default<wbr>Branch</span>
+        <span id="defaultbranch_csharp">
+<a href="#defaultbranch_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Branch</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -252,7 +264,9 @@ initial repository creation and create the target branch inside of the repositor
 
     <dt class="property-optional"
             title="Optional">
-        <span>Delete<wbr>Branch<wbr>On<wbr>Merge</span>
+        <span id="deletebranchonmerge_csharp">
+<a href="#deletebranchonmerge_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>Branch<wbr>On<wbr>Merge</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -261,7 +275,9 @@ initial repository creation and create the target branch inside of the repositor
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -270,7 +286,9 @@ initial repository creation and create the target branch inside of the repositor
 
     <dt class="property-optional"
             title="Optional">
-        <span>Gitignore<wbr>Template</span>
+        <span id="gitignoretemplate_csharp">
+<a href="#gitignoretemplate_csharp" style="color: inherit; text-decoration: inherit;">Gitignore<wbr>Template</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -279,7 +297,9 @@ initial repository creation and create the target branch inside of the repositor
 
     <dt class="property-optional"
             title="Optional">
-        <span>Has<wbr>Downloads</span>
+        <span id="hasdownloads_csharp">
+<a href="#hasdownloads_csharp" style="color: inherit; text-decoration: inherit;">Has<wbr>Downloads</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -288,7 +308,9 @@ initial repository creation and create the target branch inside of the repositor
 
     <dt class="property-optional"
             title="Optional">
-        <span>Has<wbr>Issues</span>
+        <span id="hasissues_csharp">
+<a href="#hasissues_csharp" style="color: inherit; text-decoration: inherit;">Has<wbr>Issues</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -298,7 +320,9 @@ on the repository.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Has<wbr>Projects</span>
+        <span id="hasprojects_csharp">
+<a href="#hasprojects_csharp" style="color: inherit; text-decoration: inherit;">Has<wbr>Projects</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -307,7 +331,9 @@ on the repository.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Has<wbr>Wiki</span>
+        <span id="haswiki_csharp">
+<a href="#haswiki_csharp" style="color: inherit; text-decoration: inherit;">Has<wbr>Wiki</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -317,7 +343,9 @@ the repository.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Homepage<wbr>Url</span>
+        <span id="homepageurl_csharp">
+<a href="#homepageurl_csharp" style="color: inherit; text-decoration: inherit;">Homepage<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -326,7 +354,9 @@ the repository.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Is<wbr>Template</span>
+        <span id="istemplate_csharp">
+<a href="#istemplate_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Template</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -335,7 +365,9 @@ the repository.
 
     <dt class="property-optional"
             title="Optional">
-        <span>License<wbr>Template</span>
+        <span id="licensetemplate_csharp">
+<a href="#licensetemplate_csharp" style="color: inherit; text-decoration: inherit;">License<wbr>Template</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -344,7 +376,9 @@ the repository.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -353,7 +387,9 @@ the repository.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Private</span>
+        <span id="private_csharp">
+<a href="#private_csharp" style="color: inherit; text-decoration: inherit;">Private</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -363,7 +399,9 @@ Repositories are created as public (e.g. open source) by default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Template</span>
+        <span id="template_csharp">
+<a href="#template_csharp" style="color: inherit; text-decoration: inherit;">Template</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#repositorytemplate">Repository<wbr>Template<wbr>Args</a></span>
     </dt>
@@ -372,7 +410,9 @@ Repositories are created as public (e.g. open source) by default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Topics</span>
+        <span id="topics_csharp">
+<a href="#topics_csharp" style="color: inherit; text-decoration: inherit;">Topics</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -388,7 +428,9 @@ Repositories are created as public (e.g. open source) by default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Allow<wbr>Merge<wbr>Commit</span>
+        <span id="allowmergecommit_go">
+<a href="#allowmergecommit_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Merge<wbr>Commit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -397,7 +439,9 @@ Repositories are created as public (e.g. open source) by default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Allow<wbr>Rebase<wbr>Merge</span>
+        <span id="allowrebasemerge_go">
+<a href="#allowrebasemerge_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Rebase<wbr>Merge</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -406,7 +450,9 @@ Repositories are created as public (e.g. open source) by default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Allow<wbr>Squash<wbr>Merge</span>
+        <span id="allowsquashmerge_go">
+<a href="#allowsquashmerge_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Squash<wbr>Merge</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -415,7 +461,9 @@ Repositories are created as public (e.g. open source) by default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Archived</span>
+        <span id="archived_go">
+<a href="#archived_go" style="color: inherit; text-decoration: inherit;">Archived</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -424,7 +472,9 @@ Repositories are created as public (e.g. open source) by default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Auto<wbr>Init</span>
+        <span id="autoinit_go">
+<a href="#autoinit_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Init</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -433,7 +483,9 @@ Repositories are created as public (e.g. open source) by default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Default<wbr>Branch</span>
+        <span id="defaultbranch_go">
+<a href="#defaultbranch_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Branch</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -444,7 +496,9 @@ initial repository creation and create the target branch inside of the repositor
 
     <dt class="property-optional"
             title="Optional">
-        <span>Delete<wbr>Branch<wbr>On<wbr>Merge</span>
+        <span id="deletebranchonmerge_go">
+<a href="#deletebranchonmerge_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>Branch<wbr>On<wbr>Merge</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -453,7 +507,9 @@ initial repository creation and create the target branch inside of the repositor
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -462,7 +518,9 @@ initial repository creation and create the target branch inside of the repositor
 
     <dt class="property-optional"
             title="Optional">
-        <span>Gitignore<wbr>Template</span>
+        <span id="gitignoretemplate_go">
+<a href="#gitignoretemplate_go" style="color: inherit; text-decoration: inherit;">Gitignore<wbr>Template</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -471,7 +529,9 @@ initial repository creation and create the target branch inside of the repositor
 
     <dt class="property-optional"
             title="Optional">
-        <span>Has<wbr>Downloads</span>
+        <span id="hasdownloads_go">
+<a href="#hasdownloads_go" style="color: inherit; text-decoration: inherit;">Has<wbr>Downloads</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -480,7 +540,9 @@ initial repository creation and create the target branch inside of the repositor
 
     <dt class="property-optional"
             title="Optional">
-        <span>Has<wbr>Issues</span>
+        <span id="hasissues_go">
+<a href="#hasissues_go" style="color: inherit; text-decoration: inherit;">Has<wbr>Issues</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -490,7 +552,9 @@ on the repository.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Has<wbr>Projects</span>
+        <span id="hasprojects_go">
+<a href="#hasprojects_go" style="color: inherit; text-decoration: inherit;">Has<wbr>Projects</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -499,7 +563,9 @@ on the repository.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Has<wbr>Wiki</span>
+        <span id="haswiki_go">
+<a href="#haswiki_go" style="color: inherit; text-decoration: inherit;">Has<wbr>Wiki</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -509,7 +575,9 @@ the repository.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Homepage<wbr>Url</span>
+        <span id="homepageurl_go">
+<a href="#homepageurl_go" style="color: inherit; text-decoration: inherit;">Homepage<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -518,7 +586,9 @@ the repository.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Is<wbr>Template</span>
+        <span id="istemplate_go">
+<a href="#istemplate_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Template</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -527,7 +597,9 @@ the repository.
 
     <dt class="property-optional"
             title="Optional">
-        <span>License<wbr>Template</span>
+        <span id="licensetemplate_go">
+<a href="#licensetemplate_go" style="color: inherit; text-decoration: inherit;">License<wbr>Template</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -536,7 +608,9 @@ the repository.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -545,7 +619,9 @@ the repository.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Private</span>
+        <span id="private_go">
+<a href="#private_go" style="color: inherit; text-decoration: inherit;">Private</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -555,7 +631,9 @@ Repositories are created as public (e.g. open source) by default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Template</span>
+        <span id="template_go">
+<a href="#template_go" style="color: inherit; text-decoration: inherit;">Template</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#repositorytemplate">Repository<wbr>Template</a></span>
     </dt>
@@ -564,7 +642,9 @@ Repositories are created as public (e.g. open source) by default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Topics</span>
+        <span id="topics_go">
+<a href="#topics_go" style="color: inherit; text-decoration: inherit;">Topics</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -580,7 +660,9 @@ Repositories are created as public (e.g. open source) by default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>allow<wbr>Merge<wbr>Commit</span>
+        <span id="allowmergecommit_nodejs">
+<a href="#allowmergecommit_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Merge<wbr>Commit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -589,7 +671,9 @@ Repositories are created as public (e.g. open source) by default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>allow<wbr>Rebase<wbr>Merge</span>
+        <span id="allowrebasemerge_nodejs">
+<a href="#allowrebasemerge_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Rebase<wbr>Merge</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -598,7 +682,9 @@ Repositories are created as public (e.g. open source) by default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>allow<wbr>Squash<wbr>Merge</span>
+        <span id="allowsquashmerge_nodejs">
+<a href="#allowsquashmerge_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Squash<wbr>Merge</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -607,7 +693,9 @@ Repositories are created as public (e.g. open source) by default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>archived</span>
+        <span id="archived_nodejs">
+<a href="#archived_nodejs" style="color: inherit; text-decoration: inherit;">archived</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -616,7 +704,9 @@ Repositories are created as public (e.g. open source) by default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>auto<wbr>Init</span>
+        <span id="autoinit_nodejs">
+<a href="#autoinit_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Init</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -625,7 +715,9 @@ Repositories are created as public (e.g. open source) by default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>default<wbr>Branch</span>
+        <span id="defaultbranch_nodejs">
+<a href="#defaultbranch_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Branch</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -636,7 +728,9 @@ initial repository creation and create the target branch inside of the repositor
 
     <dt class="property-optional"
             title="Optional">
-        <span>delete<wbr>Branch<wbr>On<wbr>Merge</span>
+        <span id="deletebranchonmerge_nodejs">
+<a href="#deletebranchonmerge_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>Branch<wbr>On<wbr>Merge</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -645,7 +739,9 @@ initial repository creation and create the target branch inside of the repositor
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -654,7 +750,9 @@ initial repository creation and create the target branch inside of the repositor
 
     <dt class="property-optional"
             title="Optional">
-        <span>gitignore<wbr>Template</span>
+        <span id="gitignoretemplate_nodejs">
+<a href="#gitignoretemplate_nodejs" style="color: inherit; text-decoration: inherit;">gitignore<wbr>Template</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -663,7 +761,9 @@ initial repository creation and create the target branch inside of the repositor
 
     <dt class="property-optional"
             title="Optional">
-        <span>has<wbr>Downloads</span>
+        <span id="hasdownloads_nodejs">
+<a href="#hasdownloads_nodejs" style="color: inherit; text-decoration: inherit;">has<wbr>Downloads</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -672,7 +772,9 @@ initial repository creation and create the target branch inside of the repositor
 
     <dt class="property-optional"
             title="Optional">
-        <span>has<wbr>Issues</span>
+        <span id="hasissues_nodejs">
+<a href="#hasissues_nodejs" style="color: inherit; text-decoration: inherit;">has<wbr>Issues</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -682,7 +784,9 @@ on the repository.
 
     <dt class="property-optional"
             title="Optional">
-        <span>has<wbr>Projects</span>
+        <span id="hasprojects_nodejs">
+<a href="#hasprojects_nodejs" style="color: inherit; text-decoration: inherit;">has<wbr>Projects</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -691,7 +795,9 @@ on the repository.
 
     <dt class="property-optional"
             title="Optional">
-        <span>has<wbr>Wiki</span>
+        <span id="haswiki_nodejs">
+<a href="#haswiki_nodejs" style="color: inherit; text-decoration: inherit;">has<wbr>Wiki</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -701,7 +807,9 @@ the repository.
 
     <dt class="property-optional"
             title="Optional">
-        <span>homepage<wbr>Url</span>
+        <span id="homepageurl_nodejs">
+<a href="#homepageurl_nodejs" style="color: inherit; text-decoration: inherit;">homepage<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -710,7 +818,9 @@ the repository.
 
     <dt class="property-optional"
             title="Optional">
-        <span>is<wbr>Template</span>
+        <span id="istemplate_nodejs">
+<a href="#istemplate_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Template</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -719,7 +829,9 @@ the repository.
 
     <dt class="property-optional"
             title="Optional">
-        <span>license<wbr>Template</span>
+        <span id="licensetemplate_nodejs">
+<a href="#licensetemplate_nodejs" style="color: inherit; text-decoration: inherit;">license<wbr>Template</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -728,7 +840,9 @@ the repository.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -737,7 +851,9 @@ the repository.
 
     <dt class="property-optional"
             title="Optional">
-        <span>private</span>
+        <span id="private_nodejs">
+<a href="#private_nodejs" style="color: inherit; text-decoration: inherit;">private</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -747,7 +863,9 @@ Repositories are created as public (e.g. open source) by default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>template</span>
+        <span id="template_nodejs">
+<a href="#template_nodejs" style="color: inherit; text-decoration: inherit;">template</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#repositorytemplate">Repository<wbr>Template</a></span>
     </dt>
@@ -756,7 +874,9 @@ Repositories are created as public (e.g. open source) by default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>topics</span>
+        <span id="topics_nodejs">
+<a href="#topics_nodejs" style="color: inherit; text-decoration: inherit;">topics</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -772,7 +892,9 @@ Repositories are created as public (e.g. open source) by default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>allow_<wbr>merge_<wbr>commit</span>
+        <span id="allow_merge_commit_python">
+<a href="#allow_merge_commit_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>merge_<wbr>commit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -781,7 +903,9 @@ Repositories are created as public (e.g. open source) by default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>allow_<wbr>rebase_<wbr>merge</span>
+        <span id="allow_rebase_merge_python">
+<a href="#allow_rebase_merge_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>rebase_<wbr>merge</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -790,7 +914,9 @@ Repositories are created as public (e.g. open source) by default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>allow_<wbr>squash_<wbr>merge</span>
+        <span id="allow_squash_merge_python">
+<a href="#allow_squash_merge_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>squash_<wbr>merge</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -799,7 +925,9 @@ Repositories are created as public (e.g. open source) by default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>archived</span>
+        <span id="archived_python">
+<a href="#archived_python" style="color: inherit; text-decoration: inherit;">archived</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -808,7 +936,9 @@ Repositories are created as public (e.g. open source) by default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>auto_<wbr>init</span>
+        <span id="auto_init_python">
+<a href="#auto_init_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>init</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -817,7 +947,9 @@ Repositories are created as public (e.g. open source) by default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>default_<wbr>branch</span>
+        <span id="default_branch_python">
+<a href="#default_branch_python" style="color: inherit; text-decoration: inherit;">default_<wbr>branch</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -828,7 +960,9 @@ initial repository creation and create the target branch inside of the repositor
 
     <dt class="property-optional"
             title="Optional">
-        <span>delete_<wbr>branch_<wbr>on_<wbr>merge</span>
+        <span id="delete_branch_on_merge_python">
+<a href="#delete_branch_on_merge_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>branch_<wbr>on_<wbr>merge</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -837,7 +971,9 @@ initial repository creation and create the target branch inside of the repositor
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -846,7 +982,9 @@ initial repository creation and create the target branch inside of the repositor
 
     <dt class="property-optional"
             title="Optional">
-        <span>gitignore_<wbr>template</span>
+        <span id="gitignore_template_python">
+<a href="#gitignore_template_python" style="color: inherit; text-decoration: inherit;">gitignore_<wbr>template</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -855,7 +993,9 @@ initial repository creation and create the target branch inside of the repositor
 
     <dt class="property-optional"
             title="Optional">
-        <span>has_<wbr>downloads</span>
+        <span id="has_downloads_python">
+<a href="#has_downloads_python" style="color: inherit; text-decoration: inherit;">has_<wbr>downloads</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -864,7 +1004,9 @@ initial repository creation and create the target branch inside of the repositor
 
     <dt class="property-optional"
             title="Optional">
-        <span>has_<wbr>issues</span>
+        <span id="has_issues_python">
+<a href="#has_issues_python" style="color: inherit; text-decoration: inherit;">has_<wbr>issues</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -874,7 +1016,9 @@ on the repository.
 
     <dt class="property-optional"
             title="Optional">
-        <span>has_<wbr>projects</span>
+        <span id="has_projects_python">
+<a href="#has_projects_python" style="color: inherit; text-decoration: inherit;">has_<wbr>projects</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -883,7 +1027,9 @@ on the repository.
 
     <dt class="property-optional"
             title="Optional">
-        <span>has_<wbr>wiki</span>
+        <span id="has_wiki_python">
+<a href="#has_wiki_python" style="color: inherit; text-decoration: inherit;">has_<wbr>wiki</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -893,7 +1039,9 @@ the repository.
 
     <dt class="property-optional"
             title="Optional">
-        <span>homepage_<wbr>url</span>
+        <span id="homepage_url_python">
+<a href="#homepage_url_python" style="color: inherit; text-decoration: inherit;">homepage_<wbr>url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -902,7 +1050,9 @@ the repository.
 
     <dt class="property-optional"
             title="Optional">
-        <span>is_<wbr>template</span>
+        <span id="is_template_python">
+<a href="#is_template_python" style="color: inherit; text-decoration: inherit;">is_<wbr>template</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -911,7 +1061,9 @@ the repository.
 
     <dt class="property-optional"
             title="Optional">
-        <span>license_<wbr>template</span>
+        <span id="license_template_python">
+<a href="#license_template_python" style="color: inherit; text-decoration: inherit;">license_<wbr>template</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -920,7 +1072,9 @@ the repository.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -929,7 +1083,9 @@ the repository.
 
     <dt class="property-optional"
             title="Optional">
-        <span>private</span>
+        <span id="private_python">
+<a href="#private_python" style="color: inherit; text-decoration: inherit;">private</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -939,7 +1095,9 @@ Repositories are created as public (e.g. open source) by default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>template</span>
+        <span id="template_python">
+<a href="#template_python" style="color: inherit; text-decoration: inherit;">template</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#repositorytemplate">Dict[Repository<wbr>Template]</a></span>
     </dt>
@@ -948,7 +1106,9 @@ Repositories are created as public (e.g. open source) by default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>topics</span>
+        <span id="topics_python">
+<a href="#topics_python" style="color: inherit; text-decoration: inherit;">topics</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -975,7 +1135,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Etag</span>
+        <span id="etag_csharp">
+<a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -983,7 +1145,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Full<wbr>Name</span>
+        <span id="fullname_csharp">
+<a href="#fullname_csharp" style="color: inherit; text-decoration: inherit;">Full<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -992,7 +1156,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Git<wbr>Clone<wbr>Url</span>
+        <span id="gitcloneurl_csharp">
+<a href="#gitcloneurl_csharp" style="color: inherit; text-decoration: inherit;">Git<wbr>Clone<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1001,7 +1167,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Html<wbr>Url</span>
+        <span id="htmlurl_csharp">
+<a href="#htmlurl_csharp" style="color: inherit; text-decoration: inherit;">Html<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1010,7 +1178,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Http<wbr>Clone<wbr>Url</span>
+        <span id="httpcloneurl_csharp">
+<a href="#httpcloneurl_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Clone<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1019,7 +1189,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1027,7 +1199,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Node<wbr>Id</span>
+        <span id="nodeid_csharp">
+<a href="#nodeid_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1035,7 +1209,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Ssh<wbr>Clone<wbr>Url</span>
+        <span id="sshcloneurl_csharp">
+<a href="#sshcloneurl_csharp" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Clone<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1044,7 +1220,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Svn<wbr>Url</span>
+        <span id="svnurl_csharp">
+<a href="#svnurl_csharp" style="color: inherit; text-decoration: inherit;">Svn<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1060,7 +1238,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Etag</span>
+        <span id="etag_go">
+<a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1068,7 +1248,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Full<wbr>Name</span>
+        <span id="fullname_go">
+<a href="#fullname_go" style="color: inherit; text-decoration: inherit;">Full<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1077,7 +1259,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Git<wbr>Clone<wbr>Url</span>
+        <span id="gitcloneurl_go">
+<a href="#gitcloneurl_go" style="color: inherit; text-decoration: inherit;">Git<wbr>Clone<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1086,7 +1270,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Html<wbr>Url</span>
+        <span id="htmlurl_go">
+<a href="#htmlurl_go" style="color: inherit; text-decoration: inherit;">Html<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1095,7 +1281,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Http<wbr>Clone<wbr>Url</span>
+        <span id="httpcloneurl_go">
+<a href="#httpcloneurl_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Clone<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1104,7 +1292,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1112,7 +1302,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Node<wbr>Id</span>
+        <span id="nodeid_go">
+<a href="#nodeid_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1120,7 +1312,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Ssh<wbr>Clone<wbr>Url</span>
+        <span id="sshcloneurl_go">
+<a href="#sshcloneurl_go" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Clone<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1129,7 +1323,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Svn<wbr>Url</span>
+        <span id="svnurl_go">
+<a href="#svnurl_go" style="color: inherit; text-decoration: inherit;">Svn<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1145,7 +1341,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>etag</span>
+        <span id="etag_nodejs">
+<a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1153,7 +1351,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>full<wbr>Name</span>
+        <span id="fullname_nodejs">
+<a href="#fullname_nodejs" style="color: inherit; text-decoration: inherit;">full<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1162,7 +1362,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>git<wbr>Clone<wbr>Url</span>
+        <span id="gitcloneurl_nodejs">
+<a href="#gitcloneurl_nodejs" style="color: inherit; text-decoration: inherit;">git<wbr>Clone<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1171,7 +1373,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>html<wbr>Url</span>
+        <span id="htmlurl_nodejs">
+<a href="#htmlurl_nodejs" style="color: inherit; text-decoration: inherit;">html<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1180,7 +1384,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>http<wbr>Clone<wbr>Url</span>
+        <span id="httpcloneurl_nodejs">
+<a href="#httpcloneurl_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Clone<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1189,7 +1395,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1197,7 +1405,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>node<wbr>Id</span>
+        <span id="nodeid_nodejs">
+<a href="#nodeid_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1205,7 +1415,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>ssh<wbr>Clone<wbr>Url</span>
+        <span id="sshcloneurl_nodejs">
+<a href="#sshcloneurl_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>Clone<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1214,7 +1426,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>svn<wbr>Url</span>
+        <span id="svnurl_nodejs">
+<a href="#svnurl_nodejs" style="color: inherit; text-decoration: inherit;">svn<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1230,7 +1444,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>etag</span>
+        <span id="etag_python">
+<a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1238,7 +1454,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>full_<wbr>name</span>
+        <span id="full_name_python">
+<a href="#full_name_python" style="color: inherit; text-decoration: inherit;">full_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1247,7 +1465,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>git_<wbr>clone_<wbr>url</span>
+        <span id="git_clone_url_python">
+<a href="#git_clone_url_python" style="color: inherit; text-decoration: inherit;">git_<wbr>clone_<wbr>url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1256,7 +1476,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>html_<wbr>url</span>
+        <span id="html_url_python">
+<a href="#html_url_python" style="color: inherit; text-decoration: inherit;">html_<wbr>url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1265,7 +1487,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>http_<wbr>clone_<wbr>url</span>
+        <span id="http_clone_url_python">
+<a href="#http_clone_url_python" style="color: inherit; text-decoration: inherit;">http_<wbr>clone_<wbr>url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1274,7 +1498,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1282,7 +1508,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>node_<wbr>id</span>
+        <span id="node_id_python">
+<a href="#node_id_python" style="color: inherit; text-decoration: inherit;">node_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1290,7 +1518,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>ssh_<wbr>clone_<wbr>url</span>
+        <span id="ssh_clone_url_python">
+<a href="#ssh_clone_url_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>clone_<wbr>url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1299,7 +1529,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>svn_<wbr>url</span>
+        <span id="svn_url_python">
+<a href="#svn_url_python" style="color: inherit; text-decoration: inherit;">svn_<wbr>url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1441,7 +1673,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Allow<wbr>Merge<wbr>Commit</span>
+        <span id="state_allowmergecommit_csharp">
+<a href="#state_allowmergecommit_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Merge<wbr>Commit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1450,7 +1684,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Allow<wbr>Rebase<wbr>Merge</span>
+        <span id="state_allowrebasemerge_csharp">
+<a href="#state_allowrebasemerge_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Rebase<wbr>Merge</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1459,7 +1695,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Allow<wbr>Squash<wbr>Merge</span>
+        <span id="state_allowsquashmerge_csharp">
+<a href="#state_allowsquashmerge_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Squash<wbr>Merge</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1468,7 +1706,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Archived</span>
+        <span id="state_archived_csharp">
+<a href="#state_archived_csharp" style="color: inherit; text-decoration: inherit;">Archived</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1477,7 +1717,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Auto<wbr>Init</span>
+        <span id="state_autoinit_csharp">
+<a href="#state_autoinit_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Init</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1486,7 +1728,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Default<wbr>Branch</span>
+        <span id="state_defaultbranch_csharp">
+<a href="#state_defaultbranch_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Branch</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1497,7 +1741,9 @@ initial repository creation and create the target branch inside of the repositor
 
     <dt class="property-optional"
             title="Optional">
-        <span>Delete<wbr>Branch<wbr>On<wbr>Merge</span>
+        <span id="state_deletebranchonmerge_csharp">
+<a href="#state_deletebranchonmerge_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>Branch<wbr>On<wbr>Merge</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1506,7 +1752,9 @@ initial repository creation and create the target branch inside of the repositor
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="state_description_csharp">
+<a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1515,7 +1763,9 @@ initial repository creation and create the target branch inside of the repositor
 
     <dt class="property-optional"
             title="Optional">
-        <span>Etag</span>
+        <span id="state_etag_csharp">
+<a href="#state_etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1523,7 +1773,9 @@ initial repository creation and create the target branch inside of the repositor
 
     <dt class="property-optional"
             title="Optional">
-        <span>Full<wbr>Name</span>
+        <span id="state_fullname_csharp">
+<a href="#state_fullname_csharp" style="color: inherit; text-decoration: inherit;">Full<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1532,7 +1784,9 @@ initial repository creation and create the target branch inside of the repositor
 
     <dt class="property-optional"
             title="Optional">
-        <span>Git<wbr>Clone<wbr>Url</span>
+        <span id="state_gitcloneurl_csharp">
+<a href="#state_gitcloneurl_csharp" style="color: inherit; text-decoration: inherit;">Git<wbr>Clone<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1541,7 +1795,9 @@ initial repository creation and create the target branch inside of the repositor
 
     <dt class="property-optional"
             title="Optional">
-        <span>Gitignore<wbr>Template</span>
+        <span id="state_gitignoretemplate_csharp">
+<a href="#state_gitignoretemplate_csharp" style="color: inherit; text-decoration: inherit;">Gitignore<wbr>Template</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1550,7 +1806,9 @@ initial repository creation and create the target branch inside of the repositor
 
     <dt class="property-optional"
             title="Optional">
-        <span>Has<wbr>Downloads</span>
+        <span id="state_hasdownloads_csharp">
+<a href="#state_hasdownloads_csharp" style="color: inherit; text-decoration: inherit;">Has<wbr>Downloads</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1559,7 +1817,9 @@ initial repository creation and create the target branch inside of the repositor
 
     <dt class="property-optional"
             title="Optional">
-        <span>Has<wbr>Issues</span>
+        <span id="state_hasissues_csharp">
+<a href="#state_hasissues_csharp" style="color: inherit; text-decoration: inherit;">Has<wbr>Issues</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1569,7 +1829,9 @@ on the repository.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Has<wbr>Projects</span>
+        <span id="state_hasprojects_csharp">
+<a href="#state_hasprojects_csharp" style="color: inherit; text-decoration: inherit;">Has<wbr>Projects</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1578,7 +1840,9 @@ on the repository.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Has<wbr>Wiki</span>
+        <span id="state_haswiki_csharp">
+<a href="#state_haswiki_csharp" style="color: inherit; text-decoration: inherit;">Has<wbr>Wiki</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1588,7 +1852,9 @@ the repository.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Homepage<wbr>Url</span>
+        <span id="state_homepageurl_csharp">
+<a href="#state_homepageurl_csharp" style="color: inherit; text-decoration: inherit;">Homepage<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1597,7 +1863,9 @@ the repository.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Html<wbr>Url</span>
+        <span id="state_htmlurl_csharp">
+<a href="#state_htmlurl_csharp" style="color: inherit; text-decoration: inherit;">Html<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1606,7 +1874,9 @@ the repository.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Http<wbr>Clone<wbr>Url</span>
+        <span id="state_httpcloneurl_csharp">
+<a href="#state_httpcloneurl_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Clone<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1615,7 +1885,9 @@ the repository.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Is<wbr>Template</span>
+        <span id="state_istemplate_csharp">
+<a href="#state_istemplate_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Template</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1624,7 +1896,9 @@ the repository.
 
     <dt class="property-optional"
             title="Optional">
-        <span>License<wbr>Template</span>
+        <span id="state_licensetemplate_csharp">
+<a href="#state_licensetemplate_csharp" style="color: inherit; text-decoration: inherit;">License<wbr>Template</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1633,7 +1907,9 @@ the repository.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1642,7 +1918,9 @@ the repository.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Node<wbr>Id</span>
+        <span id="state_nodeid_csharp">
+<a href="#state_nodeid_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1650,7 +1928,9 @@ the repository.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Private</span>
+        <span id="state_private_csharp">
+<a href="#state_private_csharp" style="color: inherit; text-decoration: inherit;">Private</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1660,7 +1940,9 @@ Repositories are created as public (e.g. open source) by default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ssh<wbr>Clone<wbr>Url</span>
+        <span id="state_sshcloneurl_csharp">
+<a href="#state_sshcloneurl_csharp" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Clone<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1669,7 +1951,9 @@ Repositories are created as public (e.g. open source) by default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Svn<wbr>Url</span>
+        <span id="state_svnurl_csharp">
+<a href="#state_svnurl_csharp" style="color: inherit; text-decoration: inherit;">Svn<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1678,7 +1962,9 @@ Repositories are created as public (e.g. open source) by default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Template</span>
+        <span id="state_template_csharp">
+<a href="#state_template_csharp" style="color: inherit; text-decoration: inherit;">Template</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#repositorytemplate">Repository<wbr>Template<wbr>Args</a></span>
     </dt>
@@ -1687,7 +1973,9 @@ Repositories are created as public (e.g. open source) by default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Topics</span>
+        <span id="state_topics_csharp">
+<a href="#state_topics_csharp" style="color: inherit; text-decoration: inherit;">Topics</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1703,7 +1991,9 @@ Repositories are created as public (e.g. open source) by default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Allow<wbr>Merge<wbr>Commit</span>
+        <span id="state_allowmergecommit_go">
+<a href="#state_allowmergecommit_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Merge<wbr>Commit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1712,7 +2002,9 @@ Repositories are created as public (e.g. open source) by default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Allow<wbr>Rebase<wbr>Merge</span>
+        <span id="state_allowrebasemerge_go">
+<a href="#state_allowrebasemerge_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Rebase<wbr>Merge</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1721,7 +2013,9 @@ Repositories are created as public (e.g. open source) by default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Allow<wbr>Squash<wbr>Merge</span>
+        <span id="state_allowsquashmerge_go">
+<a href="#state_allowsquashmerge_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Squash<wbr>Merge</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1730,7 +2024,9 @@ Repositories are created as public (e.g. open source) by default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Archived</span>
+        <span id="state_archived_go">
+<a href="#state_archived_go" style="color: inherit; text-decoration: inherit;">Archived</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1739,7 +2035,9 @@ Repositories are created as public (e.g. open source) by default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Auto<wbr>Init</span>
+        <span id="state_autoinit_go">
+<a href="#state_autoinit_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Init</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1748,7 +2046,9 @@ Repositories are created as public (e.g. open source) by default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Default<wbr>Branch</span>
+        <span id="state_defaultbranch_go">
+<a href="#state_defaultbranch_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Branch</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1759,7 +2059,9 @@ initial repository creation and create the target branch inside of the repositor
 
     <dt class="property-optional"
             title="Optional">
-        <span>Delete<wbr>Branch<wbr>On<wbr>Merge</span>
+        <span id="state_deletebranchonmerge_go">
+<a href="#state_deletebranchonmerge_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>Branch<wbr>On<wbr>Merge</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1768,7 +2070,9 @@ initial repository creation and create the target branch inside of the repositor
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="state_description_go">
+<a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1777,7 +2081,9 @@ initial repository creation and create the target branch inside of the repositor
 
     <dt class="property-optional"
             title="Optional">
-        <span>Etag</span>
+        <span id="state_etag_go">
+<a href="#state_etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1785,7 +2091,9 @@ initial repository creation and create the target branch inside of the repositor
 
     <dt class="property-optional"
             title="Optional">
-        <span>Full<wbr>Name</span>
+        <span id="state_fullname_go">
+<a href="#state_fullname_go" style="color: inherit; text-decoration: inherit;">Full<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1794,7 +2102,9 @@ initial repository creation and create the target branch inside of the repositor
 
     <dt class="property-optional"
             title="Optional">
-        <span>Git<wbr>Clone<wbr>Url</span>
+        <span id="state_gitcloneurl_go">
+<a href="#state_gitcloneurl_go" style="color: inherit; text-decoration: inherit;">Git<wbr>Clone<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1803,7 +2113,9 @@ initial repository creation and create the target branch inside of the repositor
 
     <dt class="property-optional"
             title="Optional">
-        <span>Gitignore<wbr>Template</span>
+        <span id="state_gitignoretemplate_go">
+<a href="#state_gitignoretemplate_go" style="color: inherit; text-decoration: inherit;">Gitignore<wbr>Template</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1812,7 +2124,9 @@ initial repository creation and create the target branch inside of the repositor
 
     <dt class="property-optional"
             title="Optional">
-        <span>Has<wbr>Downloads</span>
+        <span id="state_hasdownloads_go">
+<a href="#state_hasdownloads_go" style="color: inherit; text-decoration: inherit;">Has<wbr>Downloads</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1821,7 +2135,9 @@ initial repository creation and create the target branch inside of the repositor
 
     <dt class="property-optional"
             title="Optional">
-        <span>Has<wbr>Issues</span>
+        <span id="state_hasissues_go">
+<a href="#state_hasissues_go" style="color: inherit; text-decoration: inherit;">Has<wbr>Issues</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1831,7 +2147,9 @@ on the repository.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Has<wbr>Projects</span>
+        <span id="state_hasprojects_go">
+<a href="#state_hasprojects_go" style="color: inherit; text-decoration: inherit;">Has<wbr>Projects</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1840,7 +2158,9 @@ on the repository.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Has<wbr>Wiki</span>
+        <span id="state_haswiki_go">
+<a href="#state_haswiki_go" style="color: inherit; text-decoration: inherit;">Has<wbr>Wiki</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1850,7 +2170,9 @@ the repository.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Homepage<wbr>Url</span>
+        <span id="state_homepageurl_go">
+<a href="#state_homepageurl_go" style="color: inherit; text-decoration: inherit;">Homepage<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1859,7 +2181,9 @@ the repository.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Html<wbr>Url</span>
+        <span id="state_htmlurl_go">
+<a href="#state_htmlurl_go" style="color: inherit; text-decoration: inherit;">Html<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1868,7 +2192,9 @@ the repository.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Http<wbr>Clone<wbr>Url</span>
+        <span id="state_httpcloneurl_go">
+<a href="#state_httpcloneurl_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Clone<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1877,7 +2203,9 @@ the repository.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Is<wbr>Template</span>
+        <span id="state_istemplate_go">
+<a href="#state_istemplate_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Template</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1886,7 +2214,9 @@ the repository.
 
     <dt class="property-optional"
             title="Optional">
-        <span>License<wbr>Template</span>
+        <span id="state_licensetemplate_go">
+<a href="#state_licensetemplate_go" style="color: inherit; text-decoration: inherit;">License<wbr>Template</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1895,7 +2225,9 @@ the repository.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1904,7 +2236,9 @@ the repository.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Node<wbr>Id</span>
+        <span id="state_nodeid_go">
+<a href="#state_nodeid_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1912,7 +2246,9 @@ the repository.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Private</span>
+        <span id="state_private_go">
+<a href="#state_private_go" style="color: inherit; text-decoration: inherit;">Private</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1922,7 +2258,9 @@ Repositories are created as public (e.g. open source) by default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ssh<wbr>Clone<wbr>Url</span>
+        <span id="state_sshcloneurl_go">
+<a href="#state_sshcloneurl_go" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Clone<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1931,7 +2269,9 @@ Repositories are created as public (e.g. open source) by default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Svn<wbr>Url</span>
+        <span id="state_svnurl_go">
+<a href="#state_svnurl_go" style="color: inherit; text-decoration: inherit;">Svn<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1940,7 +2280,9 @@ Repositories are created as public (e.g. open source) by default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Template</span>
+        <span id="state_template_go">
+<a href="#state_template_go" style="color: inherit; text-decoration: inherit;">Template</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#repositorytemplate">Repository<wbr>Template</a></span>
     </dt>
@@ -1949,7 +2291,9 @@ Repositories are created as public (e.g. open source) by default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Topics</span>
+        <span id="state_topics_go">
+<a href="#state_topics_go" style="color: inherit; text-decoration: inherit;">Topics</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1965,7 +2309,9 @@ Repositories are created as public (e.g. open source) by default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>allow<wbr>Merge<wbr>Commit</span>
+        <span id="state_allowmergecommit_nodejs">
+<a href="#state_allowmergecommit_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Merge<wbr>Commit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1974,7 +2320,9 @@ Repositories are created as public (e.g. open source) by default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>allow<wbr>Rebase<wbr>Merge</span>
+        <span id="state_allowrebasemerge_nodejs">
+<a href="#state_allowrebasemerge_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Rebase<wbr>Merge</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1983,7 +2331,9 @@ Repositories are created as public (e.g. open source) by default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>allow<wbr>Squash<wbr>Merge</span>
+        <span id="state_allowsquashmerge_nodejs">
+<a href="#state_allowsquashmerge_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Squash<wbr>Merge</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1992,7 +2342,9 @@ Repositories are created as public (e.g. open source) by default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>archived</span>
+        <span id="state_archived_nodejs">
+<a href="#state_archived_nodejs" style="color: inherit; text-decoration: inherit;">archived</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -2001,7 +2353,9 @@ Repositories are created as public (e.g. open source) by default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>auto<wbr>Init</span>
+        <span id="state_autoinit_nodejs">
+<a href="#state_autoinit_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Init</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -2010,7 +2364,9 @@ Repositories are created as public (e.g. open source) by default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>default<wbr>Branch</span>
+        <span id="state_defaultbranch_nodejs">
+<a href="#state_defaultbranch_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Branch</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2021,7 +2377,9 @@ initial repository creation and create the target branch inside of the repositor
 
     <dt class="property-optional"
             title="Optional">
-        <span>delete<wbr>Branch<wbr>On<wbr>Merge</span>
+        <span id="state_deletebranchonmerge_nodejs">
+<a href="#state_deletebranchonmerge_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>Branch<wbr>On<wbr>Merge</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -2030,7 +2388,9 @@ initial repository creation and create the target branch inside of the repositor
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="state_description_nodejs">
+<a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2039,7 +2399,9 @@ initial repository creation and create the target branch inside of the repositor
 
     <dt class="property-optional"
             title="Optional">
-        <span>etag</span>
+        <span id="state_etag_nodejs">
+<a href="#state_etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2047,7 +2409,9 @@ initial repository creation and create the target branch inside of the repositor
 
     <dt class="property-optional"
             title="Optional">
-        <span>full<wbr>Name</span>
+        <span id="state_fullname_nodejs">
+<a href="#state_fullname_nodejs" style="color: inherit; text-decoration: inherit;">full<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2056,7 +2420,9 @@ initial repository creation and create the target branch inside of the repositor
 
     <dt class="property-optional"
             title="Optional">
-        <span>git<wbr>Clone<wbr>Url</span>
+        <span id="state_gitcloneurl_nodejs">
+<a href="#state_gitcloneurl_nodejs" style="color: inherit; text-decoration: inherit;">git<wbr>Clone<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2065,7 +2431,9 @@ initial repository creation and create the target branch inside of the repositor
 
     <dt class="property-optional"
             title="Optional">
-        <span>gitignore<wbr>Template</span>
+        <span id="state_gitignoretemplate_nodejs">
+<a href="#state_gitignoretemplate_nodejs" style="color: inherit; text-decoration: inherit;">gitignore<wbr>Template</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2074,7 +2442,9 @@ initial repository creation and create the target branch inside of the repositor
 
     <dt class="property-optional"
             title="Optional">
-        <span>has<wbr>Downloads</span>
+        <span id="state_hasdownloads_nodejs">
+<a href="#state_hasdownloads_nodejs" style="color: inherit; text-decoration: inherit;">has<wbr>Downloads</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -2083,7 +2453,9 @@ initial repository creation and create the target branch inside of the repositor
 
     <dt class="property-optional"
             title="Optional">
-        <span>has<wbr>Issues</span>
+        <span id="state_hasissues_nodejs">
+<a href="#state_hasissues_nodejs" style="color: inherit; text-decoration: inherit;">has<wbr>Issues</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -2093,7 +2465,9 @@ on the repository.
 
     <dt class="property-optional"
             title="Optional">
-        <span>has<wbr>Projects</span>
+        <span id="state_hasprojects_nodejs">
+<a href="#state_hasprojects_nodejs" style="color: inherit; text-decoration: inherit;">has<wbr>Projects</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -2102,7 +2476,9 @@ on the repository.
 
     <dt class="property-optional"
             title="Optional">
-        <span>has<wbr>Wiki</span>
+        <span id="state_haswiki_nodejs">
+<a href="#state_haswiki_nodejs" style="color: inherit; text-decoration: inherit;">has<wbr>Wiki</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -2112,7 +2488,9 @@ the repository.
 
     <dt class="property-optional"
             title="Optional">
-        <span>homepage<wbr>Url</span>
+        <span id="state_homepageurl_nodejs">
+<a href="#state_homepageurl_nodejs" style="color: inherit; text-decoration: inherit;">homepage<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2121,7 +2499,9 @@ the repository.
 
     <dt class="property-optional"
             title="Optional">
-        <span>html<wbr>Url</span>
+        <span id="state_htmlurl_nodejs">
+<a href="#state_htmlurl_nodejs" style="color: inherit; text-decoration: inherit;">html<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2130,7 +2510,9 @@ the repository.
 
     <dt class="property-optional"
             title="Optional">
-        <span>http<wbr>Clone<wbr>Url</span>
+        <span id="state_httpcloneurl_nodejs">
+<a href="#state_httpcloneurl_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Clone<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2139,7 +2521,9 @@ the repository.
 
     <dt class="property-optional"
             title="Optional">
-        <span>is<wbr>Template</span>
+        <span id="state_istemplate_nodejs">
+<a href="#state_istemplate_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Template</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -2148,7 +2532,9 @@ the repository.
 
     <dt class="property-optional"
             title="Optional">
-        <span>license<wbr>Template</span>
+        <span id="state_licensetemplate_nodejs">
+<a href="#state_licensetemplate_nodejs" style="color: inherit; text-decoration: inherit;">license<wbr>Template</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2157,7 +2543,9 @@ the repository.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2166,7 +2554,9 @@ the repository.
 
     <dt class="property-optional"
             title="Optional">
-        <span>node<wbr>Id</span>
+        <span id="state_nodeid_nodejs">
+<a href="#state_nodeid_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2174,7 +2564,9 @@ the repository.
 
     <dt class="property-optional"
             title="Optional">
-        <span>private</span>
+        <span id="state_private_nodejs">
+<a href="#state_private_nodejs" style="color: inherit; text-decoration: inherit;">private</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -2184,7 +2576,9 @@ Repositories are created as public (e.g. open source) by default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ssh<wbr>Clone<wbr>Url</span>
+        <span id="state_sshcloneurl_nodejs">
+<a href="#state_sshcloneurl_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>Clone<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2193,7 +2587,9 @@ Repositories are created as public (e.g. open source) by default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>svn<wbr>Url</span>
+        <span id="state_svnurl_nodejs">
+<a href="#state_svnurl_nodejs" style="color: inherit; text-decoration: inherit;">svn<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2202,7 +2598,9 @@ Repositories are created as public (e.g. open source) by default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>template</span>
+        <span id="state_template_nodejs">
+<a href="#state_template_nodejs" style="color: inherit; text-decoration: inherit;">template</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#repositorytemplate">Repository<wbr>Template</a></span>
     </dt>
@@ -2211,7 +2609,9 @@ Repositories are created as public (e.g. open source) by default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>topics</span>
+        <span id="state_topics_nodejs">
+<a href="#state_topics_nodejs" style="color: inherit; text-decoration: inherit;">topics</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -2227,7 +2627,9 @@ Repositories are created as public (e.g. open source) by default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>allow_<wbr>merge_<wbr>commit</span>
+        <span id="state_allow_merge_commit_python">
+<a href="#state_allow_merge_commit_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>merge_<wbr>commit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2236,7 +2638,9 @@ Repositories are created as public (e.g. open source) by default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>allow_<wbr>rebase_<wbr>merge</span>
+        <span id="state_allow_rebase_merge_python">
+<a href="#state_allow_rebase_merge_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>rebase_<wbr>merge</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2245,7 +2649,9 @@ Repositories are created as public (e.g. open source) by default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>allow_<wbr>squash_<wbr>merge</span>
+        <span id="state_allow_squash_merge_python">
+<a href="#state_allow_squash_merge_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>squash_<wbr>merge</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2254,7 +2660,9 @@ Repositories are created as public (e.g. open source) by default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>archived</span>
+        <span id="state_archived_python">
+<a href="#state_archived_python" style="color: inherit; text-decoration: inherit;">archived</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2263,7 +2671,9 @@ Repositories are created as public (e.g. open source) by default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>auto_<wbr>init</span>
+        <span id="state_auto_init_python">
+<a href="#state_auto_init_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>init</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2272,7 +2682,9 @@ Repositories are created as public (e.g. open source) by default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>default_<wbr>branch</span>
+        <span id="state_default_branch_python">
+<a href="#state_default_branch_python" style="color: inherit; text-decoration: inherit;">default_<wbr>branch</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2283,7 +2695,9 @@ initial repository creation and create the target branch inside of the repositor
 
     <dt class="property-optional"
             title="Optional">
-        <span>delete_<wbr>branch_<wbr>on_<wbr>merge</span>
+        <span id="state_delete_branch_on_merge_python">
+<a href="#state_delete_branch_on_merge_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>branch_<wbr>on_<wbr>merge</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2292,7 +2706,9 @@ initial repository creation and create the target branch inside of the repositor
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="state_description_python">
+<a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2301,7 +2717,9 @@ initial repository creation and create the target branch inside of the repositor
 
     <dt class="property-optional"
             title="Optional">
-        <span>etag</span>
+        <span id="state_etag_python">
+<a href="#state_etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2309,7 +2727,9 @@ initial repository creation and create the target branch inside of the repositor
 
     <dt class="property-optional"
             title="Optional">
-        <span>full_<wbr>name</span>
+        <span id="state_full_name_python">
+<a href="#state_full_name_python" style="color: inherit; text-decoration: inherit;">full_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2318,7 +2738,9 @@ initial repository creation and create the target branch inside of the repositor
 
     <dt class="property-optional"
             title="Optional">
-        <span>git_<wbr>clone_<wbr>url</span>
+        <span id="state_git_clone_url_python">
+<a href="#state_git_clone_url_python" style="color: inherit; text-decoration: inherit;">git_<wbr>clone_<wbr>url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2327,7 +2749,9 @@ initial repository creation and create the target branch inside of the repositor
 
     <dt class="property-optional"
             title="Optional">
-        <span>gitignore_<wbr>template</span>
+        <span id="state_gitignore_template_python">
+<a href="#state_gitignore_template_python" style="color: inherit; text-decoration: inherit;">gitignore_<wbr>template</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2336,7 +2760,9 @@ initial repository creation and create the target branch inside of the repositor
 
     <dt class="property-optional"
             title="Optional">
-        <span>has_<wbr>downloads</span>
+        <span id="state_has_downloads_python">
+<a href="#state_has_downloads_python" style="color: inherit; text-decoration: inherit;">has_<wbr>downloads</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2345,7 +2771,9 @@ initial repository creation and create the target branch inside of the repositor
 
     <dt class="property-optional"
             title="Optional">
-        <span>has_<wbr>issues</span>
+        <span id="state_has_issues_python">
+<a href="#state_has_issues_python" style="color: inherit; text-decoration: inherit;">has_<wbr>issues</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2355,7 +2783,9 @@ on the repository.
 
     <dt class="property-optional"
             title="Optional">
-        <span>has_<wbr>projects</span>
+        <span id="state_has_projects_python">
+<a href="#state_has_projects_python" style="color: inherit; text-decoration: inherit;">has_<wbr>projects</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2364,7 +2794,9 @@ on the repository.
 
     <dt class="property-optional"
             title="Optional">
-        <span>has_<wbr>wiki</span>
+        <span id="state_has_wiki_python">
+<a href="#state_has_wiki_python" style="color: inherit; text-decoration: inherit;">has_<wbr>wiki</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2374,7 +2806,9 @@ the repository.
 
     <dt class="property-optional"
             title="Optional">
-        <span>homepage_<wbr>url</span>
+        <span id="state_homepage_url_python">
+<a href="#state_homepage_url_python" style="color: inherit; text-decoration: inherit;">homepage_<wbr>url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2383,7 +2817,9 @@ the repository.
 
     <dt class="property-optional"
             title="Optional">
-        <span>html_<wbr>url</span>
+        <span id="state_html_url_python">
+<a href="#state_html_url_python" style="color: inherit; text-decoration: inherit;">html_<wbr>url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2392,7 +2828,9 @@ the repository.
 
     <dt class="property-optional"
             title="Optional">
-        <span>http_<wbr>clone_<wbr>url</span>
+        <span id="state_http_clone_url_python">
+<a href="#state_http_clone_url_python" style="color: inherit; text-decoration: inherit;">http_<wbr>clone_<wbr>url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2401,7 +2839,9 @@ the repository.
 
     <dt class="property-optional"
             title="Optional">
-        <span>is_<wbr>template</span>
+        <span id="state_is_template_python">
+<a href="#state_is_template_python" style="color: inherit; text-decoration: inherit;">is_<wbr>template</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2410,7 +2850,9 @@ the repository.
 
     <dt class="property-optional"
             title="Optional">
-        <span>license_<wbr>template</span>
+        <span id="state_license_template_python">
+<a href="#state_license_template_python" style="color: inherit; text-decoration: inherit;">license_<wbr>template</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2419,7 +2861,9 @@ the repository.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2428,7 +2872,9 @@ the repository.
 
     <dt class="property-optional"
             title="Optional">
-        <span>node_<wbr>id</span>
+        <span id="state_node_id_python">
+<a href="#state_node_id_python" style="color: inherit; text-decoration: inherit;">node_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2436,7 +2882,9 @@ the repository.
 
     <dt class="property-optional"
             title="Optional">
-        <span>private</span>
+        <span id="state_private_python">
+<a href="#state_private_python" style="color: inherit; text-decoration: inherit;">private</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2446,7 +2894,9 @@ Repositories are created as public (e.g. open source) by default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ssh_<wbr>clone_<wbr>url</span>
+        <span id="state_ssh_clone_url_python">
+<a href="#state_ssh_clone_url_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>clone_<wbr>url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2455,7 +2905,9 @@ Repositories are created as public (e.g. open source) by default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>svn_<wbr>url</span>
+        <span id="state_svn_url_python">
+<a href="#state_svn_url_python" style="color: inherit; text-decoration: inherit;">svn_<wbr>url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2464,7 +2916,9 @@ Repositories are created as public (e.g. open source) by default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>template</span>
+        <span id="state_template_python">
+<a href="#state_template_python" style="color: inherit; text-decoration: inherit;">template</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#repositorytemplate">Dict[Repository<wbr>Template]</a></span>
     </dt>
@@ -2473,7 +2927,9 @@ Repositories are created as public (e.g. open source) by default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>topics</span>
+        <span id="state_topics_python">
+<a href="#state_topics_python" style="color: inherit; text-decoration: inherit;">topics</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -2515,7 +2971,9 @@ Repositories are created as public (e.g. open source) by default.
 
     <dt class="property-required"
             title="Required">
-        <span>Owner</span>
+        <span id="owner_csharp">
+<a href="#owner_csharp" style="color: inherit; text-decoration: inherit;">Owner</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2523,7 +2981,9 @@ Repositories are created as public (e.g. open source) by default.
 
     <dt class="property-required"
             title="Required">
-        <span>Repository</span>
+        <span id="repository_csharp">
+<a href="#repository_csharp" style="color: inherit; text-decoration: inherit;">Repository</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2538,7 +2998,9 @@ Repositories are created as public (e.g. open source) by default.
 
     <dt class="property-required"
             title="Required">
-        <span>Owner</span>
+        <span id="owner_go">
+<a href="#owner_go" style="color: inherit; text-decoration: inherit;">Owner</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2546,7 +3008,9 @@ Repositories are created as public (e.g. open source) by default.
 
     <dt class="property-required"
             title="Required">
-        <span>Repository</span>
+        <span id="repository_go">
+<a href="#repository_go" style="color: inherit; text-decoration: inherit;">Repository</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2561,7 +3025,9 @@ Repositories are created as public (e.g. open source) by default.
 
     <dt class="property-required"
             title="Required">
-        <span>owner</span>
+        <span id="owner_nodejs">
+<a href="#owner_nodejs" style="color: inherit; text-decoration: inherit;">owner</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2569,7 +3035,9 @@ Repositories are created as public (e.g. open source) by default.
 
     <dt class="property-required"
             title="Required">
-        <span>repository</span>
+        <span id="repository_nodejs">
+<a href="#repository_nodejs" style="color: inherit; text-decoration: inherit;">repository</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2584,7 +3052,9 @@ Repositories are created as public (e.g. open source) by default.
 
     <dt class="property-required"
             title="Required">
-        <span>owner</span>
+        <span id="owner_python">
+<a href="#owner_python" style="color: inherit; text-decoration: inherit;">owner</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2592,7 +3062,9 @@ Repositories are created as public (e.g. open source) by default.
 
     <dt class="property-required"
             title="Required">
-        <span>repository</span>
+        <span id="repository_python">
+<a href="#repository_python" style="color: inherit; text-decoration: inherit;">repository</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

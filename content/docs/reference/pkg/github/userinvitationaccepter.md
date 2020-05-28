@@ -20,7 +20,35 @@ Provides a resource to manage GitHub repository collaborator invitations.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Github = Pulumi.Github;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleRepository = new Github.Repository("exampleRepository", new Github.RepositoryArgs
+        {
+        });
+        var exampleRepositoryCollaborator = new Github.RepositoryCollaborator("exampleRepositoryCollaborator", new Github.RepositoryCollaboratorArgs
+        {
+            Permission = "push",
+            Repository = exampleRepository.Name,
+            Username = "example-username",
+        });
+        var invitee = new Github.Provider("invitee", new Github.ProviderArgs
+        {
+            Token = @var.Invitee_token,
+        });
+        var exampleUserInvitationAccepter = new Github.UserInvitationAccepter("exampleUserInvitationAccepter", new Github.UserInvitationAccepterArgs
+        {
+            InvitationId = exampleRepositoryCollaborator.InvitationId,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -249,7 +277,9 @@ The UserInvitationAccepter resource accepts the following [input]({{< relref "/d
 
     <dt class="property-required"
             title="Required">
-        <span>Invitation<wbr>Id</span>
+        <span id="invitationid_csharp">
+<a href="#invitationid_csharp" style="color: inherit; text-decoration: inherit;">Invitation<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -265,7 +295,9 @@ The UserInvitationAccepter resource accepts the following [input]({{< relref "/d
 
     <dt class="property-required"
             title="Required">
-        <span>Invitation<wbr>Id</span>
+        <span id="invitationid_go">
+<a href="#invitationid_go" style="color: inherit; text-decoration: inherit;">Invitation<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -281,7 +313,9 @@ The UserInvitationAccepter resource accepts the following [input]({{< relref "/d
 
     <dt class="property-required"
             title="Required">
-        <span>invitation<wbr>Id</span>
+        <span id="invitationid_nodejs">
+<a href="#invitationid_nodejs" style="color: inherit; text-decoration: inherit;">invitation<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -297,7 +331,9 @@ The UserInvitationAccepter resource accepts the following [input]({{< relref "/d
 
     <dt class="property-required"
             title="Required">
-        <span>invitation_<wbr>id</span>
+        <span id="invitation_id_python">
+<a href="#invitation_id_python" style="color: inherit; text-decoration: inherit;">invitation_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -324,7 +360,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -339,7 +377,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -354,7 +394,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -369,7 +411,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -510,7 +554,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Invitation<wbr>Id</span>
+        <span id="state_invitationid_csharp">
+<a href="#state_invitationid_csharp" style="color: inherit; text-decoration: inherit;">Invitation<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -526,7 +572,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Invitation<wbr>Id</span>
+        <span id="state_invitationid_go">
+<a href="#state_invitationid_go" style="color: inherit; text-decoration: inherit;">Invitation<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -542,7 +590,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>invitation<wbr>Id</span>
+        <span id="state_invitationid_nodejs">
+<a href="#state_invitationid_nodejs" style="color: inherit; text-decoration: inherit;">invitation<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -558,7 +608,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>invitation_<wbr>id</span>
+        <span id="state_invitation_id_python">
+<a href="#state_invitation_id_python" style="color: inherit; text-decoration: inherit;">invitation_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

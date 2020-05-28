@@ -23,7 +23,24 @@ a new team will be created. When destroyed, that team will be removed.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Github = Pulumi.Github;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        // Add a team to the organization
+        var someTeam = new Github.Team("someTeam", new Github.TeamArgs
+        {
+            Description = "Some cool team",
+            Privacy = "closed",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -241,7 +258,9 @@ The Team resource accepts the following [input]({{< relref "/docs/intro/concepts
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -250,7 +269,9 @@ The Team resource accepts the following [input]({{< relref "/docs/intro/concepts
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ldap<wbr>Dn</span>
+        <span id="ldapdn_csharp">
+<a href="#ldapdn_csharp" style="color: inherit; text-decoration: inherit;">Ldap<wbr>Dn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -259,7 +280,9 @@ The Team resource accepts the following [input]({{< relref "/docs/intro/concepts
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -268,7 +291,9 @@ The Team resource accepts the following [input]({{< relref "/docs/intro/concepts
 
     <dt class="property-optional"
             title="Optional">
-        <span>Parent<wbr>Team<wbr>Id</span>
+        <span id="parentteamid_csharp">
+<a href="#parentteamid_csharp" style="color: inherit; text-decoration: inherit;">Parent<wbr>Team<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -277,7 +302,9 @@ The Team resource accepts the following [input]({{< relref "/docs/intro/concepts
 
     <dt class="property-optional"
             title="Optional">
-        <span>Privacy</span>
+        <span id="privacy_csharp">
+<a href="#privacy_csharp" style="color: inherit; text-decoration: inherit;">Privacy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -294,7 +321,9 @@ Defaults to `secret`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -303,7 +332,9 @@ Defaults to `secret`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ldap<wbr>Dn</span>
+        <span id="ldapdn_go">
+<a href="#ldapdn_go" style="color: inherit; text-decoration: inherit;">Ldap<wbr>Dn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -312,7 +343,9 @@ Defaults to `secret`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -321,7 +354,9 @@ Defaults to `secret`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Parent<wbr>Team<wbr>Id</span>
+        <span id="parentteamid_go">
+<a href="#parentteamid_go" style="color: inherit; text-decoration: inherit;">Parent<wbr>Team<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -330,7 +365,9 @@ Defaults to `secret`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Privacy</span>
+        <span id="privacy_go">
+<a href="#privacy_go" style="color: inherit; text-decoration: inherit;">Privacy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -347,7 +384,9 @@ Defaults to `secret`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -356,7 +395,9 @@ Defaults to `secret`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ldap<wbr>Dn</span>
+        <span id="ldapdn_nodejs">
+<a href="#ldapdn_nodejs" style="color: inherit; text-decoration: inherit;">ldap<wbr>Dn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -365,7 +406,9 @@ Defaults to `secret`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -374,7 +417,9 @@ Defaults to `secret`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>parent<wbr>Team<wbr>Id</span>
+        <span id="parentteamid_nodejs">
+<a href="#parentteamid_nodejs" style="color: inherit; text-decoration: inherit;">parent<wbr>Team<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -383,7 +428,9 @@ Defaults to `secret`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>privacy</span>
+        <span id="privacy_nodejs">
+<a href="#privacy_nodejs" style="color: inherit; text-decoration: inherit;">privacy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -400,7 +447,9 @@ Defaults to `secret`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -409,7 +458,9 @@ Defaults to `secret`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ldap_<wbr>dn</span>
+        <span id="ldap_dn_python">
+<a href="#ldap_dn_python" style="color: inherit; text-decoration: inherit;">ldap_<wbr>dn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -418,7 +469,9 @@ Defaults to `secret`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -427,7 +480,9 @@ Defaults to `secret`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>parent_<wbr>team_<wbr>id</span>
+        <span id="parent_team_id_python">
+<a href="#parent_team_id_python" style="color: inherit; text-decoration: inherit;">parent_<wbr>team_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -436,7 +491,9 @@ Defaults to `secret`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>privacy</span>
+        <span id="privacy_python">
+<a href="#privacy_python" style="color: inherit; text-decoration: inherit;">privacy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -464,7 +521,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Etag</span>
+        <span id="etag_csharp">
+<a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -472,7 +531,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -480,7 +541,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Node<wbr>Id</span>
+        <span id="nodeid_csharp">
+<a href="#nodeid_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -488,7 +551,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Slug</span>
+        <span id="slug_csharp">
+<a href="#slug_csharp" style="color: inherit; text-decoration: inherit;">Slug</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -506,7 +571,9 @@ Useful when referencing the team in [`github..BranchProtection`](https://www.ter
 
     <dt class="property-"
             title="">
-        <span>Etag</span>
+        <span id="etag_go">
+<a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -514,7 +581,9 @@ Useful when referencing the team in [`github..BranchProtection`](https://www.ter
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -522,7 +591,9 @@ Useful when referencing the team in [`github..BranchProtection`](https://www.ter
 
     <dt class="property-"
             title="">
-        <span>Node<wbr>Id</span>
+        <span id="nodeid_go">
+<a href="#nodeid_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -530,7 +601,9 @@ Useful when referencing the team in [`github..BranchProtection`](https://www.ter
 
     <dt class="property-"
             title="">
-        <span>Slug</span>
+        <span id="slug_go">
+<a href="#slug_go" style="color: inherit; text-decoration: inherit;">Slug</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -548,7 +621,9 @@ Useful when referencing the team in [`github..BranchProtection`](https://www.ter
 
     <dt class="property-"
             title="">
-        <span>etag</span>
+        <span id="etag_nodejs">
+<a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -556,7 +631,9 @@ Useful when referencing the team in [`github..BranchProtection`](https://www.ter
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -564,7 +641,9 @@ Useful when referencing the team in [`github..BranchProtection`](https://www.ter
 
     <dt class="property-"
             title="">
-        <span>node<wbr>Id</span>
+        <span id="nodeid_nodejs">
+<a href="#nodeid_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -572,7 +651,9 @@ Useful when referencing the team in [`github..BranchProtection`](https://www.ter
 
     <dt class="property-"
             title="">
-        <span>slug</span>
+        <span id="slug_nodejs">
+<a href="#slug_nodejs" style="color: inherit; text-decoration: inherit;">slug</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -590,7 +671,9 @@ Useful when referencing the team in [`github..BranchProtection`](https://www.ter
 
     <dt class="property-"
             title="">
-        <span>etag</span>
+        <span id="etag_python">
+<a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -598,7 +681,9 @@ Useful when referencing the team in [`github..BranchProtection`](https://www.ter
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -606,7 +691,9 @@ Useful when referencing the team in [`github..BranchProtection`](https://www.ter
 
     <dt class="property-"
             title="">
-        <span>node_<wbr>id</span>
+        <span id="node_id_python">
+<a href="#node_id_python" style="color: inherit; text-decoration: inherit;">node_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -614,7 +701,9 @@ Useful when referencing the team in [`github..BranchProtection`](https://www.ter
 
     <dt class="property-"
             title="">
-        <span>slug</span>
+        <span id="slug_python">
+<a href="#slug_python" style="color: inherit; text-decoration: inherit;">slug</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -758,7 +847,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="state_description_csharp">
+<a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -767,7 +858,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Etag</span>
+        <span id="state_etag_csharp">
+<a href="#state_etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -775,7 +868,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ldap<wbr>Dn</span>
+        <span id="state_ldapdn_csharp">
+<a href="#state_ldapdn_csharp" style="color: inherit; text-decoration: inherit;">Ldap<wbr>Dn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -784,7 +879,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -793,7 +890,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Node<wbr>Id</span>
+        <span id="state_nodeid_csharp">
+<a href="#state_nodeid_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -801,7 +900,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Parent<wbr>Team<wbr>Id</span>
+        <span id="state_parentteamid_csharp">
+<a href="#state_parentteamid_csharp" style="color: inherit; text-decoration: inherit;">Parent<wbr>Team<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -810,7 +911,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Privacy</span>
+        <span id="state_privacy_csharp">
+<a href="#state_privacy_csharp" style="color: inherit; text-decoration: inherit;">Privacy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -820,7 +923,9 @@ Defaults to `secret`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Slug</span>
+        <span id="state_slug_csharp">
+<a href="#state_slug_csharp" style="color: inherit; text-decoration: inherit;">Slug</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -838,7 +943,9 @@ Useful when referencing the team in [`github..BranchProtection`](https://www.ter
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="state_description_go">
+<a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -847,7 +954,9 @@ Useful when referencing the team in [`github..BranchProtection`](https://www.ter
 
     <dt class="property-optional"
             title="Optional">
-        <span>Etag</span>
+        <span id="state_etag_go">
+<a href="#state_etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -855,7 +964,9 @@ Useful when referencing the team in [`github..BranchProtection`](https://www.ter
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ldap<wbr>Dn</span>
+        <span id="state_ldapdn_go">
+<a href="#state_ldapdn_go" style="color: inherit; text-decoration: inherit;">Ldap<wbr>Dn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -864,7 +975,9 @@ Useful when referencing the team in [`github..BranchProtection`](https://www.ter
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -873,7 +986,9 @@ Useful when referencing the team in [`github..BranchProtection`](https://www.ter
 
     <dt class="property-optional"
             title="Optional">
-        <span>Node<wbr>Id</span>
+        <span id="state_nodeid_go">
+<a href="#state_nodeid_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -881,7 +996,9 @@ Useful when referencing the team in [`github..BranchProtection`](https://www.ter
 
     <dt class="property-optional"
             title="Optional">
-        <span>Parent<wbr>Team<wbr>Id</span>
+        <span id="state_parentteamid_go">
+<a href="#state_parentteamid_go" style="color: inherit; text-decoration: inherit;">Parent<wbr>Team<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -890,7 +1007,9 @@ Useful when referencing the team in [`github..BranchProtection`](https://www.ter
 
     <dt class="property-optional"
             title="Optional">
-        <span>Privacy</span>
+        <span id="state_privacy_go">
+<a href="#state_privacy_go" style="color: inherit; text-decoration: inherit;">Privacy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -900,7 +1019,9 @@ Defaults to `secret`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Slug</span>
+        <span id="state_slug_go">
+<a href="#state_slug_go" style="color: inherit; text-decoration: inherit;">Slug</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -918,7 +1039,9 @@ Useful when referencing the team in [`github..BranchProtection`](https://www.ter
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="state_description_nodejs">
+<a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -927,7 +1050,9 @@ Useful when referencing the team in [`github..BranchProtection`](https://www.ter
 
     <dt class="property-optional"
             title="Optional">
-        <span>etag</span>
+        <span id="state_etag_nodejs">
+<a href="#state_etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -935,7 +1060,9 @@ Useful when referencing the team in [`github..BranchProtection`](https://www.ter
 
     <dt class="property-optional"
             title="Optional">
-        <span>ldap<wbr>Dn</span>
+        <span id="state_ldapdn_nodejs">
+<a href="#state_ldapdn_nodejs" style="color: inherit; text-decoration: inherit;">ldap<wbr>Dn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -944,7 +1071,9 @@ Useful when referencing the team in [`github..BranchProtection`](https://www.ter
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -953,7 +1082,9 @@ Useful when referencing the team in [`github..BranchProtection`](https://www.ter
 
     <dt class="property-optional"
             title="Optional">
-        <span>node<wbr>Id</span>
+        <span id="state_nodeid_nodejs">
+<a href="#state_nodeid_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -961,7 +1092,9 @@ Useful when referencing the team in [`github..BranchProtection`](https://www.ter
 
     <dt class="property-optional"
             title="Optional">
-        <span>parent<wbr>Team<wbr>Id</span>
+        <span id="state_parentteamid_nodejs">
+<a href="#state_parentteamid_nodejs" style="color: inherit; text-decoration: inherit;">parent<wbr>Team<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -970,7 +1103,9 @@ Useful when referencing the team in [`github..BranchProtection`](https://www.ter
 
     <dt class="property-optional"
             title="Optional">
-        <span>privacy</span>
+        <span id="state_privacy_nodejs">
+<a href="#state_privacy_nodejs" style="color: inherit; text-decoration: inherit;">privacy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -980,7 +1115,9 @@ Defaults to `secret`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>slug</span>
+        <span id="state_slug_nodejs">
+<a href="#state_slug_nodejs" style="color: inherit; text-decoration: inherit;">slug</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -998,7 +1135,9 @@ Useful when referencing the team in [`github..BranchProtection`](https://www.ter
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="state_description_python">
+<a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1007,7 +1146,9 @@ Useful when referencing the team in [`github..BranchProtection`](https://www.ter
 
     <dt class="property-optional"
             title="Optional">
-        <span>etag</span>
+        <span id="state_etag_python">
+<a href="#state_etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1015,7 +1156,9 @@ Useful when referencing the team in [`github..BranchProtection`](https://www.ter
 
     <dt class="property-optional"
             title="Optional">
-        <span>ldap_<wbr>dn</span>
+        <span id="state_ldap_dn_python">
+<a href="#state_ldap_dn_python" style="color: inherit; text-decoration: inherit;">ldap_<wbr>dn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1024,7 +1167,9 @@ Useful when referencing the team in [`github..BranchProtection`](https://www.ter
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1033,7 +1178,9 @@ Useful when referencing the team in [`github..BranchProtection`](https://www.ter
 
     <dt class="property-optional"
             title="Optional">
-        <span>node_<wbr>id</span>
+        <span id="state_node_id_python">
+<a href="#state_node_id_python" style="color: inherit; text-decoration: inherit;">node_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1041,7 +1188,9 @@ Useful when referencing the team in [`github..BranchProtection`](https://www.ter
 
     <dt class="property-optional"
             title="Optional">
-        <span>parent_<wbr>team_<wbr>id</span>
+        <span id="state_parent_team_id_python">
+<a href="#state_parent_team_id_python" style="color: inherit; text-decoration: inherit;">parent_<wbr>team_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1050,7 +1199,9 @@ Useful when referencing the team in [`github..BranchProtection`](https://www.ter
 
     <dt class="property-optional"
             title="Optional">
-        <span>privacy</span>
+        <span id="state_privacy_python">
+<a href="#state_privacy_python" style="color: inherit; text-decoration: inherit;">privacy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1060,7 +1211,9 @@ Defaults to `secret`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>slug</span>
+        <span id="state_slug_python">
+<a href="#state_slug_python" style="color: inherit; text-decoration: inherit;">slug</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

@@ -16,61 +16,9 @@ You must have team synchronization enabled for organizations owned by enterprise
 To learn more about team synchronization between IdPs and Github, please refer to:
 https://help.github.com/en/github/setting-up-and-managing-organizations-and-teams/synchronizing-teams-between-your-identity-provider-and-github
 
-
-
 {{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_github as github
-
-example_groups = github.get_organization_team_sync_groups()
-example_group_mapping = github.TeamSyncGroupMapping("exampleGroupMapping",
-    team_slug="example",
-    dynamic=[{
-        "forEach": [g for g in example_groups.groups if g.group_name == "some_team_group"],
-        "content": [{
-            "groupId": group["value"]["group_id"],
-            "groupName": group["value"]["group_name"],
-            "groupDescription": group["value"]["group_description"],
-        }],
-    }])
-```
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as github from "@pulumi/github";
-
-const exampleGroups = github.getOrganizationTeamSyncGroups({});
-const exampleGroupMapping = new github.TeamSyncGroupMapping("exampleGroupMapping", {
-    teamSlug: "example",
-    dynamic: [{
-        forEach: exampleGroups.then(exampleGroups => exampleGroups.groups.filter(g => g.groupName == "some_team_group").map(g => g)),
-        content: [{
-            groupId: group.value.group_id,
-            groupName: group.value.group_name,
-            groupDescription: group.value.group_description,
-        }],
-    }],
-});
-```
-{{% /example %}}
-
 {{% /examples %}}
+
 
 
 ## Create a TeamSyncGroupMapping Resource {#create}
@@ -256,7 +204,9 @@ The TeamSyncGroupMapping resource accepts the following [input]({{< relref "/doc
 
     <dt class="property-required"
             title="Required">
-        <span>Team<wbr>Slug</span>
+        <span id="teamslug_csharp">
+<a href="#teamslug_csharp" style="color: inherit; text-decoration: inherit;">Team<wbr>Slug</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -265,7 +215,9 @@ The TeamSyncGroupMapping resource accepts the following [input]({{< relref "/doc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Groups</span>
+        <span id="groups_csharp">
+<a href="#groups_csharp" style="color: inherit; text-decoration: inherit;">Groups</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#teamsyncgroupmappinggroup">List&lt;Team<wbr>Sync<wbr>Group<wbr>Mapping<wbr>Group<wbr>Args&gt;</a></span>
     </dt>
@@ -282,7 +234,9 @@ ___
 
     <dt class="property-required"
             title="Required">
-        <span>Team<wbr>Slug</span>
+        <span id="teamslug_go">
+<a href="#teamslug_go" style="color: inherit; text-decoration: inherit;">Team<wbr>Slug</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -291,7 +245,9 @@ ___
 
     <dt class="property-optional"
             title="Optional">
-        <span>Groups</span>
+        <span id="groups_go">
+<a href="#groups_go" style="color: inherit; text-decoration: inherit;">Groups</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#teamsyncgroupmappinggroup">[]Team<wbr>Sync<wbr>Group<wbr>Mapping<wbr>Group</a></span>
     </dt>
@@ -308,7 +264,9 @@ ___
 
     <dt class="property-required"
             title="Required">
-        <span>team<wbr>Slug</span>
+        <span id="teamslug_nodejs">
+<a href="#teamslug_nodejs" style="color: inherit; text-decoration: inherit;">team<wbr>Slug</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -317,7 +275,9 @@ ___
 
     <dt class="property-optional"
             title="Optional">
-        <span>groups</span>
+        <span id="groups_nodejs">
+<a href="#groups_nodejs" style="color: inherit; text-decoration: inherit;">groups</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#teamsyncgroupmappinggroup">Team<wbr>Sync<wbr>Group<wbr>Mapping<wbr>Group[]</a></span>
     </dt>
@@ -334,7 +294,9 @@ ___
 
     <dt class="property-required"
             title="Required">
-        <span>team_<wbr>slug</span>
+        <span id="team_slug_python">
+<a href="#team_slug_python" style="color: inherit; text-decoration: inherit;">team_<wbr>slug</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -343,7 +305,9 @@ ___
 
     <dt class="property-optional"
             title="Optional">
-        <span>groups</span>
+        <span id="groups_python">
+<a href="#groups_python" style="color: inherit; text-decoration: inherit;">groups</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#teamsyncgroupmappinggroup">List[Team<wbr>Sync<wbr>Group<wbr>Mapping<wbr>Group]</a></span>
     </dt>
@@ -371,7 +335,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Etag</span>
+        <span id="etag_csharp">
+<a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -379,7 +345,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -394,7 +362,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Etag</span>
+        <span id="etag_go">
+<a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -402,7 +372,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -417,7 +389,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>etag</span>
+        <span id="etag_nodejs">
+<a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -425,7 +399,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -440,7 +416,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>etag</span>
+        <span id="etag_python">
+<a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -448,7 +426,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -589,7 +569,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Etag</span>
+        <span id="state_etag_csharp">
+<a href="#state_etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -597,7 +579,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Groups</span>
+        <span id="state_groups_csharp">
+<a href="#state_groups_csharp" style="color: inherit; text-decoration: inherit;">Groups</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#teamsyncgroupmappinggroup">List&lt;Team<wbr>Sync<wbr>Group<wbr>Mapping<wbr>Group<wbr>Args&gt;</a></span>
     </dt>
@@ -607,7 +591,9 @@ ___
 
     <dt class="property-optional"
             title="Optional">
-        <span>Team<wbr>Slug</span>
+        <span id="state_teamslug_csharp">
+<a href="#state_teamslug_csharp" style="color: inherit; text-decoration: inherit;">Team<wbr>Slug</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -623,7 +609,9 @@ ___
 
     <dt class="property-optional"
             title="Optional">
-        <span>Etag</span>
+        <span id="state_etag_go">
+<a href="#state_etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -631,7 +619,9 @@ ___
 
     <dt class="property-optional"
             title="Optional">
-        <span>Groups</span>
+        <span id="state_groups_go">
+<a href="#state_groups_go" style="color: inherit; text-decoration: inherit;">Groups</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#teamsyncgroupmappinggroup">[]Team<wbr>Sync<wbr>Group<wbr>Mapping<wbr>Group</a></span>
     </dt>
@@ -641,7 +631,9 @@ ___
 
     <dt class="property-optional"
             title="Optional">
-        <span>Team<wbr>Slug</span>
+        <span id="state_teamslug_go">
+<a href="#state_teamslug_go" style="color: inherit; text-decoration: inherit;">Team<wbr>Slug</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -657,7 +649,9 @@ ___
 
     <dt class="property-optional"
             title="Optional">
-        <span>etag</span>
+        <span id="state_etag_nodejs">
+<a href="#state_etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -665,7 +659,9 @@ ___
 
     <dt class="property-optional"
             title="Optional">
-        <span>groups</span>
+        <span id="state_groups_nodejs">
+<a href="#state_groups_nodejs" style="color: inherit; text-decoration: inherit;">groups</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#teamsyncgroupmappinggroup">Team<wbr>Sync<wbr>Group<wbr>Mapping<wbr>Group[]</a></span>
     </dt>
@@ -675,7 +671,9 @@ ___
 
     <dt class="property-optional"
             title="Optional">
-        <span>team<wbr>Slug</span>
+        <span id="state_teamslug_nodejs">
+<a href="#state_teamslug_nodejs" style="color: inherit; text-decoration: inherit;">team<wbr>Slug</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -691,7 +689,9 @@ ___
 
     <dt class="property-optional"
             title="Optional">
-        <span>etag</span>
+        <span id="state_etag_python">
+<a href="#state_etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -699,7 +699,9 @@ ___
 
     <dt class="property-optional"
             title="Optional">
-        <span>groups</span>
+        <span id="state_groups_python">
+<a href="#state_groups_python" style="color: inherit; text-decoration: inherit;">groups</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#teamsyncgroupmappinggroup">List[Team<wbr>Sync<wbr>Group<wbr>Mapping<wbr>Group]</a></span>
     </dt>
@@ -709,7 +711,9 @@ ___
 
     <dt class="property-optional"
             title="Optional">
-        <span>team_<wbr>slug</span>
+        <span id="state_team_slug_python">
+<a href="#state_team_slug_python" style="color: inherit; text-decoration: inherit;">team_<wbr>slug</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -751,7 +755,9 @@ ___
 
     <dt class="property-required"
             title="Required">
-        <span>Group<wbr>Description</span>
+        <span id="groupdescription_csharp">
+<a href="#groupdescription_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -760,7 +766,9 @@ ___
 
     <dt class="property-required"
             title="Required">
-        <span>Group<wbr>Id</span>
+        <span id="groupid_csharp">
+<a href="#groupid_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -769,7 +777,9 @@ ___
 
     <dt class="property-required"
             title="Required">
-        <span>Group<wbr>Name</span>
+        <span id="groupname_csharp">
+<a href="#groupname_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -785,7 +795,9 @@ ___
 
     <dt class="property-required"
             title="Required">
-        <span>Group<wbr>Description</span>
+        <span id="groupdescription_go">
+<a href="#groupdescription_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -794,7 +806,9 @@ ___
 
     <dt class="property-required"
             title="Required">
-        <span>Group<wbr>Id</span>
+        <span id="groupid_go">
+<a href="#groupid_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -803,7 +817,9 @@ ___
 
     <dt class="property-required"
             title="Required">
-        <span>Group<wbr>Name</span>
+        <span id="groupname_go">
+<a href="#groupname_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -819,7 +835,9 @@ ___
 
     <dt class="property-required"
             title="Required">
-        <span>group<wbr>Description</span>
+        <span id="groupdescription_nodejs">
+<a href="#groupdescription_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -828,7 +846,9 @@ ___
 
     <dt class="property-required"
             title="Required">
-        <span>group<wbr>Id</span>
+        <span id="groupid_nodejs">
+<a href="#groupid_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -837,7 +857,9 @@ ___
 
     <dt class="property-required"
             title="Required">
-        <span>group<wbr>Name</span>
+        <span id="groupname_nodejs">
+<a href="#groupname_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -853,7 +875,9 @@ ___
 
     <dt class="property-required"
             title="Required">
-        <span>group<wbr>Description</span>
+        <span id="groupdescription_python">
+<a href="#groupdescription_python" style="color: inherit; text-decoration: inherit;">group<wbr>Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -862,7 +886,9 @@ ___
 
     <dt class="property-required"
             title="Required">
-        <span>group<wbr>Id</span>
+        <span id="groupid_python">
+<a href="#groupid_python" style="color: inherit; text-decoration: inherit;">group<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -871,7 +897,9 @@ ___
 
     <dt class="property-required"
             title="Required">
-        <span>group<wbr>Name</span>
+        <span id="groupname_python">
+<a href="#groupname_python" style="color: inherit; text-decoration: inherit;">group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
