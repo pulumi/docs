@@ -22,7 +22,30 @@ Manages a single Group Membership within Azure Active Directory.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using AzureAD = Pulumi.AzureAD;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleUser = Output.Create(AzureAD.GetUser.InvokeAsync(new AzureAD.GetUserArgs
+        {
+            UserPrincipalName = "jdoe@hashicorp.com",
+        }));
+        var exampleGroup = new AzureAD.Group("exampleGroup", new AzureAD.GroupArgs
+        {
+        });
+        var exampleGroupMember = new AzureAD.GroupMember("exampleGroupMember", new AzureAD.GroupMemberArgs
+        {
+            GroupObjectId = exampleGroup.Id,
+            MemberObjectId = exampleUser.Apply(exampleUser => exampleUser.Id),
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -244,7 +267,9 @@ The GroupMember resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-required"
             title="Required">
-        <span>Group<wbr>Object<wbr>Id</span>
+        <span id="groupobjectid_csharp">
+<a href="#groupobjectid_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Object<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -253,7 +278,9 @@ The GroupMember resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-required"
             title="Required">
-        <span>Member<wbr>Object<wbr>Id</span>
+        <span id="memberobjectid_csharp">
+<a href="#memberobjectid_csharp" style="color: inherit; text-decoration: inherit;">Member<wbr>Object<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -269,7 +296,9 @@ The GroupMember resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-required"
             title="Required">
-        <span>Group<wbr>Object<wbr>Id</span>
+        <span id="groupobjectid_go">
+<a href="#groupobjectid_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Object<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -278,7 +307,9 @@ The GroupMember resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-required"
             title="Required">
-        <span>Member<wbr>Object<wbr>Id</span>
+        <span id="memberobjectid_go">
+<a href="#memberobjectid_go" style="color: inherit; text-decoration: inherit;">Member<wbr>Object<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -294,7 +325,9 @@ The GroupMember resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-required"
             title="Required">
-        <span>group<wbr>Object<wbr>Id</span>
+        <span id="groupobjectid_nodejs">
+<a href="#groupobjectid_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Object<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -303,7 +336,9 @@ The GroupMember resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-required"
             title="Required">
-        <span>member<wbr>Object<wbr>Id</span>
+        <span id="memberobjectid_nodejs">
+<a href="#memberobjectid_nodejs" style="color: inherit; text-decoration: inherit;">member<wbr>Object<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -319,7 +354,9 @@ The GroupMember resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-required"
             title="Required">
-        <span>group_<wbr>object_<wbr>id</span>
+        <span id="group_object_id_python">
+<a href="#group_object_id_python" style="color: inherit; text-decoration: inherit;">group_<wbr>object_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -328,7 +365,9 @@ The GroupMember resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-required"
             title="Required">
-        <span>member_<wbr>object_<wbr>id</span>
+        <span id="member_object_id_python">
+<a href="#member_object_id_python" style="color: inherit; text-decoration: inherit;">member_<wbr>object_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -355,7 +394,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -370,7 +411,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -385,7 +428,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -400,7 +445,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -541,7 +588,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Group<wbr>Object<wbr>Id</span>
+        <span id="state_groupobjectid_csharp">
+<a href="#state_groupobjectid_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Object<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -550,7 +599,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Member<wbr>Object<wbr>Id</span>
+        <span id="state_memberobjectid_csharp">
+<a href="#state_memberobjectid_csharp" style="color: inherit; text-decoration: inherit;">Member<wbr>Object<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -566,7 +617,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Group<wbr>Object<wbr>Id</span>
+        <span id="state_groupobjectid_go">
+<a href="#state_groupobjectid_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Object<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -575,7 +628,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Member<wbr>Object<wbr>Id</span>
+        <span id="state_memberobjectid_go">
+<a href="#state_memberobjectid_go" style="color: inherit; text-decoration: inherit;">Member<wbr>Object<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -591,7 +646,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>group<wbr>Object<wbr>Id</span>
+        <span id="state_groupobjectid_nodejs">
+<a href="#state_groupobjectid_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Object<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -600,7 +657,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>member<wbr>Object<wbr>Id</span>
+        <span id="state_memberobjectid_nodejs">
+<a href="#state_memberobjectid_nodejs" style="color: inherit; text-decoration: inherit;">member<wbr>Object<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -616,7 +675,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>group_<wbr>object_<wbr>id</span>
+        <span id="state_group_object_id_python">
+<a href="#state_group_object_id_python" style="color: inherit; text-decoration: inherit;">group_<wbr>object_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -625,7 +686,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>member_<wbr>object_<wbr>id</span>
+        <span id="state_member_object_id_python">
+<a href="#state_member_object_id_python" style="color: inherit; text-decoration: inherit;">member_<wbr>object_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
