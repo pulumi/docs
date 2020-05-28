@@ -20,7 +20,34 @@ Provides a resource to manage a GuardDuty member. To accept invitations in membe
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var master = new Aws.GuardDuty.Detector("master", new Aws.GuardDuty.DetectorArgs
+        {
+            Enable = true,
+        });
+        var memberDetector = new Aws.GuardDuty.Detector("memberDetector", new Aws.GuardDuty.DetectorArgs
+        {
+            Enable = true,
+        });
+        var memberMember = new Aws.GuardDuty.Member("memberMember", new Aws.GuardDuty.MemberArgs
+        {
+            AccountId = memberDetector.AccountId,
+            DetectorId = master.Id,
+            Email = "required@example.com",
+            Invite = true,
+            InvitationMessage = "please accept guardduty invitation",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

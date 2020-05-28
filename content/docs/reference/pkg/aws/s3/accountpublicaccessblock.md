@@ -24,7 +24,23 @@ Manages S3 account-level Public Access Block configuration. For more information
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.S3.AccountPublicAccessBlock("example", new Aws.S3.AccountPublicAccessBlockArgs
+        {
+            BlockPublicAcls = true,
+            BlockPublicPolicy = true,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

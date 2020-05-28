@@ -20,7 +20,19 @@ Use this data source to get the ID of an [elastic beanstalk hosted zone](http://
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var current = Output.Create(Aws.ElasticBeanstalk.GetHostedZone.InvokeAsync());
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

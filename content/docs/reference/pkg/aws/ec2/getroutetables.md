@@ -20,7 +20,55 @@ This resource can be useful for getting back a list of route table ids to be ref
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var dict = Output.Create(Initialize());
+    }
+
+    private async Task<IDictionary<string, Output<string>>> Initialize()
+    {
+        var rts = await Aws.Ec2.GetRouteTables.InvokeAsync(new Aws.Ec2.GetRouteTablesArgs
+        {
+            Filters = 
+            {
+                new Aws.Ec2.Inputs.GetRouteTablesFilterArgs
+                {
+                    Name = "tag:kubernetes.io/kops/role",
+                    Values = 
+                    {
+                        "private*",
+                    },
+                },
+            },
+            VpcId = @var.Vpc_id,
+        });
+        var route = new List<Aws.Ec2.Route>();
+        for (var rangeIndex = 0; rangeIndex < rts.Ids.Length; rangeIndex++)
+        {
+            var range = new { Value = rangeIndex };
+            route.Add(new Aws.Ec2.Route($"route-{range.Value}", new Aws.Ec2.RouteArgs
+            {
+                DestinationCidrBlock = "10.0.1.0/22",
+                RouteTableId = rts.Ids[range.Value],
+                VpcPeeringConnectionId = "pcx-0e9a7a9ecd137dc54",
+            }));
+        }
+
+        return new Dictionary<string, Output<string>>
+        {
+        };
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

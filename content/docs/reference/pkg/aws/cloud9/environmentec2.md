@@ -20,7 +20,22 @@ Provides a Cloud9 EC2 Development Environment.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.Cloud9.EnvironmentEC2("example", new Aws.Cloud9.EnvironmentEC2Args
+        {
+            InstanceType = "t2.micro",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

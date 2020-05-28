@@ -45,7 +45,30 @@ about [DB Instance Class Types](https://docs.aws.amazon.com/AmazonRDS/latest/Use
 {{< chooser language "typescript,python,go,csharp" / >}}
 ### Basic Usage
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var @default = new Aws.Rds.Instance("default", new Aws.Rds.InstanceArgs
+        {
+            AllocatedStorage = 20,
+            Engine = "mysql",
+            EngineVersion = "5.7",
+            InstanceClass = "db.t2.micro",
+            Name = "mydb",
+            ParameterGroupName = "default.mysql5.7",
+            Password = "foobarbaz",
+            StorageType = "gp2",
+            Username = "foo",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -91,7 +114,23 @@ const defaultInstance = new aws.rds.Instance("default", {
 
 ### Storage Autoscaling
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.Rds.Instance("example", new Aws.Rds.InstanceArgs
+        {
+            AllocatedStorage = 50,
+            MaxAllocatedStorage = 100,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

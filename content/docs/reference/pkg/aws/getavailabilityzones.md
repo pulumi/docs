@@ -27,7 +27,32 @@ which provides some details about a specific availability zone.
 {{< chooser language "typescript,python,go,csharp" / >}}
 ### By State
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var available = Output.Create(Aws.GetAvailabilityZones.InvokeAsync(new Aws.GetAvailabilityZonesArgs
+        {
+            State = "available",
+        }));
+        var primary = new Aws.Ec2.Subnet("primary", new Aws.Ec2.SubnetArgs
+        {
+            AvailabilityZone = available.Apply(available => available.Names[0]),
+        });
+        // ...
+        var secondary = new Aws.Ec2.Subnet("secondary", new Aws.Ec2.SubnetArgs
+        {
+            AvailabilityZone = available.Apply(available => available.Names[1]),
+        });
+        // ...
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -64,7 +89,34 @@ const secondary = new aws.ec2.Subnet("secondary", {availabilityZone: available.t
 
 ### By Filter
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = Output.Create(Aws.GetAvailabilityZones.InvokeAsync(new Aws.GetAvailabilityZonesArgs
+        {
+            AllAvailabilityZones = true,
+            Filters = 
+            {
+                new Aws.Inputs.GetAvailabilityZonesFilterArgs
+                {
+                    Name = "opt-in-status",
+                    Values = 
+                    {
+                        "not-opted-in",
+                        "opted-in",
+                    },
+                },
+            },
+        }));
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

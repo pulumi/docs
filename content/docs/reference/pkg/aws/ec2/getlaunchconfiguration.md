@@ -20,7 +20,22 @@ Provides information about a Launch Configuration.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var ubuntu = Output.Create(Aws.Ec2.GetLaunchConfiguration.InvokeAsync(new Aws.Ec2.GetLaunchConfigurationArgs
+        {
+            Name = "test-launch-config",
+        }));
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

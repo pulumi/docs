@@ -20,7 +20,32 @@ Attaches Principal to AWS IoT Thing.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using System.IO;
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.Iot.Thing("example", new Aws.Iot.ThingArgs
+        {
+        });
+        var cert = new Aws.Iot.Certificate("cert", new Aws.Iot.CertificateArgs
+        {
+            Active = true,
+            Csr = File.ReadAllText("csr.pem"),
+        });
+        var att = new Aws.Iot.ThingPrincipalAttachment("att", new Aws.Iot.ThingPrincipalAttachmentArgs
+        {
+            Principal = cert.Arn,
+            Thing = example.Name,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

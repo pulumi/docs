@@ -22,7 +22,40 @@ Provides a Load Balancer Listener resource.
 {{< chooser language "typescript,python,go,csharp" / >}}
 ### Forward Action
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var frontEndLoadBalancer = new Aws.LB.LoadBalancer("frontEndLoadBalancer", new Aws.LB.LoadBalancerArgs
+        {
+        });
+        var frontEndTargetGroup = new Aws.LB.TargetGroup("frontEndTargetGroup", new Aws.LB.TargetGroupArgs
+        {
+        });
+        var frontEndListener = new Aws.LB.Listener("frontEndListener", new Aws.LB.ListenerArgs
+        {
+            CertificateArn = "arn:aws:iam::187416307283:server-certificate/test_cert_rab3wuqwgja25ct3n4jdj2tzu4",
+            DefaultActions = 
+            {
+                new Aws.LB.Inputs.ListenerDefaultActionArgs
+                {
+                    TargetGroupArn = frontEndTargetGroup.Arn,
+                    Type = "forward",
+                },
+            },
+            LoadBalancerArn = frontEndLoadBalancer.Arn,
+            Port = "443",
+            Protocol = "HTTPS",
+            SslPolicy = "ELBSecurityPolicy-2016-08",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -39,7 +72,7 @@ front_end_target_group = aws.lb.TargetGroup("frontEndTargetGroup")
 front_end_listener = aws.lb.Listener("frontEndListener",
     certificate_arn="arn:aws:iam::187416307283:server-certificate/test_cert_rab3wuqwgja25ct3n4jdj2tzu4",
     default_actions=[{
-        "targetGroupArn": front_end_target_group.arn,
+        "target_group_arn": front_end_target_group.arn,
         "type": "forward",
     }],
     load_balancer_arn=front_end_load_balancer.arn,
@@ -72,7 +105,40 @@ const frontEndListener = new aws.lb.Listener("front_end", {
 
 ### Redirect Action
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var frontEndLoadBalancer = new Aws.LB.LoadBalancer("frontEndLoadBalancer", new Aws.LB.LoadBalancerArgs
+        {
+        });
+        var frontEndListener = new Aws.LB.Listener("frontEndListener", new Aws.LB.ListenerArgs
+        {
+            DefaultActions = 
+            {
+                new Aws.LB.Inputs.ListenerDefaultActionArgs
+                {
+                    Redirect = new Aws.LB.Inputs.ListenerDefaultActionRedirectArgs
+                    {
+                        Port = "443",
+                        Protocol = "HTTPS",
+                        StatusCode = "HTTP_301",
+                    },
+                    Type = "redirect",
+                },
+            },
+            LoadBalancerArn = frontEndLoadBalancer.Arn,
+            Port = "80",
+            Protocol = "HTTP",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -90,7 +156,7 @@ front_end_listener = aws.lb.Listener("frontEndListener",
         "redirect": {
             "port": "443",
             "protocol": "HTTPS",
-            "statusCode": "HTTP_301",
+            "status_code": "HTTP_301",
         },
         "type": "redirect",
     }],
@@ -124,7 +190,40 @@ const frontEndListener = new aws.lb.Listener("front_end", {
 
 ### Fixed-response Action
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var frontEndLoadBalancer = new Aws.LB.LoadBalancer("frontEndLoadBalancer", new Aws.LB.LoadBalancerArgs
+        {
+        });
+        var frontEndListener = new Aws.LB.Listener("frontEndListener", new Aws.LB.ListenerArgs
+        {
+            DefaultActions = 
+            {
+                new Aws.LB.Inputs.ListenerDefaultActionArgs
+                {
+                    FixedResponse = new Aws.LB.Inputs.ListenerDefaultActionFixedResponseArgs
+                    {
+                        ContentType = "text/plain",
+                        MessageBody = "Fixed response content",
+                        StatusCode = "200",
+                    },
+                    Type = "fixed-response",
+                },
+            },
+            LoadBalancerArn = frontEndLoadBalancer.Arn,
+            Port = "80",
+            Protocol = "HTTP",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -140,9 +239,9 @@ front_end_load_balancer = aws.lb.LoadBalancer("frontEndLoadBalancer")
 front_end_listener = aws.lb.Listener("frontEndListener",
     default_actions=[{
         "fixedResponse": {
-            "contentType": "text/plain",
+            "content_type": "text/plain",
             "messageBody": "Fixed response content",
-            "statusCode": "200",
+            "status_code": "200",
         },
         "type": "fixed-response",
     }],
@@ -176,7 +275,57 @@ const frontEndListener = new aws.lb.Listener("front_end", {
 
 ### Authenticate-cognito Action
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var frontEndLoadBalancer = new Aws.LB.LoadBalancer("frontEndLoadBalancer", new Aws.LB.LoadBalancerArgs
+        {
+        });
+        var frontEndTargetGroup = new Aws.LB.TargetGroup("frontEndTargetGroup", new Aws.LB.TargetGroupArgs
+        {
+        });
+        var pool = new Aws.Cognito.UserPool("pool", new Aws.Cognito.UserPoolArgs
+        {
+        });
+        var client = new Aws.Cognito.UserPoolClient("client", new Aws.Cognito.UserPoolClientArgs
+        {
+        });
+        var domain = new Aws.Cognito.UserPoolDomain("domain", new Aws.Cognito.UserPoolDomainArgs
+        {
+        });
+        var frontEndListener = new Aws.LB.Listener("frontEndListener", new Aws.LB.ListenerArgs
+        {
+            DefaultActions = 
+            {
+                new Aws.LB.Inputs.ListenerDefaultActionArgs
+                {
+                    AuthenticateCognito = new Aws.LB.Inputs.ListenerDefaultActionAuthenticateCognitoArgs
+                    {
+                        UserPoolArn = pool.Arn,
+                        UserPoolClientId = client.Id,
+                        UserPoolDomain = domain.Domain,
+                    },
+                    Type = "authenticate-cognito",
+                },
+                new Aws.LB.Inputs.ListenerDefaultActionArgs
+                {
+                    TargetGroupArn = frontEndTargetGroup.Arn,
+                    Type = "forward",
+                },
+            },
+            LoadBalancerArn = frontEndLoadBalancer.Arn,
+            Port = "80",
+            Protocol = "HTTP",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -204,7 +353,7 @@ front_end_listener = aws.lb.Listener("frontEndListener",
             "type": "authenticate-cognito",
         },
         {
-            "targetGroupArn": front_end_target_group.arn,
+            "target_group_arn": front_end_target_group.arn,
             "type": "forward",
         },
     ],
@@ -248,7 +397,51 @@ const frontEndListener = new aws.lb.Listener("front_end", {
 
 ### Authenticate-oidc Action
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var frontEndLoadBalancer = new Aws.LB.LoadBalancer("frontEndLoadBalancer", new Aws.LB.LoadBalancerArgs
+        {
+        });
+        var frontEndTargetGroup = new Aws.LB.TargetGroup("frontEndTargetGroup", new Aws.LB.TargetGroupArgs
+        {
+        });
+        var frontEndListener = new Aws.LB.Listener("frontEndListener", new Aws.LB.ListenerArgs
+        {
+            DefaultActions = 
+            {
+                new Aws.LB.Inputs.ListenerDefaultActionArgs
+                {
+                    AuthenticateOidc = new Aws.LB.Inputs.ListenerDefaultActionAuthenticateOidcArgs
+                    {
+                        AuthorizationEndpoint = "https://example.com/authorization_endpoint",
+                        ClientId = "client_id",
+                        ClientSecret = "client_secret",
+                        Issuer = "https://example.com",
+                        TokenEndpoint = "https://example.com/token_endpoint",
+                        UserInfoEndpoint = "https://example.com/user_info_endpoint",
+                    },
+                    Type = "authenticate-oidc",
+                },
+                new Aws.LB.Inputs.ListenerDefaultActionArgs
+                {
+                    TargetGroupArn = frontEndTargetGroup.Arn,
+                    Type = "forward",
+                },
+            },
+            LoadBalancerArn = frontEndLoadBalancer.Arn,
+            Port = "80",
+            Protocol = "HTTP",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -267,8 +460,8 @@ front_end_listener = aws.lb.Listener("frontEndListener",
         {
             "authenticateOidc": {
                 "authorizationEndpoint": "https://example.com/authorization_endpoint",
-                "clientId": "client_id",
-                "clientSecret": "client_secret",
+                "client_id": "client_id",
+                "client_secret": "client_secret",
                 "issuer": "https://example.com",
                 "tokenEndpoint": "https://example.com/token_endpoint",
                 "userInfoEndpoint": "https://example.com/user_info_endpoint",
@@ -276,7 +469,7 @@ front_end_listener = aws.lb.Listener("frontEndListener",
             "type": "authenticate-oidc",
         },
         {
-            "targetGroupArn": front_end_target_group.arn,
+            "target_group_arn": front_end_target_group.arn,
             "type": "forward",
         },
     ],

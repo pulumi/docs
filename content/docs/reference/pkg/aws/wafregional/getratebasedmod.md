@@ -20,7 +20,22 @@ meta_desc: "Explore the GetRateBasedMod function of the wafregional module, incl
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = Output.Create(Aws.WafRegional.GetRateBasedMod.InvokeAsync(new Aws.WafRegional.GetRateBasedModArgs
+        {
+            Name = "tfWAFRegionalRateBasedRule",
+        }));
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

@@ -20,7 +20,32 @@ Get information on an EC2 Transit Gateway VPC Attachment.
 {{< chooser language "typescript,python,go,csharp" / >}}
 ### By Filter
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = Output.Create(Aws.Ec2TransitGateway.GetVpcAttachment.InvokeAsync(new Aws.Ec2TransitGateway.GetVpcAttachmentArgs
+        {
+            Filters = 
+            {
+                new Aws.Ec2TransitGateway.Inputs.GetVpcAttachmentFilterArgs
+                {
+                    Name = "vpc-id",
+                    Values = 
+                    {
+                        "vpc-12345678",
+                    },
+                },
+            },
+        }));
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -55,7 +80,22 @@ const example = pulumi.output(aws.ec2transitgateway.getVpcAttachment({
 
 ### By Identifier
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = Output.Create(Aws.Ec2TransitGateway.GetVpcAttachment.InvokeAsync(new Aws.Ec2TransitGateway.GetVpcAttachmentArgs
+        {
+            Id = "tgw-attach-12345678",
+        }));
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

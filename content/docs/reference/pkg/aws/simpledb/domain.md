@@ -20,7 +20,21 @@ Provides a SimpleDB domain resource
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var users = new Aws.SimpleDB.Domain("users", new Aws.SimpleDB.DomainArgs
+        {
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

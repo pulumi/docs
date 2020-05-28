@@ -73,6 +73,51 @@ any = aws.apigateway.Method("any",
     resource_id=this_resource.id,
     rest_api=this_rest_api.id)
 ```
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var config = new Config();
+        var cognitoUserPoolName = config.RequireObject<dynamic>("cognitoUserPoolName");
+        var thisUserPools = Output.Create(Aws.Cognito.GetUserPools.InvokeAsync(new Aws.Cognito.GetUserPoolsArgs
+        {
+            Name = cognitoUserPoolName,
+        }));
+        var thisRestApi = new Aws.ApiGateway.RestApi("thisRestApi", new Aws.ApiGateway.RestApiArgs
+        {
+        });
+        var thisResource = new Aws.ApiGateway.Resource("thisResource", new Aws.ApiGateway.ResourceArgs
+        {
+            ParentId = thisRestApi.RootResourceId,
+            PathPart = "{proxy+}",
+            RestApi = thisRestApi.Id,
+        });
+        var thisAuthorizer = new Aws.ApiGateway.Authorizer("thisAuthorizer", new Aws.ApiGateway.AuthorizerArgs
+        {
+            ProviderArns = thisUserPools.Apply(thisUserPools => thisUserPools.Arns),
+            RestApi = thisRestApi.Id,
+            Type = "COGNITO_USER_POOLS",
+        });
+        var any = new Aws.ApiGateway.Method("any", new Aws.ApiGateway.MethodArgs
+        {
+            Authorization = "COGNITO_USER_POOLS",
+            AuthorizerId = thisAuthorizer.Id,
+            HttpMethod = "ANY",
+            RequestParameters = 
+            {
+                { "method.request.path.proxy", true },
+            },
+            ResourceId = thisResource.Id,
+            RestApi = thisRestApi.Id,
+        });
+    }
+
+}
+```
 
 {{% examples %}}
 ## Example Usage
@@ -80,7 +125,35 @@ any = aws.apigateway.Method("any",
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var myDemoAPI = new Aws.ApiGateway.RestApi("myDemoAPI", new Aws.ApiGateway.RestApiArgs
+        {
+            Description = "This is my API for demonstration purposes",
+        });
+        var myDemoResource = new Aws.ApiGateway.Resource("myDemoResource", new Aws.ApiGateway.ResourceArgs
+        {
+            ParentId = myDemoAPI.RootResourceId,
+            PathPart = "mydemoresource",
+            RestApi = myDemoAPI.Id,
+        });
+        var myDemoMethod = new Aws.ApiGateway.Method("myDemoMethod", new Aws.ApiGateway.MethodArgs
+        {
+            Authorization = "NONE",
+            HttpMethod = "GET",
+            ResourceId = myDemoResource.Id,
+            RestApi = myDemoAPI.Id,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

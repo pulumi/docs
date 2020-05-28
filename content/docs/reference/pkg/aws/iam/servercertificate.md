@@ -32,7 +32,24 @@ Certificates][2] in AWS Documentation.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using System.IO;
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var testCert = new Aws.Iam.ServerCertificate("testCert", new Aws.Iam.ServerCertificateArgs
+        {
+            CertificateBody = File.ReadAllText("self-ca-cert.pem"),
+            PrivateKey = File.ReadAllText("test-key.pem"),
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

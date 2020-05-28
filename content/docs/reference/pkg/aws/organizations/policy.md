@@ -20,7 +20,31 @@ Provides a resource to manage an [AWS Organizations policy](https://docs.aws.ama
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.Organizations.Policy("example", new Aws.Organizations.PolicyArgs
+        {
+            Content = @"{
+  ""Version"": ""2012-10-17"",
+  ""Statement"": {
+    ""Effect"": ""Allow"",
+    ""Action"": ""*"",
+    ""Resource"": ""*""
+  }
+}
+
+",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

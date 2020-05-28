@@ -23,7 +23,24 @@ an input variable and needs to, for example, find the associated Outpost or Loca
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var config = new Config();
+        var awsEc2LocalGatewayRouteTable = config.RequireObject<dynamic>("awsEc2LocalGatewayRouteTable");
+        var selected = Output.Create(Aws.Ec2.GetLocalGatewayRouteTable.InvokeAsync(new Aws.Ec2.GetLocalGatewayRouteTableArgs
+        {
+            LocalGatewayRouteTableId = awsEc2LocalGatewayRouteTable,
+        }));
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

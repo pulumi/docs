@@ -22,7 +22,28 @@ The following example retrieves a list of VPC Ids with a custom tag of `service`
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var fooVpcs = Output.Create(Aws.Ec2.GetVpcs.InvokeAsync(new Aws.Ec2.GetVpcsArgs
+        {
+            Tags = 
+            {
+                { "service", "production" },
+            },
+        }));
+        this.Foo = fooVpcs.Apply(fooVpcs => fooVpcs.Ids);
+    }
+
+    [Output("foo")]
+    public Output<string> Foo { get; set; }
+}
+```
 {{% /example %}}
 
 {{% example go %}}

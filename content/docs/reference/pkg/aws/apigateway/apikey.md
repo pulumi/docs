@@ -22,7 +22,21 @@ Provides an API Gateway API Key.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var myDemoApiKey = new Aws.ApiGateway.ApiKey("myDemoApiKey", new Aws.ApiGateway.ApiKeyArgs
+        {
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

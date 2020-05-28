@@ -20,7 +20,21 @@ Provides a resource to manage AWS Secrets Manager secret metadata. To manage a s
 {{< chooser language "typescript,python,go,csharp" / >}}
 ### Basic
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.SecretsManager.Secret("example", new Aws.SecretsManager.SecretArgs
+        {
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -47,7 +61,26 @@ const example = new aws.secretsmanager.Secret("example", {});
 
 ### Rotation Configuration
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var rotation_example = new Aws.SecretsManager.Secret("rotation-example", new Aws.SecretsManager.SecretArgs
+        {
+            RotationLambdaArn = aws_lambda_function.Example.Arn,
+            RotationRules = new Aws.SecretsManager.Inputs.SecretRotationRulesArgs
+            {
+                AutomaticallyAfterDays = 7,
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

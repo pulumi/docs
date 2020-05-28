@@ -20,7 +20,21 @@ Provides a Cognito User Pool resource.
 {{< chooser language "typescript,python,go,csharp" / >}}
 ### Basic configuration
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var pool = new Aws.Cognito.UserPool("pool", new Aws.Cognito.UserPoolArgs
+        {
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -42,54 +56,6 @@ import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 const pool = new aws.cognito.UserPool("pool", {});
-```
-{{% /example %}}
-
-### Enabling SMS and Software Token Multi-Factor Authentication
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_aws as aws
-
-# ... other configuration ...
-example = aws.cognito.UserPool("example",
-    mfa_configuration="ON",
-    sms_authentication_message="Your code is {####}",
-    sms_configuration={
-        "externalId": "example",
-        "snsCallerArn": aws_iam_role["example"]["arn"],
-    },
-    software_token_mfa_configuration={
-        "enabled": True,
-    })
-```
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-// ... other configuration ...
-const example = new aws.cognito.UserPool("example", {
-    mfaConfiguration: "ON",
-    smsAuthenticationMessage: "Your code is {####}",
-    sms_configuration: {
-        externalId: "example",
-        snsCallerArn: aws_iam_role.example.arn,
-    },
-    software_token_mfa_configuration: {
-        enabled: true,
-    },
-});
 ```
 {{% /example %}}
 

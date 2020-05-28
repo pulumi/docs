@@ -21,7 +21,28 @@ More information can be found in the [Amazon API Gateway Developer Guide](https:
 {{< chooser language "typescript,python,go,csharp" / >}}
 ### Basic WebSocket API
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.ApiGatewayV2.Authorizer("example", new Aws.ApiGatewayV2.AuthorizerArgs
+        {
+            ApiId = aws_apigatewayv2_api.Example.Id,
+            AuthorizerType = "REQUEST",
+            AuthorizerUri = aws_lambda_function.Example.Invoke_arn,
+            IdentitySources = 
+            {
+                "route.request.header.Auth",
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -57,7 +78,35 @@ const example = new aws.apigatewayv2.Authorizer("example", {
 
 ### Basic HTTP API
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.ApiGatewayV2.Authorizer("example", new Aws.ApiGatewayV2.AuthorizerArgs
+        {
+            ApiId = aws_apigatewayv2_api.Example.Id,
+            AuthorizerType = "JWT",
+            IdentitySources = 
+            {
+                "$$request.header.Authorization",
+            },
+            JwtConfiguration = new Aws.ApiGatewayV2.Inputs.AuthorizerJwtConfigurationArgs
+            {
+                Audience = 
+                {
+                    "example",
+                },
+                Issuer = $"https://{aws_cognito_user_pool.Example.Endpoint}",
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

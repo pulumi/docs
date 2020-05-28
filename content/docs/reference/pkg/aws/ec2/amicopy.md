@@ -30,7 +30,28 @@ block until the new AMI is available for use on new instances.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.Ec2.AmiCopy("example", new Aws.Ec2.AmiCopyArgs
+        {
+            Description = "A copy of ami-xxxxxxxx",
+            SourceAmiId = "ami-xxxxxxxx",
+            SourceAmiRegion = "us-west-1",
+            Tags = 
+            {
+                { "Name", "HelloWorld" },
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

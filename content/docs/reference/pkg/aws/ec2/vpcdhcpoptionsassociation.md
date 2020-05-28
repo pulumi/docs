@@ -24,7 +24,23 @@ Provides a VPC DHCP Options Association resource.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var dnsResolver = new Aws.Ec2.VpcDhcpOptionsAssociation("dnsResolver", new Aws.Ec2.VpcDhcpOptionsAssociationArgs
+        {
+            DhcpOptionsId = aws_vpc_dhcp_options.Foo.Id,
+            VpcId = aws_vpc.Foo.Id,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

@@ -20,7 +20,43 @@ Provides a Global Accelerator listener.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleAccelerator = new Aws.GlobalAccelerator.Accelerator("exampleAccelerator", new Aws.GlobalAccelerator.AcceleratorArgs
+        {
+            Attributes = new Aws.GlobalAccelerator.Inputs.AcceleratorAttributesArgs
+            {
+                FlowLogsEnabled = true,
+                FlowLogsS3Bucket = "example-bucket",
+                FlowLogsS3Prefix = "flow-logs/",
+            },
+            Enabled = true,
+            IpAddressType = "IPV4",
+        });
+        var exampleListener = new Aws.GlobalAccelerator.Listener("exampleListener", new Aws.GlobalAccelerator.ListenerArgs
+        {
+            AcceleratorArn = exampleAccelerator.Id,
+            ClientAffinity = "SOURCE_IP",
+            PortRanges = 
+            {
+                new Aws.GlobalAccelerator.Inputs.ListenerPortRangeArgs
+                {
+                    FromPort = 80,
+                    ToPort = 80,
+                },
+            },
+            Protocol = "TCP",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -44,8 +80,8 @@ example_listener = aws.globalaccelerator.Listener("exampleListener",
     accelerator_arn=example_accelerator.id,
     client_affinity="SOURCE_IP",
     port_ranges=[{
-        "fromPort": 80,
-        "toPort": 80,
+        "from_port": 80,
+        "to_port": 80,
     }],
     protocol="TCP")
 ```

@@ -672,9 +672,9 @@ a particular domain name. An API stage can be associated with the domain name us
 <span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">apigatewayv2</span><span class="o">.</span><span class="n">DomainName</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
     <span class="n">domain_name</span><span class="o">=</span><span class="s2">&quot;ws-api.example.com&quot;</span><span class="p">,</span>
     <span class="n">domain_name_configuration</span><span class="o">=</span><span class="p">{</span>
-        <span class="s2">&quot;certificateArn&quot;</span><span class="p">:</span> <span class="n">aws_acm_certificate</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
-        <span class="s2">&quot;endpointType&quot;</span><span class="p">:</span> <span class="s2">&quot;REGIONAL&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;securityPolicy&quot;</span><span class="p">:</span> <span class="s2">&quot;TLS_1_2&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;certificate_arn&quot;</span><span class="p">:</span> <span class="n">aws_acm_certificate</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;endpoint_type&quot;</span><span class="p">:</span> <span class="s2">&quot;REGIONAL&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;security_policy&quot;</span><span class="p">:</span> <span class="s2">&quot;TLS_1_2&quot;</span><span class="p">,</span>
     <span class="p">})</span>
 </pre></div>
 </div>

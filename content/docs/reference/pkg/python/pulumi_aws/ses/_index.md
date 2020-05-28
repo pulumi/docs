@@ -650,7 +650,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <span class="n">cloudwatch</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ses</span><span class="o">.</span><span class="n">EventDestination</span><span class="p">(</span><span class="s2">&quot;cloudwatch&quot;</span><span class="p">,</span>
     <span class="n">cloudwatch_destinations</span><span class="o">=</span><span class="p">[{</span>
-        <span class="s2">&quot;defaultValue&quot;</span><span class="p">:</span> <span class="s2">&quot;default&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;default_value&quot;</span><span class="p">:</span> <span class="s2">&quot;default&quot;</span><span class="p">,</span>
         <span class="s2">&quot;dimensionName&quot;</span><span class="p">:</span> <span class="s2">&quot;dimension&quot;</span><span class="p">,</span>
         <span class="s2">&quot;valueSource&quot;</span><span class="p">:</span> <span class="s2">&quot;emailHeader&quot;</span><span class="p">,</span>
     <span class="p">}],</span>
@@ -669,8 +669,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">configuration_set_name</span><span class="o">=</span><span class="n">aws_ses_configuration_set</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;name&quot;</span><span class="p">],</span>
     <span class="n">enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
     <span class="n">kinesis_destination</span><span class="o">=</span><span class="p">{</span>
-        <span class="s2">&quot;roleArn&quot;</span><span class="p">:</span> <span class="n">aws_iam_role</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
-        <span class="s2">&quot;streamArn&quot;</span><span class="p">:</span> <span class="n">aws_kinesis_firehose_delivery_stream</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;role_arn&quot;</span><span class="p">:</span> <span class="n">aws_iam_role</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;stream_arn&quot;</span><span class="p">:</span> <span class="n">aws_kinesis_firehose_delivery_stream</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
     <span class="p">},</span>
     <span class="n">matching_types</span><span class="o">=</span><span class="p">[</span>
         <span class="s2">&quot;bounce&quot;</span><span class="p">,</span>
@@ -689,7 +689,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
         <span class="s2">&quot;send&quot;</span><span class="p">,</span>
     <span class="p">],</span>
     <span class="n">sns_destination</span><span class="o">=</span><span class="p">{</span>
-        <span class="s2">&quot;topicArn&quot;</span><span class="p">:</span> <span class="n">aws_sns_topic</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;topic_arn&quot;</span><span class="p">:</span> <span class="n">aws_sns_topic</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
     <span class="p">})</span>
 </pre></div>
 </div>
@@ -1305,7 +1305,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">recipients</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;karen@example.com&quot;</span><span class="p">],</span>
     <span class="n">rule_set_name</span><span class="o">=</span><span class="s2">&quot;default-rule-set&quot;</span><span class="p">,</span>
     <span class="n">s3_actions</span><span class="o">=</span><span class="p">[{</span>
-        <span class="s2">&quot;bucketName&quot;</span><span class="p">:</span> <span class="s2">&quot;emails&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;bucket_name&quot;</span><span class="p">:</span> <span class="s2">&quot;emails&quot;</span><span class="p">,</span>
         <span class="s2">&quot;position&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
     <span class="p">}],</span>
     <span class="n">scan_enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>

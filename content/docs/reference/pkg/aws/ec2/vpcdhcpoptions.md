@@ -27,7 +27,26 @@ Provides a VPC DHCP Options resource.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var dnsResolver = new Aws.Ec2.VpcDhcpOptions("dnsResolver", new Aws.Ec2.VpcDhcpOptionsArgs
+        {
+            DomainNameServers = 
+            {
+                "8.8.8.8",
+                "8.8.4.4",
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

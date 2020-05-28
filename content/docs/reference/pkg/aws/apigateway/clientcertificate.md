@@ -20,7 +20,22 @@ Provides an API Gateway Client Certificate.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var demo = new Aws.ApiGateway.ClientCertificate("demo", new Aws.ApiGateway.ClientCertificateArgs
+        {
+            Description = "My client certificate",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

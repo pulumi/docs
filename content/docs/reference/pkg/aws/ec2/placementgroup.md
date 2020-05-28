@@ -21,7 +21,22 @@ in [AWS Docs](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-grou
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var web = new Aws.Ec2.PlacementGroup("web", new Aws.Ec2.PlacementGroupArgs
+        {
+            Strategy = "cluster",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

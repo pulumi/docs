@@ -20,7 +20,40 @@ Get information on an EC2 Transit Gateway Route Table.
 {{< chooser language "typescript,python,go,csharp" / >}}
 ### By Filter
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = Output.Create(Aws.Ec2TransitGateway.GetRouteTable.InvokeAsync(new Aws.Ec2TransitGateway.GetRouteTableArgs
+        {
+            Filters = 
+            {
+                new Aws.Ec2TransitGateway.Inputs.GetRouteTableFilterArgs
+                {
+                    Name = "default-association-route-table",
+                    Values = 
+                    {
+                        "true",
+                    },
+                },
+                new Aws.Ec2TransitGateway.Inputs.GetRouteTableFilterArgs
+                {
+                    Name = "transit-gateway-id",
+                    Values = 
+                    {
+                        "tgw-12345678",
+                    },
+                },
+            },
+        }));
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -67,7 +100,22 @@ const example = pulumi.output(aws.ec2transitgateway.getRouteTable({
 
 ### By Identifier
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = Output.Create(Aws.Ec2TransitGateway.GetRouteTable.InvokeAsync(new Aws.Ec2TransitGateway.GetRouteTableArgs
+        {
+            Id = "tgw-rtb-12345678",
+        }));
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

@@ -20,7 +20,22 @@ Use this data source to get information about an Elasticsearch Domain
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var myDomain = Output.Create(Aws.ElasticSearch.GetDomain.InvokeAsync(new Aws.ElasticSearch.GetDomainArgs
+        {
+            DomainName = "my-domain-name",
+        }));
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

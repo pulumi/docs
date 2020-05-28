@@ -170,7 +170,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <span class="n">example_data_source</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">appsync</span><span class="o">.</span><span class="n">DataSource</span><span class="p">(</span><span class="s2">&quot;exampleDataSource&quot;</span><span class="p">,</span>
     <span class="n">api_id</span><span class="o">=</span><span class="n">example_graph_ql_api</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
     <span class="n">dynamodb_config</span><span class="o">=</span><span class="p">{</span>
-        <span class="s2">&quot;tableName&quot;</span><span class="p">:</span> <span class="n">example_table</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+        <span class="s2">&quot;table_name&quot;</span><span class="p">:</span> <span class="n">example_table</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
     <span class="p">},</span>
     <span class="n">service_role_arn</span><span class="o">=</span><span class="n">example_role</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
     <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;AMAZON_DYNAMODB&quot;</span><span class="p">)</span>
@@ -576,8 +576,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">authentication_type</span><span class="o">=</span><span class="s2">&quot;AMAZON_COGNITO_USER_POOLS&quot;</span><span class="p">,</span>
     <span class="n">user_pool_config</span><span class="o">=</span><span class="p">{</span>
         <span class="s2">&quot;awsRegion&quot;</span><span class="p">:</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;.getRegion&quot;</span><span class="p">][</span><span class="s2">&quot;current&quot;</span><span class="p">][</span><span class="s2">&quot;name&quot;</span><span class="p">],</span>
-        <span class="s2">&quot;defaultAction&quot;</span><span class="p">:</span> <span class="s2">&quot;DENY&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;userPoolId&quot;</span><span class="p">:</span> <span class="n">aws_cognito_user_pool</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;default_action&quot;</span><span class="p">:</span> <span class="s2">&quot;DENY&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;user_pool_id&quot;</span><span class="p">:</span> <span class="n">aws_cognito_user_pool</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
     <span class="p">})</span>
 </pre></div>
 </div>
@@ -617,7 +617,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">appsync</span><span class="o">.</span><span class="n">GraphQLApi</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
     <span class="n">additional_authentication_providers</span><span class="o">=</span><span class="p">[{</span>
-        <span class="s2">&quot;authenticationType&quot;</span><span class="p">:</span> <span class="s2">&quot;AWS_IAM&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;authentication_type&quot;</span><span class="p">:</span> <span class="s2">&quot;AWS_IAM&quot;</span><span class="p">,</span>
     <span class="p">}],</span>
     <span class="n">authentication_type</span><span class="o">=</span><span class="s2">&quot;API_KEY&quot;</span><span class="p">)</span>
 </pre></div>

@@ -77,6 +77,57 @@ bar = aws.autoscaling.Group("bar",
     max_size=2,
     min_size=1)
 ```
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var ubuntu = Output.Create(Aws.GetAmi.InvokeAsync(new Aws.GetAmiArgs
+        {
+            Filters = 
+            {
+                new Aws.Inputs.GetAmiFilterArgs
+                {
+                    Name = "name",
+                    Values = 
+                    {
+                        "ubuntu/images/hvm-ssd/ubuntu-trusty-14.04-amd64-server-*",
+                    },
+                },
+                new Aws.Inputs.GetAmiFilterArgs
+                {
+                    Name = "virtualization-type",
+                    Values = 
+                    {
+                        "hvm",
+                    },
+                },
+            },
+            MostRecent = true,
+            Owners = 
+            {
+                "099720109477",
+            },
+        }));
+        var asConf = new Aws.Ec2.LaunchConfiguration("asConf", new Aws.Ec2.LaunchConfigurationArgs
+        {
+            ImageId = ubuntu.Apply(ubuntu => ubuntu.Id),
+            InstanceType = "t2.micro",
+            NamePrefix = "lc-example-",
+        });
+        var bar = new Aws.AutoScaling.Group("bar", new Aws.AutoScaling.GroupArgs
+        {
+            LaunchConfiguration = asConf.Name,
+            MaxSize = 2,
+            MinSize = 1,
+        });
+    }
+
+}
+```
 
 With this setup this provider generates a unique name for your Launch
 Configuration and can then update the AutoScaling Group without conflict before
@@ -139,6 +190,55 @@ as_conf = aws.ec2.LaunchConfiguration("asConf",
     instance_type="m4.large",
     spot_price="0.001")
 bar = aws.autoscaling.Group("bar", launch_configuration=as_conf.name)
+```
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var ubuntu = Output.Create(Aws.GetAmi.InvokeAsync(new Aws.GetAmiArgs
+        {
+            Filters = 
+            {
+                new Aws.Inputs.GetAmiFilterArgs
+                {
+                    Name = "name",
+                    Values = 
+                    {
+                        "ubuntu/images/hvm-ssd/ubuntu-trusty-14.04-amd64-server-*",
+                    },
+                },
+                new Aws.Inputs.GetAmiFilterArgs
+                {
+                    Name = "virtualization-type",
+                    Values = 
+                    {
+                        "hvm",
+                    },
+                },
+            },
+            MostRecent = true,
+            Owners = 
+            {
+                "099720109477",
+            },
+        }));
+        var asConf = new Aws.Ec2.LaunchConfiguration("asConf", new Aws.Ec2.LaunchConfigurationArgs
+        {
+            ImageId = ubuntu.Apply(ubuntu => ubuntu.Id),
+            InstanceType = "m4.large",
+            SpotPrice = "0.001",
+        });
+        var bar = new Aws.AutoScaling.Group("bar", new Aws.AutoScaling.GroupArgs
+        {
+            LaunchConfiguration = asConf.Name,
+        });
+    }
+
+}
 ```
 
 ## Block devices
@@ -203,7 +303,50 @@ configuration, resource recreation can be manually triggered by using the
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var ubuntu = Output.Create(Aws.GetAmi.InvokeAsync(new Aws.GetAmiArgs
+        {
+            Filters = 
+            {
+                new Aws.Inputs.GetAmiFilterArgs
+                {
+                    Name = "name",
+                    Values = 
+                    {
+                        "ubuntu/images/hvm-ssd/ubuntu-trusty-14.04-amd64-server-*",
+                    },
+                },
+                new Aws.Inputs.GetAmiFilterArgs
+                {
+                    Name = "virtualization-type",
+                    Values = 
+                    {
+                        "hvm",
+                    },
+                },
+            },
+            MostRecent = true,
+            Owners = 
+            {
+                "099720109477",
+            },
+        }));
+        var asConf = new Aws.Ec2.LaunchConfiguration("asConf", new Aws.Ec2.LaunchConfigurationArgs
+        {
+            ImageId = ubuntu.Apply(ubuntu => ubuntu.Id),
+            InstanceType = "t2.micro",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

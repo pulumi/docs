@@ -22,7 +22,29 @@ The bucket-objects data source returns keys (i.e., file names) and other metadat
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var myObjects = Output.Create(Aws.S3.GetBucketObjects.InvokeAsync(new Aws.S3.GetBucketObjectsArgs
+        {
+            Bucket = "ourcorp",
+        }));
+        var objectInfo = Output.Tuple(myObjects.Apply(myObjects => myObjects.Keys).Length, myObjects, myObjects.Apply(myObjects => myObjects.Keys)[__index]).Apply(values =>
+        {
+            var length = values.Item1;
+            var myObjects = values.Item2;
+            var keys = values.Item3;
+            return "TODO: ForExpression";
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

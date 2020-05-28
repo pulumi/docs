@@ -20,7 +20,22 @@ meta_desc: "Explore the GetElasticIp function of the AWS package, including exam
 {{< chooser language "typescript,python,go,csharp" / >}}
 ### Search By Allocation ID (VPC only)
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var byAllocationId = Output.Create(Aws.GetElasticIp.InvokeAsync(new Aws.GetElasticIpArgs
+        {
+            Id = "eipalloc-12345678",
+        }));
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -49,7 +64,32 @@ const byAllocationId = pulumi.output(aws.getElasticIp({
 
 ### Search By Filters (EC2-Classic or VPC)
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var byFilter = Output.Create(Aws.GetElasticIp.InvokeAsync(new Aws.GetElasticIpArgs
+        {
+            Filters = 
+            {
+                new Aws.Inputs.GetElasticIpFilterArgs
+                {
+                    Name = "tag:Name",
+                    Values = 
+                    {
+                        "exampleNameTagValue",
+                    },
+                },
+            },
+        }));
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -84,7 +124,22 @@ const byFilter = pulumi.output(aws.getElasticIp({
 
 ### Search By Public IP (EC2-Classic or VPC)
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var byPublicIp = Output.Create(Aws.GetElasticIp.InvokeAsync(new Aws.GetElasticIpArgs
+        {
+            PublicIp = "1.2.3.4",
+        }));
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -113,7 +168,25 @@ const byPublicIp = pulumi.output(aws.getElasticIp({
 
 ### Search By Tags (EC2-Classic or VPC)
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var byTags = Output.Create(Aws.GetElasticIp.InvokeAsync(new Aws.GetElasticIpArgs
+        {
+            Tags = 
+            {
+                { "Name", "exampleNameTagValue" },
+            },
+        }));
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

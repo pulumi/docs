@@ -71,7 +71,7 @@ anything, please consult the source <a class="reference external" href="https://
 <span class="n">s3kmskey</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">kms</span><span class="o">.</span><span class="n">get_alias</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;alias/myKmsKey&quot;</span><span class="p">)</span>
 <span class="n">codepipeline</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">codepipeline</span><span class="o">.</span><span class="n">Pipeline</span><span class="p">(</span><span class="s2">&quot;codepipeline&quot;</span><span class="p">,</span>
     <span class="n">artifact_store</span><span class="o">=</span><span class="p">{</span>
-        <span class="s2">&quot;encryptionKey&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;encryption_key&quot;</span><span class="p">:</span> <span class="p">{</span>
             <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="n">s3kmskey</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
             <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;KMS&quot;</span><span class="p">,</span>
         <span class="p">},</span>
@@ -345,7 +345,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <span class="n">bar_pipeline</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">codepipeline</span><span class="o">.</span><span class="n">Pipeline</span><span class="p">(</span><span class="s2">&quot;barPipeline&quot;</span><span class="p">,</span>
     <span class="n">artifact_store</span><span class="o">=</span><span class="p">{</span>
-        <span class="s2">&quot;encryptionKey&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;encryption_key&quot;</span><span class="p">:</span> <span class="p">{</span>
             <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;kms.Alias&quot;</span><span class="p">][</span><span class="s2">&quot;s3kmskey&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
             <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;KMS&quot;</span><span class="p">,</span>
         <span class="p">},</span>

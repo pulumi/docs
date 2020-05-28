@@ -23,7 +23,24 @@ For information about event source mappings, see [CreateEventSourceMapping](http
 {{< chooser language "typescript,python,go,csharp" / >}}
 ### DynamoDB
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.Lambda.EventSourceMapping("example", new Aws.Lambda.EventSourceMappingArgs
+        {
+            EventSourceArn = aws_dynamodb_table.Example.Stream_arn,
+            FunctionName = aws_lambda_function.Example.Arn,
+            StartingPosition = "LATEST",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -57,7 +74,24 @@ const example = new aws.lambda.EventSourceMapping("example", {
 
 ### Kinesis
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.Lambda.EventSourceMapping("example", new Aws.Lambda.EventSourceMappingArgs
+        {
+            EventSourceArn = aws_kinesis_stream.Example.Arn,
+            FunctionName = aws_lambda_function.Example.Arn,
+            StartingPosition = "LATEST",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -91,7 +125,23 @@ const example = new aws.lambda.EventSourceMapping("example", {
 
 ### SQS
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.Lambda.EventSourceMapping("example", new Aws.Lambda.EventSourceMappingArgs
+        {
+            EventSourceArn = aws_sqs_queue.Sqs_queue_test.Arn,
+            FunctionName = aws_lambda_function.Example.Arn,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

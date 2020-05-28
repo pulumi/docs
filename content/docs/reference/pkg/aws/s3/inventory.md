@@ -20,7 +20,41 @@ Provides a S3 bucket [inventory configuration](https://docs.aws.amazon.com/Amazo
 {{< chooser language "typescript,python,go,csharp" / >}}
 ### Add inventory configuration
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var testBucket = new Aws.S3.Bucket("testBucket", new Aws.S3.BucketArgs
+        {
+        });
+        var inventory = new Aws.S3.Bucket("inventory", new Aws.S3.BucketArgs
+        {
+        });
+        var testInventory = new Aws.S3.Inventory("testInventory", new Aws.S3.InventoryArgs
+        {
+            Bucket = testBucket.Id,
+            Destination = new Aws.S3.Inputs.InventoryDestinationArgs
+            {
+                Bucket = new Aws.S3.Inputs.InventoryDestinationBucketArgs
+                {
+                    BucketArn = inventory.Arn,
+                    Format = "ORC",
+                },
+            },
+            IncludedObjectVersions = "All",
+            Schedule = new Aws.S3.Inputs.InventoryScheduleArgs
+            {
+                Frequency = "Daily",
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -74,7 +108,46 @@ const testInventory = new aws.s3.Inventory("test", {
 
 ### Add inventory configuration with S3 bucket object prefix
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var test = new Aws.S3.Bucket("test", new Aws.S3.BucketArgs
+        {
+        });
+        var inventory = new Aws.S3.Bucket("inventory", new Aws.S3.BucketArgs
+        {
+        });
+        var test_prefix = new Aws.S3.Inventory("test-prefix", new Aws.S3.InventoryArgs
+        {
+            Bucket = test.Id,
+            Destination = new Aws.S3.Inputs.InventoryDestinationArgs
+            {
+                Bucket = new Aws.S3.Inputs.InventoryDestinationBucketArgs
+                {
+                    BucketArn = inventory.Arn,
+                    Format = "ORC",
+                    Prefix = "inventory",
+                },
+            },
+            Filter = new Aws.S3.Inputs.InventoryFilterArgs
+            {
+                Prefix = "documents/",
+            },
+            IncludedObjectVersions = "All",
+            Schedule = new Aws.S3.Inputs.InventoryScheduleArgs
+            {
+                Frequency = "Daily",
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

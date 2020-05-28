@@ -20,7 +20,35 @@ Provides a SageMaker endpoint configuration resource.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var ec = new Aws.Sagemaker.EndpointConfiguration("ec", new Aws.Sagemaker.EndpointConfigurationArgs
+        {
+            ProductionVariants = 
+            {
+                new Aws.Sagemaker.Inputs.EndpointConfigurationProductionVariantArgs
+                {
+                    InitialInstanceCount = 1,
+                    InstanceType = "ml.t2.medium",
+                    ModelName = aws_sagemaker_model.M.Name,
+                    VariantName = "variant-1",
+                },
+            },
+            Tags = 
+            {
+                { "Name", "foo" },
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -35,7 +63,7 @@ import pulumi_aws as aws
 ec = aws.sagemaker.EndpointConfiguration("ec",
     production_variants=[{
         "initialInstanceCount": 1,
-        "instanceType": "ml.t2.medium",
+        "instance_type": "ml.t2.medium",
         "modelName": aws_sagemaker_model["m"]["name"],
         "variantName": "variant-1",
     }],

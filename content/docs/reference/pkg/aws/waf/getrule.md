@@ -20,7 +20,22 @@ meta_desc: "Explore the GetRule function of the waf module, including examples, 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = Output.Create(Aws.Waf.GetRule.InvokeAsync(new Aws.Waf.GetRuleArgs
+        {
+            Name = "tfWAFRule",
+        }));
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

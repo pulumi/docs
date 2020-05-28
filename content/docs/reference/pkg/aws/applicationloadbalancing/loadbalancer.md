@@ -22,7 +22,43 @@ Provides a Load Balancer resource.
 {{< chooser language "typescript,python,go,csharp" / >}}
 ### Application Load Balancer
 {{% example csharp %}}
-Coming soon!
+```csharp
+using System.Linq;
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var test = new Aws.LB.LoadBalancer("test", new Aws.LB.LoadBalancerArgs
+        {
+            AccessLogs = new Aws.LB.Inputs.LoadBalancerAccessLogsArgs
+            {
+                Bucket = aws_s3_bucket.Lb_logs.Bucket,
+                Enabled = true,
+                Prefix = "test-lb",
+            },
+            EnableDeletionProtection = true,
+            Internal = false,
+            LoadBalancerType = "application",
+            SecurityGroups = 
+            {
+                aws_security_group.Lb_sg.Id,
+            },
+            Subnets = 
+            {
+                aws_subnet.Public.Select(__item => __item.Id).ToList(),
+            },
+            Tags = 
+            {
+                { "Environment", "production" },
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -76,7 +112,33 @@ const test = new aws.lb.LoadBalancer("test", {
 
 ### Network Load Balancer
 {{% example csharp %}}
-Coming soon!
+```csharp
+using System.Linq;
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var test = new Aws.LB.LoadBalancer("test", new Aws.LB.LoadBalancerArgs
+        {
+            EnableDeletionProtection = true,
+            Internal = false,
+            LoadBalancerType = "network",
+            Subnets = 
+            {
+                aws_subnet.Public.Select(__item => __item.Id).ToList(),
+            },
+            Tags = 
+            {
+                { "Environment", "production" },
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -118,7 +180,35 @@ const test = new aws.lb.LoadBalancer("test", {
 
 ### Specifying Elastic IPs
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.LB.LoadBalancer("example", new Aws.LB.LoadBalancerArgs
+        {
+            LoadBalancerType = "network",
+            SubnetMappings = 
+            {
+                new Aws.LB.Inputs.LoadBalancerSubnetMappingArgs
+                {
+                    AllocationId = aws_eip.Example1.Id,
+                    SubnetId = aws_subnet.Example1.Id,
+                },
+                new Aws.LB.Inputs.LoadBalancerSubnetMappingArgs
+                {
+                    AllocationId = aws_eip.Example2.Id,
+                    SubnetId = aws_subnet.Example2.Id,
+                },
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -134,12 +224,12 @@ example = aws.lb.LoadBalancer("example",
     load_balancer_type="network",
     subnet_mappings=[
         {
-            "allocationId": aws_eip["example1"]["id"],
-            "subnetId": aws_subnet["example1"]["id"],
+            "allocation_id": aws_eip["example1"]["id"],
+            "subnet_id": aws_subnet["example1"]["id"],
         },
         {
-            "allocationId": aws_eip["example2"]["id"],
-            "subnetId": aws_subnet["example2"]["id"],
+            "allocation_id": aws_eip["example2"]["id"],
+            "subnet_id": aws_subnet["example2"]["id"],
         },
     ])
 ```

@@ -20,7 +20,46 @@ Provides an SES receipt rule resource
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        // Add a header to the email and store it in S3
+        var store = new Aws.Ses.ReceiptRule("store", new Aws.Ses.ReceiptRuleArgs
+        {
+            AddHeaderActions = 
+            {
+                new Aws.Ses.Inputs.ReceiptRuleAddHeaderActionArgs
+                {
+                    HeaderName = "Custom-Header",
+                    HeaderValue = "Added by SES",
+                    Position = 1,
+                },
+            },
+            Enabled = true,
+            Recipients = 
+            {
+                "karen@example.com",
+            },
+            RuleSetName = "default-rule-set",
+            S3Actions = 
+            {
+                new Aws.Ses.Inputs.ReceiptRuleS3ActionArgs
+                {
+                    BucketName = "emails",
+                    Position = 2,
+                },
+            },
+            ScanEnabled = true,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -43,7 +82,7 @@ store = aws.ses.ReceiptRule("store",
     recipients=["karen@example.com"],
     rule_set_name="default-rule-set",
     s3_actions=[{
-        "bucketName": "emails",
+        "bucket_name": "emails",
         "position": 2,
     }],
     scan_enabled=True)

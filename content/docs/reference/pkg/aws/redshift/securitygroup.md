@@ -20,7 +20,28 @@ Creates a new Amazon Redshift security group. You use security groups to control
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var @default = new Aws.RedShift.SecurityGroup("default", new Aws.RedShift.SecurityGroupArgs
+        {
+            Ingress = 
+            {
+                new Aws.RedShift.Inputs.SecurityGroupIngressArgs
+                {
+                    Cidr = "10.0.0.0/24",
+                },
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

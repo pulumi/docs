@@ -20,7 +20,23 @@ Provides an IAM SAML provider.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using System.IO;
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var @default = new Aws.Iam.SamlProvider("default", new Aws.Iam.SamlProviderArgs
+        {
+            SamlMetadataDocument = File.ReadAllText("saml-metadata.xml"),
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

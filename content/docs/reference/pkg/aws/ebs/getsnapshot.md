@@ -20,7 +20,45 @@ Use this data source to get information about an EBS Snapshot for use when provi
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var ebsVolume = Output.Create(Aws.Ebs.GetSnapshot.InvokeAsync(new Aws.Ebs.GetSnapshotArgs
+        {
+            Filters = 
+            {
+                new Aws.Ebs.Inputs.GetSnapshotFilterArgs
+                {
+                    Name = "volume-size",
+                    Values = 
+                    {
+                        "40",
+                    },
+                },
+                new Aws.Ebs.Inputs.GetSnapshotFilterArgs
+                {
+                    Name = "tag:Name",
+                    Values = 
+                    {
+                        "Example",
+                    },
+                },
+            },
+            MostRecent = true,
+            Owners = 
+            {
+                "self",
+            },
+        }));
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

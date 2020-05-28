@@ -20,7 +20,51 @@ Provides a proxy protocol policy, which allows an ELB to carry a client connecti
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var lb = new Aws.Elb.LoadBalancer("lb", new Aws.Elb.LoadBalancerArgs
+        {
+            AvailabilityZones = 
+            {
+                "us-east-1a",
+            },
+            Listeners = 
+            {
+                new Aws.Elb.Inputs.LoadBalancerListenerArgs
+                {
+                    InstancePort = 25,
+                    InstanceProtocol = "tcp",
+                    LbPort = 25,
+                    LbProtocol = "tcp",
+                },
+                new Aws.Elb.Inputs.LoadBalancerListenerArgs
+                {
+                    InstancePort = 587,
+                    InstanceProtocol = "tcp",
+                    LbPort = 587,
+                    LbProtocol = "tcp",
+                },
+            },
+        });
+        var smtp = new Aws.Ec2.ProxyProtocolPolicy("smtp", new Aws.Ec2.ProxyProtocolPolicyArgs
+        {
+            InstancePorts = 
+            {
+                "25",
+                "587",
+            },
+            LoadBalancer = lb.Name,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -36,15 +80,15 @@ lb = aws.elb.LoadBalancer("lb",
     availability_zones=["us-east-1a"],
     listeners=[
         {
-            "instancePort": 25,
+            "instance_port": 25,
             "instanceProtocol": "tcp",
-            "lbPort": 25,
+            "lb_port": 25,
             "lbProtocol": "tcp",
         },
         {
-            "instancePort": 587,
+            "instance_port": 587,
             "instanceProtocol": "tcp",
-            "lbPort": 587,
+            "lb_port": 587,
             "lbProtocol": "tcp",
         },
     ])

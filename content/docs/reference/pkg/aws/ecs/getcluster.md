@@ -21,7 +21,22 @@ cluster within an AWS ECS service.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var ecs_mongo = Output.Create(Aws.Ecs.GetCluster.InvokeAsync(new Aws.Ecs.GetClusterArgs
+        {
+            ClusterName = "ecs-mongo-production",
+        }));
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

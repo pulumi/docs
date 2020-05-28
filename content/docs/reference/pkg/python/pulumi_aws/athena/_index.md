@@ -147,9 +147,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Athena KMS Key&quot;</span><span class="p">)</span>
 <span class="n">test_workgroup</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">athena</span><span class="o">.</span><span class="n">Workgroup</span><span class="p">(</span><span class="s2">&quot;testWorkgroup&quot;</span><span class="p">,</span> <span class="n">configuration</span><span class="o">=</span><span class="p">{</span>
     <span class="s2">&quot;resultConfiguration&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="s2">&quot;encryptionConfiguration&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;encryption_configuration&quot;</span><span class="p">:</span> <span class="p">{</span>
             <span class="s2">&quot;encryptionOption&quot;</span><span class="p">:</span> <span class="s2">&quot;SSE_KMS&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;kmsKeyArn&quot;</span><span class="p">:</span> <span class="n">test_key</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
+            <span class="s2">&quot;kms_key_arn&quot;</span><span class="p">:</span> <span class="n">test_key</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
         <span class="p">},</span>
     <span class="p">},</span>
 <span class="p">})</span>
@@ -275,11 +275,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="s2">&quot;enforceWorkgroupConfiguration&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
     <span class="s2">&quot;publishCloudwatchMetricsEnabled&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
     <span class="s2">&quot;resultConfiguration&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="s2">&quot;encryptionConfiguration&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;encryption_configuration&quot;</span><span class="p">:</span> <span class="p">{</span>
             <span class="s2">&quot;encryptionOption&quot;</span><span class="p">:</span> <span class="s2">&quot;SSE_KMS&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;kmsKeyArn&quot;</span><span class="p">:</span> <span class="n">aws_kms_key</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
+            <span class="s2">&quot;kms_key_arn&quot;</span><span class="p">:</span> <span class="n">aws_kms_key</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
         <span class="p">},</span>
-        <span class="s2">&quot;outputLocation&quot;</span><span class="p">:</span> <span class="s2">&quot;s3://</span><span class="si">{aws_s3_bucket.example.bucket}</span><span class="s2">/output/&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;output_location&quot;</span><span class="p">:</span> <span class="s2">&quot;s3://</span><span class="si">{aws_s3_bucket.example.bucket}</span><span class="s2">/output/&quot;</span><span class="p">,</span>
     <span class="p">},</span>
 <span class="p">})</span>
 </pre></div>

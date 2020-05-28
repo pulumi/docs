@@ -28,7 +28,28 @@ phase because a modification has not yet taken place. You can use the
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var @default = new Aws.Neptune.Cluster("default", new Aws.Neptune.ClusterArgs
+        {
+            ApplyImmediately = true,
+            BackupRetentionPeriod = 5,
+            ClusterIdentifier = "neptune-cluster-demo",
+            Engine = "neptune",
+            IamDatabaseAuthenticationEnabled = true,
+            PreferredBackupWindow = "07:00-09:00",
+            SkipFinalSnapshot = true,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

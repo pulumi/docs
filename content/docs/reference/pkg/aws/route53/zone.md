@@ -20,7 +20,21 @@ Manages a Route53 Hosted Zone.
 {{< chooser language "typescript,python,go,csharp" / >}}
 ### Public Zone
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var primary = new Aws.Route53.Zone("primary", new Aws.Route53.ZoneArgs
+        {
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -47,7 +61,42 @@ const primary = new aws.route53.Zone("primary", {});
 
 ### Public Subdomain Zone
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var main = new Aws.Route53.Zone("main", new Aws.Route53.ZoneArgs
+        {
+        });
+        var dev = new Aws.Route53.Zone("dev", new Aws.Route53.ZoneArgs
+        {
+            Tags = 
+            {
+                { "Environment", "dev" },
+            },
+        });
+        var dev_ns = new Aws.Route53.Record("dev-ns", new Aws.Route53.RecordArgs
+        {
+            Name = "dev.example.com",
+            Records = 
+            {
+                dev.NameServers.Apply(nameServers => nameServers[0]),
+                dev.NameServers.Apply(nameServers => nameServers[1]),
+                dev.NameServers.Apply(nameServers => nameServers[2]),
+                dev.NameServers.Apply(nameServers => nameServers[3]),
+            },
+            Ttl = "30",
+            Type = "NS",
+            ZoneId = main.ZoneId,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -105,7 +154,28 @@ const dev_ns = new aws.route53.Record("dev-ns", {
 
 ### Private Zone
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var @private = new Aws.Route53.Zone("private", new Aws.Route53.ZoneArgs
+        {
+            Vpcs = 
+            {
+                new Aws.Route53.Inputs.ZoneVpcArgs
+                {
+                    VpcId = aws_vpc.Example.Id,
+                },
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -118,7 +188,7 @@ import pulumi
 import pulumi_aws as aws
 
 private = aws.route53.Zone("private", vpcs=[{
-    "vpcId": aws_vpc["example"]["id"],
+    "vpc_id": aws_vpc["example"]["id"],
 }])
 ```
 {{% /example %}}

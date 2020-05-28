@@ -22,7 +22,25 @@ the [account limits](http://docs.aws.amazon.com/kms/latest/developerguide/limits
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var key = new Aws.Kms.Key("key", new Aws.Kms.KeyArgs
+        {
+        });
+        var @alias = new Aws.Kms.Alias("alias", new Aws.Kms.AliasArgs
+        {
+            TargetKeyId = key.KeyId,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

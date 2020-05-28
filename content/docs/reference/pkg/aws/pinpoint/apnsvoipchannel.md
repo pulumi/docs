@@ -23,7 +23,28 @@ Provides a Pinpoint APNs VoIP Channel resource.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using System.IO;
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var app = new Aws.Pinpoint.App("app", new Aws.Pinpoint.AppArgs
+        {
+        });
+        var apnsVoip = new Aws.Pinpoint.ApnsVoipChannel("apnsVoip", new Aws.Pinpoint.ApnsVoipChannelArgs
+        {
+            ApplicationId = app.ApplicationId,
+            Certificate = File.ReadAllText("./certificate.pem"),
+            PrivateKey = File.ReadAllText("./private_key.key"),
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

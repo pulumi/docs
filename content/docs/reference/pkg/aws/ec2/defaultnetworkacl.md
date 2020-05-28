@@ -46,7 +46,7 @@ import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 const mainvpc = new aws.ec2.Vpc("mainvpc", {cidrBlock: "10.1.0.0/16"});
-const default = new aws.ec2.DefaultNetworkAcl("default", {
+const _default = new aws.ec2.DefaultNetworkAcl("default", {
     defaultNetworkAclId: mainvpc.defaultNetworkAclId,
     ingress: [{
         protocol: -1,
@@ -77,18 +77,62 @@ default = aws.ec2.DefaultNetworkAcl("default",
         "protocol": -1,
         "ruleNo": 100,
         "action": "allow",
-        "cidrBlock": mainvpc.cidr_block,
-        "fromPort": 0,
-        "toPort": 0,
+        "cidr_block": mainvpc.cidr_block,
+        "from_port": 0,
+        "to_port": 0,
     }],
     egress=[{
         "protocol": -1,
         "ruleNo": 100,
         "action": "allow",
-        "cidrBlock": "0.0.0.0/0",
-        "fromPort": 0,
-        "toPort": 0,
+        "cidr_block": "0.0.0.0/0",
+        "from_port": 0,
+        "to_port": 0,
     }])
+```
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var mainvpc = new Aws.Ec2.Vpc("mainvpc", new Aws.Ec2.VpcArgs
+        {
+            CidrBlock = "10.1.0.0/16",
+        });
+        var @default = new Aws.Ec2.DefaultNetworkAcl("default", new Aws.Ec2.DefaultNetworkAclArgs
+        {
+            DefaultNetworkAclId = mainvpc.DefaultNetworkAclId,
+            Ingress = 
+            {
+                new Aws.Ec2.Inputs.DefaultNetworkAclIngressArgs
+                {
+                    Protocol = -1,
+                    RuleNo = 100,
+                    Action = "allow",
+                    CidrBlock = mainvpc.CidrBlock,
+                    FromPort = 0,
+                    ToPort = 0,
+                },
+            },
+            Egress = 
+            {
+                new Aws.Ec2.Inputs.DefaultNetworkAclEgressArgs
+                {
+                    Protocol = -1,
+                    RuleNo = 100,
+                    Action = "allow",
+                    CidrBlock = "0.0.0.0/0",
+                    FromPort = 0,
+                    ToPort = 0,
+                },
+            },
+        });
+    }
+
+}
 ```
 
 ## Example config to deny all Egress traffic, allowing Ingress
@@ -101,7 +145,7 @@ import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 const mainvpc = new aws.ec2.Vpc("mainvpc", {cidrBlock: "10.1.0.0/16"});
-const default = new aws.ec2.DefaultNetworkAcl("default", {
+const _default = new aws.ec2.DefaultNetworkAcl("default", {
     defaultNetworkAclId: mainvpc.defaultNetworkAclId,
     ingress: [{
         protocol: -1,
@@ -124,10 +168,42 @@ default = aws.ec2.DefaultNetworkAcl("default",
         "protocol": -1,
         "ruleNo": 100,
         "action": "allow",
-        "cidrBlock": mainvpc.cidr_block,
-        "fromPort": 0,
-        "toPort": 0,
+        "cidr_block": mainvpc.cidr_block,
+        "from_port": 0,
+        "to_port": 0,
     }])
+```
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var mainvpc = new Aws.Ec2.Vpc("mainvpc", new Aws.Ec2.VpcArgs
+        {
+            CidrBlock = "10.1.0.0/16",
+        });
+        var @default = new Aws.Ec2.DefaultNetworkAcl("default", new Aws.Ec2.DefaultNetworkAclArgs
+        {
+            DefaultNetworkAclId = mainvpc.DefaultNetworkAclId,
+            Ingress = 
+            {
+                new Aws.Ec2.Inputs.DefaultNetworkAclIngressArgs
+                {
+                    Protocol = -1,
+                    RuleNo = 100,
+                    Action = "allow",
+                    CidrBlock = mainvpc.CidrBlock,
+                    FromPort = 0,
+                    ToPort = 0,
+                },
+            },
+        });
+    }
+
+}
 ```
 
 ## Example config to deny all traffic to any Subnet in the Default Network ACL
@@ -153,6 +229,26 @@ import pulumi_aws as aws
 
 mainvpc = aws.ec2.Vpc("mainvpc", cidr_block="10.1.0.0/16")
 default = aws.ec2.DefaultNetworkAcl("default", default_network_acl_id=mainvpc.default_network_acl_id)
+```
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var mainvpc = new Aws.Ec2.Vpc("mainvpc", new Aws.Ec2.VpcArgs
+        {
+            CidrBlock = "10.1.0.0/16",
+        });
+        var @default = new Aws.Ec2.DefaultNetworkAcl("default", new Aws.Ec2.DefaultNetworkAclArgs
+        {
+            DefaultNetworkAclId = mainvpc.DefaultNetworkAclId,
+        });
+    }
+
+}
 ```
 
 

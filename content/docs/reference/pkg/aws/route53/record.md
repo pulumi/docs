@@ -20,7 +20,29 @@ Provides a Route53 record resource.
 {{< chooser language "typescript,python,go,csharp" / >}}
 ### Simple routing policy
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var www = new Aws.Route53.Record("www", new Aws.Route53.RecordArgs
+        {
+            Name = "www.example.com",
+            Records = 
+            {
+                aws_eip.Lb.Public_ip,
+            },
+            Ttl = "300",
+            Type = "A",
+            ZoneId = aws_route53_zone.Primary.Zone_id,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -58,7 +80,56 @@ const www = new aws.route53.Record("www", {
 
 ### Weighted routing policy
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var www_dev = new Aws.Route53.Record("www-dev", new Aws.Route53.RecordArgs
+        {
+            Name = "www",
+            Records = 
+            {
+                "dev.example.com",
+            },
+            SetIdentifier = "dev",
+            Ttl = "5",
+            Type = "CNAME",
+            WeightedRoutingPolicies = 
+            {
+                new Aws.Route53.Inputs.RecordWeightedRoutingPolicyArgs
+                {
+                    Weight = 10,
+                },
+            },
+            ZoneId = aws_route53_zone.Primary.Zone_id,
+        });
+        var www_live = new Aws.Route53.Record("www-live", new Aws.Route53.RecordArgs
+        {
+            Name = "www",
+            Records = 
+            {
+                "live.example.com",
+            },
+            SetIdentifier = "live",
+            Ttl = "5",
+            Type = "CNAME",
+            WeightedRoutingPolicies = 
+            {
+                new Aws.Route53.Inputs.RecordWeightedRoutingPolicyArgs
+                {
+                    Weight = 90,
+                },
+            },
+            ZoneId = aws_route53_zone.Primary.Zone_id,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -125,7 +196,50 @@ const www_live = new aws.route53.Record("www-live", {
 
 ### Alias record
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var main = new Aws.Elb.LoadBalancer("main", new Aws.Elb.LoadBalancerArgs
+        {
+            AvailabilityZones = 
+            {
+                "us-east-1c",
+            },
+            Listeners = 
+            {
+                new Aws.Elb.Inputs.LoadBalancerListenerArgs
+                {
+                    InstancePort = 80,
+                    InstanceProtocol = "http",
+                    LbPort = 80,
+                    LbProtocol = "http",
+                },
+            },
+        });
+        var www = new Aws.Route53.Record("www", new Aws.Route53.RecordArgs
+        {
+            Aliases = 
+            {
+                new Aws.Route53.Inputs.RecordAliasArgs
+                {
+                    EvaluateTargetHealth = true,
+                    Name = main.DnsName,
+                    ZoneId = main.ZoneId,
+                },
+            },
+            Name = "example.com",
+            Type = "A",
+            ZoneId = aws_route53_zone.Primary.Zone_id,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -140,16 +254,16 @@ import pulumi_aws as aws
 main = aws.elb.LoadBalancer("main",
     availability_zones=["us-east-1c"],
     listeners=[{
-        "instancePort": 80,
+        "instance_port": 80,
         "instanceProtocol": "http",
-        "lbPort": 80,
+        "lb_port": 80,
         "lbProtocol": "http",
     }])
 www = aws.route53.Record("www",
     aliases=[{
         "evaluateTargetHealth": True,
         "name": main.dns_name,
-        "zoneId": main.zone_id,
+        "zone_id": main.zone_id,
     }],
     name="example.com",
     type="A",
@@ -186,7 +300,36 @@ const www = new aws.route53.Record("www", {
 
 ### NS and SOA Record Management
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleZone = new Aws.Route53.Zone("exampleZone", new Aws.Route53.ZoneArgs
+        {
+        });
+        var exampleRecord = new Aws.Route53.Record("exampleRecord", new Aws.Route53.RecordArgs
+        {
+            AllowOverwrite = true,
+            Name = "test.example.com",
+            Records = 
+            {
+                exampleZone.NameServers.Apply(nameServers => nameServers[0]),
+                exampleZone.NameServers.Apply(nameServers => nameServers[1]),
+                exampleZone.NameServers.Apply(nameServers => nameServers[2]),
+                exampleZone.NameServers.Apply(nameServers => nameServers[3]),
+            },
+            Ttl = 30,
+            Type = "NS",
+            ZoneId = exampleZone.ZoneId,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

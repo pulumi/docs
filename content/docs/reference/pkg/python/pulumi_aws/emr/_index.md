@@ -73,7 +73,7 @@ for more information.</p>
 
 <span class="s2">&quot;&quot;&quot;</span><span class="p">,</span>
     <span class="n">core_instance_group</span><span class="o">=</span><span class="p">{</span>
-        <span class="s2">&quot;autoscalingPolicy&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;&quot;{</span>
+        <span class="s2">&quot;autoscaling_policy&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;&quot;{</span>
 <span class="s2">&quot;Constraints&quot;: {</span>
 <span class="s2">  &quot;MinCapacity&quot;: 1,</span>
 <span class="s2">  &quot;MaxCapacity&quot;: 2</span>
@@ -106,25 +106,25 @@ for more information.</p>
 <span class="s2">}</span>
 
 <span class="s2">&quot;&quot;&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;bidPrice&quot;</span><span class="p">:</span> <span class="s2">&quot;0.30&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;bid_price&quot;</span><span class="p">:</span> <span class="s2">&quot;0.30&quot;</span><span class="p">,</span>
         <span class="s2">&quot;ebsConfig&quot;</span><span class="p">:</span> <span class="p">[{</span>
             <span class="s2">&quot;size&quot;</span><span class="p">:</span> <span class="s2">&quot;40&quot;</span><span class="p">,</span>
             <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;gp2&quot;</span><span class="p">,</span>
             <span class="s2">&quot;volumesPerInstance&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
         <span class="p">}],</span>
-        <span class="s2">&quot;instanceCount&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-        <span class="s2">&quot;instanceType&quot;</span><span class="p">:</span> <span class="s2">&quot;c4.large&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;instance_count&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="s2">&quot;instance_type&quot;</span><span class="p">:</span> <span class="s2">&quot;c4.large&quot;</span><span class="p">,</span>
     <span class="p">},</span>
     <span class="n">ebs_root_volume_size</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span>
     <span class="n">ec2_attributes</span><span class="o">=</span><span class="p">{</span>
         <span class="s2">&quot;emrManagedMasterSecurityGroup&quot;</span><span class="p">:</span> <span class="n">aws_security_group</span><span class="p">[</span><span class="s2">&quot;sg&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
         <span class="s2">&quot;emrManagedSlaveSecurityGroup&quot;</span><span class="p">:</span> <span class="n">aws_security_group</span><span class="p">[</span><span class="s2">&quot;sg&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
         <span class="s2">&quot;instanceProfile&quot;</span><span class="p">:</span> <span class="n">aws_iam_instance_profile</span><span class="p">[</span><span class="s2">&quot;emr_profile&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
-        <span class="s2">&quot;subnetId&quot;</span><span class="p">:</span> <span class="n">aws_subnet</span><span class="p">[</span><span class="s2">&quot;main&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;subnet_id&quot;</span><span class="p">:</span> <span class="n">aws_subnet</span><span class="p">[</span><span class="s2">&quot;main&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
     <span class="p">},</span>
     <span class="n">keep_job_flow_alive_when_no_steps</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
     <span class="n">master_instance_group</span><span class="o">=</span><span class="p">{</span>
-        <span class="s2">&quot;instanceType&quot;</span><span class="p">:</span> <span class="s2">&quot;m4.large&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;instance_type&quot;</span><span class="p">:</span> <span class="s2">&quot;m4.large&quot;</span><span class="p">,</span>
     <span class="p">},</span>
     <span class="n">release_label</span><span class="o">=</span><span class="s2">&quot;emr-4.6.0&quot;</span><span class="p">,</span>
     <span class="n">service_role</span><span class="o">=</span><span class="n">aws_iam_role</span><span class="p">[</span><span class="s2">&quot;iam_emr_service_role&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
@@ -163,10 +163,10 @@ for more information.</p>
 <span class="n">example_cluster</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">emr</span><span class="o">.</span><span class="n">Cluster</span><span class="p">(</span><span class="s2">&quot;exampleCluster&quot;</span><span class="p">,</span>
     <span class="n">core_instance_group</span><span class="o">=</span><span class="p">{},</span>
     <span class="n">ec2_attributes</span><span class="o">=</span><span class="p">{</span>
-        <span class="s2">&quot;subnetId&quot;</span><span class="p">:</span> <span class="n">example_subnet</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;subnet_id&quot;</span><span class="p">:</span> <span class="n">example_subnet</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
     <span class="p">},</span>
     <span class="n">master_instance_group</span><span class="o">=</span><span class="p">{</span>
-        <span class="s2">&quot;instanceCount&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+        <span class="s2">&quot;instance_count&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
     <span class="p">},</span>
     <span class="n">release_label</span><span class="o">=</span><span class="s2">&quot;emr-5.24.1&quot;</span><span class="p">,</span>
     <span class="n">termination_protection</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -225,7 +225,7 @@ use at your own risk.</p>
     <span class="n">release_label</span><span class="o">=</span><span class="s2">&quot;emr-4.6.0&quot;</span><span class="p">,</span>
     <span class="n">applications</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Spark&quot;</span><span class="p">],</span>
     <span class="n">ec2_attributes</span><span class="o">=</span><span class="p">{</span>
-        <span class="s2">&quot;subnetId&quot;</span><span class="p">:</span> <span class="n">main_subnet</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;subnet_id&quot;</span><span class="p">:</span> <span class="n">main_subnet</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
         <span class="s2">&quot;emrManagedMasterSecurityGroup&quot;</span><span class="p">:</span> <span class="n">aws_security_group</span><span class="p">[</span><span class="s2">&quot;allow_all&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
         <span class="s2">&quot;emrManagedSlaveSecurityGroup&quot;</span><span class="p">:</span> <span class="n">aws_security_group</span><span class="p">[</span><span class="s2">&quot;allow_all&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
         <span class="s2">&quot;instanceProfile&quot;</span><span class="p">:</span> <span class="n">emr_profile</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
@@ -279,16 +279,16 @@ use at your own risk.</p>
     <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Allow inbound traffic&quot;</span><span class="p">,</span>
     <span class="n">vpc_id</span><span class="o">=</span><span class="n">main_vpc</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
     <span class="n">ingress</span><span class="o">=</span><span class="p">[{</span>
-        <span class="s2">&quot;fromPort&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-        <span class="s2">&quot;toPort&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s2">&quot;from_port&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s2">&quot;to_port&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
         <span class="s2">&quot;protocol&quot;</span><span class="p">:</span> <span class="s2">&quot;-1&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;cidrBlocks&quot;</span><span class="p">:</span> <span class="n">main_vpc</span><span class="o">.</span><span class="n">cidr_block</span><span class="p">,</span>
+        <span class="s2">&quot;cidr_blocks&quot;</span><span class="p">:</span> <span class="n">main_vpc</span><span class="o">.</span><span class="n">cidr_block</span><span class="p">,</span>
     <span class="p">}],</span>
     <span class="n">egress</span><span class="o">=</span><span class="p">[{</span>
-        <span class="s2">&quot;fromPort&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-        <span class="s2">&quot;toPort&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s2">&quot;from_port&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s2">&quot;to_port&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
         <span class="s2">&quot;protocol&quot;</span><span class="p">:</span> <span class="s2">&quot;-1&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;cidrBlocks&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;0.0.0.0/0&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;cidr_blocks&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;0.0.0.0/0&quot;</span><span class="p">],</span>
     <span class="p">}],</span>
     <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
         <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;emr_test&quot;</span><span class="p">,</span>
@@ -297,8 +297,8 @@ use at your own risk.</p>
 <span class="n">route_table</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">RouteTable</span><span class="p">(</span><span class="s2">&quot;routeTable&quot;</span><span class="p">,</span>
     <span class="n">vpc_id</span><span class="o">=</span><span class="n">main_vpc</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
     <span class="n">route</span><span class="o">=</span><span class="p">[{</span>
-        <span class="s2">&quot;cidrBlock&quot;</span><span class="p">:</span> <span class="s2">&quot;0.0.0.0/0&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;gatewayId&quot;</span><span class="p">:</span> <span class="n">gw</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;cidr_block&quot;</span><span class="p">:</span> <span class="s2">&quot;0.0.0.0/0&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;gateway_id&quot;</span><span class="p">:</span> <span class="n">gw</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
     <span class="p">}])</span>
 <span class="n">main_route_table_association</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">MainRouteTableAssociation</span><span class="p">(</span><span class="s2">&quot;mainRouteTableAssociation&quot;</span><span class="p">,</span>
     <span class="n">vpc_id</span><span class="o">=</span><span class="n">main_vpc</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>

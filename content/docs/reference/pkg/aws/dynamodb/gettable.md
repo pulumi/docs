@@ -20,7 +20,22 @@ Provides information about a DynamoDB table.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var tableName = Output.Create(Aws.DynamoDB.GetTable.InvokeAsync(new Aws.DynamoDB.GetTableArgs
+        {
+            Name = "tableName",
+        }));
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

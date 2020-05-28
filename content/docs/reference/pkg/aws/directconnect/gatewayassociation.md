@@ -24,7 +24,35 @@ by creating an `aws.directconnect.GatewayAssociation` resource with the `proposa
 {{< chooser language "typescript,python,go,csharp" / >}}
 ### VPN Gateway Association
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleGateway = new Aws.DirectConnect.Gateway("exampleGateway", new Aws.DirectConnect.GatewayArgs
+        {
+            AmazonSideAsn = "64512",
+        });
+        var exampleVpc = new Aws.Ec2.Vpc("exampleVpc", new Aws.Ec2.VpcArgs
+        {
+            CidrBlock = "10.255.255.0/28",
+        });
+        var exampleVpnGateway = new Aws.Ec2.VpnGateway("exampleVpnGateway", new Aws.Ec2.VpnGatewayArgs
+        {
+            VpcId = exampleVpc.Id,
+        });
+        var exampleGatewayAssociation = new Aws.DirectConnect.GatewayAssociation("exampleGatewayAssociation", new Aws.DirectConnect.GatewayAssociationArgs
+        {
+            AssociatedGatewayId = exampleVpnGateway.Id,
+            DxGatewayId = exampleGateway.Id,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -68,7 +96,35 @@ const exampleGatewayAssociation = new aws.directconnect.GatewayAssociation("exam
 
 ### Transit Gateway Association
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleGateway = new Aws.DirectConnect.Gateway("exampleGateway", new Aws.DirectConnect.GatewayArgs
+        {
+            AmazonSideAsn = "64512",
+        });
+        var exampleTransitGateway = new Aws.Ec2TransitGateway.TransitGateway("exampleTransitGateway", new Aws.Ec2TransitGateway.TransitGatewayArgs
+        {
+        });
+        var exampleGatewayAssociation = new Aws.DirectConnect.GatewayAssociation("exampleGatewayAssociation", new Aws.DirectConnect.GatewayAssociationArgs
+        {
+            AllowedPrefixes = 
+            {
+                "10.255.255.0/30",
+                "10.255.255.8/30",
+            },
+            AssociatedGatewayId = exampleTransitGateway.Id,
+            DxGatewayId = exampleGateway.Id,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -114,7 +170,40 @@ const exampleGatewayAssociation = new aws.directconnect.GatewayAssociation("exam
 
 ### Allowed Prefixes
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleGateway = new Aws.DirectConnect.Gateway("exampleGateway", new Aws.DirectConnect.GatewayArgs
+        {
+            AmazonSideAsn = "64512",
+        });
+        var exampleVpc = new Aws.Ec2.Vpc("exampleVpc", new Aws.Ec2.VpcArgs
+        {
+            CidrBlock = "10.255.255.0/28",
+        });
+        var exampleVpnGateway = new Aws.Ec2.VpnGateway("exampleVpnGateway", new Aws.Ec2.VpnGatewayArgs
+        {
+            VpcId = exampleVpc.Id,
+        });
+        var exampleGatewayAssociation = new Aws.DirectConnect.GatewayAssociation("exampleGatewayAssociation", new Aws.DirectConnect.GatewayAssociationArgs
+        {
+            AllowedPrefixes = 
+            {
+                "210.52.109.0/24",
+                "175.45.176.0/22",
+            },
+            AssociatedGatewayId = exampleVpnGateway.Id,
+            DxGatewayId = exampleGateway.Id,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

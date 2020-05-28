@@ -439,8 +439,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
         <span class="s2">&quot;deploymentType&quot;</span><span class="p">:</span> <span class="s2">&quot;BLUE_GREEN&quot;</span><span class="p">,</span>
     <span class="p">},</span>
     <span class="n">ecs_service</span><span class="o">=</span><span class="p">{</span>
-        <span class="s2">&quot;clusterName&quot;</span><span class="p">:</span> <span class="n">aws_ecs_cluster</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;name&quot;</span><span class="p">],</span>
-        <span class="s2">&quot;serviceName&quot;</span><span class="p">:</span> <span class="n">aws_ecs_service</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;name&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;cluster_name&quot;</span><span class="p">:</span> <span class="n">aws_ecs_cluster</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;name&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;service_name&quot;</span><span class="p">:</span> <span class="n">aws_ecs_service</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;name&quot;</span><span class="p">],</span>
     <span class="p">},</span>
     <span class="n">load_balancer_info</span><span class="o">=</span><span class="p">{</span>
         <span class="s2">&quot;targetGroupPairInfo&quot;</span><span class="p">:</span> <span class="p">{</span>

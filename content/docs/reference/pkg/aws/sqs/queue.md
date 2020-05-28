@@ -30,6 +30,23 @@ queue = aws.sqs.Queue("queue",
     content_based_deduplication=True,
     fifo_queue=True)
 ```
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var queue = new Aws.Sqs.Queue("queue", new Aws.Sqs.QueueArgs
+        {
+            ContentBasedDeduplication = true,
+            FifoQueue = true,
+        });
+    }
+
+}
+```
 
 ## Server-side encryption (SSE)
 
@@ -50,6 +67,23 @@ queue = aws.sqs.Queue("queue",
     kms_data_key_reuse_period_seconds=300,
     kms_master_key_id="alias/aws/sqs")
 ```
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var queue = new Aws.Sqs.Queue("queue", new Aws.Sqs.QueueArgs
+        {
+            KmsDataKeyReusePeriodSeconds = 300,
+            KmsMasterKeyId = "alias/aws/sqs",
+        });
+    }
+
+}
+```
 
 {{% examples %}}
 ## Example Usage
@@ -57,7 +91,36 @@ queue = aws.sqs.Queue("queue",
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using System.Collections.Generic;
+using System.Text.Json;
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var queue = new Aws.Sqs.Queue("queue", new Aws.Sqs.QueueArgs
+        {
+            DelaySeconds = 90,
+            MaxMessageSize = 2048,
+            MessageRetentionSeconds = 86400,
+            ReceiveWaitTimeSeconds = 10,
+            RedrivePolicy = JsonSerializer.Serialize(new Dictionary<string, object?>
+            {
+                { "deadLetterTargetArn", aws_sqs_queue.Queue_deadletter.Arn },
+                { "maxReceiveCount", 4 },
+            }),
+            Tags = 
+            {
+                { "Environment", "production" },
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

@@ -20,7 +20,22 @@ Resource for managing QuickSight Group
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.Quicksight.Group("example", new Aws.Quicksight.GroupArgs
+        {
+            GroupName = "tf-example",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

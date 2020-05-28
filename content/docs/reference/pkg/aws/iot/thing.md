@@ -20,7 +20,25 @@ Creates and manages an AWS IoT Thing.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.Iot.Thing("example", new Aws.Iot.ThingArgs
+        {
+            Attributes = 
+            {
+                { "First", "examplevalue" },
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

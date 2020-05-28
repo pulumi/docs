@@ -18,86 +18,57 @@ Manages an EKS Node Group, which can provision and optionally update an Auto Sca
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_aws as aws
-
-example = aws.eks.NodeGroup("example",
-    cluster_name=aws_eks_cluster["example"]["name"],
-    node_role_arn=aws_iam_role["example"]["arn"],
-    subnet_ids=[__item["id"] for __item in aws_subnet["example"]],
-    scaling_config={
-        "desiredSize": 1,
-        "maxSize": 1,
-        "minSize": 1,
-    })
-```
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const example = new aws.eks.NodeGroup("example", {
-    clusterName: aws_eks_cluster.example.name,
-    nodeRoleArn: aws_iam_role.example.arn,
-    subnetIds: aws_subnet.example.map(__item => __item.id),
-    scaling_config: {
-        desiredSize: 1,
-        maxSize: 1,
-        minSize: 1,
-    },
-});
-```
-{{% /example %}}
-
-### Ignoring Changes to Desired Size
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_aws as aws
-
-# ... other configurations ...
-example = aws.eks.NodeGroup("example", scaling_config={
-    "desiredSize": 2,
-})
-```
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-// ... other configurations ...
-const example = new aws.eks.NodeGroup("example", {scaling_config: {
-    desiredSize: 2,
-}});
-```
-{{% /example %}}
-
 ### Example IAM Role for EKS Node Group
 {{% example csharp %}}
-Coming soon!
+```csharp
+using System.Collections.Generic;
+using System.Text.Json;
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.Iam.Role("example", new Aws.Iam.RoleArgs
+        {
+            AssumeRolePolicy = JsonSerializer.Serialize(new Dictionary<string, object?>
+            {
+                { "Statement", new[]
+                    {
+                        new Dictionary<string, object?>
+                        {
+                            { "Action", "sts:AssumeRole" },
+                            { "Effect", "Allow" },
+                            { "Principal", new Dictionary<string, object?>
+                            {
+                                { "Service", "ec2.amazonaws.com" },
+                            } },
+                        },
+                    }
+                 },
+                { "Version", "2012-10-17" },
+            }),
+        });
+        var example_AmazonEKSWorkerNodePolicy = new Aws.Iam.RolePolicyAttachment("example-AmazonEKSWorkerNodePolicy", new Aws.Iam.RolePolicyAttachmentArgs
+        {
+            PolicyArn = "arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy",
+            Role = example.Name,
+        });
+        var example_AmazonEKSCNIPolicy = new Aws.Iam.RolePolicyAttachment("example-AmazonEKSCNIPolicy", new Aws.Iam.RolePolicyAttachmentArgs
+        {
+            PolicyArn = "arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy",
+            Role = example.Name,
+        });
+        var example_AmazonEC2ContainerRegistryReadOnly = new Aws.Iam.RolePolicyAttachment("example-AmazonEC2ContainerRegistryReadOnly", new Aws.Iam.RolePolicyAttachmentArgs
+        {
+            PolicyArn = "arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly",
+            Role = example.Name,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -147,15 +118,15 @@ const example = new aws.iam.Role("example", {assumeRolePolicy: JSON.stringify({
     }],
     Version: "2012-10-17",
 })});
-const example-AmazonEKSWorkerNodePolicy = new aws.iam.RolePolicyAttachment("example-AmazonEKSWorkerNodePolicy", {
+const example_AmazonEKSWorkerNodePolicy = new aws.iam.RolePolicyAttachment("example-AmazonEKSWorkerNodePolicy", {
     policyArn: "arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy",
     role: example.name,
 });
-const example-AmazonEKSCNIPolicy = new aws.iam.RolePolicyAttachment("example-AmazonEKSCNIPolicy", {
+const example_AmazonEKSCNIPolicy = new aws.iam.RolePolicyAttachment("example-AmazonEKSCNIPolicy", {
     policyArn: "arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy",
     role: example.name,
 });
-const example-AmazonEC2ContainerRegistryReadOnly = new aws.iam.RolePolicyAttachment("example-AmazonEC2ContainerRegistryReadOnly", {
+const example_AmazonEC2ContainerRegistryReadOnly = new aws.iam.RolePolicyAttachment("example-AmazonEC2ContainerRegistryReadOnly", {
     policyArn: "arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly",
     role: example.name,
 });

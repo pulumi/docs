@@ -20,7 +20,38 @@ Provides an Elastic network interface (ENI) resource.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var test = new Aws.Ec2.NetworkInterface("test", new Aws.Ec2.NetworkInterfaceArgs
+        {
+            Attachments = 
+            {
+                new Aws.Ec2.Inputs.NetworkInterfaceAttachmentArgs
+                {
+                    DeviceIndex = 1,
+                    Instance = aws_instance.Test.Id,
+                },
+            },
+            PrivateIps = 
+            {
+                "10.0.0.50",
+            },
+            SecurityGroups = 
+            {
+                aws_security_group.Web.Id,
+            },
+            SubnetId = aws_subnet.Public_a.Id,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -34,7 +65,7 @@ import pulumi_aws as aws
 
 test = aws.ec2.NetworkInterface("test",
     attachments=[{
-        "deviceIndex": 1,
+        "device_index": 1,
         "instance": aws_instance["test"]["id"],
     }],
     private_ips=["10.0.0.50"],

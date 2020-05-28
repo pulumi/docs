@@ -250,17 +250,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">health_check_grace_period</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span>
     <span class="n">health_check_type</span><span class="o">=</span><span class="s2">&quot;ELB&quot;</span><span class="p">,</span>
     <span class="n">initial_lifecycle_hooks</span><span class="o">=</span><span class="p">[{</span>
-        <span class="s2">&quot;defaultResult&quot;</span><span class="p">:</span> <span class="s2">&quot;CONTINUE&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;heartbeatTimeout&quot;</span><span class="p">:</span> <span class="mi">2000</span><span class="p">,</span>
-        <span class="s2">&quot;lifecycleTransition&quot;</span><span class="p">:</span> <span class="s2">&quot;autoscaling:EC2_INSTANCE_LAUNCHING&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;default_result&quot;</span><span class="p">:</span> <span class="s2">&quot;CONTINUE&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;heartbeat_timeout&quot;</span><span class="p">:</span> <span class="mi">2000</span><span class="p">,</span>
+        <span class="s2">&quot;lifecycle_transition&quot;</span><span class="p">:</span> <span class="s2">&quot;autoscaling:EC2_INSTANCE_LAUNCHING&quot;</span><span class="p">,</span>
         <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;foobar&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;notificationMetadata&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;&quot;{</span>
+        <span class="s2">&quot;notification_metadata&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;&quot;{</span>
 <span class="s2">  &quot;foo&quot;: &quot;bar&quot;</span>
 <span class="s2">}</span>
 
 <span class="s2">&quot;&quot;&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;notificationTargetArn&quot;</span><span class="p">:</span> <span class="s2">&quot;arn:aws:sqs:us-east-1:444455556666:queue1*&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;roleArn&quot;</span><span class="p">:</span> <span class="s2">&quot;arn:aws:iam::123456789012:role/S3Access&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;notification_target_arn&quot;</span><span class="p">:</span> <span class="s2">&quot;arn:aws:sqs:us-east-1:444455556666:queue1*&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;role_arn&quot;</span><span class="p">:</span> <span class="s2">&quot;arn:aws:iam::123456789012:role/S3Access&quot;</span><span class="p">,</span>
     <span class="p">}],</span>
     <span class="n">launch_configuration</span><span class="o">=</span><span class="n">aws_launch_configuration</span><span class="p">[</span><span class="s2">&quot;foobar&quot;</span><span class="p">][</span><span class="s2">&quot;name&quot;</span><span class="p">],</span>
     <span class="n">max_size</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
@@ -315,17 +315,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">max_size</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
     <span class="n">min_size</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
     <span class="n">mixed_instances_policy</span><span class="o">=</span><span class="p">{</span>
-        <span class="s2">&quot;launchTemplate&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;launch_template&quot;</span><span class="p">:</span> <span class="p">{</span>
             <span class="s2">&quot;launchTemplateSpecification&quot;</span><span class="p">:</span> <span class="p">{</span>
                 <span class="s2">&quot;launchTemplateId&quot;</span><span class="p">:</span> <span class="n">example_launch_template</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
             <span class="p">},</span>
             <span class="s2">&quot;override&quot;</span><span class="p">:</span> <span class="p">[</span>
                 <span class="p">{</span>
-                    <span class="s2">&quot;instanceType&quot;</span><span class="p">:</span> <span class="s2">&quot;c4.large&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;instance_type&quot;</span><span class="p">:</span> <span class="s2">&quot;c4.large&quot;</span><span class="p">,</span>
                     <span class="s2">&quot;weightedCapacity&quot;</span><span class="p">:</span> <span class="s2">&quot;3&quot;</span><span class="p">,</span>
                 <span class="p">},</span>
                 <span class="p">{</span>
-                    <span class="s2">&quot;instanceType&quot;</span><span class="p">:</span> <span class="s2">&quot;c3.large&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;instance_type&quot;</span><span class="p">:</span> <span class="s2">&quot;c3.large&quot;</span><span class="p">,</span>
                     <span class="s2">&quot;weightedCapacity&quot;</span><span class="p">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
                 <span class="p">},</span>
             <span class="p">],</span>

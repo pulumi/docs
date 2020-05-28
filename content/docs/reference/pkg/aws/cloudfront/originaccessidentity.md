@@ -32,6 +32,17 @@ import * as pulumi from "@pulumi/pulumi";
 ```python
 import pulumi
 ```
+```csharp
+using Pulumi;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+    }
+
+}
+```
 
 ### Updating your bucket policy
 
@@ -95,6 +106,73 @@ example = aws.s3.BucketPolicy("example",
     bucket=aws_s3_bucket["example"]["id"],
     policy=s3_policy.json)
 ```
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var s3Policy = Output.Create(Aws.Iam.GetPolicyDocument.InvokeAsync(new Aws.Iam.GetPolicyDocumentArgs
+        {
+            Statements = 
+            {
+                new Aws.Iam.Inputs.GetPolicyDocumentStatementArgs
+                {
+                    Actions = 
+                    {
+                        "s3:GetObject",
+                    },
+                    Principals = 
+                    {
+                        new Aws.Iam.Inputs.GetPolicyDocumentStatementPrincipalArgs
+                        {
+                            Identifiers = 
+                            {
+                                aws_cloudfront_origin_access_identity.Origin_access_identity.Iam_arn,
+                            },
+                            Type = "AWS",
+                        },
+                    },
+                    Resources = 
+                    {
+                        $"{aws_s3_bucket.Example.Arn}/*",
+                    },
+                },
+                new Aws.Iam.Inputs.GetPolicyDocumentStatementArgs
+                {
+                    Actions = 
+                    {
+                        "s3:ListBucket",
+                    },
+                    Principals = 
+                    {
+                        new Aws.Iam.Inputs.GetPolicyDocumentStatementPrincipalArgs
+                        {
+                            Identifiers = 
+                            {
+                                aws_cloudfront_origin_access_identity.Origin_access_identity.Iam_arn,
+                            },
+                            Type = "AWS",
+                        },
+                    },
+                    Resources = 
+                    {
+                        aws_s3_bucket.Example.Arn,
+                    },
+                },
+            },
+        }));
+        var example = new Aws.S3.BucketPolicy("example", new Aws.S3.BucketPolicyArgs
+        {
+            Bucket = aws_s3_bucket.Example.Id,
+            Policy = s3Policy.Apply(s3Policy => s3Policy.Json),
+        });
+    }
+
+}
+```
 
 [1]: http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Introduction.html
 [2]: http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-restricting-access-to-s3.html
@@ -107,7 +185,22 @@ example = aws.s3.BucketPolicy("example",
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var originAccessIdentity = new Aws.CloudFront.OriginAccessIdentity("originAccessIdentity", new Aws.CloudFront.OriginAccessIdentityArgs
+        {
+            Comment = "Some comment",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

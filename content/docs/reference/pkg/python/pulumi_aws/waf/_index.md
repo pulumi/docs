@@ -1091,7 +1091,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
             <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;COUNT&quot;</span><span class="p">,</span>
         <span class="p">},</span>
         <span class="s2">&quot;priority&quot;</span><span class="p">:</span> <span class="mi">50</span><span class="p">,</span>
-        <span class="s2">&quot;ruleId&quot;</span><span class="p">:</span> <span class="n">example_rule</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;rule_id&quot;</span><span class="p">:</span> <span class="n">example_rule</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
     <span class="p">}],</span>
     <span class="n">metric_name</span><span class="o">=</span><span class="s2">&quot;example&quot;</span><span class="p">)</span>
 </pre></div>
@@ -1237,7 +1237,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
 
 <span class="n">size_constraint_set</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">waf</span><span class="o">.</span><span class="n">SizeConstraintSet</span><span class="p">(</span><span class="s2">&quot;sizeConstraintSet&quot;</span><span class="p">,</span> <span class="n">size_constraints</span><span class="o">=</span><span class="p">[{</span>
-    <span class="s2">&quot;comparisonOperator&quot;</span><span class="p">:</span> <span class="s2">&quot;EQ&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;comparison_operator&quot;</span><span class="p">:</span> <span class="s2">&quot;EQ&quot;</span><span class="p">,</span>
     <span class="s2">&quot;fieldToMatch&quot;</span><span class="p">:</span> <span class="p">{</span>
         <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;BODY&quot;</span><span class="p">,</span>
     <span class="p">},</span>
@@ -1576,7 +1576,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
             <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;BLOCK&quot;</span><span class="p">,</span>
         <span class="p">},</span>
         <span class="s2">&quot;priority&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-        <span class="s2">&quot;ruleId&quot;</span><span class="p">:</span> <span class="n">wafrule</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;rule_id&quot;</span><span class="p">:</span> <span class="n">wafrule</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
         <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;REGULAR&quot;</span><span class="p">,</span>
     <span class="p">}])</span>
 </pre></div>
@@ -1585,7 +1585,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
 
 <span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">waf</span><span class="o">.</span><span class="n">WebAcl</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span> <span class="n">logging_configuration</span><span class="o">=</span><span class="p">{</span>
-    <span class="s2">&quot;logDestination&quot;</span><span class="p">:</span> <span class="n">aws_kinesis_firehose_delivery_stream</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;log_destination&quot;</span><span class="p">:</span> <span class="n">aws_kinesis_firehose_delivery_stream</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
     <span class="s2">&quot;redactedFields&quot;</span><span class="p">:</span> <span class="p">{</span>
         <span class="s2">&quot;fieldToMatch&quot;</span><span class="p">:</span> <span class="p">[</span>
             <span class="p">{</span>

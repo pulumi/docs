@@ -18,61 +18,36 @@ Provides a S3 bucket [analytics configuration](https://docs.aws.amazon.com/Amazo
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
-### Add analytics configuration for entire S3 bucket and export results to a second S3 bucket
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_aws as aws
-
-example = aws.s3.Bucket("example")
-analytics = aws.s3.Bucket("analytics")
-example_entire_bucket = aws.s3.AnalyticsConfiguration("example-entire-bucket",
-    bucket=example.bucket,
-    storage_class_analysis={
-        "data_export": {
-            "destination": {
-                "s3_bucket_destination": {
-                    "bucketArn": analytics.arn,
-                },
-            },
-        },
-    })
-```
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const example = new aws.s3.Bucket("example", {});
-const analytics = new aws.s3.Bucket("analytics", {});
-const example-entire-bucket = new aws.s3.AnalyticsConfiguration("example-entire-bucket", {
-    bucket: example.bucket,
-    storage_class_analysis: {
-        data_export: {
-            destination: {
-                s3_bucket_destination: {
-                    bucketArn: analytics.arn,
-                },
-            },
-        },
-    },
-});
-```
-{{% /example %}}
-
 ### Add analytics configuration with S3 bucket object filter
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.S3.Bucket("example", new Aws.S3.BucketArgs
+        {
+        });
+        var example_filtered = new Aws.S3.AnalyticsConfiguration("example-filtered", new Aws.S3.AnalyticsConfigurationArgs
+        {
+            Bucket = example.BucketName,
+            Filter = new Aws.S3.Inputs.AnalyticsConfigurationFilterArgs
+            {
+                Prefix = "documents/",
+                Tags = 
+                {
+                    { "priority", "high" },
+                    { "class", "blue" },
+                },
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -103,7 +78,7 @@ import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 const example = new aws.s3.Bucket("example", {});
-const example-filtered = new aws.s3.AnalyticsConfiguration("example-filtered", {
+const example_filtered = new aws.s3.AnalyticsConfiguration("example-filtered", {
     bucket: example.bucket,
     filter: {
         prefix: "documents/",

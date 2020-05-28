@@ -51,6 +51,37 @@ test_target_group_attachment = aws.lb.TargetGroupAttachment("testTargetGroupAtta
     target_group_arn=test_target_group.arn,
     target_id=test_function.arn)
 ```
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var testTargetGroup = new Aws.LB.TargetGroup("testTargetGroup", new Aws.LB.TargetGroupArgs
+        {
+            TargetType = "lambda",
+        });
+        var testFunction = new Aws.Lambda.Function("testFunction", new Aws.Lambda.FunctionArgs
+        {
+        });
+        var withLb = new Aws.Lambda.Permission("withLb", new Aws.Lambda.PermissionArgs
+        {
+            Action = "lambda:InvokeFunction",
+            Function = testFunction.Arn,
+            Principal = "elasticloadbalancing.amazonaws.com",
+            SourceArn = testTargetGroup.Arn,
+        });
+        var testTargetGroupAttachment = new Aws.LB.TargetGroupAttachment("testTargetGroupAttachment", new Aws.LB.TargetGroupAttachmentArgs
+        {
+            TargetGroupArn = testTargetGroup.Arn,
+            TargetId = testFunction.Arn,
+        });
+    }
+
+}
+```
 
 {{% examples %}}
 ## Example Usage
@@ -58,7 +89,30 @@ test_target_group_attachment = aws.lb.TargetGroupAttachment("testTargetGroupAtta
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var testTargetGroup = new Aws.LB.TargetGroup("testTargetGroup", new Aws.LB.TargetGroupArgs
+        {
+        });
+        var testInstance = new Aws.Ec2.Instance("testInstance", new Aws.Ec2.InstanceArgs
+        {
+        });
+        var testTargetGroupAttachment = new Aws.LB.TargetGroupAttachment("testTargetGroupAttachment", new Aws.LB.TargetGroupAttachmentArgs
+        {
+            Port = 80,
+            TargetGroupArn = testTargetGroup.Arn,
+            TargetId = testInstance.Id,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

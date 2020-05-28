@@ -31,7 +31,50 @@ The state associated with existing resources will automatically be migrated.
 {{< chooser language "typescript,python,go,csharp" / >}}
 ### Basic
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var serviceb1 = new Aws.AppMesh.VirtualNode("serviceb1", new Aws.AppMesh.VirtualNodeArgs
+        {
+            MeshName = aws_appmesh_mesh.Simple.Id,
+            Spec = new Aws.AppMesh.Inputs.VirtualNodeSpecArgs
+            {
+                Backend = 
+                {
+                    
+                    {
+                        { "virtualService", 
+                        {
+                            { "virtualServiceName", "servicea.simpleapp.local" },
+                        } },
+                    },
+                },
+                Listener = new Aws.AppMesh.Inputs.VirtualNodeSpecListenerArgs
+                {
+                    PortMapping = new Aws.AppMesh.Inputs.VirtualNodeSpecListenerPortMappingArgs
+                    {
+                        Port = 8080,
+                        Protocol = "http",
+                    },
+                },
+                ServiceDiscovery = new Aws.AppMesh.Inputs.VirtualNodeSpecServiceDiscoveryArgs
+                {
+                    Dns = new Aws.AppMesh.Inputs.VirtualNodeSpecServiceDiscoveryDnsArgs
+                    {
+                        Hostname = "serviceb.simpleapp.local",
+                    },
+                },
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -97,7 +140,58 @@ const serviceb1 = new aws.appmesh.VirtualNode("serviceb1", {
 
 ### AWS Cloud Map Service Discovery
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.ServiceDiscovery.HttpNamespace("example", new Aws.ServiceDiscovery.HttpNamespaceArgs
+        {
+        });
+        var serviceb1 = new Aws.AppMesh.VirtualNode("serviceb1", new Aws.AppMesh.VirtualNodeArgs
+        {
+            MeshName = aws_appmesh_mesh.Simple.Id,
+            Spec = new Aws.AppMesh.Inputs.VirtualNodeSpecArgs
+            {
+                Backend = 
+                {
+                    
+                    {
+                        { "virtualService", 
+                        {
+                            { "virtualServiceName", "servicea.simpleapp.local" },
+                        } },
+                    },
+                },
+                Listener = new Aws.AppMesh.Inputs.VirtualNodeSpecListenerArgs
+                {
+                    PortMapping = new Aws.AppMesh.Inputs.VirtualNodeSpecListenerPortMappingArgs
+                    {
+                        Port = 8080,
+                        Protocol = "http",
+                    },
+                },
+                ServiceDiscovery = new Aws.AppMesh.Inputs.VirtualNodeSpecServiceDiscoveryArgs
+                {
+                    AwsCloudMap = new Aws.AppMesh.Inputs.VirtualNodeSpecServiceDiscoveryAwsCloudMapArgs
+                    {
+                        Attributes = 
+                        {
+                            { "stack", "blue" },
+                        },
+                        NamespaceName = example.Name,
+                        ServiceName = "serviceb1",
+                    },
+                },
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -130,7 +224,7 @@ serviceb1 = aws.appmesh.VirtualNode("serviceb1",
                     "stack": "blue",
                 },
                 "namespaceName": example.name,
-                "serviceName": "serviceb1",
+                "service_name": "serviceb1",
             },
         },
     })
@@ -173,7 +267,59 @@ const serviceb1 = new aws.appmesh.VirtualNode("serviceb1", {
 
 ### Listener Health Check
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var serviceb1 = new Aws.AppMesh.VirtualNode("serviceb1", new Aws.AppMesh.VirtualNodeArgs
+        {
+            MeshName = aws_appmesh_mesh.Simple.Id,
+            Spec = new Aws.AppMesh.Inputs.VirtualNodeSpecArgs
+            {
+                Backend = 
+                {
+                    
+                    {
+                        { "virtualService", 
+                        {
+                            { "virtualServiceName", "servicea.simpleapp.local" },
+                        } },
+                    },
+                },
+                Listener = new Aws.AppMesh.Inputs.VirtualNodeSpecListenerArgs
+                {
+                    HealthCheck = new Aws.AppMesh.Inputs.VirtualNodeSpecListenerHealthCheckArgs
+                    {
+                        HealthyThreshold = 2,
+                        IntervalMillis = 5000,
+                        Path = "/ping",
+                        Protocol = "http",
+                        TimeoutMillis = 2000,
+                        UnhealthyThreshold = 2,
+                    },
+                    PortMapping = new Aws.AppMesh.Inputs.VirtualNodeSpecListenerPortMappingArgs
+                    {
+                        Port = 8080,
+                        Protocol = "http",
+                    },
+                },
+                ServiceDiscovery = new Aws.AppMesh.Inputs.VirtualNodeSpecServiceDiscoveryArgs
+                {
+                    Dns = new Aws.AppMesh.Inputs.VirtualNodeSpecServiceDiscoveryDnsArgs
+                    {
+                        Hostname = "serviceb.simpleapp.local",
+                    },
+                },
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -194,7 +340,7 @@ serviceb1 = aws.appmesh.VirtualNode("serviceb1",
             },
         }],
         "listener": {
-            "healthCheck": {
+            "health_check": {
                 "healthyThreshold": 2,
                 "intervalMillis": 5000,
                 "path": "/ping",
@@ -255,7 +401,60 @@ const serviceb1 = new aws.appmesh.VirtualNode("serviceb1", {
 
 ### Logging
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var serviceb1 = new Aws.AppMesh.VirtualNode("serviceb1", new Aws.AppMesh.VirtualNodeArgs
+        {
+            MeshName = aws_appmesh_mesh.Simple.Id,
+            Spec = new Aws.AppMesh.Inputs.VirtualNodeSpecArgs
+            {
+                Backend = 
+                {
+                    
+                    {
+                        { "virtualService", 
+                        {
+                            { "virtualServiceName", "servicea.simpleapp.local" },
+                        } },
+                    },
+                },
+                Listener = new Aws.AppMesh.Inputs.VirtualNodeSpecListenerArgs
+                {
+                    PortMapping = new Aws.AppMesh.Inputs.VirtualNodeSpecListenerPortMappingArgs
+                    {
+                        Port = 8080,
+                        Protocol = "http",
+                    },
+                },
+                Logging = new Aws.AppMesh.Inputs.VirtualNodeSpecLoggingArgs
+                {
+                    AccessLog = new Aws.AppMesh.Inputs.VirtualNodeSpecLoggingAccessLogArgs
+                    {
+                        File = new Aws.AppMesh.Inputs.VirtualNodeSpecLoggingAccessLogFileArgs
+                        {
+                            Path = "/dev/stdout",
+                        },
+                    },
+                },
+                ServiceDiscovery = new Aws.AppMesh.Inputs.VirtualNodeSpecServiceDiscoveryArgs
+                {
+                    Dns = new Aws.AppMesh.Inputs.VirtualNodeSpecServiceDiscoveryDnsArgs
+                    {
+                        Hostname = "serviceb.simpleapp.local",
+                    },
+                },
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

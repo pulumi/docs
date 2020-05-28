@@ -21,7 +21,22 @@ for the effective account in which this provider is working.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var current = Output.Create(Aws.GetCanonicalUserId.InvokeAsync());
+        this.CanonicalUserId = current.Apply(current => current.Id);
+    }
+
+    [Output("canonicalUserId")]
+    public Output<string> CanonicalUserId { get; set; }
+}
+```
 {{% /example %}}
 
 {{% example go %}}

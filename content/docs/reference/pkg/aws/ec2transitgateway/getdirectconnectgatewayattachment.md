@@ -20,7 +20,23 @@ Get information on an EC2 Transit Gateway's attachment to a Direct Connect Gatew
 {{< chooser language "typescript,python,go,csharp" / >}}
 ### By Transit Gateway and Direct Connect Gateway Identifiers
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = Output.Create(Aws.Ec2TransitGateway.GetDirectConnectGatewayAttachment.InvokeAsync(new Aws.Ec2TransitGateway.GetDirectConnectGatewayAttachmentArgs
+        {
+            DxGatewayId = aws_dx_gateway.Example.Id,
+            TransitGatewayId = aws_ec2_transit_gateway.Example.Id,
+        }));
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

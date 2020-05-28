@@ -77,6 +77,42 @@ tfenvtest = aws.elasticbeanstalk.Environment("tfenvtest",
     ],
     solution_stack_name="64bit Amazon Linux 2015.03 v2.0.3 running Go 1.4")
 ```
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var tftest = new Aws.ElasticBeanstalk.Application("tftest", new Aws.ElasticBeanstalk.ApplicationArgs
+        {
+            Description = "tf-test-desc",
+        });
+        var tfenvtest = new Aws.ElasticBeanstalk.Environment("tfenvtest", new Aws.ElasticBeanstalk.EnvironmentArgs
+        {
+            Application = tftest.Name,
+            Settings = 
+            {
+                new Aws.ElasticBeanstalk.Inputs.EnvironmentSettingArgs
+                {
+                    Name = "VPCId",
+                    Namespace = "aws:ec2:vpc",
+                    Value = "vpc-xxxxxxxx",
+                },
+                new Aws.ElasticBeanstalk.Inputs.EnvironmentSettingArgs
+                {
+                    Name = "Subnets",
+                    Namespace = "aws:ec2:vpc",
+                    Value = "subnet-xxxxxxxx",
+                },
+            },
+            SolutionStackName = "64bit Amazon Linux 2015.03 v2.0.3 running Go 1.4",
+        });
+    }
+
+}
+```
 
 {{% examples %}}
 ## Example Usage
@@ -84,7 +120,27 @@ tfenvtest = aws.elasticbeanstalk.Environment("tfenvtest",
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var tftest = new Aws.ElasticBeanstalk.Application("tftest", new Aws.ElasticBeanstalk.ApplicationArgs
+        {
+            Description = "tf-test-desc",
+        });
+        var tfenvtest = new Aws.ElasticBeanstalk.Environment("tfenvtest", new Aws.ElasticBeanstalk.EnvironmentArgs
+        {
+            Application = tftest.Name,
+            SolutionStackName = "64bit Amazon Linux 2015.03 v2.0.3 running Go 1.4",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

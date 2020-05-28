@@ -18,49 +18,47 @@ Manages an EKS Fargate Profile.
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_aws as aws
-
-example = aws.eks.FargateProfile("example",
-    cluster_name=aws_eks_cluster["example"]["name"],
-    pod_execution_role_arn=aws_iam_role["example"]["arn"],
-    subnet_ids=[__item["id"] for __item in aws_subnet["example"]],
-    selector=[{
-        "namespace": "example",
-    }])
-```
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const example = new aws.eks.FargateProfile("example", {
-    clusterName: aws_eks_cluster.example.name,
-    podExecutionRoleArn: aws_iam_role.example.arn,
-    subnetIds: aws_subnet.example.map(__item => __item.id),
-    selector: [{
-        namespace: "example",
-    }],
-});
-```
-{{% /example %}}
-
 ### Example IAM Role for EKS Fargate Profile
 {{% example csharp %}}
-Coming soon!
+```csharp
+using System.Collections.Generic;
+using System.Text.Json;
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.Iam.Role("example", new Aws.Iam.RoleArgs
+        {
+            AssumeRolePolicy = JsonSerializer.Serialize(new Dictionary<string, object?>
+            {
+                { "Statement", new[]
+                    {
+                        new Dictionary<string, object?>
+                        {
+                            { "Action", "sts:AssumeRole" },
+                            { "Effect", "Allow" },
+                            { "Principal", new Dictionary<string, object?>
+                            {
+                                { "Service", "eks-fargate-pods.amazonaws.com" },
+                            } },
+                        },
+                    }
+                 },
+                { "Version", "2012-10-17" },
+            }),
+        });
+        var example_AmazonEKSFargatePodExecutionRolePolicy = new Aws.Iam.RolePolicyAttachment("example-AmazonEKSFargatePodExecutionRolePolicy", new Aws.Iam.RolePolicyAttachmentArgs
+        {
+            PolicyArn = "arn:aws:iam::aws:policy/AmazonEKSFargatePodExecutionRolePolicy",
+            Role = example.Name,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -104,7 +102,7 @@ const example = new aws.iam.Role("example", {assumeRolePolicy: JSON.stringify({
     }],
     Version: "2012-10-17",
 })});
-const example-AmazonEKSFargatePodExecutionRolePolicy = new aws.iam.RolePolicyAttachment("example-AmazonEKSFargatePodExecutionRolePolicy", {
+const example_AmazonEKSFargatePodExecutionRolePolicy = new aws.iam.RolePolicyAttachment("example-AmazonEKSFargatePodExecutionRolePolicy", {
     policyArn: "arn:aws:iam::aws:policy/AmazonEKSFargatePodExecutionRolePolicy",
     role: example.name,
 });

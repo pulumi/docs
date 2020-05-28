@@ -20,7 +20,23 @@ Provides a Route53 Resolver rule association.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.Route53.ResolverRuleAssociation("example", new Aws.Route53.ResolverRuleAssociationArgs
+        {
+            ResolverRuleId = aws_route53_resolver_rule.Sys.Id,
+            VpcId = aws_vpc.Foo.Id,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

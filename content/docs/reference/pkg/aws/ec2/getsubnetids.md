@@ -22,7 +22,26 @@ This resource can be useful for getting back a set of subnet ids for a vpc.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleSubnetIds = Output.Create(Aws.Ec2.GetSubnetIds.InvokeAsync(new Aws.Ec2.GetSubnetIdsArgs
+        {
+            VpcId = @var.Vpc_id,
+        }));
+        var exampleSubnet = exampleSubnetIds.Apply(exampleSubnetIds => "TODO: ForExpression");
+        this.SubnetCidrBlocks = "TODO: ForExpression";
+    }
+
+    [Output("subnetCidrBlocks")]
+    public Output<string> SubnetCidrBlocks { get; set; }
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -46,7 +65,7 @@ import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 const exampleSubnetIds = aws.ec2.getSubnetIds({
-    vpcId: var.vpc_id,
+    vpcId: _var.vpc_id,
 });
 const exampleSubnet = exampleSubnetIds.then(exampleSubnetIds => exampleSubnetIds.ids.map((v, k) => [k, v]).map(([, ]) => aws.ec2.getSubnet({
     id: __value,

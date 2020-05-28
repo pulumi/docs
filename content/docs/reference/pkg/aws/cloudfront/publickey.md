@@ -18,7 +18,24 @@ meta_desc: "Explore the PublicKey resource of the cloudfront module, including e
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using System.IO;
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.CloudFront.PublicKey("example", new Aws.CloudFront.PublicKeyArgs
+        {
+            Comment = "test public key",
+            EncodedKey = File.ReadAllText("public_key.pem"),
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

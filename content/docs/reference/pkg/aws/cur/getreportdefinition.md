@@ -24,7 +24,22 @@ Use this data source to get information on an AWS Cost and Usage Report Definiti
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var reportDefinition = Output.Create(Aws.Cur.GetReportDefinition.InvokeAsync(new Aws.Cur.GetReportDefinitionArgs
+        {
+            ReportName = "example",
+        }));
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

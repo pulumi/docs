@@ -22,7 +22,27 @@ Provides an VPC subnet resource.
 {{< chooser language "typescript,python,go,csharp" / >}}
 ### Basic Usage
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var main = new Aws.Ec2.Subnet("main", new Aws.Ec2.SubnetArgs
+        {
+            CidrBlock = "10.0.1.0/24",
+            Tags = 
+            {
+                { "Name", "Main" },
+            },
+            VpcId = aws_vpc.Main.Id,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -60,7 +80,28 @@ const main = new aws.ec2.Subnet("main", {
 
 ### Subnets In Secondary VPC CIDR Blocks
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var secondaryCidr = new Aws.Ec2.VpcIpv4CidrBlockAssociation("secondaryCidr", new Aws.Ec2.VpcIpv4CidrBlockAssociationArgs
+        {
+            CidrBlock = "172.2.0.0/16",
+            VpcId = aws_vpc.Main.Id,
+        });
+        var inSecondaryCidr = new Aws.Ec2.Subnet("inSecondaryCidr", new Aws.Ec2.SubnetArgs
+        {
+            CidrBlock = "172.2.0.0/24",
+            VpcId = secondaryCidr.VpcId,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

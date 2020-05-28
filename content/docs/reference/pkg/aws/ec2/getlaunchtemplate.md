@@ -20,7 +20,22 @@ Provides information about a Launch Template.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var @default = Output.Create(Aws.Ec2.GetLaunchTemplate.InvokeAsync(new Aws.Ec2.GetLaunchTemplateArgs
+        {
+            Name = "my-launch-template",
+        }));
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -49,7 +64,32 @@ const defaultLaunchTemplate = pulumi.output(aws.ec2.getLaunchTemplate({
 
 ### Filter
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var test = Output.Create(Aws.Ec2.GetLaunchTemplate.InvokeAsync(new Aws.Ec2.GetLaunchTemplateArgs
+        {
+            Filters = 
+            {
+                new Aws.Ec2.Inputs.GetLaunchTemplateFilterArgs
+                {
+                    Name = "launch-template-name",
+                    Values = 
+                    {
+                        "some-template",
+                    },
+                },
+            },
+        }));
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

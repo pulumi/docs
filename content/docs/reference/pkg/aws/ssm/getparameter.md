@@ -20,7 +20,22 @@ Provides an SSM Parameter data source.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var foo = Output.Create(Aws.Ssm.GetParameter.InvokeAsync(new Aws.Ssm.GetParameterArgs
+        {
+            Name = "foo",
+        }));
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

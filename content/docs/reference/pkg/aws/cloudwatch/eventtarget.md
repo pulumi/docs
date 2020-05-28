@@ -151,6 +151,137 @@ stop_instances_event_target = aws.cloudwatch.EventTarget("stopInstancesEventTarg
         "values": ["midnight"],
     }])
 ```
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var ssmLifecycleTrust = Output.Create(Aws.Iam.GetPolicyDocument.InvokeAsync(new Aws.Iam.GetPolicyDocumentArgs
+        {
+            Statements = 
+            {
+                new Aws.Iam.Inputs.GetPolicyDocumentStatementArgs
+                {
+                    Actions = 
+                    {
+                        "sts:AssumeRole",
+                    },
+                    Principals = 
+                    {
+                        new Aws.Iam.Inputs.GetPolicyDocumentStatementPrincipalArgs
+                        {
+                            Identifiers = 
+                            {
+                                "events.amazonaws.com",
+                            },
+                            Type = "Service",
+                        },
+                    },
+                },
+            },
+        }));
+        var stopInstance = new Aws.Ssm.Document("stopInstance", new Aws.Ssm.DocumentArgs
+        {
+            Content = @"  {
+    ""schemaVersion"": ""1.2"",
+    ""description"": ""Stop an instance"",
+    ""parameters"": {
+
+    },
+    ""runtimeConfig"": {
+      ""aws:runShellScript"": {
+        ""properties"": [
+          {
+            ""id"": ""0.aws:runShellScript"",
+            ""runCommand"": [""halt""]
+          }
+        ]
+      }
+    }
+  }
+
+",
+            DocumentType = "Command",
+        });
+        var ssmLifecyclePolicyDocument = stopInstance.Arn.Apply(arn => Aws.Iam.GetPolicyDocument.InvokeAsync(new Aws.Iam.GetPolicyDocumentArgs
+        {
+            Statements = 
+            {
+                new Aws.Iam.Inputs.GetPolicyDocumentStatementArgs
+                {
+                    Actions = 
+                    {
+                        "ssm:SendCommand",
+                    },
+                    Condition = 
+                    {
+                        
+                        {
+                            { "test", "StringEquals" },
+                            { "values", 
+                            {
+                                "*",
+                            } },
+                            { "variable", "ec2:ResourceTag/Terminate" },
+                        },
+                    },
+                    Effect = "Allow",
+                    Resources = 
+                    {
+                        "arn:aws:ec2:eu-west-1:1234567890:instance/*",
+                    },
+                },
+                new Aws.Iam.Inputs.GetPolicyDocumentStatementArgs
+                {
+                    Actions = 
+                    {
+                        "ssm:SendCommand",
+                    },
+                    Effect = "Allow",
+                    Resources = 
+                    {
+                        arn,
+                    },
+                },
+            },
+        }));
+        var ssmLifecycleRole = new Aws.Iam.Role("ssmLifecycleRole", new Aws.Iam.RoleArgs
+        {
+            AssumeRolePolicy = ssmLifecycleTrust.Apply(ssmLifecycleTrust => ssmLifecycleTrust.Json),
+        });
+        var ssmLifecyclePolicy = new Aws.Iam.Policy("ssmLifecyclePolicy", new Aws.Iam.PolicyArgs
+        {
+            Policy = ssmLifecyclePolicyDocument.Apply(ssmLifecyclePolicyDocument => ssmLifecyclePolicyDocument.Json),
+        });
+        var stopInstancesEventRule = new Aws.CloudWatch.EventRule("stopInstancesEventRule", new Aws.CloudWatch.EventRuleArgs
+        {
+            Description = "Stop instances nightly",
+            ScheduleExpression = "cron(0 0 * * ? *)",
+        });
+        var stopInstancesEventTarget = new Aws.CloudWatch.EventTarget("stopInstancesEventTarget", new Aws.CloudWatch.EventTargetArgs
+        {
+            Arn = stopInstance.Arn,
+            RoleArn = ssmLifecycleRole.Arn,
+            Rule = stopInstancesEventRule.Name,
+            RunCommandTargets = 
+            {
+                new Aws.CloudWatch.Inputs.EventTargetRunCommandTargetArgs
+                {
+                    Key = "tag:Terminate",
+                    Values = 
+                    {
+                        "midnight",
+                    },
+                },
+            },
+        });
+    }
+
+}
+```
 
 ## Example RunCommand Usage
 
@@ -190,6 +321,41 @@ stop_instances_event_target = aws.cloudwatch.EventTarget("stopInstancesEventTarg
         "values": ["midnight"],
     }])
 ```
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var stopInstancesEventRule = new Aws.CloudWatch.EventRule("stopInstancesEventRule", new Aws.CloudWatch.EventRuleArgs
+        {
+            Description = "Stop instances nightly",
+            ScheduleExpression = "cron(0 0 * * ? *)",
+        });
+        var stopInstancesEventTarget = new Aws.CloudWatch.EventTarget("stopInstancesEventTarget", new Aws.CloudWatch.EventTargetArgs
+        {
+            Arn = $"arn:aws:ssm:{@var.Aws_region}::document/AWS-RunShellScript",
+            Input = "{\"commands\":[\"halt\"]}",
+            RoleArn = aws_iam_role.Ssm_lifecycle.Arn,
+            Rule = stopInstancesEventRule.Name,
+            RunCommandTargets = 
+            {
+                new Aws.CloudWatch.Inputs.EventTargetRunCommandTargetArgs
+                {
+                    Key = "tag:Terminate",
+                    Values = 
+                    {
+                        "midnight",
+                    },
+                },
+            },
+        });
+    }
+
+}
+```
 
 {{% examples %}}
 ## Example Usage
@@ -197,7 +363,63 @@ stop_instances_event_target = aws.cloudwatch.EventTarget("stopInstancesEventTarg
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var console = new Aws.CloudWatch.EventRule("console", new Aws.CloudWatch.EventRuleArgs
+        {
+            Description = "Capture all EC2 scaling events",
+            EventPattern = @"{
+  ""source"": [
+    ""aws.autoscaling""
+  ],
+  ""detail-type"": [
+    ""EC2 Instance Launch Successful"",
+    ""EC2 Instance Terminate Successful"",
+    ""EC2 Instance Launch Unsuccessful"",
+    ""EC2 Instance Terminate Unsuccessful""
+  ]
+}
+
+",
+        });
+        var testStream = new Aws.Kinesis.Stream("testStream", new Aws.Kinesis.StreamArgs
+        {
+            ShardCount = 1,
+        });
+        var yada = new Aws.CloudWatch.EventTarget("yada", new Aws.CloudWatch.EventTargetArgs
+        {
+            Arn = testStream.Arn,
+            Rule = console.Name,
+            RunCommandTargets = 
+            {
+                new Aws.CloudWatch.Inputs.EventTargetRunCommandTargetArgs
+                {
+                    Key = "tag:Name",
+                    Values = 
+                    {
+                        "FooBar",
+                    },
+                },
+                new Aws.CloudWatch.Inputs.EventTargetRunCommandTargetArgs
+                {
+                    Key = "InstanceIds",
+                    Values = 
+                    {
+                        "i-162058cd308bffec2",
+                    },
+                },
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

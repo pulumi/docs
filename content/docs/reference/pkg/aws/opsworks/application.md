@@ -20,7 +20,61 @@ Provides an OpsWorks application resource.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using System.IO;
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var foo_app = new Aws.OpsWorks.Application("foo-app", new Aws.OpsWorks.ApplicationArgs
+        {
+            AppSources = 
+            {
+                new Aws.OpsWorks.Inputs.ApplicationAppSourceArgs
+                {
+                    Revision = "master",
+                    Type = "git",
+                    Url = "https://github.com/example.git",
+                },
+            },
+            AutoBundleOnDeploy = true,
+            Description = "This is a Rails application",
+            DocumentRoot = "public",
+            Domains = 
+            {
+                "example.com",
+                "sub.example.com",
+            },
+            EnableSsl = true,
+            Environments = 
+            {
+                new Aws.OpsWorks.Inputs.ApplicationEnvironmentArgs
+                {
+                    Key = "key",
+                    Secure = false,
+                    Value = "value",
+                },
+            },
+            RailsEnv = "staging",
+            ShortName = "foobar",
+            SslConfigurations = 
+            {
+                new Aws.OpsWorks.Inputs.ApplicationSslConfigurationArgs
+                {
+                    Certificate = File.ReadAllText("./foobar.crt"),
+                    PrivateKey = File.ReadAllText("./foobar.key"),
+                },
+            },
+            StackId = aws_opsworks_stack.Main.Id,
+            Type = "rails",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -55,7 +109,7 @@ foo_app = aws.opsworks.Application("foo-app",
     short_name="foobar",
     ssl_configurations=[{
         "certificate": (lambda path: open(path).read())("./foobar.crt"),
-        "privateKey": (lambda path: open(path).read())("./foobar.key"),
+        "private_key": (lambda path: open(path).read())("./foobar.key"),
     }],
     stack_id=aws_opsworks_stack["main"]["id"],
     type="rails")

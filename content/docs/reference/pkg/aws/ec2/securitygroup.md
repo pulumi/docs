@@ -44,6 +44,22 @@ import pulumi_aws as aws
 # ...
 my_endpoint = aws.ec2.VpcEndpoint("myEndpoint")
 ```
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        // ...
+        var myEndpoint = new Aws.Ec2.VpcEndpoint("myEndpoint", new Aws.Ec2.VpcEndpointArgs
+        {
+        });
+    }
+
+}
+```
 
 {{% examples %}}
 ## Example Usage
@@ -51,7 +67,51 @@ my_endpoint = aws.ec2.VpcEndpoint("myEndpoint")
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var allowTls = new Aws.Ec2.SecurityGroup("allowTls", new Aws.Ec2.SecurityGroupArgs
+        {
+            Description = "Allow TLS inbound traffic",
+            VpcId = aws_vpc.Main.Id,
+            Ingress = 
+            {
+                new Aws.Ec2.Inputs.SecurityGroupIngressArgs
+                {
+                    Description = "TLS from VPC",
+                    FromPort = 443,
+                    ToPort = 443,
+                    Protocol = "tcp",
+                    CidrBlocks = aws_vpc.Main.Cidr_block,
+                },
+            },
+            Egress = 
+            {
+                new Aws.Ec2.Inputs.SecurityGroupEgressArgs
+                {
+                    FromPort = 0,
+                    ToPort = 0,
+                    Protocol = "-1",
+                    CidrBlocks = 
+                    {
+                        "0.0.0.0/0",
+                    },
+                },
+            },
+            Tags = 
+            {
+                { "Name", "allow_tls" },
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -68,16 +128,16 @@ allow_tls = aws.ec2.SecurityGroup("allowTls",
     vpc_id=aws_vpc["main"]["id"],
     ingress=[{
         "description": "TLS from VPC",
-        "fromPort": 443,
-        "toPort": 443,
+        "from_port": 443,
+        "to_port": 443,
         "protocol": "tcp",
-        "cidrBlocks": aws_vpc["main"]["cidr_block"],
+        "cidr_blocks": aws_vpc["main"]["cidr_block"],
     }],
     egress=[{
-        "fromPort": 0,
-        "toPort": 0,
+        "from_port": 0,
+        "to_port": 0,
         "protocol": "-1",
-        "cidrBlocks": ["0.0.0.0/0"],
+        "cidr_blocks": ["0.0.0.0/0"],
     }],
     tags={
         "Name": "allow_tls",

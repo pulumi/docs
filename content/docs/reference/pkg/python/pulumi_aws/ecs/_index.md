@@ -50,7 +50,7 @@ anything, please consult the source <a class="reference external" href="https://
         <span class="s2">&quot;maximumScalingStepSize&quot;</span><span class="p">:</span> <span class="mi">1000</span><span class="p">,</span>
         <span class="s2">&quot;minimumScalingStepSize&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
         <span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;ENABLED&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;targetCapacity&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+        <span class="s2">&quot;target_capacity&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
     <span class="p">},</span>
 <span class="p">})</span>
 </pre></div>
@@ -549,8 +549,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
         <span class="s2">&quot;field&quot;</span><span class="p">:</span> <span class="s2">&quot;cpu&quot;</span><span class="p">,</span>
     <span class="p">}],</span>
     <span class="n">load_balancer</span><span class="o">=</span><span class="p">[{</span>
-        <span class="s2">&quot;targetGroupArn&quot;</span><span class="p">:</span> <span class="n">aws_lb_target_group</span><span class="p">[</span><span class="s2">&quot;foo&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
-        <span class="s2">&quot;containerName&quot;</span><span class="p">:</span> <span class="s2">&quot;mongo&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;target_group_arn&quot;</span><span class="p">:</span> <span class="n">aws_lb_target_group</span><span class="p">[</span><span class="s2">&quot;foo&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;container_name&quot;</span><span class="p">:</span> <span class="s2">&quot;mongo&quot;</span><span class="p">,</span>
         <span class="s2">&quot;containerPort&quot;</span><span class="p">:</span> <span class="mi">8080</span><span class="p">,</span>
     <span class="p">}],</span>
     <span class="n">placement_constraints</span><span class="o">=</span><span class="p">[{</span>
@@ -971,7 +971,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">container_definitions</span><span class="o">=</span><span class="p">(</span><span class="k">lambda</span> <span class="n">path</span><span class="p">:</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())(</span><span class="s2">&quot;task-definitions/service.json&quot;</span><span class="p">),</span>
     <span class="n">proxy_configuration</span><span class="o">=</span><span class="p">{</span>
         <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;APPMESH&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;containerName&quot;</span><span class="p">:</span> <span class="s2">&quot;applicationContainerName&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;container_name&quot;</span><span class="p">:</span> <span class="s2">&quot;applicationContainerName&quot;</span><span class="p">,</span>
         <span class="s2">&quot;properties&quot;</span><span class="p">:</span> <span class="p">{</span>
             <span class="s2">&quot;AppPorts&quot;</span><span class="p">:</span> <span class="s2">&quot;8080&quot;</span><span class="p">,</span>
             <span class="s2">&quot;EgressIgnoredIPs&quot;</span><span class="p">:</span> <span class="s2">&quot;169.254.170.2,169.254.169.254&quot;</span><span class="p">,</span>

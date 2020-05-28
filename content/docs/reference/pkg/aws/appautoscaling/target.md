@@ -22,7 +22,26 @@ Provides an Application AutoScaling ScalableTarget resource. To manage policies 
 {{< chooser language "typescript,python,go,csharp" / >}}
 ### DynamoDB Table Autoscaling
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var dynamodbTableReadTarget = new Aws.AppAutoScaling.Target("dynamodbTableReadTarget", new Aws.AppAutoScaling.TargetArgs
+        {
+            MaxCapacity = 100,
+            MinCapacity = 5,
+            ResourceId = $"table/{aws_dynamodb_table.Example.Name}",
+            ScalableDimension = "dynamodb:table:ReadCapacityUnits",
+            ServiceNamespace = "dynamodb",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -60,7 +79,26 @@ const dynamodbTableReadTarget = new aws.appautoscaling.Target("dynamodb_table_re
 
 ### DynamoDB Index Autoscaling
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var dynamodbIndexReadTarget = new Aws.AppAutoScaling.Target("dynamodbIndexReadTarget", new Aws.AppAutoScaling.TargetArgs
+        {
+            MaxCapacity = 100,
+            MinCapacity = 5,
+            ResourceId = $"table/{aws_dynamodb_table.Example.Name}/index/{@var.Index_name}",
+            ScalableDimension = "dynamodb:index:ReadCapacityUnits",
+            ServiceNamespace = "dynamodb",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -98,7 +136,26 @@ const dynamodbIndexReadTarget = new aws.appautoscaling.Target("dynamodb_index_re
 
 ### ECS Service Autoscaling
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var ecsTarget = new Aws.AppAutoScaling.Target("ecsTarget", new Aws.AppAutoScaling.TargetArgs
+        {
+            MaxCapacity = 4,
+            MinCapacity = 1,
+            ResourceId = $"service/{aws_ecs_cluster.Example.Name}/{aws_ecs_service.Example.Name}",
+            ScalableDimension = "ecs:service:DesiredCount",
+            ServiceNamespace = "ecs",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -136,7 +193,26 @@ const ecsTarget = new aws.appautoscaling.Target("ecs_target", {
 
 ### Aurora Read Replica Autoscaling
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var replicas = new Aws.AppAutoScaling.Target("replicas", new Aws.AppAutoScaling.TargetArgs
+        {
+            MaxCapacity = 15,
+            MinCapacity = 1,
+            ResourceId = $"cluster:{aws_rds_cluster.Example.Id}",
+            ScalableDimension = "rds:cluster:ReadReplicaCount",
+            ServiceNamespace = "rds",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

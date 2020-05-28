@@ -211,11 +211,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">fsx</span><span class="o">.</span><span class="n">WindowsFileSystem</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
     <span class="n">kms_key_id</span><span class="o">=</span><span class="n">aws_kms_key</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
     <span class="n">self_managed_active_directory</span><span class="o">=</span><span class="p">{</span>
-        <span class="s2">&quot;dnsIps&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">&quot;dns_ips&quot;</span><span class="p">:</span> <span class="p">[</span>
             <span class="s2">&quot;10.0.0.111&quot;</span><span class="p">,</span>
             <span class="s2">&quot;10.0.0.222&quot;</span><span class="p">,</span>
         <span class="p">],</span>
-        <span class="s2">&quot;domainName&quot;</span><span class="p">:</span> <span class="s2">&quot;corp.example.com&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;domain_name&quot;</span><span class="p">:</span> <span class="s2">&quot;corp.example.com&quot;</span><span class="p">,</span>
         <span class="s2">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;avoid-plaintext-passwords&quot;</span><span class="p">,</span>
         <span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;Admin&quot;</span><span class="p">,</span>
     <span class="p">},</span>

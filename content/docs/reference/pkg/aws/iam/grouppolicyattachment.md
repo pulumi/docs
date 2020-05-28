@@ -22,7 +22,32 @@ Attaches a Managed IAM Policy to an IAM group
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var @group = new Aws.Iam.Group("group", new Aws.Iam.GroupArgs
+        {
+        });
+        var policy = new Aws.Iam.Policy("policy", new Aws.Iam.PolicyArgs
+        {
+            Description = "A test policy",
+            Policy = "",
+        });
+        // insert policy here
+        var test_attach = new Aws.Iam.GroupPolicyAttachment("test-attach", new Aws.Iam.GroupPolicyAttachmentArgs
+        {
+            Group = @group.Name,
+            PolicyArn = policy.Arn,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

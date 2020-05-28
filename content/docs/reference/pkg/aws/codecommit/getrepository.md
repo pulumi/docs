@@ -20,7 +20,22 @@ The CodeCommit Repository data source allows the ARN, Repository ID, Repository 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var test = Output.Create(Aws.CodeCommit.GetRepository.InvokeAsync(new Aws.CodeCommit.GetRepositoryArgs
+        {
+            RepositoryName = "MyTestRepository",
+        }));
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

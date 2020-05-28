@@ -20,7 +20,26 @@ Gets the contents of the specified Systems Manager document.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var foo = Output.Create(Aws.Ssm.GetDocument.InvokeAsync(new Aws.Ssm.GetDocumentArgs
+        {
+            DocumentFormat = "YAML",
+            Name = "AWS-GatherSoftwareInventory",
+        }));
+        this.Content = foo.Apply(foo => foo.Content);
+    }
+
+    [Output("content")]
+    public Output<string> Content { get; set; }
+}
+```
 {{% /example %}}
 
 {{% example go %}}

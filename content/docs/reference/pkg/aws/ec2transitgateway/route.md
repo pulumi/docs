@@ -20,7 +20,24 @@ Manages an EC2 Transit Gateway Route.
 {{< chooser language "typescript,python,go,csharp" / >}}
 ### Standard usage
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.Ec2TransitGateway.Route("example", new Aws.Ec2TransitGateway.RouteArgs
+        {
+            DestinationCidrBlock = "0.0.0.0/0",
+            TransitGatewayAttachmentId = aws_ec2_transit_gateway_vpc_attachment.Example.Id,
+            TransitGatewayRouteTableId = aws_ec2_transit_gateway.Example.Association_default_route_table_id,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -54,7 +71,24 @@ const example = new aws.ec2transitgateway.Route("example", {
 
 ### Blackhole route
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.Ec2TransitGateway.Route("example", new Aws.Ec2TransitGateway.RouteArgs
+        {
+            Blackhole = true,
+            DestinationCidrBlock = "0.0.0.0/0",
+            TransitGatewayRouteTableId = aws_ec2_transit_gateway.Example.Association_default_route_table_id,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

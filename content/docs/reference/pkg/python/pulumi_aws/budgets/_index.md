@@ -28,8 +28,8 @@ anything, please consult the source <a class="reference external" href="https://
     <span class="n">limit_amount</span><span class="o">=</span><span class="s2">&quot;1200&quot;</span><span class="p">,</span>
     <span class="n">limit_unit</span><span class="o">=</span><span class="s2">&quot;USD&quot;</span><span class="p">,</span>
     <span class="n">notifications</span><span class="o">=</span><span class="p">[{</span>
-        <span class="s2">&quot;comparisonOperator&quot;</span><span class="p">:</span> <span class="s2">&quot;GREATER_THAN&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;notificationType&quot;</span><span class="p">:</span> <span class="s2">&quot;FORECASTED&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;comparison_operator&quot;</span><span class="p">:</span> <span class="s2">&quot;GREATER_THAN&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;notification_type&quot;</span><span class="p">:</span> <span class="s2">&quot;FORECASTED&quot;</span><span class="p">,</span>
         <span class="s2">&quot;subscriberEmailAddresses&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;test@example.com&quot;</span><span class="p">],</span>
         <span class="s2">&quot;threshold&quot;</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
         <span class="s2">&quot;thresholdType&quot;</span><span class="p">:</span> <span class="s2">&quot;PERCENTAGE&quot;</span><span class="p">,</span>

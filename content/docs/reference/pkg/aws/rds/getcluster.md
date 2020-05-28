@@ -20,7 +20,22 @@ Provides information about an RDS cluster.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var clusterName = Output.Create(Aws.Rds.GetCluster.InvokeAsync(new Aws.Rds.GetClusterArgs
+        {
+            ClusterIdentifier = "clusterName",
+        }));
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

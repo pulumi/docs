@@ -18,7 +18,22 @@ meta_desc: "Explore the GetEventCategories function of the rds module, including
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleEventCategories = Output.Create(Aws.Rds.GetEventCategories.InvokeAsync());
+        this.Example = exampleEventCategories.Apply(exampleEventCategories => exampleEventCategories.EventCategories);
+    }
+
+    [Output("example")]
+    public Output<string> Example { get; set; }
+}
+```
 {{% /example %}}
 
 {{% example go %}}

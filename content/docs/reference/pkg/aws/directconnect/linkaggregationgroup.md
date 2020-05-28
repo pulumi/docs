@@ -22,7 +22,24 @@ Provides a Direct Connect LAG. Connections can be added to the LAG via the [`aws
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var hoge = new Aws.DirectConnect.LinkAggregationGroup("hoge", new Aws.DirectConnect.LinkAggregationGroupArgs
+        {
+            ConnectionsBandwidth = "1Gbps",
+            ForceDestroy = true,
+            Location = "EqDC2",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

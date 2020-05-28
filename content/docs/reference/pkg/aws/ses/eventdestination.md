@@ -20,7 +20,37 @@ Provides an SES event destination
 {{< chooser language "typescript,python,go,csharp" / >}}
 ### CloudWatch Destination
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var cloudwatch = new Aws.Ses.EventDestination("cloudwatch", new Aws.Ses.EventDestinationArgs
+        {
+            CloudwatchDestinations = 
+            {
+                new Aws.Ses.Inputs.EventDestinationCloudwatchDestinationArgs
+                {
+                    DefaultValue = "default",
+                    DimensionName = "dimension",
+                    ValueSource = "emailHeader",
+                },
+            },
+            ConfigurationSetName = aws_ses_configuration_set.Example.Name,
+            Enabled = true,
+            MatchingTypes = 
+            {
+                "bounce",
+                "send",
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -34,7 +64,7 @@ import pulumi_aws as aws
 
 cloudwatch = aws.ses.EventDestination("cloudwatch",
     cloudwatch_destinations=[{
-        "defaultValue": "default",
+        "default_value": "default",
         "dimensionName": "dimension",
         "valueSource": "emailHeader",
     }],
@@ -70,7 +100,33 @@ const cloudwatch = new aws.ses.EventDestination("cloudwatch", {
 
 ### Kinesis Destination
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var kinesis = new Aws.Ses.EventDestination("kinesis", new Aws.Ses.EventDestinationArgs
+        {
+            ConfigurationSetName = aws_ses_configuration_set.Example.Name,
+            Enabled = true,
+            KinesisDestination = new Aws.Ses.Inputs.EventDestinationKinesisDestinationArgs
+            {
+                RoleArn = aws_iam_role.Example.Arn,
+                StreamArn = aws_kinesis_firehose_delivery_stream.Example.Arn,
+            },
+            MatchingTypes = 
+            {
+                "bounce",
+                "send",
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -86,8 +142,8 @@ kinesis = aws.ses.EventDestination("kinesis",
     configuration_set_name=aws_ses_configuration_set["example"]["name"],
     enabled=True,
     kinesis_destination={
-        "roleArn": aws_iam_role["example"]["arn"],
-        "streamArn": aws_kinesis_firehose_delivery_stream["example"]["arn"],
+        "role_arn": aws_iam_role["example"]["arn"],
+        "stream_arn": aws_kinesis_firehose_delivery_stream["example"]["arn"],
     },
     matching_types=[
         "bounce",
@@ -118,7 +174,32 @@ const kinesis = new aws.ses.EventDestination("kinesis", {
 
 ### SNS Destination
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var sns = new Aws.Ses.EventDestination("sns", new Aws.Ses.EventDestinationArgs
+        {
+            ConfigurationSetName = aws_ses_configuration_set.Example.Name,
+            Enabled = true,
+            MatchingTypes = 
+            {
+                "bounce",
+                "send",
+            },
+            SnsDestination = new Aws.Ses.Inputs.EventDestinationSnsDestinationArgs
+            {
+                TopicArn = aws_sns_topic.Example.Arn,
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -138,7 +219,7 @@ sns = aws.ses.EventDestination("sns",
         "send",
     ],
     sns_destination={
-        "topicArn": aws_sns_topic["example"]["arn"],
+        "topic_arn": aws_sns_topic["example"]["arn"],
     })
 ```
 {{% /example %}}

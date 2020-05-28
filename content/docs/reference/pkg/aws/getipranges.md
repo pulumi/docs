@@ -20,7 +20,49 @@ Use this data source to get the IP ranges of various AWS products and services. 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var europeanEc2 = Output.Create(Aws.GetIpRanges.InvokeAsync(new Aws.GetIpRangesArgs
+        {
+            Regions = 
+            {
+                "eu-west-1",
+                "eu-central-1",
+            },
+            Services = 
+            {
+                "ec2",
+            },
+        }));
+        var fromEurope = new Aws.Ec2.SecurityGroup("fromEurope", new Aws.Ec2.SecurityGroupArgs
+        {
+            Ingress = 
+            {
+                new Aws.Ec2.Inputs.SecurityGroupIngressArgs
+                {
+                    FromPort = "443",
+                    ToPort = "443",
+                    Protocol = "tcp",
+                    CidrBlocks = europeanEc2.Apply(europeanEc2 => europeanEc2.CidrBlocks),
+                    Ipv6CidrBlocks = europeanEc2.Apply(europeanEc2 => europeanEc2.Ipv6CidrBlocks),
+                },
+            },
+            Tags = 
+            {
+                { "CreateDate", europeanEc2.Apply(europeanEc2 => europeanEc2.CreateDate) },
+                { "SyncToken", europeanEc2.Apply(europeanEc2 => europeanEc2.SyncToken) },
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -39,11 +81,11 @@ european_ec2 = aws.get_ip_ranges(regions=[
     services=["ec2"])
 from_europe = aws.ec2.SecurityGroup("fromEurope",
     ingress=[{
-        "fromPort": "443",
-        "toPort": "443",
+        "from_port": "443",
+        "to_port": "443",
         "protocol": "tcp",
-        "cidrBlocks": european_ec2.cidr_blocks,
-        "ipv6CidrBlocks": european_ec2.ipv6_cidr_blocks,
+        "cidr_blocks": european_ec2.cidr_blocks,
+        "ipv6_cidr_blocks": european_ec2.ipv6_cidr_blocks,
     }],
     tags={
         "CreateDate": european_ec2.create_date,

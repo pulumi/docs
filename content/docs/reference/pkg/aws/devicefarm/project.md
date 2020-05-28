@@ -32,6 +32,21 @@ import pulumi_aws as aws
 
 awesome_devices = aws.devicefarm.Project("awesomeDevices")
 ```
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var awesomeDevices = new Aws.DeviceFarm.Project("awesomeDevices", new Aws.DeviceFarm.ProjectArgs
+        {
+        });
+    }
+
+}
+```
 
 
 

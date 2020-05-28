@@ -22,105 +22,26 @@ See [ECS Services section in AWS developer guide](https://docs.aws.amazon.com/Am
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_aws as aws
-
-mongo = aws.ecs.Service("mongo",
-    cluster=aws_ecs_cluster["foo"]["id"],
-    task_definition=aws_ecs_task_definition["mongo"]["arn"],
-    desired_count=3,
-    iam_role=aws_iam_role["foo"]["arn"],
-    ordered_placement_strategy=[{
-        "type": "binpack",
-        "field": "cpu",
-    }],
-    load_balancer=[{
-        "targetGroupArn": aws_lb_target_group["foo"]["arn"],
-        "containerName": "mongo",
-        "containerPort": 8080,
-    }],
-    placement_constraints=[{
-        "type": "memberOf",
-        "expression": "attribute:ecs.availability-zone in [us-west-2a, us-west-2b]",
-    }])
-```
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const mongo = new aws.ecs.Service("mongo", {
-    cluster: aws_ecs_cluster.foo.id,
-    taskDefinition: aws_ecs_task_definition.mongo.arn,
-    desiredCount: 3,
-    iamRole: aws_iam_role.foo.arn,
-    ordered_placement_strategy: [{
-        type: "binpack",
-        field: "cpu",
-    }],
-    load_balancer: [{
-        targetGroupArn: aws_lb_target_group.foo.arn,
-        containerName: "mongo",
-        containerPort: 8080,
-    }],
-    placement_constraints: [{
-        type: "memberOf",
-        expression: "attribute:ecs.availability-zone in [us-west-2a, us-west-2b]",
-    }],
-});
-```
-{{% /example %}}
-
-### Ignoring Changes to Desired Count
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_aws as aws
-
-example = aws.ecs.Service("example",
-    desired_count=2,
-    lifecycle={
-        "ignoreChanges": ["desiredCount"],
-    })
-```
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const example = new aws.ecs.Service("example", {
-    // Example: Create service with 2 instances to start
-    desiredCount: 2,
-}, { ignoreChanges: ["desiredCount"] });
-```
-{{% /example %}}
-
 ### Daemon Scheduling Strategy
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var bar = new Aws.Ecs.Service("bar", new Aws.Ecs.ServiceArgs
+        {
+            Cluster = aws_ecs_cluster.Foo.Id,
+            SchedulingStrategy = "DAEMON",
+            TaskDefinition = aws_ecs_task_definition.Bar.Arn,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

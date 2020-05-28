@@ -20,7 +20,40 @@ Manages a Glue Trigger resource.
 {{< chooser language "typescript,python,go,csharp" / >}}
 ### Conditional Trigger
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.Glue.Trigger("example", new Aws.Glue.TriggerArgs
+        {
+            Actions = 
+            {
+                new Aws.Glue.Inputs.TriggerActionArgs
+                {
+                    JobName = aws_glue_job.Example1.Name,
+                },
+            },
+            Predicate = new Aws.Glue.Inputs.TriggerPredicateArgs
+            {
+                Conditions = 
+                {
+                    new Aws.Glue.Inputs.TriggerPredicateConditionArgs
+                    {
+                        JobName = aws_glue_job.Example2.Name,
+                        State = "SUCCEEDED",
+                    },
+                },
+            },
+            Type = "CONDITIONAL",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -68,7 +101,29 @@ const example = new aws.glue.Trigger("example", {
 
 ### On-Demand Trigger
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.Glue.Trigger("example", new Aws.Glue.TriggerArgs
+        {
+            Actions = 
+            {
+                new Aws.Glue.Inputs.TriggerActionArgs
+                {
+                    JobName = aws_glue_job.Example.Name,
+                },
+            },
+            Type = "ON_DEMAND",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -104,7 +159,30 @@ const example = new aws.glue.Trigger("example", {
 
 ### Scheduled Trigger
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.Glue.Trigger("example", new Aws.Glue.TriggerArgs
+        {
+            Actions = 
+            {
+                new Aws.Glue.Inputs.TriggerActionArgs
+                {
+                    JobName = aws_glue_job.Example.Name,
+                },
+            },
+            Schedule = "cron(15 12 * * ? *)",
+            Type = "SCHEDULED",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -142,7 +220,40 @@ const example = new aws.glue.Trigger("example", {
 
 ### Conditional Trigger with Crawler Action
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.Glue.Trigger("example", new Aws.Glue.TriggerArgs
+        {
+            Actions = 
+            {
+                new Aws.Glue.Inputs.TriggerActionArgs
+                {
+                    CrawlerName = aws_glue_crawler.Example1.Name,
+                },
+            },
+            Predicate = new Aws.Glue.Inputs.TriggerPredicateArgs
+            {
+                Conditions = 
+                {
+                    new Aws.Glue.Inputs.TriggerPredicateConditionArgs
+                    {
+                        JobName = aws_glue_job.Example2.Name,
+                        State = "SUCCEEDED",
+                    },
+                },
+            },
+            Type = "CONDITIONAL",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -190,7 +301,40 @@ const example = new aws.glue.Trigger("example", {
 
 ### Conditional Trigger with Crawler Condition 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.Glue.Trigger("example", new Aws.Glue.TriggerArgs
+        {
+            Actions = 
+            {
+                new Aws.Glue.Inputs.TriggerActionArgs
+                {
+                    JobName = aws_glue_job.Example1.Name,
+                },
+            },
+            Predicate = new Aws.Glue.Inputs.TriggerPredicateArgs
+            {
+                Conditions = 
+                {
+                    new Aws.Glue.Inputs.TriggerPredicateConditionArgs
+                    {
+                        CrawlState = "SUCCEEDED",
+                        CrawlerName = aws_glue_crawler.Example2.Name,
+                    },
+                },
+            },
+            Type = "CONDITIONAL",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

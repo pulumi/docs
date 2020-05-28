@@ -20,7 +20,25 @@ Provides an Elastic File System (EFS) File System resource.
 {{< chooser language "typescript,python,go,csharp" / >}}
 ### EFS File System w/ tags
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var foo = new Aws.Efs.FileSystem("foo", new Aws.Efs.FileSystemArgs
+        {
+            Tags = 
+            {
+                { "Name", "MyProduct" },
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -53,7 +71,25 @@ const foo = new aws.efs.FileSystem("foo", {
 
 ### Using lifecycle policy
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var fooWithLifecylePolicy = new Aws.Efs.FileSystem("fooWithLifecylePolicy", new Aws.Efs.FileSystemArgs
+        {
+            LifecyclePolicy = new Aws.Efs.Inputs.FileSystemLifecyclePolicyArgs
+            {
+                TransitionToIa = "AFTER_30_DAYS",
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

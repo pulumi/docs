@@ -20,7 +20,24 @@ Manages a Direct Connect Gateway Association Proposal, typically for enabling cr
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.DirectConnect.GatewayAssociationProposal("example", new Aws.DirectConnect.GatewayAssociationProposalArgs
+        {
+            AssociatedGatewayId = aws_vpn_gateway.Example.Id,
+            DxGatewayId = aws_dx_gateway.Example.Id,
+            DxGatewayOwnerAccountId = aws_dx_gateway.Example.Owner_account_id,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

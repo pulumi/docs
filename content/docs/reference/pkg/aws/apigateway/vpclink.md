@@ -23,7 +23,35 @@ To enable private integration for HTTP APIs, use the Amazon API Gateway Version 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleLoadBalancer = new Aws.LB.LoadBalancer("exampleLoadBalancer", new Aws.LB.LoadBalancerArgs
+        {
+            Internal = true,
+            LoadBalancerType = "network",
+            SubnetMappings = 
+            {
+                new Aws.LB.Inputs.LoadBalancerSubnetMappingArgs
+                {
+                    SubnetId = "12345",
+                },
+            },
+        });
+        var exampleVpcLink = new Aws.ApiGateway.VpcLink("exampleVpcLink", new Aws.ApiGateway.VpcLinkArgs
+        {
+            Description = "example description",
+            TargetArn = exampleLoadBalancer.Arn,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -39,7 +67,7 @@ example_load_balancer = aws.lb.LoadBalancer("exampleLoadBalancer",
     internal=True,
     load_balancer_type="network",
     subnet_mappings=[{
-        "subnetId": "12345",
+        "subnet_id": "12345",
     }])
 example_vpc_link = aws.apigateway.VpcLink("exampleVpcLink",
     description="example description",

@@ -20,7 +20,26 @@ Manages a Resource Access Manager (RAM) Resource Share. To associate principals 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.Ram.ResourceShare("example", new Aws.Ram.ResourceShareArgs
+        {
+            AllowExternalPrincipals = true,
+            Tags = 
+            {
+                { "Environment", "Production" },
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

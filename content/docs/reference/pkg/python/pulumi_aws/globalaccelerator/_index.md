@@ -197,7 +197,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">globalaccelerator</span><span class="o">.</span><span class="n">EndpointGroup</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
     <span class="n">endpoint_configurations</span><span class="o">=</span><span class="p">[{</span>
-        <span class="s2">&quot;endpointId&quot;</span><span class="p">:</span> <span class="n">aws_lb</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;endpoint_id&quot;</span><span class="p">:</span> <span class="n">aws_lb</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
         <span class="s2">&quot;weight&quot;</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
     <span class="p">}],</span>
     <span class="n">listener_arn</span><span class="o">=</span><span class="n">aws_globalaccelerator_listener</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
@@ -370,8 +370,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">accelerator_arn</span><span class="o">=</span><span class="n">example_accelerator</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
     <span class="n">client_affinity</span><span class="o">=</span><span class="s2">&quot;SOURCE_IP&quot;</span><span class="p">,</span>
     <span class="n">port_ranges</span><span class="o">=</span><span class="p">[{</span>
-        <span class="s2">&quot;fromPort&quot;</span><span class="p">:</span> <span class="mi">80</span><span class="p">,</span>
-        <span class="s2">&quot;toPort&quot;</span><span class="p">:</span> <span class="mi">80</span><span class="p">,</span>
+        <span class="s2">&quot;from_port&quot;</span><span class="p">:</span> <span class="mi">80</span><span class="p">,</span>
+        <span class="s2">&quot;to_port&quot;</span><span class="p">:</span> <span class="mi">80</span><span class="p">,</span>
     <span class="p">}],</span>
     <span class="n">protocol</span><span class="o">=</span><span class="s2">&quot;TCP&quot;</span><span class="p">)</span>
 </pre></div>

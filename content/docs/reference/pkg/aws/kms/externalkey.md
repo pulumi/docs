@@ -22,7 +22,22 @@ Manages a KMS Customer Master Key that uses external key material. To instead ma
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.Kms.ExternalKey("example", new Aws.Kms.ExternalKeyArgs
+        {
+            Description = "KMS EXTERNAL for AMI encryption",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

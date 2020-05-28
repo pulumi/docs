@@ -20,7 +20,23 @@ Retrieve information about a Storage Gateway local disk. The disk identifier is 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var test = Output.Create(Aws.StorageGateway.GetLocalDisk.InvokeAsync(new Aws.StorageGateway.GetLocalDiskArgs
+        {
+            DiskPath = aws_volume_attachment.Test.Device_name,
+            GatewayArn = aws_storagegateway_gateway.Test.Arn,
+        }));
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

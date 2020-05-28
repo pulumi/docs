@@ -24,7 +24,57 @@ Manages a Glacier Vault Lock. You can refer to the [Glacier Developer Guide](htt
 {{< chooser language "typescript,python,go,csharp" / >}}
 ### Testing Glacier Vault Lock Policy
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleVault = new Aws.Glacier.Vault("exampleVault", new Aws.Glacier.VaultArgs
+        {
+        });
+        var examplePolicyDocument = exampleVault.Arn.Apply(arn => Aws.Iam.GetPolicyDocument.InvokeAsync(new Aws.Iam.GetPolicyDocumentArgs
+        {
+            Statements = 
+            {
+                new Aws.Iam.Inputs.GetPolicyDocumentStatementArgs
+                {
+                    Actions = 
+                    {
+                        "glacier:DeleteArchive",
+                    },
+                    Condition = 
+                    {
+                        
+                        {
+                            { "test", "NumericLessThanEquals" },
+                            { "values", 
+                            {
+                                "365",
+                            } },
+                            { "variable", "glacier:ArchiveAgeinDays" },
+                        },
+                    },
+                    Effect = "Deny",
+                    Resources = 
+                    {
+                        arn,
+                    },
+                },
+            },
+        }));
+        var exampleVaultLock = new Aws.Glacier.VaultLock("exampleVaultLock", new Aws.Glacier.VaultLockArgs
+        {
+            CompleteLock = false,
+            Policy = examplePolicyDocument.Apply(examplePolicyDocument => examplePolicyDocument.Json),
+            VaultName = exampleVault.Name,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -82,7 +132,24 @@ const exampleVaultLock = new aws.glacier.VaultLock("example", {
 
 ### Permanently Applying Glacier Vault Lock Policy
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.Glacier.VaultLock("example", new Aws.Glacier.VaultLockArgs
+        {
+            CompleteLock = true,
+            Policy = data.Aws_iam_policy_document.Example.Json,
+            VaultName = aws_glacier_vault.Example.Name,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

@@ -20,7 +20,22 @@ Use this data source to get information about an RDS instance
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var database = Output.Create(Aws.Rds.GetInstance.InvokeAsync(new Aws.Rds.GetInstanceArgs
+        {
+            DbInstanceIdentifier = "my-test-database",
+        }));
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

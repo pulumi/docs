@@ -51,6 +51,33 @@ route = aws.ec2.Route("route",
     egress_only_gateway_id=egress.id,
     route_table_id="rtb-4fbb3ac4")
 ```
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var vpc = new Aws.Ec2.Vpc("vpc", new Aws.Ec2.VpcArgs
+        {
+            AssignGeneratedIpv6CidrBlock = true,
+            CidrBlock = "10.1.0.0/16",
+        });
+        var egress = new Aws.Ec2.EgressOnlyInternetGateway("egress", new Aws.Ec2.EgressOnlyInternetGatewayArgs
+        {
+            VpcId = vpc.Id,
+        });
+        var route = new Aws.Ec2.Route("route", new Aws.Ec2.RouteArgs
+        {
+            DestinationIpv6CidrBlock = "::/0",
+            EgressOnlyGatewayId = egress.Id,
+            RouteTableId = "rtb-4fbb3ac4",
+        });
+    }
+
+}
+```
 
 {{% examples %}}
 ## Example Usage
@@ -58,7 +85,24 @@ route = aws.ec2.Route("route",
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var route = new Aws.Ec2.Route("route", new Aws.Ec2.RouteArgs
+        {
+            RouteTableId = "rtb-4fbb3ac4",
+            DestinationCidrBlock = "10.0.1.0/22",
+            VpcPeeringConnectionId = "pcx-45ff3dc1",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

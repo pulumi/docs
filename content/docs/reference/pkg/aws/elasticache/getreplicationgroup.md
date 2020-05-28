@@ -20,7 +20,22 @@ Use this data source to get information about an Elasticache Replication Group.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var bar = Output.Create(Aws.ElastiCache.GetReplicationGroup.InvokeAsync(new Aws.ElastiCache.GetReplicationGroupArgs
+        {
+            ReplicationGroupId = "example",
+        }));
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

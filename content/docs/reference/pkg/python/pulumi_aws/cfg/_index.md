@@ -151,7 +151,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
 <span class="n">organization_configuration_aggregator</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">cfg</span><span class="o">.</span><span class="n">ConfigurationAggregator</span><span class="p">(</span><span class="s2">&quot;organizationConfigurationAggregator&quot;</span><span class="p">,</span> <span class="n">organization_aggregation_source</span><span class="o">=</span><span class="p">{</span>
     <span class="s2">&quot;allRegions&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
-    <span class="s2">&quot;roleArn&quot;</span><span class="p">:</span> <span class="n">organization_role</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
+    <span class="s2">&quot;role_arn&quot;</span><span class="p">:</span> <span class="n">organization_role</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
 <span class="p">})</span>
 <span class="n">organization_role_policy_attachment</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">RolePolicyAttachment</span><span class="p">(</span><span class="s2">&quot;organizationRolePolicyAttachment&quot;</span><span class="p">,</span>
     <span class="n">policy_arn</span><span class="o">=</span><span class="s2">&quot;arn:aws:iam::aws:policy/service-role/AWSConfigRoleForOrganizations&quot;</span><span class="p">,</span>

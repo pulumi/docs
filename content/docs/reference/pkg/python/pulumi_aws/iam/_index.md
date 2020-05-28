@@ -3705,9 +3705,9 @@ properties without having to hard code ARNs as input.</p>
 <span class="n">my_domain</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">get_server_certificate</span><span class="p">(</span><span class="n">latest</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
     <span class="n">name_prefix</span><span class="o">=</span><span class="s2">&quot;my-domain.org&quot;</span><span class="p">)</span>
 <span class="n">elb</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">elb</span><span class="o">.</span><span class="n">LoadBalancer</span><span class="p">(</span><span class="s2">&quot;elb&quot;</span><span class="p">,</span> <span class="n">listeners</span><span class="o">=</span><span class="p">[{</span>
-    <span class="s2">&quot;instancePort&quot;</span><span class="p">:</span> <span class="mi">8000</span><span class="p">,</span>
+    <span class="s2">&quot;instance_port&quot;</span><span class="p">:</span> <span class="mi">8000</span><span class="p">,</span>
     <span class="s2">&quot;instanceProtocol&quot;</span><span class="p">:</span> <span class="s2">&quot;https&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;lbPort&quot;</span><span class="p">:</span> <span class="mi">443</span><span class="p">,</span>
+    <span class="s2">&quot;lb_port&quot;</span><span class="p">:</span> <span class="mi">443</span><span class="p">,</span>
     <span class="s2">&quot;lbProtocol&quot;</span><span class="p">:</span> <span class="s2">&quot;https&quot;</span><span class="p">,</span>
     <span class="s2">&quot;sslCertificateId&quot;</span><span class="p">:</span> <span class="n">my_domain</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
 <span class="p">}])</span>

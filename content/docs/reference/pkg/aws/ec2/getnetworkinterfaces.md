@@ -18,7 +18,22 @@ meta_desc: "Explore the GetNetworkInterfaces function of the ec2 module, includi
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleNetworkInterfaces = Output.Create(Aws.Ec2.GetNetworkInterfaces.InvokeAsync());
+        this.Example = exampleNetworkInterfaces.Apply(exampleNetworkInterfaces => exampleNetworkInterfaces.Ids);
+    }
+
+    [Output("example")]
+    public Output<string> Example { get; set; }
+}
+```
 {{% /example %}}
 
 {{% example go %}}

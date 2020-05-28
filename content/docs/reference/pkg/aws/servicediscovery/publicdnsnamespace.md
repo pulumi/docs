@@ -20,7 +20,22 @@ Provides a Service Discovery Public DNS Namespace resource.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.ServiceDiscovery.PublicDnsNamespace("example", new Aws.ServiceDiscovery.PublicDnsNamespaceArgs
+        {
+            Description = "example",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

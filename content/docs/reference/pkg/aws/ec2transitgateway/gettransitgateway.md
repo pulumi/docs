@@ -20,7 +20,32 @@ Get information on an EC2 Transit Gateway.
 {{< chooser language "typescript,python,go,csharp" / >}}
 ### By Filter
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = Output.Create(Aws.Ec2TransitGateway.GetTransitGateway.InvokeAsync(new Aws.Ec2TransitGateway.GetTransitGatewayArgs
+        {
+            Filters = 
+            {
+                new Aws.Ec2TransitGateway.Inputs.GetTransitGatewayFilterArgs
+                {
+                    Name = "options.amazon-side-asn",
+                    Values = 
+                    {
+                        "64512",
+                    },
+                },
+            },
+        }));
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -55,7 +80,22 @@ const example = pulumi.output(aws.ec2transitgateway.getTransitGateway({
 
 ### By Identifier
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = Output.Create(Aws.Ec2TransitGateway.GetTransitGateway.InvokeAsync(new Aws.Ec2TransitGateway.GetTransitGatewayArgs
+        {
+            Id = "tgw-12345678",
+        }));
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

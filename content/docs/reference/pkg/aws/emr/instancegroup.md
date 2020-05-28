@@ -25,7 +25,24 @@ this provider will resize any Instance Group to zero when destroying the resourc
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var task = new Aws.Emr.InstanceGroup("task", new Aws.Emr.InstanceGroupArgs
+        {
+            ClusterId = aws_emr_cluster.Tf_test_cluster.Id,
+            InstanceCount = 1,
+            InstanceType = "m5.xlarge",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

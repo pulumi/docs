@@ -41,7 +41,26 @@ Coming soon!
 
 ### Create Empty Cached iSCSI Volume
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.StorageGateway.CachesIscsiVolume("example", new Aws.StorageGateway.CachesIscsiVolumeArgs
+        {
+            GatewayArn = aws_storagegateway_cache.Example.Gateway_arn,
+            NetworkInterfaceId = aws_instance.Example.Private_ip,
+            TargetName = "example",
+            VolumeSizeInBytes = 5368709120,
+        });
+        // 5 GB
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -78,7 +97,26 @@ const example = new aws.storagegateway.CachesIscsiVolume("example", {
 
 ### Create Cached iSCSI Volume From Snapshot
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.StorageGateway.CachesIscsiVolume("example", new Aws.StorageGateway.CachesIscsiVolumeArgs
+        {
+            GatewayArn = aws_storagegateway_cache.Example.Gateway_arn,
+            NetworkInterfaceId = aws_instance.Example.Private_ip,
+            SnapshotId = aws_ebs_snapshot.Example.Id,
+            TargetName = "example",
+            VolumeSizeInBytes = aws_ebs_snapshot.Example.Volume_size * 1024 * 1024 * 1024,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -116,7 +154,26 @@ const example = new aws.storagegateway.CachesIscsiVolume("example", {
 
 ### Create Cached iSCSI Volume From Source Volume
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.StorageGateway.CachesIscsiVolume("example", new Aws.StorageGateway.CachesIscsiVolumeArgs
+        {
+            GatewayArn = aws_storagegateway_cache.Example.Gateway_arn,
+            NetworkInterfaceId = aws_instance.Example.Private_ip,
+            SourceVolumeArn = aws_storagegateway_cached_iscsi_volume.Existing.Arn,
+            TargetName = "example",
+            VolumeSizeInBytes = aws_storagegateway_cached_iscsi_volume.Existing.Volume_size_in_bytes,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

@@ -20,7 +20,25 @@ Provides a Cognito User Pool Client resource.
 {{< chooser language "typescript,python,go,csharp" / >}}
 ### Create a basic user pool client
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var pool = new Aws.Cognito.UserPool("pool", new Aws.Cognito.UserPoolArgs
+        {
+        });
+        var client = new Aws.Cognito.UserPoolClient("client", new Aws.Cognito.UserPoolClientArgs
+        {
+            UserPoolId = pool.Id,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -51,7 +69,30 @@ const client = new aws.cognito.UserPoolClient("client", {
 
 ### Create a user pool client with no SRP authentication
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var pool = new Aws.Cognito.UserPool("pool", new Aws.Cognito.UserPoolArgs
+        {
+        });
+        var client = new Aws.Cognito.UserPoolClient("client", new Aws.Cognito.UserPoolClientArgs
+        {
+            ExplicitAuthFlows = 
+            {
+                "ADMIN_NO_SRP_AUTH",
+            },
+            GenerateSecret = true,
+            UserPoolId = pool.Id,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -87,7 +128,78 @@ const client = new aws.cognito.UserPoolClient("client", {
 
 ### Create a user pool client with pinpoint analytics
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var current = Output.Create(Aws.GetCallerIdentity.InvokeAsync());
+        var testUserPool = new Aws.Cognito.UserPool("testUserPool", new Aws.Cognito.UserPoolArgs
+        {
+        });
+        var testApp = new Aws.Pinpoint.App("testApp", new Aws.Pinpoint.AppArgs
+        {
+        });
+        var testRole = new Aws.Iam.Role("testRole", new Aws.Iam.RoleArgs
+        {
+            AssumeRolePolicy = @"{
+  ""Version"": ""2012-10-17"",
+  ""Statement"": [
+    {
+      ""Action"": ""sts:AssumeRole"",
+      ""Principal"": {
+        ""Service"": ""cognito-idp.amazonaws.com""
+      },
+      ""Effect"": ""Allow"",
+      ""Sid"": """"
+    }
+  ]
+}
+
+",
+        });
+        var testRolePolicy = new Aws.Iam.RolePolicy("testRolePolicy", new Aws.Iam.RolePolicyArgs
+        {
+            Policy = Output.Tuple(current, testApp.ApplicationId).Apply(values =>
+            {
+                var current = values.Item1;
+                var applicationId = values.Item2;
+                return @$"{{
+  ""Version"": ""2012-10-17"",
+  ""Statement"": [
+    {{
+      ""Action"": [
+        ""mobiletargeting:UpdateEndpoint"",
+        ""mobiletargeting:PutItems""
+      ],
+      ""Effect"": ""Allow"",
+      ""Resource"": ""arn:aws:mobiletargeting:*:{current.AccountId}:apps/{applicationId}*""
+    }}
+  ]
+}}
+
+";
+            }),
+            Role = testRole.Id,
+        });
+        var testUserPoolClient = new Aws.Cognito.UserPoolClient("testUserPoolClient", new Aws.Cognito.UserPoolClientArgs
+        {
+            AnalyticsConfiguration = new Aws.Cognito.Inputs.UserPoolClientAnalyticsConfigurationArgs
+            {
+                ApplicationId = testApp.ApplicationId,
+                ExternalId = "some_id",
+                RoleArn = testRole.Arn,
+                UserDataShared = true,
+            },
+            UserPoolId = testUserPool.Id,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -136,9 +248,9 @@ test_role_policy = aws.iam.RolePolicy("testRolePolicy",
     role=test_role.id)
 test_user_pool_client = aws.cognito.UserPoolClient("testUserPoolClient",
     analytics_configuration={
-        "applicationId": test_app.application_id,
+        "application_id": test_app.application_id,
         "externalId": "some_id",
-        "roleArn": test_role.arn,
+        "role_arn": test_role.arn,
         "userDataShared": True,
     },
     user_pool_id=test_user_pool.id)

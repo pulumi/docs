@@ -20,7 +20,28 @@ Provides information for multiple EC2 Local Gateways, such as their identifiers.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var fooLocalGateways = Output.Create(Aws.Ec2.GetLocalGateways.InvokeAsync(new Aws.Ec2.GetLocalGatewaysArgs
+        {
+            Tags = 
+            {
+                { "service", "production" },
+            },
+        }));
+        this.Foo = fooLocalGateways.Apply(fooLocalGateways => fooLocalGateways.Ids);
+    }
+
+    [Output("foo")]
+    public Output<string> Foo { get; set; }
+}
+```
 {{% /example %}}
 
 {{% example go %}}

@@ -125,7 +125,7 @@ anything, please consult the source <a class="reference external" href="https://
     <span class="p">},</span>
     <span class="n">logs_config</span><span class="o">=</span><span class="p">{</span>
         <span class="s2">&quot;cloudwatchLogs&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="s2">&quot;groupName&quot;</span><span class="p">:</span> <span class="s2">&quot;log-group&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;group_name&quot;</span><span class="p">:</span> <span class="s2">&quot;log-group&quot;</span><span class="p">,</span>
             <span class="s2">&quot;streamName&quot;</span><span class="p">:</span> <span class="s2">&quot;log-stream&quot;</span><span class="p">,</span>
         <span class="p">},</span>
         <span class="s2">&quot;s3Logs&quot;</span><span class="p">:</span> <span class="p">{</span>
@@ -147,7 +147,7 @@ anything, please consult the source <a class="reference external" href="https://
         <span class="s2">&quot;Environment&quot;</span><span class="p">:</span> <span class="s2">&quot;Test&quot;</span><span class="p">,</span>
     <span class="p">},</span>
     <span class="n">vpc_config</span><span class="o">=</span><span class="p">{</span>
-        <span class="s2">&quot;securityGroupIds&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">&quot;security_group_ids&quot;</span><span class="p">:</span> <span class="p">[</span>
             <span class="n">aws_security_group</span><span class="p">[</span><span class="s2">&quot;example1&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
             <span class="n">aws_security_group</span><span class="p">[</span><span class="s2">&quot;example2&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
         <span class="p">],</span>
@@ -155,7 +155,7 @@ anything, please consult the source <a class="reference external" href="https://
             <span class="n">aws_subnet</span><span class="p">[</span><span class="s2">&quot;example1&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
             <span class="n">aws_subnet</span><span class="p">[</span><span class="s2">&quot;example2&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
         <span class="p">],</span>
-        <span class="s2">&quot;vpcId&quot;</span><span class="p">:</span> <span class="n">aws_vpc</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;vpc_id&quot;</span><span class="p">:</span> <span class="n">aws_vpc</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
     <span class="p">})</span>
 <span class="n">project_with_cache</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">codebuild</span><span class="o">.</span><span class="n">Project</span><span class="p">(</span><span class="s2">&quot;project-with-cache&quot;</span><span class="p">,</span>
     <span class="n">artifacts</span><span class="o">=</span><span class="p">{</span>

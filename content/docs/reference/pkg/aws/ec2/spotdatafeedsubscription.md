@@ -23,7 +23,26 @@ This data feed is sent to an Amazon S3 bucket that you specify when you subscrib
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var defaultBucket = new Aws.S3.Bucket("defaultBucket", new Aws.S3.BucketArgs
+        {
+        });
+        var defaultSpotDatafeedSubscription = new Aws.Ec2.SpotDatafeedSubscription("defaultSpotDatafeedSubscription", new Aws.Ec2.SpotDatafeedSubscriptionArgs
+        {
+            Bucket = defaultBucket.BucketName,
+            Prefix = "my_subdirectory",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

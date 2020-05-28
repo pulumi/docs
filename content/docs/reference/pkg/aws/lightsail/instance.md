@@ -106,7 +106,30 @@ A Bundle ID ends with one of the following suffixes depending on Availability Zo
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        // Create a new GitLab Lightsail Instance
+        var gitlabTest = new Aws.LightSail.Instance("gitlabTest", new Aws.LightSail.InstanceArgs
+        {
+            AvailabilityZone = "us-east-1b",
+            BlueprintId = "string",
+            BundleId = "string",
+            KeyPairName = "some_key_name",
+            Tags = 
+            {
+                { "foo", "bar" },
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

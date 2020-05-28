@@ -20,7 +20,69 @@ Provides an API Gateway Stage.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var testRestApi = new Aws.ApiGateway.RestApi("testRestApi", new Aws.ApiGateway.RestApiArgs
+        {
+            Description = "This is my API for demonstration purposes",
+        });
+        var testDeployment = new Aws.ApiGateway.Deployment("testDeployment", new Aws.ApiGateway.DeploymentArgs
+        {
+            RestApi = testRestApi.Id,
+            StageName = "dev",
+        });
+        var testStage = new Aws.ApiGateway.Stage("testStage", new Aws.ApiGateway.StageArgs
+        {
+            Deployment = testDeployment.Id,
+            RestApi = testRestApi.Id,
+            StageName = "prod",
+        });
+        var testResource = new Aws.ApiGateway.Resource("testResource", new Aws.ApiGateway.ResourceArgs
+        {
+            ParentId = testRestApi.RootResourceId,
+            PathPart = "mytestresource",
+            RestApi = testRestApi.Id,
+        });
+        var testMethod = new Aws.ApiGateway.Method("testMethod", new Aws.ApiGateway.MethodArgs
+        {
+            Authorization = "NONE",
+            HttpMethod = "GET",
+            ResourceId = testResource.Id,
+            RestApi = testRestApi.Id,
+        });
+        var methodSettings = new Aws.ApiGateway.MethodSettings("methodSettings", new Aws.ApiGateway.MethodSettingsArgs
+        {
+            MethodPath = Output.Tuple(testResource.PathPart, testMethod.HttpMethod).Apply(values =>
+            {
+                var pathPart = values.Item1;
+                var httpMethod = values.Item2;
+                return $"{pathPart}/{httpMethod}";
+            }),
+            RestApi = testRestApi.Id,
+            Settings = new Aws.ApiGateway.Inputs.MethodSettingsSettingsArgs
+            {
+                LoggingLevel = "INFO",
+                MetricsEnabled = true,
+            },
+            StageName = testStage.StageName,
+        });
+        var testIntegration = new Aws.ApiGateway.Integration("testIntegration", new Aws.ApiGateway.IntegrationArgs
+        {
+            HttpMethod = testMethod.HttpMethod,
+            ResourceId = testResource.Id,
+            RestApi = testRestApi.Id,
+            Type = "MOCK",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -108,48 +170,6 @@ const methodSettings = new aws.apigateway.MethodSettings("s", {
     },
     stageName: testStage.stageName,
 });
-```
-{{% /example %}}
-
-### Managing the API Logging CloudWatch Log Group
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_aws as aws
-
-config = pulumi.Config()
-stage_name = config.get("stageName")
-if stage_name is None:
-    stage_name = "example"
-example_rest_api = aws.apigateway.RestApi("exampleRestApi")
-example_stage = aws.apigateway.Stage("exampleStage", name=stage_name)
-example_log_group = aws.cloudwatch.LogGroup("exampleLogGroup", retention_in_days=7)
-```
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const config = new pulumi.Config();
-const stageName = config.get("stageName") || "example";
-
-const exampleRestApi = new aws.apigateway.RestApi("example", {});
-const exampleLogGroup = new aws.cloudwatch.LogGroup("example", {
-    retentionInDays: 7,
-});
-const exampleStage = new aws.apigateway.Stage("example", {
-    name: stageName,
-}, { dependsOn: [exampleLogGroup] });
 ```
 {{% /example %}}
 

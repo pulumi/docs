@@ -20,7 +20,25 @@ Provides a resource to manage an S3 Access Point.
 {{< chooser language "typescript,python,go,csharp" / >}}
 ### Basic Usage
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleBucket = new Aws.S3.Bucket("exampleBucket", new Aws.S3.BucketArgs
+        {
+        });
+        var exampleAccessPoint = new Aws.S3.AccessPoint("exampleAccessPoint", new Aws.S3.AccessPointArgs
+        {
+            Bucket = exampleBucket.Id,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -44,46 +62,6 @@ import * as aws from "@pulumi/aws";
 
 const exampleBucket = new aws.s3.Bucket("exampleBucket", {});
 const exampleAccessPoint = new aws.s3.AccessPoint("exampleAccessPoint", {bucket: exampleBucket.id});
-```
-{{% /example %}}
-
-### Access Point Restricted to a VPC
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_aws as aws
-
-example_bucket = aws.s3.Bucket("exampleBucket")
-example_vpc = aws.ec2.Vpc("exampleVpc", cidr_block="10.0.0.0/16")
-example_access_point = aws.s3.AccessPoint("exampleAccessPoint",
-    bucket=example_bucket.id,
-    vpc_configuration={
-        "vpcId": example_vpc.id,
-    })
-```
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const exampleBucket = new aws.s3.Bucket("exampleBucket", {});
-const exampleVpc = new aws.ec2.Vpc("exampleVpc", {cidrBlock: "10.0.0.0/16"});
-const exampleAccessPoint = new aws.s3.AccessPoint("exampleAccessPoint", {
-    bucket: exampleBucket.id,
-    vpc_configuration: {
-        vpcId: exampleVpc.id,
-    },
-});
 ```
 {{% /example %}}
 

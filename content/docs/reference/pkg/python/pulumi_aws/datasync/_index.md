@@ -434,7 +434,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">datasync</span><span class="o">.</span><span class="n">NfsLocation</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
     <span class="n">on_prem_config</span><span class="o">=</span><span class="p">{</span>
-        <span class="s2">&quot;agentArns&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">aws_datasync_agent</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">]],</span>
+        <span class="s2">&quot;agent_arns&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">aws_datasync_agent</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">]],</span>
     <span class="p">},</span>
     <span class="n">server_hostname</span><span class="o">=</span><span class="s2">&quot;nfs.example.com&quot;</span><span class="p">,</span>
     <span class="n">subdirectory</span><span class="o">=</span><span class="s2">&quot;/exported/path&quot;</span><span class="p">)</span>

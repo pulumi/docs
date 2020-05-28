@@ -20,7 +20,30 @@ Provides a Global Accelerator endpoint group.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.GlobalAccelerator.EndpointGroup("example", new Aws.GlobalAccelerator.EndpointGroupArgs
+        {
+            EndpointConfigurations = 
+            {
+                new Aws.GlobalAccelerator.Inputs.EndpointGroupEndpointConfigurationArgs
+                {
+                    EndpointId = aws_lb.Example.Arn,
+                    Weight = 100,
+                },
+            },
+            ListenerArn = aws_globalaccelerator_listener.Example.Id,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -34,7 +57,7 @@ import pulumi_aws as aws
 
 example = aws.globalaccelerator.EndpointGroup("example",
     endpoint_configurations=[{
-        "endpointId": aws_lb["example"]["arn"],
+        "endpoint_id": aws_lb["example"]["arn"],
         "weight": 100,
     }],
     listener_arn=aws_globalaccelerator_listener["example"]["id"])

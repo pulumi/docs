@@ -22,7 +22,38 @@ custom domain name.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using System.IO;
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleDeployment = new Aws.ApiGateway.Deployment("exampleDeployment", new Aws.ApiGateway.DeploymentArgs
+        {
+            RestApi = aws_api_gateway_rest_api.MyDemoAPI.Id,
+            StageName = "live",
+        });
+        var exampleDomainName = new Aws.ApiGateway.DomainName("exampleDomainName", new Aws.ApiGateway.DomainNameArgs
+        {
+            CertificateBody = File.ReadAllText($"{path.Module}/example.com/example.crt"),
+            CertificateChain = File.ReadAllText($"{path.Module}/example.com/ca.crt"),
+            CertificateName = "example-api",
+            CertificatePrivateKey = File.ReadAllText($"{path.Module}/example.com/example.key"),
+            DomainName = "example.com",
+        });
+        var test = new Aws.ApiGateway.BasePathMapping("test", new Aws.ApiGateway.BasePathMappingArgs
+        {
+            RestApi = aws_api_gateway_rest_api.MyDemoAPI.Id,
+            DomainName = exampleDomainName.Domain,
+            StageName = exampleDeployment.StageName,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

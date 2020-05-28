@@ -20,7 +20,24 @@ Provides an SNS platform application resource
 {{< chooser language "typescript,python,go,csharp" / >}}
 ### Apple Push Notification Service (APNS)
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var apnsApplication = new Aws.Sns.PlatformApplication("apnsApplication", new Aws.Sns.PlatformApplicationArgs
+        {
+            Platform = "APNS",
+            PlatformCredential = "<APNS PRIVATE KEY>",
+            PlatformPrincipal = "<APNS CERTIFICATE>",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -54,7 +71,23 @@ const apnsApplication = new aws.sns.PlatformApplication("apns_application", {
 
 ### Google Cloud Messaging (GCM)
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var gcmApplication = new Aws.Sns.PlatformApplication("gcmApplication", new Aws.Sns.PlatformApplicationArgs
+        {
+            Platform = "GCM",
+            PlatformCredential = "<GCM API KEY>",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

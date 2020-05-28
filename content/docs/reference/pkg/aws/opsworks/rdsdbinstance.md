@@ -23,7 +23,25 @@ Provides an OpsWorks RDS DB Instance resource.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var myInstance = new Aws.OpsWorks.RdsDbInstance("myInstance", new Aws.OpsWorks.RdsDbInstanceArgs
+        {
+            DbPassword = "somePass",
+            DbUser = "someUser",
+            RdsDbInstanceArn = aws_db_instance.My_instance.Arn,
+            StackId = aws_opsworks_stack.My_stack.Id,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

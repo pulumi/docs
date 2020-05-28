@@ -134,7 +134,7 @@ want to wait, you need to use the <code class="docutils literal notranslate"><sp
         <span class="p">},</span>
     <span class="p">],</span>
     <span class="n">origins</span><span class="o">=</span><span class="p">[{</span>
-        <span class="s2">&quot;domainName&quot;</span><span class="p">:</span> <span class="n">bucket</span><span class="o">.</span><span class="n">bucket_regional_domain_name</span><span class="p">,</span>
+        <span class="s2">&quot;domain_name&quot;</span><span class="p">:</span> <span class="n">bucket</span><span class="o">.</span><span class="n">bucket_regional_domain_name</span><span class="p">,</span>
         <span class="s2">&quot;originId&quot;</span><span class="p">:</span> <span class="n">s3_origin_id</span><span class="p">,</span>
         <span class="s2">&quot;s3OriginConfig&quot;</span><span class="p">:</span> <span class="p">{</span>
             <span class="s2">&quot;originAccessIdentity&quot;</span><span class="p">:</span> <span class="s2">&quot;origin-access-identity/cloudfront/ABCDEFG1234567&quot;</span><span class="p">,</span>

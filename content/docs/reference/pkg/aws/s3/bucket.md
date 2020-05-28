@@ -20,7 +20,27 @@ Provides a S3 bucket resource.
 {{< chooser language "typescript,python,go,csharp" / >}}
 ### Private Bucket w/ Tags
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var bucket = new Aws.S3.Bucket("bucket", new Aws.S3.BucketArgs
+        {
+            Acl = "private",
+            Tags = 
+            {
+                { "Environment", "Dev" },
+                { "Name", "My bucket" },
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -58,7 +78,39 @@ const bucket = new aws.s3.Bucket("b", {
 
 ### Static Website Hosting
 {{% example csharp %}}
-Coming soon!
+```csharp
+using System.IO;
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var bucket = new Aws.S3.Bucket("bucket", new Aws.S3.BucketArgs
+        {
+            Acl = "public-read",
+            Policy = File.ReadAllText("policy.json"),
+            Website = new Aws.S3.Inputs.BucketWebsiteArgs
+            {
+                Website = "error.html",
+                Website = "index.html",
+                Website = @"[{
+    ""Condition"": {
+        ""KeyPrefixEquals"": ""docs/""
+    },
+    ""Redirect"": {
+        ""ReplaceKeyPrefixWith"": ""documents/""
+    }
+}]
+
+",
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -118,7 +170,46 @@ const bucket = new aws.s3.Bucket("b", {
 
 ### Using CORS
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var bucket = new Aws.S3.Bucket("bucket", new Aws.S3.BucketArgs
+        {
+            Acl = "public-read",
+            CorsRules = 
+            {
+                new Aws.S3.Inputs.BucketCorsRuleArgs
+                {
+                    AllowedHeaders = 
+                    {
+                        "*",
+                    },
+                    AllowedMethods = 
+                    {
+                        "PUT",
+                        "POST",
+                    },
+                    AllowedOrigins = 
+                    {
+                        "https://s3-website-test.mydomain.com",
+                    },
+                    ExposeHeaders = 
+                    {
+                        "ETag",
+                    },
+                    MaxAgeSeconds = 3000,
+                },
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -168,7 +259,26 @@ const bucket = new aws.s3.Bucket("b", {
 
 ### Using versioning
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var bucket = new Aws.S3.Bucket("bucket", new Aws.S3.BucketArgs
+        {
+            Acl = "private",
+            Versioning = new Aws.S3.Inputs.BucketVersioningArgs
+            {
+                Enabled = true,
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -204,7 +314,34 @@ const bucket = new aws.s3.Bucket("b", {
 
 ### Enable Logging
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var logBucket = new Aws.S3.Bucket("logBucket", new Aws.S3.BucketArgs
+        {
+            Acl = "log-delivery-write",
+        });
+        var bucket = new Aws.S3.Bucket("bucket", new Aws.S3.BucketArgs
+        {
+            Acl = "private",
+            Loggings = 
+            {
+                new Aws.S3.Inputs.BucketLoggingArgs
+                {
+                    TargetBucket = logBucket.Id,
+                    TargetPrefix = "log/",
+                },
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -246,7 +383,96 @@ const bucket = new aws.s3.Bucket("b", {
 
 ### Using object lifecycle
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var bucket = new Aws.S3.Bucket("bucket", new Aws.S3.BucketArgs
+        {
+            Acl = "private",
+            LifecycleRules = 
+            {
+                new Aws.S3.Inputs.BucketLifecycleRuleArgs
+                {
+                    Enabled = true,
+                    Expiration = new Aws.S3.Inputs.BucketLifecycleRuleExpirationArgs
+                    {
+                        Days = 90,
+                    },
+                    Id = "log",
+                    Prefix = "log/",
+                    Tags = 
+                    {
+                        { "autoclean", "true" },
+                        { "rule", "log" },
+                    },
+                    Transition = 
+                    {
+                        
+                        {
+                            { "days", 30 },
+                            { "storageClass", "STANDARD_IA" },
+                        },
+                        
+                        {
+                            { "days", 60 },
+                            { "storageClass", "GLACIER" },
+                        },
+                    },
+                },
+                new Aws.S3.Inputs.BucketLifecycleRuleArgs
+                {
+                    Enabled = true,
+                    Expiration = new Aws.S3.Inputs.BucketLifecycleRuleExpirationArgs
+                    {
+                        Date = "2016-01-12",
+                    },
+                    Id = "tmp",
+                    Prefix = "tmp/",
+                },
+            },
+        });
+        var versioningBucket = new Aws.S3.Bucket("versioningBucket", new Aws.S3.BucketArgs
+        {
+            Acl = "private",
+            LifecycleRules = 
+            {
+                new Aws.S3.Inputs.BucketLifecycleRuleArgs
+                {
+                    Enabled = true,
+                    NoncurrentVersionExpiration = new Aws.S3.Inputs.BucketLifecycleRuleNoncurrentVersionExpirationArgs
+                    {
+                        Days = 90,
+                    },
+                    NoncurrentVersionTransition = 
+                    {
+                        
+                        {
+                            { "days", 30 },
+                            { "storageClass", "STANDARD_IA" },
+                        },
+                        
+                        {
+                            { "days", 60 },
+                            { "storageClass", "GLACIER" },
+                        },
+                    },
+                    Prefix = "config/",
+                },
+            },
+            Versioning = new Aws.S3.Inputs.BucketVersioningArgs
+            {
+                Enabled = true,
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -275,11 +501,11 @@ bucket = aws.s3.Bucket("bucket",
             "transition": [
                 {
                     "days": 30,
-                    "storageClass": "STANDARD_IA",
+                    "storage_class": "STANDARD_IA",
                 },
                 {
                     "days": 60,
-                    "storageClass": "GLACIER",
+                    "storage_class": "GLACIER",
                 },
             ],
         },
@@ -302,11 +528,11 @@ versioning_bucket = aws.s3.Bucket("versioningBucket",
         "noncurrentVersionTransition": [
             {
                 "days": 30,
-                "storageClass": "STANDARD_IA",
+                "storage_class": "STANDARD_IA",
             },
             {
                 "days": 60,
-                "storageClass": "GLACIER",
+                "storage_class": "GLACIER",
             },
         ],
         "prefix": "config/",
@@ -385,7 +611,124 @@ const versioningBucket = new aws.s3.Bucket("versioning_bucket", {
 
 ### Using replication configuration
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var central = new Aws.Provider("central", new Aws.ProviderArgs
+        {
+            Region = "eu-central-1",
+        });
+        var replicationRole = new Aws.Iam.Role("replicationRole", new Aws.Iam.RoleArgs
+        {
+            AssumeRolePolicy = @"{
+  ""Version"": ""2012-10-17"",
+  ""Statement"": [
+    {
+      ""Action"": ""sts:AssumeRole"",
+      ""Principal"": {
+        ""Service"": ""s3.amazonaws.com""
+      },
+      ""Effect"": ""Allow"",
+      ""Sid"": """"
+    }
+  ]
+}
+
+",
+        });
+        var destination = new Aws.S3.Bucket("destination", new Aws.S3.BucketArgs
+        {
+            Region = "eu-west-1",
+            Versioning = new Aws.S3.Inputs.BucketVersioningArgs
+            {
+                Enabled = true,
+            },
+        });
+        var bucket = new Aws.S3.Bucket("bucket", new Aws.S3.BucketArgs
+        {
+            Acl = "private",
+            Region = "eu-central-1",
+            ReplicationConfiguration = new Aws.S3.Inputs.BucketReplicationConfigurationArgs
+            {
+                Role = replicationRole.Arn,
+                Rules = 
+                {
+                    new Aws.S3.Inputs.BucketReplicationConfigurationRuleArgs
+                    {
+                        Destination = new Aws.S3.Inputs.BucketReplicationConfigurationRuleDestinationArgs
+                        {
+                            Bucket = destination.Arn,
+                            StorageClass = "STANDARD",
+                        },
+                        Id = "foobar",
+                        Prefix = "foo",
+                        Status = "Enabled",
+                    },
+                },
+            },
+            Versioning = new Aws.S3.Inputs.BucketVersioningArgs
+            {
+                Enabled = true,
+            },
+        });
+        var replicationPolicy = new Aws.Iam.Policy("replicationPolicy", new Aws.Iam.PolicyArgs
+        {
+            Policy = Output.Tuple(bucket.Arn, bucket.Arn, destination.Arn).Apply(values =>
+            {
+                var bucketArn = values.Item1;
+                var bucketArn1 = values.Item2;
+                var destinationArn = values.Item3;
+                return @$"{{
+  ""Version"": ""2012-10-17"",
+  ""Statement"": [
+    {{
+      ""Action"": [
+        ""s3:GetReplicationConfiguration"",
+        ""s3:ListBucket""
+      ],
+      ""Effect"": ""Allow"",
+      ""Resource"": [
+        ""{bucketArn}""
+      ]
+    }},
+    {{
+      ""Action"": [
+        ""s3:GetObjectVersion"",
+        ""s3:GetObjectVersionAcl""
+      ],
+      ""Effect"": ""Allow"",
+      ""Resource"": [
+        ""{bucketArn1}/*""
+      ]
+    }},
+    {{
+      ""Action"": [
+        ""s3:ReplicateObject"",
+        ""s3:ReplicateDelete""
+      ],
+      ""Effect"": ""Allow"",
+      ""Resource"": ""{destinationArn}/*""
+    }}
+  ]
+}}
+
+";
+            }),
+        });
+        var replicationRolePolicyAttachment = new Aws.Iam.RolePolicyAttachment("replicationRolePolicyAttachment", new Aws.Iam.RolePolicyAttachmentArgs
+        {
+            PolicyArn = replicationPolicy.Arn,
+            Role = replicationRole.Name,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -427,7 +770,7 @@ bucket = aws.s3.Bucket("bucket",
         "rules": [{
             "destination": {
                 "bucket": destination.arn,
-                "storageClass": "STANDARD",
+                "storage_class": "STANDARD",
             },
             "id": "foobar",
             "prefix": "foo",
@@ -572,7 +915,37 @@ const replicationRolePolicyAttachment = new aws.iam.RolePolicyAttachment("replic
 
 ### Enable Default Server Side Encryption
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var mykey = new Aws.Kms.Key("mykey", new Aws.Kms.KeyArgs
+        {
+            DeletionWindowInDays = 10,
+            Description = "This key is used to encrypt bucket objects",
+        });
+        var mybucket = new Aws.S3.Bucket("mybucket", new Aws.S3.BucketArgs
+        {
+            ServerSideEncryptionConfiguration = new Aws.S3.Inputs.BucketServerSideEncryptionConfigurationArgs
+            {
+                Rule = new Aws.S3.Inputs.BucketServerSideEncryptionConfigurationRuleArgs
+                {
+                    ApplyServerSideEncryptionByDefault = new Aws.S3.Inputs.BucketServerSideEncryptionConfigurationRuleApplyServerSideEncryptionByDefaultArgs
+                    {
+                        KmsMasterKeyId = mykey.Arn,
+                        SseAlgorithm = "aws:kms",
+                    },
+                },
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -590,7 +963,7 @@ mykey = aws.kms.Key("mykey",
 mybucket = aws.s3.Bucket("mybucket", server_side_encryption_configuration={
     "rule": {
         "applyServerSideEncryptionByDefault": {
-            "kmsMasterKeyId": mykey.arn,
+            "kms_master_key_id": mykey.arn,
             "sseAlgorithm": "aws:kms",
         },
     },
@@ -622,7 +995,44 @@ const mybucket = new aws.s3.Bucket("mybucket", {
 
 ### Using ACL policy grants
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var currentUser = Output.Create(Aws.GetCanonicalUserId.InvokeAsync());
+        var bucket = new Aws.S3.Bucket("bucket", new Aws.S3.BucketArgs
+        {
+            Grants = 
+            {
+                new Aws.S3.Inputs.BucketGrantArgs
+                {
+                    Id = currentUser.Apply(currentUser => currentUser.Id),
+                    Permissions = 
+                    {
+                        "FULL_CONTROL",
+                    },
+                    Type = "CanonicalUser",
+                },
+                new Aws.S3.Inputs.BucketGrantArgs
+                {
+                    Permissions = 
+                    {
+                        "READ",
+                        "WRITE",
+                    },
+                    Type = "Group",
+                    Uri = "http://acs.amazonaws.com/groups/s3/LogDelivery",
+                },
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

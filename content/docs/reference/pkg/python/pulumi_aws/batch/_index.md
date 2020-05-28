@@ -72,10 +72,10 @@ otherwise, the policy may be destroyed too soon and the compute environment will
     <span class="n">policy_arn</span><span class="o">=</span><span class="s2">&quot;arn:aws:iam::aws:policy/service-role/AWSBatchServiceRole&quot;</span><span class="p">,</span>
     <span class="n">role</span><span class="o">=</span><span class="n">aws_batch_service_role_role</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
 <span class="n">sample_security_group</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">SecurityGroup</span><span class="p">(</span><span class="s2">&quot;sampleSecurityGroup&quot;</span><span class="p">,</span> <span class="n">egress</span><span class="o">=</span><span class="p">[{</span>
-    <span class="s2">&quot;cidrBlocks&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;0.0.0.0/0&quot;</span><span class="p">],</span>
-    <span class="s2">&quot;fromPort&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="s2">&quot;cidr_blocks&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;0.0.0.0/0&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;from_port&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
     <span class="s2">&quot;protocol&quot;</span><span class="p">:</span> <span class="s2">&quot;-1&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;toPort&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="s2">&quot;to_port&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
 <span class="p">}])</span>
 <span class="n">sample_vpc</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">Vpc</span><span class="p">(</span><span class="s2">&quot;sampleVpc&quot;</span><span class="p">,</span> <span class="n">cidr_block</span><span class="o">=</span><span class="s2">&quot;10.1.0.0/16&quot;</span><span class="p">)</span>
 <span class="n">sample_subnet</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">Subnet</span><span class="p">(</span><span class="s2">&quot;sampleSubnet&quot;</span><span class="p">,</span>
@@ -85,10 +85,10 @@ otherwise, the policy may be destroyed too soon and the compute environment will
     <span class="n">compute_environment_name</span><span class="o">=</span><span class="s2">&quot;sample&quot;</span><span class="p">,</span>
     <span class="n">compute_resources</span><span class="o">=</span><span class="p">{</span>
         <span class="s2">&quot;instanceRole&quot;</span><span class="p">:</span> <span class="n">ecs_instance_role_instance_profile</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
-        <span class="s2">&quot;instanceType&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;c4.large&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;instance_type&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;c4.large&quot;</span><span class="p">],</span>
         <span class="s2">&quot;maxVcpus&quot;</span><span class="p">:</span> <span class="mi">16</span><span class="p">,</span>
         <span class="s2">&quot;minVcpus&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-        <span class="s2">&quot;securityGroupIds&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">sample_security_group</span><span class="o">.</span><span class="n">id</span><span class="p">],</span>
+        <span class="s2">&quot;security_group_ids&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">sample_security_group</span><span class="o">.</span><span class="n">id</span><span class="p">],</span>
         <span class="s2">&quot;subnets&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">sample_subnet</span><span class="o">.</span><span class="n">id</span><span class="p">],</span>
         <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;EC2&quot;</span><span class="p">,</span>
     <span class="p">},</span>

@@ -20,7 +20,23 @@ Get information on an EC2 Transit Gateway VPN Attachment.
 {{< chooser language "typescript,python,go,csharp" / >}}
 ### By Transit Gateway and VPN Connection Identifiers
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = Output.Create(Aws.Ec2TransitGateway.GetVpnAttachment.InvokeAsync(new Aws.Ec2TransitGateway.GetVpnAttachmentArgs
+        {
+            TransitGatewayId = aws_ec2_transit_gateway.Example.Id,
+            VpnConnectionId = aws_vpn_connection.Example.Id,
+        }));
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -51,7 +67,32 @@ const example = pulumi.all([aws_ec2_transit_gateway_example.id, aws_vpn_connecti
 
 ### Filter
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var test = Output.Create(Aws.Ec2TransitGateway.GetVpnAttachment.InvokeAsync(new Aws.Ec2TransitGateway.GetVpnAttachmentArgs
+        {
+            Filters = 
+            {
+                new Aws.Ec2TransitGateway.Inputs.GetVpnAttachmentFilterArgs
+                {
+                    Name = "resource-id",
+                    Values = 
+                    {
+                        "some-resource",
+                    },
+                },
+            },
+        }));
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

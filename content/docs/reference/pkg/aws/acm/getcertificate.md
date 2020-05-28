@@ -22,7 +22,26 @@ it by domain without having to hard code the ARNs as input.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = Output.Create(Aws.Acm.GetCertificate.InvokeAsync(new Aws.Acm.GetCertificateArgs
+        {
+            Domain = "tf.example.com",
+            KeyTypes = 
+            {
+                "RSA_4096",
+            },
+        }));
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

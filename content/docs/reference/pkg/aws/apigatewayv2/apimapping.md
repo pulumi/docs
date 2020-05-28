@@ -21,7 +21,24 @@ More information can be found in the [Amazon API Gateway Developer Guide](https:
 {{< chooser language "typescript,python,go,csharp" / >}}
 ### Basic
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.ApiGatewayV2.ApiMapping("example", new Aws.ApiGatewayV2.ApiMappingArgs
+        {
+            ApiId = aws_apigatewayv2_api.Example.Id,
+            DomainName = aws_apigatewayv2_domain_name.Example.Id,
+            Stage = aws_apigatewayv2_stage.Example.Id,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

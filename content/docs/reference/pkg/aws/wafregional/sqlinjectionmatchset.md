@@ -20,7 +20,32 @@ Provides a WAF Regional SQL Injection Match Set Resource for use with Applicatio
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var sqlInjectionMatchSet = new Aws.WafRegional.SqlInjectionMatchSet("sqlInjectionMatchSet", new Aws.WafRegional.SqlInjectionMatchSetArgs
+        {
+            SqlInjectionMatchTuples = 
+            {
+                new Aws.WafRegional.Inputs.SqlInjectionMatchSetSqlInjectionMatchTupleArgs
+                {
+                    FieldToMatch = new Aws.WafRegional.Inputs.SqlInjectionMatchSetSqlInjectionMatchTupleFieldToMatchArgs
+                    {
+                        Type = "QUERY_STRING",
+                    },
+                    TextTransformation = "URL_DECODE",
+                },
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

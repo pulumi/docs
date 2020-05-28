@@ -342,11 +342,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
             <span class="s2">&quot;ttl&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
             <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;A&quot;</span><span class="p">,</span>
         <span class="p">}],</span>
-        <span class="s2">&quot;namespaceId&quot;</span><span class="p">:</span> <span class="n">example_private_dns_namespace</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;namespace_id&quot;</span><span class="p">:</span> <span class="n">example_private_dns_namespace</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
         <span class="s2">&quot;routingPolicy&quot;</span><span class="p">:</span> <span class="s2">&quot;MULTIVALUE&quot;</span><span class="p">,</span>
     <span class="p">},</span>
     <span class="n">health_check_custom_config</span><span class="o">=</span><span class="p">{</span>
-        <span class="s2">&quot;failureThreshold&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="s2">&quot;failure_threshold&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
     <span class="p">})</span>
 </pre></div>
 </div>

@@ -20,7 +20,36 @@ Use this data source to get a list of AMI IDs matching the specified criteria.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var ubuntu = Output.Create(Aws.GetAmiIds.InvokeAsync(new Aws.GetAmiIdsArgs
+        {
+            Filters = 
+            {
+                new Aws.Inputs.GetAmiIdsFilterArgs
+                {
+                    Name = "name",
+                    Values = 
+                    {
+                        "ubuntu/images/ubuntu-*-*-amd64-server-*",
+                    },
+                },
+            },
+            Owners = 
+            {
+                "099720109477",
+            },
+        }));
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

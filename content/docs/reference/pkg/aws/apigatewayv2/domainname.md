@@ -24,7 +24,28 @@ a particular domain name. An API stage can be associated with the domain name us
 {{< chooser language "typescript,python,go,csharp" / >}}
 ### Basic
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.ApiGatewayV2.DomainName("example", new Aws.ApiGatewayV2.DomainNameArgs
+        {
+            DomainName = "ws-api.example.com",
+            DomainNameConfiguration = new Aws.ApiGatewayV2.Inputs.DomainNameDomainNameConfigurationArgs
+            {
+                CertificateArn = aws_acm_certificate.Example.Arn,
+                EndpointType = "REGIONAL",
+                SecurityPolicy = "TLS_1_2",
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -39,9 +60,9 @@ import pulumi_aws as aws
 example = aws.apigatewayv2.DomainName("example",
     domain_name="ws-api.example.com",
     domain_name_configuration={
-        "certificateArn": aws_acm_certificate["example"]["arn"],
-        "endpointType": "REGIONAL",
-        "securityPolicy": "TLS_1_2",
+        "certificate_arn": aws_acm_certificate["example"]["arn"],
+        "endpoint_type": "REGIONAL",
+        "security_policy": "TLS_1_2",
     })
 ```
 {{% /example %}}

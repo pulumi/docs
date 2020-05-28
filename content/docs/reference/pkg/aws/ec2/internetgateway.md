@@ -20,7 +20,26 @@ Provides a resource to create a VPC Internet Gateway.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var gw = new Aws.Ec2.InternetGateway("gw", new Aws.Ec2.InternetGatewayArgs
+        {
+            Tags = 
+            {
+                { "Name", "main" },
+            },
+            VpcId = aws_vpc.Main.Id,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

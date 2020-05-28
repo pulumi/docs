@@ -79,7 +79,7 @@ anything, please consult the source <a class="reference external" href="https://
 <span class="n">front_end_listener</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">lb</span><span class="o">.</span><span class="n">Listener</span><span class="p">(</span><span class="s2">&quot;frontEndListener&quot;</span><span class="p">,</span>
     <span class="n">certificate_arn</span><span class="o">=</span><span class="s2">&quot;arn:aws:iam::187416307283:server-certificate/test_cert_rab3wuqwgja25ct3n4jdj2tzu4&quot;</span><span class="p">,</span>
     <span class="n">default_actions</span><span class="o">=</span><span class="p">[{</span>
-        <span class="s2">&quot;targetGroupArn&quot;</span><span class="p">:</span> <span class="n">front_end_target_group</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
+        <span class="s2">&quot;target_group_arn&quot;</span><span class="p">:</span> <span class="n">front_end_target_group</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
         <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;forward&quot;</span><span class="p">,</span>
     <span class="p">}],</span>
     <span class="n">load_balancer_arn</span><span class="o">=</span><span class="n">front_end_load_balancer</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
@@ -97,7 +97,7 @@ anything, please consult the source <a class="reference external" href="https://
         <span class="s2">&quot;redirect&quot;</span><span class="p">:</span> <span class="p">{</span>
             <span class="s2">&quot;port&quot;</span><span class="p">:</span> <span class="s2">&quot;443&quot;</span><span class="p">,</span>
             <span class="s2">&quot;protocol&quot;</span><span class="p">:</span> <span class="s2">&quot;HTTPS&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;statusCode&quot;</span><span class="p">:</span> <span class="s2">&quot;HTTP_301&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;status_code&quot;</span><span class="p">:</span> <span class="s2">&quot;HTTP_301&quot;</span><span class="p">,</span>
         <span class="p">},</span>
         <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;redirect&quot;</span><span class="p">,</span>
     <span class="p">}],</span>
@@ -113,9 +113,9 @@ anything, please consult the source <a class="reference external" href="https://
 <span class="n">front_end_listener</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">lb</span><span class="o">.</span><span class="n">Listener</span><span class="p">(</span><span class="s2">&quot;frontEndListener&quot;</span><span class="p">,</span>
     <span class="n">default_actions</span><span class="o">=</span><span class="p">[{</span>
         <span class="s2">&quot;fixedResponse&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="s2">&quot;contentType&quot;</span><span class="p">:</span> <span class="s2">&quot;text/plain&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;content_type&quot;</span><span class="p">:</span> <span class="s2">&quot;text/plain&quot;</span><span class="p">,</span>
             <span class="s2">&quot;messageBody&quot;</span><span class="p">:</span> <span class="s2">&quot;Fixed response content&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;statusCode&quot;</span><span class="p">:</span> <span class="s2">&quot;200&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;status_code&quot;</span><span class="p">:</span> <span class="s2">&quot;200&quot;</span><span class="p">,</span>
         <span class="p">},</span>
         <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;fixed-response&quot;</span><span class="p">,</span>
     <span class="p">}],</span>
@@ -143,7 +143,7 @@ anything, please consult the source <a class="reference external" href="https://
             <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;authenticate-cognito&quot;</span><span class="p">,</span>
         <span class="p">},</span>
         <span class="p">{</span>
-            <span class="s2">&quot;targetGroupArn&quot;</span><span class="p">:</span> <span class="n">front_end_target_group</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
+            <span class="s2">&quot;target_group_arn&quot;</span><span class="p">:</span> <span class="n">front_end_target_group</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
             <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;forward&quot;</span><span class="p">,</span>
         <span class="p">},</span>
     <span class="p">],</span>
@@ -162,8 +162,8 @@ anything, please consult the source <a class="reference external" href="https://
         <span class="p">{</span>
             <span class="s2">&quot;authenticateOidc&quot;</span><span class="p">:</span> <span class="p">{</span>
                 <span class="s2">&quot;authorizationEndpoint&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.com/authorization_endpoint&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;clientId&quot;</span><span class="p">:</span> <span class="s2">&quot;client_id&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;clientSecret&quot;</span><span class="p">:</span> <span class="s2">&quot;client_secret&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;client_id&quot;</span><span class="p">:</span> <span class="s2">&quot;client_id&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;client_secret&quot;</span><span class="p">:</span> <span class="s2">&quot;client_secret&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;issuer&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.com&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;tokenEndpoint&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.com/token_endpoint&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;userInfoEndpoint&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.com/user_info_endpoint&quot;</span><span class="p">,</span>
@@ -171,7 +171,7 @@ anything, please consult the source <a class="reference external" href="https://
             <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;authenticate-oidc&quot;</span><span class="p">,</span>
         <span class="p">},</span>
         <span class="p">{</span>
-            <span class="s2">&quot;targetGroupArn&quot;</span><span class="p">:</span> <span class="n">front_end_target_group</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
+            <span class="s2">&quot;target_group_arn&quot;</span><span class="p">:</span> <span class="n">front_end_target_group</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
             <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;forward&quot;</span><span class="p">,</span>
         <span class="p">},</span>
     <span class="p">],</span>
@@ -557,7 +557,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <span class="n">front_end_listener</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">lb</span><span class="o">.</span><span class="n">Listener</span><span class="p">(</span><span class="s2">&quot;frontEndListener&quot;</span><span class="p">)</span>
 <span class="n">static</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">lb</span><span class="o">.</span><span class="n">ListenerRule</span><span class="p">(</span><span class="s2">&quot;static&quot;</span><span class="p">,</span>
     <span class="n">actions</span><span class="o">=</span><span class="p">[{</span>
-        <span class="s2">&quot;targetGroupArn&quot;</span><span class="p">:</span> <span class="n">aws_lb_target_group</span><span class="p">[</span><span class="s2">&quot;static&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;target_group_arn&quot;</span><span class="p">:</span> <span class="n">aws_lb_target_group</span><span class="p">[</span><span class="s2">&quot;static&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
         <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;forward&quot;</span><span class="p">,</span>
     <span class="p">}],</span>
     <span class="n">conditions</span><span class="o">=</span><span class="p">[</span>
@@ -576,7 +576,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">priority</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
 <span class="n">host_based_routing</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">lb</span><span class="o">.</span><span class="n">ListenerRule</span><span class="p">(</span><span class="s2">&quot;hostBasedRouting&quot;</span><span class="p">,</span>
     <span class="n">actions</span><span class="o">=</span><span class="p">[{</span>
-        <span class="s2">&quot;targetGroupArn&quot;</span><span class="p">:</span> <span class="n">aws_lb_target_group</span><span class="p">[</span><span class="s2">&quot;static&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;target_group_arn&quot;</span><span class="p">:</span> <span class="n">aws_lb_target_group</span><span class="p">[</span><span class="s2">&quot;static&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
         <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;forward&quot;</span><span class="p">,</span>
     <span class="p">}],</span>
     <span class="n">conditions</span><span class="o">=</span><span class="p">[{</span>
@@ -591,7 +591,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
         <span class="s2">&quot;redirect&quot;</span><span class="p">:</span> <span class="p">{</span>
             <span class="s2">&quot;port&quot;</span><span class="p">:</span> <span class="s2">&quot;443&quot;</span><span class="p">,</span>
             <span class="s2">&quot;protocol&quot;</span><span class="p">:</span> <span class="s2">&quot;HTTPS&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;statusCode&quot;</span><span class="p">:</span> <span class="s2">&quot;HTTP_301&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;status_code&quot;</span><span class="p">:</span> <span class="s2">&quot;HTTP_301&quot;</span><span class="p">,</span>
         <span class="p">},</span>
         <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;redirect&quot;</span><span class="p">,</span>
     <span class="p">}],</span>
@@ -605,9 +605,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <span class="n">health_check</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">lb</span><span class="o">.</span><span class="n">ListenerRule</span><span class="p">(</span><span class="s2">&quot;healthCheck&quot;</span><span class="p">,</span>
     <span class="n">actions</span><span class="o">=</span><span class="p">[{</span>
         <span class="s2">&quot;fixedResponse&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="s2">&quot;contentType&quot;</span><span class="p">:</span> <span class="s2">&quot;text/plain&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;content_type&quot;</span><span class="p">:</span> <span class="s2">&quot;text/plain&quot;</span><span class="p">,</span>
             <span class="s2">&quot;messageBody&quot;</span><span class="p">:</span> <span class="s2">&quot;HEALTHY&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;statusCode&quot;</span><span class="p">:</span> <span class="s2">&quot;200&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;status_code&quot;</span><span class="p">:</span> <span class="s2">&quot;200&quot;</span><span class="p">,</span>
         <span class="p">},</span>
         <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;fixed-response&quot;</span><span class="p">,</span>
     <span class="p">}],</span>
@@ -631,8 +631,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
         <span class="p">{</span>
             <span class="s2">&quot;authenticateOidc&quot;</span><span class="p">:</span> <span class="p">{</span>
                 <span class="s2">&quot;authorizationEndpoint&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.com/authorization_endpoint&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;clientId&quot;</span><span class="p">:</span> <span class="s2">&quot;client_id&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;clientSecret&quot;</span><span class="p">:</span> <span class="s2">&quot;client_secret&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;client_id&quot;</span><span class="p">:</span> <span class="s2">&quot;client_id&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;client_secret&quot;</span><span class="p">:</span> <span class="s2">&quot;client_secret&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;issuer&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.com&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;tokenEndpoint&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.com/token_endpoint&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;userInfoEndpoint&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.com/user_info_endpoint&quot;</span><span class="p">,</span>
@@ -640,7 +640,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
             <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;authenticate-oidc&quot;</span><span class="p">,</span>
         <span class="p">},</span>
         <span class="p">{</span>
-            <span class="s2">&quot;targetGroupArn&quot;</span><span class="p">:</span> <span class="n">aws_lb_target_group</span><span class="p">[</span><span class="s2">&quot;static&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
+            <span class="s2">&quot;target_group_arn&quot;</span><span class="p">:</span> <span class="n">aws_lb_target_group</span><span class="p">[</span><span class="s2">&quot;static&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
             <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;forward&quot;</span><span class="p">,</span>
         <span class="p">},</span>
     <span class="p">],</span>
@@ -1053,12 +1053,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">load_balancer_type</span><span class="o">=</span><span class="s2">&quot;network&quot;</span><span class="p">,</span>
     <span class="n">subnet_mappings</span><span class="o">=</span><span class="p">[</span>
         <span class="p">{</span>
-            <span class="s2">&quot;allocationId&quot;</span><span class="p">:</span> <span class="n">aws_eip</span><span class="p">[</span><span class="s2">&quot;example1&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
-            <span class="s2">&quot;subnetId&quot;</span><span class="p">:</span> <span class="n">aws_subnet</span><span class="p">[</span><span class="s2">&quot;example1&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+            <span class="s2">&quot;allocation_id&quot;</span><span class="p">:</span> <span class="n">aws_eip</span><span class="p">[</span><span class="s2">&quot;example1&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+            <span class="s2">&quot;subnet_id&quot;</span><span class="p">:</span> <span class="n">aws_subnet</span><span class="p">[</span><span class="s2">&quot;example1&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
         <span class="p">},</span>
         <span class="p">{</span>
-            <span class="s2">&quot;allocationId&quot;</span><span class="p">:</span> <span class="n">aws_eip</span><span class="p">[</span><span class="s2">&quot;example2&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
-            <span class="s2">&quot;subnetId&quot;</span><span class="p">:</span> <span class="n">aws_subnet</span><span class="p">[</span><span class="s2">&quot;example2&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+            <span class="s2">&quot;allocation_id&quot;</span><span class="p">:</span> <span class="n">aws_eip</span><span class="p">[</span><span class="s2">&quot;example2&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+            <span class="s2">&quot;subnet_id&quot;</span><span class="p">:</span> <span class="n">aws_subnet</span><span class="p">[</span><span class="s2">&quot;example2&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
         <span class="p">},</span>
     <span class="p">])</span>
 </pre></div>

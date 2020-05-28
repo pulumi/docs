@@ -20,7 +20,22 @@ Use this data source to get information about a Network Interface.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var bar = Output.Create(Aws.Ec2.GetNetworkInterface.InvokeAsync(new Aws.Ec2.GetNetworkInterfaceArgs
+        {
+            Id = "eni-01234567",
+        }));
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

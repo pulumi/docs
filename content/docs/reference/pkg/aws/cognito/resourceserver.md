@@ -20,7 +20,26 @@ Provides a Cognito Resource Server.
 {{< chooser language "typescript,python,go,csharp" / >}}
 ### Create a basic resource server
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var pool = new Aws.Cognito.UserPool("pool", new Aws.Cognito.UserPoolArgs
+        {
+        });
+        var resource = new Aws.Cognito.ResourceServer("resource", new Aws.Cognito.ResourceServerArgs
+        {
+            Identifier = "https://example.com",
+            UserPoolId = pool.Id,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -54,7 +73,34 @@ const resource = new aws.cognito.ResourceServer("resource", {
 
 ### Create a resource server with sample-scope
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var pool = new Aws.Cognito.UserPool("pool", new Aws.Cognito.UserPoolArgs
+        {
+        });
+        var resource = new Aws.Cognito.ResourceServer("resource", new Aws.Cognito.ResourceServerArgs
+        {
+            Identifier = "https://example.com",
+            Scopes = 
+            {
+                new Aws.Cognito.Inputs.ResourceServerScopeArgs
+                {
+                    ScopeDescription = "a Sample Scope Description",
+                    ScopeName = "sample-scope",
+                },
+            },
+            UserPoolId = pool.Id,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

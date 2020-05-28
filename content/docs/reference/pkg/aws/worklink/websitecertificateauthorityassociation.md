@@ -18,7 +18,27 @@ meta_desc: "Explore the WebsiteCertificateAuthorityAssociation resource of the w
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using System.IO;
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.WorkLink.Fleet("example", new Aws.WorkLink.FleetArgs
+        {
+        });
+        var test = new Aws.WorkLink.WebsiteCertificateAuthorityAssociation("test", new Aws.WorkLink.WebsiteCertificateAuthorityAssociationArgs
+        {
+            Certificate = File.ReadAllText("certificate.pem"),
+            FleetArn = aws_worklink_fleet.Test.Arn,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

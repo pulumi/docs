@@ -32,7 +32,33 @@ The state associated with existing resources will automatically be migrated.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var serviceb = new Aws.AppMesh.VirtualRouter("serviceb", new Aws.AppMesh.VirtualRouterArgs
+        {
+            MeshName = aws_appmesh_mesh.Simple.Id,
+            Spec = new Aws.AppMesh.Inputs.VirtualRouterSpecArgs
+            {
+                Listener = new Aws.AppMesh.Inputs.VirtualRouterSpecListenerArgs
+                {
+                    PortMapping = new Aws.AppMesh.Inputs.VirtualRouterSpecListenerPortMappingArgs
+                    {
+                        Port = 8080,
+                        Protocol = "http",
+                    },
+                },
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

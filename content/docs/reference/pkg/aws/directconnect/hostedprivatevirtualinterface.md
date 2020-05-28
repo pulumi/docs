@@ -21,7 +21,25 @@ A hosted virtual interface is a virtual interface that is owned by another AWS a
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var foo = new Aws.DirectConnect.HostedPrivateVirtualInterface("foo", new Aws.DirectConnect.HostedPrivateVirtualInterfaceArgs
+        {
+            AddressFamily = "ipv4",
+            BgpAsn = 65352,
+            ConnectionId = "dxcon-zzzzzzzz",
+            Vlan = 4094,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
