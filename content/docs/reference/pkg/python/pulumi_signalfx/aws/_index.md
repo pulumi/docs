@@ -614,15 +614,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_signalfx.aws.get_services">
 <code class="sig-prename descclassname">pulumi_signalfx.aws.</code><code class="sig-name descname">get_services</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">services</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_signalfx.aws.get_services" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get a list of AWS service names.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
-<span class="kn">import</span> <span class="nn">pulumi_signalfx</span> <span class="k">as</span> <span class="nn">signalfx</span>
-
-<span class="n">aws_services</span> <span class="o">=</span> <span class="n">signalfx</span><span class="o">.</span><span class="n">aws</span><span class="o">.</span><span class="n">get_services</span><span class="p">()</span>
-<span class="c1"># Leaves out most of the integration bits, see the docs</span>
-<span class="c1"># for aws.Integration for more</span>
-<span class="n">aws_myteam</span> <span class="o">=</span> <span class="n">signalfx</span><span class="o">.</span><span class="n">aws</span><span class="o">.</span><span class="n">Integration</span><span class="p">(</span><span class="s2">&quot;awsMyteam&quot;</span><span class="p">,</span> <span class="n">services</span><span class="o">=</span><span class="p">[</span><span class="n">__item</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">__item</span> <span class="ow">in</span> <span class="p">[</span><span class="n">aws_services</span><span class="o">.</span><span class="n">services</span><span class="p">]])</span>
-</pre></div>
-</div>
 <p>The <strong>services</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>

@@ -24,7 +24,149 @@ SignalFx AWS CloudWatch integrations using Role ARNs. For help with this integra
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+using SignalFx = Pulumi.SignalFx;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var awsMyteamExtern = new SignalFx.Aws.ExternalIntegration("awsMyteamExtern", new SignalFx.Aws.ExternalIntegrationArgs
+        {
+        });
+        var signalfxAssumePolicy = Aws.Iam.GetPolicyDocument.InvokeAsync(new Aws.Iam.GetPolicyDocumentArgs
+        {
+            Statement = 
+            {
+                
+                {
+                    { "actions", 
+                    {
+                        "sts:AssumeRole",
+                    } },
+                    { "principals", 
+                    {
+                        
+                        {
+                            { "type", "AWS" },
+                            { "identifiers", 
+                            {
+                                awsMyteamExtern.SignalfxAwsAccount,
+                            } },
+                        },
+                    } },
+                    { "condition", 
+                    {
+                        
+                        {
+                            { "test", "StringEquals" },
+                            { "variable", "sts:ExternalId" },
+                            { "values", 
+                            {
+                                awsMyteamExtern.ExternalId,
+                            } },
+                        },
+                    } },
+                },
+            },
+        });
+        var awsSfxRole = new Aws.Iam.Role("awsSfxRole", new Aws.Iam.RoleArgs
+        {
+            Description = "signalfx integration to read out data and send it to signalfxs aws account",
+            AssumeRolePolicy = signalfxAssumePolicy.Apply(signalfxAssumePolicy => signalfxAssumePolicy.Json),
+        });
+        var awsReadPermissions = new Aws.Iam.Policy("awsReadPermissions", new Aws.Iam.PolicyArgs
+        {
+            Description = "farts",
+            Policy = @"{
+	""Version"": ""2012-10-17"",
+	""Statement"": [
+		{
+			""Action"": [
+				""dynamodb:ListTables"",
+		    ""dynamodb:DescribeTable"",
+		    ""dynamodb:ListTagsOfResource"",
+		    ""ec2:DescribeInstances"",
+		    ""ec2:DescribeInstanceStatus"",
+		    ""ec2:DescribeVolumes"",
+		    ""ec2:DescribeReservedInstances"",
+		    ""ec2:DescribeReservedInstancesModifications"",
+		    ""ec2:DescribeTags"",
+		    ""organizations:DescribeOrganization"",
+		    ""cloudwatch:ListMetrics"",
+		    ""cloudwatch:GetMetricData"",
+		    ""cloudwatch:GetMetricStatistics"",
+		    ""cloudwatch:DescribeAlarms"",
+		    ""sqs:ListQueues"",
+		    ""sqs:GetQueueAttributes"",
+		    ""sqs:ListQueueTags"",
+		    ""elasticmapreduce:ListClusters"",
+		    ""elasticmapreduce:DescribeCluster"",
+		    ""kinesis:ListShards"",
+		    ""kinesis:ListStreams"",
+		    ""kinesis:DescribeStream"",
+		    ""kinesis:ListTagsForStream"",
+		    ""rds:DescribeDBInstances"",
+		    ""rds:ListTagsForResource"",
+		    ""elasticloadbalancing:DescribeLoadBalancers"",
+		    ""elasticloadbalancing:DescribeTags"",
+		    ""elasticache:describeCacheClusters"",
+		    ""redshift:DescribeClusters"",
+		    ""lambda:GetAlias"",
+		    ""lambda:ListFunctions"",
+		    ""lambda:ListTags"",
+		    ""autoscaling:DescribeAutoScalingGroups"",
+		    ""s3:ListAllMyBuckets"",
+		    ""s3:ListBucket"",
+		    ""s3:GetBucketLocation"",
+		    ""s3:GetBucketTagging"",
+		    ""ecs:ListServices"",
+		    ""ecs:ListTasks"",
+		    ""ecs:DescribeTasks"",
+		    ""ecs:DescribeServices"",
+		    ""ecs:ListClusters"",
+		    ""ecs:DescribeClusters"",
+		    ""ecs:ListTaskDefinitions"",
+		    ""ecs:ListTagsForResource"",
+		    ""apigateway:GET"",
+		    ""cloudfront:ListDistributions"",
+		    ""cloudfront:ListTagsForResource"",
+		    ""tag:GetResources"",
+		    ""es:ListDomainNames"",
+		    ""es:DescribeElasticsearchDomain""
+			],
+			""Effect"": ""Allow"",
+			""Resource"": ""*""
+		}
+	]
+}
+",
+        });
+        var sfx_read_attach = new Aws.Iam.RolePolicyAttachment("sfx-read-attach", new Aws.Iam.RolePolicyAttachmentArgs
+        {
+            Role = awsSfxRole.Name,
+            PolicyArn = awsReadPermissions.Arn,
+        });
+        var awsMyteam = new SignalFx.Aws.Integration("awsMyteam", new SignalFx.Aws.IntegrationArgs
+        {
+            Enabled = true,
+            IntegrationId = awsMyteamExtern.Id,
+            ExternalId = awsMyteamExtern.ExternalId,
+            RoleArn = awsSfxRole.Arn,
+            Regions = 
+            {
+                "us-east-1",
+            },
+            PollRate = 300,
+            ImportCloudWatch = true,
+            EnableAwsUsage = true,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -224,7 +366,7 @@ const awsReadPermissions = new aws.iam.Policy("awsReadPermissions", {
 }
 `,
 });
-const sfx-read-attach = new aws.iam.RolePolicyAttachment("sfx-read-attach", {
+const sfx_read_attach = new aws.iam.RolePolicyAttachment("sfx-read-attach", {
     role: awsSfxRole.name,
     policyArn: awsReadPermissions.arn,
 });
@@ -427,7 +569,9 @@ The ExternalIntegration resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -443,7 +587,9 @@ The ExternalIntegration resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -459,7 +605,9 @@ The ExternalIntegration resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -475,7 +623,9 @@ The ExternalIntegration resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -502,7 +652,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>External<wbr>Id</span>
+        <span id="externalid_csharp">
+<a href="#externalid_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -511,7 +663,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -519,7 +673,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Signalfx<wbr>Aws<wbr>Account</span>
+        <span id="signalfxawsaccount_csharp">
+<a href="#signalfxawsaccount_csharp" style="color: inherit; text-decoration: inherit;">Signalfx<wbr>Aws<wbr>Account</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -535,7 +691,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>External<wbr>Id</span>
+        <span id="externalid_go">
+<a href="#externalid_go" style="color: inherit; text-decoration: inherit;">External<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -544,7 +702,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -552,7 +712,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Signalfx<wbr>Aws<wbr>Account</span>
+        <span id="signalfxawsaccount_go">
+<a href="#signalfxawsaccount_go" style="color: inherit; text-decoration: inherit;">Signalfx<wbr>Aws<wbr>Account</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -568,7 +730,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>external<wbr>Id</span>
+        <span id="externalid_nodejs">
+<a href="#externalid_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -577,7 +741,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -585,7 +751,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>signalfx<wbr>Aws<wbr>Account</span>
+        <span id="signalfxawsaccount_nodejs">
+<a href="#signalfxawsaccount_nodejs" style="color: inherit; text-decoration: inherit;">signalfx<wbr>Aws<wbr>Account</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -601,7 +769,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>external_<wbr>id</span>
+        <span id="external_id_python">
+<a href="#external_id_python" style="color: inherit; text-decoration: inherit;">external_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -610,7 +780,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -618,7 +790,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>signalfx_<wbr>aws_<wbr>account</span>
+        <span id="signalfx_aws_account_python">
+<a href="#signalfx_aws_account_python" style="color: inherit; text-decoration: inherit;">signalfx_<wbr>aws_<wbr>account</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -760,7 +934,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>External<wbr>Id</span>
+        <span id="state_externalid_csharp">
+<a href="#state_externalid_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -769,7 +945,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -778,7 +956,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Signalfx<wbr>Aws<wbr>Account</span>
+        <span id="state_signalfxawsaccount_csharp">
+<a href="#state_signalfxawsaccount_csharp" style="color: inherit; text-decoration: inherit;">Signalfx<wbr>Aws<wbr>Account</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -794,7 +974,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>External<wbr>Id</span>
+        <span id="state_externalid_go">
+<a href="#state_externalid_go" style="color: inherit; text-decoration: inherit;">External<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -803,7 +985,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -812,7 +996,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Signalfx<wbr>Aws<wbr>Account</span>
+        <span id="state_signalfxawsaccount_go">
+<a href="#state_signalfxawsaccount_go" style="color: inherit; text-decoration: inherit;">Signalfx<wbr>Aws<wbr>Account</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -828,7 +1014,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>external<wbr>Id</span>
+        <span id="state_externalid_nodejs">
+<a href="#state_externalid_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -837,7 +1025,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -846,7 +1036,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>signalfx<wbr>Aws<wbr>Account</span>
+        <span id="state_signalfxawsaccount_nodejs">
+<a href="#state_signalfxawsaccount_nodejs" style="color: inherit; text-decoration: inherit;">signalfx<wbr>Aws<wbr>Account</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -862,7 +1054,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>external_<wbr>id</span>
+        <span id="state_external_id_python">
+<a href="#state_external_id_python" style="color: inherit; text-decoration: inherit;">external_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -871,7 +1065,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -880,7 +1076,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>signalfx_<wbr>aws_<wbr>account</span>
+        <span id="state_signalfx_aws_account_python">
+<a href="#state_signalfx_aws_account_python" style="color: inherit; text-decoration: inherit;">signalfx_<wbr>aws_<wbr>account</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

@@ -20,7 +20,37 @@ Manage SignalFx org tokens.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using SignalFx = Pulumi.SignalFx;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var myteamkey0 = new SignalFx.OrgToken("myteamkey0", new SignalFx.OrgTokenArgs
+        {
+            Description = "My team's rad key",
+            HostOrUsageLimits = new SignalFx.Inputs.OrgTokenHostOrUsageLimitsArgs
+            {
+                ContainerLimit = 200,
+                ContainerNotificationThreshold = 180,
+                CustomMetricsLimit = 1000,
+                CustomMetricsNotificationThreshold = 900,
+                HighResMetricsLimit = 1000,
+                HighResMetricsNotificationThreshold = 900,
+                HostLimit = 100,
+                HostNotificationThreshold = 90,
+            },
+            Notifications = 
+            {
+                "Email,foo-alerts@bar.com",
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -256,7 +286,9 @@ The OrgToken resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -265,7 +297,9 @@ The OrgToken resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Disabled</span>
+        <span id="disabled_csharp">
+<a href="#disabled_csharp" style="color: inherit; text-decoration: inherit;">Disabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -274,7 +308,9 @@ The OrgToken resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Dpm<wbr>Limits</span>
+        <span id="dpmlimits_csharp">
+<a href="#dpmlimits_csharp" style="color: inherit; text-decoration: inherit;">Dpm<wbr>Limits</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#orgtokendpmlimits">Pulumi.<wbr>Signal<wbr>Fx.<wbr>Inputs.<wbr>Org<wbr>Token<wbr>Dpm<wbr>Limits<wbr>Args</a></span>
     </dt>
@@ -283,7 +319,9 @@ The OrgToken resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Host<wbr>Or<wbr>Usage<wbr>Limits</span>
+        <span id="hostorusagelimits_csharp">
+<a href="#hostorusagelimits_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Or<wbr>Usage<wbr>Limits</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#orgtokenhostorusagelimits">Pulumi.<wbr>Signal<wbr>Fx.<wbr>Inputs.<wbr>Org<wbr>Token<wbr>Host<wbr>Or<wbr>Usage<wbr>Limits<wbr>Args</a></span>
     </dt>
@@ -292,7 +330,9 @@ The OrgToken resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -301,7 +341,9 @@ The OrgToken resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Notifications</span>
+        <span id="notifications_csharp">
+<a href="#notifications_csharp" style="color: inherit; text-decoration: inherit;">Notifications</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -317,7 +359,9 @@ The OrgToken resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -326,7 +370,9 @@ The OrgToken resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Disabled</span>
+        <span id="disabled_go">
+<a href="#disabled_go" style="color: inherit; text-decoration: inherit;">Disabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -335,7 +381,9 @@ The OrgToken resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Dpm<wbr>Limits</span>
+        <span id="dpmlimits_go">
+<a href="#dpmlimits_go" style="color: inherit; text-decoration: inherit;">Dpm<wbr>Limits</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#orgtokendpmlimits">Org<wbr>Token<wbr>Dpm<wbr>Limits</a></span>
     </dt>
@@ -344,7 +392,9 @@ The OrgToken resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Host<wbr>Or<wbr>Usage<wbr>Limits</span>
+        <span id="hostorusagelimits_go">
+<a href="#hostorusagelimits_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Or<wbr>Usage<wbr>Limits</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#orgtokenhostorusagelimits">Org<wbr>Token<wbr>Host<wbr>Or<wbr>Usage<wbr>Limits</a></span>
     </dt>
@@ -353,7 +403,9 @@ The OrgToken resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -362,7 +414,9 @@ The OrgToken resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Notifications</span>
+        <span id="notifications_go">
+<a href="#notifications_go" style="color: inherit; text-decoration: inherit;">Notifications</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -378,7 +432,9 @@ The OrgToken resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -387,7 +443,9 @@ The OrgToken resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>disabled</span>
+        <span id="disabled_nodejs">
+<a href="#disabled_nodejs" style="color: inherit; text-decoration: inherit;">disabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -396,7 +454,9 @@ The OrgToken resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>dpm<wbr>Limits</span>
+        <span id="dpmlimits_nodejs">
+<a href="#dpmlimits_nodejs" style="color: inherit; text-decoration: inherit;">dpm<wbr>Limits</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#orgtokendpmlimits">Org<wbr>Token<wbr>Dpm<wbr>Limits</a></span>
     </dt>
@@ -405,7 +465,9 @@ The OrgToken resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>host<wbr>Or<wbr>Usage<wbr>Limits</span>
+        <span id="hostorusagelimits_nodejs">
+<a href="#hostorusagelimits_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Or<wbr>Usage<wbr>Limits</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#orgtokenhostorusagelimits">Org<wbr>Token<wbr>Host<wbr>Or<wbr>Usage<wbr>Limits</a></span>
     </dt>
@@ -414,7 +476,9 @@ The OrgToken resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -423,7 +487,9 @@ The OrgToken resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>notifications</span>
+        <span id="notifications_nodejs">
+<a href="#notifications_nodejs" style="color: inherit; text-decoration: inherit;">notifications</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -439,7 +505,9 @@ The OrgToken resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -448,7 +516,9 @@ The OrgToken resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>disabled</span>
+        <span id="disabled_python">
+<a href="#disabled_python" style="color: inherit; text-decoration: inherit;">disabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -457,7 +527,9 @@ The OrgToken resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>dpm_<wbr>limits</span>
+        <span id="dpm_limits_python">
+<a href="#dpm_limits_python" style="color: inherit; text-decoration: inherit;">dpm_<wbr>limits</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#orgtokendpmlimits">Dict[Org<wbr>Token<wbr>Dpm<wbr>Limits]</a></span>
     </dt>
@@ -466,7 +538,9 @@ The OrgToken resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>host_<wbr>or_<wbr>usage_<wbr>limits</span>
+        <span id="host_or_usage_limits_python">
+<a href="#host_or_usage_limits_python" style="color: inherit; text-decoration: inherit;">host_<wbr>or_<wbr>usage_<wbr>limits</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#orgtokenhostorusagelimits">Dict[Org<wbr>Token<wbr>Host<wbr>Or<wbr>Usage<wbr>Limits]</a></span>
     </dt>
@@ -475,7 +549,9 @@ The OrgToken resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -484,7 +560,9 @@ The OrgToken resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>notifications</span>
+        <span id="notifications_python">
+<a href="#notifications_python" style="color: inherit; text-decoration: inherit;">notifications</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -511,7 +589,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -519,7 +599,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Secret</span>
+        <span id="secret_csharp">
+<a href="#secret_csharp" style="color: inherit; text-decoration: inherit;">Secret</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -535,7 +617,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -543,7 +627,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Secret</span>
+        <span id="secret_go">
+<a href="#secret_go" style="color: inherit; text-decoration: inherit;">Secret</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -559,7 +645,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -567,7 +655,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>secret</span>
+        <span id="secret_nodejs">
+<a href="#secret_nodejs" style="color: inherit; text-decoration: inherit;">secret</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -583,7 +673,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -591,7 +683,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>secret</span>
+        <span id="secret_python">
+<a href="#secret_python" style="color: inherit; text-decoration: inherit;">secret</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -733,7 +827,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="state_description_csharp">
+<a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -742,7 +838,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Disabled</span>
+        <span id="state_disabled_csharp">
+<a href="#state_disabled_csharp" style="color: inherit; text-decoration: inherit;">Disabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -751,7 +849,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Dpm<wbr>Limits</span>
+        <span id="state_dpmlimits_csharp">
+<a href="#state_dpmlimits_csharp" style="color: inherit; text-decoration: inherit;">Dpm<wbr>Limits</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#orgtokendpmlimits">Pulumi.<wbr>Signal<wbr>Fx.<wbr>Inputs.<wbr>Org<wbr>Token<wbr>Dpm<wbr>Limits<wbr>Args</a></span>
     </dt>
@@ -760,7 +860,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Host<wbr>Or<wbr>Usage<wbr>Limits</span>
+        <span id="state_hostorusagelimits_csharp">
+<a href="#state_hostorusagelimits_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Or<wbr>Usage<wbr>Limits</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#orgtokenhostorusagelimits">Pulumi.<wbr>Signal<wbr>Fx.<wbr>Inputs.<wbr>Org<wbr>Token<wbr>Host<wbr>Or<wbr>Usage<wbr>Limits<wbr>Args</a></span>
     </dt>
@@ -769,7 +871,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -778,7 +882,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Notifications</span>
+        <span id="state_notifications_csharp">
+<a href="#state_notifications_csharp" style="color: inherit; text-decoration: inherit;">Notifications</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -787,7 +893,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Secret</span>
+        <span id="state_secret_csharp">
+<a href="#state_secret_csharp" style="color: inherit; text-decoration: inherit;">Secret</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -803,7 +911,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="state_description_go">
+<a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -812,7 +922,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Disabled</span>
+        <span id="state_disabled_go">
+<a href="#state_disabled_go" style="color: inherit; text-decoration: inherit;">Disabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -821,7 +933,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Dpm<wbr>Limits</span>
+        <span id="state_dpmlimits_go">
+<a href="#state_dpmlimits_go" style="color: inherit; text-decoration: inherit;">Dpm<wbr>Limits</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#orgtokendpmlimits">Org<wbr>Token<wbr>Dpm<wbr>Limits</a></span>
     </dt>
@@ -830,7 +944,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Host<wbr>Or<wbr>Usage<wbr>Limits</span>
+        <span id="state_hostorusagelimits_go">
+<a href="#state_hostorusagelimits_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Or<wbr>Usage<wbr>Limits</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#orgtokenhostorusagelimits">Org<wbr>Token<wbr>Host<wbr>Or<wbr>Usage<wbr>Limits</a></span>
     </dt>
@@ -839,7 +955,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -848,7 +966,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Notifications</span>
+        <span id="state_notifications_go">
+<a href="#state_notifications_go" style="color: inherit; text-decoration: inherit;">Notifications</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -857,7 +977,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Secret</span>
+        <span id="state_secret_go">
+<a href="#state_secret_go" style="color: inherit; text-decoration: inherit;">Secret</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -873,7 +995,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="state_description_nodejs">
+<a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -882,7 +1006,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>disabled</span>
+        <span id="state_disabled_nodejs">
+<a href="#state_disabled_nodejs" style="color: inherit; text-decoration: inherit;">disabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -891,7 +1017,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>dpm<wbr>Limits</span>
+        <span id="state_dpmlimits_nodejs">
+<a href="#state_dpmlimits_nodejs" style="color: inherit; text-decoration: inherit;">dpm<wbr>Limits</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#orgtokendpmlimits">Org<wbr>Token<wbr>Dpm<wbr>Limits</a></span>
     </dt>
@@ -900,7 +1028,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>host<wbr>Or<wbr>Usage<wbr>Limits</span>
+        <span id="state_hostorusagelimits_nodejs">
+<a href="#state_hostorusagelimits_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Or<wbr>Usage<wbr>Limits</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#orgtokenhostorusagelimits">Org<wbr>Token<wbr>Host<wbr>Or<wbr>Usage<wbr>Limits</a></span>
     </dt>
@@ -909,7 +1039,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -918,7 +1050,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>notifications</span>
+        <span id="state_notifications_nodejs">
+<a href="#state_notifications_nodejs" style="color: inherit; text-decoration: inherit;">notifications</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -927,7 +1061,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>secret</span>
+        <span id="state_secret_nodejs">
+<a href="#state_secret_nodejs" style="color: inherit; text-decoration: inherit;">secret</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -943,7 +1079,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="state_description_python">
+<a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -952,7 +1090,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>disabled</span>
+        <span id="state_disabled_python">
+<a href="#state_disabled_python" style="color: inherit; text-decoration: inherit;">disabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -961,7 +1101,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>dpm_<wbr>limits</span>
+        <span id="state_dpm_limits_python">
+<a href="#state_dpm_limits_python" style="color: inherit; text-decoration: inherit;">dpm_<wbr>limits</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#orgtokendpmlimits">Dict[Org<wbr>Token<wbr>Dpm<wbr>Limits]</a></span>
     </dt>
@@ -970,7 +1112,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>host_<wbr>or_<wbr>usage_<wbr>limits</span>
+        <span id="state_host_or_usage_limits_python">
+<a href="#state_host_or_usage_limits_python" style="color: inherit; text-decoration: inherit;">host_<wbr>or_<wbr>usage_<wbr>limits</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#orgtokenhostorusagelimits">Dict[Org<wbr>Token<wbr>Host<wbr>Or<wbr>Usage<wbr>Limits]</a></span>
     </dt>
@@ -979,7 +1123,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -988,7 +1134,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>notifications</span>
+        <span id="state_notifications_python">
+<a href="#state_notifications_python" style="color: inherit; text-decoration: inherit;">notifications</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -997,7 +1145,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>secret</span>
+        <span id="state_secret_python">
+<a href="#state_secret_python" style="color: inherit; text-decoration: inherit;">secret</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1039,7 +1189,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Dpm<wbr>Limit</span>
+        <span id="dpmlimit_csharp">
+<a href="#dpmlimit_csharp" style="color: inherit; text-decoration: inherit;">Dpm<wbr>Limit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1048,7 +1200,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Dpm<wbr>Notification<wbr>Threshold</span>
+        <span id="dpmnotificationthreshold_csharp">
+<a href="#dpmnotificationthreshold_csharp" style="color: inherit; text-decoration: inherit;">Dpm<wbr>Notification<wbr>Threshold</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1064,7 +1218,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Dpm<wbr>Limit</span>
+        <span id="dpmlimit_go">
+<a href="#dpmlimit_go" style="color: inherit; text-decoration: inherit;">Dpm<wbr>Limit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1073,7 +1229,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Dpm<wbr>Notification<wbr>Threshold</span>
+        <span id="dpmnotificationthreshold_go">
+<a href="#dpmnotificationthreshold_go" style="color: inherit; text-decoration: inherit;">Dpm<wbr>Notification<wbr>Threshold</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1089,7 +1247,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>dpm<wbr>Limit</span>
+        <span id="dpmlimit_nodejs">
+<a href="#dpmlimit_nodejs" style="color: inherit; text-decoration: inherit;">dpm<wbr>Limit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1098,7 +1258,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>dpm<wbr>Notification<wbr>Threshold</span>
+        <span id="dpmnotificationthreshold_nodejs">
+<a href="#dpmnotificationthreshold_nodejs" style="color: inherit; text-decoration: inherit;">dpm<wbr>Notification<wbr>Threshold</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1114,7 +1276,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>dpm<wbr>Limit</span>
+        <span id="dpmlimit_python">
+<a href="#dpmlimit_python" style="color: inherit; text-decoration: inherit;">dpm<wbr>Limit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1123,7 +1287,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>dpm<wbr>Notification<wbr>Threshold</span>
+        <span id="dpmnotificationthreshold_python">
+<a href="#dpmnotificationthreshold_python" style="color: inherit; text-decoration: inherit;">dpm<wbr>Notification<wbr>Threshold</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1157,7 +1323,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Container<wbr>Limit</span>
+        <span id="containerlimit_csharp">
+<a href="#containerlimit_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Limit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1166,7 +1334,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Container<wbr>Notification<wbr>Threshold</span>
+        <span id="containernotificationthreshold_csharp">
+<a href="#containernotificationthreshold_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Notification<wbr>Threshold</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1175,7 +1345,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Custom<wbr>Metrics<wbr>Limit</span>
+        <span id="custommetricslimit_csharp">
+<a href="#custommetricslimit_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Metrics<wbr>Limit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1184,7 +1356,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Custom<wbr>Metrics<wbr>Notification<wbr>Threshold</span>
+        <span id="custommetricsnotificationthreshold_csharp">
+<a href="#custommetricsnotificationthreshold_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Metrics<wbr>Notification<wbr>Threshold</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1193,7 +1367,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>High<wbr>Res<wbr>Metrics<wbr>Limit</span>
+        <span id="highresmetricslimit_csharp">
+<a href="#highresmetricslimit_csharp" style="color: inherit; text-decoration: inherit;">High<wbr>Res<wbr>Metrics<wbr>Limit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1202,7 +1378,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>High<wbr>Res<wbr>Metrics<wbr>Notification<wbr>Threshold</span>
+        <span id="highresmetricsnotificationthreshold_csharp">
+<a href="#highresmetricsnotificationthreshold_csharp" style="color: inherit; text-decoration: inherit;">High<wbr>Res<wbr>Metrics<wbr>Notification<wbr>Threshold</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1211,7 +1389,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Host<wbr>Limit</span>
+        <span id="hostlimit_csharp">
+<a href="#hostlimit_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Limit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1220,7 +1400,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Host<wbr>Notification<wbr>Threshold</span>
+        <span id="hostnotificationthreshold_csharp">
+<a href="#hostnotificationthreshold_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Notification<wbr>Threshold</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1236,7 +1418,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Container<wbr>Limit</span>
+        <span id="containerlimit_go">
+<a href="#containerlimit_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Limit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1245,7 +1429,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Container<wbr>Notification<wbr>Threshold</span>
+        <span id="containernotificationthreshold_go">
+<a href="#containernotificationthreshold_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Notification<wbr>Threshold</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1254,7 +1440,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Custom<wbr>Metrics<wbr>Limit</span>
+        <span id="custommetricslimit_go">
+<a href="#custommetricslimit_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Metrics<wbr>Limit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1263,7 +1451,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Custom<wbr>Metrics<wbr>Notification<wbr>Threshold</span>
+        <span id="custommetricsnotificationthreshold_go">
+<a href="#custommetricsnotificationthreshold_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Metrics<wbr>Notification<wbr>Threshold</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1272,7 +1462,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>High<wbr>Res<wbr>Metrics<wbr>Limit</span>
+        <span id="highresmetricslimit_go">
+<a href="#highresmetricslimit_go" style="color: inherit; text-decoration: inherit;">High<wbr>Res<wbr>Metrics<wbr>Limit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1281,7 +1473,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>High<wbr>Res<wbr>Metrics<wbr>Notification<wbr>Threshold</span>
+        <span id="highresmetricsnotificationthreshold_go">
+<a href="#highresmetricsnotificationthreshold_go" style="color: inherit; text-decoration: inherit;">High<wbr>Res<wbr>Metrics<wbr>Notification<wbr>Threshold</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1290,7 +1484,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Host<wbr>Limit</span>
+        <span id="hostlimit_go">
+<a href="#hostlimit_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Limit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1299,7 +1495,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Host<wbr>Notification<wbr>Threshold</span>
+        <span id="hostnotificationthreshold_go">
+<a href="#hostnotificationthreshold_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Notification<wbr>Threshold</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1315,7 +1513,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>container<wbr>Limit</span>
+        <span id="containerlimit_nodejs">
+<a href="#containerlimit_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Limit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1324,7 +1524,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>container<wbr>Notification<wbr>Threshold</span>
+        <span id="containernotificationthreshold_nodejs">
+<a href="#containernotificationthreshold_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Notification<wbr>Threshold</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1333,7 +1535,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>custom<wbr>Metrics<wbr>Limit</span>
+        <span id="custommetricslimit_nodejs">
+<a href="#custommetricslimit_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Metrics<wbr>Limit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1342,7 +1546,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>custom<wbr>Metrics<wbr>Notification<wbr>Threshold</span>
+        <span id="custommetricsnotificationthreshold_nodejs">
+<a href="#custommetricsnotificationthreshold_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Metrics<wbr>Notification<wbr>Threshold</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1351,7 +1557,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>high<wbr>Res<wbr>Metrics<wbr>Limit</span>
+        <span id="highresmetricslimit_nodejs">
+<a href="#highresmetricslimit_nodejs" style="color: inherit; text-decoration: inherit;">high<wbr>Res<wbr>Metrics<wbr>Limit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1360,7 +1568,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>high<wbr>Res<wbr>Metrics<wbr>Notification<wbr>Threshold</span>
+        <span id="highresmetricsnotificationthreshold_nodejs">
+<a href="#highresmetricsnotificationthreshold_nodejs" style="color: inherit; text-decoration: inherit;">high<wbr>Res<wbr>Metrics<wbr>Notification<wbr>Threshold</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1369,7 +1579,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>host<wbr>Limit</span>
+        <span id="hostlimit_nodejs">
+<a href="#hostlimit_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Limit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1378,7 +1590,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>host<wbr>Notification<wbr>Threshold</span>
+        <span id="hostnotificationthreshold_nodejs">
+<a href="#hostnotificationthreshold_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Notification<wbr>Threshold</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1394,7 +1608,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>container<wbr>Limit</span>
+        <span id="containerlimit_python">
+<a href="#containerlimit_python" style="color: inherit; text-decoration: inherit;">container<wbr>Limit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1403,7 +1619,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>container<wbr>Notification<wbr>Threshold</span>
+        <span id="containernotificationthreshold_python">
+<a href="#containernotificationthreshold_python" style="color: inherit; text-decoration: inherit;">container<wbr>Notification<wbr>Threshold</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1412,7 +1630,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>custom<wbr>Metrics<wbr>Limit</span>
+        <span id="custommetricslimit_python">
+<a href="#custommetricslimit_python" style="color: inherit; text-decoration: inherit;">custom<wbr>Metrics<wbr>Limit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1421,7 +1641,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>custom<wbr>Metrics<wbr>Notification<wbr>Threshold</span>
+        <span id="custommetricsnotificationthreshold_python">
+<a href="#custommetricsnotificationthreshold_python" style="color: inherit; text-decoration: inherit;">custom<wbr>Metrics<wbr>Notification<wbr>Threshold</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1430,7 +1652,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>high<wbr>Res<wbr>Metrics<wbr>Limit</span>
+        <span id="highresmetricslimit_python">
+<a href="#highresmetricslimit_python" style="color: inherit; text-decoration: inherit;">high<wbr>Res<wbr>Metrics<wbr>Limit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1439,7 +1663,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>high<wbr>Res<wbr>Metrics<wbr>Notification<wbr>Threshold</span>
+        <span id="highresmetricsnotificationthreshold_python">
+<a href="#highresmetricsnotificationthreshold_python" style="color: inherit; text-decoration: inherit;">high<wbr>Res<wbr>Metrics<wbr>Notification<wbr>Threshold</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1448,7 +1674,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>host<wbr>Limit</span>
+        <span id="hostlimit_python">
+<a href="#hostlimit_python" style="color: inherit; text-decoration: inherit;">host<wbr>Limit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1457,7 +1685,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>host<wbr>Notification<wbr>Threshold</span>
+        <span id="hostnotificationthreshold_python">
+<a href="#hostnotificationthreshold_python" style="color: inherit; text-decoration: inherit;">host<wbr>Notification<wbr>Threshold</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
