@@ -20,7 +20,23 @@ Provides a resource to attach an AWS Organizations policy to an organization acc
 {{< chooser language "typescript,python,go,csharp" / >}}
 ### Organization Account
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var account = new Aws.Organizations.PolicyAttachment("account", new Aws.Organizations.PolicyAttachmentArgs
+        {
+            PolicyId = aws_organizations_policy.Example.Id,
+            TargetId = "123456789012",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -52,7 +68,23 @@ const account = new aws.organizations.PolicyAttachment("account", {
 
 ### Organization Root
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var root = new Aws.Organizations.PolicyAttachment("root", new Aws.Organizations.PolicyAttachmentArgs
+        {
+            PolicyId = aws_organizations_policy.Example.Id,
+            TargetId = aws_organizations_organization.Example.Roots[0].Id,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -84,7 +116,23 @@ const root = new aws.organizations.PolicyAttachment("root", {
 
 ### Organization Unit
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var unit = new Aws.Organizations.PolicyAttachment("unit", new Aws.Organizations.PolicyAttachmentArgs
+        {
+            PolicyId = aws_organizations_policy.Example.Id,
+            TargetId = aws_organizations_organizational_unit.Example.Id,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

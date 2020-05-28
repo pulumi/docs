@@ -28,57 +28,33 @@ servers reboots.
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
-### Redis Cluster Mode Disabled
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_aws as aws
-
-example = aws.elasticache.ReplicationGroup("example",
-    automatic_failover_enabled=True,
-    availability_zones=[
-        "us-west-2a",
-        "us-west-2b",
-    ],
-    node_type="cache.m4.large",
-    number_cache_clusters=2,
-    parameter_group_name="default.redis3.2",
-    port=6379,
-    replication_group_description="test description")
-```
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const example = new aws.elasticache.ReplicationGroup("example", {
-    automaticFailoverEnabled: true,
-    availabilityZones: [
-        "us-west-2a",
-        "us-west-2b",
-    ],
-    nodeType: "cache.m4.large",
-    numberCacheClusters: 2,
-    parameterGroupName: "default.redis3.2",
-    port: 6379,
-    replicationGroupDescription: "test description",
-});
-```
-{{% /example %}}
-
 ### Redis Cluster Mode Enabled
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var baz = new Aws.ElastiCache.ReplicationGroup("baz", new Aws.ElastiCache.ReplicationGroupArgs
+        {
+            AutomaticFailoverEnabled = true,
+            ClusterMode = new Aws.ElastiCache.Inputs.ReplicationGroupClusterModeArgs
+            {
+                NumNodeGroups = 2,
+                ReplicasPerNodeGroup = 1,
+            },
+            NodeType = "cache.t2.small",
+            ParameterGroupName = "default.redis3.2.cluster.on",
+            Port = 6379,
+            ReplicationGroupDescription = "test description",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

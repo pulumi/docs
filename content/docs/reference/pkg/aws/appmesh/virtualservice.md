@@ -20,7 +20,32 @@ Provides an AWS App Mesh virtual service resource.
 {{< chooser language "typescript,python,go,csharp" / >}}
 ### Virtual Node Provider
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var servicea = new Aws.AppMesh.VirtualService("servicea", new Aws.AppMesh.VirtualServiceArgs
+        {
+            MeshName = aws_appmesh_mesh.Simple.Id,
+            Spec = new Aws.AppMesh.Inputs.VirtualServiceSpecArgs
+            {
+                Provider = new Aws.AppMesh.Inputs.VirtualServiceSpecProviderArgs
+                {
+                    VirtualNode = new Aws.AppMesh.Inputs.VirtualServiceSpecProviderVirtualNodeArgs
+                    {
+                        VirtualNodeName = aws_appmesh_virtual_node.Serviceb1.Name,
+                    },
+                },
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -64,7 +89,32 @@ const servicea = new aws.appmesh.VirtualService("servicea", {
 
 ### Virtual Router Provider
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var servicea = new Aws.AppMesh.VirtualService("servicea", new Aws.AppMesh.VirtualServiceArgs
+        {
+            MeshName = aws_appmesh_mesh.Simple.Id,
+            Spec = new Aws.AppMesh.Inputs.VirtualServiceSpecArgs
+            {
+                Provider = new Aws.AppMesh.Inputs.VirtualServiceSpecProviderArgs
+                {
+                    VirtualRouter = new Aws.AppMesh.Inputs.VirtualServiceSpecProviderVirtualRouterArgs
+                    {
+                        VirtualRouterName = aws_appmesh_virtual_router.Serviceb.Name,
+                    },
+                },
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -81,7 +131,7 @@ servicea = aws.appmesh.VirtualService("servicea",
     spec={
         "provider": {
             "virtualRouter": {
-                "virtualRouterName": aws_appmesh_virtual_router["serviceb"]["name"],
+                "virtual_router_name": aws_appmesh_virtual_router["serviceb"]["name"],
             },
         },
     })

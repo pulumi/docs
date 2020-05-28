@@ -22,7 +22,21 @@ Provides an AWS Quantum Ledger Database (QLDB) resource
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var sample_ledger = new Aws.Qldb.Ledger("sample-ledger", new Aws.Qldb.LedgerArgs
+        {
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

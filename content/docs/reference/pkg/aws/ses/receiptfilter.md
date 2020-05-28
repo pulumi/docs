@@ -20,7 +20,23 @@ Provides an SES receipt filter resource
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var filter = new Aws.Ses.ReceiptFilter("filter", new Aws.Ses.ReceiptFilterArgs
+        {
+            Cidr = "10.10.10.10",
+            Policy = "Block",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

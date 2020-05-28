@@ -20,7 +20,57 @@ Provides an SSM Maintenance Window Task resource
 {{< chooser language "typescript,python,go,csharp" / >}}
 ### Automation Tasks
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.Ssm.MaintenanceWindowTask("example", new Aws.Ssm.MaintenanceWindowTaskArgs
+        {
+            MaxConcurrency = 2,
+            MaxErrors = 1,
+            Priority = 1,
+            ServiceRoleArn = aws_iam_role.Example.Arn,
+            Targets = 
+            {
+                new Aws.Ssm.Inputs.MaintenanceWindowTaskTargetArgs
+                {
+                    Key = "InstanceIds",
+                    Values = 
+                    {
+                        aws_instance.Example.Id,
+                    },
+                },
+            },
+            TaskArn = "AWS-RestartEC2Instance",
+            TaskInvocationParameters = new Aws.Ssm.Inputs.MaintenanceWindowTaskTaskInvocationParametersArgs
+            {
+                AutomationParameters = new Aws.Ssm.Inputs.MaintenanceWindowTaskTaskInvocationParametersAutomationParametersArgs
+                {
+                    DocumentVersion = "$$LATEST",
+                    Parameter = 
+                    {
+                        
+                        {
+                            { "name", "InstanceId" },
+                            { "values", 
+                            {
+                                aws_instance.Example.Id,
+                            } },
+                        },
+                    },
+                },
+            },
+            TaskType = "AUTOMATION",
+            WindowId = aws_ssm_maintenance_window.Example.Id,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -44,7 +94,7 @@ example = aws.ssm.MaintenanceWindowTask("example",
     task_arn="AWS-RestartEC2Instance",
     task_invocation_parameters={
         "automationParameters": {
-            "documentVersion": "$$LATEST",
+            "document_version": "$$LATEST",
             "parameter": [{
                 "name": "InstanceId",
                 "values": [aws_instance["example"]["id"]],
@@ -88,7 +138,69 @@ const example = new aws.ssm.MaintenanceWindowTask("example", {
 
 ### Run Command Tasks
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.Ssm.MaintenanceWindowTask("example", new Aws.Ssm.MaintenanceWindowTaskArgs
+        {
+            MaxConcurrency = 2,
+            MaxErrors = 1,
+            Priority = 1,
+            ServiceRoleArn = aws_iam_role.Example.Arn,
+            Targets = 
+            {
+                new Aws.Ssm.Inputs.MaintenanceWindowTaskTargetArgs
+                {
+                    Key = "InstanceIds",
+                    Values = 
+                    {
+                        aws_instance.Example.Id,
+                    },
+                },
+            },
+            TaskArn = "AWS-RunShellScript",
+            TaskInvocationParameters = new Aws.Ssm.Inputs.MaintenanceWindowTaskTaskInvocationParametersArgs
+            {
+                RunCommandParameters = new Aws.Ssm.Inputs.MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersArgs
+                {
+                    NotificationConfig = new Aws.Ssm.Inputs.MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersNotificationConfigArgs
+                    {
+                        NotificationArn = aws_sns_topic.Example.Arn,
+                        NotificationEvents = 
+                        {
+                            "All",
+                        },
+                        NotificationType = "Command",
+                    },
+                    OutputS3Bucket = aws_s3_bucket.Example.Bucket,
+                    OutputS3KeyPrefix = "output",
+                    Parameter = 
+                    {
+                        
+                        {
+                            { "name", "commands" },
+                            { "values", 
+                            {
+                                "date",
+                            } },
+                        },
+                    },
+                    ServiceRoleArn = aws_iam_role.Example.Arn,
+                    TimeoutSeconds = 600,
+                },
+            },
+            TaskType = "RUN_COMMAND",
+            WindowId = aws_ssm_maintenance_window.Example.Id,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -115,7 +227,7 @@ example = aws.ssm.MaintenanceWindowTask("example",
             "notificationConfig": {
                 "notificationArn": aws_sns_topic["example"]["arn"],
                 "notificationEvents": ["All"],
-                "notificationType": "Command",
+                "notification_type": "Command",
             },
             "outputS3Bucket": aws_s3_bucket["example"]["bucket"],
             "outputS3KeyPrefix": "output",
@@ -123,7 +235,7 @@ example = aws.ssm.MaintenanceWindowTask("example",
                 "name": "commands",
                 "values": ["date"],
             }],
-            "serviceRoleArn": aws_iam_role["example"]["arn"],
+            "service_role_arn": aws_iam_role["example"]["arn"],
             "timeoutSeconds": 600,
         },
     },
@@ -172,7 +284,47 @@ const example = new aws.ssm.MaintenanceWindowTask("example", {
 
 ### Step Function Tasks
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.Ssm.MaintenanceWindowTask("example", new Aws.Ssm.MaintenanceWindowTaskArgs
+        {
+            MaxConcurrency = 2,
+            MaxErrors = 1,
+            Priority = 1,
+            ServiceRoleArn = aws_iam_role.Example.Arn,
+            Targets = 
+            {
+                new Aws.Ssm.Inputs.MaintenanceWindowTaskTargetArgs
+                {
+                    Key = "InstanceIds",
+                    Values = 
+                    {
+                        aws_instance.Example.Id,
+                    },
+                },
+            },
+            TaskArn = aws_sfn_activity.Example.Id,
+            TaskInvocationParameters = new Aws.Ssm.Inputs.MaintenanceWindowTaskTaskInvocationParametersArgs
+            {
+                StepFunctionsParameters = new Aws.Ssm.Inputs.MaintenanceWindowTaskTaskInvocationParametersStepFunctionsParametersArgs
+                {
+                    Input = "{\"key1\":\"value1\"}",
+                    Name = "example",
+                },
+            },
+            TaskType = "STEP_FUNCTIONS",
+            WindowId = aws_ssm_maintenance_window.Example.Id,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

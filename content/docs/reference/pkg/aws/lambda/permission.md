@@ -90,6 +90,59 @@ lambda_ = aws.sns.TopicSubscription("lambda",
     protocol="lambda",
     topic=default_topic.arn)
 ```
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var defaultTopic = new Aws.Sns.Topic("defaultTopic", new Aws.Sns.TopicArgs
+        {
+        });
+        var defaultRole = new Aws.Iam.Role("defaultRole", new Aws.Iam.RoleArgs
+        {
+            AssumeRolePolicy = @"{
+  ""Version"": ""2012-10-17"",
+  ""Statement"": [
+    {
+      ""Action"": ""sts:AssumeRole"",
+      ""Principal"": {
+        ""Service"": ""lambda.amazonaws.com""
+      },
+      ""Effect"": ""Allow"",
+      ""Sid"": """"
+    }
+  ]
+}
+
+",
+        });
+        var func = new Aws.Lambda.Function("func", new Aws.Lambda.FunctionArgs
+        {
+            Code = new FileArchive("lambdatest.zip"),
+            Handler = "exports.handler",
+            Role = defaultRole.Arn,
+            Runtime = "python2.7",
+        });
+        var withSns = new Aws.Lambda.Permission("withSns", new Aws.Lambda.PermissionArgs
+        {
+            Action = "lambda:InvokeFunction",
+            Function = func.Name,
+            Principal = "sns.amazonaws.com",
+            SourceArn = defaultTopic.Arn,
+        });
+        var lambda = new Aws.Sns.TopicSubscription("lambda", new Aws.Sns.TopicSubscriptionArgs
+        {
+            Endpoint = func.Arn,
+            Protocol = "lambda",
+            Topic = defaultTopic.Arn,
+        });
+    }
+
+}
+```
 
 ## Specify Lambda permissions for API Gateway REST API
 
@@ -118,6 +171,29 @@ lambda_permission = aws.lambda_.Permission("lambdaPermission",
     principal="apigateway.amazonaws.com",
     source_arn=my_demo_api.execution_arn.apply(lambda execution_arn: f"{execution_arn}/*/*/*"))
 ```
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var myDemoAPI = new Aws.ApiGateway.RestApi("myDemoAPI", new Aws.ApiGateway.RestApiArgs
+        {
+            Description = "This is my API for demonstration purposes",
+        });
+        var lambdaPermission = new Aws.Lambda.Permission("lambdaPermission", new Aws.Lambda.PermissionArgs
+        {
+            Action = "lambda:InvokeFunction",
+            Function = "MyDemoFunction",
+            Principal = "apigateway.amazonaws.com",
+            SourceArn = myDemoAPI.ExecutionArn.Apply(executionArn => $"{executionArn}/*/*/*"),
+        });
+    }
+
+}
+```
 
 {{% examples %}}
 ## Example Usage
@@ -125,7 +201,57 @@ lambda_permission = aws.lambda_.Permission("lambdaPermission",
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var iamForLambda = new Aws.Iam.Role("iamForLambda", new Aws.Iam.RoleArgs
+        {
+            AssumeRolePolicy = @"{
+  ""Version"": ""2012-10-17"",
+  ""Statement"": [
+    {
+      ""Action"": ""sts:AssumeRole"",
+      ""Principal"": {
+        ""Service"": ""lambda.amazonaws.com""
+      },
+      ""Effect"": ""Allow"",
+      ""Sid"": """"
+    }
+  ]
+}
+
+",
+        });
+        var testLambda = new Aws.Lambda.Function("testLambda", new Aws.Lambda.FunctionArgs
+        {
+            Code = new FileArchive("lambdatest.zip"),
+            Handler = "exports.handler",
+            Role = iamForLambda.Arn,
+            Runtime = "nodejs8.10",
+        });
+        var testAlias = new Aws.Lambda.Alias("testAlias", new Aws.Lambda.AliasArgs
+        {
+            Description = "a sample description",
+            FunctionName = testLambda.Name,
+            FunctionVersion = "$$LATEST",
+        });
+        var allowCloudwatch = new Aws.Lambda.Permission("allowCloudwatch", new Aws.Lambda.PermissionArgs
+        {
+            Action = "lambda:InvokeFunction",
+            Function = testLambda.Name,
+            Principal = "events.amazonaws.com",
+            Qualifier = testAlias.Name,
+            SourceArn = "arn:aws:events:eu-west-1:111122223333:rule/RunDaily",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

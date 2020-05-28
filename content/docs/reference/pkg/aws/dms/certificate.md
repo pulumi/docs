@@ -23,7 +23,24 @@ Provides a DMS (Data Migration Service) certificate resource. DMS certificates c
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        // Create a new certificate
+        var test = new Aws.Dms.Certificate("test", new Aws.Dms.CertificateArgs
+        {
+            CertificateId = "test-dms-certificate-tf",
+            CertificatePem = "...",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

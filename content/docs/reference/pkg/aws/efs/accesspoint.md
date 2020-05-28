@@ -20,7 +20,22 @@ Provides an Elastic File System (EFS) access point.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var test = new Aws.Efs.AccessPoint("test", new Aws.Efs.AccessPointArgs
+        {
+            FileSystemId = aws_efs_file_system.Foo.Id,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

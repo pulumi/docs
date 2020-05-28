@@ -16,84 +16,9 @@ Manages a Route53 Hosted Zone VPC association. VPC associations can only be made
 
 > **NOTE:** This provider provides both this standalone Zone VPC Association resource and exclusive VPC associations defined in-line in the [`aws.route53.Zone` resource](https://www.terraform.io/docs/providers/aws/r/route53_zone.html) via `vpc` configuration blocks. At this time, you cannot use those in-line VPC associations in conjunction with this resource and the same zone ID otherwise it will cause a perpetual difference in plan output. You can optionally use [`ignoreChanges`](https://www.pulumi.com/docs/intro/concepts/programming-model/#ignorechanges) in the `aws.route53.Zone` resource to manage additional associations via this resource.
 
-
-
 {{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_aws as aws
-
-primary = aws.ec2.Vpc("primary",
-    cidr_block="10.6.0.0/16",
-    enable_dns_hostnames=True,
-    enable_dns_support=True)
-secondary_vpc = aws.ec2.Vpc("secondaryVpc",
-    cidr_block="10.7.0.0/16",
-    enable_dns_hostnames=True,
-    enable_dns_support=True)
-example = aws.route53.Zone("example",
-    lifecycle={
-        "ignoreChanges": [
-            "vpcId",
-            "vpcRegion",
-            "vpcs",
-        ],
-    },
-    vpcs=[{
-        "vpcId": primary.id,
-    }])
-secondary_zone_association = aws.route53.ZoneAssociation("secondaryZoneAssociation",
-    vpc_id=secondary_vpc.id,
-    zone_id=example.zone_id)
-```
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const primary = new aws.ec2.Vpc("primary", {
-    cidrBlock: "10.6.0.0/16",
-    enableDnsHostnames: true,
-    enableDnsSupport: true,
-});
-const secondaryVpc = new aws.ec2.Vpc("secondary", {
-    cidrBlock: "10.7.0.0/16",
-    enableDnsHostnames: true,
-    enableDnsSupport: true,
-});
-const example = new aws.route53.Zone("example", {
-    // NOTE: The aws.route53.Zone vpc argument accepts multiple configuration
-    //       blocks. The below usage of the single vpc configuration, the
-    //       lifecycle configuration, and the aws.route53.ZoneAssociation
-    //       resource is for illustrative purposes (e.g. for a separate
-    //       cross-account authorization process, which is not shown here).
-    vpcs: [{
-        vpcId: primary.id,
-    }],
-}, { ignoreChanges: ["vpcId", "vpcRegion", "vpcs"] });
-const secondaryZoneAssociation = new aws.route53.ZoneAssociation("secondary", {
-    vpcId: secondaryVpc.id,
-    zoneId: example.zoneId,
-});
-```
-{{% /example %}}
-
 {{% /examples %}}
+
 
 
 ## Create a ZoneAssociation Resource {#create}

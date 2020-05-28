@@ -33,7 +33,33 @@ License rules should be in the format of `#RuleType=RuleValue`. Supported rule t
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.LicenseManager.LicenseConfiguration("example", new Aws.LicenseManager.LicenseConfigurationArgs
+        {
+            Description = "Example",
+            LicenseCount = 10,
+            LicenseCountHardLimit = true,
+            LicenseCountingType = "Socket",
+            LicenseRules = 
+            {
+                "#minimumSockets=2",
+            },
+            Tags = 
+            {
+                { "foo", "barr" },
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

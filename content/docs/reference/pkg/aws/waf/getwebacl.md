@@ -20,7 +20,22 @@ meta_desc: "Explore the GetWebAcl function of the waf module, including examples
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = Output.Create(Aws.Waf.GetWebAcl.InvokeAsync(new Aws.Waf.GetWebAclArgs
+        {
+            Name = "tfWAFWebACL",
+        }));
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

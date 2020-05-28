@@ -26,7 +26,61 @@ and you'd need to re-run `apply` every time an instance comes up or dies.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var dict = Output.Create(Initialize());
+    }
+
+    private async Task<IDictionary<string, Output<string>>> Initialize()
+    {
+        var testInstances = await Aws.Ec2.GetInstances.InvokeAsync(new Aws.Ec2.GetInstancesArgs
+        {
+            Filters = 
+            {
+                new Aws.Ec2.Inputs.GetInstancesFilterArgs
+                {
+                    Name = "instance.group-id",
+                    Values = 
+                    {
+                        "sg-12345678",
+                    },
+                },
+            },
+            InstanceStateNames = 
+            {
+                "running",
+                "stopped",
+            },
+            InstanceTags = 
+            {
+                { "Role", "HardWorker" },
+            },
+        });
+        var testEip = new List<Aws.Ec2.Eip>();
+        for (var rangeIndex = 0; rangeIndex < testInstances.Ids.Length; rangeIndex++)
+        {
+            var range = new { Value = rangeIndex };
+            testEip.Add(new Aws.Ec2.Eip($"testEip-{range.Value}", new Aws.Ec2.EipArgs
+            {
+                Instance = testInstances.Ids[range.Value],
+            }));
+        }
+
+        return new Dictionary<string, Output<string>>
+        {
+        };
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

@@ -158,7 +158,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">storage_location</span><span class="o">=</span><span class="p">{</span>
         <span class="s2">&quot;bucket&quot;</span><span class="p">:</span> <span class="n">aws_s3_bucket</span><span class="p">[</span><span class="s2">&quot;test&quot;</span><span class="p">][</span><span class="s2">&quot;bucket&quot;</span><span class="p">],</span>
         <span class="s2">&quot;key&quot;</span><span class="p">:</span> <span class="n">aws_s3_bucket_object</span><span class="p">[</span><span class="s2">&quot;test&quot;</span><span class="p">][</span><span class="s2">&quot;key&quot;</span><span class="p">],</span>
-        <span class="s2">&quot;roleArn&quot;</span><span class="p">:</span> <span class="n">aws_iam_role</span><span class="p">[</span><span class="s2">&quot;test&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;role_arn&quot;</span><span class="p">:</span> <span class="n">aws_iam_role</span><span class="p">[</span><span class="s2">&quot;test&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
     <span class="p">})</span>
 </pre></div>
 </div>

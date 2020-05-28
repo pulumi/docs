@@ -20,7 +20,22 @@ Provides a resource to designate the active SES receipt rule set
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var main = new Aws.Ses.ActiveReceiptRuleSet("main", new Aws.Ses.ActiveReceiptRuleSetArgs
+        {
+            RuleSetName = "primary-rules",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

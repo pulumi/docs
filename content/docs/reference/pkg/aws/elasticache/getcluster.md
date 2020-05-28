@@ -20,7 +20,22 @@ Use this data source to get information about an Elasticache Cluster
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var myCluster = Output.Create(Aws.ElastiCache.GetCluster.InvokeAsync(new Aws.ElastiCache.GetClusterArgs
+        {
+            ClusterId = "my-cluster-id",
+        }));
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

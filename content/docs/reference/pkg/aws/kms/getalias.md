@@ -22,7 +22,22 @@ without having to hard code the ARN as input.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var s3 = Output.Create(Aws.Kms.GetAlias.InvokeAsync(new Aws.Kms.GetAliasArgs
+        {
+            Name = "alias/aws/s3",
+        }));
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

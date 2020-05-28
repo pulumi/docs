@@ -39,7 +39,39 @@ the separate resource.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var routeTable = new Aws.Ec2.RouteTable("routeTable", new Aws.Ec2.RouteTableArgs
+        {
+            Routes = 
+            {
+                new Aws.Ec2.Inputs.RouteTableRouteArgs
+                {
+                    CidrBlock = "10.0.1.0/24",
+                    GatewayId = aws_internet_gateway.Main.Id,
+                },
+                new Aws.Ec2.Inputs.RouteTableRouteArgs
+                {
+                    EgressOnlyGatewayId = aws_egress_only_internet_gateway.Foo.Id,
+                    Ipv6CidrBlock = "::/0",
+                },
+            },
+            Tags = 
+            {
+                { "Name", "main" },
+            },
+            VpcId = aws_vpc.Default.Id,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -54,12 +86,12 @@ import pulumi_aws as aws
 route_table = aws.ec2.RouteTable("routeTable",
     routes=[
         {
-            "cidrBlock": "10.0.1.0/24",
-            "gatewayId": aws_internet_gateway["main"]["id"],
+            "cidr_block": "10.0.1.0/24",
+            "gateway_id": aws_internet_gateway["main"]["id"],
         },
         {
-            "egressOnlyGatewayId": aws_egress_only_internet_gateway["foo"]["id"],
-            "ipv6CidrBlock": "::/0",
+            "egress_only_gateway_id": aws_egress_only_internet_gateway["foo"]["id"],
+            "ipv6_cidr_block": "::/0",
         },
     ],
     tags={

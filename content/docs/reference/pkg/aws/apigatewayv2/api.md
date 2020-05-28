@@ -22,7 +22,23 @@ Manages an Amazon API Gateway Version 2 API.
 {{< chooser language "typescript,python,go,csharp" / >}}
 ### Basic WebSocket API
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.ApiGatewayV2.Api("example", new Aws.ApiGatewayV2.ApiArgs
+        {
+            ProtocolType = "WEBSOCKET",
+            RouteSelectionExpression = "$$request.body.action",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -54,7 +70,22 @@ const example = new aws.apigatewayv2.Api("example", {
 
 ### Basic HTTP API
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.ApiGatewayV2.Api("example", new Aws.ApiGatewayV2.ApiArgs
+        {
+            ProtocolType = "HTTP",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

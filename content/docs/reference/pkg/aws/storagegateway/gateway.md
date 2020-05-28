@@ -22,7 +22,25 @@ Manages an AWS Storage Gateway file, tape, or volume gateway in the provider reg
 {{< chooser language "typescript,python,go,csharp" / >}}
 ### File Gateway
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.StorageGateway.Gateway("example", new Aws.StorageGateway.GatewayArgs
+        {
+            GatewayIpAddress = "1.2.3.4",
+            GatewayName = "example",
+            GatewayTimezone = "GMT",
+            GatewayType = "FILE_S3",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -56,49 +74,27 @@ const example = new aws.storagegateway.Gateway("example", {
 ```
 {{% /example %}}
 
-### Tape Gateway
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_aws as aws
-
-example = aws.storagegateway.Gateway("example",
-    gateway_ip_address="1.2.3.4",
-    gateway_name="example",
-    gateway_timezone="GMT",
-    gateway_type="VTL",
-    media_changer_type="AWS-Gateway-VTL",
-    tape_drive_type="IBM-ULT3580-TD5")
-```
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const example = new aws.storagegateway.Gateway("example", {
-    gatewayIpAddress: "1.2.3.4",
-    gatewayName: "example",
-    gatewayTimezone: "GMT",
-    gatewayType: "VTL",
-    mediaChangerType: "AWS-Gateway-VTL",
-    tapeDriveType: "IBM-ULT3580-TD5",
-});
-```
-{{% /example %}}
-
 ### Volume Gateway (Cached)
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.StorageGateway.Gateway("example", new Aws.StorageGateway.GatewayArgs
+        {
+            GatewayIpAddress = "1.2.3.4",
+            GatewayName = "example",
+            GatewayTimezone = "GMT",
+            GatewayType = "CACHED",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -134,7 +130,25 @@ const example = new aws.storagegateway.Gateway("example", {
 
 ### Volume Gateway (Stored)
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.StorageGateway.Gateway("example", new Aws.StorageGateway.GatewayArgs
+        {
+            GatewayIpAddress = "1.2.3.4",
+            GatewayName = "example",
+            GatewayTimezone = "GMT",
+            GatewayType = "STORED",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

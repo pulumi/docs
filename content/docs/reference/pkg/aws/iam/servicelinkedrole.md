@@ -20,7 +20,22 @@ Provides an [IAM service-linked role](https://docs.aws.amazon.com/IAM/latest/Use
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var elasticbeanstalk = new Aws.Iam.ServiceLinkedRole("elasticbeanstalk", new Aws.Iam.ServiceLinkedRoleArgs
+        {
+            AwsServiceName = "elasticbeanstalk.amazonaws.com",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

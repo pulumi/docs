@@ -21,7 +21,57 @@ Read [limits and considerations](https://docs.aws.amazon.com/vpc/latest/mirrorin
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var filter = new Aws.Ec2.TrafficMirrorFilter("filter", new Aws.Ec2.TrafficMirrorFilterArgs
+        {
+            Description = "traffic mirror filter - example",
+            NetworkServices = 
+            {
+                "amazon-dns",
+            },
+        });
+        var ruleout = new Aws.Ec2.TrafficMirrorFilterRule("ruleout", new Aws.Ec2.TrafficMirrorFilterRuleArgs
+        {
+            Description = "test rule",
+            DestinationCidrBlock = "10.0.0.0/8",
+            RuleAction = "accept",
+            RuleNumber = 1,
+            SourceCidrBlock = "10.0.0.0/8",
+            TrafficDirection = "egress",
+            TrafficMirrorFilterId = filter.Id,
+        });
+        var rulein = new Aws.Ec2.TrafficMirrorFilterRule("rulein", new Aws.Ec2.TrafficMirrorFilterRuleArgs
+        {
+            Description = "test rule",
+            DestinationCidrBlock = "10.0.0.0/8",
+            DestinationPortRange = new Aws.Ec2.Inputs.TrafficMirrorFilterRuleDestinationPortRangeArgs
+            {
+                FromPort = 22,
+                ToPort = 53,
+            },
+            Protocol = 6,
+            RuleAction = "accept",
+            RuleNumber = 1,
+            SourceCidrBlock = "10.0.0.0/8",
+            SourcePortRange = new Aws.Ec2.Inputs.TrafficMirrorFilterRuleSourcePortRangeArgs
+            {
+                FromPort = 0,
+                ToPort = 10,
+            },
+            TrafficDirection = "ingress",
+            TrafficMirrorFilterId = filter.Id,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -48,16 +98,16 @@ rulein = aws.ec2.TrafficMirrorFilterRule("rulein",
     description="test rule",
     destination_cidr_block="10.0.0.0/8",
     destination_port_range={
-        "fromPort": 22,
-        "toPort": 53,
+        "from_port": 22,
+        "to_port": 53,
     },
     protocol=6,
     rule_action="accept",
     rule_number=1,
     source_cidr_block="10.0.0.0/8",
     source_port_range={
-        "fromPort": 0,
-        "toPort": 10,
+        "from_port": 0,
+        "to_port": 10,
     },
     traffic_direction="ingress",
     traffic_mirror_filter_id=filter.id)

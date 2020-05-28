@@ -22,7 +22,22 @@ Provides a resource to manage whether default EBS encryption is enabled for your
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.Ebs.EncryptionByDefault("example", new Aws.Ebs.EncryptionByDefaultArgs
+        {
+            Enabled = true,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

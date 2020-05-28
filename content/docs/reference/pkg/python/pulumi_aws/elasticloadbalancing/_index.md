@@ -23,9 +23,9 @@ anything, please consult the source <a class="reference external" href="https://
 <span class="n">lb</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">elb</span><span class="o">.</span><span class="n">LoadBalancer</span><span class="p">(</span><span class="s2">&quot;lb&quot;</span><span class="p">,</span>
     <span class="n">availability_zones</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;us-east-1a&quot;</span><span class="p">],</span>
     <span class="n">listeners</span><span class="o">=</span><span class="p">[{</span>
-        <span class="s2">&quot;instancePort&quot;</span><span class="p">:</span> <span class="mi">8000</span><span class="p">,</span>
+        <span class="s2">&quot;instance_port&quot;</span><span class="p">:</span> <span class="mi">8000</span><span class="p">,</span>
         <span class="s2">&quot;instanceProtocol&quot;</span><span class="p">:</span> <span class="s2">&quot;http&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;lbPort&quot;</span><span class="p">:</span> <span class="mi">80</span><span class="p">,</span>
+        <span class="s2">&quot;lb_port&quot;</span><span class="p">:</span> <span class="mi">80</span><span class="p">,</span>
         <span class="s2">&quot;lbProtocol&quot;</span><span class="p">:</span> <span class="s2">&quot;http&quot;</span><span class="p">,</span>
     <span class="p">}])</span>
 <span class="n">foo</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">elb</span><span class="o">.</span><span class="n">AppCookieStickinessPolicy</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span>
@@ -303,9 +303,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <span class="n">wu_tang</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">elb</span><span class="o">.</span><span class="n">LoadBalancer</span><span class="p">(</span><span class="s2">&quot;wu-tang&quot;</span><span class="p">,</span>
     <span class="n">availability_zones</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;us-east-1a&quot;</span><span class="p">],</span>
     <span class="n">listeners</span><span class="o">=</span><span class="p">[{</span>
-        <span class="s2">&quot;instancePort&quot;</span><span class="p">:</span> <span class="mi">443</span><span class="p">,</span>
+        <span class="s2">&quot;instance_port&quot;</span><span class="p">:</span> <span class="mi">443</span><span class="p">,</span>
         <span class="s2">&quot;instanceProtocol&quot;</span><span class="p">:</span> <span class="s2">&quot;http&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;lbPort&quot;</span><span class="p">:</span> <span class="mi">443</span><span class="p">,</span>
+        <span class="s2">&quot;lb_port&quot;</span><span class="p">:</span> <span class="mi">443</span><span class="p">,</span>
         <span class="s2">&quot;lbProtocol&quot;</span><span class="p">:</span> <span class="s2">&quot;https&quot;</span><span class="p">,</span>
         <span class="s2">&quot;sslCertificateId&quot;</span><span class="p">:</span> <span class="s2">&quot;arn:aws:iam::000000000000:server-certificate/wu-tang.net&quot;</span><span class="p">,</span>
     <span class="p">}],</span>
@@ -339,9 +339,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <span class="n">wu_tang</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">elb</span><span class="o">.</span><span class="n">LoadBalancer</span><span class="p">(</span><span class="s2">&quot;wu-tang&quot;</span><span class="p">,</span>
     <span class="n">availability_zones</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;us-east-1a&quot;</span><span class="p">],</span>
     <span class="n">listeners</span><span class="o">=</span><span class="p">[{</span>
-        <span class="s2">&quot;instancePort&quot;</span><span class="p">:</span> <span class="mi">443</span><span class="p">,</span>
+        <span class="s2">&quot;instance_port&quot;</span><span class="p">:</span> <span class="mi">443</span><span class="p">,</span>
         <span class="s2">&quot;instanceProtocol&quot;</span><span class="p">:</span> <span class="s2">&quot;http&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;lbPort&quot;</span><span class="p">:</span> <span class="mi">443</span><span class="p">,</span>
+        <span class="s2">&quot;lb_port&quot;</span><span class="p">:</span> <span class="mi">443</span><span class="p">,</span>
         <span class="s2">&quot;lbProtocol&quot;</span><span class="p">:</span> <span class="s2">&quot;https&quot;</span><span class="p">,</span>
         <span class="s2">&quot;sslCertificateId&quot;</span><span class="p">:</span> <span class="s2">&quot;arn:aws:iam::000000000000:server-certificate/wu-tang.net&quot;</span><span class="p">,</span>
     <span class="p">}],</span>
@@ -470,7 +470,7 @@ conflict and will overwrite attachments.</p>
 <span class="n">bar</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">elb</span><span class="o">.</span><span class="n">LoadBalancer</span><span class="p">(</span><span class="s2">&quot;bar&quot;</span><span class="p">,</span>
     <span class="n">access_logs</span><span class="o">=</span><span class="p">{</span>
         <span class="s2">&quot;bucket&quot;</span><span class="p">:</span> <span class="s2">&quot;foo&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;bucketPrefix&quot;</span><span class="p">:</span> <span class="s2">&quot;bar&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;bucket_prefix&quot;</span><span class="p">:</span> <span class="s2">&quot;bar&quot;</span><span class="p">,</span>
         <span class="s2">&quot;interval&quot;</span><span class="p">:</span> <span class="mi">60</span><span class="p">,</span>
     <span class="p">},</span>
     <span class="n">availability_zones</span><span class="o">=</span><span class="p">[</span>
@@ -492,15 +492,15 @@ conflict and will overwrite attachments.</p>
     <span class="n">instances</span><span class="o">=</span><span class="p">[</span><span class="n">aws_instance</span><span class="p">[</span><span class="s2">&quot;foo&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">]],</span>
     <span class="n">listeners</span><span class="o">=</span><span class="p">[</span>
         <span class="p">{</span>
-            <span class="s2">&quot;instancePort&quot;</span><span class="p">:</span> <span class="mi">8000</span><span class="p">,</span>
+            <span class="s2">&quot;instance_port&quot;</span><span class="p">:</span> <span class="mi">8000</span><span class="p">,</span>
             <span class="s2">&quot;instanceProtocol&quot;</span><span class="p">:</span> <span class="s2">&quot;http&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;lbPort&quot;</span><span class="p">:</span> <span class="mi">80</span><span class="p">,</span>
+            <span class="s2">&quot;lb_port&quot;</span><span class="p">:</span> <span class="mi">80</span><span class="p">,</span>
             <span class="s2">&quot;lbProtocol&quot;</span><span class="p">:</span> <span class="s2">&quot;http&quot;</span><span class="p">,</span>
         <span class="p">},</span>
         <span class="p">{</span>
-            <span class="s2">&quot;instancePort&quot;</span><span class="p">:</span> <span class="mi">8000</span><span class="p">,</span>
+            <span class="s2">&quot;instance_port&quot;</span><span class="p">:</span> <span class="mi">8000</span><span class="p">,</span>
             <span class="s2">&quot;instanceProtocol&quot;</span><span class="p">:</span> <span class="s2">&quot;http&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;lbPort&quot;</span><span class="p">:</span> <span class="mi">443</span><span class="p">,</span>
+            <span class="s2">&quot;lb_port&quot;</span><span class="p">:</span> <span class="mi">443</span><span class="p">,</span>
             <span class="s2">&quot;lbProtocol&quot;</span><span class="p">:</span> <span class="s2">&quot;https&quot;</span><span class="p">,</span>
             <span class="s2">&quot;sslCertificateId&quot;</span><span class="p">:</span> <span class="s2">&quot;arn:aws:iam::123456789012:server-certificate/certName&quot;</span><span class="p">,</span>
         <span class="p">},</span>
@@ -852,9 +852,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <span class="n">wu_tang</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">elb</span><span class="o">.</span><span class="n">LoadBalancer</span><span class="p">(</span><span class="s2">&quot;wu-tang&quot;</span><span class="p">,</span>
     <span class="n">availability_zones</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;us-east-1a&quot;</span><span class="p">],</span>
     <span class="n">listeners</span><span class="o">=</span><span class="p">[{</span>
-        <span class="s2">&quot;instancePort&quot;</span><span class="p">:</span> <span class="mi">443</span><span class="p">,</span>
+        <span class="s2">&quot;instance_port&quot;</span><span class="p">:</span> <span class="mi">443</span><span class="p">,</span>
         <span class="s2">&quot;instanceProtocol&quot;</span><span class="p">:</span> <span class="s2">&quot;http&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;lbPort&quot;</span><span class="p">:</span> <span class="mi">443</span><span class="p">,</span>
+        <span class="s2">&quot;lb_port&quot;</span><span class="p">:</span> <span class="mi">443</span><span class="p">,</span>
         <span class="s2">&quot;lbProtocol&quot;</span><span class="p">:</span> <span class="s2">&quot;https&quot;</span><span class="p">,</span>
         <span class="s2">&quot;sslCertificateId&quot;</span><span class="p">:</span> <span class="s2">&quot;arn:aws:iam::000000000000:server-certificate/wu-tang.net&quot;</span><span class="p">,</span>
     <span class="p">}],</span>
@@ -979,9 +979,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <span class="n">lb</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">elb</span><span class="o">.</span><span class="n">LoadBalancer</span><span class="p">(</span><span class="s2">&quot;lb&quot;</span><span class="p">,</span>
     <span class="n">availability_zones</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;us-east-1a&quot;</span><span class="p">],</span>
     <span class="n">listeners</span><span class="o">=</span><span class="p">[{</span>
-        <span class="s2">&quot;instancePort&quot;</span><span class="p">:</span> <span class="mi">8000</span><span class="p">,</span>
+        <span class="s2">&quot;instance_port&quot;</span><span class="p">:</span> <span class="mi">8000</span><span class="p">,</span>
         <span class="s2">&quot;instanceProtocol&quot;</span><span class="p">:</span> <span class="s2">&quot;http&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;lbPort&quot;</span><span class="p">:</span> <span class="mi">80</span><span class="p">,</span>
+        <span class="s2">&quot;lb_port&quot;</span><span class="p">:</span> <span class="mi">80</span><span class="p">,</span>
         <span class="s2">&quot;lbProtocol&quot;</span><span class="p">:</span> <span class="s2">&quot;http&quot;</span><span class="p">,</span>
     <span class="p">}])</span>
 <span class="n">foo</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">elb</span><span class="o">.</span><span class="n">LoadBalancerCookieStickinessPolicy</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span>
@@ -1106,9 +1106,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <span class="n">wu_tang</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">elb</span><span class="o">.</span><span class="n">LoadBalancer</span><span class="p">(</span><span class="s2">&quot;wu-tang&quot;</span><span class="p">,</span>
     <span class="n">availability_zones</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;us-east-1a&quot;</span><span class="p">],</span>
     <span class="n">listeners</span><span class="o">=</span><span class="p">[{</span>
-        <span class="s2">&quot;instancePort&quot;</span><span class="p">:</span> <span class="mi">443</span><span class="p">,</span>
+        <span class="s2">&quot;instance_port&quot;</span><span class="p">:</span> <span class="mi">443</span><span class="p">,</span>
         <span class="s2">&quot;instanceProtocol&quot;</span><span class="p">:</span> <span class="s2">&quot;http&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;lbPort&quot;</span><span class="p">:</span> <span class="mi">443</span><span class="p">,</span>
+        <span class="s2">&quot;lb_port&quot;</span><span class="p">:</span> <span class="mi">443</span><span class="p">,</span>
         <span class="s2">&quot;lbProtocol&quot;</span><span class="p">:</span> <span class="s2">&quot;https&quot;</span><span class="p">,</span>
         <span class="s2">&quot;sslCertificateId&quot;</span><span class="p">:</span> <span class="s2">&quot;arn:aws:iam::000000000000:server-certificate/wu-tang.net&quot;</span><span class="p">,</span>
     <span class="p">}],</span>
@@ -1281,9 +1281,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <span class="n">lb</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">elb</span><span class="o">.</span><span class="n">LoadBalancer</span><span class="p">(</span><span class="s2">&quot;lb&quot;</span><span class="p">,</span>
     <span class="n">availability_zones</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;us-east-1a&quot;</span><span class="p">],</span>
     <span class="n">listeners</span><span class="o">=</span><span class="p">[{</span>
-        <span class="s2">&quot;instancePort&quot;</span><span class="p">:</span> <span class="mi">8000</span><span class="p">,</span>
+        <span class="s2">&quot;instance_port&quot;</span><span class="p">:</span> <span class="mi">8000</span><span class="p">,</span>
         <span class="s2">&quot;instanceProtocol&quot;</span><span class="p">:</span> <span class="s2">&quot;https&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;lbPort&quot;</span><span class="p">:</span> <span class="mi">443</span><span class="p">,</span>
+        <span class="s2">&quot;lb_port&quot;</span><span class="p">:</span> <span class="mi">443</span><span class="p">,</span>
         <span class="s2">&quot;lbProtocol&quot;</span><span class="p">:</span> <span class="s2">&quot;https&quot;</span><span class="p">,</span>
         <span class="s2">&quot;sslCertificateId&quot;</span><span class="p">:</span> <span class="s2">&quot;arn:aws:iam::123456789012:server-certificate/certName&quot;</span><span class="p">,</span>
     <span class="p">}])</span>
@@ -1452,7 +1452,7 @@ in a given region for the purpose of using in an AWS Route53 Alias.</p>
     <span class="n">aliases</span><span class="o">=</span><span class="p">[{</span>
         <span class="s2">&quot;evaluateTargetHealth&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
         <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="n">aws_elb</span><span class="p">[</span><span class="s2">&quot;main&quot;</span><span class="p">][</span><span class="s2">&quot;dns_name&quot;</span><span class="p">],</span>
-        <span class="s2">&quot;zoneId&quot;</span><span class="p">:</span> <span class="n">main</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;zone_id&quot;</span><span class="p">:</span> <span class="n">main</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
     <span class="p">}],</span>
     <span class="n">name</span><span class="o">=</span><span class="s2">&quot;example.com&quot;</span><span class="p">,</span>
     <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;A&quot;</span><span class="p">,</span>
@@ -1531,9 +1531,9 @@ in a given region for the purpose of whitelisting in S3 bucket policy.</p>
     <span class="p">},</span>
     <span class="n">availability_zones</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;us-west-2a&quot;</span><span class="p">],</span>
     <span class="n">listeners</span><span class="o">=</span><span class="p">[{</span>
-        <span class="s2">&quot;instancePort&quot;</span><span class="p">:</span> <span class="mi">8000</span><span class="p">,</span>
+        <span class="s2">&quot;instance_port&quot;</span><span class="p">:</span> <span class="mi">8000</span><span class="p">,</span>
         <span class="s2">&quot;instanceProtocol&quot;</span><span class="p">:</span> <span class="s2">&quot;http&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;lbPort&quot;</span><span class="p">:</span> <span class="mi">80</span><span class="p">,</span>
+        <span class="s2">&quot;lb_port&quot;</span><span class="p">:</span> <span class="mi">80</span><span class="p">,</span>
         <span class="s2">&quot;lbProtocol&quot;</span><span class="p">:</span> <span class="s2">&quot;http&quot;</span><span class="p">,</span>
     <span class="p">}])</span>
 </pre></div>

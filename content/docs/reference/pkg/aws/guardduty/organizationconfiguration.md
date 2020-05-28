@@ -22,7 +22,27 @@ Manages the GuardDuty Organization Configuration in the current AWS Region. The 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleDetector = new Aws.GuardDuty.Detector("exampleDetector", new Aws.GuardDuty.DetectorArgs
+        {
+            Enable = true,
+        });
+        var exampleOrganizationConfiguration = new Aws.GuardDuty.OrganizationConfiguration("exampleOrganizationConfiguration", new Aws.GuardDuty.OrganizationConfigurationArgs
+        {
+            AutoEnable = true,
+            DetectorId = exampleDetector.Id,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

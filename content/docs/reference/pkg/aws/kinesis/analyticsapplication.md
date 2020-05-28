@@ -23,7 +23,61 @@ For more details, see the [Amazon Kinesis Analytics Documentation](https://docs.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var testStream = new Aws.Kinesis.Stream("testStream", new Aws.Kinesis.StreamArgs
+        {
+            ShardCount = 1,
+        });
+        var testApplication = new Aws.Kinesis.AnalyticsApplication("testApplication", new Aws.Kinesis.AnalyticsApplicationArgs
+        {
+            Inputs = new Aws.Kinesis.Inputs.AnalyticsApplicationInputsArgs
+            {
+                KinesisStream = new Aws.Kinesis.Inputs.AnalyticsApplicationInputsKinesisStreamArgs
+                {
+                    ResourceArn = testStream.Arn,
+                    RoleArn = aws_iam_role.Test.Arn,
+                },
+                NamePrefix = "test_prefix",
+                Parallelism = new Aws.Kinesis.Inputs.AnalyticsApplicationInputsParallelismArgs
+                {
+                    Count = 1,
+                },
+                Schema = new Aws.Kinesis.Inputs.AnalyticsApplicationInputsSchemaArgs
+                {
+                    RecordColumns = 
+                    {
+                        new Aws.Kinesis.Inputs.AnalyticsApplicationInputsSchemaRecordColumnArgs
+                        {
+                            Mapping = "$$.test",
+                            Name = "test",
+                            SqlType = "VARCHAR(8)",
+                        },
+                    },
+                    RecordEncoding = "UTF-8",
+                    RecordFormat = new Aws.Kinesis.Inputs.AnalyticsApplicationInputsSchemaRecordFormatArgs
+                    {
+                        MappingParameters = new Aws.Kinesis.Inputs.AnalyticsApplicationInputsSchemaRecordFormatMappingParametersArgs
+                        {
+                            Json = new Aws.Kinesis.Inputs.AnalyticsApplicationInputsSchemaRecordFormatMappingParametersJsonArgs
+                            {
+                                RecordRowPath = "$$",
+                            },
+                        },
+                    },
+                },
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -38,10 +92,10 @@ import pulumi_aws as aws
 test_stream = aws.kinesis.Stream("testStream", shard_count=1)
 test_application = aws.kinesis.AnalyticsApplication("testApplication", inputs={
     "kinesisStream": {
-        "resourceArn": test_stream.arn,
-        "roleArn": aws_iam_role["test"]["arn"],
+        "resource_arn": test_stream.arn,
+        "role_arn": aws_iam_role["test"]["arn"],
     },
-    "namePrefix": "test_prefix",
+    "name_prefix": "test_prefix",
     "parallelism": {
         "count": 1,
     },

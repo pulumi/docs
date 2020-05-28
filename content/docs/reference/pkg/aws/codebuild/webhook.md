@@ -20,7 +20,41 @@ Manages a CodeBuild webhook, which is an endpoint accepted by the CodeBuild serv
 {{< chooser language "typescript,python,go,csharp" / >}}
 ### Bitbucket and GitHub
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.CodeBuild.Webhook("example", new Aws.CodeBuild.WebhookArgs
+        {
+            FilterGroups = 
+            {
+                new Aws.CodeBuild.Inputs.WebhookFilterGroupArgs
+                {
+                    Filter = 
+                    {
+                        
+                        {
+                            { "pattern", "PUSH" },
+                            { "type", "EVENT" },
+                        },
+                        
+                        {
+                            { "pattern", "master" },
+                            { "type", "HEAD_REF" },
+                        },
+                    },
+                },
+            },
+            ProjectName = aws_codebuild_project.Example.Name,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -74,7 +108,39 @@ const example = new aws.codebuild.Webhook("example", {
 
 ### GitHub Enterprise
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+using Github = Pulumi.Github;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleWebhook = new Aws.CodeBuild.Webhook("exampleWebhook", new Aws.CodeBuild.WebhookArgs
+        {
+            ProjectName = aws_codebuild_project.Example.Name,
+        });
+        var exampleRepositoryWebhook = new Github.RepositoryWebhook("exampleRepositoryWebhook", new Github.RepositoryWebhookArgs
+        {
+            Active = true,
+            Configuration = new Github.Inputs.RepositoryWebhookConfigurationArgs
+            {
+                ContentType = "json",
+                InsecureSsl = false,
+                Secret = exampleWebhook.Secret,
+                Url = exampleWebhook.PayloadUrl,
+            },
+            Events = 
+            {
+                "push",
+            },
+            Repository = github_repository.Example.Name,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

@@ -24,7 +24,37 @@ It will not retrieve the private key which is not available through the AWS API.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var my_domain = Output.Create(Aws.Iam.GetServerCertificate.InvokeAsync(new Aws.Iam.GetServerCertificateArgs
+        {
+            Latest = true,
+            NamePrefix = "my-domain.org",
+        }));
+        var elb = new Aws.Elb.LoadBalancer("elb", new Aws.Elb.LoadBalancerArgs
+        {
+            Listeners = 
+            {
+                new Aws.Elb.Inputs.LoadBalancerListenerArgs
+                {
+                    InstancePort = 8000,
+                    InstanceProtocol = "https",
+                    LbPort = 443,
+                    LbProtocol = "https",
+                    SslCertificateId = my_domain.Apply(my_domain => my_domain.Arn),
+                },
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -39,9 +69,9 @@ import pulumi_aws as aws
 my_domain = aws.iam.get_server_certificate(latest=True,
     name_prefix="my-domain.org")
 elb = aws.elb.LoadBalancer("elb", listeners=[{
-    "instancePort": 8000,
+    "instance_port": 8000,
     "instanceProtocol": "https",
-    "lbPort": 443,
+    "lb_port": 443,
     "lbProtocol": "https",
     "sslCertificateId": my_domain.arn,
 }])

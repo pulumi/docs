@@ -22,7 +22,23 @@ Manages a Resource Access Manager (RAM) Resource Association.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.Ram.ResourceAssociation("example", new Aws.Ram.ResourceAssociationArgs
+        {
+            ResourceArn = aws_subnet.Example.Arn,
+            ResourceShareArn = aws_ram_resource_share.Example.Arn,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

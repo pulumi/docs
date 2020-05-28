@@ -72,18 +72,61 @@ import pulumi_aws as aws
 mainvpc = aws.ec2.Vpc("mainvpc", cidr_block="10.1.0.0/16")
 default = aws.ec2.DefaultSecurityGroup("default",
     egress=[{
-        "cidrBlocks": ["0.0.0.0/0"],
-        "fromPort": 0,
+        "cidr_blocks": ["0.0.0.0/0"],
+        "from_port": 0,
         "protocol": "-1",
-        "toPort": 0,
+        "to_port": 0,
     }],
     ingress=[{
-        "fromPort": 0,
+        "from_port": 0,
         "protocol": -1,
         "self": True,
-        "toPort": 0,
+        "to_port": 0,
     }],
     vpc_id=mainvpc.id)
+```
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var mainvpc = new Aws.Ec2.Vpc("mainvpc", new Aws.Ec2.VpcArgs
+        {
+            CidrBlock = "10.1.0.0/16",
+        });
+        var @default = new Aws.Ec2.DefaultSecurityGroup("default", new Aws.Ec2.DefaultSecurityGroupArgs
+        {
+            Egress = 
+            {
+                new Aws.Ec2.Inputs.DefaultSecurityGroupEgressArgs
+                {
+                    CidrBlocks = 
+                    {
+                        "0.0.0.0/0",
+                    },
+                    FromPort = 0,
+                    Protocol = "-1",
+                    ToPort = 0,
+                },
+            },
+            Ingress = 
+            {
+                new Aws.Ec2.Inputs.DefaultSecurityGroupIngressArgs
+                {
+                    FromPort = 0,
+                    Protocol = -1,
+                    Self = true,
+                    ToPort = 0,
+                },
+            },
+            VpcId = mainvpc.Id,
+        });
+    }
+
+}
 ```
 
 ## Example config to deny all Egress traffic, allowing Ingress
@@ -115,12 +158,42 @@ import pulumi_aws as aws
 mainvpc = aws.ec2.Vpc("mainvpc", cidr_block="10.1.0.0/16")
 default = aws.ec2.DefaultSecurityGroup("default",
     ingress=[{
-        "fromPort": 0,
+        "from_port": 0,
         "protocol": -1,
         "self": True,
-        "toPort": 0,
+        "to_port": 0,
     }],
     vpc_id=mainvpc.id)
+```
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var mainvpc = new Aws.Ec2.Vpc("mainvpc", new Aws.Ec2.VpcArgs
+        {
+            CidrBlock = "10.1.0.0/16",
+        });
+        var @default = new Aws.Ec2.DefaultSecurityGroup("default", new Aws.Ec2.DefaultSecurityGroupArgs
+        {
+            Ingress = 
+            {
+                new Aws.Ec2.Inputs.DefaultSecurityGroupIngressArgs
+                {
+                    FromPort = 0,
+                    Protocol = -1,
+                    Self = true,
+                    ToPort = 0,
+                },
+            },
+            VpcId = mainvpc.Id,
+        });
+    }
+
+}
 ```
 
 ## Usage

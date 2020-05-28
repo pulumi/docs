@@ -22,7 +22,23 @@ Provides a resource to manage AWS Secrets Manager secret version including its s
 {{< chooser language "typescript,python,go,csharp" / >}}
 ### Simple String Value
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.SecretsManager.SecretVersion("example", new Aws.SecretsManager.SecretVersionArgs
+        {
+            SecretId = aws_secretsmanager_secret.Example.Id,
+            SecretString = "example-string-to-protect",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

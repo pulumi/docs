@@ -20,7 +20,37 @@ Manages a Glue Security Configuration.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.Glue.SecurityConfiguration("example", new Aws.Glue.SecurityConfigurationArgs
+        {
+            EncryptionConfiguration = new Aws.Glue.Inputs.SecurityConfigurationEncryptionConfigurationArgs
+            {
+                CloudwatchEncryption = new Aws.Glue.Inputs.SecurityConfigurationEncryptionConfigurationCloudwatchEncryptionArgs
+                {
+                    CloudwatchEncryptionMode = "DISABLED",
+                },
+                JobBookmarksEncryption = new Aws.Glue.Inputs.SecurityConfigurationEncryptionConfigurationJobBookmarksEncryptionArgs
+                {
+                    JobBookmarksEncryptionMode = "DISABLED",
+                },
+                S3Encryption = new Aws.Glue.Inputs.SecurityConfigurationEncryptionConfigurationS3EncryptionArgs
+                {
+                    KmsKeyArn = data.Aws_kms_key.Example.Arn,
+                    S3EncryptionMode = "SSE-KMS",
+                },
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -40,7 +70,7 @@ example = aws.glue.SecurityConfiguration("example", encryption_configuration={
         "jobBookmarksEncryptionMode": "DISABLED",
     },
     "s3Encryption": {
-        "kmsKeyArn": data["aws.kms.Key"]["example"]["arn"],
+        "kms_key_arn": data["aws.kms.Key"]["example"]["arn"],
         "s3EncryptionMode": "SSE-KMS",
     },
 })

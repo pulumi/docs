@@ -20,7 +20,22 @@ Retrieve information about an EC2 DHCP Options configuration.
 {{< chooser language "typescript,python,go,csharp" / >}}
 ### Lookup by DHCP Options ID
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = Output.Create(Aws.Ec2.GetVpcDhcpOptions.InvokeAsync(new Aws.Ec2.GetVpcDhcpOptionsArgs
+        {
+            DhcpOptionsId = "dopts-12345678",
+        }));
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -49,7 +64,40 @@ const example = pulumi.output(aws.ec2.getVpcDhcpOptions({
 
 ### Lookup by Filter
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = Output.Create(Aws.Ec2.GetVpcDhcpOptions.InvokeAsync(new Aws.Ec2.GetVpcDhcpOptionsArgs
+        {
+            Filters = 
+            {
+                new Aws.Ec2.Inputs.GetVpcDhcpOptionsFilterArgs
+                {
+                    Name = "key",
+                    Values = 
+                    {
+                        "domain-name",
+                    },
+                },
+                new Aws.Ec2.Inputs.GetVpcDhcpOptionsFilterArgs
+                {
+                    Name = "value",
+                    Values = 
+                    {
+                        "example.com",
+                    },
+                },
+            },
+        }));
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

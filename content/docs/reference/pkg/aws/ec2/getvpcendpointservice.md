@@ -21,7 +21,33 @@ can be specified when creating a VPC endpoint within the region configured in th
 {{< chooser language "typescript,python,go,csharp" / >}}
 ### AWS Service
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var s3 = Output.Create(Aws.Ec2.GetVpcEndpointService.InvokeAsync(new Aws.Ec2.GetVpcEndpointServiceArgs
+        {
+            Service = "s3",
+        }));
+        // Create a VPC
+        var foo = new Aws.Ec2.Vpc("foo", new Aws.Ec2.VpcArgs
+        {
+            CidrBlock = "10.0.0.0/16",
+        });
+        // Create a VPC endpoint
+        var ep = new Aws.Ec2.VpcEndpoint("ep", new Aws.Ec2.VpcEndpointArgs
+        {
+            ServiceName = s3.Apply(s3 => s3.ServiceName),
+            VpcId = foo.Id,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -66,7 +92,22 @@ const ep = new aws.ec2.VpcEndpoint("ep", {
 
 ### Non-AWS Service
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var custome = Output.Create(Aws.Ec2.GetVpcEndpointService.InvokeAsync(new Aws.Ec2.GetVpcEndpointServiceArgs
+        {
+            ServiceName = "com.amazonaws.vpce.us-west-2.vpce-svc-0e87519c997c63cd8",
+        }));
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -95,7 +136,32 @@ const custome = pulumi.output(aws.ec2.getVpcEndpointService({
 
 ### Filter
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var test = Output.Create(Aws.Ec2.GetVpcEndpointService.InvokeAsync(new Aws.Ec2.GetVpcEndpointServiceArgs
+        {
+            Filters = 
+            {
+                new Aws.Ec2.Inputs.GetVpcEndpointServiceFilterArgs
+                {
+                    Name = "service-name",
+                    Values = 
+                    {
+                        "some-service",
+                    },
+                },
+            },
+        }));
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

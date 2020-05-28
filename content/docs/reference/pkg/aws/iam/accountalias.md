@@ -22,7 +22,22 @@ Manages the account alias for the AWS Account.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var @alias = new Aws.Iam.AccountAlias("alias", new Aws.Iam.AccountAliasArgs
+        {
+            AccountAlias = "my-account-alias",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

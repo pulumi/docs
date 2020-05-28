@@ -20,7 +20,24 @@ Provides information about an Elastic File System Mount Target (EFS).
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var config = new Config();
+        var mountTargetId = config.Get("mountTargetId") ?? "";
+        var byId = Output.Create(Aws.Efs.GetMountTarget.InvokeAsync(new Aws.Efs.GetMountTargetArgs
+        {
+            MountTargetId = mountTargetId,
+        }));
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

@@ -20,7 +20,35 @@ Provides an Athena Workgroup.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.Athena.Workgroup("example", new Aws.Athena.WorkgroupArgs
+        {
+            Configuration = new Aws.Athena.Inputs.WorkgroupConfigurationArgs
+            {
+                EnforceWorkgroupConfiguration = true,
+                PublishCloudwatchMetricsEnabled = true,
+                ResultConfiguration = new Aws.Athena.Inputs.WorkgroupConfigurationResultConfigurationArgs
+                {
+                    EncryptionConfiguration = new Aws.Athena.Inputs.WorkgroupConfigurationResultConfigurationEncryptionConfigurationArgs
+                    {
+                        EncryptionOption = "SSE_KMS",
+                        KmsKeyArn = aws_kms_key.Example.Arn,
+                    },
+                    OutputLocation = "s3://{aws_s3_bucket.example.bucket}/output/",
+                },
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -36,11 +64,11 @@ example = aws.athena.Workgroup("example", configuration={
     "enforceWorkgroupConfiguration": True,
     "publishCloudwatchMetricsEnabled": True,
     "resultConfiguration": {
-        "encryptionConfiguration": {
+        "encryption_configuration": {
             "encryptionOption": "SSE_KMS",
-            "kmsKeyArn": aws_kms_key["example"]["arn"],
+            "kms_key_arn": aws_kms_key["example"]["arn"],
         },
-        "outputLocation": "s3://{aws_s3_bucket.example.bucket}/output/",
+        "output_location": "s3://{aws_s3_bucket.example.bucket}/output/",
     },
 })
 ```

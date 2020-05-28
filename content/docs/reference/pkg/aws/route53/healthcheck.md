@@ -20,7 +20,31 @@ Provides a Route53 health check.
 {{< chooser language "typescript,python,go,csharp" / >}}
 ### Connectivity and HTTP Status Code Check
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.Route53.HealthCheck("example", new Aws.Route53.HealthCheckArgs
+        {
+            FailureThreshold = "5",
+            Fqdn = "example.com",
+            Port = 80,
+            RequestInterval = "30",
+            ResourcePath = "/",
+            Tags = 
+            {
+                { "Name", "tf-test-health-check" },
+            },
+            Type = "HTTP",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -66,7 +90,28 @@ const example = new aws.route53.HealthCheck("example", {
 
 ### Connectivity and String Matching Check
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.Route53.HealthCheck("example", new Aws.Route53.HealthCheckArgs
+        {
+            FailureThreshold = "5",
+            Fqdn = "example.com",
+            Port = 443,
+            RequestInterval = "30",
+            ResourcePath = "/",
+            SearchString = "example",
+            Type = "HTTPS_STR_MATCH",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -108,7 +153,31 @@ const example = new aws.route53.HealthCheck("example", {
 
 ### Aggregate Check
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var parent = new Aws.Route53.HealthCheck("parent", new Aws.Route53.HealthCheckArgs
+        {
+            ChildHealthThreshold = 1,
+            ChildHealthchecks = 
+            {
+                aws_route53_health_check.Child.Id,
+            },
+            Tags = 
+            {
+                { "Name", "tf-test-calculated-health-check" },
+            },
+            Type = "CALCULATED",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -148,7 +217,36 @@ const parent = new aws.route53.HealthCheck("parent", {
 
 ### CloudWatch Alarm Check
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var foobar = new Aws.CloudWatch.MetricAlarm("foobar", new Aws.CloudWatch.MetricAlarmArgs
+        {
+            AlarmDescription = "This metric monitors ec2 cpu utilization",
+            ComparisonOperator = "GreaterThanOrEqualToThreshold",
+            EvaluationPeriods = "2",
+            MetricName = "CPUUtilization",
+            Namespace = "AWS/EC2",
+            Period = "120",
+            Statistic = "Average",
+            Threshold = "80",
+        });
+        var foo = new Aws.Route53.HealthCheck("foo", new Aws.Route53.HealthCheckArgs
+        {
+            CloudwatchAlarmName = foobar.Name,
+            CloudwatchAlarmRegion = "us-west-2",
+            InsufficientDataHealthStatus = "Healthy",
+            Type = "CLOUDWATCH_METRIC",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

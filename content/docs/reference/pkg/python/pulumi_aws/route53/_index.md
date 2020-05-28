@@ -677,16 +677,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <span class="n">main</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">elb</span><span class="o">.</span><span class="n">LoadBalancer</span><span class="p">(</span><span class="s2">&quot;main&quot;</span><span class="p">,</span>
     <span class="n">availability_zones</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;us-east-1c&quot;</span><span class="p">],</span>
     <span class="n">listeners</span><span class="o">=</span><span class="p">[{</span>
-        <span class="s2">&quot;instancePort&quot;</span><span class="p">:</span> <span class="mi">80</span><span class="p">,</span>
+        <span class="s2">&quot;instance_port&quot;</span><span class="p">:</span> <span class="mi">80</span><span class="p">,</span>
         <span class="s2">&quot;instanceProtocol&quot;</span><span class="p">:</span> <span class="s2">&quot;http&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;lbPort&quot;</span><span class="p">:</span> <span class="mi">80</span><span class="p">,</span>
+        <span class="s2">&quot;lb_port&quot;</span><span class="p">:</span> <span class="mi">80</span><span class="p">,</span>
         <span class="s2">&quot;lbProtocol&quot;</span><span class="p">:</span> <span class="s2">&quot;http&quot;</span><span class="p">,</span>
     <span class="p">}])</span>
 <span class="n">www</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">route53</span><span class="o">.</span><span class="n">Record</span><span class="p">(</span><span class="s2">&quot;www&quot;</span><span class="p">,</span>
     <span class="n">aliases</span><span class="o">=</span><span class="p">[{</span>
         <span class="s2">&quot;evaluateTargetHealth&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
         <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="n">main</span><span class="o">.</span><span class="n">dns_name</span><span class="p">,</span>
-        <span class="s2">&quot;zoneId&quot;</span><span class="p">:</span> <span class="n">main</span><span class="o">.</span><span class="n">zone_id</span><span class="p">,</span>
+        <span class="s2">&quot;zone_id&quot;</span><span class="p">:</span> <span class="n">main</span><span class="o">.</span><span class="n">zone_id</span><span class="p">,</span>
     <span class="p">}],</span>
     <span class="n">name</span><span class="o">=</span><span class="s2">&quot;example.com&quot;</span><span class="p">,</span>
     <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;A&quot;</span><span class="p">,</span>
@@ -974,11 +974,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">direction</span><span class="o">=</span><span class="s2">&quot;INBOUND&quot;</span><span class="p">,</span>
     <span class="n">ip_addresses</span><span class="o">=</span><span class="p">[</span>
         <span class="p">{</span>
-            <span class="s2">&quot;subnetId&quot;</span><span class="p">:</span> <span class="n">aws_subnet</span><span class="p">[</span><span class="s2">&quot;sn1&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+            <span class="s2">&quot;subnet_id&quot;</span><span class="p">:</span> <span class="n">aws_subnet</span><span class="p">[</span><span class="s2">&quot;sn1&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
         <span class="p">},</span>
         <span class="p">{</span>
             <span class="s2">&quot;ip&quot;</span><span class="p">:</span> <span class="s2">&quot;10.0.64.4&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;subnetId&quot;</span><span class="p">:</span> <span class="n">aws_subnet</span><span class="p">[</span><span class="s2">&quot;sn2&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+            <span class="s2">&quot;subnet_id&quot;</span><span class="p">:</span> <span class="n">aws_subnet</span><span class="p">[</span><span class="s2">&quot;sn2&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
         <span class="p">},</span>
     <span class="p">],</span>
     <span class="n">security_group_ids</span><span class="o">=</span><span class="p">[</span>
@@ -1444,7 +1444,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
 
 <span class="n">private</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">route53</span><span class="o">.</span><span class="n">Zone</span><span class="p">(</span><span class="s2">&quot;private&quot;</span><span class="p">,</span> <span class="n">vpcs</span><span class="o">=</span><span class="p">[{</span>
-    <span class="s2">&quot;vpcId&quot;</span><span class="p">:</span> <span class="n">aws_vpc</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;vpc_id&quot;</span><span class="p">:</span> <span class="n">aws_vpc</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
 <span class="p">}])</span>
 </pre></div>
 </div>
@@ -1617,7 +1617,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
         <span class="p">],</span>
     <span class="p">},</span>
     <span class="n">vpcs</span><span class="o">=</span><span class="p">[{</span>
-        <span class="s2">&quot;vpcId&quot;</span><span class="p">:</span> <span class="n">primary</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;vpc_id&quot;</span><span class="p">:</span> <span class="n">primary</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
     <span class="p">}])</span>
 <span class="n">secondary_zone_association</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">route53</span><span class="o">.</span><span class="n">ZoneAssociation</span><span class="p">(</span><span class="s2">&quot;secondaryZoneAssociation&quot;</span><span class="p">,</span>
     <span class="n">vpc_id</span><span class="o">=</span><span class="n">secondary_vpc</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>

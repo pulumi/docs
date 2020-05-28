@@ -20,7 +20,23 @@ Provides a resource to create a CloudWatch Events permission to support cross-ac
 {{< chooser language "typescript,python,go,csharp" / >}}
 ### Account Access
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var devAccountAccess = new Aws.CloudWatch.EventPermission("devAccountAccess", new Aws.CloudWatch.EventPermissionArgs
+        {
+            Principal = "123456789012",
+            StatementId = "DevAccountAccess",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -52,7 +68,29 @@ const devAccountAccess = new aws.cloudwatch.EventPermission("DevAccountAccess", 
 
 ### Organization Access
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var organizationAccess = new Aws.CloudWatch.EventPermission("organizationAccess", new Aws.CloudWatch.EventPermissionArgs
+        {
+            Condition = new Aws.CloudWatch.Inputs.EventPermissionConditionArgs
+            {
+                Key = "aws:PrincipalOrgID",
+                Type = "StringEquals",
+                Value = aws_organizations_organization.Example.Id,
+            },
+            Principal = "*",
+            StatementId = "OrganizationAccess",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

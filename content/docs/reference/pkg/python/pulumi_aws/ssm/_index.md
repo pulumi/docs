@@ -1096,7 +1096,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">task_arn</span><span class="o">=</span><span class="s2">&quot;AWS-RestartEC2Instance&quot;</span><span class="p">,</span>
     <span class="n">task_invocation_parameters</span><span class="o">=</span><span class="p">{</span>
         <span class="s2">&quot;automationParameters&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="s2">&quot;documentVersion&quot;</span><span class="p">:</span> <span class="s2">&quot;$$LATEST&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;document_version&quot;</span><span class="p">:</span> <span class="s2">&quot;$$LATEST&quot;</span><span class="p">,</span>
             <span class="s2">&quot;parameter&quot;</span><span class="p">:</span> <span class="p">[{</span>
                 <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;InstanceId&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;values&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">aws_instance</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">]],</span>
@@ -1125,7 +1125,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
             <span class="s2">&quot;notificationConfig&quot;</span><span class="p">:</span> <span class="p">{</span>
                 <span class="s2">&quot;notificationArn&quot;</span><span class="p">:</span> <span class="n">aws_sns_topic</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
                 <span class="s2">&quot;notificationEvents&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;All&quot;</span><span class="p">],</span>
-                <span class="s2">&quot;notificationType&quot;</span><span class="p">:</span> <span class="s2">&quot;Command&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;notification_type&quot;</span><span class="p">:</span> <span class="s2">&quot;Command&quot;</span><span class="p">,</span>
             <span class="p">},</span>
             <span class="s2">&quot;outputS3Bucket&quot;</span><span class="p">:</span> <span class="n">aws_s3_bucket</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;bucket&quot;</span><span class="p">],</span>
             <span class="s2">&quot;outputS3KeyPrefix&quot;</span><span class="p">:</span> <span class="s2">&quot;output&quot;</span><span class="p">,</span>
@@ -1133,7 +1133,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
                 <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;commands&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;values&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;date&quot;</span><span class="p">],</span>
             <span class="p">}],</span>
-            <span class="s2">&quot;serviceRoleArn&quot;</span><span class="p">:</span> <span class="n">aws_iam_role</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
+            <span class="s2">&quot;service_role_arn&quot;</span><span class="p">:</span> <span class="n">aws_iam_role</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
             <span class="s2">&quot;timeoutSeconds&quot;</span><span class="p">:</span> <span class="mi">600</span><span class="p">,</span>
         <span class="p">},</span>
     <span class="p">},</span>
@@ -2020,7 +2020,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
 <span class="n">foo</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ssm</span><span class="o">.</span><span class="n">ResourceDataSync</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span> <span class="n">s3_destination</span><span class="o">=</span><span class="p">{</span>
-    <span class="s2">&quot;bucketName&quot;</span><span class="p">:</span> <span class="n">hoge_bucket</span><span class="o">.</span><span class="n">bucket</span><span class="p">,</span>
+    <span class="s2">&quot;bucket_name&quot;</span><span class="p">:</span> <span class="n">hoge_bucket</span><span class="o">.</span><span class="n">bucket</span><span class="p">,</span>
     <span class="s2">&quot;region&quot;</span><span class="p">:</span> <span class="n">hoge_bucket</span><span class="o">.</span><span class="n">region</span><span class="p">,</span>
 <span class="p">})</span>
 </pre></div>

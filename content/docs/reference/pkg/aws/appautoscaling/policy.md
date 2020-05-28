@@ -20,7 +20,41 @@ Provides an Application AutoScaling Policy resource.
 {{< chooser language "typescript,python,go,csharp" / >}}
 ### DynamoDB Table Autoscaling
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var dynamodbTableReadTarget = new Aws.AppAutoScaling.Target("dynamodbTableReadTarget", new Aws.AppAutoScaling.TargetArgs
+        {
+            MaxCapacity = 100,
+            MinCapacity = 5,
+            ResourceId = "table/tableName",
+            ScalableDimension = "dynamodb:table:ReadCapacityUnits",
+            ServiceNamespace = "dynamodb",
+        });
+        var dynamodbTableReadPolicy = new Aws.AppAutoScaling.Policy("dynamodbTableReadPolicy", new Aws.AppAutoScaling.PolicyArgs
+        {
+            PolicyType = "TargetTrackingScaling",
+            ResourceId = dynamodbTableReadTarget.ResourceId,
+            ScalableDimension = dynamodbTableReadTarget.ScalableDimension,
+            ServiceNamespace = dynamodbTableReadTarget.ServiceNamespace,
+            TargetTrackingScalingPolicyConfiguration = new Aws.AppAutoScaling.Inputs.PolicyTargetTrackingScalingPolicyConfigurationArgs
+            {
+                PredefinedMetricSpecification = new Aws.AppAutoScaling.Inputs.PolicyTargetTrackingScalingPolicyConfigurationPredefinedMetricSpecificationArgs
+                {
+                    PredefinedMetricType = "DynamoDBReadCapacityUtilization",
+                },
+                TargetValue = 70,
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -81,7 +115,47 @@ const dynamodbTableReadPolicy = new aws.appautoscaling.Policy("dynamodb_table_re
 
 ### ECS Service Autoscaling
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var ecsTarget = new Aws.AppAutoScaling.Target("ecsTarget", new Aws.AppAutoScaling.TargetArgs
+        {
+            MaxCapacity = 4,
+            MinCapacity = 1,
+            ResourceId = "service/clusterName/serviceName",
+            ScalableDimension = "ecs:service:DesiredCount",
+            ServiceNamespace = "ecs",
+        });
+        var ecsPolicy = new Aws.AppAutoScaling.Policy("ecsPolicy", new Aws.AppAutoScaling.PolicyArgs
+        {
+            PolicyType = "StepScaling",
+            ResourceId = ecsTarget.ResourceId,
+            ScalableDimension = ecsTarget.ScalableDimension,
+            ServiceNamespace = ecsTarget.ServiceNamespace,
+            StepScalingPolicyConfiguration = new Aws.AppAutoScaling.Inputs.PolicyStepScalingPolicyConfigurationArgs
+            {
+                AdjustmentType = "ChangeInCapacity",
+                Cooldown = 60,
+                MetricAggregationType = "Maximum",
+                StepAdjustment = 
+                {
+                    
+                    {
+                        { "metricIntervalUpperBound", 0 },
+                        { "scalingAdjustment", -1 },
+                    },
+                },
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -105,12 +179,12 @@ ecs_policy = aws.appautoscaling.Policy("ecsPolicy",
     scalable_dimension=ecs_target.scalable_dimension,
     service_namespace=ecs_target.service_namespace,
     step_scaling_policy_configuration={
-        "adjustmentType": "ChangeInCapacity",
+        "adjustment_type": "ChangeInCapacity",
         "cooldown": 60,
-        "metricAggregationType": "Maximum",
+        "metric_aggregation_type": "Maximum",
         "stepAdjustment": [{
             "metricIntervalUpperBound": 0,
-            "scalingAdjustment": -1,
+            "scaling_adjustment": -1,
         }],
     })
 ```
@@ -146,46 +220,45 @@ const ecsPolicy = new aws.appautoscaling.Policy("ecs_policy", {
 ```
 {{% /example %}}
 
-### Preserve desired count when updating an autoscaled ECS Service
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_aws as aws
-
-ecs_service = aws.ecs.Service("ecsService",
-    cluster="clusterName",
-    desired_count=2,
-    lifecycle={
-        "ignoreChanges": ["desiredCount"],
-    },
-    task_definition="taskDefinitionFamily:1")
-```
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const ecsService = new aws.ecs.Service("ecs_service", {
-    cluster: "clusterName",
-    desiredCount: 2,
-    taskDefinition: "taskDefinitionFamily:1",
-}, { ignoreChanges: ["desiredCount"] });
-```
-{{% /example %}}
-
 ### Aurora Read Replica Autoscaling
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var replicasTarget = new Aws.AppAutoScaling.Target("replicasTarget", new Aws.AppAutoScaling.TargetArgs
+        {
+            MaxCapacity = 15,
+            MinCapacity = 1,
+            ResourceId = $"cluster:{aws_rds_cluster.Example.Id}",
+            ScalableDimension = "rds:cluster:ReadReplicaCount",
+            ServiceNamespace = "rds",
+        });
+        var replicasPolicy = new Aws.AppAutoScaling.Policy("replicasPolicy", new Aws.AppAutoScaling.PolicyArgs
+        {
+            PolicyType = "TargetTrackingScaling",
+            ResourceId = replicasTarget.ResourceId,
+            ScalableDimension = replicasTarget.ScalableDimension,
+            ServiceNamespace = replicasTarget.ServiceNamespace,
+            TargetTrackingScalingPolicyConfiguration = new Aws.AppAutoScaling.Inputs.PolicyTargetTrackingScalingPolicyConfigurationArgs
+            {
+                PredefinedMetricSpecification = new Aws.AppAutoScaling.Inputs.PolicyTargetTrackingScalingPolicyConfigurationPredefinedMetricSpecificationArgs
+                {
+                    PredefinedMetricType = "RDSReaderAverageCPUUtilization",
+                },
+                ScaleInCooldown = 300,
+                ScaleOutCooldown = 300,
+                TargetValue = 75,
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

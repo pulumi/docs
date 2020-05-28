@@ -20,7 +20,24 @@ Creates and manages an AWS IoT certificate.
 {{< chooser language "typescript,python,go,csharp" / >}}
 ### With CSR
 {{% example csharp %}}
-Coming soon!
+```csharp
+using System.IO;
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var cert = new Aws.Iot.Certificate("cert", new Aws.Iot.CertificateArgs
+        {
+            Active = true,
+            Csr = File.ReadAllText("/my/csr.pem"),
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -53,7 +70,22 @@ const cert = new aws.iot.Certificate("cert", {
 
 ### Without CSR
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var cert = new Aws.Iot.Certificate("cert", new Aws.Iot.CertificateArgs
+        {
+            Active = true,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

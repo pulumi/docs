@@ -27,7 +27,23 @@ Doing so will cause a conflict of associations and will overwrite the associatio
 {{< chooser language "typescript,python,go,csharp" / >}}
 ### Basic
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var s3 = new Aws.Ec2.VpcEndpoint("s3", new Aws.Ec2.VpcEndpointArgs
+        {
+            ServiceName = "com.amazonaws.us-west-2.s3",
+            VpcId = aws_vpc.Main.Id,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -59,7 +75,27 @@ const s3 = new aws.ec2.VpcEndpoint("s3", {
 
 ### Basic w/ Tags
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var s3 = new Aws.Ec2.VpcEndpoint("s3", new Aws.Ec2.VpcEndpointArgs
+        {
+            ServiceName = "com.amazonaws.us-west-2.s3",
+            Tags = 
+            {
+                { "Environment", "test" },
+            },
+            VpcId = aws_vpc.Main.Id,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -97,7 +133,29 @@ const s3 = new aws.ec2.VpcEndpoint("s3", {
 
 ### Interface Endpoint Type
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var ec2 = new Aws.Ec2.VpcEndpoint("ec2", new Aws.Ec2.VpcEndpointArgs
+        {
+            PrivateDnsEnabled = true,
+            SecurityGroupIds = 
+            {
+                aws_security_group.Sg1.Id,
+            },
+            ServiceName = "com.amazonaws.us-west-2.ec2",
+            VpcEndpointType = "Interface",
+            VpcId = aws_vpc.Main.Id,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -135,7 +193,50 @@ const ec2 = new aws.ec2.VpcEndpoint("ec2", {
 
 ### Non-AWS Service
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var ptfeServiceVpcEndpoint = new Aws.Ec2.VpcEndpoint("ptfeServiceVpcEndpoint", new Aws.Ec2.VpcEndpointArgs
+        {
+            PrivateDnsEnabled = false,
+            SecurityGroupIds = 
+            {
+                aws_security_group.Ptfe_service.Id,
+            },
+            ServiceName = @var.Ptfe_service,
+            SubnetIds = 
+            {
+                local.Subnet_ids,
+            },
+            VpcEndpointType = "Interface",
+            VpcId = @var.Vpc_id,
+        });
+        var @internal = Output.Create(Aws.Route53.GetZone.InvokeAsync(new Aws.Route53.GetZoneArgs
+        {
+            Name = "vpc.internal.",
+            PrivateZone = true,
+            VpcId = @var.Vpc_id,
+        }));
+        var ptfeServiceRecord = new Aws.Route53.Record("ptfeServiceRecord", new Aws.Route53.RecordArgs
+        {
+            Name = @internal.Apply(@internal => $"ptfe.{@internal.Name}"),
+            Records = 
+            {
+                ptfeServiceVpcEndpoint.DnsEntries.Apply(dnsEntries => dnsEntries[0])["dns_name"],
+            },
+            Ttl = "300",
+            Type = "CNAME",
+            ZoneId = @internal.Apply(@internal => @internal.ZoneId),
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

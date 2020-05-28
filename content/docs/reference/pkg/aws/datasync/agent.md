@@ -22,7 +22,22 @@ Manages an AWS DataSync Agent deployed on premises.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.DataSync.Agent("example", new Aws.DataSync.AgentArgs
+        {
+            IpAddress = "1.2.3.4",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

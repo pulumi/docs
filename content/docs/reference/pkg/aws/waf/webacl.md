@@ -20,7 +20,63 @@ Provides a WAF Web ACL Resource
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var ipset = new Aws.Waf.IpSet("ipset", new Aws.Waf.IpSetArgs
+        {
+            IpSetDescriptors = 
+            {
+                new Aws.Waf.Inputs.IpSetIpSetDescriptorArgs
+                {
+                    Type = "IPV4",
+                    Value = "192.0.7.0/24",
+                },
+            },
+        });
+        var wafrule = new Aws.Waf.Rule("wafrule", new Aws.Waf.RuleArgs
+        {
+            MetricName = "tfWAFRule",
+            Predicates = 
+            {
+                new Aws.Waf.Inputs.RulePredicateArgs
+                {
+                    DataId = ipset.Id,
+                    Negated = false,
+                    Type = "IPMatch",
+                },
+            },
+        });
+        var wafAcl = new Aws.Waf.WebAcl("wafAcl", new Aws.Waf.WebAclArgs
+        {
+            DefaultAction = new Aws.Waf.Inputs.WebAclDefaultActionArgs
+            {
+                Type = "ALLOW",
+            },
+            MetricName = "tfWebACL",
+            Rules = 
+            {
+                new Aws.Waf.Inputs.WebAclRuleArgs
+                {
+                    Action = new Aws.Waf.Inputs.WebAclRuleActionArgs
+                    {
+                        Type = "BLOCK",
+                    },
+                    Priority = 1,
+                    RuleId = wafrule.Id,
+                    Type = "REGULAR",
+                },
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -53,7 +109,7 @@ waf_acl = aws.waf.WebAcl("wafAcl",
             "type": "BLOCK",
         },
         "priority": 1,
-        "ruleId": wafrule.id,
+        "rule_id": wafrule.id,
         "type": "REGULAR",
     }])
 ```
@@ -97,7 +153,40 @@ const wafAcl = new aws.waf.WebAcl("waf_acl", {
 
 ### Logging
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.Waf.WebAcl("example", new Aws.Waf.WebAclArgs
+        {
+            LoggingConfiguration = new Aws.Waf.Inputs.WebAclLoggingConfigurationArgs
+            {
+                LogDestination = aws_kinesis_firehose_delivery_stream.Example.Arn,
+                RedactedFields = new Aws.Waf.Inputs.WebAclLoggingConfigurationRedactedFieldsArgs
+                {
+                    FieldToMatch = 
+                    {
+                        
+                        {
+                            { "type", "URI" },
+                        },
+                        
+                        {
+                            { "data", "referer" },
+                            { "type", "HEADER" },
+                        },
+                    },
+                },
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -110,7 +199,7 @@ import pulumi
 import pulumi_aws as aws
 
 example = aws.waf.WebAcl("example", logging_configuration={
-    "logDestination": aws_kinesis_firehose_delivery_stream["example"]["arn"],
+    "log_destination": aws_kinesis_firehose_delivery_stream["example"]["arn"],
     "redactedFields": {
         "fieldToMatch": [
             {

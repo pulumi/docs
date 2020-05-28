@@ -20,7 +20,43 @@ Provides a Route 53 Resolver endpoint resource.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var foo = new Aws.Route53.ResolverEndpoint("foo", new Aws.Route53.ResolverEndpointArgs
+        {
+            Direction = "INBOUND",
+            IpAddresses = 
+            {
+                new Aws.Route53.Inputs.ResolverEndpointIpAddressArgs
+                {
+                    SubnetId = aws_subnet.Sn1.Id,
+                },
+                new Aws.Route53.Inputs.ResolverEndpointIpAddressArgs
+                {
+                    Ip = "10.0.64.4",
+                    SubnetId = aws_subnet.Sn2.Id,
+                },
+            },
+            SecurityGroupIds = 
+            {
+                aws_security_group.Sg1.Id,
+                aws_security_group.Sg2.Id,
+            },
+            Tags = 
+            {
+                { "Environment", "Prod" },
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -36,11 +72,11 @@ foo = aws.route53.ResolverEndpoint("foo",
     direction="INBOUND",
     ip_addresses=[
         {
-            "subnetId": aws_subnet["sn1"]["id"],
+            "subnet_id": aws_subnet["sn1"]["id"],
         },
         {
             "ip": "10.0.64.4",
-            "subnetId": aws_subnet["sn2"]["id"],
+            "subnet_id": aws_subnet["sn2"]["id"],
         },
     ],
     security_group_ids=[

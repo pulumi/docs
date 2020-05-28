@@ -20,7 +20,22 @@ Get information on an Amazon MSK Configuration.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = Output.Create(Aws.Msk.GetConfiguration.InvokeAsync(new Aws.Msk.GetConfigurationArgs
+        {
+            Name = "example",
+        }));
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

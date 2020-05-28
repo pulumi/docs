@@ -20,7 +20,22 @@ meta_desc: "Explore the GetIpset function of the wafregional module, including e
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = Output.Create(Aws.WafRegional.GetIpset.InvokeAsync(new Aws.WafRegional.GetIpsetArgs
+        {
+            Name = "tfWAFRegionalIPSet",
+        }));
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

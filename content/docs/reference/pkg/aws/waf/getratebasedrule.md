@@ -20,7 +20,22 @@ meta_desc: "Explore the GetRateBasedRule function of the waf module, including e
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = Output.Create(Aws.Waf.GetRateBasedRule.InvokeAsync(new Aws.Waf.GetRateBasedRuleArgs
+        {
+            Name = "tfWAFRateBasedRule",
+        }));
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

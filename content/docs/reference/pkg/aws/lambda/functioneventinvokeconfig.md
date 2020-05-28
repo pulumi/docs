@@ -18,55 +18,26 @@ Manages an asynchronous invocation configuration for a Lambda Function or Alias.
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
-### Destination Configuration
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_aws as aws
-
-example = aws.lambda_.FunctionEventInvokeConfig("example",
-    function_name=aws_lambda_alias["example"]["function_name"],
-    destination_config={
-        "on_failure": {
-            "destination": aws_sqs_queue["example"]["arn"],
-        },
-        "on_success": {
-            "destination": aws_sns_topic["example"]["arn"],
-        },
-    })
-```
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const example = new aws.lambda.FunctionEventInvokeConfig("example", {
-    functionName: aws_lambda_alias.example.function_name,
-    destination_config: {
-        on_failure: {
-            destination: aws_sqs_queue.example.arn,
-        },
-        on_success: {
-            destination: aws_sns_topic.example.arn,
-        },
-    },
-});
-```
-{{% /example %}}
-
 ### Error Handling Configuration
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.Lambda.FunctionEventInvokeConfig("example", new Aws.Lambda.FunctionEventInvokeConfigArgs
+        {
+            FunctionName = aws_lambda_alias.Example.Function_name,
+            MaximumEventAgeInSeconds = 60,
+            MaximumRetryAttempts = 0,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -100,7 +71,24 @@ const example = new aws.lambda.FunctionEventInvokeConfig("example", {
 
 ### Configuration for Alias Name
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.Lambda.FunctionEventInvokeConfig("example", new Aws.Lambda.FunctionEventInvokeConfigArgs
+        {
+            FunctionName = aws_lambda_alias.Example.Function_name,
+            Qualifier = aws_lambda_alias.Example.Name,
+        });
+        // ... other configuration ...
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -134,7 +122,24 @@ const example = new aws.lambda.FunctionEventInvokeConfig("example", {
 
 ### Configuration for Function Latest Unpublished Version
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.Lambda.FunctionEventInvokeConfig("example", new Aws.Lambda.FunctionEventInvokeConfigArgs
+        {
+            FunctionName = aws_lambda_function.Example.Function_name,
+            Qualifier = "$LATEST",
+        });
+        // ... other configuration ...
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -168,7 +173,24 @@ const example = new aws.lambda.FunctionEventInvokeConfig("example", {
 
 ### Configuration for Function Published Version
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.Lambda.FunctionEventInvokeConfig("example", new Aws.Lambda.FunctionEventInvokeConfigArgs
+        {
+            FunctionName = aws_lambda_function.Example.Function_name,
+            Qualifier = aws_lambda_function.Example.Version,
+        });
+        // ... other configuration ...
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

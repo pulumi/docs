@@ -433,7 +433,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <span class="n">example_function</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">lambda_</span><span class="o">.</span><span class="n">Function</span><span class="p">(</span><span class="s2">&quot;exampleFunction&quot;</span><span class="p">,</span> <span class="n">layers</span><span class="o">=</span><span class="p">[</span><span class="n">example_layer_version</span><span class="o">.</span><span class="n">arn</span><span class="p">])</span>
 </pre></div>
 </div>
-<p>For more information about CloudWatch Logs for Lambda, see the <a class="reference external" href="https://docs.aws.amazon.com/lambda/latest/dg/monitoring-functions-logs.html">Lambda User Guide</a>.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
 

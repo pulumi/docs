@@ -23,7 +23,22 @@ error if there is more than one match.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var myApiGatewayVpcLink = Output.Create(Aws.ApiGateway.GetVpcLink.InvokeAsync(new Aws.ApiGateway.GetVpcLinkArgs
+        {
+            Name = "my-vpc-link",
+        }));
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

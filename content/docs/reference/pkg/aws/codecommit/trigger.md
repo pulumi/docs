@@ -20,7 +20,38 @@ Provides a CodeCommit Trigger Resource.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var testRepository = new Aws.CodeCommit.Repository("testRepository", new Aws.CodeCommit.RepositoryArgs
+        {
+            RepositoryName = "test",
+        });
+        var testTrigger = new Aws.CodeCommit.Trigger("testTrigger", new Aws.CodeCommit.TriggerArgs
+        {
+            RepositoryName = testRepository.RepositoryName,
+            Triggers = 
+            {
+                new Aws.CodeCommit.Inputs.TriggerTriggerArgs
+                {
+                    DestinationArn = aws_sns_topic.Test.Arn,
+                    Events = 
+                    {
+                        "all",
+                    },
+                    Name = "all",
+                },
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -36,7 +67,7 @@ test_repository = aws.codecommit.Repository("testRepository", repository_name="t
 test_trigger = aws.codecommit.Trigger("testTrigger",
     repository_name=test_repository.repository_name,
     triggers=[{
-        "destinationArn": aws_sns_topic["test"]["arn"],
+        "destination_arn": aws_sns_topic["test"]["arn"],
         "events": ["all"],
         "name": "all",
     }])

@@ -20,7 +20,30 @@ Provides an AWS Backup plan resource.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.Backup.Plan("example", new Aws.Backup.PlanArgs
+        {
+            Rules = 
+            {
+                new Aws.Backup.Inputs.PlanRuleArgs
+                {
+                    RuleName = "tf_example_backup_rule",
+                    Schedule = "cron(0 12 * * ? *)",
+                    TargetVaultName = aws_backup_vault.Test.Name,
+                },
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -33,7 +56,7 @@ import pulumi
 import pulumi_aws as aws
 
 example = aws.backup.Plan("example", rules=[{
-    "ruleName": "tf_example_backup_rule",
+    "rule_name": "tf_example_backup_rule",
     "schedule": "cron(0 12 * * ? *)",
     "targetVaultName": aws_backup_vault["test"]["name"],
 }])

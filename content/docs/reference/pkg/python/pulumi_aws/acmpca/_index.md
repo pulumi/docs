@@ -75,7 +75,7 @@ anything, please consult the source <a class="reference external" href="https://
             <span class="s2">&quot;customCname&quot;</span><span class="p">:</span> <span class="s2">&quot;crl.example.com&quot;</span><span class="p">,</span>
             <span class="s2">&quot;enabled&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
             <span class="s2">&quot;expirationInDays&quot;</span><span class="p">:</span> <span class="mi">7</span><span class="p">,</span>
-            <span class="s2">&quot;s3BucketName&quot;</span><span class="p">:</span> <span class="n">example_bucket</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+            <span class="s2">&quot;s3_bucket_name&quot;</span><span class="p">:</span> <span class="n">example_bucket</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
         <span class="p">},</span>
     <span class="p">})</span>
 </pre></div>

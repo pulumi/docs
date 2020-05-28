@@ -22,7 +22,22 @@ Provides an API Gateway REST API.
 {{< chooser language "typescript,python,go,csharp" / >}}
 ### Basic
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var myDemoAPI = new Aws.ApiGateway.RestApi("myDemoAPI", new Aws.ApiGateway.RestApiArgs
+        {
+            Description = "This is my API for demonstration purposes",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -51,7 +66,25 @@ const myDemoAPI = new aws.apigateway.RestApi("MyDemoAPI", {
 
 ### Regional Endpoint Type
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.ApiGateway.RestApi("example", new Aws.ApiGateway.RestApiArgs
+        {
+            EndpointConfiguration = new Aws.ApiGateway.Inputs.RestApiEndpointConfigurationArgs
+            {
+                Types = "REGIONAL",
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

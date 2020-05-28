@@ -20,7 +20,22 @@ Provides an IAM group.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var developers = new Aws.Iam.Group("developers", new Aws.Iam.GroupArgs
+        {
+            Path = "/users/",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

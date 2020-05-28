@@ -63,6 +63,44 @@ bat_metric_alarm = aws.cloudwatch.MetricAlarm("batMetricAlarm",
     statistic="Average",
     threshold="80")
 ```
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var batPolicy = new Aws.AutoScaling.Policy("batPolicy", new Aws.AutoScaling.PolicyArgs
+        {
+            AdjustmentType = "ChangeInCapacity",
+            AutoscalingGroupName = aws_autoscaling_group.Bar.Name,
+            Cooldown = 300,
+            ScalingAdjustment = 4,
+        });
+        var batMetricAlarm = new Aws.CloudWatch.MetricAlarm("batMetricAlarm", new Aws.CloudWatch.MetricAlarmArgs
+        {
+            AlarmActions = 
+            {
+                batPolicy.Arn,
+            },
+            AlarmDescription = "This metric monitors ec2 cpu utilization",
+            ComparisonOperator = "GreaterThanOrEqualToThreshold",
+            Dimensions = 
+            {
+                { "AutoScalingGroupName", aws_autoscaling_group.Bar.Name },
+            },
+            EvaluationPeriods = "2",
+            MetricName = "CPUUtilization",
+            Namespace = "AWS/EC2",
+            Period = "120",
+            Statistic = "Average",
+            Threshold = "80",
+        });
+    }
+
+}
+```
 
 ## Example with an Expression
 
@@ -134,7 +172,7 @@ foobar = aws.cloudwatch.MetricAlarm("foobar",
                 "dimensions": {
                     "LoadBalancer": "app/web",
                 },
-                "metricName": "RequestCount",
+                "metric_name": "RequestCount",
                 "namespace": "AWS/ApplicationELB",
                 "period": "120",
                 "stat": "Sum",
@@ -147,7 +185,7 @@ foobar = aws.cloudwatch.MetricAlarm("foobar",
                 "dimensions": {
                     "LoadBalancer": "app/web",
                 },
-                "metricName": "HTTPCode_ELB_5XX_Count",
+                "metric_name": "HTTPCode_ELB_5XX_Count",
                 "namespace": "AWS/ApplicationELB",
                 "period": "120",
                 "stat": "Sum",
@@ -156,6 +194,68 @@ foobar = aws.cloudwatch.MetricAlarm("foobar",
         },
     ],
     threshold="10")
+```
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var foobar = new Aws.CloudWatch.MetricAlarm("foobar", new Aws.CloudWatch.MetricAlarmArgs
+        {
+            AlarmDescription = "Request error rate has exceeded 10%",
+            ComparisonOperator = "GreaterThanOrEqualToThreshold",
+            EvaluationPeriods = "2",
+            InsufficientDataActions = {},
+            MetricQueries = 
+            {
+                new Aws.CloudWatch.Inputs.MetricAlarmMetricQueryArgs
+                {
+                    Expression = "m2/m1*100",
+                    Id = "e1",
+                    Label = "Error Rate",
+                    ReturnData = "true",
+                },
+                new Aws.CloudWatch.Inputs.MetricAlarmMetricQueryArgs
+                {
+                    Id = "m1",
+                    Metric = new Aws.CloudWatch.Inputs.MetricAlarmMetricQueryMetricArgs
+                    {
+                        Dimensions = 
+                        {
+                            { "LoadBalancer", "app/web" },
+                        },
+                        MetricName = "RequestCount",
+                        Namespace = "AWS/ApplicationELB",
+                        Period = "120",
+                        Stat = "Sum",
+                        Unit = "Count",
+                    },
+                },
+                new Aws.CloudWatch.Inputs.MetricAlarmMetricQueryArgs
+                {
+                    Id = "m2",
+                    Metric = new Aws.CloudWatch.Inputs.MetricAlarmMetricQueryMetricArgs
+                    {
+                        Dimensions = 
+                        {
+                            { "LoadBalancer", "app/web" },
+                        },
+                        MetricName = "HTTPCode_ELB_5XX_Count",
+                        Namespace = "AWS/ApplicationELB",
+                        Period = "120",
+                        Stat = "Sum",
+                        Unit = "Count",
+                    },
+                },
+            },
+            Threshold = "10",
+        });
+    }
+
+}
 ```
 
 ```typescript
@@ -214,7 +314,7 @@ xx_anomaly_detection = aws.cloudwatch.MetricAlarm("xxAnomalyDetection",
                 "dimensions": {
                     "InstanceId": "i-abc123",
                 },
-                "metricName": "CPUUtilization",
+                "metric_name": "CPUUtilization",
                 "namespace": "AWS/EC2",
                 "period": "120",
                 "stat": "Average",
@@ -224,6 +324,53 @@ xx_anomaly_detection = aws.cloudwatch.MetricAlarm("xxAnomalyDetection",
         },
     ],
     threshold_metric_id="e1")
+```
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var xxAnomalyDetection = new Aws.CloudWatch.MetricAlarm("xxAnomalyDetection", new Aws.CloudWatch.MetricAlarmArgs
+        {
+            AlarmDescription = "This metric monitors ec2 cpu utilization",
+            ComparisonOperator = "GreaterThanUpperThreshold",
+            EvaluationPeriods = "2",
+            InsufficientDataActions = {},
+            MetricQueries = 
+            {
+                new Aws.CloudWatch.Inputs.MetricAlarmMetricQueryArgs
+                {
+                    Expression = "ANOMALY_DETECTION_BAND(m1)",
+                    Id = "e1",
+                    Label = "CPUUtilization (Expected)",
+                    ReturnData = "true",
+                },
+                new Aws.CloudWatch.Inputs.MetricAlarmMetricQueryArgs
+                {
+                    Id = "m1",
+                    Metric = new Aws.CloudWatch.Inputs.MetricAlarmMetricQueryMetricArgs
+                    {
+                        Dimensions = 
+                        {
+                            { "InstanceId", "i-abc123" },
+                        },
+                        MetricName = "CPUUtilization",
+                        Namespace = "AWS/EC2",
+                        Period = "120",
+                        Stat = "Average",
+                        Unit = "Count",
+                    },
+                    ReturnData = "true",
+                },
+            },
+            ThresholdMetricId = "e1",
+        });
+    }
+
+}
 ```
 
 ## Example of monitoring Healthy Hosts on NLB using Target Group and NLB
@@ -239,7 +386,7 @@ const xxxNlbHealthyhosts = new aws.cloudwatch.MetricAlarm("xxxNlbHealthyhosts", 
     namespace: "AWS/NetworkELB",
     period: "60",
     statistic: "Average",
-    threshold: var.logstash_servers_count,
+    threshold: _var.logstash_servers_count,
     alarmDescription: "Number of XXXX nodes healthy in Target Group",
     actionsEnabled: "true",
     alarmActions: [aws_sns_topic.sns.arn],
@@ -271,6 +418,43 @@ xxx_nlb_healthyhosts = aws.cloudwatch.MetricAlarm("xxxNlbHealthyhosts",
         "LoadBalancer": aws_lb["lb"]["arn_suffix"],
     })
 ```
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var xxxNlbHealthyhosts = new Aws.CloudWatch.MetricAlarm("xxxNlbHealthyhosts", new Aws.CloudWatch.MetricAlarmArgs
+        {
+            ComparisonOperator = "LessThanThreshold",
+            EvaluationPeriods = "1",
+            MetricName = "HealthyHostCount",
+            Namespace = "AWS/NetworkELB",
+            Period = "60",
+            Statistic = "Average",
+            Threshold = @var.Logstash_servers_count,
+            AlarmDescription = "Number of XXXX nodes healthy in Target Group",
+            ActionsEnabled = "true",
+            AlarmActions = 
+            {
+                aws_sns_topic.Sns.Arn,
+            },
+            OkActions = 
+            {
+                aws_sns_topic.Sns.Arn,
+            },
+            Dimensions = 
+            {
+                { "TargetGroup", aws_lb_target_group.Lb_tg.Arn_suffix },
+                { "LoadBalancer", aws_lb.Lb.Arn_suffix },
+            },
+        });
+    }
+
+}
+```
 
 > **NOTE:**  You cannot create a metric alarm consisting of both `statistic` and `extended_statistic` parameters.
 You must choose one or the other
@@ -281,7 +465,30 @@ You must choose one or the other
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var foobar = new Aws.CloudWatch.MetricAlarm("foobar", new Aws.CloudWatch.MetricAlarmArgs
+        {
+            AlarmDescription = "This metric monitors ec2 cpu utilization",
+            ComparisonOperator = "GreaterThanOrEqualToThreshold",
+            EvaluationPeriods = "2",
+            InsufficientDataActions = {},
+            MetricName = "CPUUtilization",
+            Namespace = "AWS/EC2",
+            Period = "120",
+            Statistic = "Average",
+            Threshold = "80",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

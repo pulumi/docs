@@ -20,7 +20,23 @@ meta_desc: "Explore the GetResolverRule function of the route53 module, includin
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = Output.Create(Aws.Route53.GetResolverRule.InvokeAsync(new Aws.Route53.GetResolverRuleArgs
+        {
+            DomainName = "subdomain.example.com",
+            RuleType = "SYSTEM",
+        }));
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

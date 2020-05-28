@@ -32,7 +32,7 @@ anything, please consult the source <a class="reference external" href="https://
 <span class="n">example_access_point</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">s3</span><span class="o">.</span><span class="n">AccessPoint</span><span class="p">(</span><span class="s2">&quot;exampleAccessPoint&quot;</span><span class="p">,</span>
     <span class="n">bucket</span><span class="o">=</span><span class="n">example_bucket</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
     <span class="n">vpc_configuration</span><span class="o">=</span><span class="p">{</span>
-        <span class="s2">&quot;vpcId&quot;</span><span class="p">:</span> <span class="n">example_vpc</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;vpc_id&quot;</span><span class="p">:</span> <span class="n">example_vpc</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
     <span class="p">})</span>
 </pre></div>
 </div>
@@ -758,11 +758,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
             <span class="s2">&quot;transition&quot;</span><span class="p">:</span> <span class="p">[</span>
                 <span class="p">{</span>
                     <span class="s2">&quot;days&quot;</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span>
-                    <span class="s2">&quot;storageClass&quot;</span><span class="p">:</span> <span class="s2">&quot;STANDARD_IA&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;storage_class&quot;</span><span class="p">:</span> <span class="s2">&quot;STANDARD_IA&quot;</span><span class="p">,</span>
                 <span class="p">},</span>
                 <span class="p">{</span>
                     <span class="s2">&quot;days&quot;</span><span class="p">:</span> <span class="mi">60</span><span class="p">,</span>
-                    <span class="s2">&quot;storageClass&quot;</span><span class="p">:</span> <span class="s2">&quot;GLACIER&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;storage_class&quot;</span><span class="p">:</span> <span class="s2">&quot;GLACIER&quot;</span><span class="p">,</span>
                 <span class="p">},</span>
             <span class="p">],</span>
         <span class="p">},</span>
@@ -785,11 +785,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
         <span class="s2">&quot;noncurrentVersionTransition&quot;</span><span class="p">:</span> <span class="p">[</span>
             <span class="p">{</span>
                 <span class="s2">&quot;days&quot;</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span>
-                <span class="s2">&quot;storageClass&quot;</span><span class="p">:</span> <span class="s2">&quot;STANDARD_IA&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;storage_class&quot;</span><span class="p">:</span> <span class="s2">&quot;STANDARD_IA&quot;</span><span class="p">,</span>
             <span class="p">},</span>
             <span class="p">{</span>
                 <span class="s2">&quot;days&quot;</span><span class="p">:</span> <span class="mi">60</span><span class="p">,</span>
-                <span class="s2">&quot;storageClass&quot;</span><span class="p">:</span> <span class="s2">&quot;GLACIER&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;storage_class&quot;</span><span class="p">:</span> <span class="s2">&quot;GLACIER&quot;</span><span class="p">,</span>
             <span class="p">},</span>
         <span class="p">],</span>
         <span class="s2">&quot;prefix&quot;</span><span class="p">:</span> <span class="s2">&quot;config/&quot;</span><span class="p">,</span>
@@ -832,7 +832,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
         <span class="s2">&quot;rules&quot;</span><span class="p">:</span> <span class="p">[{</span>
             <span class="s2">&quot;destination&quot;</span><span class="p">:</span> <span class="p">{</span>
                 <span class="s2">&quot;bucket&quot;</span><span class="p">:</span> <span class="n">destination</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
-                <span class="s2">&quot;storageClass&quot;</span><span class="p">:</span> <span class="s2">&quot;STANDARD&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;storage_class&quot;</span><span class="p">:</span> <span class="s2">&quot;STANDARD&quot;</span><span class="p">,</span>
             <span class="p">},</span>
             <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;foobar&quot;</span><span class="p">,</span>
             <span class="s2">&quot;prefix&quot;</span><span class="p">:</span> <span class="s2">&quot;foo&quot;</span><span class="p">,</span>
@@ -891,7 +891,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <span class="n">mybucket</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">s3</span><span class="o">.</span><span class="n">Bucket</span><span class="p">(</span><span class="s2">&quot;mybucket&quot;</span><span class="p">,</span> <span class="n">server_side_encryption_configuration</span><span class="o">=</span><span class="p">{</span>
     <span class="s2">&quot;rule&quot;</span><span class="p">:</span> <span class="p">{</span>
         <span class="s2">&quot;applyServerSideEncryptionByDefault&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="s2">&quot;kmsMasterKeyId&quot;</span><span class="p">:</span> <span class="n">mykey</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
+            <span class="s2">&quot;kms_master_key_id&quot;</span><span class="p">:</span> <span class="n">mykey</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
             <span class="s2">&quot;sseAlgorithm&quot;</span><span class="p">:</span> <span class="s2">&quot;aws:kms&quot;</span><span class="p">,</span>
         <span class="p">},</span>
     <span class="p">},</span>
@@ -1753,7 +1753,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">topics</span><span class="o">=</span><span class="p">[{</span>
         <span class="s2">&quot;events&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;s3:ObjectCreated:*&quot;</span><span class="p">],</span>
         <span class="s2">&quot;filterSuffix&quot;</span><span class="p">:</span> <span class="s2">&quot;.log&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;topicArn&quot;</span><span class="p">:</span> <span class="n">topic</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
+        <span class="s2">&quot;topic_arn&quot;</span><span class="p">:</span> <span class="n">topic</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
     <span class="p">}])</span>
 </pre></div>
 </div>
@@ -1816,7 +1816,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <span class="n">bucket_notification</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">s3</span><span class="o">.</span><span class="n">BucketNotification</span><span class="p">(</span><span class="s2">&quot;bucketNotification&quot;</span><span class="p">,</span>
     <span class="n">bucket</span><span class="o">=</span><span class="n">bucket</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
     <span class="n">lambda_function</span><span class="o">=</span><span class="p">[{</span>
-        <span class="s2">&quot;lambdaFunctionArn&quot;</span><span class="p">:</span> <span class="n">func</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
+        <span class="s2">&quot;lambda_function_arn&quot;</span><span class="p">:</span> <span class="n">func</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
         <span class="s2">&quot;events&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;s3:ObjectCreated:*&quot;</span><span class="p">],</span>
         <span class="s2">&quot;filterPrefix&quot;</span><span class="p">:</span> <span class="s2">&quot;AWSLogs/&quot;</span><span class="p">,</span>
         <span class="s2">&quot;filterSuffix&quot;</span><span class="p">:</span> <span class="s2">&quot;.log&quot;</span><span class="p">,</span>
@@ -1863,13 +1863,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">bucket</span><span class="o">=</span><span class="n">bucket</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
     <span class="n">lambda_function</span><span class="o">=</span><span class="p">[</span>
         <span class="p">{</span>
-            <span class="s2">&quot;lambdaFunctionArn&quot;</span><span class="p">:</span> <span class="n">func1</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
+            <span class="s2">&quot;lambda_function_arn&quot;</span><span class="p">:</span> <span class="n">func1</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
             <span class="s2">&quot;events&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;s3:ObjectCreated:*&quot;</span><span class="p">],</span>
             <span class="s2">&quot;filterPrefix&quot;</span><span class="p">:</span> <span class="s2">&quot;AWSLogs/&quot;</span><span class="p">,</span>
             <span class="s2">&quot;filterSuffix&quot;</span><span class="p">:</span> <span class="s2">&quot;.log&quot;</span><span class="p">,</span>
         <span class="p">},</span>
         <span class="p">{</span>
-            <span class="s2">&quot;lambdaFunctionArn&quot;</span><span class="p">:</span> <span class="n">func2</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
+            <span class="s2">&quot;lambda_function_arn&quot;</span><span class="p">:</span> <span class="n">func2</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
             <span class="s2">&quot;events&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;s3:ObjectCreated:*&quot;</span><span class="p">],</span>
             <span class="s2">&quot;filterPrefix&quot;</span><span class="p">:</span> <span class="s2">&quot;OtherLogs/&quot;</span><span class="p">,</span>
             <span class="s2">&quot;filterSuffix&quot;</span><span class="p">:</span> <span class="s2">&quot;.log&quot;</span><span class="p">,</span>
@@ -3201,7 +3201,7 @@ Distribution.</p>
 <span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">route53</span><span class="o">.</span><span class="n">Record</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
     <span class="n">aliases</span><span class="o">=</span><span class="p">[{</span>
         <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="n">selected</span><span class="o">.</span><span class="n">website_domain</span><span class="p">,</span>
-        <span class="s2">&quot;zoneId&quot;</span><span class="p">:</span> <span class="n">selected</span><span class="o">.</span><span class="n">hosted_zone_id</span><span class="p">,</span>
+        <span class="s2">&quot;zone_id&quot;</span><span class="p">:</span> <span class="n">selected</span><span class="o">.</span><span class="n">hosted_zone_id</span><span class="p">,</span>
     <span class="p">}],</span>
     <span class="n">name</span><span class="o">=</span><span class="s2">&quot;bucket&quot;</span><span class="p">,</span>
     <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;A&quot;</span><span class="p">,</span>
@@ -3213,7 +3213,7 @@ Distribution.</p>
 
 <span class="n">selected</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">s3</span><span class="o">.</span><span class="n">get_bucket</span><span class="p">(</span><span class="n">bucket</span><span class="o">=</span><span class="s2">&quot;a-test-bucket&quot;</span><span class="p">)</span>
 <span class="n">test</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">cloudfront</span><span class="o">.</span><span class="n">Distribution</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">,</span> <span class="n">origins</span><span class="o">=</span><span class="p">[{</span>
-    <span class="s2">&quot;domainName&quot;</span><span class="p">:</span> <span class="n">selected</span><span class="o">.</span><span class="n">bucket_domain_name</span><span class="p">,</span>
+    <span class="s2">&quot;domain_name&quot;</span><span class="p">:</span> <span class="n">selected</span><span class="o">.</span><span class="n">bucket_domain_name</span><span class="p">,</span>
     <span class="s2">&quot;originId&quot;</span><span class="p">:</span> <span class="s2">&quot;s3-selected-bucket&quot;</span><span class="p">,</span>
 <span class="p">}])</span>
 </pre></div>

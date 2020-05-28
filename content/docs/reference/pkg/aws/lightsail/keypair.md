@@ -32,6 +32,22 @@ import pulumi_aws as aws
 # Create a new Lightsail Key Pair
 lg_key_pair = aws.lightsail.KeyPair("lgKeyPair")
 ```
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        // Create a new Lightsail Key Pair
+        var lgKeyPair = new Aws.LightSail.KeyPair("lgKeyPair", new Aws.LightSail.KeyPairArgs
+        {
+        });
+    }
+
+}
+```
 
 ## Create new Key Pair, encrypting the private key with a PGP Key
 
@@ -48,6 +64,22 @@ import pulumi
 import pulumi_aws as aws
 
 lg_key_pair = aws.lightsail.KeyPair("lgKeyPair", pgp_key="keybase:keybaseusername")
+```
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var lgKeyPair = new Aws.LightSail.KeyPair("lgKeyPair", new Aws.LightSail.KeyPairArgs
+        {
+            PgpKey = "keybase:keybaseusername",
+        });
+    }
+
+}
 ```
 
 ## Import an existing public key
@@ -66,6 +98,23 @@ import pulumi
 import pulumi_aws as aws
 
 lg_key_pair = aws.lightsail.KeyPair("lgKeyPair", public_key=(lambda path: open(path).read())("~/.ssh/id_rsa.pub"))
+```
+```csharp
+using System.IO;
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var lgKeyPair = new Aws.LightSail.KeyPair("lgKeyPair", new Aws.LightSail.KeyPairArgs
+        {
+            PublicKey = File.ReadAllText("~/.ssh/id_rsa.pub"),
+        });
+    }
+
+}
 ```
 
 

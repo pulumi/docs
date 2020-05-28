@@ -20,7 +20,56 @@ Provides an AWS Cognito Identity Pool.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using System.IO;
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var @default = new Aws.Iam.SamlProvider("default", new Aws.Iam.SamlProviderArgs
+        {
+            SamlMetadataDocument = File.ReadAllText("saml-metadata.xml"),
+        });
+        var main = new Aws.Cognito.IdentityPool("main", new Aws.Cognito.IdentityPoolArgs
+        {
+            AllowUnauthenticatedIdentities = false,
+            CognitoIdentityProviders = 
+            {
+                new Aws.Cognito.Inputs.IdentityPoolCognitoIdentityProviderArgs
+                {
+                    ClientId = "6lhlkkfbfb4q5kpp90urffae",
+                    ProviderName = "cognito-idp.us-east-1.amazonaws.com/us-east-1_Tv0493apJ",
+                    ServerSideTokenCheck = false,
+                },
+                new Aws.Cognito.Inputs.IdentityPoolCognitoIdentityProviderArgs
+                {
+                    ClientId = "7kodkvfqfb4qfkp39eurffae",
+                    ProviderName = "cognito-idp.us-east-1.amazonaws.com/eu-west-1_Zr231apJu",
+                    ServerSideTokenCheck = false,
+                },
+            },
+            IdentityPoolName = "identity pool",
+            OpenidConnectProviderArns = 
+            {
+                "arn:aws:iam::123456789012:oidc-provider/foo.example.com",
+            },
+            SamlProviderArns = 
+            {
+                @default.Arn,
+            },
+            SupportedLoginProviders = 
+            {
+                { "accounts.google.com", "123456789012.apps.googleusercontent.com" },
+                { "graph.facebook.com", "7346241598935552" },
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -37,13 +86,13 @@ main = aws.cognito.IdentityPool("main",
     allow_unauthenticated_identities=False,
     cognito_identity_providers=[
         {
-            "clientId": "6lhlkkfbfb4q5kpp90urffae",
-            "providerName": "cognito-idp.us-east-1.amazonaws.com/us-east-1_Tv0493apJ",
+            "client_id": "6lhlkkfbfb4q5kpp90urffae",
+            "provider_name": "cognito-idp.us-east-1.amazonaws.com/us-east-1_Tv0493apJ",
             "serverSideTokenCheck": False,
         },
         {
-            "clientId": "7kodkvfqfb4qfkp39eurffae",
-            "providerName": "cognito-idp.us-east-1.amazonaws.com/eu-west-1_Zr231apJu",
+            "client_id": "7kodkvfqfb4qfkp39eurffae",
+            "provider_name": "cognito-idp.us-east-1.amazonaws.com/eu-west-1_Zr231apJu",
             "serverSideTokenCheck": False,
         },
     ],

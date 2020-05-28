@@ -38,11 +38,11 @@ anything, please consult the source <a class="reference external" href="https://
     <span class="n">password</span><span class="o">=</span><span class="s2">&quot;#S1ncerely&quot;</span><span class="p">,</span>
     <span class="n">size</span><span class="o">=</span><span class="s2">&quot;Small&quot;</span><span class="p">,</span>
     <span class="n">vpc_settings</span><span class="o">=</span><span class="p">{</span>
-        <span class="s2">&quot;subnetIds&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">&quot;subnet_ids&quot;</span><span class="p">:</span> <span class="p">[</span>
             <span class="n">private_a</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
             <span class="n">private_b</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
         <span class="p">],</span>
-        <span class="s2">&quot;vpcId&quot;</span><span class="p">:</span> <span class="n">main_vpc</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;vpc_id&quot;</span><span class="p">:</span> <span class="n">main_vpc</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
     <span class="p">})</span>
 <span class="n">main_workspaces_directory_directory</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">workspaces</span><span class="o">.</span><span class="n">Directory</span><span class="p">(</span><span class="s2">&quot;mainWorkspaces/directoryDirectory&quot;</span><span class="p">,</span>
     <span class="n">directory_id</span><span class="o">=</span><span class="n">main_directory</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>

@@ -20,7 +20,33 @@ Provides an Elastic Transcoder pipeline resource.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var bar = new Aws.ElasticTranscoder.Pipeline("bar", new Aws.ElasticTranscoder.PipelineArgs
+        {
+            ContentConfig = new Aws.ElasticTranscoder.Inputs.PipelineContentConfigArgs
+            {
+                Bucket = aws_s3_bucket.Content_bucket.Bucket,
+                StorageClass = "Standard",
+            },
+            InputBucket = aws_s3_bucket.Input_bucket.Bucket,
+            Role = aws_iam_role.Test_role.Arn,
+            ThumbnailConfig = new Aws.ElasticTranscoder.Inputs.PipelineThumbnailConfigArgs
+            {
+                Bucket = aws_s3_bucket.Thumb_bucket.Bucket,
+                StorageClass = "Standard",
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -35,13 +61,13 @@ import pulumi_aws as aws
 bar = aws.elastictranscoder.Pipeline("bar",
     content_config={
         "bucket": aws_s3_bucket["content_bucket"]["bucket"],
-        "storageClass": "Standard",
+        "storage_class": "Standard",
     },
     input_bucket=aws_s3_bucket["input_bucket"]["bucket"],
     role=aws_iam_role["test_role"]["arn"],
     thumbnail_config={
         "bucket": aws_s3_bucket["thumb_bucket"]["bucket"],
-        "storageClass": "Standard",
+        "storage_class": "Standard",
     })
 ```
 {{% /example %}}

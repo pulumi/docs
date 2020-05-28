@@ -39,6 +39,34 @@ tag_filter = aws.ram.get_resource_share(filters=[{
     name="MyResourceName",
     resource_owner="SELF")
 ```
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var tagFilter = Output.Create(Aws.Ram.GetResourceShare.InvokeAsync(new Aws.Ram.GetResourceShareArgs
+        {
+            Filters = 
+            {
+                new Aws.Ram.Inputs.GetResourceShareFilterArgs
+                {
+                    Name = "NameOfTag",
+                    Values = 
+                    {
+                        "exampleNameTagValue",
+                    },
+                },
+            },
+            Name = "MyResourceName",
+            ResourceOwner = "SELF",
+        }));
+    }
+
+}
+```
 
 {{% examples %}}
 ## Example Usage
@@ -46,7 +74,23 @@ tag_filter = aws.ram.get_resource_share(filters=[{
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = Output.Create(Aws.Ram.GetResourceShare.InvokeAsync(new Aws.Ram.GetResourceShareArgs
+        {
+            Name = "example",
+            ResourceOwner = "SELF",
+        }));
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

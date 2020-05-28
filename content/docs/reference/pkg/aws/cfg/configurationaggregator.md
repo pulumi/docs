@@ -20,7 +20,32 @@ Manages an AWS Config Configuration Aggregator
 {{< chooser language "typescript,python,go,csharp" / >}}
 ### Account Based Aggregation
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var account = new Aws.Cfg.ConfigurationAggregator("account", new Aws.Cfg.ConfigurationAggregatorArgs
+        {
+            AccountAggregationSource = new Aws.Cfg.Inputs.ConfigurationAggregatorAccountAggregationSourceArgs
+            {
+                AccountIds = 
+                {
+                    "123456789012",
+                },
+                Regions = 
+                {
+                    "us-west-2",
+                },
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -55,7 +80,49 @@ const account = new aws.cfg.ConfigurationAggregator("account", {
 
 ### Organization Based Aggregation
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var organizationRole = new Aws.Iam.Role("organizationRole", new Aws.Iam.RoleArgs
+        {
+            AssumeRolePolicy = @"{
+  ""Version"": ""2012-10-17"",
+  ""Statement"": [
+    {
+      ""Sid"": """",
+      ""Effect"": ""Allow"",
+      ""Principal"": {
+        ""Service"": ""config.amazonaws.com""
+      },
+      ""Action"": ""sts:AssumeRole""
+    }
+  ]
+}
+
+",
+        });
+        var organizationConfigurationAggregator = new Aws.Cfg.ConfigurationAggregator("organizationConfigurationAggregator", new Aws.Cfg.ConfigurationAggregatorArgs
+        {
+            OrganizationAggregationSource = new Aws.Cfg.Inputs.ConfigurationAggregatorOrganizationAggregationSourceArgs
+            {
+                AllRegions = true,
+                RoleArn = organizationRole.Arn,
+            },
+        });
+        var organizationRolePolicyAttachment = new Aws.Iam.RolePolicyAttachment("organizationRolePolicyAttachment", new Aws.Iam.RolePolicyAttachmentArgs
+        {
+            PolicyArn = "arn:aws:iam::aws:policy/service-role/AWSConfigRoleForOrganizations",
+            Role = organizationRole.Name,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -84,7 +151,7 @@ organization_role = aws.iam.Role("organizationRole", assume_role_policy="""{
 """)
 organization_configuration_aggregator = aws.cfg.ConfigurationAggregator("organizationConfigurationAggregator", organization_aggregation_source={
     "allRegions": True,
-    "roleArn": organization_role.arn,
+    "role_arn": organization_role.arn,
 })
 organization_role_policy_attachment = aws.iam.RolePolicyAttachment("organizationRolePolicyAttachment",
     policy_arn="arn:aws:iam::aws:policy/service-role/AWSConfigRoleForOrganizations",

@@ -38,7 +38,35 @@ for more information.
 {{< chooser language "typescript,python,go,csharp" / >}}
 ### Aurora MySQL 2.x (MySQL 5.7)
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var @default = new Aws.Rds.Cluster("default", new Aws.Rds.ClusterArgs
+        {
+            AvailabilityZones = 
+            {
+                "us-west-2a",
+                "us-west-2b",
+                "us-west-2c",
+            },
+            BackupRetentionPeriod = 5,
+            ClusterIdentifier = "aurora-cluster-demo",
+            DatabaseName = "mydb",
+            Engine = "aurora-mysql",
+            EngineVersion = "5.7.mysql_aurora.2.03.2",
+            MasterPassword = "bar",
+            MasterUsername = "foo",
+            PreferredBackupWindow = "07:00-09:00",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -92,7 +120,33 @@ const defaultCluster = new aws.rds.Cluster("default", {
 
 ### Aurora MySQL 1.x (MySQL 5.6)
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var @default = new Aws.Rds.Cluster("default", new Aws.Rds.ClusterArgs
+        {
+            AvailabilityZones = 
+            {
+                "us-west-2a",
+                "us-west-2b",
+                "us-west-2c",
+            },
+            BackupRetentionPeriod = 5,
+            ClusterIdentifier = "aurora-cluster-demo",
+            DatabaseName = "mydb",
+            MasterPassword = "bar",
+            MasterUsername = "foo",
+            PreferredBackupWindow = "07:00-09:00",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -142,7 +196,34 @@ const defaultCluster = new aws.rds.Cluster("default", {
 
 ### Aurora with PostgreSQL engine
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var postgresql = new Aws.Rds.Cluster("postgresql", new Aws.Rds.ClusterArgs
+        {
+            AvailabilityZones = 
+            {
+                "us-west-2a",
+                "us-west-2b",
+                "us-west-2c",
+            },
+            BackupRetentionPeriod = 5,
+            ClusterIdentifier = "aurora-cluster-demo",
+            DatabaseName = "mydb",
+            Engine = "aurora-postgresql",
+            MasterPassword = "bar",
+            MasterUsername = "foo",
+            PreferredBackupWindow = "07:00-09:00",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -194,7 +275,27 @@ const postgresql = new aws.rds.Cluster("postgresql", {
 
 ### Aurora Multi-Master Cluster
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.Rds.Cluster("example", new Aws.Rds.ClusterArgs
+        {
+            ClusterIdentifier = "example",
+            DbSubnetGroupName = aws_db_subnet_group.Example.Name,
+            EngineMode = "multimaster",
+            MasterPassword = "barbarbarbar",
+            MasterUsername = "foo",
+            SkipFinalSnapshot = true,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

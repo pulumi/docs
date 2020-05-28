@@ -20,7 +20,57 @@ Provides a directory registration in AWS WorkSpaces Service
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var mainVpc = new Aws.Ec2.Vpc("mainVpc", new Aws.Ec2.VpcArgs
+        {
+            CidrBlock = "10.0.0.0/16",
+        });
+        var private_a = new Aws.Ec2.Subnet("private-a", new Aws.Ec2.SubnetArgs
+        {
+            AvailabilityZone = "us-east-1a",
+            CidrBlock = "10.0.0.0/24",
+            VpcId = mainVpc.Id,
+        });
+        var private_b = new Aws.Ec2.Subnet("private-b", new Aws.Ec2.SubnetArgs
+        {
+            AvailabilityZone = "us-east-1b",
+            CidrBlock = "10.0.1.0/24",
+            VpcId = mainVpc.Id,
+        });
+        var mainDirectory = new Aws.DirectoryService.Directory("mainDirectory", new Aws.DirectoryService.DirectoryArgs
+        {
+            Password = "#S1ncerely",
+            Size = "Small",
+            VpcSettings = new Aws.DirectoryService.Inputs.DirectoryVpcSettingsArgs
+            {
+                SubnetIds = 
+                {
+                    private_a.Id,
+                    private_b.Id,
+                },
+                VpcId = mainVpc.Id,
+            },
+        });
+        var mainWorkspaces_directoryDirectory = new Aws.Workspaces.Directory("mainWorkspaces/directoryDirectory", new Aws.Workspaces.DirectoryArgs
+        {
+            DirectoryId = mainDirectory.Id,
+            SelfServicePermissions = new Aws.Workspaces.Inputs.DirectorySelfServicePermissionsArgs
+            {
+                IncreaseVolumeSize = true,
+                RebuildWorkspace = true,
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -45,11 +95,11 @@ main_directory = aws.directoryservice.Directory("mainDirectory",
     password="#S1ncerely",
     size="Small",
     vpc_settings={
-        "subnetIds": [
+        "subnet_ids": [
             private_a.id,
             private_b.id,
         ],
-        "vpcId": main_vpc.id,
+        "vpc_id": main_vpc.id,
     })
 main_workspaces_directory_directory = aws.workspaces.Directory("mainWorkspaces/directoryDirectory",
     directory_id=main_directory.id,

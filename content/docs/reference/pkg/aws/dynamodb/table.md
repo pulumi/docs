@@ -22,7 +22,70 @@ Provides a DynamoDB table resource
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var basic_dynamodb_table = new Aws.DynamoDB.Table("basic-dynamodb-table", new Aws.DynamoDB.TableArgs
+        {
+            Attributes = 
+            {
+                new Aws.DynamoDB.Inputs.TableAttributeArgs
+                {
+                    Name = "UserId",
+                    Type = "S",
+                },
+                new Aws.DynamoDB.Inputs.TableAttributeArgs
+                {
+                    Name = "GameTitle",
+                    Type = "S",
+                },
+                new Aws.DynamoDB.Inputs.TableAttributeArgs
+                {
+                    Name = "TopScore",
+                    Type = "N",
+                },
+            },
+            BillingMode = "PROVISIONED",
+            GlobalSecondaryIndexes = 
+            {
+                new Aws.DynamoDB.Inputs.TableGlobalSecondaryIndexArgs
+                {
+                    HashKey = "GameTitle",
+                    Name = "GameTitleIndex",
+                    NonKeyAttributes = 
+                    {
+                        "UserId",
+                    },
+                    ProjectionType = "INCLUDE",
+                    RangeKey = "TopScore",
+                    ReadCapacity = 10,
+                    WriteCapacity = 10,
+                },
+            },
+            HashKey = "UserId",
+            RangeKey = "GameTitle",
+            ReadCapacity = 20,
+            Tags = 
+            {
+                { "Environment", "production" },
+                { "Name", "dynamodb-table-1" },
+            },
+            Ttl = new Aws.DynamoDB.Inputs.TableTtlArgs
+            {
+                AttributeName = "TimeToExist",
+                Enabled = false,
+            },
+            WriteCapacity = 20,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -51,13 +114,13 @@ basic_dynamodb_table = aws.dynamodb.Table("basic-dynamodb-table",
     ],
     billing_mode="PROVISIONED",
     global_secondary_indexes=[{
-        "hashKey": "GameTitle",
+        "hash_key": "GameTitle",
         "name": "GameTitleIndex",
         "nonKeyAttributes": ["UserId"],
         "projectionType": "INCLUDE",
-        "rangeKey": "TopScore",
-        "readCapacity": 10,
-        "writeCapacity": 10,
+        "range_key": "TopScore",
+        "read_capacity": 10,
+        "write_capacity": 10,
     }],
     hash_key="UserId",
     range_key="GameTitle",
@@ -122,7 +185,44 @@ const basic_dynamodb_table = new aws.dynamodb.Table("basic-dynamodb-table", {
 
 ### Global Tables
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.DynamoDB.Table("example", new Aws.DynamoDB.TableArgs
+        {
+            Attributes = 
+            {
+                new Aws.DynamoDB.Inputs.TableAttributeArgs
+                {
+                    Name = "TestTableHashKey",
+                    Type = "S",
+                },
+            },
+            BillingMode = "PAY_PER_REQUEST",
+            HashKey = "TestTableHashKey",
+            Replicas = 
+            {
+                new Aws.DynamoDB.Inputs.TableReplicaArgs
+                {
+                    RegionName = "us-east-2",
+                },
+                new Aws.DynamoDB.Inputs.TableReplicaArgs
+                {
+                    RegionName = "us-west-2",
+                },
+            },
+            StreamEnabled = true,
+            StreamViewType = "NEW_AND_OLD_IMAGES",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

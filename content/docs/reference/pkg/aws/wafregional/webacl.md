@@ -20,7 +20,63 @@ Provides a WAF Regional Web ACL Resource for use with Application Load Balancer.
 {{< chooser language "typescript,python,go,csharp" / >}}
 ### Regular Rule
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var ipset = new Aws.WafRegional.IpSet("ipset", new Aws.WafRegional.IpSetArgs
+        {
+            IpSetDescriptors = 
+            {
+                new Aws.WafRegional.Inputs.IpSetIpSetDescriptorArgs
+                {
+                    Type = "IPV4",
+                    Value = "192.0.7.0/24",
+                },
+            },
+        });
+        var wafrule = new Aws.WafRegional.Rule("wafrule", new Aws.WafRegional.RuleArgs
+        {
+            MetricName = "tfWAFRule",
+            Predicates = 
+            {
+                new Aws.WafRegional.Inputs.RulePredicateArgs
+                {
+                    DataId = ipset.Id,
+                    Negated = false,
+                    Type = "IPMatch",
+                },
+            },
+        });
+        var wafacl = new Aws.WafRegional.WebAcl("wafacl", new Aws.WafRegional.WebAclArgs
+        {
+            DefaultAction = new Aws.WafRegional.Inputs.WebAclDefaultActionArgs
+            {
+                Type = "ALLOW",
+            },
+            MetricName = "tfWebACL",
+            Rules = 
+            {
+                new Aws.WafRegional.Inputs.WebAclRuleArgs
+                {
+                    Action = new Aws.WafRegional.Inputs.WebAclRuleActionArgs
+                    {
+                        Type = "BLOCK",
+                    },
+                    Priority = 1,
+                    RuleId = wafrule.Id,
+                    Type = "REGULAR",
+                },
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -53,7 +109,7 @@ wafacl = aws.wafregional.WebAcl("wafacl",
             "type": "BLOCK",
         },
         "priority": 1,
-        "ruleId": wafrule.id,
+        "rule_id": wafrule.id,
         "type": "REGULAR",
     }])
 ```
@@ -97,7 +153,39 @@ const wafacl = new aws.wafregional.WebAcl("wafacl", {
 
 ### Group Rule
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.WafRegional.WebAcl("example", new Aws.WafRegional.WebAclArgs
+        {
+            DefaultAction = new Aws.WafRegional.Inputs.WebAclDefaultActionArgs
+            {
+                Type = "ALLOW",
+            },
+            MetricName = "example",
+            Rules = 
+            {
+                new Aws.WafRegional.Inputs.WebAclRuleArgs
+                {
+                    OverrideAction = new Aws.WafRegional.Inputs.WebAclRuleOverrideActionArgs
+                    {
+                        Type = "NONE",
+                    },
+                    Priority = 1,
+                    RuleId = aws_wafregional_rule_group.Example.Id,
+                    Type = "GROUP",
+                },
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -119,7 +207,7 @@ example = aws.wafregional.WebAcl("example",
             "type": "NONE",
         },
         "priority": 1,
-        "ruleId": aws_wafregional_rule_group["example"]["id"],
+        "rule_id": aws_wafregional_rule_group["example"]["id"],
         "type": "GROUP",
     }])
 ```
@@ -149,7 +237,40 @@ const example = new aws.wafregional.WebAcl("example", {
 
 ### Logging
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.WafRegional.WebAcl("example", new Aws.WafRegional.WebAclArgs
+        {
+            LoggingConfiguration = new Aws.WafRegional.Inputs.WebAclLoggingConfigurationArgs
+            {
+                LogDestination = aws_kinesis_firehose_delivery_stream.Example.Arn,
+                RedactedFields = new Aws.WafRegional.Inputs.WebAclLoggingConfigurationRedactedFieldsArgs
+                {
+                    FieldToMatch = 
+                    {
+                        
+                        {
+                            { "type", "URI" },
+                        },
+                        
+                        {
+                            { "data", "referer" },
+                            { "type", "HEADER" },
+                        },
+                    },
+                },
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -162,7 +283,7 @@ import pulumi
 import pulumi_aws as aws
 
 example = aws.wafregional.WebAcl("example", logging_configuration={
-    "logDestination": aws_kinesis_firehose_delivery_stream["example"]["arn"],
+    "log_destination": aws_kinesis_firehose_delivery_stream["example"]["arn"],
     "redactedFields": {
         "fieldToMatch": [
             {

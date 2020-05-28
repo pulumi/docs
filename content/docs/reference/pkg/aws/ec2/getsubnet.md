@@ -24,7 +24,41 @@ VPC that the subnet belongs to.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var config = new Config();
+        var subnetId = config.RequireObject<dynamic>("subnetId");
+        var selected = Output.Create(Aws.Ec2.GetSubnet.InvokeAsync(new Aws.Ec2.GetSubnetArgs
+        {
+            Id = subnetId,
+        }));
+        var subnet = new Aws.Ec2.SecurityGroup("subnet", new Aws.Ec2.SecurityGroupArgs
+        {
+            Ingress = 
+            {
+                new Aws.Ec2.Inputs.SecurityGroupIngressArgs
+                {
+                    CidrBlocks = 
+                    {
+                        selected.Apply(selected => selected.CidrBlock),
+                    },
+                    FromPort = 80,
+                    Protocol = "tcp",
+                    ToPort = 80,
+                },
+            },
+            VpcId = selected.Apply(selected => selected.VpcId),
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -41,10 +75,10 @@ subnet_id = config.require_object("subnetId")
 selected = aws.ec2.get_subnet(id=subnet_id)
 subnet = aws.ec2.SecurityGroup("subnet",
     ingress=[{
-        "cidrBlocks": [selected.cidr_block],
-        "fromPort": 80,
+        "cidr_blocks": [selected.cidr_block],
+        "from_port": 80,
         "protocol": "tcp",
-        "toPort": 80,
+        "to_port": 80,
     }],
     vpc_id=selected.vpc_id)
 ```

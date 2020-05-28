@@ -22,7 +22,34 @@ Provides a Glue Classifier resource.
 {{< chooser language "typescript,python,go,csharp" / >}}
 ### Csv Classifier
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.Glue.Classifier("example", new Aws.Glue.ClassifierArgs
+        {
+            CsvClassifier = new Aws.Glue.Inputs.ClassifierCsvClassifierArgs
+            {
+                AllowSingleColumn = false,
+                ContainsHeader = "PRESENT",
+                Delimiter = ",",
+                DisableValueTrimming = false,
+                Header = 
+                {
+                    "example1",
+                    "example2",
+                },
+                QuoteSymbol = "'",
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -71,7 +98,26 @@ const example = new aws.glue.Classifier("example", {
 
 ### Grok Classifier
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.Glue.Classifier("example", new Aws.Glue.ClassifierArgs
+        {
+            GrokClassifier = new Aws.Glue.Inputs.ClassifierGrokClassifierArgs
+            {
+                Classification = "example",
+                GrokPattern = "example",
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -106,7 +152,25 @@ const example = new aws.glue.Classifier("example", {
 
 ### JSON Classifier
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.Glue.Classifier("example", new Aws.Glue.ClassifierArgs
+        {
+            JsonClassifier = new Aws.Glue.Inputs.ClassifierJsonClassifierArgs
+            {
+                JsonPath = "example",
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -139,7 +203,26 @@ const example = new aws.glue.Classifier("example", {
 
 ### XML Classifier
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.Glue.Classifier("example", new Aws.Glue.ClassifierArgs
+        {
+            XmlClassifier = new Aws.Glue.Inputs.ClassifierXmlClassifierArgs
+            {
+                Classification = "example",
+                RowTag = "example",
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

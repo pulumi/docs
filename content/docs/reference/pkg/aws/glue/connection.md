@@ -20,7 +20,27 @@ Provides a Glue Connection resource.
 {{< chooser language "typescript,python,go,csharp" / >}}
 ### Non-VPC Connection
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.Glue.Connection("example", new Aws.Glue.ConnectionArgs
+        {
+            ConnectionProperties = 
+            {
+                { "JDBC_CONNECTION_URL", "jdbc:mysql://example.com/exampledatabase" },
+                { "PASSWORD", "examplepassword" },
+                { "USERNAME", "exampleusername" },
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -57,7 +77,36 @@ const example = new aws.glue.Connection("example", {
 
 ### VPC Connection
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.Glue.Connection("example", new Aws.Glue.ConnectionArgs
+        {
+            ConnectionProperties = 
+            {
+                { "JDBC_CONNECTION_URL", $"jdbc:mysql://{aws_rds_cluster.Example.Endpoint}/exampledatabase" },
+                { "PASSWORD", "examplepassword" },
+                { "USERNAME", "exampleusername" },
+            },
+            PhysicalConnectionRequirements = new Aws.Glue.Inputs.ConnectionPhysicalConnectionRequirementsArgs
+            {
+                AvailabilityZone = aws_subnet.Example.Availability_zone,
+                SecurityGroupIdList = 
+                {
+                    aws_security_group.Example.Id,
+                },
+                SubnetId = aws_subnet.Example.Id,
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -76,9 +125,9 @@ example = aws.glue.Connection("example",
         "USERNAME": "exampleusername",
     },
     physical_connection_requirements={
-        "availabilityZone": aws_subnet["example"]["availability_zone"],
+        "availability_zone": aws_subnet["example"]["availability_zone"],
         "securityGroupIdList": [aws_security_group["example"]["id"]],
-        "subnetId": aws_subnet["example"]["id"],
+        "subnet_id": aws_subnet["example"]["id"],
     })
 ```
 {{% /example %}}

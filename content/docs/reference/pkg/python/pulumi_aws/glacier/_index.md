@@ -47,7 +47,7 @@ anything, please consult the source <a class="reference external" href="https://
             <span class="s2">&quot;ArchiveRetrievalCompleted&quot;</span><span class="p">,</span>
             <span class="s2">&quot;InventoryRetrievalCompleted&quot;</span><span class="p">,</span>
         <span class="p">],</span>
-        <span class="s2">&quot;snsTopic&quot;</span><span class="p">:</span> <span class="n">aws_sns_topic</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
+        <span class="s2">&quot;sns_topic&quot;</span><span class="p">:</span> <span class="n">aws_sns_topic</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
     <span class="p">}],</span>
     <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
         <span class="s2">&quot;Test&quot;</span><span class="p">:</span> <span class="s2">&quot;MyArchive&quot;</span><span class="p">,</span>

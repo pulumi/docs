@@ -27,11 +27,11 @@ anything, please consult the source <a class="reference external" href="https://
 
 <span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">elasticsearch</span><span class="o">.</span><span class="n">Domain</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
     <span class="n">cluster_config</span><span class="o">=</span><span class="p">{</span>
-        <span class="s2">&quot;clusterConfig&quot;</span><span class="p">:</span> <span class="s2">&quot;r4.large.elasticsearch&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;cluster_config&quot;</span><span class="p">:</span> <span class="s2">&quot;r4.large.elasticsearch&quot;</span><span class="p">,</span>
     <span class="p">},</span>
     <span class="n">elasticsearch_version</span><span class="o">=</span><span class="s2">&quot;1.5&quot;</span><span class="p">,</span>
     <span class="n">snapshot_options</span><span class="o">=</span><span class="p">{</span>
-        <span class="s2">&quot;snapshotOptions&quot;</span><span class="p">:</span> <span class="mi">23</span><span class="p">,</span>
+        <span class="s2">&quot;snapshot_options&quot;</span><span class="p">:</span> <span class="mi">23</span><span class="p">,</span>
     <span class="p">},</span>
     <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
         <span class="s2">&quot;Domain&quot;</span><span class="p">:</span> <span class="s2">&quot;TestDomain&quot;</span><span class="p">,</span>
@@ -91,7 +91,7 @@ anything, please consult the source <a class="reference external" href="https://
 <span class="s2">&quot;&quot;&quot;</span><span class="p">,</span>
     <span class="n">policy_name</span><span class="o">=</span><span class="s2">&quot;example&quot;</span><span class="p">)</span>
 <span class="n">example_domain</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">elasticsearch</span><span class="o">.</span><span class="n">Domain</span><span class="p">(</span><span class="s2">&quot;exampleDomain&quot;</span><span class="p">,</span> <span class="n">log_publishing_options</span><span class="o">=</span><span class="p">[{</span>
-    <span class="s2">&quot;cloudwatchLogGroupArn&quot;</span><span class="p">:</span> <span class="n">example_log_group</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
+    <span class="s2">&quot;cloudwatch_log_group_arn&quot;</span><span class="p">:</span> <span class="n">example_log_group</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
     <span class="s2">&quot;logType&quot;</span><span class="p">:</span> <span class="s2">&quot;INDEX_SLOW_LOGS&quot;</span><span class="p">,</span>
 <span class="p">}])</span>
 </pre></div>
@@ -116,10 +116,10 @@ anything, please consult the source <a class="reference external" href="https://
 <span class="n">es_security_group</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">SecurityGroup</span><span class="p">(</span><span class="s2">&quot;esSecurityGroup&quot;</span><span class="p">,</span>
     <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Managed by Pulumi&quot;</span><span class="p">,</span>
     <span class="n">ingress</span><span class="o">=</span><span class="p">[{</span>
-        <span class="s2">&quot;cidrBlocks&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">selected_vpc</span><span class="o">.</span><span class="n">cidr_block</span><span class="p">],</span>
-        <span class="s2">&quot;fromPort&quot;</span><span class="p">:</span> <span class="mi">443</span><span class="p">,</span>
+        <span class="s2">&quot;cidr_blocks&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">selected_vpc</span><span class="o">.</span><span class="n">cidr_block</span><span class="p">],</span>
+        <span class="s2">&quot;from_port&quot;</span><span class="p">:</span> <span class="mi">443</span><span class="p">,</span>
         <span class="s2">&quot;protocol&quot;</span><span class="p">:</span> <span class="s2">&quot;tcp&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;toPort&quot;</span><span class="p">:</span> <span class="mi">443</span><span class="p">,</span>
+        <span class="s2">&quot;to_port&quot;</span><span class="p">:</span> <span class="mi">443</span><span class="p">,</span>
     <span class="p">}],</span>
     <span class="n">vpc_id</span><span class="o">=</span><span class="n">selected_vpc</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
 <span class="n">es_service_linked_role</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">iam</span><span class="o">.</span><span class="n">ServiceLinkedRole</span><span class="p">(</span><span class="s2">&quot;esServiceLinkedRole&quot;</span><span class="p">,</span> <span class="n">aws_service_name</span><span class="o">=</span><span class="s2">&quot;es.amazonaws.com&quot;</span><span class="p">)</span>
@@ -141,18 +141,18 @@ anything, please consult the source <a class="reference external" href="https://
         <span class="s2">&quot;rest.action.multi.allow_explicit_index&quot;</span><span class="p">:</span> <span class="s2">&quot;true&quot;</span><span class="p">,</span>
     <span class="p">},</span>
     <span class="n">cluster_config</span><span class="o">=</span><span class="p">{</span>
-        <span class="s2">&quot;clusterConfig&quot;</span><span class="p">:</span> <span class="s2">&quot;m4.large.elasticsearch&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;cluster_config&quot;</span><span class="p">:</span> <span class="s2">&quot;m4.large.elasticsearch&quot;</span><span class="p">,</span>
     <span class="p">},</span>
     <span class="n">elasticsearch_version</span><span class="o">=</span><span class="s2">&quot;6.3&quot;</span><span class="p">,</span>
     <span class="n">snapshot_options</span><span class="o">=</span><span class="p">{</span>
-        <span class="s2">&quot;snapshotOptions&quot;</span><span class="p">:</span> <span class="mi">23</span><span class="p">,</span>
+        <span class="s2">&quot;snapshot_options&quot;</span><span class="p">:</span> <span class="mi">23</span><span class="p">,</span>
     <span class="p">},</span>
     <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
         <span class="s2">&quot;Domain&quot;</span><span class="p">:</span> <span class="s2">&quot;TestDomain&quot;</span><span class="p">,</span>
     <span class="p">},</span>
     <span class="n">vpc_options</span><span class="o">=</span><span class="p">{</span>
-        <span class="s2">&quot;securityGroupIds&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">es_security_group</span><span class="o">.</span><span class="n">id</span><span class="p">],</span>
-        <span class="s2">&quot;subnetIds&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">&quot;security_group_ids&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">es_security_group</span><span class="o">.</span><span class="n">id</span><span class="p">],</span>
+        <span class="s2">&quot;subnet_ids&quot;</span><span class="p">:</span> <span class="p">[</span>
             <span class="n">selected_subnet_ids</span><span class="o">.</span><span class="n">ids</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
             <span class="n">selected_subnet_ids</span><span class="o">.</span><span class="n">ids</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span>
         <span class="p">],</span>

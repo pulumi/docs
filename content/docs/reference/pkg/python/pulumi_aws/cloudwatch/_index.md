@@ -1783,7 +1783,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
                 <span class="s2">&quot;dimensions&quot;</span><span class="p">:</span> <span class="p">{</span>
                     <span class="s2">&quot;LoadBalancer&quot;</span><span class="p">:</span> <span class="s2">&quot;app/web&quot;</span><span class="p">,</span>
                 <span class="p">},</span>
-                <span class="s2">&quot;metricName&quot;</span><span class="p">:</span> <span class="s2">&quot;RequestCount&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;metric_name&quot;</span><span class="p">:</span> <span class="s2">&quot;RequestCount&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;namespace&quot;</span><span class="p">:</span> <span class="s2">&quot;AWS/ApplicationELB&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;period&quot;</span><span class="p">:</span> <span class="s2">&quot;120&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;stat&quot;</span><span class="p">:</span> <span class="s2">&quot;Sum&quot;</span><span class="p">,</span>
@@ -1796,7 +1796,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
                 <span class="s2">&quot;dimensions&quot;</span><span class="p">:</span> <span class="p">{</span>
                     <span class="s2">&quot;LoadBalancer&quot;</span><span class="p">:</span> <span class="s2">&quot;app/web&quot;</span><span class="p">,</span>
                 <span class="p">},</span>
-                <span class="s2">&quot;metricName&quot;</span><span class="p">:</span> <span class="s2">&quot;HTTPCode_ELB_5XX_Count&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;metric_name&quot;</span><span class="p">:</span> <span class="s2">&quot;HTTPCode_ELB_5XX_Count&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;namespace&quot;</span><span class="p">:</span> <span class="s2">&quot;AWS/ApplicationELB&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;period&quot;</span><span class="p">:</span> <span class="s2">&quot;120&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;stat&quot;</span><span class="p">:</span> <span class="s2">&quot;Sum&quot;</span><span class="p">,</span>
@@ -1828,7 +1828,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
                 <span class="s2">&quot;dimensions&quot;</span><span class="p">:</span> <span class="p">{</span>
                     <span class="s2">&quot;InstanceId&quot;</span><span class="p">:</span> <span class="s2">&quot;i-abc123&quot;</span><span class="p">,</span>
                 <span class="p">},</span>
-                <span class="s2">&quot;metricName&quot;</span><span class="p">:</span> <span class="s2">&quot;CPUUtilization&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;metric_name&quot;</span><span class="p">:</span> <span class="s2">&quot;CPUUtilization&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;namespace&quot;</span><span class="p">:</span> <span class="s2">&quot;AWS/EC2&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;period&quot;</span><span class="p">:</span> <span class="s2">&quot;120&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;stat&quot;</span><span class="p">:</span> <span class="s2">&quot;Average&quot;</span><span class="p">,</span>

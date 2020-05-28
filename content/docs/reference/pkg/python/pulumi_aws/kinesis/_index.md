@@ -25,10 +25,10 @@ allows processing and analyzing streaming data using standard SQL.</p>
 <span class="n">test_stream</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">kinesis</span><span class="o">.</span><span class="n">Stream</span><span class="p">(</span><span class="s2">&quot;testStream&quot;</span><span class="p">,</span> <span class="n">shard_count</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">test_application</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">kinesis</span><span class="o">.</span><span class="n">AnalyticsApplication</span><span class="p">(</span><span class="s2">&quot;testApplication&quot;</span><span class="p">,</span> <span class="n">inputs</span><span class="o">=</span><span class="p">{</span>
     <span class="s2">&quot;kinesisStream&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="s2">&quot;resourceArn&quot;</span><span class="p">:</span> <span class="n">test_stream</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
-        <span class="s2">&quot;roleArn&quot;</span><span class="p">:</span> <span class="n">aws_iam_role</span><span class="p">[</span><span class="s2">&quot;test&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;resource_arn&quot;</span><span class="p">:</span> <span class="n">test_stream</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
+        <span class="s2">&quot;role_arn&quot;</span><span class="p">:</span> <span class="n">aws_iam_role</span><span class="p">[</span><span class="s2">&quot;test&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
     <span class="p">},</span>
-    <span class="s2">&quot;namePrefix&quot;</span><span class="p">:</span> <span class="s2">&quot;test_prefix&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;name_prefix&quot;</span><span class="p">:</span> <span class="s2">&quot;test_prefix&quot;</span><span class="p">,</span>
     <span class="s2">&quot;parallelism&quot;</span><span class="p">:</span> <span class="p">{</span>
         <span class="s2">&quot;count&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
     <span class="p">},</span>
@@ -768,7 +768,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
                 <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Lambda&quot;</span><span class="p">,</span>
             <span class="p">}],</span>
         <span class="p">},</span>
-        <span class="s2">&quot;roleArn&quot;</span><span class="p">:</span> <span class="n">firehose_role</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
+        <span class="s2">&quot;role_arn&quot;</span><span class="p">:</span> <span class="n">firehose_role</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
     <span class="p">})</span>
 </pre></div>
 </div>
@@ -795,7 +795,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">destination</span><span class="o">=</span><span class="s2">&quot;s3&quot;</span><span class="p">,</span>
     <span class="n">s3_configuration</span><span class="o">=</span><span class="p">{</span>
         <span class="s2">&quot;bucketArn&quot;</span><span class="p">:</span> <span class="n">bucket</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
-        <span class="s2">&quot;roleArn&quot;</span><span class="p">:</span> <span class="n">firehose_role</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
+        <span class="s2">&quot;role_arn&quot;</span><span class="p">:</span> <span class="n">firehose_role</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
     <span class="p">})</span>
 </pre></div>
 </div>
@@ -817,13 +817,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
         <span class="s2">&quot;dataTableColumns&quot;</span><span class="p">:</span> <span class="s2">&quot;test-col&quot;</span><span class="p">,</span>
         <span class="s2">&quot;dataTableName&quot;</span><span class="p">:</span> <span class="s2">&quot;test-table&quot;</span><span class="p">,</span>
         <span class="s2">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;T3stPass&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;roleArn&quot;</span><span class="p">:</span> <span class="n">aws_iam_role</span><span class="p">[</span><span class="s2">&quot;firehose_role&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;role_arn&quot;</span><span class="p">:</span> <span class="n">aws_iam_role</span><span class="p">[</span><span class="s2">&quot;firehose_role&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
         <span class="s2">&quot;s3BackupConfiguration&quot;</span><span class="p">:</span> <span class="p">{</span>
             <span class="s2">&quot;bucketArn&quot;</span><span class="p">:</span> <span class="n">aws_s3_bucket</span><span class="p">[</span><span class="s2">&quot;bucket&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
             <span class="s2">&quot;bufferInterval&quot;</span><span class="p">:</span> <span class="mi">300</span><span class="p">,</span>
             <span class="s2">&quot;bufferSize&quot;</span><span class="p">:</span> <span class="mi">15</span><span class="p">,</span>
             <span class="s2">&quot;compressionFormat&quot;</span><span class="p">:</span> <span class="s2">&quot;GZIP&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;roleArn&quot;</span><span class="p">:</span> <span class="n">aws_iam_role</span><span class="p">[</span><span class="s2">&quot;firehose_role&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
+            <span class="s2">&quot;role_arn&quot;</span><span class="p">:</span> <span class="n">aws_iam_role</span><span class="p">[</span><span class="s2">&quot;firehose_role&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
         <span class="p">},</span>
         <span class="s2">&quot;s3BackupMode&quot;</span><span class="p">:</span> <span class="s2">&quot;Enabled&quot;</span><span class="p">,</span>
         <span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;testuser&quot;</span><span class="p">,</span>
@@ -833,7 +833,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
         <span class="s2">&quot;bufferInterval&quot;</span><span class="p">:</span> <span class="mi">400</span><span class="p">,</span>
         <span class="s2">&quot;bufferSize&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
         <span class="s2">&quot;compressionFormat&quot;</span><span class="p">:</span> <span class="s2">&quot;GZIP&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;roleArn&quot;</span><span class="p">:</span> <span class="n">aws_iam_role</span><span class="p">[</span><span class="s2">&quot;firehose_role&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;role_arn&quot;</span><span class="p">:</span> <span class="n">aws_iam_role</span><span class="p">[</span><span class="s2">&quot;firehose_role&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
     <span class="p">})</span>
 </pre></div>
 </div>
@@ -856,7 +856,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
                 <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Lambda&quot;</span><span class="p">,</span>
             <span class="p">}],</span>
         <span class="p">},</span>
-        <span class="s2">&quot;roleArn&quot;</span><span class="p">:</span> <span class="n">aws_iam_role</span><span class="p">[</span><span class="s2">&quot;firehose_role&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;role_arn&quot;</span><span class="p">:</span> <span class="n">aws_iam_role</span><span class="p">[</span><span class="s2">&quot;firehose_role&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
         <span class="s2">&quot;typeName&quot;</span><span class="p">:</span> <span class="s2">&quot;test&quot;</span><span class="p">,</span>
     <span class="p">},</span>
     <span class="n">s3_configuration</span><span class="o">=</span><span class="p">{</span>
@@ -864,7 +864,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
         <span class="s2">&quot;bufferInterval&quot;</span><span class="p">:</span> <span class="mi">400</span><span class="p">,</span>
         <span class="s2">&quot;bufferSize&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
         <span class="s2">&quot;compressionFormat&quot;</span><span class="p">:</span> <span class="s2">&quot;GZIP&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;roleArn&quot;</span><span class="p">:</span> <span class="n">aws_iam_role</span><span class="p">[</span><span class="s2">&quot;firehose_role&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;role_arn&quot;</span><span class="p">:</span> <span class="n">aws_iam_role</span><span class="p">[</span><span class="s2">&quot;firehose_role&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
     <span class="p">})</span>
 </pre></div>
 </div>
@@ -878,7 +878,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
         <span class="s2">&quot;bufferInterval&quot;</span><span class="p">:</span> <span class="mi">400</span><span class="p">,</span>
         <span class="s2">&quot;bufferSize&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
         <span class="s2">&quot;compressionFormat&quot;</span><span class="p">:</span> <span class="s2">&quot;GZIP&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;roleArn&quot;</span><span class="p">:</span> <span class="n">aws_iam_role</span><span class="p">[</span><span class="s2">&quot;firehose&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;role_arn&quot;</span><span class="p">:</span> <span class="n">aws_iam_role</span><span class="p">[</span><span class="s2">&quot;firehose&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
     <span class="p">},</span>
     <span class="n">splunk_configuration</span><span class="o">=</span><span class="p">{</span>
         <span class="s2">&quot;hecAcknowledgmentTimeout&quot;</span><span class="p">:</span> <span class="mi">600</span><span class="p">,</span>

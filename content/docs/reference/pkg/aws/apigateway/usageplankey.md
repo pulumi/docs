@@ -20,7 +20,41 @@ Provides an API Gateway Usage Plan Key.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var test = new Aws.ApiGateway.RestApi("test", new Aws.ApiGateway.RestApiArgs
+        {
+        });
+        var myusageplan = new Aws.ApiGateway.UsagePlan("myusageplan", new Aws.ApiGateway.UsagePlanArgs
+        {
+            ApiStages = 
+            {
+                new Aws.ApiGateway.Inputs.UsagePlanApiStageArgs
+                {
+                    ApiId = test.Id,
+                    Stage = aws_api_gateway_deployment.Foo.Stage_name,
+                },
+            },
+        });
+        var mykey = new Aws.ApiGateway.ApiKey("mykey", new Aws.ApiGateway.ApiKeyArgs
+        {
+        });
+        var main = new Aws.ApiGateway.UsagePlanKey("main", new Aws.ApiGateway.UsagePlanKeyArgs
+        {
+            KeyId = mykey.Id,
+            KeyType = "API_KEY",
+            UsagePlanId = myusageplan.Id,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -34,7 +68,7 @@ import pulumi_aws as aws
 
 test = aws.apigateway.RestApi("test")
 myusageplan = aws.apigateway.UsagePlan("myusageplan", api_stages=[{
-    "apiId": test.id,
+    "api_id": test.id,
     "stage": aws_api_gateway_deployment["foo"]["stage_name"],
 }])
 mykey = aws.apigateway.ApiKey("mykey")

@@ -20,7 +20,26 @@ Provides a SageMaker Endpoint resource.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var endpoint = new Aws.Sagemaker.Endpoint("endpoint", new Aws.Sagemaker.EndpointArgs
+        {
+            EndpointConfigName = aws_sagemaker_endpoint_configuration.Ec.Name,
+            Tags = 
+            {
+                { "Name", "foo" },
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

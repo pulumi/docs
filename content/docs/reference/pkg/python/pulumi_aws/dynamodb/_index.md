@@ -197,13 +197,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="p">],</span>
     <span class="n">billing_mode</span><span class="o">=</span><span class="s2">&quot;PROVISIONED&quot;</span><span class="p">,</span>
     <span class="n">global_secondary_indexes</span><span class="o">=</span><span class="p">[{</span>
-        <span class="s2">&quot;hashKey&quot;</span><span class="p">:</span> <span class="s2">&quot;GameTitle&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;hash_key&quot;</span><span class="p">:</span> <span class="s2">&quot;GameTitle&quot;</span><span class="p">,</span>
         <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;GameTitleIndex&quot;</span><span class="p">,</span>
         <span class="s2">&quot;nonKeyAttributes&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;UserId&quot;</span><span class="p">],</span>
         <span class="s2">&quot;projectionType&quot;</span><span class="p">:</span> <span class="s2">&quot;INCLUDE&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;rangeKey&quot;</span><span class="p">:</span> <span class="s2">&quot;TopScore&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;readCapacity&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
-        <span class="s2">&quot;writeCapacity&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+        <span class="s2">&quot;range_key&quot;</span><span class="p">:</span> <span class="s2">&quot;TopScore&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;read_capacity&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+        <span class="s2">&quot;write_capacity&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
     <span class="p">}],</span>
     <span class="n">hash_key</span><span class="o">=</span><span class="s2">&quot;UserId&quot;</span><span class="p">,</span>
     <span class="n">range_key</span><span class="o">=</span><span class="s2">&quot;GameTitle&quot;</span><span class="p">,</span>

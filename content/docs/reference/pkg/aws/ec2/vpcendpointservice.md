@@ -27,7 +27,26 @@ and will overwrite the association.
 {{< chooser language "typescript,python,go,csharp" / >}}
 ### Basic
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.Ec2.VpcEndpointService("example", new Aws.Ec2.VpcEndpointServiceArgs
+        {
+            AcceptanceRequired = false,
+            NetworkLoadBalancerArns = 
+            {
+                aws_lb.Example.Arn,
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -59,7 +78,30 @@ const example = new aws.ec2.VpcEndpointService("example", {
 
 ### Basic w/ Tags
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.Ec2.VpcEndpointService("example", new Aws.Ec2.VpcEndpointServiceArgs
+        {
+            AcceptanceRequired = false,
+            NetworkLoadBalancerArns = 
+            {
+                aws_lb.Example.Arn,
+            },
+            Tags = 
+            {
+                { "Environment", "test" },
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

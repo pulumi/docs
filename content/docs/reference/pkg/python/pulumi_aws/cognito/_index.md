@@ -48,13 +48,13 @@ anything, please consult the source <a class="reference external" href="https://
     <span class="n">allow_unauthenticated_identities</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
     <span class="n">cognito_identity_providers</span><span class="o">=</span><span class="p">[</span>
         <span class="p">{</span>
-            <span class="s2">&quot;clientId&quot;</span><span class="p">:</span> <span class="s2">&quot;6lhlkkfbfb4q5kpp90urffae&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;providerName&quot;</span><span class="p">:</span> <span class="s2">&quot;cognito-idp.us-east-1.amazonaws.com/us-east-1_Tv0493apJ&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;client_id&quot;</span><span class="p">:</span> <span class="s2">&quot;6lhlkkfbfb4q5kpp90urffae&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;provider_name&quot;</span><span class="p">:</span> <span class="s2">&quot;cognito-idp.us-east-1.amazonaws.com/us-east-1_Tv0493apJ&quot;</span><span class="p">,</span>
             <span class="s2">&quot;serverSideTokenCheck&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
         <span class="p">},</span>
         <span class="p">{</span>
-            <span class="s2">&quot;clientId&quot;</span><span class="p">:</span> <span class="s2">&quot;7kodkvfqfb4qfkp39eurffae&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;providerName&quot;</span><span class="p">:</span> <span class="s2">&quot;cognito-idp.us-east-1.amazonaws.com/eu-west-1_Zr231apJu&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;client_id&quot;</span><span class="p">:</span> <span class="s2">&quot;7kodkvfqfb4qfkp39eurffae&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;provider_name&quot;</span><span class="p">:</span> <span class="s2">&quot;cognito-idp.us-east-1.amazonaws.com/eu-west-1_Zr231apJu&quot;</span><span class="p">,</span>
             <span class="s2">&quot;serverSideTokenCheck&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
         <span class="p">},</span>
     <span class="p">],</span>
@@ -279,11 +279,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">identity_pool_id</span><span class="o">=</span><span class="n">main_identity_pool</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
     <span class="n">role_mappings</span><span class="o">=</span><span class="p">[{</span>
         <span class="s2">&quot;ambiguousRoleResolution&quot;</span><span class="p">:</span> <span class="s2">&quot;AuthenticatedRole&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;identityProvider&quot;</span><span class="p">:</span> <span class="s2">&quot;graph.facebook.com&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;identity_provider&quot;</span><span class="p">:</span> <span class="s2">&quot;graph.facebook.com&quot;</span><span class="p">,</span>
         <span class="s2">&quot;mappingRule&quot;</span><span class="p">:</span> <span class="p">[{</span>
             <span class="s2">&quot;claim&quot;</span><span class="p">:</span> <span class="s2">&quot;isAdmin&quot;</span><span class="p">,</span>
             <span class="s2">&quot;matchType&quot;</span><span class="p">:</span> <span class="s2">&quot;Equals&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;roleArn&quot;</span><span class="p">:</span> <span class="n">authenticated_role</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
+            <span class="s2">&quot;role_arn&quot;</span><span class="p">:</span> <span class="n">authenticated_role</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
             <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;paid&quot;</span><span class="p">,</span>
         <span class="p">}],</span>
         <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Rules&quot;</span><span class="p">,</span>
@@ -1439,9 +1439,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">role</span><span class="o">=</span><span class="n">test_role</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
 <span class="n">test_user_pool_client</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">cognito</span><span class="o">.</span><span class="n">UserPoolClient</span><span class="p">(</span><span class="s2">&quot;testUserPoolClient&quot;</span><span class="p">,</span>
     <span class="n">analytics_configuration</span><span class="o">=</span><span class="p">{</span>
-        <span class="s2">&quot;applicationId&quot;</span><span class="p">:</span> <span class="n">test_app</span><span class="o">.</span><span class="n">application_id</span><span class="p">,</span>
+        <span class="s2">&quot;application_id&quot;</span><span class="p">:</span> <span class="n">test_app</span><span class="o">.</span><span class="n">application_id</span><span class="p">,</span>
         <span class="s2">&quot;externalId&quot;</span><span class="p">:</span> <span class="s2">&quot;some_id&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;roleArn&quot;</span><span class="p">:</span> <span class="n">test_role</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
+        <span class="s2">&quot;role_arn&quot;</span><span class="p">:</span> <span class="n">test_role</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
         <span class="s2">&quot;userDataShared&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
     <span class="p">},</span>
     <span class="n">user_pool_id</span><span class="o">=</span><span class="n">test_user_pool</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>

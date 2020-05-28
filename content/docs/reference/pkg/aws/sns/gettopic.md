@@ -22,7 +22,22 @@ without having to hard code the ARNs as input.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = Output.Create(Aws.Sns.GetTopic.InvokeAsync(new Aws.Sns.GetTopicArgs
+        {
+            Name = "an_example_topic",
+        }));
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

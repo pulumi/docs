@@ -20,7 +20,22 @@ The ECR Repository data source allows the ARN, Repository URI and Registry ID to
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var service = Output.Create(Aws.Ecr.GetRepository.InvokeAsync(new Aws.Ecr.GetRepositoryArgs
+        {
+            Name = "ecr-repository",
+        }));
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

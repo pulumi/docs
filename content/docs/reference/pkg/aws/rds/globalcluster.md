@@ -22,7 +22,48 @@ More information about Aurora global databases can be found in the [Aurora User 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var primary = new Aws.Provider("primary", new Aws.ProviderArgs
+        {
+            Region = "us-east-2",
+        });
+        var secondary = new Aws.Provider("secondary", new Aws.ProviderArgs
+        {
+            Region = "us-west-2",
+        });
+        var example = new Aws.Rds.GlobalCluster("example", new Aws.Rds.GlobalClusterArgs
+        {
+            GlobalClusterIdentifier = "example",
+        });
+        var primaryCluster = new Aws.Rds.Cluster("primaryCluster", new Aws.Rds.ClusterArgs
+        {
+            EngineMode = "global",
+            GlobalClusterIdentifier = example.Id,
+        });
+        var primaryClusterInstance = new Aws.Rds.ClusterInstance("primaryClusterInstance", new Aws.Rds.ClusterInstanceArgs
+        {
+            ClusterIdentifier = primaryCluster.Id,
+        });
+        var secondaryCluster = new Aws.Rds.Cluster("secondaryCluster", new Aws.Rds.ClusterArgs
+        {
+            EngineMode = "global",
+            GlobalClusterIdentifier = example.Id,
+        });
+        var secondaryClusterInstance = new Aws.Rds.ClusterInstance("secondaryClusterInstance", new Aws.Rds.ClusterInstanceArgs
+        {
+            ClusterIdentifier = secondaryCluster.Id,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

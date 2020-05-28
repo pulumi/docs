@@ -199,7 +199,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <span class="n">test_trigger</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">codecommit</span><span class="o">.</span><span class="n">Trigger</span><span class="p">(</span><span class="s2">&quot;testTrigger&quot;</span><span class="p">,</span>
     <span class="n">repository_name</span><span class="o">=</span><span class="n">test_repository</span><span class="o">.</span><span class="n">repository_name</span><span class="p">,</span>
     <span class="n">triggers</span><span class="o">=</span><span class="p">[{</span>
-        <span class="s2">&quot;destinationArn&quot;</span><span class="p">:</span> <span class="n">aws_sns_topic</span><span class="p">[</span><span class="s2">&quot;test&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;destination_arn&quot;</span><span class="p">:</span> <span class="n">aws_sns_topic</span><span class="p">[</span><span class="s2">&quot;test&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
         <span class="s2">&quot;events&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;all&quot;</span><span class="p">],</span>
         <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;all&quot;</span><span class="p">,</span>
     <span class="p">}])</span>

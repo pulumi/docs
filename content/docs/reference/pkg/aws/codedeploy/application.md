@@ -20,7 +20,22 @@ Provides a CodeDeploy application to be used as a basis for deployments
 {{< chooser language "typescript,python,go,csharp" / >}}
 ### ECS Application
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.CodeDeploy.Application("example", new Aws.CodeDeploy.ApplicationArgs
+        {
+            ComputePlatform = "ECS",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -49,7 +64,22 @@ const example = new aws.codedeploy.Application("example", {
 
 ### Lambda Application
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.CodeDeploy.Application("example", new Aws.CodeDeploy.ApplicationArgs
+        {
+            ComputePlatform = "Lambda",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -78,7 +108,22 @@ const example = new aws.codedeploy.Application("example", {
 
 ### Server Application
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.CodeDeploy.Application("example", new Aws.CodeDeploy.ApplicationArgs
+        {
+            ComputePlatform = "Server",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

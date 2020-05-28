@@ -20,7 +20,23 @@ Provides a Route53 Resolver rule.
 {{< chooser language "typescript,python,go,csharp" / >}}
 ### System rule
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var sys = new Aws.Route53.ResolverRule("sys", new Aws.Route53.ResolverRuleArgs
+        {
+            DomainName = "subdomain.example.com",
+            RuleType = "SYSTEM",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -52,7 +68,35 @@ const sys = new aws.route53.ResolverRule("sys", {
 
 ### Forward rule
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var fwd = new Aws.Route53.ResolverRule("fwd", new Aws.Route53.ResolverRuleArgs
+        {
+            DomainName = "example.com",
+            ResolverEndpointId = aws_route53_resolver_endpoint.Foo.Id,
+            RuleType = "FORWARD",
+            Tags = 
+            {
+                { "Environment", "Prod" },
+            },
+            TargetIps = 
+            {
+                new Aws.Route53.Inputs.ResolverRuleTargetIpArgs
+                {
+                    Ip = "123.45.67.89",
+                },
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

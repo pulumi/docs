@@ -30,9 +30,9 @@ it’s better to use <code class="docutils literal notranslate"><span class="pre
 <span class="c1"># already exists with the id &quot;snap-xxxxxxxx&quot;.</span>
 <span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">Ami</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
     <span class="n">ebs_block_devices</span><span class="o">=</span><span class="p">[{</span>
-        <span class="s2">&quot;deviceName&quot;</span><span class="p">:</span> <span class="s2">&quot;/dev/xvda&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;snapshotId&quot;</span><span class="p">:</span> <span class="s2">&quot;snap-xxxxxxxx&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;volumeSize&quot;</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span>
+        <span class="s2">&quot;device_name&quot;</span><span class="p">:</span> <span class="s2">&quot;/dev/xvda&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;snapshot_id&quot;</span><span class="p">:</span> <span class="s2">&quot;snap-xxxxxxxx&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;volume_size&quot;</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span>
     <span class="p">}],</span>
     <span class="n">root_device_name</span><span class="o">=</span><span class="s2">&quot;/dev/xvda&quot;</span><span class="p">,</span>
     <span class="n">virtualization_type</span><span class="o">=</span><span class="s2">&quot;hvm&quot;</span><span class="p">)</span>
@@ -1559,17 +1559,17 @@ any ACL rules added or changed will be detected as drift.</p>
         <span class="s2">&quot;protocol&quot;</span><span class="p">:</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span>
         <span class="s2">&quot;ruleNo&quot;</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
         <span class="s2">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;allow&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;cidrBlock&quot;</span><span class="p">:</span> <span class="n">mainvpc</span><span class="o">.</span><span class="n">cidr_block</span><span class="p">,</span>
-        <span class="s2">&quot;fromPort&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-        <span class="s2">&quot;toPort&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s2">&quot;cidr_block&quot;</span><span class="p">:</span> <span class="n">mainvpc</span><span class="o">.</span><span class="n">cidr_block</span><span class="p">,</span>
+        <span class="s2">&quot;from_port&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s2">&quot;to_port&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
     <span class="p">}],</span>
     <span class="n">egress</span><span class="o">=</span><span class="p">[{</span>
         <span class="s2">&quot;protocol&quot;</span><span class="p">:</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span>
         <span class="s2">&quot;ruleNo&quot;</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
         <span class="s2">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;allow&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;cidrBlock&quot;</span><span class="p">:</span> <span class="s2">&quot;0.0.0.0/0&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;fromPort&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-        <span class="s2">&quot;toPort&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s2">&quot;cidr_block&quot;</span><span class="p">:</span> <span class="s2">&quot;0.0.0.0/0&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;from_port&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s2">&quot;to_port&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
     <span class="p">}])</span>
 </pre></div>
 </div>
@@ -1585,9 +1585,9 @@ including the default <code class="docutils literal notranslate"><span class="pr
         <span class="s2">&quot;protocol&quot;</span><span class="p">:</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span>
         <span class="s2">&quot;ruleNo&quot;</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
         <span class="s2">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;allow&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;cidrBlock&quot;</span><span class="p">:</span> <span class="n">mainvpc</span><span class="o">.</span><span class="n">cidr_block</span><span class="p">,</span>
-        <span class="s2">&quot;fromPort&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-        <span class="s2">&quot;toPort&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s2">&quot;cidr_block&quot;</span><span class="p">:</span> <span class="n">mainvpc</span><span class="o">.</span><span class="n">cidr_block</span><span class="p">,</span>
+        <span class="s2">&quot;from_port&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s2">&quot;to_port&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
     <span class="p">}])</span>
 </pre></div>
 </div>
@@ -2013,16 +2013,16 @@ any ingress or egress rules added or changed will be detected as drift.</p>
 <span class="n">mainvpc</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">Vpc</span><span class="p">(</span><span class="s2">&quot;mainvpc&quot;</span><span class="p">,</span> <span class="n">cidr_block</span><span class="o">=</span><span class="s2">&quot;10.1.0.0/16&quot;</span><span class="p">)</span>
 <span class="n">default</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">DefaultSecurityGroup</span><span class="p">(</span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
     <span class="n">egress</span><span class="o">=</span><span class="p">[{</span>
-        <span class="s2">&quot;cidrBlocks&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;0.0.0.0/0&quot;</span><span class="p">],</span>
-        <span class="s2">&quot;fromPort&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s2">&quot;cidr_blocks&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;0.0.0.0/0&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;from_port&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
         <span class="s2">&quot;protocol&quot;</span><span class="p">:</span> <span class="s2">&quot;-1&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;toPort&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s2">&quot;to_port&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
     <span class="p">}],</span>
     <span class="n">ingress</span><span class="o">=</span><span class="p">[{</span>
-        <span class="s2">&quot;fromPort&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s2">&quot;from_port&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
         <span class="s2">&quot;protocol&quot;</span><span class="p">:</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span>
         <span class="s2">&quot;self&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
-        <span class="s2">&quot;toPort&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s2">&quot;to_port&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
     <span class="p">}],</span>
     <span class="n">vpc_id</span><span class="o">=</span><span class="n">mainvpc</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
 </pre></div>
@@ -2035,10 +2035,10 @@ including the default <code class="docutils literal notranslate"><span class="pr
 <span class="n">mainvpc</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">Vpc</span><span class="p">(</span><span class="s2">&quot;mainvpc&quot;</span><span class="p">,</span> <span class="n">cidr_block</span><span class="o">=</span><span class="s2">&quot;10.1.0.0/16&quot;</span><span class="p">)</span>
 <span class="n">default</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">DefaultSecurityGroup</span><span class="p">(</span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
     <span class="n">ingress</span><span class="o">=</span><span class="p">[{</span>
-        <span class="s2">&quot;fromPort&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s2">&quot;from_port&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
         <span class="s2">&quot;protocol&quot;</span><span class="p">:</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span>
         <span class="s2">&quot;self&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
-        <span class="s2">&quot;toPort&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s2">&quot;to_port&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
     <span class="p">}],</span>
     <span class="n">vpc_id</span><span class="o">=</span><span class="n">mainvpc</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
 </pre></div>
@@ -7264,19 +7264,19 @@ a conflict of rule settings and will overwrite rules.</p>
 <span class="n">main</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">NetworkAcl</span><span class="p">(</span><span class="s2">&quot;main&quot;</span><span class="p">,</span>
     <span class="n">egress</span><span class="o">=</span><span class="p">[{</span>
         <span class="s2">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;allow&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;cidrBlock&quot;</span><span class="p">:</span> <span class="s2">&quot;10.3.0.0/18&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;fromPort&quot;</span><span class="p">:</span> <span class="mi">443</span><span class="p">,</span>
+        <span class="s2">&quot;cidr_block&quot;</span><span class="p">:</span> <span class="s2">&quot;10.3.0.0/18&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;from_port&quot;</span><span class="p">:</span> <span class="mi">443</span><span class="p">,</span>
         <span class="s2">&quot;protocol&quot;</span><span class="p">:</span> <span class="s2">&quot;tcp&quot;</span><span class="p">,</span>
         <span class="s2">&quot;ruleNo&quot;</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span>
-        <span class="s2">&quot;toPort&quot;</span><span class="p">:</span> <span class="mi">443</span><span class="p">,</span>
+        <span class="s2">&quot;to_port&quot;</span><span class="p">:</span> <span class="mi">443</span><span class="p">,</span>
     <span class="p">}],</span>
     <span class="n">ingress</span><span class="o">=</span><span class="p">[{</span>
         <span class="s2">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;allow&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;cidrBlock&quot;</span><span class="p">:</span> <span class="s2">&quot;10.3.0.0/18&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;fromPort&quot;</span><span class="p">:</span> <span class="mi">80</span><span class="p">,</span>
+        <span class="s2">&quot;cidr_block&quot;</span><span class="p">:</span> <span class="s2">&quot;10.3.0.0/18&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;from_port&quot;</span><span class="p">:</span> <span class="mi">80</span><span class="p">,</span>
         <span class="s2">&quot;protocol&quot;</span><span class="p">:</span> <span class="s2">&quot;tcp&quot;</span><span class="p">,</span>
         <span class="s2">&quot;ruleNo&quot;</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
-        <span class="s2">&quot;toPort&quot;</span><span class="p">:</span> <span class="mi">80</span><span class="p">,</span>
+        <span class="s2">&quot;to_port&quot;</span><span class="p">:</span> <span class="mi">80</span><span class="p">,</span>
     <span class="p">}],</span>
     <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
         <span class="s2">&quot;Name&quot;</span><span class="p">:</span> <span class="s2">&quot;main&quot;</span><span class="p">,</span>
@@ -7660,7 +7660,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <span class="n">test</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">NetworkInterface</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">,</span>
     <span class="n">attachments</span><span class="o">=</span><span class="p">[{</span>
-        <span class="s2">&quot;deviceIndex&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="s2">&quot;device_index&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
         <span class="s2">&quot;instance&quot;</span><span class="p">:</span> <span class="n">aws_instance</span><span class="p">[</span><span class="s2">&quot;test&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
     <span class="p">}],</span>
     <span class="n">private_ips</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;10.0.0.50&quot;</span><span class="p">],</span>
@@ -8408,15 +8408,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">availability_zones</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;us-east-1a&quot;</span><span class="p">],</span>
     <span class="n">listeners</span><span class="o">=</span><span class="p">[</span>
         <span class="p">{</span>
-            <span class="s2">&quot;instancePort&quot;</span><span class="p">:</span> <span class="mi">25</span><span class="p">,</span>
+            <span class="s2">&quot;instance_port&quot;</span><span class="p">:</span> <span class="mi">25</span><span class="p">,</span>
             <span class="s2">&quot;instanceProtocol&quot;</span><span class="p">:</span> <span class="s2">&quot;tcp&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;lbPort&quot;</span><span class="p">:</span> <span class="mi">25</span><span class="p">,</span>
+            <span class="s2">&quot;lb_port&quot;</span><span class="p">:</span> <span class="mi">25</span><span class="p">,</span>
             <span class="s2">&quot;lbProtocol&quot;</span><span class="p">:</span> <span class="s2">&quot;tcp&quot;</span><span class="p">,</span>
         <span class="p">},</span>
         <span class="p">{</span>
-            <span class="s2">&quot;instancePort&quot;</span><span class="p">:</span> <span class="mi">587</span><span class="p">,</span>
+            <span class="s2">&quot;instance_port&quot;</span><span class="p">:</span> <span class="mi">587</span><span class="p">,</span>
             <span class="s2">&quot;instanceProtocol&quot;</span><span class="p">:</span> <span class="s2">&quot;tcp&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;lbPort&quot;</span><span class="p">:</span> <span class="mi">587</span><span class="p">,</span>
+            <span class="s2">&quot;lb_port&quot;</span><span class="p">:</span> <span class="mi">587</span><span class="p">,</span>
             <span class="s2">&quot;lbProtocol&quot;</span><span class="p">:</span> <span class="s2">&quot;tcp&quot;</span><span class="p">,</span>
         <span class="p">},</span>
     <span class="p">])</span>
@@ -8715,12 +8715,12 @@ the separate resource.</p>
 <span class="n">route_table</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">RouteTable</span><span class="p">(</span><span class="s2">&quot;routeTable&quot;</span><span class="p">,</span>
     <span class="n">routes</span><span class="o">=</span><span class="p">[</span>
         <span class="p">{</span>
-            <span class="s2">&quot;cidrBlock&quot;</span><span class="p">:</span> <span class="s2">&quot;10.0.1.0/24&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;gatewayId&quot;</span><span class="p">:</span> <span class="n">aws_internet_gateway</span><span class="p">[</span><span class="s2">&quot;main&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+            <span class="s2">&quot;cidr_block&quot;</span><span class="p">:</span> <span class="s2">&quot;10.0.1.0/24&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;gateway_id&quot;</span><span class="p">:</span> <span class="n">aws_internet_gateway</span><span class="p">[</span><span class="s2">&quot;main&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
         <span class="p">},</span>
         <span class="p">{</span>
-            <span class="s2">&quot;egressOnlyGatewayId&quot;</span><span class="p">:</span> <span class="n">aws_egress_only_internet_gateway</span><span class="p">[</span><span class="s2">&quot;foo&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
-            <span class="s2">&quot;ipv6CidrBlock&quot;</span><span class="p">:</span> <span class="s2">&quot;::/0&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;egress_only_gateway_id&quot;</span><span class="p">:</span> <span class="n">aws_egress_only_internet_gateway</span><span class="p">[</span><span class="s2">&quot;foo&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+            <span class="s2">&quot;ipv6_cidr_block&quot;</span><span class="p">:</span> <span class="s2">&quot;::/0&quot;</span><span class="p">,</span>
         <span class="p">},</span>
     <span class="p">],</span>
     <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
@@ -8986,16 +8986,16 @@ a conflict of rule settings and will overwrite rules.</p>
     <span class="n">vpc_id</span><span class="o">=</span><span class="n">aws_vpc</span><span class="p">[</span><span class="s2">&quot;main&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
     <span class="n">ingress</span><span class="o">=</span><span class="p">[{</span>
         <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;TLS from VPC&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;fromPort&quot;</span><span class="p">:</span> <span class="mi">443</span><span class="p">,</span>
-        <span class="s2">&quot;toPort&quot;</span><span class="p">:</span> <span class="mi">443</span><span class="p">,</span>
+        <span class="s2">&quot;from_port&quot;</span><span class="p">:</span> <span class="mi">443</span><span class="p">,</span>
+        <span class="s2">&quot;to_port&quot;</span><span class="p">:</span> <span class="mi">443</span><span class="p">,</span>
         <span class="s2">&quot;protocol&quot;</span><span class="p">:</span> <span class="s2">&quot;tcp&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;cidrBlocks&quot;</span><span class="p">:</span> <span class="n">aws_vpc</span><span class="p">[</span><span class="s2">&quot;main&quot;</span><span class="p">][</span><span class="s2">&quot;cidr_block&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;cidr_blocks&quot;</span><span class="p">:</span> <span class="n">aws_vpc</span><span class="p">[</span><span class="s2">&quot;main&quot;</span><span class="p">][</span><span class="s2">&quot;cidr_block&quot;</span><span class="p">],</span>
     <span class="p">}],</span>
     <span class="n">egress</span><span class="o">=</span><span class="p">[{</span>
-        <span class="s2">&quot;fromPort&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-        <span class="s2">&quot;toPort&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s2">&quot;from_port&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s2">&quot;to_port&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
         <span class="s2">&quot;protocol&quot;</span><span class="p">:</span> <span class="s2">&quot;-1&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;cidrBlocks&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;0.0.0.0/0&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;cidr_blocks&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;0.0.0.0/0&quot;</span><span class="p">],</span>
     <span class="p">}],</span>
     <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
         <span class="s2">&quot;Name&quot;</span><span class="p">:</span> <span class="s2">&quot;allow_tls&quot;</span><span class="p">,</span>
@@ -9683,22 +9683,22 @@ instances to be requested on the Spot market.</p>
         <span class="p">{</span>
             <span class="s2">&quot;ami&quot;</span><span class="p">:</span> <span class="s2">&quot;ami-1234&quot;</span><span class="p">,</span>
             <span class="s2">&quot;iamInstanceProfileArn&quot;</span><span class="p">:</span> <span class="n">aws_iam_instance_profile</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
-            <span class="s2">&quot;instanceType&quot;</span><span class="p">:</span> <span class="s2">&quot;m4.10xlarge&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;placementTenancy&quot;</span><span class="p">:</span> <span class="s2">&quot;dedicated&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;spotPrice&quot;</span><span class="p">:</span> <span class="s2">&quot;2.793&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;instance_type&quot;</span><span class="p">:</span> <span class="s2">&quot;m4.10xlarge&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;placement_tenancy&quot;</span><span class="p">:</span> <span class="s2">&quot;dedicated&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;spot_price&quot;</span><span class="p">:</span> <span class="s2">&quot;2.793&quot;</span><span class="p">,</span>
         <span class="p">},</span>
         <span class="p">{</span>
             <span class="s2">&quot;ami&quot;</span><span class="p">:</span> <span class="s2">&quot;ami-5678&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;availabilityZone&quot;</span><span class="p">:</span> <span class="s2">&quot;us-west-1a&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;availability_zone&quot;</span><span class="p">:</span> <span class="s2">&quot;us-west-1a&quot;</span><span class="p">,</span>
             <span class="s2">&quot;iamInstanceProfileArn&quot;</span><span class="p">:</span> <span class="n">aws_iam_instance_profile</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
-            <span class="s2">&quot;instanceType&quot;</span><span class="p">:</span> <span class="s2">&quot;m4.4xlarge&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;keyName&quot;</span><span class="p">:</span> <span class="s2">&quot;my-key&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;rootBlockDevice&quot;</span><span class="p">:</span> <span class="p">[{</span>
-                <span class="s2">&quot;volumeSize&quot;</span><span class="p">:</span> <span class="s2">&quot;300&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;instance_type&quot;</span><span class="p">:</span> <span class="s2">&quot;m4.4xlarge&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;key_name&quot;</span><span class="p">:</span> <span class="s2">&quot;my-key&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;root_block_device&quot;</span><span class="p">:</span> <span class="p">[{</span>
+                <span class="s2">&quot;volume_size&quot;</span><span class="p">:</span> <span class="s2">&quot;300&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;volumeType&quot;</span><span class="p">:</span> <span class="s2">&quot;gp2&quot;</span><span class="p">,</span>
             <span class="p">}],</span>
-            <span class="s2">&quot;spotPrice&quot;</span><span class="p">:</span> <span class="s2">&quot;1.117&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;subnetId&quot;</span><span class="p">:</span> <span class="s2">&quot;subnet-1234&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;spot_price&quot;</span><span class="p">:</span> <span class="s2">&quot;1.117&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;subnet_id&quot;</span><span class="p">:</span> <span class="s2">&quot;subnet-1234&quot;</span><span class="p">,</span>
             <span class="s2">&quot;tags&quot;</span><span class="p">:</span> <span class="p">{</span>
                 <span class="s2">&quot;Name&quot;</span><span class="p">:</span> <span class="s2">&quot;spot-fleet-example&quot;</span><span class="p">,</span>
             <span class="p">},</span>
@@ -9739,15 +9739,15 @@ instances to be requested on the Spot market.</p>
     <span class="n">launch_specifications</span><span class="o">=</span><span class="p">[</span>
         <span class="p">{</span>
             <span class="s2">&quot;ami&quot;</span><span class="p">:</span> <span class="s2">&quot;ami-d06a90b0&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;availabilityZone&quot;</span><span class="p">:</span> <span class="s2">&quot;us-west-2a&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;instanceType&quot;</span><span class="p">:</span> <span class="s2">&quot;m1.small&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;keyName&quot;</span><span class="p">:</span> <span class="s2">&quot;my-key&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;availability_zone&quot;</span><span class="p">:</span> <span class="s2">&quot;us-west-2a&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;instance_type&quot;</span><span class="p">:</span> <span class="s2">&quot;m1.small&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;key_name&quot;</span><span class="p">:</span> <span class="s2">&quot;my-key&quot;</span><span class="p">,</span>
         <span class="p">},</span>
         <span class="p">{</span>
             <span class="s2">&quot;ami&quot;</span><span class="p">:</span> <span class="s2">&quot;ami-d06a90b0&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;availabilityZone&quot;</span><span class="p">:</span> <span class="s2">&quot;us-west-2a&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;instanceType&quot;</span><span class="p">:</span> <span class="s2">&quot;m5.large&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;keyName&quot;</span><span class="p">:</span> <span class="s2">&quot;my-key&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;availability_zone&quot;</span><span class="p">:</span> <span class="s2">&quot;us-west-2a&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;instance_type&quot;</span><span class="p">:</span> <span class="s2">&quot;m5.large&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;key_name&quot;</span><span class="p">:</span> <span class="s2">&quot;my-key&quot;</span><span class="p">,</span>
         <span class="p">},</span>
     <span class="p">],</span>
     <span class="n">spot_price</span><span class="o">=</span><span class="s2">&quot;0.005&quot;</span><span class="p">,</span>
@@ -9776,13 +9776,13 @@ instances to be requested on the Spot market.</p>
         <span class="p">},</span>
         <span class="s2">&quot;overrides&quot;</span><span class="p">:</span> <span class="p">[</span>
             <span class="p">{</span>
-                <span class="s2">&quot;subnetId&quot;</span><span class="p">:</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;aws_subnets&quot;</span><span class="p">][</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;ids&quot;</span><span class="p">],</span>
+                <span class="s2">&quot;subnet_id&quot;</span><span class="p">:</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;aws_subnets&quot;</span><span class="p">][</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;ids&quot;</span><span class="p">],</span>
             <span class="p">},</span>
             <span class="p">{</span>
-                <span class="s2">&quot;subnetId&quot;</span><span class="p">:</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;aws_subnets&quot;</span><span class="p">][</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;ids&quot;</span><span class="p">],</span>
+                <span class="s2">&quot;subnet_id&quot;</span><span class="p">:</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;aws_subnets&quot;</span><span class="p">][</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;ids&quot;</span><span class="p">],</span>
             <span class="p">},</span>
             <span class="p">{</span>
-                <span class="s2">&quot;subnetId&quot;</span><span class="p">:</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;aws_subnets&quot;</span><span class="p">][</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;ids&quot;</span><span class="p">],</span>
+                <span class="s2">&quot;subnet_id&quot;</span><span class="p">:</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;aws_subnets&quot;</span><span class="p">][</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;ids&quot;</span><span class="p">],</span>
             <span class="p">},</span>
         <span class="p">],</span>
     <span class="p">}])</span>
@@ -11334,16 +11334,16 @@ Read <a class="reference external" href="https://docs.aws.amazon.com/vpc/latest/
     <span class="n">description</span><span class="o">=</span><span class="s2">&quot;test rule&quot;</span><span class="p">,</span>
     <span class="n">destination_cidr_block</span><span class="o">=</span><span class="s2">&quot;10.0.0.0/8&quot;</span><span class="p">,</span>
     <span class="n">destination_port_range</span><span class="o">=</span><span class="p">{</span>
-        <span class="s2">&quot;fromPort&quot;</span><span class="p">:</span> <span class="mi">22</span><span class="p">,</span>
-        <span class="s2">&quot;toPort&quot;</span><span class="p">:</span> <span class="mi">53</span><span class="p">,</span>
+        <span class="s2">&quot;from_port&quot;</span><span class="p">:</span> <span class="mi">22</span><span class="p">,</span>
+        <span class="s2">&quot;to_port&quot;</span><span class="p">:</span> <span class="mi">53</span><span class="p">,</span>
     <span class="p">},</span>
     <span class="n">protocol</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span>
     <span class="n">rule_action</span><span class="o">=</span><span class="s2">&quot;accept&quot;</span><span class="p">,</span>
     <span class="n">rule_number</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
     <span class="n">source_cidr_block</span><span class="o">=</span><span class="s2">&quot;10.0.0.0/8&quot;</span><span class="p">,</span>
     <span class="n">source_port_range</span><span class="o">=</span><span class="p">{</span>
-        <span class="s2">&quot;fromPort&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-        <span class="s2">&quot;toPort&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+        <span class="s2">&quot;from_port&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s2">&quot;to_port&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
     <span class="p">},</span>
     <span class="n">traffic_direction</span><span class="o">=</span><span class="s2">&quot;ingress&quot;</span><span class="p">,</span>
     <span class="n">traffic_mirror_filter_id</span><span class="o">=</span><span class="nb">filter</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
@@ -15428,10 +15428,10 @@ VPC that the subnet belongs to.</p>
 <span class="n">selected</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">get_subnet</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="n">subnet_id</span><span class="p">)</span>
 <span class="n">subnet</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">SecurityGroup</span><span class="p">(</span><span class="s2">&quot;subnet&quot;</span><span class="p">,</span>
     <span class="n">ingress</span><span class="o">=</span><span class="p">[{</span>
-        <span class="s2">&quot;cidrBlocks&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">selected</span><span class="o">.</span><span class="n">cidr_block</span><span class="p">],</span>
-        <span class="s2">&quot;fromPort&quot;</span><span class="p">:</span> <span class="mi">80</span><span class="p">,</span>
+        <span class="s2">&quot;cidr_blocks&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">selected</span><span class="o">.</span><span class="n">cidr_block</span><span class="p">],</span>
+        <span class="s2">&quot;from_port&quot;</span><span class="p">:</span> <span class="mi">80</span><span class="p">,</span>
         <span class="s2">&quot;protocol&quot;</span><span class="p">:</span> <span class="s2">&quot;tcp&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;toPort&quot;</span><span class="p">:</span> <span class="mi">80</span><span class="p">,</span>
+        <span class="s2">&quot;to_port&quot;</span><span class="p">:</span> <span class="mi">80</span><span class="p">,</span>
     <span class="p">}],</span>
     <span class="n">vpc_id</span><span class="o">=</span><span class="n">selected</span><span class="o">.</span><span class="n">vpc_id</span><span class="p">)</span>
 </pre></div>

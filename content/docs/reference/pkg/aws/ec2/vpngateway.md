@@ -20,7 +20,26 @@ Provides a resource to create a VPC VPN Gateway.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var vpnGw = new Aws.Ec2.VpnGateway("vpnGw", new Aws.Ec2.VpnGatewayArgs
+        {
+            Tags = 
+            {
+                { "Name", "main" },
+            },
+            VpcId = aws_vpc.Main.Id,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

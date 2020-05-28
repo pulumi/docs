@@ -21,7 +21,23 @@ More information can be found in the [Amazon API Gateway Developer Guide](https:
 {{< chooser language "typescript,python,go,csharp" / >}}
 ### Basic
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.ApiGatewayV2.Integration("example", new Aws.ApiGatewayV2.IntegrationArgs
+        {
+            ApiId = aws_apigatewayv2_api.Example.Id,
+            IntegrationType = "MOCK",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -53,7 +69,36 @@ const example = new aws.apigatewayv2.Integration("example", {
 
 ### Lambda Integration
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleFunction = new Aws.Lambda.Function("exampleFunction", new Aws.Lambda.FunctionArgs
+        {
+            Code = new FileArchive("example.zip"),
+            Handler = "index.handler",
+            Role = aws_iam_role.Example.Arn,
+            Runtime = "nodejs10.x",
+        });
+        var exampleIntegration = new Aws.ApiGatewayV2.Integration("exampleIntegration", new Aws.ApiGatewayV2.IntegrationArgs
+        {
+            ApiId = aws_apigatewayv2_api.Example.Id,
+            ConnectionType = "INTERNET",
+            ContentHandlingStrategy = "CONVERT_TO_TEXT",
+            Description = "Lambda example",
+            IntegrationMethod = "POST",
+            IntegrationType = "AWS",
+            IntegrationUri = exampleFunction.InvokeArn,
+            PassthroughBehavior = "WHEN_NO_MATCH",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

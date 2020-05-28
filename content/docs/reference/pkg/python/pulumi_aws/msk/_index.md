@@ -65,7 +65,7 @@ anything, please consult the source <a class="reference external" href="https://
 <span class="n">test_stream</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">kinesis</span><span class="o">.</span><span class="n">FirehoseDeliveryStream</span><span class="p">(</span><span class="s2">&quot;testStream&quot;</span><span class="p">,</span>
     <span class="n">destination</span><span class="o">=</span><span class="s2">&quot;s3&quot;</span><span class="p">,</span>
     <span class="n">s3_configuration</span><span class="o">=</span><span class="p">{</span>
-        <span class="s2">&quot;roleArn&quot;</span><span class="p">:</span> <span class="n">firehose_role</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
+        <span class="s2">&quot;role_arn&quot;</span><span class="p">:</span> <span class="n">firehose_role</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
         <span class="s2">&quot;bucketArn&quot;</span><span class="p">:</span> <span class="n">bucket</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
     <span class="p">},</span>
     <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
@@ -76,14 +76,14 @@ anything, please consult the source <a class="reference external" href="https://
     <span class="n">kafka_version</span><span class="o">=</span><span class="s2">&quot;2.1.0&quot;</span><span class="p">,</span>
     <span class="n">number_of_broker_nodes</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
     <span class="n">broker_node_group_info</span><span class="o">=</span><span class="p">{</span>
-        <span class="s2">&quot;instanceType&quot;</span><span class="p">:</span> <span class="s2">&quot;kafka.m5.large&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;instance_type&quot;</span><span class="p">:</span> <span class="s2">&quot;kafka.m5.large&quot;</span><span class="p">,</span>
         <span class="s2">&quot;ebsVolumeSize&quot;</span><span class="p">:</span> <span class="mi">1000</span><span class="p">,</span>
         <span class="s2">&quot;clientSubnets&quot;</span><span class="p">:</span> <span class="p">[</span>
             <span class="n">subnet_az1</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
             <span class="n">subnet_az2</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
             <span class="n">subnet_az3</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
         <span class="p">],</span>
-        <span class="s2">&quot;securityGroups&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">sg</span><span class="o">.</span><span class="n">id</span><span class="p">],</span>
+        <span class="s2">&quot;security_groups&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">sg</span><span class="o">.</span><span class="n">id</span><span class="p">],</span>
     <span class="p">},</span>
     <span class="n">encryption_info</span><span class="o">=</span><span class="p">{</span>
         <span class="s2">&quot;encryptionAtRestKmsKeyArn&quot;</span><span class="p">:</span> <span class="n">kms</span><span class="o">.</span><span class="n">arn</span><span class="p">,</span>
@@ -102,7 +102,7 @@ anything, please consult the source <a class="reference external" href="https://
         <span class="s2">&quot;broker_logs&quot;</span><span class="p">:</span> <span class="p">{</span>
             <span class="s2">&quot;cloudwatch_logs&quot;</span><span class="p">:</span> <span class="p">{</span>
                 <span class="s2">&quot;enabled&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
-                <span class="s2">&quot;logGroup&quot;</span><span class="p">:</span> <span class="n">test</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+                <span class="s2">&quot;log_group&quot;</span><span class="p">:</span> <span class="n">test</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
             <span class="p">},</span>
             <span class="s2">&quot;firehose&quot;</span><span class="p">:</span> <span class="p">{</span>
                 <span class="s2">&quot;enabled&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>

@@ -20,7 +20,22 @@ Retrieve information about a Secrets Manager secret version, including its secre
 {{< chooser language "typescript,python,go,csharp" / >}}
 ### Retrieve Current Secret Version
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = Output.Create(Aws.SecretsManager.GetSecretVersion.InvokeAsync(new Aws.SecretsManager.GetSecretVersionArgs
+        {
+            SecretId = data.Aws_secretsmanager_secret.Example.Id,
+        }));
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -49,7 +64,23 @@ const example = aws_secretsmanager_secret_example.id.apply(id => aws.secretsmana
 
 ### Retrieve Specific Secret Version
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var by_version_stage = Output.Create(Aws.SecretsManager.GetSecretVersion.InvokeAsync(new Aws.SecretsManager.GetSecretVersionArgs
+        {
+            SecretId = data.Aws_secretsmanager_secret.Example.Id,
+            VersionStage = "example",
+        }));
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

@@ -20,7 +20,41 @@ Provides a load balancer cookie stickiness policy, which allows an ELB to contro
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var lb = new Aws.Elb.LoadBalancer("lb", new Aws.Elb.LoadBalancerArgs
+        {
+            AvailabilityZones = 
+            {
+                "us-east-1a",
+            },
+            Listeners = 
+            {
+                new Aws.Elb.Inputs.LoadBalancerListenerArgs
+                {
+                    InstancePort = 8000,
+                    InstanceProtocol = "http",
+                    LbPort = 80,
+                    LbProtocol = "http",
+                },
+            },
+        });
+        var foo = new Aws.Elb.LoadBalancerCookieStickinessPolicy("foo", new Aws.Elb.LoadBalancerCookieStickinessPolicyArgs
+        {
+            CookieExpirationPeriod = 600,
+            LbPort = 80,
+            LoadBalancer = lb.Id,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -35,9 +69,9 @@ import pulumi_aws as aws
 lb = aws.elb.LoadBalancer("lb",
     availability_zones=["us-east-1a"],
     listeners=[{
-        "instancePort": 8000,
+        "instance_port": 8000,
         "instanceProtocol": "http",
-        "lbPort": 80,
+        "lb_port": 80,
         "lbProtocol": "http",
     }])
 foo = aws.elb.LoadBalancerCookieStickinessPolicy("foo",

@@ -28,7 +28,7 @@ the infrastructure that runs those applications.</p>
     <span class="n">appversion_lifecycle</span><span class="o">=</span><span class="p">{</span>
         <span class="s2">&quot;deleteSourceFromS3&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
         <span class="s2">&quot;maxCount&quot;</span><span class="p">:</span> <span class="mi">128</span><span class="p">,</span>
-        <span class="s2">&quot;serviceRole&quot;</span><span class="p">:</span> <span class="n">aws_iam_role</span><span class="p">[</span><span class="s2">&quot;beanstalk_service&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;service_role&quot;</span><span class="p">:</span> <span class="n">aws_iam_role</span><span class="p">[</span><span class="s2">&quot;beanstalk_service&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
     <span class="p">},</span>
     <span class="n">description</span><span class="o">=</span><span class="s2">&quot;tf-test-desc&quot;</span><span class="p">)</span>
 </pre></div>

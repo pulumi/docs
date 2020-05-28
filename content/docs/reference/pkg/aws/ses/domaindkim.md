@@ -22,7 +22,43 @@ Domain ownership needs to be confirmed first using [ses_domain_identity Resource
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using System.Collections.Generic;
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleDomainIdentity = new Aws.Ses.DomainIdentity("exampleDomainIdentity", new Aws.Ses.DomainIdentityArgs
+        {
+            Domain = "example.com",
+        });
+        var exampleDomainDkim = new Aws.Ses.DomainDkim("exampleDomainDkim", new Aws.Ses.DomainDkimArgs
+        {
+            Domain = exampleDomainIdentity.Domain,
+        });
+        var exampleAmazonsesDkimRecord = new List<Aws.Route53.Record>();
+        for (var rangeIndex = 0; rangeIndex < 3; rangeIndex++)
+        {
+            var range = new { Value = rangeIndex };
+            exampleAmazonsesDkimRecord.Add(new Aws.Route53.Record($"exampleAmazonsesDkimRecord-{range.Value}", new Aws.Route53.RecordArgs
+            {
+                Name = exampleDomainDkim.DkimTokens[range.Value].Apply(dkimTokens => $"{dkimTokens}._domainkey.example.com"),
+                Records = 
+                {
+                    exampleDomainDkim.DkimTokens[range.Value].Apply(dkimTokens => $"{dkimTokens}.dkim.amazonses.com"),
+                },
+                Ttl = "600",
+                Type = "CNAME",
+                ZoneId = "ABCDEFGHIJ123",
+            }));
+        }
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

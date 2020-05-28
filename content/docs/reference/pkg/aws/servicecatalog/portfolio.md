@@ -20,7 +20,23 @@ Provides a resource to create a Service Catalog Portfolio.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var portfolio = new Aws.ServiceCatalog.Portfolio("portfolio", new Aws.ServiceCatalog.PortfolioArgs
+        {
+            Description = "List of my organizations apps",
+            ProviderName = "Brett",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

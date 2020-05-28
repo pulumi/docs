@@ -20,7 +20,34 @@ Provides a WAF Size Constraint Set Resource
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var sizeConstraintSet = new Aws.Waf.SizeConstraintSet("sizeConstraintSet", new Aws.Waf.SizeConstraintSetArgs
+        {
+            SizeConstraints = 
+            {
+                new Aws.Waf.Inputs.SizeConstraintSetSizeConstraintArgs
+                {
+                    ComparisonOperator = "EQ",
+                    FieldToMatch = new Aws.Waf.Inputs.SizeConstraintSetSizeConstraintFieldToMatchArgs
+                    {
+                        Type = "BODY",
+                    },
+                    Size = "4096",
+                    TextTransformation = "NONE",
+                },
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -33,7 +60,7 @@ import pulumi
 import pulumi_aws as aws
 
 size_constraint_set = aws.waf.SizeConstraintSet("sizeConstraintSet", size_constraints=[{
-    "comparisonOperator": "EQ",
+    "comparison_operator": "EQ",
     "fieldToMatch": {
         "type": "BODY",
     },

@@ -25,7 +25,28 @@ This resource creates an application that has one configuration template named
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var tftest = new Aws.ElasticBeanstalk.Application("tftest", new Aws.ElasticBeanstalk.ApplicationArgs
+        {
+            AppversionLifecycle = new Aws.ElasticBeanstalk.Inputs.ApplicationAppversionLifecycleArgs
+            {
+                DeleteSourceFromS3 = true,
+                MaxCount = 128,
+                ServiceRole = aws_iam_role.Beanstalk_service.Arn,
+            },
+            Description = "tf-test-desc",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -41,7 +62,7 @@ tftest = aws.elasticbeanstalk.Application("tftest",
     appversion_lifecycle={
         "deleteSourceFromS3": True,
         "maxCount": 128,
-        "serviceRole": aws_iam_role["beanstalk_service"]["arn"],
+        "service_role": aws_iam_role["beanstalk_service"]["arn"],
     },
     description="tf-test-desc")
 ```

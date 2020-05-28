@@ -20,7 +20,19 @@ Provides a way to check whether default EBS encryption is enabled for your AWS a
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var current = Output.Create(Aws.Ebs.GetEncryptionByDefault.InvokeAsync());
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

@@ -20,7 +20,30 @@ Manages a Glue Crawler. More information can be found in the [AWS Glue Developer
 {{< chooser language "typescript,python,go,csharp" / >}}
 ### DynamoDB Target
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.Glue.Crawler("example", new Aws.Glue.CrawlerArgs
+        {
+            DatabaseName = aws_glue_catalog_database.Example.Name,
+            DynamodbTargets = 
+            {
+                new Aws.Glue.Inputs.CrawlerDynamodbTargetArgs
+                {
+                    Path = "table-name",
+                },
+            },
+            Role = aws_iam_role.Example.Arn,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -58,7 +81,31 @@ const example = new aws.glue.Crawler("example", {
 
 ### JDBC Target
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.Glue.Crawler("example", new Aws.Glue.CrawlerArgs
+        {
+            DatabaseName = aws_glue_catalog_database.Example.Name,
+            JdbcTargets = 
+            {
+                new Aws.Glue.Inputs.CrawlerJdbcTargetArgs
+                {
+                    ConnectionName = aws_glue_connection.Example.Name,
+                    Path = "database-name/%",
+                },
+            },
+            Role = aws_iam_role.Example.Arn,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -98,7 +145,30 @@ const example = new aws.glue.Crawler("example", {
 
 ### S3 Target
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.Glue.Crawler("example", new Aws.Glue.CrawlerArgs
+        {
+            DatabaseName = aws_glue_catalog_database.Example.Name,
+            Role = aws_iam_role.Example.Arn,
+            S3Targets = 
+            {
+                new Aws.Glue.Inputs.CrawlerS3TargetArgs
+                {
+                    Path = $"s3://{aws_s3_bucket.Example.Bucket}",
+                },
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -136,7 +206,46 @@ const example = new aws.glue.Crawler("example", {
 
 ### Catalog Target
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.Glue.Crawler("example", new Aws.Glue.CrawlerArgs
+        {
+            CatalogTargets = 
+            {
+                new Aws.Glue.Inputs.CrawlerCatalogTargetArgs
+                {
+                    DatabaseName = aws_glue_catalog_database.Example.Name,
+                    Tables = 
+                    {
+                        aws_glue_catalog_table.Example.Name,
+                    },
+                },
+            },
+            Configuration = @"{
+  ""Version"":1.0,
+  ""Grouping"": {
+    ""TableGroupingPolicy"": ""CombineCompatibleSchemas""
+  }
+}
+
+",
+            DatabaseName = aws_glue_catalog_database.Example.Name,
+            Role = aws_iam_role.Example.Arn,
+            SchemaChangePolicy = new Aws.Glue.Inputs.CrawlerSchemaChangePolicyArgs
+            {
+                DeleteBehavior = "LOG",
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -150,7 +259,7 @@ import pulumi_aws as aws
 
 example = aws.glue.Crawler("example",
     catalog_targets=[{
-        "databaseName": aws_glue_catalog_database["example"]["name"],
+        "database_name": aws_glue_catalog_database["example"]["name"],
         "tables": [aws_glue_catalog_table["example"]["name"]],
     }],
     configuration="""{

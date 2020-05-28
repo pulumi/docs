@@ -20,7 +20,24 @@ Provides a CodeBuild Source Credentials Resource.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.CodeBuild.SourceCredential("example", new Aws.CodeBuild.SourceCredentialArgs
+        {
+            AuthType = "PERSONAL_ACCESS_TOKEN",
+            ServerType = "GITHUB",
+            Token = "example",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -54,7 +71,25 @@ const example = new aws.codebuild.SourceCredential("example", {
 
 ### Bitbucket Server Usage
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.CodeBuild.SourceCredential("example", new Aws.CodeBuild.SourceCredentialArgs
+        {
+            AuthType = "BASIC_AUTH",
+            ServerType = "BITBUCKET",
+            Token = "example",
+            UserName = "test-user",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

@@ -23,7 +23,40 @@ Distribution.
 {{< chooser language "typescript,python,go,csharp" / >}}
 ### Route53 Record
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var selected = Output.Create(Aws.S3.GetBucket.InvokeAsync(new Aws.S3.GetBucketArgs
+        {
+            Bucket = "bucket.test.com",
+        }));
+        var testZone = Output.Create(Aws.Route53.GetZone.InvokeAsync(new Aws.Route53.GetZoneArgs
+        {
+            Name = "test.com.",
+        }));
+        var example = new Aws.Route53.Record("example", new Aws.Route53.RecordArgs
+        {
+            Aliases = 
+            {
+                new Aws.Route53.Inputs.RecordAliasArgs
+                {
+                    Name = selected.Apply(selected => selected.WebsiteDomain),
+                    ZoneId = selected.Apply(selected => selected.HostedZoneId),
+                },
+            },
+            Name = "bucket",
+            Type = "A",
+            ZoneId = testZone.Apply(testZone => testZone.Id),
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -40,7 +73,7 @@ test_zone = aws.route53.get_zone(name="test.com.")
 example = aws.route53.Record("example",
     aliases=[{
         "name": selected.website_domain,
-        "zoneId": selected.hosted_zone_id,
+        "zone_id": selected.hosted_zone_id,
     }],
     name="bucket",
     type="A",
@@ -73,7 +106,33 @@ const example = new aws.route53.Record("example", {
 
 ### CloudFront Origin
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var selected = Output.Create(Aws.S3.GetBucket.InvokeAsync(new Aws.S3.GetBucketArgs
+        {
+            Bucket = "a-test-bucket",
+        }));
+        var test = new Aws.CloudFront.Distribution("test", new Aws.CloudFront.DistributionArgs
+        {
+            Origins = 
+            {
+                new Aws.CloudFront.Inputs.DistributionOriginArgs
+                {
+                    DomainName = selected.Apply(selected => selected.BucketDomainName),
+                    OriginId = "s3-selected-bucket",
+                },
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -87,7 +146,7 @@ import pulumi_aws as aws
 
 selected = aws.s3.get_bucket(bucket="a-test-bucket")
 test = aws.cloudfront.Distribution("test", origins=[{
-    "domainName": selected.bucket_domain_name,
+    "domain_name": selected.bucket_domain_name,
     "originId": "s3-selected-bucket",
 }])
 ```

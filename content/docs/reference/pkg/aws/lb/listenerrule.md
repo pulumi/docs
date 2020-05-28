@@ -22,7 +22,186 @@ Provides a Load Balancer Listener Rule resource.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var frontEndLoadBalancer = new Aws.LB.LoadBalancer("frontEndLoadBalancer", new Aws.LB.LoadBalancerArgs
+        {
+        });
+        var frontEndListener = new Aws.LB.Listener("frontEndListener", new Aws.LB.ListenerArgs
+        {
+        });
+        var @static = new Aws.LB.ListenerRule("static", new Aws.LB.ListenerRuleArgs
+        {
+            Actions = 
+            {
+                new Aws.LB.Inputs.ListenerRuleActionArgs
+                {
+                    TargetGroupArn = aws_lb_target_group.Static.Arn,
+                    Type = "forward",
+                },
+            },
+            Conditions = 
+            {
+                new Aws.LB.Inputs.ListenerRuleConditionArgs
+                {
+                    PathPattern = new Aws.LB.Inputs.ListenerRuleConditionPathPatternArgs
+                    {
+                        Values = 
+                        {
+                            "/static/*",
+                        },
+                    },
+                },
+                new Aws.LB.Inputs.ListenerRuleConditionArgs
+                {
+                    HostHeader = new Aws.LB.Inputs.ListenerRuleConditionHostHeaderArgs
+                    {
+                        Values = 
+                        {
+                            "example.com",
+                        },
+                    },
+                },
+            },
+            ListenerArn = frontEndListener.Arn,
+            Priority = 100,
+        });
+        var hostBasedRouting = new Aws.LB.ListenerRule("hostBasedRouting", new Aws.LB.ListenerRuleArgs
+        {
+            Actions = 
+            {
+                new Aws.LB.Inputs.ListenerRuleActionArgs
+                {
+                    TargetGroupArn = aws_lb_target_group.Static.Arn,
+                    Type = "forward",
+                },
+            },
+            Conditions = 
+            {
+                new Aws.LB.Inputs.ListenerRuleConditionArgs
+                {
+                    HostHeader = new Aws.LB.Inputs.ListenerRuleConditionHostHeaderArgs
+                    {
+                        Values = 
+                        {
+                            "my-service.*.mydomain.io",
+                        },
+                    },
+                },
+            },
+            ListenerArn = frontEndListener.Arn,
+            Priority = 99,
+        });
+        var redirectHttpToHttps = new Aws.LB.ListenerRule("redirectHttpToHttps", new Aws.LB.ListenerRuleArgs
+        {
+            Actions = 
+            {
+                new Aws.LB.Inputs.ListenerRuleActionArgs
+                {
+                    Redirect = new Aws.LB.Inputs.ListenerRuleActionRedirectArgs
+                    {
+                        Port = "443",
+                        Protocol = "HTTPS",
+                        StatusCode = "HTTP_301",
+                    },
+                    Type = "redirect",
+                },
+            },
+            Conditions = 
+            {
+                new Aws.LB.Inputs.ListenerRuleConditionArgs
+                {
+                    HttpHeader = new Aws.LB.Inputs.ListenerRuleConditionHttpHeaderArgs
+                    {
+                        HttpHeaderName = "X-Forwarded-For",
+                        Values = 
+                        {
+                            "192.168.1.*",
+                        },
+                    },
+                },
+            },
+            ListenerArn = frontEndListener.Arn,
+        });
+        var healthCheck = new Aws.LB.ListenerRule("healthCheck", new Aws.LB.ListenerRuleArgs
+        {
+            Actions = 
+            {
+                new Aws.LB.Inputs.ListenerRuleActionArgs
+                {
+                    FixedResponse = new Aws.LB.Inputs.ListenerRuleActionFixedResponseArgs
+                    {
+                        ContentType = "text/plain",
+                        MessageBody = "HEALTHY",
+                        StatusCode = "200",
+                    },
+                    Type = "fixed-response",
+                },
+            },
+            Conditions = 
+            {
+                new Aws.LB.Inputs.ListenerRuleConditionArgs
+                {
+                    QueryString = 
+                    {
+                        
+                        {
+                            { "key", "health" },
+                            { "value", "check" },
+                        },
+                        
+                        {
+                            { "value", "bar" },
+                        },
+                    },
+                },
+            },
+            ListenerArn = frontEndListener.Arn,
+        });
+        var pool = new Aws.Cognito.UserPool("pool", new Aws.Cognito.UserPoolArgs
+        {
+        });
+        var client = new Aws.Cognito.UserPoolClient("client", new Aws.Cognito.UserPoolClientArgs
+        {
+        });
+        var domain = new Aws.Cognito.UserPoolDomain("domain", new Aws.Cognito.UserPoolDomainArgs
+        {
+        });
+        var admin = new Aws.LB.ListenerRule("admin", new Aws.LB.ListenerRuleArgs
+        {
+            Actions = 
+            {
+                new Aws.LB.Inputs.ListenerRuleActionArgs
+                {
+                    AuthenticateOidc = new Aws.LB.Inputs.ListenerRuleActionAuthenticateOidcArgs
+                    {
+                        AuthorizationEndpoint = "https://example.com/authorization_endpoint",
+                        ClientId = "client_id",
+                        ClientSecret = "client_secret",
+                        Issuer = "https://example.com",
+                        TokenEndpoint = "https://example.com/token_endpoint",
+                        UserInfoEndpoint = "https://example.com/user_info_endpoint",
+                    },
+                    Type = "authenticate-oidc",
+                },
+                new Aws.LB.Inputs.ListenerRuleActionArgs
+                {
+                    TargetGroupArn = aws_lb_target_group.Static.Arn,
+                    Type = "forward",
+                },
+            },
+            ListenerArn = frontEndListener.Arn,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -38,7 +217,7 @@ front_end_load_balancer = aws.lb.LoadBalancer("frontEndLoadBalancer")
 front_end_listener = aws.lb.Listener("frontEndListener")
 static = aws.lb.ListenerRule("static",
     actions=[{
-        "targetGroupArn": aws_lb_target_group["static"]["arn"],
+        "target_group_arn": aws_lb_target_group["static"]["arn"],
         "type": "forward",
     }],
     conditions=[
@@ -57,7 +236,7 @@ static = aws.lb.ListenerRule("static",
     priority=100)
 host_based_routing = aws.lb.ListenerRule("hostBasedRouting",
     actions=[{
-        "targetGroupArn": aws_lb_target_group["static"]["arn"],
+        "target_group_arn": aws_lb_target_group["static"]["arn"],
         "type": "forward",
     }],
     conditions=[{
@@ -72,7 +251,7 @@ redirect_http_to_https = aws.lb.ListenerRule("redirectHttpToHttps",
         "redirect": {
             "port": "443",
             "protocol": "HTTPS",
-            "statusCode": "HTTP_301",
+            "status_code": "HTTP_301",
         },
         "type": "redirect",
     }],
@@ -86,9 +265,9 @@ redirect_http_to_https = aws.lb.ListenerRule("redirectHttpToHttps",
 health_check = aws.lb.ListenerRule("healthCheck",
     actions=[{
         "fixedResponse": {
-            "contentType": "text/plain",
+            "content_type": "text/plain",
             "messageBody": "HEALTHY",
-            "statusCode": "200",
+            "status_code": "200",
         },
         "type": "fixed-response",
     }],
@@ -112,8 +291,8 @@ admin = aws.lb.ListenerRule("admin",
         {
             "authenticateOidc": {
                 "authorizationEndpoint": "https://example.com/authorization_endpoint",
-                "clientId": "client_id",
-                "clientSecret": "client_secret",
+                "client_id": "client_id",
+                "client_secret": "client_secret",
                 "issuer": "https://example.com",
                 "tokenEndpoint": "https://example.com/token_endpoint",
                 "userInfoEndpoint": "https://example.com/user_info_endpoint",
@@ -121,7 +300,7 @@ admin = aws.lb.ListenerRule("admin",
             "type": "authenticate-oidc",
         },
         {
-            "targetGroupArn": aws_lb_target_group["static"]["arn"],
+            "target_group_arn": aws_lb_target_group["static"]["arn"],
             "type": "forward",
         },
     ],

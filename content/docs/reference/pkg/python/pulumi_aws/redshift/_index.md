@@ -1558,7 +1558,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
         <span class="s2">&quot;dataTableColumns&quot;</span><span class="p">:</span> <span class="s2">&quot;test-col&quot;</span><span class="p">,</span>
         <span class="s2">&quot;dataTableName&quot;</span><span class="p">:</span> <span class="s2">&quot;test-table&quot;</span><span class="p">,</span>
         <span class="s2">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;T3stPass&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;roleArn&quot;</span><span class="p">:</span> <span class="n">aws_iam_role</span><span class="p">[</span><span class="s2">&quot;firehose_role&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;role_arn&quot;</span><span class="p">:</span> <span class="n">aws_iam_role</span><span class="p">[</span><span class="s2">&quot;firehose_role&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
         <span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;testuser&quot;</span><span class="p">,</span>
     <span class="p">},</span>
     <span class="n">s3_configuration</span><span class="o">=</span><span class="p">{</span>
@@ -1566,7 +1566,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
         <span class="s2">&quot;bufferInterval&quot;</span><span class="p">:</span> <span class="mi">400</span><span class="p">,</span>
         <span class="s2">&quot;bufferSize&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
         <span class="s2">&quot;compressionFormat&quot;</span><span class="p">:</span> <span class="s2">&quot;GZIP&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;roleArn&quot;</span><span class="p">:</span> <span class="n">aws_iam_role</span><span class="p">[</span><span class="s2">&quot;firehose_role&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;role_arn&quot;</span><span class="p">:</span> <span class="n">aws_iam_role</span><span class="p">[</span><span class="s2">&quot;firehose_role&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
     <span class="p">})</span>
 </pre></div>
 </div>

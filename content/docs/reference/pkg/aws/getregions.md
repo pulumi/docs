@@ -20,7 +20,19 @@ Provides information about AWS Regions. Can be used to filter regions i.e. by Op
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var current = Output.Create(Aws.GetRegions.InvokeAsync());
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

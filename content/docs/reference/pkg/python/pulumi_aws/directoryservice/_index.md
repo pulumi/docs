@@ -147,11 +147,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
         <span class="s2">&quot;Project&quot;</span><span class="p">:</span> <span class="s2">&quot;foo&quot;</span><span class="p">,</span>
     <span class="p">},</span>
     <span class="n">vpc_settings</span><span class="o">=</span><span class="p">{</span>
-        <span class="s2">&quot;subnetIds&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">&quot;subnet_ids&quot;</span><span class="p">:</span> <span class="p">[</span>
             <span class="n">foo</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
             <span class="n">bar_subnet</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
         <span class="p">],</span>
-        <span class="s2">&quot;vpcId&quot;</span><span class="p">:</span> <span class="n">main</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;vpc_id&quot;</span><span class="p">:</span> <span class="n">main</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
     <span class="p">})</span>
 </pre></div>
 </div>
@@ -175,11 +175,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="p">},</span>
     <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;MicrosoftAD&quot;</span><span class="p">,</span>
     <span class="n">vpc_settings</span><span class="o">=</span><span class="p">{</span>
-        <span class="s2">&quot;subnetIds&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">&quot;subnet_ids&quot;</span><span class="p">:</span> <span class="p">[</span>
             <span class="n">foo</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
             <span class="n">bar_subnet</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
         <span class="p">],</span>
-        <span class="s2">&quot;vpcId&quot;</span><span class="p">:</span> <span class="n">main</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;vpc_id&quot;</span><span class="p">:</span> <span class="n">main</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
     <span class="p">})</span>
 </pre></div>
 </div>
@@ -199,11 +199,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">connect_settings</span><span class="o">=</span><span class="p">{</span>
         <span class="s2">&quot;customerDnsIps&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;A.B.C.D&quot;</span><span class="p">],</span>
         <span class="s2">&quot;customerUsername&quot;</span><span class="p">:</span> <span class="s2">&quot;Admin&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;subnetIds&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">&quot;subnet_ids&quot;</span><span class="p">:</span> <span class="p">[</span>
             <span class="n">foo</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
             <span class="n">bar</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
         <span class="p">],</span>
-        <span class="s2">&quot;vpcId&quot;</span><span class="p">:</span> <span class="n">main</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;vpc_id&quot;</span><span class="p">:</span> <span class="n">main</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
     <span class="p">},</span>
     <span class="n">password</span><span class="o">=</span><span class="s2">&quot;SuperSecretPassw0rd&quot;</span><span class="p">,</span>
     <span class="n">size</span><span class="o">=</span><span class="s2">&quot;Small&quot;</span><span class="p">,</span>

@@ -50,6 +50,47 @@ instance = aws.iam.Role("instance",
     assume_role_policy=instance_assume_role_policy.json,
     path="/system/")
 ```
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var instance_assume_role_policy = Output.Create(Aws.Iam.GetPolicyDocument.InvokeAsync(new Aws.Iam.GetPolicyDocumentArgs
+        {
+            Statements = 
+            {
+                new Aws.Iam.Inputs.GetPolicyDocumentStatementArgs
+                {
+                    Actions = 
+                    {
+                        "sts:AssumeRole",
+                    },
+                    Principals = 
+                    {
+                        new Aws.Iam.Inputs.GetPolicyDocumentStatementPrincipalArgs
+                        {
+                            Identifiers = 
+                            {
+                                "ec2.amazonaws.com",
+                            },
+                            Type = "Service",
+                        },
+                    },
+                },
+            },
+        }));
+        var instance = new Aws.Iam.Role("instance", new Aws.Iam.RoleArgs
+        {
+            AssumeRolePolicy = instance_assume_role_policy.Apply(instance_assume_role_policy => instance_assume_role_policy.Json),
+            Path = "/system/",
+        });
+    }
+
+}
+```
 
 {{% examples %}}
 ## Example Usage
@@ -57,7 +98,40 @@ instance = aws.iam.Role("instance",
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var testRole = new Aws.Iam.Role("testRole", new Aws.Iam.RoleArgs
+        {
+            AssumeRolePolicy = @"{
+  ""Version"": ""2012-10-17"",
+  ""Statement"": [
+    {
+      ""Action"": ""sts:AssumeRole"",
+      ""Principal"": {
+        ""Service"": ""ec2.amazonaws.com""
+      },
+      ""Effect"": ""Allow"",
+      ""Sid"": """"
+    }
+  ]
+}
+
+",
+            Tags = 
+            {
+                { "tag-key", "tag-value" },
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

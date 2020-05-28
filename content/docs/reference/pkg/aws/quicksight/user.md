@@ -20,7 +20,25 @@ Resource for managing QuickSight User
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.Quicksight.User("example", new Aws.Quicksight.UserArgs
+        {
+            Email = "author@example.com",
+            IdentityType = "IAM",
+            UserName = "an-author",
+            UserRole = "AUTHOR",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

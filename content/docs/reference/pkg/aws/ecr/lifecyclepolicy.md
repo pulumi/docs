@@ -24,7 +24,44 @@ Manages an ECR repository lifecycle policy.
 {{< chooser language "typescript,python,go,csharp" / >}}
 ### Policy on untagged image
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var foo = new Aws.Ecr.Repository("foo", new Aws.Ecr.RepositoryArgs
+        {
+        });
+        var foopolicy = new Aws.Ecr.LifecyclePolicy("foopolicy", new Aws.Ecr.LifecyclePolicyArgs
+        {
+            Policy = @"{
+    ""rules"": [
+        {
+            ""rulePriority"": 1,
+            ""description"": ""Expire images older than 14 days"",
+            ""selection"": {
+                ""tagStatus"": ""untagged"",
+                ""countType"": ""sinceImagePushed"",
+                ""countUnit"": ""days"",
+                ""countNumber"": 14
+            },
+            ""action"": {
+                ""type"": ""expire""
+            }
+        }
+    ]
+}
+
+",
+            Repository = foo.Name,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -93,7 +130,44 @@ const foopolicy = new aws.ecr.LifecyclePolicy("foopolicy", {
 
 ### Policy on tagged image
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var foo = new Aws.Ecr.Repository("foo", new Aws.Ecr.RepositoryArgs
+        {
+        });
+        var foopolicy = new Aws.Ecr.LifecyclePolicy("foopolicy", new Aws.Ecr.LifecyclePolicyArgs
+        {
+            Policy = @"{
+    ""rules"": [
+        {
+            ""rulePriority"": 1,
+            ""description"": ""Keep last 30 images"",
+            ""selection"": {
+                ""tagStatus"": ""tagged"",
+                ""tagPrefixList"": [""v""],
+                ""countType"": ""imageCountMoreThan"",
+                ""countNumber"": 30
+            },
+            ""action"": {
+                ""type"": ""expire""
+            }
+        }
+    ]
+}
+
+",
+            Repository = foo.Name,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

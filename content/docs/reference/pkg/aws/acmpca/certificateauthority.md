@@ -22,7 +22,31 @@ Provides a resource to manage AWS Certificate Manager Private Certificate Author
 {{< chooser language "typescript,python,go,csharp" / >}}
 ### Basic
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.Acmpca.CertificateAuthority("example", new Aws.Acmpca.CertificateAuthorityArgs
+        {
+            CertificateAuthorityConfiguration = new Aws.Acmpca.Inputs.CertificateAuthorityCertificateAuthorityConfigurationArgs
+            {
+                KeyAlgorithm = "RSA_4096",
+                SigningAlgorithm = "SHA512WITHRSA",
+                Subject = new Aws.Acmpca.Inputs.CertificateAuthorityCertificateAuthorityConfigurationSubjectArgs
+                {
+                    CommonName = "example.com",
+                },
+            },
+            PermanentDeletionTimeInDays = 7,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -66,7 +90,85 @@ const example = new aws.acmpca.CertificateAuthority("example", {
 
 ### Enable Certificate Revocation List
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleBucket = new Aws.S3.Bucket("exampleBucket", new Aws.S3.BucketArgs
+        {
+        });
+        var acmpcaBucketAccess = Output.Tuple(exampleBucket.Arn, exampleBucket.Arn).Apply(values =>
+        {
+            var exampleBucketArn = values.Item1;
+            var exampleBucketArn1 = values.Item2;
+            return Aws.Iam.GetPolicyDocument.InvokeAsync(new Aws.Iam.GetPolicyDocumentArgs
+            {
+                Statements = 
+                {
+                    new Aws.Iam.Inputs.GetPolicyDocumentStatementArgs
+                    {
+                        Actions = 
+                        {
+                            "s3:GetBucketAcl",
+                            "s3:GetBucketLocation",
+                            "s3:PutObject",
+                            "s3:PutObjectAcl",
+                        },
+                        Principals = 
+                        {
+                            new Aws.Iam.Inputs.GetPolicyDocumentStatementPrincipalArgs
+                            {
+                                Identifiers = 
+                                {
+                                    "acm-pca.amazonaws.com",
+                                },
+                                Type = "Service",
+                            },
+                        },
+                        Resources = 
+                        {
+                            exampleBucketArn,
+                            $"{exampleBucketArn1}/*",
+                        },
+                    },
+                },
+            });
+        });
+        var exampleBucketPolicy = new Aws.S3.BucketPolicy("exampleBucketPolicy", new Aws.S3.BucketPolicyArgs
+        {
+            Bucket = exampleBucket.Id,
+            Policy = acmpcaBucketAccess.Apply(acmpcaBucketAccess => acmpcaBucketAccess.Json),
+        });
+        var exampleCertificateAuthority = new Aws.Acmpca.CertificateAuthority("exampleCertificateAuthority", new Aws.Acmpca.CertificateAuthorityArgs
+        {
+            CertificateAuthorityConfiguration = new Aws.Acmpca.Inputs.CertificateAuthorityCertificateAuthorityConfigurationArgs
+            {
+                KeyAlgorithm = "RSA_4096",
+                SigningAlgorithm = "SHA512WITHRSA",
+                Subject = new Aws.Acmpca.Inputs.CertificateAuthorityCertificateAuthorityConfigurationSubjectArgs
+                {
+                    CommonName = "example.com",
+                },
+            },
+            RevocationConfiguration = new Aws.Acmpca.Inputs.CertificateAuthorityRevocationConfigurationArgs
+            {
+                CrlConfiguration = new Aws.Acmpca.Inputs.CertificateAuthorityRevocationConfigurationCrlConfigurationArgs
+                {
+                    CustomCname = "crl.example.com",
+                    Enabled = true,
+                    ExpirationInDays = 7,
+                    S3BucketName = exampleBucket.Id,
+                },
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -111,7 +213,7 @@ example_certificate_authority = aws.acmpca.CertificateAuthority("exampleCertific
             "customCname": "crl.example.com",
             "enabled": True,
             "expirationInDays": 7,
-            "s3BucketName": example_bucket.id,
+            "s3_bucket_name": example_bucket.id,
         },
     })
 ```

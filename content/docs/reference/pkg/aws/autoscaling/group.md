@@ -83,7 +83,70 @@ for more information.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var test = new Aws.Ec2.PlacementGroup("test", new Aws.Ec2.PlacementGroupArgs
+        {
+            Strategy = "cluster",
+        });
+        var bar = new Aws.AutoScaling.Group("bar", new Aws.AutoScaling.GroupArgs
+        {
+            DesiredCapacity = 4,
+            ForceDelete = true,
+            HealthCheckGracePeriod = 300,
+            HealthCheckType = "ELB",
+            InitialLifecycleHooks = 
+            {
+                new Aws.AutoScaling.Inputs.GroupInitialLifecycleHookArgs
+                {
+                    DefaultResult = "CONTINUE",
+                    HeartbeatTimeout = 2000,
+                    LifecycleTransition = "autoscaling:EC2_INSTANCE_LAUNCHING",
+                    Name = "foobar",
+                    NotificationMetadata = @"{
+  ""foo"": ""bar""
+}
+
+",
+                    NotificationTargetArn = "arn:aws:sqs:us-east-1:444455556666:queue1*",
+                    RoleArn = "arn:aws:iam::123456789012:role/S3Access",
+                },
+            },
+            LaunchConfiguration = aws_launch_configuration.Foobar.Name,
+            MaxSize = 5,
+            MinSize = 2,
+            PlacementGroup = test.Id,
+            Tags = 
+            {
+                new Aws.AutoScaling.Inputs.GroupTagArgs
+                {
+                    Key = "foo",
+                    PropagateAtLaunch = true,
+                    Value = "bar",
+                },
+                new Aws.AutoScaling.Inputs.GroupTagArgs
+                {
+                    Key = "lorem",
+                    PropagateAtLaunch = false,
+                    Value = "ipsum",
+                },
+            },
+            VpcZoneIdentifiers = 
+            {
+                aws_subnet.Example1.Id,
+                aws_subnet.Example2.Id,
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -102,17 +165,17 @@ bar = aws.autoscaling.Group("bar",
     health_check_grace_period=300,
     health_check_type="ELB",
     initial_lifecycle_hooks=[{
-        "defaultResult": "CONTINUE",
-        "heartbeatTimeout": 2000,
-        "lifecycleTransition": "autoscaling:EC2_INSTANCE_LAUNCHING",
+        "default_result": "CONTINUE",
+        "heartbeat_timeout": 2000,
+        "lifecycle_transition": "autoscaling:EC2_INSTANCE_LAUNCHING",
         "name": "foobar",
-        "notificationMetadata": """{
+        "notification_metadata": """{
   "foo": "bar"
 }
 
 """,
-        "notificationTargetArn": "arn:aws:sqs:us-east-1:444455556666:queue1*",
-        "roleArn": "arn:aws:iam::123456789012:role/S3Access",
+        "notification_target_arn": "arn:aws:sqs:us-east-1:444455556666:queue1*",
+        "role_arn": "arn:aws:iam::123456789012:role/S3Access",
     }],
     launch_configuration=aws_launch_configuration["foobar"]["name"],
     max_size=5,
@@ -190,7 +253,39 @@ const bar = new aws.autoscaling.Group("bar", {
 
 ### With Latest Version Of Launch Template
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var foobar = new Aws.Ec2.LaunchTemplate("foobar", new Aws.Ec2.LaunchTemplateArgs
+        {
+            ImageId = "ami-1a2b3c",
+            InstanceType = "t2.micro",
+            NamePrefix = "foobar",
+        });
+        var bar = new Aws.AutoScaling.Group("bar", new Aws.AutoScaling.GroupArgs
+        {
+            AvailabilityZones = 
+            {
+                "us-east-1a",
+            },
+            DesiredCapacity = 1,
+            LaunchTemplate = new Aws.AutoScaling.Inputs.GroupLaunchTemplateArgs
+            {
+                Id = foobar.Id,
+                Version = "$$Latest",
+            },
+            MaxSize = 1,
+            MinSize = 1,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -243,7 +338,57 @@ const bar = new aws.autoscaling.Group("bar", {
 
 ### Mixed Instances Policy
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleLaunchTemplate = new Aws.Ec2.LaunchTemplate("exampleLaunchTemplate", new Aws.Ec2.LaunchTemplateArgs
+        {
+            ImageId = data.Aws_ami.Example.Id,
+            InstanceType = "c5.large",
+            NamePrefix = "example",
+        });
+        var exampleGroup = new Aws.AutoScaling.Group("exampleGroup", new Aws.AutoScaling.GroupArgs
+        {
+            AvailabilityZones = 
+            {
+                "us-east-1a",
+            },
+            DesiredCapacity = 1,
+            MaxSize = 1,
+            MinSize = 1,
+            MixedInstancesPolicy = new Aws.AutoScaling.Inputs.GroupMixedInstancesPolicyArgs
+            {
+                LaunchTemplate = new Aws.AutoScaling.Inputs.GroupMixedInstancesPolicyLaunchTemplateArgs
+                {
+                    LaunchTemplateSpecification = new Aws.AutoScaling.Inputs.GroupMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecificationArgs
+                    {
+                        LaunchTemplateId = exampleLaunchTemplate.Id,
+                    },
+                    Override = 
+                    {
+                        
+                        {
+                            { "instanceType", "c4.large" },
+                            { "weightedCapacity", "3" },
+                        },
+                        
+                        {
+                            { "instanceType", "c3.large" },
+                            { "weightedCapacity", "2" },
+                        },
+                    },
+                },
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -265,17 +410,17 @@ example_group = aws.autoscaling.Group("exampleGroup",
     max_size=1,
     min_size=1,
     mixed_instances_policy={
-        "launchTemplate": {
+        "launch_template": {
             "launchTemplateSpecification": {
                 "launchTemplateId": example_launch_template.id,
             },
             "override": [
                 {
-                    "instanceType": "c4.large",
+                    "instance_type": "c4.large",
                     "weightedCapacity": "3",
                 },
                 {
-                    "instanceType": "c3.large",
+                    "instance_type": "c3.large",
                     "weightedCapacity": "2",
                 },
             ],

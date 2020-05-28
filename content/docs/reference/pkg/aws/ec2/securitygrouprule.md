@@ -60,6 +60,34 @@ allow_all = aws.ec2.SecurityGroupRule("allowAll",
     to_port=0,
     type="egress")
 ```
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        // ...
+        var myEndpoint = new Aws.Ec2.VpcEndpoint("myEndpoint", new Aws.Ec2.VpcEndpointArgs
+        {
+        });
+        var allowAll = new Aws.Ec2.SecurityGroupRule("allowAll", new Aws.Ec2.SecurityGroupRuleArgs
+        {
+            FromPort = 0,
+            PrefixListIds = 
+            {
+                myEndpoint.PrefixListId,
+            },
+            Protocol = "-1",
+            SecurityGroupId = "sg-123456",
+            ToPort = 0,
+            Type = "egress",
+        });
+    }
+
+}
+```
 
 {{% examples %}}
 ## Example Usage
@@ -67,7 +95,27 @@ allow_all = aws.ec2.SecurityGroupRule("allowAll",
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.Ec2.SecurityGroupRule("example", new Aws.Ec2.SecurityGroupRuleArgs
+        {
+            Type = "ingress",
+            FromPort = 0,
+            ToPort = 65535,
+            Protocol = "tcp",
+            CidrBlocks = aws_vpc.Example.Cidr_block,
+            SecurityGroupId = "sg-123456",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

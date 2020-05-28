@@ -17,10 +17,168 @@ For information about Lambda and how to use it, see [What is AWS Lambda?](https:
 > **NOTE:** Due to [AWS Lambda improved VPC networking changes that began deploying in September 2019](https://aws.amazon.com/blogs/compute/announcing-improved-vpc-networking-for-aws-lambda-functions/), EC2 subnets and security groups associated with Lambda Functions can take up to 45 minutes to successfully delete.
 
 
-## CloudWatch Logging and Permissions
+## Specifying the Deployment Package
 
-For more information about CloudWatch Logs for Lambda, see the [Lambda User Guide](https://docs.aws.amazon.com/lambda/latest/dg/monitoring-functions-logs.html).
+AWS Lambda expects source code to be provided as a deployment package whose structure varies depending on which `runtime` is in use.
+See [Runtimes](https://docs.aws.amazon.com/lambda/latest/dg/API_CreateFunction.html#SSS-CreateFunction-request-Runtime) for the valid values of `runtime`. The expected structure of the deployment package can be found in
+[the AWS Lambda documentation for each runtime](https://docs.aws.amazon.com/lambda/latest/dg/deployment-package-v2.html).
 
+Once you have created your deployment package you can specify it either directly as a local file (using the `filename` argument) or
+indirectly via Amazon S3 (using the `s3_bucket`, `s3_key` and `s3_object_version` arguments). When providing the deployment
+package via S3 it may be useful to use the `aws.s3.BucketObject` resource to upload it.
+
+For larger deployment packages it is recommended by Amazon to upload via S3, since the S3 API has better support for uploading
+large files efficiently.
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Lambda Layers
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleLayerVersion = new Aws.Lambda.LayerVersion("exampleLayerVersion", new Aws.Lambda.LayerVersionArgs
+        {
+        });
+        var exampleFunction = new Aws.Lambda.Function("exampleFunction", new Aws.Lambda.FunctionArgs
+        {
+            Layers = 
+            {
+                exampleLayerVersion.Arn,
+            },
+        });
+    }
+
+}
+```
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+example_layer_version = aws.lambda_.LayerVersion("exampleLayerVersion")
+example_function = aws.lambda_.Function("exampleFunction", layers=[example_layer_version.arn])
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const exampleLayerVersion = new aws.lambda.LayerVersion("example", {});
+const exampleFunction = new aws.lambda.Function("example", {
+    // ... other configuration ...
+    layers: [exampleLayerVersion.arn],
+});
+```
+{{% /example %}}
+
+### CloudWatch Logging and Permissions
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var testLambda = new Aws.Lambda.Function("testLambda", new Aws.Lambda.FunctionArgs
+        {
+        });
+        // This is to optionally manage the CloudWatch Log Group for the Lambda Function.
+        // If skipping this resource configuration, also add "logs:CreateLogGroup" to the IAM policy below.
+        var example = new Aws.CloudWatch.LogGroup("example", new Aws.CloudWatch.LogGroupArgs
+        {
+            RetentionInDays = 14,
+        });
+        // See also the following AWS managed policy: AWSLambdaBasicExecutionRole
+        var lambdaLogging = new Aws.Iam.Policy("lambdaLogging", new Aws.Iam.PolicyArgs
+        {
+            Description = "IAM policy for logging from a lambda",
+            Path = "/",
+            Policy = @"{
+  ""Version"": ""2012-10-17"",
+  ""Statement"": [
+    {
+      ""Action"": [
+        ""logs:CreateLogGroup"",
+        ""logs:CreateLogStream"",
+        ""logs:PutLogEvents""
+      ],
+      ""Resource"": ""arn:aws:logs:*:*:*"",
+      ""Effect"": ""Allow""
+    }
+  ]
+}
+
+",
+        });
+        var lambdaLogs = new Aws.Iam.RolePolicyAttachment("lambdaLogs", new Aws.Iam.RolePolicyAttachmentArgs
+        {
+            PolicyArn = lambdaLogging.Arn,
+            Role = aws_iam_role.Iam_for_lambda.Name,
+        });
+    }
+
+}
+```
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+test_lambda = aws.lambda_.Function("testLambda")
+# This is to optionally manage the CloudWatch Log Group for the Lambda Function.
+# If skipping this resource configuration, also add "logs:CreateLogGroup" to the IAM policy below.
+example = aws.cloudwatch.LogGroup("example", retention_in_days=14)
+# See also the following AWS managed policy: AWSLambdaBasicExecutionRole
+lambda_logging = aws.iam.Policy("lambdaLogging",
+    description="IAM policy for logging from a lambda",
+    path="/",
+    policy="""{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Action": [
+        "logs:CreateLogGroup",
+        "logs:CreateLogStream",
+        "logs:PutLogEvents"
+      ],
+      "Resource": "arn:aws:logs:*:*:*",
+      "Effect": "Allow"
+    }
+  ]
+}
+
+""")
+lambda_logs = aws.iam.RolePolicyAttachment("lambdaLogs",
+    policy_arn=lambda_logging.arn,
+    role=aws_iam_role["iam_for_lambda"]["name"])
+```
+{{% /example %}}
+
+{{% example typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -55,86 +213,6 @@ const lambdaLogs = new aws.iam.RolePolicyAttachment("lambda_logs", {
     role: aws_iam_role_iam_for_lambda.name,
 });
 const testLambda = new aws.lambda.Function("test_lambda", {}, { dependsOn: [example, lambdaLogs] });
-```
-```python
-import pulumi
-import pulumi_aws as aws
-
-test_lambda = aws.lambda_.Function("testLambda")
-# This is to optionally manage the CloudWatch Log Group for the Lambda Function.
-# If skipping this resource configuration, also add "logs:CreateLogGroup" to the IAM policy below.
-example = aws.cloudwatch.LogGroup("example", retention_in_days=14)
-# See also the following AWS managed policy: AWSLambdaBasicExecutionRole
-lambda_logging = aws.iam.Policy("lambdaLogging",
-    description="IAM policy for logging from a lambda",
-    path="/",
-    policy="""{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Action": [
-        "logs:CreateLogGroup",
-        "logs:CreateLogStream",
-        "logs:PutLogEvents"
-      ],
-      "Resource": "arn:aws:logs:*:*:*",
-      "Effect": "Allow"
-    }
-  ]
-}
-
-""")
-lambda_logs = aws.iam.RolePolicyAttachment("lambdaLogs",
-    policy_arn=lambda_logging.arn,
-    role=aws_iam_role["iam_for_lambda"]["name"])
-```
-
-## Specifying the Deployment Package
-
-AWS Lambda expects source code to be provided as a deployment package whose structure varies depending on which `runtime` is in use.
-See [Runtimes](https://docs.aws.amazon.com/lambda/latest/dg/API_CreateFunction.html#SSS-CreateFunction-request-Runtime) for the valid values of `runtime`. The expected structure of the deployment package can be found in
-[the AWS Lambda documentation for each runtime](https://docs.aws.amazon.com/lambda/latest/dg/deployment-package-v2.html).
-
-Once you have created your deployment package you can specify it either directly as a local file (using the `filename` argument) or
-indirectly via Amazon S3 (using the `s3_bucket`, `s3_key` and `s3_object_version` arguments). When providing the deployment
-package via S3 it may be useful to use the `aws.s3.BucketObject` resource to upload it.
-
-For larger deployment packages it is recommended by Amazon to upload via S3, since the S3 API has better support for uploading
-large files efficiently.
-
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Lambda Layers
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_aws as aws
-
-example_layer_version = aws.lambda_.LayerVersion("exampleLayerVersion")
-example_function = aws.lambda_.Function("exampleFunction", layers=[example_layer_version.arn])
-```
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const exampleLayerVersion = new aws.lambda.LayerVersion("example", {});
-const exampleFunction = new aws.lambda.Function("example", {
-    // ... other configuration ...
-    layers: [exampleLayerVersion.arn],
-});
 ```
 {{% /example %}}
 

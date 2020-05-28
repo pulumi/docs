@@ -36,7 +36,72 @@ browser.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        // Create a new load balancer
+        var bar = new Aws.Elb.LoadBalancer("bar", new Aws.Elb.LoadBalancerArgs
+        {
+            AccessLogs = new Aws.Elb.Inputs.LoadBalancerAccessLogsArgs
+            {
+                Bucket = "foo",
+                BucketPrefix = "bar",
+                Interval = 60,
+            },
+            AvailabilityZones = 
+            {
+                "us-west-2a",
+                "us-west-2b",
+                "us-west-2c",
+            },
+            ConnectionDraining = true,
+            ConnectionDrainingTimeout = 400,
+            CrossZoneLoadBalancing = true,
+            HealthCheck = new Aws.Elb.Inputs.LoadBalancerHealthCheckArgs
+            {
+                HealthyThreshold = 2,
+                Interval = 30,
+                Target = "HTTP:8000/",
+                Timeout = 3,
+                UnhealthyThreshold = 2,
+            },
+            IdleTimeout = 400,
+            Instances = 
+            {
+                aws_instance.Foo.Id,
+            },
+            Listeners = 
+            {
+                new Aws.Elb.Inputs.LoadBalancerListenerArgs
+                {
+                    InstancePort = 8000,
+                    InstanceProtocol = "http",
+                    LbPort = 80,
+                    LbProtocol = "http",
+                },
+                new Aws.Elb.Inputs.LoadBalancerListenerArgs
+                {
+                    InstancePort = 8000,
+                    InstanceProtocol = "http",
+                    LbPort = 443,
+                    LbProtocol = "https",
+                    SslCertificateId = "arn:aws:iam::123456789012:server-certificate/certName",
+                },
+            },
+            Tags = 
+            {
+                { "Name", "foobar-elb" },
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -52,7 +117,7 @@ import pulumi_aws as aws
 bar = aws.elb.LoadBalancer("bar",
     access_logs={
         "bucket": "foo",
-        "bucketPrefix": "bar",
+        "bucket_prefix": "bar",
         "interval": 60,
     },
     availability_zones=[
@@ -74,15 +139,15 @@ bar = aws.elb.LoadBalancer("bar",
     instances=[aws_instance["foo"]["id"]],
     listeners=[
         {
-            "instancePort": 8000,
+            "instance_port": 8000,
             "instanceProtocol": "http",
-            "lbPort": 80,
+            "lb_port": 80,
             "lbProtocol": "http",
         },
         {
-            "instancePort": 8000,
+            "instance_port": 8000,
             "instanceProtocol": "http",
-            "lbPort": 443,
+            "lb_port": 443,
             "lbProtocol": "https",
             "sslCertificateId": "arn:aws:iam::123456789012:server-certificate/certName",
         },

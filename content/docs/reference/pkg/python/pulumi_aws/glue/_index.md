@@ -725,9 +725,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
         <span class="s2">&quot;USERNAME&quot;</span><span class="p">:</span> <span class="s2">&quot;exampleusername&quot;</span><span class="p">,</span>
     <span class="p">},</span>
     <span class="n">physical_connection_requirements</span><span class="o">=</span><span class="p">{</span>
-        <span class="s2">&quot;availabilityZone&quot;</span><span class="p">:</span> <span class="n">aws_subnet</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;availability_zone&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;availability_zone&quot;</span><span class="p">:</span> <span class="n">aws_subnet</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;availability_zone&quot;</span><span class="p">],</span>
         <span class="s2">&quot;securityGroupIdList&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">aws_security_group</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">]],</span>
-        <span class="s2">&quot;subnetId&quot;</span><span class="p">:</span> <span class="n">aws_subnet</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;subnet_id&quot;</span><span class="p">:</span> <span class="n">aws_subnet</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
     <span class="p">})</span>
 </pre></div>
 </div>
@@ -916,7 +916,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">glue</span><span class="o">.</span><span class="n">Crawler</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
     <span class="n">catalog_targets</span><span class="o">=</span><span class="p">[{</span>
-        <span class="s2">&quot;databaseName&quot;</span><span class="p">:</span> <span class="n">aws_glue_catalog_database</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;name&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;database_name&quot;</span><span class="p">:</span> <span class="n">aws_glue_catalog_database</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;name&quot;</span><span class="p">],</span>
         <span class="s2">&quot;tables&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">aws_glue_catalog_table</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;name&quot;</span><span class="p">]],</span>
     <span class="p">}],</span>
     <span class="n">configuration</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;{</span>
@@ -1510,7 +1510,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
         <span class="s2">&quot;jobBookmarksEncryptionMode&quot;</span><span class="p">:</span> <span class="s2">&quot;DISABLED&quot;</span><span class="p">,</span>
     <span class="p">},</span>
     <span class="s2">&quot;s3Encryption&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="s2">&quot;kmsKeyArn&quot;</span><span class="p">:</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;kms.Key&quot;</span><span class="p">][</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;kms_key_arn&quot;</span><span class="p">:</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;kms.Key&quot;</span><span class="p">][</span><span class="s2">&quot;example&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
         <span class="s2">&quot;s3EncryptionMode&quot;</span><span class="p">:</span> <span class="s2">&quot;SSE-KMS&quot;</span><span class="p">,</span>
     <span class="p">},</span>
 <span class="p">})</span>
@@ -2084,7 +2084,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
                 <span class="p">},</span>
             <span class="p">],</span>
             <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;datasource0&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;nodeType&quot;</span><span class="p">:</span> <span class="s2">&quot;DataSource&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;node_type&quot;</span><span class="p">:</span> <span class="s2">&quot;DataSource&quot;</span><span class="p">,</span>
         <span class="p">},</span>
         <span class="p">{</span>
             <span class="s2">&quot;args&quot;</span><span class="p">:</span> <span class="p">[{</span>
@@ -2092,7 +2092,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
                 <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;[(&quot;</span><span class="n">column1</span><span class="s2">&quot;, &quot;</span><span class="n">string</span><span class="s2">&quot;, &quot;</span><span class="n">column1</span><span class="s2">&quot;, &quot;</span><span class="n">string</span><span class="s2">&quot;)]&quot;</span><span class="p">,</span>
             <span class="p">}],</span>
             <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;applymapping1&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;nodeType&quot;</span><span class="p">:</span> <span class="s2">&quot;ApplyMapping&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;node_type&quot;</span><span class="p">:</span> <span class="s2">&quot;ApplyMapping&quot;</span><span class="p">,</span>
         <span class="p">},</span>
         <span class="p">{</span>
             <span class="s2">&quot;args&quot;</span><span class="p">:</span> <span class="p">[{</span>
@@ -2100,7 +2100,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
                 <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;[&quot;</span><span class="n">column1</span><span class="s2">&quot;]&quot;</span><span class="p">,</span>
             <span class="p">}],</span>
             <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;selectfields2&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;nodeType&quot;</span><span class="p">:</span> <span class="s2">&quot;SelectFields&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;node_type&quot;</span><span class="p">:</span> <span class="s2">&quot;SelectFields&quot;</span><span class="p">,</span>
         <span class="p">},</span>
         <span class="p">{</span>
             <span class="s2">&quot;args&quot;</span><span class="p">:</span> <span class="p">[</span>
@@ -2118,7 +2118,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
                 <span class="p">},</span>
             <span class="p">],</span>
             <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;resolvechoice3&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;nodeType&quot;</span><span class="p">:</span> <span class="s2">&quot;ResolveChoice&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;node_type&quot;</span><span class="p">:</span> <span class="s2">&quot;ResolveChoice&quot;</span><span class="p">,</span>
         <span class="p">},</span>
         <span class="p">{</span>
             <span class="s2">&quot;args&quot;</span><span class="p">:</span> <span class="p">[</span>
@@ -2132,7 +2132,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
                 <span class="p">},</span>
             <span class="p">],</span>
             <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;datasink4&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;nodeType&quot;</span><span class="p">:</span> <span class="s2">&quot;DataSink&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;node_type&quot;</span><span class="p">:</span> <span class="s2">&quot;DataSink&quot;</span><span class="p">,</span>
         <span class="p">},</span>
     <span class="p">],</span>
     <span class="n">language</span><span class="o">=</span><span class="s2">&quot;PYTHON&quot;</span><span class="p">)</span>
@@ -2173,7 +2173,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
                 <span class="p">},</span>
             <span class="p">],</span>
             <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;datasource0&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;nodeType&quot;</span><span class="p">:</span> <span class="s2">&quot;DataSource&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;node_type&quot;</span><span class="p">:</span> <span class="s2">&quot;DataSource&quot;</span><span class="p">,</span>
         <span class="p">},</span>
         <span class="p">{</span>
             <span class="s2">&quot;args&quot;</span><span class="p">:</span> <span class="p">[{</span>
@@ -2181,7 +2181,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
                 <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;[(&quot;</span><span class="n">column1</span><span class="s2">&quot;, &quot;</span><span class="n">string</span><span class="s2">&quot;, &quot;</span><span class="n">column1</span><span class="s2">&quot;, &quot;</span><span class="n">string</span><span class="s2">&quot;)]&quot;</span><span class="p">,</span>
             <span class="p">}],</span>
             <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;applymapping1&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;nodeType&quot;</span><span class="p">:</span> <span class="s2">&quot;ApplyMapping&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;node_type&quot;</span><span class="p">:</span> <span class="s2">&quot;ApplyMapping&quot;</span><span class="p">,</span>
         <span class="p">},</span>
         <span class="p">{</span>
             <span class="s2">&quot;args&quot;</span><span class="p">:</span> <span class="p">[{</span>
@@ -2189,7 +2189,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
                 <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;[&quot;</span><span class="n">column1</span><span class="s2">&quot;]&quot;</span><span class="p">,</span>
             <span class="p">}],</span>
             <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;selectfields2&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;nodeType&quot;</span><span class="p">:</span> <span class="s2">&quot;SelectFields&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;node_type&quot;</span><span class="p">:</span> <span class="s2">&quot;SelectFields&quot;</span><span class="p">,</span>
         <span class="p">},</span>
         <span class="p">{</span>
             <span class="s2">&quot;args&quot;</span><span class="p">:</span> <span class="p">[</span>
@@ -2207,7 +2207,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
                 <span class="p">},</span>
             <span class="p">],</span>
             <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;resolvechoice3&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;nodeType&quot;</span><span class="p">:</span> <span class="s2">&quot;ResolveChoice&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;node_type&quot;</span><span class="p">:</span> <span class="s2">&quot;ResolveChoice&quot;</span><span class="p">,</span>
         <span class="p">},</span>
         <span class="p">{</span>
             <span class="s2">&quot;args&quot;</span><span class="p">:</span> <span class="p">[</span>
@@ -2221,7 +2221,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
                 <span class="p">},</span>
             <span class="p">],</span>
             <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;datasink4&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;nodeType&quot;</span><span class="p">:</span> <span class="s2">&quot;DataSink&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;node_type&quot;</span><span class="p">:</span> <span class="s2">&quot;DataSink&quot;</span><span class="p">,</span>
         <span class="p">},</span>
     <span class="p">],</span>
     <span class="n">language</span><span class="o">=</span><span class="s2">&quot;SCALA&quot;</span><span class="p">)</span>

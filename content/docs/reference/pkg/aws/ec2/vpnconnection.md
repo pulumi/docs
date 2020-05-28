@@ -26,7 +26,33 @@ Manages an EC2 VPN connection. These objects can be connected to customer gatewa
 {{< chooser language "typescript,python,go,csharp" / >}}
 ### EC2 Transit Gateway
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleTransitGateway = new Aws.Ec2TransitGateway.TransitGateway("exampleTransitGateway", new Aws.Ec2TransitGateway.TransitGatewayArgs
+        {
+        });
+        var exampleCustomerGateway = new Aws.Ec2.CustomerGateway("exampleCustomerGateway", new Aws.Ec2.CustomerGatewayArgs
+        {
+            BgpAsn = 65000,
+            IpAddress = "172.0.0.1",
+            Type = "ipsec.1",
+        });
+        var exampleVpnConnection = new Aws.Ec2.VpnConnection("exampleVpnConnection", new Aws.Ec2.VpnConnectionArgs
+        {
+            CustomerGatewayId = exampleCustomerGateway.Id,
+            TransitGatewayId = exampleTransitGateway.Id,
+            Type = exampleCustomerGateway.Type,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -71,7 +97,39 @@ const exampleVpnConnection = new aws.ec2.VpnConnection("example", {
 
 ### Virtual Private Gateway
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var vpc = new Aws.Ec2.Vpc("vpc", new Aws.Ec2.VpcArgs
+        {
+            CidrBlock = "10.0.0.0/16",
+        });
+        var vpnGateway = new Aws.Ec2.VpnGateway("vpnGateway", new Aws.Ec2.VpnGatewayArgs
+        {
+            VpcId = vpc.Id,
+        });
+        var customerGateway = new Aws.Ec2.CustomerGateway("customerGateway", new Aws.Ec2.CustomerGatewayArgs
+        {
+            BgpAsn = 65000,
+            IpAddress = "172.0.0.1",
+            Type = "ipsec.1",
+        });
+        var main = new Aws.Ec2.VpnConnection("main", new Aws.Ec2.VpnConnectionArgs
+        {
+            CustomerGatewayId = customerGateway.Id,
+            StaticRoutesOnly = true,
+            Type = "ipsec.1",
+            VpnGatewayId = vpnGateway.Id,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

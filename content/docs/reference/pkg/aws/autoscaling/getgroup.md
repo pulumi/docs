@@ -20,7 +20,22 @@ Use this data source to get information on an existing autoscaling group.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var foo = Output.Create(Aws.AutoScaling.GetGroup.InvokeAsync(new Aws.AutoScaling.GetGroupArgs
+        {
+            Name = "foo",
+        }));
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

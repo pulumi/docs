@@ -22,7 +22,22 @@ state machine without having to hard code the ARNs as input.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = Output.Create(Aws.Sfn.GetStateMachine.InvokeAsync(new Aws.Sfn.GetStateMachineArgs
+        {
+            Name = "an_example_sfn_name",
+        }));
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

@@ -20,7 +20,22 @@ Use this data source to get information on an existing backup vault.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = Output.Create(Aws.Backup.GetVault.InvokeAsync(new Aws.Backup.GetVaultArgs
+        {
+            Name = "example_backup_vault",
+        }));
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

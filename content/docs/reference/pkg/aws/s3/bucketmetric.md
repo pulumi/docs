@@ -20,7 +20,25 @@ Provides a S3 bucket [metrics configuration](http://docs.aws.amazon.com/AmazonS3
 {{< chooser language "typescript,python,go,csharp" / >}}
 ### Add metrics configuration for entire S3 bucket
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.S3.Bucket("example", new Aws.S3.BucketArgs
+        {
+        });
+        var example_entire_bucket = new Aws.S3.BucketMetric("example-entire-bucket", new Aws.S3.BucketMetricArgs
+        {
+            Bucket = example.BucketName,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -51,7 +69,34 @@ const example_entire_bucket = new aws.s3.BucketMetric("example-entire-bucket", {
 
 ### Add metrics configuration with S3 bucket object filter
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.S3.Bucket("example", new Aws.S3.BucketArgs
+        {
+        });
+        var example_filtered = new Aws.S3.BucketMetric("example-filtered", new Aws.S3.BucketMetricArgs
+        {
+            Bucket = example.BucketName,
+            Filter = new Aws.S3.Inputs.BucketMetricFilterArgs
+            {
+                Prefix = "documents/",
+                Tags = 
+                {
+                    { "class", "blue" },
+                    { "priority", "high" },
+                },
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

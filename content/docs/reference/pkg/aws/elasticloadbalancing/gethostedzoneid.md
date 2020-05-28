@@ -21,7 +21,34 @@ in a given region for the purpose of using in an AWS Route53 Alias.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var main = Output.Create(Aws.Elb.GetHostedZoneId.InvokeAsync());
+        var www = new Aws.Route53.Record("www", new Aws.Route53.RecordArgs
+        {
+            Aliases = 
+            {
+                new Aws.Route53.Inputs.RecordAliasArgs
+                {
+                    EvaluateTargetHealth = true,
+                    Name = aws_elb.Main.Dns_name,
+                    ZoneId = main.Apply(main => main.Id),
+                },
+            },
+            Name = "example.com",
+            Type = "A",
+            ZoneId = aws_route53_zone.Primary.Zone_id,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -38,7 +65,7 @@ www = aws.route53.Record("www",
     aliases=[{
         "evaluateTargetHealth": True,
         "name": aws_elb["main"]["dns_name"],
-        "zoneId": main.id,
+        "zone_id": main.id,
     }],
     name="example.com",
     type="A",

@@ -22,7 +22,29 @@ Manages a SMB Location within AWS DataSync.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.DataSync.LocationSmb("example", new Aws.DataSync.LocationSmbArgs
+        {
+            AgentArns = 
+            {
+                aws_datasync_agent.Example.Arn,
+            },
+            Password = "ANotGreatPassword",
+            ServerHostname = "smb.example.com",
+            Subdirectory = "/exported/path",
+            User = "Guest",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

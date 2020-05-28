@@ -618,7 +618,7 @@ setting <code class="docutils literal notranslate"><span class="pre">virtual_ser
                     <span class="s2">&quot;stack&quot;</span><span class="p">:</span> <span class="s2">&quot;blue&quot;</span><span class="p">,</span>
                 <span class="p">},</span>
                 <span class="s2">&quot;namespaceName&quot;</span><span class="p">:</span> <span class="n">example</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
-                <span class="s2">&quot;serviceName&quot;</span><span class="p">:</span> <span class="s2">&quot;serviceb1&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;service_name&quot;</span><span class="p">:</span> <span class="s2">&quot;serviceb1&quot;</span><span class="p">,</span>
             <span class="p">},</span>
         <span class="p">},</span>
     <span class="p">})</span>
@@ -636,7 +636,7 @@ setting <code class="docutils literal notranslate"><span class="pre">virtual_ser
             <span class="p">},</span>
         <span class="p">}],</span>
         <span class="s2">&quot;listener&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="s2">&quot;healthCheck&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;health_check&quot;</span><span class="p">:</span> <span class="p">{</span>
                 <span class="s2">&quot;healthyThreshold&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
                 <span class="s2">&quot;intervalMillis&quot;</span><span class="p">:</span> <span class="mi">5000</span><span class="p">,</span>
                 <span class="s2">&quot;path&quot;</span><span class="p">:</span> <span class="s2">&quot;/ping&quot;</span><span class="p">,</span>
@@ -1201,7 +1201,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">spec</span><span class="o">=</span><span class="p">{</span>
         <span class="s2">&quot;provider&quot;</span><span class="p">:</span> <span class="p">{</span>
             <span class="s2">&quot;virtualRouter&quot;</span><span class="p">:</span> <span class="p">{</span>
-                <span class="s2">&quot;virtualRouterName&quot;</span><span class="p">:</span> <span class="n">aws_appmesh_virtual_router</span><span class="p">[</span><span class="s2">&quot;serviceb&quot;</span><span class="p">][</span><span class="s2">&quot;name&quot;</span><span class="p">],</span>
+                <span class="s2">&quot;virtual_router_name&quot;</span><span class="p">:</span> <span class="n">aws_appmesh_virtual_router</span><span class="p">[</span><span class="s2">&quot;serviceb&quot;</span><span class="p">][</span><span class="s2">&quot;name&quot;</span><span class="p">],</span>
             <span class="p">},</span>
         <span class="p">},</span>
     <span class="p">})</span>

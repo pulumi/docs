@@ -22,7 +22,26 @@ Manages a FSx Windows File System. See the [FSx Windows Guide](https://docs.aws.
 {{< chooser language "typescript,python,go,csharp" / >}}
 ### Using AWS Directory Service
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.Fsx.WindowsFileSystem("example", new Aws.Fsx.WindowsFileSystemArgs
+        {
+            ActiveDirectoryId = aws_directory_service_directory.Example.Id,
+            KmsKeyId = aws_kms_key.Example.Arn,
+            StorageCapacity = 300,
+            SubnetIds = aws_subnet.Example.Id,
+            ThroughputCapacity = 1024,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -60,7 +79,36 @@ const example = new aws.fsx.WindowsFileSystem("example", {
 
 ### Using a Self-Managed Microsoft Active Directory
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.Fsx.WindowsFileSystem("example", new Aws.Fsx.WindowsFileSystemArgs
+        {
+            KmsKeyId = aws_kms_key.Example.Arn,
+            SelfManagedActiveDirectory = new Aws.Fsx.Inputs.WindowsFileSystemSelfManagedActiveDirectoryArgs
+            {
+                DnsIps = 
+                {
+                    "10.0.0.111",
+                    "10.0.0.222",
+                },
+                DomainName = "corp.example.com",
+                Password = "avoid-plaintext-passwords",
+                Username = "Admin",
+            },
+            StorageCapacity = 300,
+            SubnetIds = aws_subnet.Example.Id,
+            ThroughputCapacity = 1024,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -75,11 +123,11 @@ import pulumi_aws as aws
 example = aws.fsx.WindowsFileSystem("example",
     kms_key_id=aws_kms_key["example"]["arn"],
     self_managed_active_directory={
-        "dnsIps": [
+        "dns_ips": [
             "10.0.0.111",
             "10.0.0.222",
         ],
-        "domainName": "corp.example.com",
+        "domain_name": "corp.example.com",
         "password": "avoid-plaintext-passwords",
         "username": "Admin",
     },

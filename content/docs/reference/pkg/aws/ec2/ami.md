@@ -27,7 +27,35 @@ it's better to use `aws.ec2.AmiLaunchPermission` instead.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        // Create an AMI that will start a machine whose root device is backed by
+        // an EBS volume populated from a snapshot. It is assumed that such a snapshot
+        // already exists with the id "snap-xxxxxxxx".
+        var example = new Aws.Ec2.Ami("example", new Aws.Ec2.AmiArgs
+        {
+            EbsBlockDevices = 
+            {
+                new Aws.Ec2.Inputs.AmiEbsBlockDeviceArgs
+                {
+                    DeviceName = "/dev/xvda",
+                    SnapshotId = "snap-xxxxxxxx",
+                    VolumeSize = 8,
+                },
+            },
+            RootDeviceName = "/dev/xvda",
+            VirtualizationType = "hvm",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -44,9 +72,9 @@ import pulumi_aws as aws
 # already exists with the id "snap-xxxxxxxx".
 example = aws.ec2.Ami("example",
     ebs_block_devices=[{
-        "deviceName": "/dev/xvda",
-        "snapshotId": "snap-xxxxxxxx",
-        "volumeSize": 8,
+        "device_name": "/dev/xvda",
+        "snapshot_id": "snap-xxxxxxxx",
+        "volume_size": 8,
     }],
     root_device_name="/dev/xvda",
     virtualization_type="hvm")

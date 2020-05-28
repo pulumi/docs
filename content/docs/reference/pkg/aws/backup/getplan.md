@@ -20,7 +20,22 @@ Use this data source to get information on an existing backup plan.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = Output.Create(Aws.Backup.GetPlan.InvokeAsync(new Aws.Backup.GetPlanArgs
+        {
+            PlanId = "tf_example_backup_plan_id",
+        }));
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

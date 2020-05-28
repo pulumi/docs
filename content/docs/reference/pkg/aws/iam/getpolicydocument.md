@@ -95,6 +95,79 @@ example_policy = aws.iam.Policy("examplePolicy",
     path="/",
     policy=example_policy_document.json)
 ```
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var examplePolicyDocument = Output.Create(Aws.Iam.GetPolicyDocument.InvokeAsync(new Aws.Iam.GetPolicyDocumentArgs
+        {
+            Statements = 
+            {
+                new Aws.Iam.Inputs.GetPolicyDocumentStatementArgs
+                {
+                    Actions = 
+                    {
+                        "s3:ListAllMyBuckets",
+                        "s3:GetBucketLocation",
+                    },
+                    Resources = 
+                    {
+                        "arn:aws:s3:::*",
+                    },
+                    Sid = "1",
+                },
+                new Aws.Iam.Inputs.GetPolicyDocumentStatementArgs
+                {
+                    Actions = 
+                    {
+                        "s3:ListBucket",
+                    },
+                    Condition = 
+                    {
+                        
+                        {
+                            { "test", "StringLike" },
+                            { "values", 
+                            {
+                                "",
+                                "home/",
+                                "home/&{aws:username}/",
+                            } },
+                            { "variable", "s3:prefix" },
+                        },
+                    },
+                    Resources = 
+                    {
+                        $"arn:aws:s3:::{@var.S3_bucket_name}",
+                    },
+                },
+                new Aws.Iam.Inputs.GetPolicyDocumentStatementArgs
+                {
+                    Actions = 
+                    {
+                        "s3:*",
+                    },
+                    Resources = 
+                    {
+                        $"arn:aws:s3:::{@var.S3_bucket_name}/home/&{{aws:username}}",
+                        $"arn:aws:s3:::{@var.S3_bucket_name}/home/&{{aws:username}}/*",
+                    },
+                },
+            },
+        }));
+        var examplePolicy = new Aws.Iam.Policy("examplePolicy", new Aws.Iam.PolicyArgs
+        {
+            Path = "/",
+            Policy = examplePolicyDocument.Apply(examplePolicyDocument => examplePolicyDocument.Json),
+        });
+    }
+
+}
+```
 
 Using this data source to generate policy documents is *optional*. It is also
 valid to use literal JSON strings within your configuration, or to use the
@@ -173,6 +246,59 @@ event_stream_bucket_role_assume_role_policy = aws.iam.get_policy_document(statem
         },
     ],
 }])
+```
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var eventStreamBucketRoleAssumeRolePolicy = Output.Create(Aws.Iam.GetPolicyDocument.InvokeAsync(new Aws.Iam.GetPolicyDocumentArgs
+        {
+            Statements = 
+            {
+                new Aws.Iam.Inputs.GetPolicyDocumentStatementArgs
+                {
+                    Actions = 
+                    {
+                        "sts:AssumeRole",
+                    },
+                    Principals = 
+                    {
+                        new Aws.Iam.Inputs.GetPolicyDocumentStatementPrincipalArgs
+                        {
+                            Identifiers = 
+                            {
+                                "firehose.amazonaws.com",
+                            },
+                            Type = "Service",
+                        },
+                        new Aws.Iam.Inputs.GetPolicyDocumentStatementPrincipalArgs
+                        {
+                            Identifiers = 
+                            {
+                                @var.Trusted_role_arn,
+                            },
+                            Type = "AWS",
+                        },
+                        new Aws.Iam.Inputs.GetPolicyDocumentStatementPrincipalArgs
+                        {
+                            Identifiers = 
+                            {
+                                $"arn:aws:iam::{@var.Account_id}:saml-provider/{@var.Provider_name}",
+                                "cognito-identity.amazonaws.com",
+                            },
+                            Type = "Federated",
+                        },
+                    },
+                },
+            },
+        }));
+    }
+
+}
 ```
 
 ## Example with Source and Override
@@ -277,6 +403,116 @@ override_json_example = aws.iam.get_policy_document(override_json=override.json,
         },
     ])
 ```
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var source = Output.Create(Aws.Iam.GetPolicyDocument.InvokeAsync(new Aws.Iam.GetPolicyDocumentArgs
+        {
+            Statements = 
+            {
+                new Aws.Iam.Inputs.GetPolicyDocumentStatementArgs
+                {
+                    Actions = 
+                    {
+                        "ec2:*",
+                    },
+                    Resources = 
+                    {
+                        "*",
+                    },
+                },
+                new Aws.Iam.Inputs.GetPolicyDocumentStatementArgs
+                {
+                    Actions = 
+                    {
+                        "s3:*",
+                    },
+                    Resources = 
+                    {
+                        "*",
+                    },
+                    Sid = "SidToOverwrite",
+                },
+            },
+        }));
+        var sourceJsonExample = source.Apply(source => Output.Create(Aws.Iam.GetPolicyDocument.InvokeAsync(new Aws.Iam.GetPolicyDocumentArgs
+        {
+            SourceJson = source.Json,
+            Statements = 
+            {
+                new Aws.Iam.Inputs.GetPolicyDocumentStatementArgs
+                {
+                    Actions = 
+                    {
+                        "s3:*",
+                    },
+                    Resources = 
+                    {
+                        "arn:aws:s3:::somebucket",
+                        "arn:aws:s3:::somebucket/*",
+                    },
+                    Sid = "SidToOverwrite",
+                },
+            },
+        })));
+        var @override = Output.Create(Aws.Iam.GetPolicyDocument.InvokeAsync(new Aws.Iam.GetPolicyDocumentArgs
+        {
+            Statements = 
+            {
+                new Aws.Iam.Inputs.GetPolicyDocumentStatementArgs
+                {
+                    Actions = 
+                    {
+                        "s3:*",
+                    },
+                    Resources = 
+                    {
+                        "*",
+                    },
+                    Sid = "SidToOverwrite",
+                },
+            },
+        }));
+        var overrideJsonExample = @override.Apply(@override => Output.Create(Aws.Iam.GetPolicyDocument.InvokeAsync(new Aws.Iam.GetPolicyDocumentArgs
+        {
+            OverrideJson = @override.Json,
+            Statements = 
+            {
+                new Aws.Iam.Inputs.GetPolicyDocumentStatementArgs
+                {
+                    Actions = 
+                    {
+                        "ec2:*",
+                    },
+                    Resources = 
+                    {
+                        "*",
+                    },
+                },
+                new Aws.Iam.Inputs.GetPolicyDocumentStatementArgs
+                {
+                    Actions = 
+                    {
+                        "s3:*",
+                    },
+                    Resources = 
+                    {
+                        "arn:aws:s3:::somebucket",
+                        "arn:aws:s3:::somebucket/*",
+                    },
+                    Sid = "SidToOverwrite",
+                },
+            },
+        })));
+    }
+
+}
+```
 
 `data.aws_iam_policy_document.source_json_example.json` will evaluate to:
 
@@ -286,6 +522,17 @@ import * as pulumi from "@pulumi/pulumi";
 ```python
 import pulumi
 ```
+```csharp
+using Pulumi;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+    }
+
+}
+```
 
 `data.aws_iam_policy_document.override_json_example.json` will evaluate to:
 
@@ -294,6 +541,17 @@ import * as pulumi from "@pulumi/pulumi";
 ```
 ```python
 import pulumi
+```
+```csharp
+using Pulumi;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+    }
+
+}
 ```
 
 You can also combine `source_json` and `override_json` in the same document.
@@ -342,6 +600,64 @@ override = aws.iam.get_policy_document(statements=[{
 politik = aws.iam.get_policy_document(override_json=override.json,
     source_json=source.json)
 ```
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var source = Output.Create(Aws.Iam.GetPolicyDocument.InvokeAsync(new Aws.Iam.GetPolicyDocumentArgs
+        {
+            Statements = 
+            {
+                new Aws.Iam.Inputs.GetPolicyDocumentStatementArgs
+                {
+                    Actions = 
+                    {
+                        "ec2:DescribeAccountAttributes",
+                    },
+                    Resources = 
+                    {
+                        "*",
+                    },
+                    Sid = "OverridePlaceholder",
+                },
+            },
+        }));
+        var @override = Output.Create(Aws.Iam.GetPolicyDocument.InvokeAsync(new Aws.Iam.GetPolicyDocumentArgs
+        {
+            Statements = 
+            {
+                new Aws.Iam.Inputs.GetPolicyDocumentStatementArgs
+                {
+                    Actions = 
+                    {
+                        "s3:GetObject",
+                    },
+                    Resources = 
+                    {
+                        "*",
+                    },
+                    Sid = "OverridePlaceholder",
+                },
+            },
+        }));
+        var politik = Output.Tuple(@override, source).Apply(values =>
+        {
+            var @override = values.Item1;
+            var source = values.Item2;
+            return Output.Create(Aws.Iam.GetPolicyDocument.InvokeAsync(new Aws.Iam.GetPolicyDocumentArgs
+            {
+                OverrideJson = @override.Json,
+                SourceJson = source.Json,
+            }));
+        });
+    }
+
+}
+```
 
 `data.aws_iam_policy_document.politik.json` will evaluate to:
 
@@ -350,6 +666,17 @@ import * as pulumi from "@pulumi/pulumi";
 ```
 ```python
 import pulumi
+```
+```csharp
+using Pulumi;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+    }
+
+}
 ```
 
 

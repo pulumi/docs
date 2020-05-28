@@ -22,7 +22,28 @@ Provides a Target Group resource for use with Load Balancer resources.
 {{< chooser language "typescript,python,go,csharp" / >}}
 ### Instance Target Group
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var main = new Aws.Ec2.Vpc("main", new Aws.Ec2.VpcArgs
+        {
+            CidrBlock = "10.0.0.0/16",
+        });
+        var test = new Aws.LB.TargetGroup("test", new Aws.LB.TargetGroupArgs
+        {
+            Port = 80,
+            Protocol = "HTTP",
+            VpcId = main.Id,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -60,7 +81,29 @@ const test = new aws.lb.TargetGroup("test", {
 
 ### IP Target Group
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var main = new Aws.Ec2.Vpc("main", new Aws.Ec2.VpcArgs
+        {
+            CidrBlock = "10.0.0.0/16",
+        });
+        var ip_example = new Aws.LB.TargetGroup("ip-example", new Aws.LB.TargetGroupArgs
+        {
+            Port = 80,
+            Protocol = "HTTP",
+            TargetType = "ip",
+            VpcId = main.Id,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -100,7 +143,22 @@ const ip_example = new aws.lb.TargetGroup("ip-example", {
 
 ### Lambda Target Group
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var lambda_example = new Aws.LB.TargetGroup("lambda-example", new Aws.LB.TargetGroupArgs
+        {
+            TargetType = "lambda",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

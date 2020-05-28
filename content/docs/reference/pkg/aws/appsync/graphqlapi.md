@@ -20,7 +20,22 @@ Provides an AppSync GraphQL API.
 {{< chooser language "typescript,python,go,csharp" / >}}
 ### API Key Authentication
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.AppSync.GraphQLApi("example", new Aws.AppSync.GraphQLApiArgs
+        {
+            AuthenticationType = "API_KEY",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -49,7 +64,28 @@ const example = new aws.appsync.GraphQLApi("example", {
 
 ### AWS Cognito User Pool Authentication
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.AppSync.GraphQLApi("example", new Aws.AppSync.GraphQLApiArgs
+        {
+            AuthenticationType = "AMAZON_COGNITO_USER_POOLS",
+            UserPoolConfig = new Aws.AppSync.Inputs.GraphQLApiUserPoolConfigArgs
+            {
+                AwsRegion = data.Aws_region.Current.Name,
+                DefaultAction = "DENY",
+                UserPoolId = aws_cognito_user_pool.Example.Id,
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -65,8 +101,8 @@ example = aws.appsync.GraphQLApi("example",
     authentication_type="AMAZON_COGNITO_USER_POOLS",
     user_pool_config={
         "awsRegion": data["aws..getRegion"]["current"]["name"],
-        "defaultAction": "DENY",
-        "userPoolId": aws_cognito_user_pool["example"]["id"],
+        "default_action": "DENY",
+        "user_pool_id": aws_cognito_user_pool["example"]["id"],
     })
 ```
 {{% /example %}}
@@ -89,7 +125,22 @@ const example = new aws.appsync.GraphQLApi("example", {
 
 ### AWS IAM Authentication
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.AppSync.GraphQLApi("example", new Aws.AppSync.GraphQLApiArgs
+        {
+            AuthenticationType = "AWS_IAM",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -118,7 +169,30 @@ const example = new aws.appsync.GraphQLApi("example", {
 
 ### With Schema
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.AppSync.GraphQLApi("example", new Aws.AppSync.GraphQLApiArgs
+        {
+            AuthenticationType = "AWS_IAM",
+            Schema = @"schema {
+	query: Query
+}
+type Query {
+  test: Int
+}
+
+",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -163,7 +237,26 @@ type Query {
 
 ### OpenID Connect Authentication
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.AppSync.GraphQLApi("example", new Aws.AppSync.GraphQLApiArgs
+        {
+            AuthenticationType = "OPENID_CONNECT",
+            OpenidConnectConfig = new Aws.AppSync.Inputs.GraphQLApiOpenidConnectConfigArgs
+            {
+                Issuer = "https://example.com",
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -199,7 +292,29 @@ const example = new aws.appsync.GraphQLApi("example", {
 
 ### With Multiple Authentication Providers
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.AppSync.GraphQLApi("example", new Aws.AppSync.GraphQLApiArgs
+        {
+            AdditionalAuthenticationProviders = 
+            {
+                new Aws.AppSync.Inputs.GraphQLApiAdditionalAuthenticationProviderArgs
+                {
+                    AuthenticationType = "AWS_IAM",
+                },
+            },
+            AuthenticationType = "API_KEY",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -213,7 +328,7 @@ import pulumi_aws as aws
 
 example = aws.appsync.GraphQLApi("example",
     additional_authentication_providers=[{
-        "authenticationType": "AWS_IAM",
+        "authentication_type": "AWS_IAM",
     }],
     authentication_type="API_KEY")
 ```
@@ -235,7 +350,48 @@ const example = new aws.appsync.GraphQLApi("example", {
 
 ### Enabling Logging
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleRole = new Aws.Iam.Role("exampleRole", new Aws.Iam.RoleArgs
+        {
+            AssumeRolePolicy = @"{
+    ""Version"": ""2012-10-17"",
+    ""Statement"": [
+        {
+        ""Effect"": ""Allow"",
+        ""Principal"": {
+            ""Service"": ""appsync.amazonaws.com""
+        },
+        ""Action"": ""sts:AssumeRole""
+        }
+    ]
+}
+
+",
+        });
+        var exampleRolePolicyAttachment = new Aws.Iam.RolePolicyAttachment("exampleRolePolicyAttachment", new Aws.Iam.RolePolicyAttachmentArgs
+        {
+            PolicyArn = "arn:aws:iam::aws:policy/service-role/AWSAppSyncPushToCloudWatchLogs",
+            Role = exampleRole.Name,
+        });
+        var exampleGraphQLApi = new Aws.AppSync.GraphQLApi("exampleGraphQLApi", new Aws.AppSync.GraphQLApiArgs
+        {
+            LogConfig = new Aws.AppSync.Inputs.GraphQLApiLogConfigArgs
+            {
+                CloudwatchLogsRoleArn = exampleRole.Arn,
+                FieldLogLevel = "ERROR",
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

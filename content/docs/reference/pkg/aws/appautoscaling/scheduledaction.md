@@ -20,7 +20,38 @@ Provides an Application AutoScaling ScheduledAction resource.
 {{< chooser language "typescript,python,go,csharp" / >}}
 ### DynamoDB Table Autoscaling
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var dynamodbTarget = new Aws.AppAutoScaling.Target("dynamodbTarget", new Aws.AppAutoScaling.TargetArgs
+        {
+            MaxCapacity = 100,
+            MinCapacity = 5,
+            ResourceId = "table/tableName",
+            ScalableDimension = "dynamodb:table:ReadCapacityUnits",
+            ServiceNamespace = "dynamodb",
+        });
+        var dynamodbScheduledAction = new Aws.AppAutoScaling.ScheduledAction("dynamodbScheduledAction", new Aws.AppAutoScaling.ScheduledActionArgs
+        {
+            ResourceId = dynamodbTarget.ResourceId,
+            ScalableDimension = dynamodbTarget.ScalableDimension,
+            ScalableTargetAction = new Aws.AppAutoScaling.Inputs.ScheduledActionScalableTargetActionArgs
+            {
+                MaxCapacity = 200,
+                MinCapacity = 1,
+            },
+            Schedule = "at(2006-01-02T15:04:05)",
+            ServiceNamespace = dynamodbTarget.ServiceNamespace,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -42,8 +73,8 @@ dynamodb_scheduled_action = aws.appautoscaling.ScheduledAction("dynamodbSchedule
     resource_id=dynamodb_target.resource_id,
     scalable_dimension=dynamodb_target.scalable_dimension,
     scalable_target_action={
-        "maxCapacity": 200,
-        "minCapacity": 1,
+        "max_capacity": 200,
+        "min_capacity": 1,
     },
     schedule="at(2006-01-02T15:04:05)",
     service_namespace=dynamodb_target.service_namespace)
@@ -77,7 +108,38 @@ const dynamodbScheduledAction = new aws.appautoscaling.ScheduledAction("dynamodb
 
 ### ECS Service Autoscaling
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var ecsTarget = new Aws.AppAutoScaling.Target("ecsTarget", new Aws.AppAutoScaling.TargetArgs
+        {
+            MaxCapacity = 4,
+            MinCapacity = 1,
+            ResourceId = "service/clusterName/serviceName",
+            ScalableDimension = "ecs:service:DesiredCount",
+            ServiceNamespace = "ecs",
+        });
+        var ecsScheduledAction = new Aws.AppAutoScaling.ScheduledAction("ecsScheduledAction", new Aws.AppAutoScaling.ScheduledActionArgs
+        {
+            ResourceId = ecsTarget.ResourceId,
+            ScalableDimension = ecsTarget.ScalableDimension,
+            ScalableTargetAction = new Aws.AppAutoScaling.Inputs.ScheduledActionScalableTargetActionArgs
+            {
+                MaxCapacity = 10,
+                MinCapacity = 1,
+            },
+            Schedule = "at(2006-01-02T15:04:05)",
+            ServiceNamespace = ecsTarget.ServiceNamespace,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -99,8 +161,8 @@ ecs_scheduled_action = aws.appautoscaling.ScheduledAction("ecsScheduledAction",
     resource_id=ecs_target.resource_id,
     scalable_dimension=ecs_target.scalable_dimension,
     scalable_target_action={
-        "maxCapacity": 10,
-        "minCapacity": 1,
+        "max_capacity": 10,
+        "min_capacity": 1,
     },
     schedule="at(2006-01-02T15:04:05)",
     service_namespace=ecs_target.service_namespace)

@@ -12,70 +12,9 @@ meta_desc: "Explore the RoleAlias resource of the iot module, including examples
 
 Provides an IoT role alias.
 
-
-
 {{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_aws as aws
-
-role = aws.iam.Role("role", policy="""{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Effect": "Allow",
-      "Principal": {"Service": "credentials.iot.amazonaws.com"},
-      "Action": "sts:AssumeRole"
-    }
-  ]
-}
-
-""")
-alias = aws.iot.RoleAlias("alias",
-    alias="Thermostat-dynamodb-access-role-alias",
-    role_arn=role.arn)
-```
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const role = new aws.iam.Role("role", {
-    policy: `{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Effect": "Allow",
-      "Principal": {"Service": "credentials.iot.amazonaws.com"},
-      "Action": "sts:AssumeRole"
-    }
-  ]
-}
-`,
-});
-const alias = new aws.iot.RoleAlias("alias", {
-    alias: "Thermostat-dynamodb-access-role-alias",
-    roleArn: role.arn,
-});
-```
-{{% /example %}}
-
 {{% /examples %}}
+
 
 
 ## Create a RoleAlias Resource {#create}

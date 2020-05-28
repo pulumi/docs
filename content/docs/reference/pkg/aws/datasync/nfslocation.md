@@ -22,7 +22,30 @@ Manages an NFS Location within AWS DataSync.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.DataSync.NfsLocation("example", new Aws.DataSync.NfsLocationArgs
+        {
+            OnPremConfig = new Aws.DataSync.Inputs.NfsLocationOnPremConfigArgs
+            {
+                AgentArns = 
+                {
+                    aws_datasync_agent.Example.Arn,
+                },
+            },
+            ServerHostname = "nfs.example.com",
+            Subdirectory = "/exported/path",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -36,7 +59,7 @@ import pulumi_aws as aws
 
 example = aws.datasync.NfsLocation("example",
     on_prem_config={
-        "agentArns": [aws_datasync_agent["example"]["arn"]],
+        "agent_arns": [aws_datasync_agent["example"]["arn"]],
     },
     server_hostname="nfs.example.com",
     subdirectory="/exported/path")

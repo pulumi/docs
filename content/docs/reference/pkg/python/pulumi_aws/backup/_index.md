@@ -138,7 +138,7 @@ anything, please consult the source <a class="reference external" href="https://
 <span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
 
 <span class="n">example</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">backup</span><span class="o">.</span><span class="n">Plan</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span> <span class="n">rules</span><span class="o">=</span><span class="p">[{</span>
-    <span class="s2">&quot;ruleName&quot;</span><span class="p">:</span> <span class="s2">&quot;tf_example_backup_rule&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;rule_name&quot;</span><span class="p">:</span> <span class="s2">&quot;tf_example_backup_rule&quot;</span><span class="p">,</span>
     <span class="s2">&quot;schedule&quot;</span><span class="p">:</span> <span class="s2">&quot;cron(0 12 * * ? *)&quot;</span><span class="p">,</span>
     <span class="s2">&quot;targetVaultName&quot;</span><span class="p">:</span> <span class="n">aws_backup_vault</span><span class="p">[</span><span class="s2">&quot;test&quot;</span><span class="p">][</span><span class="s2">&quot;name&quot;</span><span class="p">],</span>
 <span class="p">}])</span>

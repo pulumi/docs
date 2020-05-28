@@ -54,12 +54,12 @@ anything, please consult the source <a class="reference external" href="https://
     <span class="n">scalable_dimension</span><span class="o">=</span><span class="n">ecs_target</span><span class="o">.</span><span class="n">scalable_dimension</span><span class="p">,</span>
     <span class="n">service_namespace</span><span class="o">=</span><span class="n">ecs_target</span><span class="o">.</span><span class="n">service_namespace</span><span class="p">,</span>
     <span class="n">step_scaling_policy_configuration</span><span class="o">=</span><span class="p">{</span>
-        <span class="s2">&quot;adjustmentType&quot;</span><span class="p">:</span> <span class="s2">&quot;ChangeInCapacity&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;adjustment_type&quot;</span><span class="p">:</span> <span class="s2">&quot;ChangeInCapacity&quot;</span><span class="p">,</span>
         <span class="s2">&quot;cooldown&quot;</span><span class="p">:</span> <span class="mi">60</span><span class="p">,</span>
-        <span class="s2">&quot;metricAggregationType&quot;</span><span class="p">:</span> <span class="s2">&quot;Maximum&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;metric_aggregation_type&quot;</span><span class="p">:</span> <span class="s2">&quot;Maximum&quot;</span><span class="p">,</span>
         <span class="s2">&quot;stepAdjustment&quot;</span><span class="p">:</span> <span class="p">[{</span>
             <span class="s2">&quot;metricIntervalUpperBound&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-            <span class="s2">&quot;scalingAdjustment&quot;</span><span class="p">:</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span>
+            <span class="s2">&quot;scaling_adjustment&quot;</span><span class="p">:</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span>
         <span class="p">}],</span>
     <span class="p">})</span>
 </pre></div>
@@ -369,8 +369,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">resource_id</span><span class="o">=</span><span class="n">dynamodb_target</span><span class="o">.</span><span class="n">resource_id</span><span class="p">,</span>
     <span class="n">scalable_dimension</span><span class="o">=</span><span class="n">dynamodb_target</span><span class="o">.</span><span class="n">scalable_dimension</span><span class="p">,</span>
     <span class="n">scalable_target_action</span><span class="o">=</span><span class="p">{</span>
-        <span class="s2">&quot;maxCapacity&quot;</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span>
-        <span class="s2">&quot;minCapacity&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="s2">&quot;max_capacity&quot;</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;min_capacity&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
     <span class="p">},</span>
     <span class="n">schedule</span><span class="o">=</span><span class="s2">&quot;at(2006-01-02T15:04:05)&quot;</span><span class="p">,</span>
     <span class="n">service_namespace</span><span class="o">=</span><span class="n">dynamodb_target</span><span class="o">.</span><span class="n">service_namespace</span><span class="p">)</span>
@@ -389,8 +389,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">resource_id</span><span class="o">=</span><span class="n">ecs_target</span><span class="o">.</span><span class="n">resource_id</span><span class="p">,</span>
     <span class="n">scalable_dimension</span><span class="o">=</span><span class="n">ecs_target</span><span class="o">.</span><span class="n">scalable_dimension</span><span class="p">,</span>
     <span class="n">scalable_target_action</span><span class="o">=</span><span class="p">{</span>
-        <span class="s2">&quot;maxCapacity&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
-        <span class="s2">&quot;minCapacity&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="s2">&quot;max_capacity&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+        <span class="s2">&quot;min_capacity&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
     <span class="p">},</span>
     <span class="n">schedule</span><span class="o">=</span><span class="s2">&quot;at(2006-01-02T15:04:05)&quot;</span><span class="p">,</span>
     <span class="n">service_namespace</span><span class="o">=</span><span class="n">ecs_target</span><span class="o">.</span><span class="n">service_namespace</span><span class="p">)</span>

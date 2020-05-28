@@ -20,7 +20,23 @@ The ECR Image data source allows the details of an image with a particular tag o
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var serviceImage = Output.Create(Aws.Ecr.GetImage.InvokeAsync(new Aws.Ecr.GetImageArgs
+        {
+            ImageTag = "latest",
+            RepositoryName = "my/service",
+        }));
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

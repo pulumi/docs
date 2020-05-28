@@ -20,7 +20,38 @@ Provides a WAF Regional Rule Group Resource
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleRule = new Aws.WafRegional.Rule("exampleRule", new Aws.WafRegional.RuleArgs
+        {
+            MetricName = "example",
+        });
+        var exampleRuleGroup = new Aws.WafRegional.RuleGroup("exampleRuleGroup", new Aws.WafRegional.RuleGroupArgs
+        {
+            ActivatedRules = 
+            {
+                new Aws.WafRegional.Inputs.RuleGroupActivatedRuleArgs
+                {
+                    Action = new Aws.WafRegional.Inputs.RuleGroupActivatedRuleActionArgs
+                    {
+                        Type = "COUNT",
+                    },
+                    Priority = 50,
+                    RuleId = exampleRule.Id,
+                },
+            },
+            MetricName = "example",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -39,7 +70,7 @@ example_rule_group = aws.wafregional.RuleGroup("exampleRuleGroup",
             "type": "COUNT",
         },
         "priority": 50,
-        "ruleId": example_rule.id,
+        "rule_id": example_rule.id,
     }],
     metric_name="example")
 ```

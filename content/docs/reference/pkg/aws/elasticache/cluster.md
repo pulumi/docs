@@ -29,7 +29,26 @@ See the AWS Docs on [Modifying an ElastiCache Cache Cluster](https://docs.aws.am
 {{< chooser language "typescript,python,go,csharp" / >}}
 ### Memcached Cluster
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.ElastiCache.Cluster("example", new Aws.ElastiCache.ClusterArgs
+        {
+            Engine = "memcached",
+            NodeType = "cache.m4.large",
+            NumCacheNodes = 2,
+            ParameterGroupName = "default.memcached1.4",
+            Port = 11211,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -67,7 +86,27 @@ const example = new aws.elasticache.Cluster("example", {
 
 ### Redis Instance
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.ElastiCache.Cluster("example", new Aws.ElastiCache.ClusterArgs
+        {
+            Engine = "redis",
+            EngineVersion = "3.2.10",
+            NodeType = "cache.m4.large",
+            NumCacheNodes = 1,
+            ParameterGroupName = "default.redis3.2",
+            Port = 6379,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -107,7 +146,22 @@ const example = new aws.elasticache.Cluster("example", {
 
 ### Redis Cluster Mode Disabled Read Replica Instance
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var replica = new Aws.ElastiCache.Cluster("replica", new Aws.ElastiCache.ClusterArgs
+        {
+            ReplicationGroupId = aws_elasticache_replication_group.Example.Id,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

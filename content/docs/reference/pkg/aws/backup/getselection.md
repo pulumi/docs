@@ -20,7 +20,23 @@ Use this data source to get information on an existing backup selection.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = Output.Create(Aws.Backup.GetSelection.InvokeAsync(new Aws.Backup.GetSelectionArgs
+        {
+            PlanId = data.Aws_backup_plan.Example.Id,
+            SelectionId = "selection-id-example",
+        }));
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

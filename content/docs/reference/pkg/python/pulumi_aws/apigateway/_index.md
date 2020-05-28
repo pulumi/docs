@@ -1160,7 +1160,7 @@ from the validation resource where it will be available after the resource creat
     <span class="n">aliases</span><span class="o">=</span><span class="p">[{</span>
         <span class="s2">&quot;evaluateTargetHealth&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
         <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="n">example_domain_name</span><span class="o">.</span><span class="n">cloudfront_domain_name</span><span class="p">,</span>
-        <span class="s2">&quot;zoneId&quot;</span><span class="p">:</span> <span class="n">example_domain_name</span><span class="o">.</span><span class="n">cloudfront_zone_id</span><span class="p">,</span>
+        <span class="s2">&quot;zone_id&quot;</span><span class="p">:</span> <span class="n">example_domain_name</span><span class="o">.</span><span class="n">cloudfront_zone_id</span><span class="p">,</span>
     <span class="p">}],</span>
     <span class="n">name</span><span class="o">=</span><span class="n">example_domain_name</span><span class="o">.</span><span class="n">domain_name</span><span class="p">,</span>
     <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;A&quot;</span><span class="p">,</span>
@@ -1182,7 +1182,7 @@ from the validation resource where it will be available after the resource creat
     <span class="n">aliases</span><span class="o">=</span><span class="p">[{</span>
         <span class="s2">&quot;evaluateTargetHealth&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
         <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="n">example_domain_name</span><span class="o">.</span><span class="n">cloudfront_domain_name</span><span class="p">,</span>
-        <span class="s2">&quot;zoneId&quot;</span><span class="p">:</span> <span class="n">example_domain_name</span><span class="o">.</span><span class="n">cloudfront_zone_id</span><span class="p">,</span>
+        <span class="s2">&quot;zone_id&quot;</span><span class="p">:</span> <span class="n">example_domain_name</span><span class="o">.</span><span class="n">cloudfront_zone_id</span><span class="p">,</span>
     <span class="p">}],</span>
     <span class="n">name</span><span class="o">=</span><span class="n">example_domain_name</span><span class="o">.</span><span class="n">domain_name</span><span class="p">,</span>
     <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;A&quot;</span><span class="p">,</span>
@@ -1205,7 +1205,7 @@ from the validation resource where it will be available after the resource creat
     <span class="n">aliases</span><span class="o">=</span><span class="p">[{</span>
         <span class="s2">&quot;evaluateTargetHealth&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
         <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="n">example_domain_name</span><span class="o">.</span><span class="n">regional_domain_name</span><span class="p">,</span>
-        <span class="s2">&quot;zoneId&quot;</span><span class="p">:</span> <span class="n">example_domain_name</span><span class="o">.</span><span class="n">regional_zone_id</span><span class="p">,</span>
+        <span class="s2">&quot;zone_id&quot;</span><span class="p">:</span> <span class="n">example_domain_name</span><span class="o">.</span><span class="n">regional_zone_id</span><span class="p">,</span>
     <span class="p">}],</span>
     <span class="n">name</span><span class="o">=</span><span class="n">example_domain_name</span><span class="o">.</span><span class="n">domain_name</span><span class="p">,</span>
     <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;A&quot;</span><span class="p">,</span>
@@ -1230,7 +1230,7 @@ from the validation resource where it will be available after the resource creat
     <span class="n">aliases</span><span class="o">=</span><span class="p">[{</span>
         <span class="s2">&quot;evaluateTargetHealth&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
         <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="n">example_domain_name</span><span class="o">.</span><span class="n">regional_domain_name</span><span class="p">,</span>
-        <span class="s2">&quot;zoneId&quot;</span><span class="p">:</span> <span class="n">example_domain_name</span><span class="o">.</span><span class="n">regional_zone_id</span><span class="p">,</span>
+        <span class="s2">&quot;zone_id&quot;</span><span class="p">:</span> <span class="n">example_domain_name</span><span class="o">.</span><span class="n">regional_zone_id</span><span class="p">,</span>
     <span class="p">}],</span>
     <span class="n">name</span><span class="o">=</span><span class="n">example_domain_name</span><span class="o">.</span><span class="n">domain_name</span><span class="p">,</span>
     <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;A&quot;</span><span class="p">,</span>
@@ -3599,11 +3599,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <span class="n">my_usage_plan</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">apigateway</span><span class="o">.</span><span class="n">UsagePlan</span><span class="p">(</span><span class="s2">&quot;myUsagePlan&quot;</span><span class="p">,</span>
     <span class="n">api_stages</span><span class="o">=</span><span class="p">[</span>
         <span class="p">{</span>
-            <span class="s2">&quot;apiId&quot;</span><span class="p">:</span> <span class="n">myapi</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+            <span class="s2">&quot;api_id&quot;</span><span class="p">:</span> <span class="n">myapi</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
             <span class="s2">&quot;stage&quot;</span><span class="p">:</span> <span class="n">dev</span><span class="o">.</span><span class="n">stage_name</span><span class="p">,</span>
         <span class="p">},</span>
         <span class="p">{</span>
-            <span class="s2">&quot;apiId&quot;</span><span class="p">:</span> <span class="n">myapi</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+            <span class="s2">&quot;api_id&quot;</span><span class="p">:</span> <span class="n">myapi</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
             <span class="s2">&quot;stage&quot;</span><span class="p">:</span> <span class="n">prod</span><span class="o">.</span><span class="n">stage_name</span><span class="p">,</span>
         <span class="p">},</span>
     <span class="p">],</span>
@@ -3616,7 +3616,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="p">},</span>
     <span class="n">throttle_settings</span><span class="o">=</span><span class="p">{</span>
         <span class="s2">&quot;burstLimit&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
-        <span class="s2">&quot;rateLimit&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+        <span class="s2">&quot;rate_limit&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
     <span class="p">})</span>
 </pre></div>
 </div>
@@ -3799,7 +3799,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <span class="n">test</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">apigateway</span><span class="o">.</span><span class="n">RestApi</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">)</span>
 <span class="n">myusageplan</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">apigateway</span><span class="o">.</span><span class="n">UsagePlan</span><span class="p">(</span><span class="s2">&quot;myusageplan&quot;</span><span class="p">,</span> <span class="n">api_stages</span><span class="o">=</span><span class="p">[{</span>
-    <span class="s2">&quot;apiId&quot;</span><span class="p">:</span> <span class="n">test</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="s2">&quot;api_id&quot;</span><span class="p">:</span> <span class="n">test</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
     <span class="s2">&quot;stage&quot;</span><span class="p">:</span> <span class="n">aws_api_gateway_deployment</span><span class="p">[</span><span class="s2">&quot;foo&quot;</span><span class="p">][</span><span class="s2">&quot;stage_name&quot;</span><span class="p">],</span>
 <span class="p">}])</span>
 <span class="n">mykey</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">apigateway</span><span class="o">.</span><span class="n">ApiKey</span><span class="p">(</span><span class="s2">&quot;mykey&quot;</span><span class="p">)</span>
@@ -3924,7 +3924,7 @@ To enable private integration for HTTP APIs, use the Amazon API Gateway Version 
     <span class="n">internal</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
     <span class="n">load_balancer_type</span><span class="o">=</span><span class="s2">&quot;network&quot;</span><span class="p">,</span>
     <span class="n">subnet_mappings</span><span class="o">=</span><span class="p">[{</span>
-        <span class="s2">&quot;subnetId&quot;</span><span class="p">:</span> <span class="s2">&quot;12345&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;subnet_id&quot;</span><span class="p">:</span> <span class="s2">&quot;12345&quot;</span><span class="p">,</span>
     <span class="p">}])</span>
 <span class="n">example_vpc_link</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">apigateway</span><span class="o">.</span><span class="n">VpcLink</span><span class="p">(</span><span class="s2">&quot;exampleVpcLink&quot;</span><span class="p">,</span>
     <span class="n">description</span><span class="o">=</span><span class="s2">&quot;example description&quot;</span><span class="p">,</span>

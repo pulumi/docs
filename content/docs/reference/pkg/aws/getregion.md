@@ -25,7 +25,19 @@ configuration from its parent module.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var current = Output.Create(Aws.GetRegion.InvokeAsync());
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

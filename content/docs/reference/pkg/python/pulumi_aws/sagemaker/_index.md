@@ -130,7 +130,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <span class="n">ec</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">sagemaker</span><span class="o">.</span><span class="n">EndpointConfiguration</span><span class="p">(</span><span class="s2">&quot;ec&quot;</span><span class="p">,</span>
     <span class="n">production_variants</span><span class="o">=</span><span class="p">[{</span>
         <span class="s2">&quot;initialInstanceCount&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-        <span class="s2">&quot;instanceType&quot;</span><span class="p">:</span> <span class="s2">&quot;ml.t2.medium&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;instance_type&quot;</span><span class="p">:</span> <span class="s2">&quot;ml.t2.medium&quot;</span><span class="p">,</span>
         <span class="s2">&quot;modelName&quot;</span><span class="p">:</span> <span class="n">aws_sagemaker_model</span><span class="p">[</span><span class="s2">&quot;m&quot;</span><span class="p">][</span><span class="s2">&quot;name&quot;</span><span class="p">],</span>
         <span class="s2">&quot;variantName&quot;</span><span class="p">:</span> <span class="s2">&quot;variant-1&quot;</span><span class="p">,</span>
     <span class="p">}],</span>

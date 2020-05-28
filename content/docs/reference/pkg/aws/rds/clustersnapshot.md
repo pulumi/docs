@@ -20,7 +20,23 @@ Manages an RDS database cluster snapshot for Aurora clusters. For managing RDS d
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.Rds.ClusterSnapshot("example", new Aws.Rds.ClusterSnapshotArgs
+        {
+            DbClusterIdentifier = aws_rds_cluster.Example.Id,
+            DbClusterSnapshotIdentifier = "resourcetestsnapshot1234",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

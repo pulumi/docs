@@ -27,7 +27,22 @@ By using the `aws.ebs.DefaultKmsKey` resource, you can specify a customer-manage
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.Ebs.DefaultKmsKey("example", new Aws.Ebs.DefaultKmsKeyArgs
+        {
+            KeyArn = aws_kms_key.Example.Arn,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

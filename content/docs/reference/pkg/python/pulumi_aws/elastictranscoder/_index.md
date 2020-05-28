@@ -23,13 +23,13 @@ anything, please consult the source <a class="reference external" href="https://
 <span class="n">bar</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">elastictranscoder</span><span class="o">.</span><span class="n">Pipeline</span><span class="p">(</span><span class="s2">&quot;bar&quot;</span><span class="p">,</span>
     <span class="n">content_config</span><span class="o">=</span><span class="p">{</span>
         <span class="s2">&quot;bucket&quot;</span><span class="p">:</span> <span class="n">aws_s3_bucket</span><span class="p">[</span><span class="s2">&quot;content_bucket&quot;</span><span class="p">][</span><span class="s2">&quot;bucket&quot;</span><span class="p">],</span>
-        <span class="s2">&quot;storageClass&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;storage_class&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard&quot;</span><span class="p">,</span>
     <span class="p">},</span>
     <span class="n">input_bucket</span><span class="o">=</span><span class="n">aws_s3_bucket</span><span class="p">[</span><span class="s2">&quot;input_bucket&quot;</span><span class="p">][</span><span class="s2">&quot;bucket&quot;</span><span class="p">],</span>
     <span class="n">role</span><span class="o">=</span><span class="n">aws_iam_role</span><span class="p">[</span><span class="s2">&quot;test_role&quot;</span><span class="p">][</span><span class="s2">&quot;arn&quot;</span><span class="p">],</span>
     <span class="n">thumbnail_config</span><span class="o">=</span><span class="p">{</span>
         <span class="s2">&quot;bucket&quot;</span><span class="p">:</span> <span class="n">aws_s3_bucket</span><span class="p">[</span><span class="s2">&quot;thumb_bucket&quot;</span><span class="p">][</span><span class="s2">&quot;bucket&quot;</span><span class="p">],</span>
-        <span class="s2">&quot;storageClass&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;storage_class&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard&quot;</span><span class="p">,</span>
     <span class="p">})</span>
 </pre></div>
 </div>

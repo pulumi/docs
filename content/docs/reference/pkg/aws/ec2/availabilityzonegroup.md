@@ -22,7 +22,23 @@ Manages an EC2 Availability Zone Group, such as updating its opt-in status.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.Ec2.AvailabilityZoneGroup("example", new Aws.Ec2.AvailabilityZoneGroupArgs
+        {
+            GroupName = "us-west-2-lax-1",
+            OptInStatus = "opted-in",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
