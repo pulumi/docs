@@ -20,7 +20,54 @@ Provides a Datadog service level objective resource. This can be used to create 
 {{< chooser language "typescript,python,go,csharp" / >}}
 ### Metric-Based SLO
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Datadog = Pulumi.Datadog;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        // Create a new Datadog service level objective
+        var foo = new Datadog.ServiceLevelObjective("foo", new Datadog.ServiceLevelObjectiveArgs
+        {
+            Description = "My custom metric SLO",
+            Name = "Example Metric SLO",
+            Query = new Datadog.Inputs.ServiceLevelObjectiveQueryArgs
+            {
+                Denominator = "sum:my.custom.count.metric{*}.as_count()",
+                Numerator = "sum:my.custom.count.metric{type:good_events}.as_count()",
+            },
+            Tags = 
+            {
+                "foo:bar",
+                "baz",
+            },
+            Thresholds = 
+            {
+                new Datadog.Inputs.ServiceLevelObjectiveThresholdArgs
+                {
+                    Target = 99.9,
+                    TargetDisplay = "99.900",
+                    Timeframe = "7d",
+                    Warning = 99.99,
+                    WarningDisplay = "99.990",
+                },
+                new Datadog.Inputs.ServiceLevelObjectiveThresholdArgs
+                {
+                    Target = 99.9,
+                    TargetDisplay = "99.900",
+                    Timeframe = "30d",
+                    Warning = 99.99,
+                    WarningDisplay = "99.990",
+                },
+            },
+            Type = "metric",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -104,7 +151,51 @@ const foo = new datadog.ServiceLevelObjective("foo", {
 
 ### Monitor-Based SLO
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Datadog = Pulumi.Datadog;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        // Create a new Datadog service level objective
+        var bar = new Datadog.ServiceLevelObjective("bar", new Datadog.ServiceLevelObjectiveArgs
+        {
+            Description = "My custom monitor SLO",
+            MonitorIds = 
+            {
+                1,
+                2,
+                3,
+            },
+            Name = "Example Monitor SLO",
+            Tags = 
+            {
+                "foo:bar",
+                "baz",
+            },
+            Thresholds = 
+            {
+                new Datadog.Inputs.ServiceLevelObjectiveThresholdArgs
+                {
+                    Target = 99.9,
+                    Timeframe = "7d",
+                    Warning = 99.99,
+                },
+                new Datadog.Inputs.ServiceLevelObjectiveThresholdArgs
+                {
+                    Target = 99.9,
+                    Timeframe = "30d",
+                    Warning = 99.99,
+                },
+            },
+            Type = "monitor",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -366,7 +457,9 @@ The ServiceLevelObjective resource accepts the following [input]({{< relref "/do
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -375,7 +468,9 @@ The ServiceLevelObjective resource accepts the following [input]({{< relref "/do
 
     <dt class="property-required"
             title="Required">
-        <span>Thresholds</span>
+        <span id="thresholds_csharp">
+<a href="#thresholds_csharp" style="color: inherit; text-decoration: inherit;">Thresholds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicelevelobjectivethreshold">List&lt;Service<wbr>Level<wbr>Objective<wbr>Threshold<wbr>Args&gt;</a></span>
     </dt>
@@ -384,7 +479,9 @@ The ServiceLevelObjective resource accepts the following [input]({{< relref "/do
 
     <dt class="property-required"
             title="Required">
-        <span>Type</span>
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -395,7 +492,9 @@ The ServiceLevelObjective resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -404,7 +503,9 @@ The ServiceLevelObjective resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
-        <span>Groups</span>
+        <span id="groups_csharp">
+<a href="#groups_csharp" style="color: inherit; text-decoration: inherit;">Groups</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -413,7 +514,9 @@ The ServiceLevelObjective resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
-        <span>Monitor<wbr>Ids</span>
+        <span id="monitorids_csharp">
+<a href="#monitorids_csharp" style="color: inherit; text-decoration: inherit;">Monitor<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;int&gt;</a></span>
     </dt>
@@ -422,7 +525,9 @@ The ServiceLevelObjective resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
-        <span>Query</span>
+        <span id="query_csharp">
+<a href="#query_csharp" style="color: inherit; text-decoration: inherit;">Query</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicelevelobjectivequery">Service<wbr>Level<wbr>Objective<wbr>Query<wbr>Args</a></span>
     </dt>
@@ -431,7 +536,9 @@ The ServiceLevelObjective resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -447,7 +554,9 @@ The ServiceLevelObjective resource accepts the following [input]({{< relref "/do
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -456,7 +565,9 @@ The ServiceLevelObjective resource accepts the following [input]({{< relref "/do
 
     <dt class="property-required"
             title="Required">
-        <span>Thresholds</span>
+        <span id="thresholds_go">
+<a href="#thresholds_go" style="color: inherit; text-decoration: inherit;">Thresholds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicelevelobjectivethreshold">[]Service<wbr>Level<wbr>Objective<wbr>Threshold</a></span>
     </dt>
@@ -465,7 +576,9 @@ The ServiceLevelObjective resource accepts the following [input]({{< relref "/do
 
     <dt class="property-required"
             title="Required">
-        <span>Type</span>
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -476,7 +589,9 @@ The ServiceLevelObjective resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -485,7 +600,9 @@ The ServiceLevelObjective resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
-        <span>Groups</span>
+        <span id="groups_go">
+<a href="#groups_go" style="color: inherit; text-decoration: inherit;">Groups</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -494,7 +611,9 @@ The ServiceLevelObjective resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
-        <span>Monitor<wbr>Ids</span>
+        <span id="monitorids_go">
+<a href="#monitorids_go" style="color: inherit; text-decoration: inherit;">Monitor<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">[]int</a></span>
     </dt>
@@ -503,7 +622,9 @@ The ServiceLevelObjective resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
-        <span>Query</span>
+        <span id="query_go">
+<a href="#query_go" style="color: inherit; text-decoration: inherit;">Query</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicelevelobjectivequery">Service<wbr>Level<wbr>Objective<wbr>Query</a></span>
     </dt>
@@ -512,7 +633,9 @@ The ServiceLevelObjective resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -528,7 +651,9 @@ The ServiceLevelObjective resource accepts the following [input]({{< relref "/do
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -537,7 +662,9 @@ The ServiceLevelObjective resource accepts the following [input]({{< relref "/do
 
     <dt class="property-required"
             title="Required">
-        <span>thresholds</span>
+        <span id="thresholds_nodejs">
+<a href="#thresholds_nodejs" style="color: inherit; text-decoration: inherit;">thresholds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicelevelobjectivethreshold">Service<wbr>Level<wbr>Objective<wbr>Threshold[]</a></span>
     </dt>
@@ -546,7 +673,9 @@ The ServiceLevelObjective resource accepts the following [input]({{< relref "/do
 
     <dt class="property-required"
             title="Required">
-        <span>type</span>
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -557,7 +686,9 @@ The ServiceLevelObjective resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -566,7 +697,9 @@ The ServiceLevelObjective resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
-        <span>groups</span>
+        <span id="groups_nodejs">
+<a href="#groups_nodejs" style="color: inherit; text-decoration: inherit;">groups</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -575,7 +708,9 @@ The ServiceLevelObjective resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
-        <span>monitor<wbr>Ids</span>
+        <span id="monitorids_nodejs">
+<a href="#monitorids_nodejs" style="color: inherit; text-decoration: inherit;">monitor<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number[]</a></span>
     </dt>
@@ -584,7 +719,9 @@ The ServiceLevelObjective resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
-        <span>query</span>
+        <span id="query_nodejs">
+<a href="#query_nodejs" style="color: inherit; text-decoration: inherit;">query</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicelevelobjectivequery">Service<wbr>Level<wbr>Objective<wbr>Query</a></span>
     </dt>
@@ -593,7 +730,9 @@ The ServiceLevelObjective resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -609,7 +748,9 @@ The ServiceLevelObjective resource accepts the following [input]({{< relref "/do
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -618,7 +759,9 @@ The ServiceLevelObjective resource accepts the following [input]({{< relref "/do
 
     <dt class="property-required"
             title="Required">
-        <span>thresholds</span>
+        <span id="thresholds_python">
+<a href="#thresholds_python" style="color: inherit; text-decoration: inherit;">thresholds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicelevelobjectivethreshold">List[Service<wbr>Level<wbr>Objective<wbr>Threshold]</a></span>
     </dt>
@@ -627,7 +770,9 @@ The ServiceLevelObjective resource accepts the following [input]({{< relref "/do
 
     <dt class="property-required"
             title="Required">
-        <span>type</span>
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -638,7 +783,9 @@ The ServiceLevelObjective resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -647,7 +794,9 @@ The ServiceLevelObjective resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
-        <span>groups</span>
+        <span id="groups_python">
+<a href="#groups_python" style="color: inherit; text-decoration: inherit;">groups</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -656,7 +805,9 @@ The ServiceLevelObjective resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
-        <span>monitor_<wbr>ids</span>
+        <span id="monitor_ids_python">
+<a href="#monitor_ids_python" style="color: inherit; text-decoration: inherit;">monitor_<wbr>ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Integer]</a></span>
     </dt>
@@ -665,7 +816,9 @@ The ServiceLevelObjective resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
-        <span>query</span>
+        <span id="query_python">
+<a href="#query_python" style="color: inherit; text-decoration: inherit;">query</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicelevelobjectivequery">Dict[Service<wbr>Level<wbr>Objective<wbr>Query]</a></span>
     </dt>
@@ -674,7 +827,9 @@ The ServiceLevelObjective resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -701,7 +856,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -716,7 +873,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -731,7 +890,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -746,7 +907,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -887,7 +1050,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="state_description_csharp">
+<a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -896,7 +1061,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Groups</span>
+        <span id="state_groups_csharp">
+<a href="#state_groups_csharp" style="color: inherit; text-decoration: inherit;">Groups</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -905,7 +1072,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Monitor<wbr>Ids</span>
+        <span id="state_monitorids_csharp">
+<a href="#state_monitorids_csharp" style="color: inherit; text-decoration: inherit;">Monitor<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;int&gt;</a></span>
     </dt>
@@ -914,7 +1083,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -923,7 +1094,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Query</span>
+        <span id="state_query_csharp">
+<a href="#state_query_csharp" style="color: inherit; text-decoration: inherit;">Query</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicelevelobjectivequery">Service<wbr>Level<wbr>Objective<wbr>Query<wbr>Args</a></span>
     </dt>
@@ -932,7 +1105,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="state_tags_csharp">
+<a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -941,7 +1116,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Thresholds</span>
+        <span id="state_thresholds_csharp">
+<a href="#state_thresholds_csharp" style="color: inherit; text-decoration: inherit;">Thresholds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicelevelobjectivethreshold">List&lt;Service<wbr>Level<wbr>Objective<wbr>Threshold<wbr>Args&gt;</a></span>
     </dt>
@@ -950,7 +1127,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Type</span>
+        <span id="state_type_csharp">
+<a href="#state_type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -968,7 +1147,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="state_description_go">
+<a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -977,7 +1158,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Groups</span>
+        <span id="state_groups_go">
+<a href="#state_groups_go" style="color: inherit; text-decoration: inherit;">Groups</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -986,7 +1169,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Monitor<wbr>Ids</span>
+        <span id="state_monitorids_go">
+<a href="#state_monitorids_go" style="color: inherit; text-decoration: inherit;">Monitor<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">[]int</a></span>
     </dt>
@@ -995,7 +1180,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1004,7 +1191,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Query</span>
+        <span id="state_query_go">
+<a href="#state_query_go" style="color: inherit; text-decoration: inherit;">Query</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicelevelobjectivequery">Service<wbr>Level<wbr>Objective<wbr>Query</a></span>
     </dt>
@@ -1013,7 +1202,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="state_tags_go">
+<a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1022,7 +1213,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Thresholds</span>
+        <span id="state_thresholds_go">
+<a href="#state_thresholds_go" style="color: inherit; text-decoration: inherit;">Thresholds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicelevelobjectivethreshold">[]Service<wbr>Level<wbr>Objective<wbr>Threshold</a></span>
     </dt>
@@ -1031,7 +1224,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Type</span>
+        <span id="state_type_go">
+<a href="#state_type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1049,7 +1244,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="state_description_nodejs">
+<a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1058,7 +1255,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>groups</span>
+        <span id="state_groups_nodejs">
+<a href="#state_groups_nodejs" style="color: inherit; text-decoration: inherit;">groups</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1067,7 +1266,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>monitor<wbr>Ids</span>
+        <span id="state_monitorids_nodejs">
+<a href="#state_monitorids_nodejs" style="color: inherit; text-decoration: inherit;">monitor<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number[]</a></span>
     </dt>
@@ -1076,7 +1277,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1085,7 +1288,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>query</span>
+        <span id="state_query_nodejs">
+<a href="#state_query_nodejs" style="color: inherit; text-decoration: inherit;">query</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicelevelobjectivequery">Service<wbr>Level<wbr>Objective<wbr>Query</a></span>
     </dt>
@@ -1094,7 +1299,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="state_tags_nodejs">
+<a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1103,7 +1310,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>thresholds</span>
+        <span id="state_thresholds_nodejs">
+<a href="#state_thresholds_nodejs" style="color: inherit; text-decoration: inherit;">thresholds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicelevelobjectivethreshold">Service<wbr>Level<wbr>Objective<wbr>Threshold[]</a></span>
     </dt>
@@ -1112,7 +1321,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>type</span>
+        <span id="state_type_nodejs">
+<a href="#state_type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1130,7 +1341,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="state_description_python">
+<a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1139,7 +1352,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>groups</span>
+        <span id="state_groups_python">
+<a href="#state_groups_python" style="color: inherit; text-decoration: inherit;">groups</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1148,7 +1363,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>monitor_<wbr>ids</span>
+        <span id="state_monitor_ids_python">
+<a href="#state_monitor_ids_python" style="color: inherit; text-decoration: inherit;">monitor_<wbr>ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Integer]</a></span>
     </dt>
@@ -1157,7 +1374,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1166,7 +1385,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>query</span>
+        <span id="state_query_python">
+<a href="#state_query_python" style="color: inherit; text-decoration: inherit;">query</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicelevelobjectivequery">Dict[Service<wbr>Level<wbr>Objective<wbr>Query]</a></span>
     </dt>
@@ -1175,7 +1396,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="state_tags_python">
+<a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1184,7 +1407,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>thresholds</span>
+        <span id="state_thresholds_python">
+<a href="#state_thresholds_python" style="color: inherit; text-decoration: inherit;">thresholds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicelevelobjectivethreshold">List[Service<wbr>Level<wbr>Objective<wbr>Threshold]</a></span>
     </dt>
@@ -1193,7 +1418,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>type</span>
+        <span id="state_type_python">
+<a href="#state_type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1237,7 +1464,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Denominator</span>
+        <span id="denominator_csharp">
+<a href="#denominator_csharp" style="color: inherit; text-decoration: inherit;">Denominator</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1247,7 +1476,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Numerator</span>
+        <span id="numerator_csharp">
+<a href="#numerator_csharp" style="color: inherit; text-decoration: inherit;">Numerator</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1263,7 +1494,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Denominator</span>
+        <span id="denominator_go">
+<a href="#denominator_go" style="color: inherit; text-decoration: inherit;">Denominator</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1273,7 +1506,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Numerator</span>
+        <span id="numerator_go">
+<a href="#numerator_go" style="color: inherit; text-decoration: inherit;">Numerator</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1289,7 +1524,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>denominator</span>
+        <span id="denominator_nodejs">
+<a href="#denominator_nodejs" style="color: inherit; text-decoration: inherit;">denominator</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1299,7 +1536,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>numerator</span>
+        <span id="numerator_nodejs">
+<a href="#numerator_nodejs" style="color: inherit; text-decoration: inherit;">numerator</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1315,7 +1554,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>denominator</span>
+        <span id="denominator_python">
+<a href="#denominator_python" style="color: inherit; text-decoration: inherit;">denominator</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1325,7 +1566,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>numerator</span>
+        <span id="numerator_python">
+<a href="#numerator_python" style="color: inherit; text-decoration: inherit;">numerator</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1359,7 +1602,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Target</span>
+        <span id="target_csharp">
+<a href="#target_csharp" style="color: inherit; text-decoration: inherit;">Target</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
@@ -1368,7 +1613,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Timeframe</span>
+        <span id="timeframe_csharp">
+<a href="#timeframe_csharp" style="color: inherit; text-decoration: inherit;">Timeframe</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1380,7 +1627,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Target<wbr>Display</span>
+        <span id="targetdisplay_csharp">
+<a href="#targetdisplay_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Display</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1389,7 +1638,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Warning</span>
+        <span id="warning_csharp">
+<a href="#warning_csharp" style="color: inherit; text-decoration: inherit;">Warning</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
@@ -1398,7 +1649,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Warning<wbr>Display</span>
+        <span id="warningdisplay_csharp">
+<a href="#warningdisplay_csharp" style="color: inherit; text-decoration: inherit;">Warning<wbr>Display</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1414,7 +1667,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Target</span>
+        <span id="target_go">
+<a href="#target_go" style="color: inherit; text-decoration: inherit;">Target</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
@@ -1423,7 +1678,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Timeframe</span>
+        <span id="timeframe_go">
+<a href="#timeframe_go" style="color: inherit; text-decoration: inherit;">Timeframe</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1435,7 +1692,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Target<wbr>Display</span>
+        <span id="targetdisplay_go">
+<a href="#targetdisplay_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Display</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1444,7 +1703,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Warning</span>
+        <span id="warning_go">
+<a href="#warning_go" style="color: inherit; text-decoration: inherit;">Warning</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
@@ -1453,7 +1714,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Warning<wbr>Display</span>
+        <span id="warningdisplay_go">
+<a href="#warningdisplay_go" style="color: inherit; text-decoration: inherit;">Warning<wbr>Display</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1469,7 +1732,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>target</span>
+        <span id="target_nodejs">
+<a href="#target_nodejs" style="color: inherit; text-decoration: inherit;">target</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
@@ -1478,7 +1743,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>timeframe</span>
+        <span id="timeframe_nodejs">
+<a href="#timeframe_nodejs" style="color: inherit; text-decoration: inherit;">timeframe</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1490,7 +1757,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>target<wbr>Display</span>
+        <span id="targetdisplay_nodejs">
+<a href="#targetdisplay_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Display</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1499,7 +1768,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>warning</span>
+        <span id="warning_nodejs">
+<a href="#warning_nodejs" style="color: inherit; text-decoration: inherit;">warning</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
@@ -1508,7 +1779,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>warning<wbr>Display</span>
+        <span id="warningdisplay_nodejs">
+<a href="#warningdisplay_nodejs" style="color: inherit; text-decoration: inherit;">warning<wbr>Display</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1524,7 +1797,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>target</span>
+        <span id="target_python">
+<a href="#target_python" style="color: inherit; text-decoration: inherit;">target</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1533,7 +1808,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>timeframe</span>
+        <span id="timeframe_python">
+<a href="#timeframe_python" style="color: inherit; text-decoration: inherit;">timeframe</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1545,7 +1822,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>target<wbr>Display</span>
+        <span id="targetdisplay_python">
+<a href="#targetdisplay_python" style="color: inherit; text-decoration: inherit;">target<wbr>Display</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1554,7 +1833,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>warning</span>
+        <span id="warning_python">
+<a href="#warning_python" style="color: inherit; text-decoration: inherit;">warning</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1563,7 +1844,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>warning<wbr>Display</span>
+        <span id="warningdisplay_python">
+<a href="#warningdisplay_python" style="color: inherit; text-decoration: inherit;">warning<wbr>Display</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

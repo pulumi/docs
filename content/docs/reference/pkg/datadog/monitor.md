@@ -196,7 +196,9 @@ The Monitor resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-required"
             title="Required">
-        <span>Message</span>
+        <span id="message_csharp">
+<a href="#message_csharp" style="color: inherit; text-decoration: inherit;">Message</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -206,7 +208,9 @@ Email notifications can be sent to specific users by using the same '@username' 
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -215,7 +219,9 @@ Email notifications can be sent to specific users by using the same '@username' 
 
     <dt class="property-required"
             title="Required">
-        <span>Query</span>
+        <span id="query_csharp">
+<a href="#query_csharp" style="color: inherit; text-decoration: inherit;">Query</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -223,7 +229,9 @@ Email notifications can be sent to specific users by using the same '@username' 
 
     <dt class="property-required"
             title="Required">
-        <span>Type</span>
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -238,7 +246,9 @@ Email notifications can be sent to specific users by using the same '@username' 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enable<wbr>Logs<wbr>Sample</span>
+        <span id="enablelogssample_csharp">
+<a href="#enablelogssample_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Logs<wbr>Sample</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -248,7 +258,9 @@ triggering tags into the title. Defaults to true.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Escalation<wbr>Message</span>
+        <span id="escalationmessage_csharp">
+<a href="#escalationmessage_csharp" style="color: inherit; text-decoration: inherit;">Escalation<wbr>Message</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -258,7 +270,9 @@ notification allowed elsewhere.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Evaluation<wbr>Delay</span>
+        <span id="evaluationdelay_csharp">
+<a href="#evaluationdelay_csharp" style="color: inherit; text-decoration: inherit;">Evaluation<wbr>Delay</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -270,7 +284,9 @@ metrics to ensure the monitor will always have data during evaluation.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Include<wbr>Tags</span>
+        <span id="includetags_csharp">
+<a href="#includetags_csharp" style="color: inherit; text-decoration: inherit;">Include<wbr>Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -279,7 +295,9 @@ metrics to ensure the monitor will always have data during evaluation.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Locked</span>
+        <span id="locked_csharp">
+<a href="#locked_csharp" style="color: inherit; text-decoration: inherit;">Locked</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -288,7 +306,9 @@ metrics to ensure the monitor will always have data during evaluation.
 
     <dt class="property-optional"
             title="Optional">
-        <span>New<wbr>Host<wbr>Delay</span>
+        <span id="newhostdelay_csharp">
+<a href="#newhostdelay_csharp" style="color: inherit; text-decoration: inherit;">New<wbr>Host<wbr>Delay</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -299,7 +319,9 @@ results. Should be a non negative integer. Defaults to 300.
 
     <dt class="property-optional"
             title="Optional">
-        <span>No<wbr>Data<wbr>Timeframe</span>
+        <span id="nodatatimeframe_csharp">
+<a href="#nodatatimeframe_csharp" style="color: inherit; text-decoration: inherit;">No<wbr>Data<wbr>Timeframe</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -310,7 +332,9 @@ metric alerts, 2 minutes for service checks. Defaults to 10 minutes.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Notify<wbr>Audit</span>
+        <span id="notifyaudit_csharp">
+<a href="#notifyaudit_csharp" style="color: inherit; text-decoration: inherit;">Notify<wbr>Audit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -320,7 +344,9 @@ Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Notify<wbr>No<wbr>Data</span>
+        <span id="notifynodata_csharp">
+<a href="#notifynodata_csharp" style="color: inherit; text-decoration: inherit;">Notify<wbr>No<wbr>Data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -330,7 +356,9 @@ to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Renotify<wbr>Interval</span>
+        <span id="renotifyinterval_csharp">
+<a href="#renotifyinterval_csharp" style="color: inherit; text-decoration: inherit;">Renotify<wbr>Interval</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -340,7 +368,9 @@ on the current status. It will only re-notify if it's not resolved.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Require<wbr>Full<wbr>Window</span>
+        <span id="requirefullwindow_csharp">
+<a href="#requirefullwindow_csharp" style="color: inherit; text-decoration: inherit;">Require<wbr>Full<wbr>Window</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -351,7 +381,9 @@ Default: True for "on average", "at all times" and "in total" aggregation. False
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>Silenced</span>
+        <span id="silenced_csharp">
+<a href="#silenced_csharp" style="color: inherit; text-decoration: inherit;">Silenced</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -359,7 +391,9 @@ Default: True for "on average", "at all times" and "in total" aggregation. False
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -368,7 +402,9 @@ Default: True for "on average", "at all times" and "in total" aggregation. False
 
     <dt class="property-optional"
             title="Optional">
-        <span>Threshold<wbr>Windows</span>
+        <span id="thresholdwindows_csharp">
+<a href="#thresholdwindows_csharp" style="color: inherit; text-decoration: inherit;">Threshold<wbr>Windows</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#monitorthresholdwindows">Monitor<wbr>Threshold<wbr>Windows<wbr>Args</a></span>
     </dt>
@@ -377,7 +413,9 @@ Default: True for "on average", "at all times" and "in total" aggregation. False
 
     <dt class="property-optional"
             title="Optional">
-        <span>Thresholds</span>
+        <span id="thresholds_csharp">
+<a href="#thresholds_csharp" style="color: inherit; text-decoration: inherit;">Thresholds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#monitorthresholds">Monitor<wbr>Thresholds<wbr>Args</a></span>
     </dt>
@@ -410,7 +448,9 @@ unknown  = 1
 
     <dt class="property-optional"
             title="Optional">
-        <span>Timeout<wbr>H</span>
+        <span id="timeouth_csharp">
+<a href="#timeouth_csharp" style="color: inherit; text-decoration: inherit;">Timeout<wbr>H</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -427,7 +467,9 @@ from a triggered state. Defaults to false.
 
     <dt class="property-required"
             title="Required">
-        <span>Message</span>
+        <span id="message_go">
+<a href="#message_go" style="color: inherit; text-decoration: inherit;">Message</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -437,7 +479,9 @@ Email notifications can be sent to specific users by using the same '@username' 
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -446,7 +490,9 @@ Email notifications can be sent to specific users by using the same '@username' 
 
     <dt class="property-required"
             title="Required">
-        <span>Query</span>
+        <span id="query_go">
+<a href="#query_go" style="color: inherit; text-decoration: inherit;">Query</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -454,7 +500,9 @@ Email notifications can be sent to specific users by using the same '@username' 
 
     <dt class="property-required"
             title="Required">
-        <span>Type</span>
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -469,7 +517,9 @@ Email notifications can be sent to specific users by using the same '@username' 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enable<wbr>Logs<wbr>Sample</span>
+        <span id="enablelogssample_go">
+<a href="#enablelogssample_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Logs<wbr>Sample</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -479,7 +529,9 @@ triggering tags into the title. Defaults to true.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Escalation<wbr>Message</span>
+        <span id="escalationmessage_go">
+<a href="#escalationmessage_go" style="color: inherit; text-decoration: inherit;">Escalation<wbr>Message</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -489,7 +541,9 @@ notification allowed elsewhere.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Evaluation<wbr>Delay</span>
+        <span id="evaluationdelay_go">
+<a href="#evaluationdelay_go" style="color: inherit; text-decoration: inherit;">Evaluation<wbr>Delay</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -501,7 +555,9 @@ metrics to ensure the monitor will always have data during evaluation.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Include<wbr>Tags</span>
+        <span id="includetags_go">
+<a href="#includetags_go" style="color: inherit; text-decoration: inherit;">Include<wbr>Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -510,7 +566,9 @@ metrics to ensure the monitor will always have data during evaluation.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Locked</span>
+        <span id="locked_go">
+<a href="#locked_go" style="color: inherit; text-decoration: inherit;">Locked</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -519,7 +577,9 @@ metrics to ensure the monitor will always have data during evaluation.
 
     <dt class="property-optional"
             title="Optional">
-        <span>New<wbr>Host<wbr>Delay</span>
+        <span id="newhostdelay_go">
+<a href="#newhostdelay_go" style="color: inherit; text-decoration: inherit;">New<wbr>Host<wbr>Delay</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -530,7 +590,9 @@ results. Should be a non negative integer. Defaults to 300.
 
     <dt class="property-optional"
             title="Optional">
-        <span>No<wbr>Data<wbr>Timeframe</span>
+        <span id="nodatatimeframe_go">
+<a href="#nodatatimeframe_go" style="color: inherit; text-decoration: inherit;">No<wbr>Data<wbr>Timeframe</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -541,7 +603,9 @@ metric alerts, 2 minutes for service checks. Defaults to 10 minutes.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Notify<wbr>Audit</span>
+        <span id="notifyaudit_go">
+<a href="#notifyaudit_go" style="color: inherit; text-decoration: inherit;">Notify<wbr>Audit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -551,7 +615,9 @@ Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Notify<wbr>No<wbr>Data</span>
+        <span id="notifynodata_go">
+<a href="#notifynodata_go" style="color: inherit; text-decoration: inherit;">Notify<wbr>No<wbr>Data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -561,7 +627,9 @@ to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Renotify<wbr>Interval</span>
+        <span id="renotifyinterval_go">
+<a href="#renotifyinterval_go" style="color: inherit; text-decoration: inherit;">Renotify<wbr>Interval</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -571,7 +639,9 @@ on the current status. It will only re-notify if it's not resolved.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Require<wbr>Full<wbr>Window</span>
+        <span id="requirefullwindow_go">
+<a href="#requirefullwindow_go" style="color: inherit; text-decoration: inherit;">Require<wbr>Full<wbr>Window</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -582,7 +652,9 @@ Default: True for "on average", "at all times" and "in total" aggregation. False
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>Silenced</span>
+        <span id="silenced_go">
+<a href="#silenced_go" style="color: inherit; text-decoration: inherit;">Silenced</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -590,7 +662,9 @@ Default: True for "on average", "at all times" and "in total" aggregation. False
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -599,7 +673,9 @@ Default: True for "on average", "at all times" and "in total" aggregation. False
 
     <dt class="property-optional"
             title="Optional">
-        <span>Threshold<wbr>Windows</span>
+        <span id="thresholdwindows_go">
+<a href="#thresholdwindows_go" style="color: inherit; text-decoration: inherit;">Threshold<wbr>Windows</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#monitorthresholdwindows">Monitor<wbr>Threshold<wbr>Windows</a></span>
     </dt>
@@ -608,7 +684,9 @@ Default: True for "on average", "at all times" and "in total" aggregation. False
 
     <dt class="property-optional"
             title="Optional">
-        <span>Thresholds</span>
+        <span id="thresholds_go">
+<a href="#thresholds_go" style="color: inherit; text-decoration: inherit;">Thresholds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#monitorthresholds">Monitor<wbr>Thresholds</a></span>
     </dt>
@@ -641,7 +719,9 @@ unknown  = 1
 
     <dt class="property-optional"
             title="Optional">
-        <span>Timeout<wbr>H</span>
+        <span id="timeouth_go">
+<a href="#timeouth_go" style="color: inherit; text-decoration: inherit;">Timeout<wbr>H</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -658,7 +738,9 @@ from a triggered state. Defaults to false.
 
     <dt class="property-required"
             title="Required">
-        <span>message</span>
+        <span id="message_nodejs">
+<a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -668,7 +750,9 @@ Email notifications can be sent to specific users by using the same '@username' 
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -677,7 +761,9 @@ Email notifications can be sent to specific users by using the same '@username' 
 
     <dt class="property-required"
             title="Required">
-        <span>query</span>
+        <span id="query_nodejs">
+<a href="#query_nodejs" style="color: inherit; text-decoration: inherit;">query</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -685,7 +771,9 @@ Email notifications can be sent to specific users by using the same '@username' 
 
     <dt class="property-required"
             title="Required">
-        <span>type</span>
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -700,7 +788,9 @@ Email notifications can be sent to specific users by using the same '@username' 
 
     <dt class="property-optional"
             title="Optional">
-        <span>enable<wbr>Logs<wbr>Sample</span>
+        <span id="enablelogssample_nodejs">
+<a href="#enablelogssample_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Logs<wbr>Sample</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -710,7 +800,9 @@ triggering tags into the title. Defaults to true.
 
     <dt class="property-optional"
             title="Optional">
-        <span>escalation<wbr>Message</span>
+        <span id="escalationmessage_nodejs">
+<a href="#escalationmessage_nodejs" style="color: inherit; text-decoration: inherit;">escalation<wbr>Message</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -720,7 +812,9 @@ notification allowed elsewhere.
 
     <dt class="property-optional"
             title="Optional">
-        <span>evaluation<wbr>Delay</span>
+        <span id="evaluationdelay_nodejs">
+<a href="#evaluationdelay_nodejs" style="color: inherit; text-decoration: inherit;">evaluation<wbr>Delay</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -732,7 +826,9 @@ metrics to ensure the monitor will always have data during evaluation.
 
     <dt class="property-optional"
             title="Optional">
-        <span>include<wbr>Tags</span>
+        <span id="includetags_nodejs">
+<a href="#includetags_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -741,7 +837,9 @@ metrics to ensure the monitor will always have data during evaluation.
 
     <dt class="property-optional"
             title="Optional">
-        <span>locked</span>
+        <span id="locked_nodejs">
+<a href="#locked_nodejs" style="color: inherit; text-decoration: inherit;">locked</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -750,7 +848,9 @@ metrics to ensure the monitor will always have data during evaluation.
 
     <dt class="property-optional"
             title="Optional">
-        <span>new<wbr>Host<wbr>Delay</span>
+        <span id="newhostdelay_nodejs">
+<a href="#newhostdelay_nodejs" style="color: inherit; text-decoration: inherit;">new<wbr>Host<wbr>Delay</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -761,7 +861,9 @@ results. Should be a non negative integer. Defaults to 300.
 
     <dt class="property-optional"
             title="Optional">
-        <span>no<wbr>Data<wbr>Timeframe</span>
+        <span id="nodatatimeframe_nodejs">
+<a href="#nodatatimeframe_nodejs" style="color: inherit; text-decoration: inherit;">no<wbr>Data<wbr>Timeframe</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -772,7 +874,9 @@ metric alerts, 2 minutes for service checks. Defaults to 10 minutes.
 
     <dt class="property-optional"
             title="Optional">
-        <span>notify<wbr>Audit</span>
+        <span id="notifyaudit_nodejs">
+<a href="#notifyaudit_nodejs" style="color: inherit; text-decoration: inherit;">notify<wbr>Audit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -782,7 +886,9 @@ Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>notify<wbr>No<wbr>Data</span>
+        <span id="notifynodata_nodejs">
+<a href="#notifynodata_nodejs" style="color: inherit; text-decoration: inherit;">notify<wbr>No<wbr>Data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -792,7 +898,9 @@ to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>renotify<wbr>Interval</span>
+        <span id="renotifyinterval_nodejs">
+<a href="#renotifyinterval_nodejs" style="color: inherit; text-decoration: inherit;">renotify<wbr>Interval</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -802,7 +910,9 @@ on the current status. It will only re-notify if it's not resolved.
 
     <dt class="property-optional"
             title="Optional">
-        <span>require<wbr>Full<wbr>Window</span>
+        <span id="requirefullwindow_nodejs">
+<a href="#requirefullwindow_nodejs" style="color: inherit; text-decoration: inherit;">require<wbr>Full<wbr>Window</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -813,7 +923,9 @@ Default: True for "on average", "at all times" and "in total" aggregation. False
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>silenced</span>
+        <span id="silenced_nodejs">
+<a href="#silenced_nodejs" style="color: inherit; text-decoration: inherit;">silenced</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -821,7 +933,9 @@ Default: True for "on average", "at all times" and "in total" aggregation. False
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -830,7 +944,9 @@ Default: True for "on average", "at all times" and "in total" aggregation. False
 
     <dt class="property-optional"
             title="Optional">
-        <span>threshold<wbr>Windows</span>
+        <span id="thresholdwindows_nodejs">
+<a href="#thresholdwindows_nodejs" style="color: inherit; text-decoration: inherit;">threshold<wbr>Windows</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#monitorthresholdwindows">Monitor<wbr>Threshold<wbr>Windows</a></span>
     </dt>
@@ -839,7 +955,9 @@ Default: True for "on average", "at all times" and "in total" aggregation. False
 
     <dt class="property-optional"
             title="Optional">
-        <span>thresholds</span>
+        <span id="thresholds_nodejs">
+<a href="#thresholds_nodejs" style="color: inherit; text-decoration: inherit;">thresholds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#monitorthresholds">Monitor<wbr>Thresholds</a></span>
     </dt>
@@ -872,7 +990,9 @@ unknown  = 1
 
     <dt class="property-optional"
             title="Optional">
-        <span>timeout<wbr>H</span>
+        <span id="timeouth_nodejs">
+<a href="#timeouth_nodejs" style="color: inherit; text-decoration: inherit;">timeout<wbr>H</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -889,7 +1009,9 @@ from a triggered state. Defaults to false.
 
     <dt class="property-required"
             title="Required">
-        <span>message</span>
+        <span id="message_python">
+<a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -899,7 +1021,9 @@ Email notifications can be sent to specific users by using the same '@username' 
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -908,7 +1032,9 @@ Email notifications can be sent to specific users by using the same '@username' 
 
     <dt class="property-required"
             title="Required">
-        <span>query</span>
+        <span id="query_python">
+<a href="#query_python" style="color: inherit; text-decoration: inherit;">query</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -916,7 +1042,9 @@ Email notifications can be sent to specific users by using the same '@username' 
 
     <dt class="property-required"
             title="Required">
-        <span>type</span>
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -931,7 +1059,9 @@ Email notifications can be sent to specific users by using the same '@username' 
 
     <dt class="property-optional"
             title="Optional">
-        <span>enable_<wbr>logs_<wbr>sample</span>
+        <span id="enable_logs_sample_python">
+<a href="#enable_logs_sample_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>logs_<wbr>sample</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -941,7 +1071,9 @@ triggering tags into the title. Defaults to true.
 
     <dt class="property-optional"
             title="Optional">
-        <span>escalation_<wbr>message</span>
+        <span id="escalation_message_python">
+<a href="#escalation_message_python" style="color: inherit; text-decoration: inherit;">escalation_<wbr>message</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -951,7 +1083,9 @@ notification allowed elsewhere.
 
     <dt class="property-optional"
             title="Optional">
-        <span>evaluation_<wbr>delay</span>
+        <span id="evaluation_delay_python">
+<a href="#evaluation_delay_python" style="color: inherit; text-decoration: inherit;">evaluation_<wbr>delay</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -963,7 +1097,9 @@ metrics to ensure the monitor will always have data during evaluation.
 
     <dt class="property-optional"
             title="Optional">
-        <span>include_<wbr>tags</span>
+        <span id="include_tags_python">
+<a href="#include_tags_python" style="color: inherit; text-decoration: inherit;">include_<wbr>tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -972,7 +1108,9 @@ metrics to ensure the monitor will always have data during evaluation.
 
     <dt class="property-optional"
             title="Optional">
-        <span>locked</span>
+        <span id="locked_python">
+<a href="#locked_python" style="color: inherit; text-decoration: inherit;">locked</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -981,7 +1119,9 @@ metrics to ensure the monitor will always have data during evaluation.
 
     <dt class="property-optional"
             title="Optional">
-        <span>new_<wbr>host_<wbr>delay</span>
+        <span id="new_host_delay_python">
+<a href="#new_host_delay_python" style="color: inherit; text-decoration: inherit;">new_<wbr>host_<wbr>delay</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -992,7 +1132,9 @@ results. Should be a non negative integer. Defaults to 300.
 
     <dt class="property-optional"
             title="Optional">
-        <span>no_<wbr>data_<wbr>timeframe</span>
+        <span id="no_data_timeframe_python">
+<a href="#no_data_timeframe_python" style="color: inherit; text-decoration: inherit;">no_<wbr>data_<wbr>timeframe</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1003,7 +1145,9 @@ metric alerts, 2 minutes for service checks. Defaults to 10 minutes.
 
     <dt class="property-optional"
             title="Optional">
-        <span>notify_<wbr>audit</span>
+        <span id="notify_audit_python">
+<a href="#notify_audit_python" style="color: inherit; text-decoration: inherit;">notify_<wbr>audit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1013,7 +1157,9 @@ Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>notify_<wbr>no_<wbr>data</span>
+        <span id="notify_no_data_python">
+<a href="#notify_no_data_python" style="color: inherit; text-decoration: inherit;">notify_<wbr>no_<wbr>data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1023,7 +1169,9 @@ to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>renotify_<wbr>interval</span>
+        <span id="renotify_interval_python">
+<a href="#renotify_interval_python" style="color: inherit; text-decoration: inherit;">renotify_<wbr>interval</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1033,7 +1181,9 @@ on the current status. It will only re-notify if it's not resolved.
 
     <dt class="property-optional"
             title="Optional">
-        <span>require_<wbr>full_<wbr>window</span>
+        <span id="require_full_window_python">
+<a href="#require_full_window_python" style="color: inherit; text-decoration: inherit;">require_<wbr>full_<wbr>window</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1044,7 +1194,9 @@ Default: True for "on average", "at all times" and "in total" aggregation. False
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>silenced</span>
+        <span id="silenced_python">
+<a href="#silenced_python" style="color: inherit; text-decoration: inherit;">silenced</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -1052,7 +1204,9 @@ Default: True for "on average", "at all times" and "in total" aggregation. False
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1061,7 +1215,9 @@ Default: True for "on average", "at all times" and "in total" aggregation. False
 
     <dt class="property-optional"
             title="Optional">
-        <span>threshold_<wbr>windows</span>
+        <span id="threshold_windows_python">
+<a href="#threshold_windows_python" style="color: inherit; text-decoration: inherit;">threshold_<wbr>windows</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#monitorthresholdwindows">Dict[Monitor<wbr>Threshold<wbr>Windows]</a></span>
     </dt>
@@ -1070,7 +1226,9 @@ Default: True for "on average", "at all times" and "in total" aggregation. False
 
     <dt class="property-optional"
             title="Optional">
-        <span>thresholds</span>
+        <span id="thresholds_python">
+<a href="#thresholds_python" style="color: inherit; text-decoration: inherit;">thresholds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#monitorthresholds">Dict[Monitor<wbr>Thresholds]</a></span>
     </dt>
@@ -1103,7 +1261,9 @@ unknown  = 1
 
     <dt class="property-optional"
             title="Optional">
-        <span>timeout_<wbr>h</span>
+        <span id="timeout_h_python">
+<a href="#timeout_h_python" style="color: inherit; text-decoration: inherit;">timeout_<wbr>h</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1131,7 +1291,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1146,7 +1308,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1161,7 +1325,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1176,7 +1342,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1317,7 +1485,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enable<wbr>Logs<wbr>Sample</span>
+        <span id="state_enablelogssample_csharp">
+<a href="#state_enablelogssample_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Logs<wbr>Sample</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1327,7 +1497,9 @@ triggering tags into the title. Defaults to true.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Escalation<wbr>Message</span>
+        <span id="state_escalationmessage_csharp">
+<a href="#state_escalationmessage_csharp" style="color: inherit; text-decoration: inherit;">Escalation<wbr>Message</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1337,7 +1509,9 @@ notification allowed elsewhere.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Evaluation<wbr>Delay</span>
+        <span id="state_evaluationdelay_csharp">
+<a href="#state_evaluationdelay_csharp" style="color: inherit; text-decoration: inherit;">Evaluation<wbr>Delay</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1349,7 +1523,9 @@ metrics to ensure the monitor will always have data during evaluation.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Include<wbr>Tags</span>
+        <span id="state_includetags_csharp">
+<a href="#state_includetags_csharp" style="color: inherit; text-decoration: inherit;">Include<wbr>Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1358,7 +1534,9 @@ metrics to ensure the monitor will always have data during evaluation.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Locked</span>
+        <span id="state_locked_csharp">
+<a href="#state_locked_csharp" style="color: inherit; text-decoration: inherit;">Locked</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1367,7 +1545,9 @@ metrics to ensure the monitor will always have data during evaluation.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Message</span>
+        <span id="state_message_csharp">
+<a href="#state_message_csharp" style="color: inherit; text-decoration: inherit;">Message</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1377,7 +1557,9 @@ Email notifications can be sent to specific users by using the same '@username' 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1386,7 +1568,9 @@ Email notifications can be sent to specific users by using the same '@username' 
 
     <dt class="property-optional"
             title="Optional">
-        <span>New<wbr>Host<wbr>Delay</span>
+        <span id="state_newhostdelay_csharp">
+<a href="#state_newhostdelay_csharp" style="color: inherit; text-decoration: inherit;">New<wbr>Host<wbr>Delay</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1397,7 +1581,9 @@ results. Should be a non negative integer. Defaults to 300.
 
     <dt class="property-optional"
             title="Optional">
-        <span>No<wbr>Data<wbr>Timeframe</span>
+        <span id="state_nodatatimeframe_csharp">
+<a href="#state_nodatatimeframe_csharp" style="color: inherit; text-decoration: inherit;">No<wbr>Data<wbr>Timeframe</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1408,7 +1594,9 @@ metric alerts, 2 minutes for service checks. Defaults to 10 minutes.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Notify<wbr>Audit</span>
+        <span id="state_notifyaudit_csharp">
+<a href="#state_notifyaudit_csharp" style="color: inherit; text-decoration: inherit;">Notify<wbr>Audit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1418,7 +1606,9 @@ Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Notify<wbr>No<wbr>Data</span>
+        <span id="state_notifynodata_csharp">
+<a href="#state_notifynodata_csharp" style="color: inherit; text-decoration: inherit;">Notify<wbr>No<wbr>Data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1428,7 +1618,9 @@ to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Query</span>
+        <span id="state_query_csharp">
+<a href="#state_query_csharp" style="color: inherit; text-decoration: inherit;">Query</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1436,7 +1628,9 @@ to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Renotify<wbr>Interval</span>
+        <span id="state_renotifyinterval_csharp">
+<a href="#state_renotifyinterval_csharp" style="color: inherit; text-decoration: inherit;">Renotify<wbr>Interval</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1446,7 +1640,9 @@ on the current status. It will only re-notify if it's not resolved.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Require<wbr>Full<wbr>Window</span>
+        <span id="state_requirefullwindow_csharp">
+<a href="#state_requirefullwindow_csharp" style="color: inherit; text-decoration: inherit;">Require<wbr>Full<wbr>Window</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1457,7 +1653,9 @@ Default: True for "on average", "at all times" and "in total" aggregation. False
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>Silenced</span>
+        <span id="state_silenced_csharp">
+<a href="#state_silenced_csharp" style="color: inherit; text-decoration: inherit;">Silenced</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -1465,7 +1663,9 @@ Default: True for "on average", "at all times" and "in total" aggregation. False
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="state_tags_csharp">
+<a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1474,7 +1674,9 @@ Default: True for "on average", "at all times" and "in total" aggregation. False
 
     <dt class="property-optional"
             title="Optional">
-        <span>Threshold<wbr>Windows</span>
+        <span id="state_thresholdwindows_csharp">
+<a href="#state_thresholdwindows_csharp" style="color: inherit; text-decoration: inherit;">Threshold<wbr>Windows</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#monitorthresholdwindows">Monitor<wbr>Threshold<wbr>Windows<wbr>Args</a></span>
     </dt>
@@ -1483,7 +1685,9 @@ Default: True for "on average", "at all times" and "in total" aggregation. False
 
     <dt class="property-optional"
             title="Optional">
-        <span>Thresholds</span>
+        <span id="state_thresholds_csharp">
+<a href="#state_thresholds_csharp" style="color: inherit; text-decoration: inherit;">Thresholds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#monitorthresholds">Monitor<wbr>Thresholds<wbr>Args</a></span>
     </dt>
@@ -1516,7 +1720,9 @@ unknown  = 1
 
     <dt class="property-optional"
             title="Optional">
-        <span>Timeout<wbr>H</span>
+        <span id="state_timeouth_csharp">
+<a href="#state_timeouth_csharp" style="color: inherit; text-decoration: inherit;">Timeout<wbr>H</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1526,7 +1732,9 @@ from a triggered state. Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Type</span>
+        <span id="state_type_csharp">
+<a href="#state_type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1548,7 +1756,9 @@ from a triggered state. Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enable<wbr>Logs<wbr>Sample</span>
+        <span id="state_enablelogssample_go">
+<a href="#state_enablelogssample_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Logs<wbr>Sample</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1558,7 +1768,9 @@ triggering tags into the title. Defaults to true.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Escalation<wbr>Message</span>
+        <span id="state_escalationmessage_go">
+<a href="#state_escalationmessage_go" style="color: inherit; text-decoration: inherit;">Escalation<wbr>Message</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1568,7 +1780,9 @@ notification allowed elsewhere.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Evaluation<wbr>Delay</span>
+        <span id="state_evaluationdelay_go">
+<a href="#state_evaluationdelay_go" style="color: inherit; text-decoration: inherit;">Evaluation<wbr>Delay</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1580,7 +1794,9 @@ metrics to ensure the monitor will always have data during evaluation.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Include<wbr>Tags</span>
+        <span id="state_includetags_go">
+<a href="#state_includetags_go" style="color: inherit; text-decoration: inherit;">Include<wbr>Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1589,7 +1805,9 @@ metrics to ensure the monitor will always have data during evaluation.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Locked</span>
+        <span id="state_locked_go">
+<a href="#state_locked_go" style="color: inherit; text-decoration: inherit;">Locked</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1598,7 +1816,9 @@ metrics to ensure the monitor will always have data during evaluation.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Message</span>
+        <span id="state_message_go">
+<a href="#state_message_go" style="color: inherit; text-decoration: inherit;">Message</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1608,7 +1828,9 @@ Email notifications can be sent to specific users by using the same '@username' 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1617,7 +1839,9 @@ Email notifications can be sent to specific users by using the same '@username' 
 
     <dt class="property-optional"
             title="Optional">
-        <span>New<wbr>Host<wbr>Delay</span>
+        <span id="state_newhostdelay_go">
+<a href="#state_newhostdelay_go" style="color: inherit; text-decoration: inherit;">New<wbr>Host<wbr>Delay</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1628,7 +1852,9 @@ results. Should be a non negative integer. Defaults to 300.
 
     <dt class="property-optional"
             title="Optional">
-        <span>No<wbr>Data<wbr>Timeframe</span>
+        <span id="state_nodatatimeframe_go">
+<a href="#state_nodatatimeframe_go" style="color: inherit; text-decoration: inherit;">No<wbr>Data<wbr>Timeframe</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1639,7 +1865,9 @@ metric alerts, 2 minutes for service checks. Defaults to 10 minutes.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Notify<wbr>Audit</span>
+        <span id="state_notifyaudit_go">
+<a href="#state_notifyaudit_go" style="color: inherit; text-decoration: inherit;">Notify<wbr>Audit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1649,7 +1877,9 @@ Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Notify<wbr>No<wbr>Data</span>
+        <span id="state_notifynodata_go">
+<a href="#state_notifynodata_go" style="color: inherit; text-decoration: inherit;">Notify<wbr>No<wbr>Data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1659,7 +1889,9 @@ to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Query</span>
+        <span id="state_query_go">
+<a href="#state_query_go" style="color: inherit; text-decoration: inherit;">Query</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1667,7 +1899,9 @@ to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Renotify<wbr>Interval</span>
+        <span id="state_renotifyinterval_go">
+<a href="#state_renotifyinterval_go" style="color: inherit; text-decoration: inherit;">Renotify<wbr>Interval</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1677,7 +1911,9 @@ on the current status. It will only re-notify if it's not resolved.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Require<wbr>Full<wbr>Window</span>
+        <span id="state_requirefullwindow_go">
+<a href="#state_requirefullwindow_go" style="color: inherit; text-decoration: inherit;">Require<wbr>Full<wbr>Window</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1688,7 +1924,9 @@ Default: True for "on average", "at all times" and "in total" aggregation. False
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>Silenced</span>
+        <span id="state_silenced_go">
+<a href="#state_silenced_go" style="color: inherit; text-decoration: inherit;">Silenced</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -1696,7 +1934,9 @@ Default: True for "on average", "at all times" and "in total" aggregation. False
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="state_tags_go">
+<a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1705,7 +1945,9 @@ Default: True for "on average", "at all times" and "in total" aggregation. False
 
     <dt class="property-optional"
             title="Optional">
-        <span>Threshold<wbr>Windows</span>
+        <span id="state_thresholdwindows_go">
+<a href="#state_thresholdwindows_go" style="color: inherit; text-decoration: inherit;">Threshold<wbr>Windows</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#monitorthresholdwindows">Monitor<wbr>Threshold<wbr>Windows</a></span>
     </dt>
@@ -1714,7 +1956,9 @@ Default: True for "on average", "at all times" and "in total" aggregation. False
 
     <dt class="property-optional"
             title="Optional">
-        <span>Thresholds</span>
+        <span id="state_thresholds_go">
+<a href="#state_thresholds_go" style="color: inherit; text-decoration: inherit;">Thresholds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#monitorthresholds">Monitor<wbr>Thresholds</a></span>
     </dt>
@@ -1747,7 +1991,9 @@ unknown  = 1
 
     <dt class="property-optional"
             title="Optional">
-        <span>Timeout<wbr>H</span>
+        <span id="state_timeouth_go">
+<a href="#state_timeouth_go" style="color: inherit; text-decoration: inherit;">Timeout<wbr>H</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1757,7 +2003,9 @@ from a triggered state. Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Type</span>
+        <span id="state_type_go">
+<a href="#state_type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1779,7 +2027,9 @@ from a triggered state. Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>enable<wbr>Logs<wbr>Sample</span>
+        <span id="state_enablelogssample_nodejs">
+<a href="#state_enablelogssample_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Logs<wbr>Sample</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1789,7 +2039,9 @@ triggering tags into the title. Defaults to true.
 
     <dt class="property-optional"
             title="Optional">
-        <span>escalation<wbr>Message</span>
+        <span id="state_escalationmessage_nodejs">
+<a href="#state_escalationmessage_nodejs" style="color: inherit; text-decoration: inherit;">escalation<wbr>Message</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1799,7 +2051,9 @@ notification allowed elsewhere.
 
     <dt class="property-optional"
             title="Optional">
-        <span>evaluation<wbr>Delay</span>
+        <span id="state_evaluationdelay_nodejs">
+<a href="#state_evaluationdelay_nodejs" style="color: inherit; text-decoration: inherit;">evaluation<wbr>Delay</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1811,7 +2065,9 @@ metrics to ensure the monitor will always have data during evaluation.
 
     <dt class="property-optional"
             title="Optional">
-        <span>include<wbr>Tags</span>
+        <span id="state_includetags_nodejs">
+<a href="#state_includetags_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1820,7 +2076,9 @@ metrics to ensure the monitor will always have data during evaluation.
 
     <dt class="property-optional"
             title="Optional">
-        <span>locked</span>
+        <span id="state_locked_nodejs">
+<a href="#state_locked_nodejs" style="color: inherit; text-decoration: inherit;">locked</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1829,7 +2087,9 @@ metrics to ensure the monitor will always have data during evaluation.
 
     <dt class="property-optional"
             title="Optional">
-        <span>message</span>
+        <span id="state_message_nodejs">
+<a href="#state_message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1839,7 +2099,9 @@ Email notifications can be sent to specific users by using the same '@username' 
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1848,7 +2110,9 @@ Email notifications can be sent to specific users by using the same '@username' 
 
     <dt class="property-optional"
             title="Optional">
-        <span>new<wbr>Host<wbr>Delay</span>
+        <span id="state_newhostdelay_nodejs">
+<a href="#state_newhostdelay_nodejs" style="color: inherit; text-decoration: inherit;">new<wbr>Host<wbr>Delay</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1859,7 +2123,9 @@ results. Should be a non negative integer. Defaults to 300.
 
     <dt class="property-optional"
             title="Optional">
-        <span>no<wbr>Data<wbr>Timeframe</span>
+        <span id="state_nodatatimeframe_nodejs">
+<a href="#state_nodatatimeframe_nodejs" style="color: inherit; text-decoration: inherit;">no<wbr>Data<wbr>Timeframe</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1870,7 +2136,9 @@ metric alerts, 2 minutes for service checks. Defaults to 10 minutes.
 
     <dt class="property-optional"
             title="Optional">
-        <span>notify<wbr>Audit</span>
+        <span id="state_notifyaudit_nodejs">
+<a href="#state_notifyaudit_nodejs" style="color: inherit; text-decoration: inherit;">notify<wbr>Audit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1880,7 +2148,9 @@ Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>notify<wbr>No<wbr>Data</span>
+        <span id="state_notifynodata_nodejs">
+<a href="#state_notifynodata_nodejs" style="color: inherit; text-decoration: inherit;">notify<wbr>No<wbr>Data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1890,7 +2160,9 @@ to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>query</span>
+        <span id="state_query_nodejs">
+<a href="#state_query_nodejs" style="color: inherit; text-decoration: inherit;">query</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1898,7 +2170,9 @@ to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>renotify<wbr>Interval</span>
+        <span id="state_renotifyinterval_nodejs">
+<a href="#state_renotifyinterval_nodejs" style="color: inherit; text-decoration: inherit;">renotify<wbr>Interval</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1908,7 +2182,9 @@ on the current status. It will only re-notify if it's not resolved.
 
     <dt class="property-optional"
             title="Optional">
-        <span>require<wbr>Full<wbr>Window</span>
+        <span id="state_requirefullwindow_nodejs">
+<a href="#state_requirefullwindow_nodejs" style="color: inherit; text-decoration: inherit;">require<wbr>Full<wbr>Window</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1919,7 +2195,9 @@ Default: True for "on average", "at all times" and "in total" aggregation. False
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>silenced</span>
+        <span id="state_silenced_nodejs">
+<a href="#state_silenced_nodejs" style="color: inherit; text-decoration: inherit;">silenced</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -1927,7 +2205,9 @@ Default: True for "on average", "at all times" and "in total" aggregation. False
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="state_tags_nodejs">
+<a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1936,7 +2216,9 @@ Default: True for "on average", "at all times" and "in total" aggregation. False
 
     <dt class="property-optional"
             title="Optional">
-        <span>threshold<wbr>Windows</span>
+        <span id="state_thresholdwindows_nodejs">
+<a href="#state_thresholdwindows_nodejs" style="color: inherit; text-decoration: inherit;">threshold<wbr>Windows</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#monitorthresholdwindows">Monitor<wbr>Threshold<wbr>Windows</a></span>
     </dt>
@@ -1945,7 +2227,9 @@ Default: True for "on average", "at all times" and "in total" aggregation. False
 
     <dt class="property-optional"
             title="Optional">
-        <span>thresholds</span>
+        <span id="state_thresholds_nodejs">
+<a href="#state_thresholds_nodejs" style="color: inherit; text-decoration: inherit;">thresholds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#monitorthresholds">Monitor<wbr>Thresholds</a></span>
     </dt>
@@ -1978,7 +2262,9 @@ unknown  = 1
 
     <dt class="property-optional"
             title="Optional">
-        <span>timeout<wbr>H</span>
+        <span id="state_timeouth_nodejs">
+<a href="#state_timeouth_nodejs" style="color: inherit; text-decoration: inherit;">timeout<wbr>H</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1988,7 +2274,9 @@ from a triggered state. Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>type</span>
+        <span id="state_type_nodejs">
+<a href="#state_type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2010,7 +2298,9 @@ from a triggered state. Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>enable_<wbr>logs_<wbr>sample</span>
+        <span id="state_enable_logs_sample_python">
+<a href="#state_enable_logs_sample_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>logs_<wbr>sample</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2020,7 +2310,9 @@ triggering tags into the title. Defaults to true.
 
     <dt class="property-optional"
             title="Optional">
-        <span>escalation_<wbr>message</span>
+        <span id="state_escalation_message_python">
+<a href="#state_escalation_message_python" style="color: inherit; text-decoration: inherit;">escalation_<wbr>message</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2030,7 +2322,9 @@ notification allowed elsewhere.
 
     <dt class="property-optional"
             title="Optional">
-        <span>evaluation_<wbr>delay</span>
+        <span id="state_evaluation_delay_python">
+<a href="#state_evaluation_delay_python" style="color: inherit; text-decoration: inherit;">evaluation_<wbr>delay</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -2042,7 +2336,9 @@ metrics to ensure the monitor will always have data during evaluation.
 
     <dt class="property-optional"
             title="Optional">
-        <span>include_<wbr>tags</span>
+        <span id="state_include_tags_python">
+<a href="#state_include_tags_python" style="color: inherit; text-decoration: inherit;">include_<wbr>tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2051,7 +2347,9 @@ metrics to ensure the monitor will always have data during evaluation.
 
     <dt class="property-optional"
             title="Optional">
-        <span>locked</span>
+        <span id="state_locked_python">
+<a href="#state_locked_python" style="color: inherit; text-decoration: inherit;">locked</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2060,7 +2358,9 @@ metrics to ensure the monitor will always have data during evaluation.
 
     <dt class="property-optional"
             title="Optional">
-        <span>message</span>
+        <span id="state_message_python">
+<a href="#state_message_python" style="color: inherit; text-decoration: inherit;">message</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2070,7 +2370,9 @@ Email notifications can be sent to specific users by using the same '@username' 
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2079,7 +2381,9 @@ Email notifications can be sent to specific users by using the same '@username' 
 
     <dt class="property-optional"
             title="Optional">
-        <span>new_<wbr>host_<wbr>delay</span>
+        <span id="state_new_host_delay_python">
+<a href="#state_new_host_delay_python" style="color: inherit; text-decoration: inherit;">new_<wbr>host_<wbr>delay</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -2090,7 +2394,9 @@ results. Should be a non negative integer. Defaults to 300.
 
     <dt class="property-optional"
             title="Optional">
-        <span>no_<wbr>data_<wbr>timeframe</span>
+        <span id="state_no_data_timeframe_python">
+<a href="#state_no_data_timeframe_python" style="color: inherit; text-decoration: inherit;">no_<wbr>data_<wbr>timeframe</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -2101,7 +2407,9 @@ metric alerts, 2 minutes for service checks. Defaults to 10 minutes.
 
     <dt class="property-optional"
             title="Optional">
-        <span>notify_<wbr>audit</span>
+        <span id="state_notify_audit_python">
+<a href="#state_notify_audit_python" style="color: inherit; text-decoration: inherit;">notify_<wbr>audit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2111,7 +2419,9 @@ Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>notify_<wbr>no_<wbr>data</span>
+        <span id="state_notify_no_data_python">
+<a href="#state_notify_no_data_python" style="color: inherit; text-decoration: inherit;">notify_<wbr>no_<wbr>data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2121,7 +2431,9 @@ to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>query</span>
+        <span id="state_query_python">
+<a href="#state_query_python" style="color: inherit; text-decoration: inherit;">query</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2129,7 +2441,9 @@ to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>renotify_<wbr>interval</span>
+        <span id="state_renotify_interval_python">
+<a href="#state_renotify_interval_python" style="color: inherit; text-decoration: inherit;">renotify_<wbr>interval</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -2139,7 +2453,9 @@ on the current status. It will only re-notify if it's not resolved.
 
     <dt class="property-optional"
             title="Optional">
-        <span>require_<wbr>full_<wbr>window</span>
+        <span id="state_require_full_window_python">
+<a href="#state_require_full_window_python" style="color: inherit; text-decoration: inherit;">require_<wbr>full_<wbr>window</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2150,7 +2466,9 @@ Default: True for "on average", "at all times" and "in total" aggregation. False
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>silenced</span>
+        <span id="state_silenced_python">
+<a href="#state_silenced_python" style="color: inherit; text-decoration: inherit;">silenced</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -2158,7 +2476,9 @@ Default: True for "on average", "at all times" and "in total" aggregation. False
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="state_tags_python">
+<a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -2167,7 +2487,9 @@ Default: True for "on average", "at all times" and "in total" aggregation. False
 
     <dt class="property-optional"
             title="Optional">
-        <span>threshold_<wbr>windows</span>
+        <span id="state_threshold_windows_python">
+<a href="#state_threshold_windows_python" style="color: inherit; text-decoration: inherit;">threshold_<wbr>windows</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#monitorthresholdwindows">Dict[Monitor<wbr>Threshold<wbr>Windows]</a></span>
     </dt>
@@ -2176,7 +2498,9 @@ Default: True for "on average", "at all times" and "in total" aggregation. False
 
     <dt class="property-optional"
             title="Optional">
-        <span>thresholds</span>
+        <span id="state_thresholds_python">
+<a href="#state_thresholds_python" style="color: inherit; text-decoration: inherit;">thresholds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#monitorthresholds">Dict[Monitor<wbr>Thresholds]</a></span>
     </dt>
@@ -2209,7 +2533,9 @@ unknown  = 1
 
     <dt class="property-optional"
             title="Optional">
-        <span>timeout_<wbr>h</span>
+        <span id="state_timeout_h_python">
+<a href="#state_timeout_h_python" style="color: inherit; text-decoration: inherit;">timeout_<wbr>h</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -2219,7 +2545,9 @@ from a triggered state. Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>type</span>
+        <span id="state_type_python">
+<a href="#state_type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2267,7 +2595,9 @@ from a triggered state. Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Recovery<wbr>Window</span>
+        <span id="recoverywindow_csharp">
+<a href="#recoverywindow_csharp" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Window</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2276,7 +2606,9 @@ from a triggered state. Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Trigger<wbr>Window</span>
+        <span id="triggerwindow_csharp">
+<a href="#triggerwindow_csharp" style="color: inherit; text-decoration: inherit;">Trigger<wbr>Window</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2292,7 +2624,9 @@ from a triggered state. Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Recovery<wbr>Window</span>
+        <span id="recoverywindow_go">
+<a href="#recoverywindow_go" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Window</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2301,7 +2635,9 @@ from a triggered state. Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Trigger<wbr>Window</span>
+        <span id="triggerwindow_go">
+<a href="#triggerwindow_go" style="color: inherit; text-decoration: inherit;">Trigger<wbr>Window</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2317,7 +2653,9 @@ from a triggered state. Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>recovery<wbr>Window</span>
+        <span id="recoverywindow_nodejs">
+<a href="#recoverywindow_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Window</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2326,7 +2664,9 @@ from a triggered state. Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>trigger<wbr>Window</span>
+        <span id="triggerwindow_nodejs">
+<a href="#triggerwindow_nodejs" style="color: inherit; text-decoration: inherit;">trigger<wbr>Window</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2342,7 +2682,9 @@ from a triggered state. Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>recovery_<wbr>window</span>
+        <span id="recovery_window_python">
+<a href="#recovery_window_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>window</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2351,7 +2693,9 @@ from a triggered state. Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>trigger_<wbr>window</span>
+        <span id="trigger_window_python">
+<a href="#trigger_window_python" style="color: inherit; text-decoration: inherit;">trigger_<wbr>window</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2385,7 +2729,9 @@ from a triggered state. Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Critical</span>
+        <span id="critical_csharp">
+<a href="#critical_csharp" style="color: inherit; text-decoration: inherit;">Critical</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
@@ -2393,7 +2739,9 @@ from a triggered state. Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Critical<wbr>Recovery</span>
+        <span id="criticalrecovery_csharp">
+<a href="#criticalrecovery_csharp" style="color: inherit; text-decoration: inherit;">Critical<wbr>Recovery</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
@@ -2401,7 +2749,9 @@ from a triggered state. Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ok</span>
+        <span id="ok_csharp">
+<a href="#ok_csharp" style="color: inherit; text-decoration: inherit;">Ok</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
@@ -2409,7 +2759,9 @@ from a triggered state. Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Unknown</span>
+        <span id="unknown_csharp">
+<a href="#unknown_csharp" style="color: inherit; text-decoration: inherit;">Unknown</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
@@ -2417,7 +2769,9 @@ from a triggered state. Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Warning</span>
+        <span id="warning_csharp">
+<a href="#warning_csharp" style="color: inherit; text-decoration: inherit;">Warning</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
@@ -2425,7 +2779,9 @@ from a triggered state. Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Warning<wbr>Recovery</span>
+        <span id="warningrecovery_csharp">
+<a href="#warningrecovery_csharp" style="color: inherit; text-decoration: inherit;">Warning<wbr>Recovery</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
@@ -2440,7 +2796,9 @@ from a triggered state. Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Critical</span>
+        <span id="critical_go">
+<a href="#critical_go" style="color: inherit; text-decoration: inherit;">Critical</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
@@ -2448,7 +2806,9 @@ from a triggered state. Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Critical<wbr>Recovery</span>
+        <span id="criticalrecovery_go">
+<a href="#criticalrecovery_go" style="color: inherit; text-decoration: inherit;">Critical<wbr>Recovery</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
@@ -2456,7 +2816,9 @@ from a triggered state. Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ok</span>
+        <span id="ok_go">
+<a href="#ok_go" style="color: inherit; text-decoration: inherit;">Ok</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
@@ -2464,7 +2826,9 @@ from a triggered state. Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Unknown</span>
+        <span id="unknown_go">
+<a href="#unknown_go" style="color: inherit; text-decoration: inherit;">Unknown</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
@@ -2472,7 +2836,9 @@ from a triggered state. Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Warning</span>
+        <span id="warning_go">
+<a href="#warning_go" style="color: inherit; text-decoration: inherit;">Warning</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
@@ -2480,7 +2846,9 @@ from a triggered state. Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Warning<wbr>Recovery</span>
+        <span id="warningrecovery_go">
+<a href="#warningrecovery_go" style="color: inherit; text-decoration: inherit;">Warning<wbr>Recovery</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
@@ -2495,7 +2863,9 @@ from a triggered state. Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>critical</span>
+        <span id="critical_nodejs">
+<a href="#critical_nodejs" style="color: inherit; text-decoration: inherit;">critical</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
@@ -2503,7 +2873,9 @@ from a triggered state. Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>critical<wbr>Recovery</span>
+        <span id="criticalrecovery_nodejs">
+<a href="#criticalrecovery_nodejs" style="color: inherit; text-decoration: inherit;">critical<wbr>Recovery</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
@@ -2511,7 +2883,9 @@ from a triggered state. Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ok</span>
+        <span id="ok_nodejs">
+<a href="#ok_nodejs" style="color: inherit; text-decoration: inherit;">ok</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
@@ -2519,7 +2893,9 @@ from a triggered state. Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>unknown</span>
+        <span id="unknown_nodejs">
+<a href="#unknown_nodejs" style="color: inherit; text-decoration: inherit;">unknown</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
@@ -2527,7 +2903,9 @@ from a triggered state. Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>warning</span>
+        <span id="warning_nodejs">
+<a href="#warning_nodejs" style="color: inherit; text-decoration: inherit;">warning</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
@@ -2535,7 +2913,9 @@ from a triggered state. Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>warning<wbr>Recovery</span>
+        <span id="warningrecovery_nodejs">
+<a href="#warningrecovery_nodejs" style="color: inherit; text-decoration: inherit;">warning<wbr>Recovery</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
@@ -2550,7 +2930,9 @@ from a triggered state. Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>critical</span>
+        <span id="critical_python">
+<a href="#critical_python" style="color: inherit; text-decoration: inherit;">critical</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -2558,7 +2940,9 @@ from a triggered state. Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>critical_<wbr>recovery</span>
+        <span id="critical_recovery_python">
+<a href="#critical_recovery_python" style="color: inherit; text-decoration: inherit;">critical_<wbr>recovery</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -2566,7 +2950,9 @@ from a triggered state. Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ok</span>
+        <span id="ok_python">
+<a href="#ok_python" style="color: inherit; text-decoration: inherit;">ok</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -2574,7 +2960,9 @@ from a triggered state. Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>unknown</span>
+        <span id="unknown_python">
+<a href="#unknown_python" style="color: inherit; text-decoration: inherit;">unknown</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -2582,7 +2970,9 @@ from a triggered state. Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>warning</span>
+        <span id="warning_python">
+<a href="#warning_python" style="color: inherit; text-decoration: inherit;">warning</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -2590,7 +2980,9 @@ from a triggered state. Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>warning_<wbr>recovery</span>
+        <span id="warning_recovery_python">
+<a href="#warning_recovery_python" style="color: inherit; text-decoration: inherit;">warning_<wbr>recovery</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>

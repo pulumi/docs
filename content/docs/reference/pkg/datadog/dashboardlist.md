@@ -196,7 +196,9 @@ The DashboardList resource accepts the following [input]({{< relref "/docs/intro
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -205,7 +207,9 @@ The DashboardList resource accepts the following [input]({{< relref "/docs/intro
 
     <dt class="property-optional"
             title="Optional">
-        <span>Dash<wbr>Items</span>
+        <span id="dashitems_csharp">
+<a href="#dashitems_csharp" style="color: inherit; text-decoration: inherit;">Dash<wbr>Items</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dashboardlistdashitem">List&lt;Dashboard<wbr>List<wbr>Dash<wbr>Item<wbr>Args&gt;</a></span>
     </dt>
@@ -221,7 +225,9 @@ The DashboardList resource accepts the following [input]({{< relref "/docs/intro
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -230,7 +236,9 @@ The DashboardList resource accepts the following [input]({{< relref "/docs/intro
 
     <dt class="property-optional"
             title="Optional">
-        <span>Dash<wbr>Items</span>
+        <span id="dashitems_go">
+<a href="#dashitems_go" style="color: inherit; text-decoration: inherit;">Dash<wbr>Items</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dashboardlistdashitem">[]Dashboard<wbr>List<wbr>Dash<wbr>Item</a></span>
     </dt>
@@ -246,7 +254,9 @@ The DashboardList resource accepts the following [input]({{< relref "/docs/intro
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -255,7 +265,9 @@ The DashboardList resource accepts the following [input]({{< relref "/docs/intro
 
     <dt class="property-optional"
             title="Optional">
-        <span>dash<wbr>Items</span>
+        <span id="dashitems_nodejs">
+<a href="#dashitems_nodejs" style="color: inherit; text-decoration: inherit;">dash<wbr>Items</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dashboardlistdashitem">Dashboard<wbr>List<wbr>Dash<wbr>Item[]</a></span>
     </dt>
@@ -271,7 +283,9 @@ The DashboardList resource accepts the following [input]({{< relref "/docs/intro
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -280,7 +294,9 @@ The DashboardList resource accepts the following [input]({{< relref "/docs/intro
 
     <dt class="property-optional"
             title="Optional">
-        <span>dash_<wbr>items</span>
+        <span id="dash_items_python">
+<a href="#dash_items_python" style="color: inherit; text-decoration: inherit;">dash_<wbr>items</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dashboardlistdashitem">List[Dashboard<wbr>List<wbr>Dash<wbr>Item]</a></span>
     </dt>
@@ -307,7 +323,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -322,7 +340,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -337,7 +357,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -352,7 +374,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -493,7 +517,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Dash<wbr>Items</span>
+        <span id="state_dashitems_csharp">
+<a href="#state_dashitems_csharp" style="color: inherit; text-decoration: inherit;">Dash<wbr>Items</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dashboardlistdashitem">List&lt;Dashboard<wbr>List<wbr>Dash<wbr>Item<wbr>Args&gt;</a></span>
     </dt>
@@ -502,7 +528,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -518,7 +546,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Dash<wbr>Items</span>
+        <span id="state_dashitems_go">
+<a href="#state_dashitems_go" style="color: inherit; text-decoration: inherit;">Dash<wbr>Items</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dashboardlistdashitem">[]Dashboard<wbr>List<wbr>Dash<wbr>Item</a></span>
     </dt>
@@ -527,7 +557,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -543,7 +575,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>dash<wbr>Items</span>
+        <span id="state_dashitems_nodejs">
+<a href="#state_dashitems_nodejs" style="color: inherit; text-decoration: inherit;">dash<wbr>Items</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dashboardlistdashitem">Dashboard<wbr>List<wbr>Dash<wbr>Item[]</a></span>
     </dt>
@@ -552,7 +586,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -568,7 +604,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>dash_<wbr>items</span>
+        <span id="state_dash_items_python">
+<a href="#state_dash_items_python" style="color: inherit; text-decoration: inherit;">dash_<wbr>items</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dashboardlistdashitem">List[Dashboard<wbr>List<wbr>Dash<wbr>Item]</a></span>
     </dt>
@@ -577,7 +615,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -619,7 +659,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Dash<wbr>Id</span>
+        <span id="dashid_csharp">
+<a href="#dashid_csharp" style="color: inherit; text-decoration: inherit;">Dash<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -628,7 +670,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Type</span>
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -644,7 +688,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Dash<wbr>Id</span>
+        <span id="dashid_go">
+<a href="#dashid_go" style="color: inherit; text-decoration: inherit;">Dash<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -653,7 +699,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Type</span>
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -669,7 +717,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>dash<wbr>Id</span>
+        <span id="dashid_nodejs">
+<a href="#dashid_nodejs" style="color: inherit; text-decoration: inherit;">dash<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -678,7 +728,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>type</span>
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -694,7 +746,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>dash<wbr>Id</span>
+        <span id="dashid_python">
+<a href="#dashid_python" style="color: inherit; text-decoration: inherit;">dash<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -703,7 +757,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>type</span>
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
