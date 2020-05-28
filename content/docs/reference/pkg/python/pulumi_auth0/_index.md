@@ -754,8 +754,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
         <span class="s2">&quot;apiEnableUsers&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
         <span class="s2">&quot;appDomain&quot;</span><span class="p">:</span> <span class="s2">&quot;my-auth0-app.eu.auth0.com&quot;</span><span class="p">,</span>
         <span class="s2">&quot;basicProfile&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
-        <span class="s2">&quot;clientId&quot;</span><span class="p">:</span> <span class="s2">&quot;1234&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;clientSecret&quot;</span><span class="p">:</span> <span class="s2">&quot;1234&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;client_id&quot;</span><span class="p">:</span> <span class="s2">&quot;1234&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;client_secret&quot;</span><span class="p">:</span> <span class="s2">&quot;1234&quot;</span><span class="p">,</span>
         <span class="s2">&quot;domainAliases&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;example.io&quot;</span><span class="p">],</span>
         <span class="s2">&quot;extGroups&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
         <span class="s2">&quot;extProfile&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
