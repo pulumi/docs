@@ -19,7 +19,27 @@ meta_desc: "Explore the Provision resource of the sys module, including examples
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using F5BigIP = Pulumi.F5BigIP;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var test_provision = new F5BigIP.Sys.Provision("test-provision", new F5BigIP.Sys.ProvisionArgs
+        {
+            CpuRatio = 0,
+            DiskRatio = 0,
+            FullPath = "asm",
+            Level = "none",
+            MemoryRatio = 0,
+            Name = "TEST_ASM_PROVISION_NAME",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -243,7 +263,9 @@ The Provision resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -252,7 +274,9 @@ The Provision resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cpu<wbr>Ratio</span>
+        <span id="cpuratio_csharp">
+<a href="#cpuratio_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Ratio</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -261,7 +285,9 @@ The Provision resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
-        <span>Disk<wbr>Ratio</span>
+        <span id="diskratio_csharp">
+<a href="#diskratio_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Ratio</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -270,7 +296,9 @@ The Provision resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
-        <span>Full<wbr>Path</span>
+        <span id="fullpath_csharp">
+<a href="#fullpath_csharp" style="color: inherit; text-decoration: inherit;">Full<wbr>Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -279,7 +307,9 @@ The Provision resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
-        <span>Level</span>
+        <span id="level_csharp">
+<a href="#level_csharp" style="color: inherit; text-decoration: inherit;">Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -288,7 +318,9 @@ The Provision resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
-        <span>Memory<wbr>Ratio</span>
+        <span id="memoryratio_csharp">
+<a href="#memoryratio_csharp" style="color: inherit; text-decoration: inherit;">Memory<wbr>Ratio</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -304,7 +336,9 @@ The Provision resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -313,7 +347,9 @@ The Provision resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cpu<wbr>Ratio</span>
+        <span id="cpuratio_go">
+<a href="#cpuratio_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Ratio</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -322,7 +358,9 @@ The Provision resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
-        <span>Disk<wbr>Ratio</span>
+        <span id="diskratio_go">
+<a href="#diskratio_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Ratio</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -331,7 +369,9 @@ The Provision resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
-        <span>Full<wbr>Path</span>
+        <span id="fullpath_go">
+<a href="#fullpath_go" style="color: inherit; text-decoration: inherit;">Full<wbr>Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -340,7 +380,9 @@ The Provision resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
-        <span>Level</span>
+        <span id="level_go">
+<a href="#level_go" style="color: inherit; text-decoration: inherit;">Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -349,7 +391,9 @@ The Provision resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
-        <span>Memory<wbr>Ratio</span>
+        <span id="memoryratio_go">
+<a href="#memoryratio_go" style="color: inherit; text-decoration: inherit;">Memory<wbr>Ratio</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -365,7 +409,9 @@ The Provision resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -374,7 +420,9 @@ The Provision resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
-        <span>cpu<wbr>Ratio</span>
+        <span id="cpuratio_nodejs">
+<a href="#cpuratio_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Ratio</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -383,7 +431,9 @@ The Provision resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
-        <span>disk<wbr>Ratio</span>
+        <span id="diskratio_nodejs">
+<a href="#diskratio_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Ratio</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -392,7 +442,9 @@ The Provision resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
-        <span>full<wbr>Path</span>
+        <span id="fullpath_nodejs">
+<a href="#fullpath_nodejs" style="color: inherit; text-decoration: inherit;">full<wbr>Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -401,7 +453,9 @@ The Provision resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
-        <span>level</span>
+        <span id="level_nodejs">
+<a href="#level_nodejs" style="color: inherit; text-decoration: inherit;">level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -410,7 +464,9 @@ The Provision resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
-        <span>memory<wbr>Ratio</span>
+        <span id="memoryratio_nodejs">
+<a href="#memoryratio_nodejs" style="color: inherit; text-decoration: inherit;">memory<wbr>Ratio</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -426,7 +482,9 @@ The Provision resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -435,7 +493,9 @@ The Provision resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
-        <span>cpu_<wbr>ratio</span>
+        <span id="cpu_ratio_python">
+<a href="#cpu_ratio_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>ratio</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -444,7 +504,9 @@ The Provision resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
-        <span>disk_<wbr>ratio</span>
+        <span id="disk_ratio_python">
+<a href="#disk_ratio_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>ratio</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -453,7 +515,9 @@ The Provision resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
-        <span>full_<wbr>path</span>
+        <span id="full_path_python">
+<a href="#full_path_python" style="color: inherit; text-decoration: inherit;">full_<wbr>path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -462,7 +526,9 @@ The Provision resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
-        <span>level</span>
+        <span id="level_python">
+<a href="#level_python" style="color: inherit; text-decoration: inherit;">level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -471,7 +537,9 @@ The Provision resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
-        <span>memory_<wbr>ratio</span>
+        <span id="memory_ratio_python">
+<a href="#memory_ratio_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>ratio</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -498,7 +566,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -513,7 +583,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -528,7 +600,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -543,7 +617,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -684,7 +760,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cpu<wbr>Ratio</span>
+        <span id="state_cpuratio_csharp">
+<a href="#state_cpuratio_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Ratio</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -693,7 +771,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Disk<wbr>Ratio</span>
+        <span id="state_diskratio_csharp">
+<a href="#state_diskratio_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Ratio</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -702,7 +782,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Full<wbr>Path</span>
+        <span id="state_fullpath_csharp">
+<a href="#state_fullpath_csharp" style="color: inherit; text-decoration: inherit;">Full<wbr>Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -711,7 +793,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Level</span>
+        <span id="state_level_csharp">
+<a href="#state_level_csharp" style="color: inherit; text-decoration: inherit;">Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -720,7 +804,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Memory<wbr>Ratio</span>
+        <span id="state_memoryratio_csharp">
+<a href="#state_memoryratio_csharp" style="color: inherit; text-decoration: inherit;">Memory<wbr>Ratio</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -729,7 +815,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -745,7 +833,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cpu<wbr>Ratio</span>
+        <span id="state_cpuratio_go">
+<a href="#state_cpuratio_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Ratio</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -754,7 +844,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Disk<wbr>Ratio</span>
+        <span id="state_diskratio_go">
+<a href="#state_diskratio_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Ratio</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -763,7 +855,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Full<wbr>Path</span>
+        <span id="state_fullpath_go">
+<a href="#state_fullpath_go" style="color: inherit; text-decoration: inherit;">Full<wbr>Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -772,7 +866,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Level</span>
+        <span id="state_level_go">
+<a href="#state_level_go" style="color: inherit; text-decoration: inherit;">Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -781,7 +877,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Memory<wbr>Ratio</span>
+        <span id="state_memoryratio_go">
+<a href="#state_memoryratio_go" style="color: inherit; text-decoration: inherit;">Memory<wbr>Ratio</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -790,7 +888,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -806,7 +906,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>cpu<wbr>Ratio</span>
+        <span id="state_cpuratio_nodejs">
+<a href="#state_cpuratio_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Ratio</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -815,7 +917,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>disk<wbr>Ratio</span>
+        <span id="state_diskratio_nodejs">
+<a href="#state_diskratio_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Ratio</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -824,7 +928,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>full<wbr>Path</span>
+        <span id="state_fullpath_nodejs">
+<a href="#state_fullpath_nodejs" style="color: inherit; text-decoration: inherit;">full<wbr>Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -833,7 +939,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>level</span>
+        <span id="state_level_nodejs">
+<a href="#state_level_nodejs" style="color: inherit; text-decoration: inherit;">level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -842,7 +950,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>memory<wbr>Ratio</span>
+        <span id="state_memoryratio_nodejs">
+<a href="#state_memoryratio_nodejs" style="color: inherit; text-decoration: inherit;">memory<wbr>Ratio</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -851,7 +961,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -867,7 +979,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>cpu_<wbr>ratio</span>
+        <span id="state_cpu_ratio_python">
+<a href="#state_cpu_ratio_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>ratio</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -876,7 +990,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>disk_<wbr>ratio</span>
+        <span id="state_disk_ratio_python">
+<a href="#state_disk_ratio_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>ratio</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -885,7 +1001,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>full_<wbr>path</span>
+        <span id="state_full_path_python">
+<a href="#state_full_path_python" style="color: inherit; text-decoration: inherit;">full_<wbr>path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -894,7 +1012,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>level</span>
+        <span id="state_level_python">
+<a href="#state_level_python" style="color: inherit; text-decoration: inherit;">level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -903,7 +1023,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>memory_<wbr>ratio</span>
+        <span id="state_memory_ratio_python">
+<a href="#state_memory_ratio_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>ratio</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -912,7 +1034,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

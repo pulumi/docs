@@ -21,7 +21,25 @@ This resource is helpful when configuring the BIG-IP device in cluster or in HA 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using F5BigIP = Pulumi.F5BigIP;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var myNewDevice = new F5BigIP.CM.Device("myNewDevice", new F5BigIP.CM.DeviceArgs
+        {
+            ConfigsyncIp = "2.2.2.2",
+            MirrorIp = "10.10.10.10",
+            MirrorSecondaryIp = "11.11.11.11",
+            Name = "bigip300.f5.com",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -241,7 +259,9 @@ The Device resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-required"
             title="Required">
-        <span>Configsync<wbr>Ip</span>
+        <span id="configsyncip_csharp">
+<a href="#configsyncip_csharp" style="color: inherit; text-decoration: inherit;">Configsync<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -250,7 +270,9 @@ The Device resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -259,7 +281,9 @@ The Device resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
-        <span>Mirror<wbr>Ip</span>
+        <span id="mirrorip_csharp">
+<a href="#mirrorip_csharp" style="color: inherit; text-decoration: inherit;">Mirror<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -268,7 +292,9 @@ The Device resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
-        <span>Mirror<wbr>Secondary<wbr>Ip</span>
+        <span id="mirrorsecondaryip_csharp">
+<a href="#mirrorsecondaryip_csharp" style="color: inherit; text-decoration: inherit;">Mirror<wbr>Secondary<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -284,7 +310,9 @@ The Device resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-required"
             title="Required">
-        <span>Configsync<wbr>Ip</span>
+        <span id="configsyncip_go">
+<a href="#configsyncip_go" style="color: inherit; text-decoration: inherit;">Configsync<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -293,7 +321,9 @@ The Device resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -302,7 +332,9 @@ The Device resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
-        <span>Mirror<wbr>Ip</span>
+        <span id="mirrorip_go">
+<a href="#mirrorip_go" style="color: inherit; text-decoration: inherit;">Mirror<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -311,7 +343,9 @@ The Device resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
-        <span>Mirror<wbr>Secondary<wbr>Ip</span>
+        <span id="mirrorsecondaryip_go">
+<a href="#mirrorsecondaryip_go" style="color: inherit; text-decoration: inherit;">Mirror<wbr>Secondary<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -327,7 +361,9 @@ The Device resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-required"
             title="Required">
-        <span>configsync<wbr>Ip</span>
+        <span id="configsyncip_nodejs">
+<a href="#configsyncip_nodejs" style="color: inherit; text-decoration: inherit;">configsync<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -336,7 +372,9 @@ The Device resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -345,7 +383,9 @@ The Device resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
-        <span>mirror<wbr>Ip</span>
+        <span id="mirrorip_nodejs">
+<a href="#mirrorip_nodejs" style="color: inherit; text-decoration: inherit;">mirror<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -354,7 +394,9 @@ The Device resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
-        <span>mirror<wbr>Secondary<wbr>Ip</span>
+        <span id="mirrorsecondaryip_nodejs">
+<a href="#mirrorsecondaryip_nodejs" style="color: inherit; text-decoration: inherit;">mirror<wbr>Secondary<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -370,7 +412,9 @@ The Device resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-required"
             title="Required">
-        <span>configsync_<wbr>ip</span>
+        <span id="configsync_ip_python">
+<a href="#configsync_ip_python" style="color: inherit; text-decoration: inherit;">configsync_<wbr>ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -379,7 +423,9 @@ The Device resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -388,7 +434,9 @@ The Device resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
-        <span>mirror_<wbr>ip</span>
+        <span id="mirror_ip_python">
+<a href="#mirror_ip_python" style="color: inherit; text-decoration: inherit;">mirror_<wbr>ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -397,7 +445,9 @@ The Device resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
-        <span>mirror_<wbr>secondary_<wbr>ip</span>
+        <span id="mirror_secondary_ip_python">
+<a href="#mirror_secondary_ip_python" style="color: inherit; text-decoration: inherit;">mirror_<wbr>secondary_<wbr>ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -424,7 +474,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -439,7 +491,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -454,7 +508,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -469,7 +525,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -610,7 +668,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Configsync<wbr>Ip</span>
+        <span id="state_configsyncip_csharp">
+<a href="#state_configsyncip_csharp" style="color: inherit; text-decoration: inherit;">Configsync<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -619,7 +679,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Mirror<wbr>Ip</span>
+        <span id="state_mirrorip_csharp">
+<a href="#state_mirrorip_csharp" style="color: inherit; text-decoration: inherit;">Mirror<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -628,7 +690,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Mirror<wbr>Secondary<wbr>Ip</span>
+        <span id="state_mirrorsecondaryip_csharp">
+<a href="#state_mirrorsecondaryip_csharp" style="color: inherit; text-decoration: inherit;">Mirror<wbr>Secondary<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -637,7 +701,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -653,7 +719,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Configsync<wbr>Ip</span>
+        <span id="state_configsyncip_go">
+<a href="#state_configsyncip_go" style="color: inherit; text-decoration: inherit;">Configsync<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -662,7 +730,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Mirror<wbr>Ip</span>
+        <span id="state_mirrorip_go">
+<a href="#state_mirrorip_go" style="color: inherit; text-decoration: inherit;">Mirror<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -671,7 +741,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Mirror<wbr>Secondary<wbr>Ip</span>
+        <span id="state_mirrorsecondaryip_go">
+<a href="#state_mirrorsecondaryip_go" style="color: inherit; text-decoration: inherit;">Mirror<wbr>Secondary<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -680,7 +752,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -696,7 +770,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>configsync<wbr>Ip</span>
+        <span id="state_configsyncip_nodejs">
+<a href="#state_configsyncip_nodejs" style="color: inherit; text-decoration: inherit;">configsync<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -705,7 +781,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>mirror<wbr>Ip</span>
+        <span id="state_mirrorip_nodejs">
+<a href="#state_mirrorip_nodejs" style="color: inherit; text-decoration: inherit;">mirror<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -714,7 +792,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>mirror<wbr>Secondary<wbr>Ip</span>
+        <span id="state_mirrorsecondaryip_nodejs">
+<a href="#state_mirrorsecondaryip_nodejs" style="color: inherit; text-decoration: inherit;">mirror<wbr>Secondary<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -723,7 +803,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -739,7 +821,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>configsync_<wbr>ip</span>
+        <span id="state_configsync_ip_python">
+<a href="#state_configsync_ip_python" style="color: inherit; text-decoration: inherit;">configsync_<wbr>ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -748,7 +832,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>mirror_<wbr>ip</span>
+        <span id="state_mirror_ip_python">
+<a href="#state_mirror_ip_python" style="color: inherit; text-decoration: inherit;">mirror_<wbr>ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -757,7 +843,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>mirror_<wbr>secondary_<wbr>ip</span>
+        <span id="state_mirror_secondary_ip_python">
+<a href="#state_mirror_secondary_ip_python" style="color: inherit; text-decoration: inherit;">mirror_<wbr>secondary_<wbr>ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -766,7 +854,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

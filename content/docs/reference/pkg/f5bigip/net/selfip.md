@@ -23,7 +23,25 @@ Resource should be named with their "full path". The full path is the combinatio
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using F5BigIP = Pulumi.F5BigIP;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var selfip1 = new F5BigIP.Net.SelfIp("selfip1", new F5BigIP.Net.SelfIpArgs
+        {
+            Name = "/Common/internalselfIP",
+            Ip = "11.1.1.1/24",
+            Vlan = "/Common/internal",
+            TrafficGroup = "traffic-group-1",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -243,7 +261,9 @@ The SelfIp resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-required"
             title="Required">
-        <span>Ip</span>
+        <span id="ip_csharp">
+<a href="#ip_csharp" style="color: inherit; text-decoration: inherit;">Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -252,7 +272,9 @@ The SelfIp resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -261,7 +283,9 @@ The SelfIp resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-required"
             title="Required">
-        <span>Vlan</span>
+        <span id="vlan_csharp">
+<a href="#vlan_csharp" style="color: inherit; text-decoration: inherit;">Vlan</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -270,7 +294,9 @@ The SelfIp resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
-        <span>Traffic<wbr>Group</span>
+        <span id="trafficgroup_csharp">
+<a href="#trafficgroup_csharp" style="color: inherit; text-decoration: inherit;">Traffic<wbr>Group</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -286,7 +312,9 @@ The SelfIp resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-required"
             title="Required">
-        <span>Ip</span>
+        <span id="ip_go">
+<a href="#ip_go" style="color: inherit; text-decoration: inherit;">Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -295,7 +323,9 @@ The SelfIp resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -304,7 +334,9 @@ The SelfIp resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-required"
             title="Required">
-        <span>Vlan</span>
+        <span id="vlan_go">
+<a href="#vlan_go" style="color: inherit; text-decoration: inherit;">Vlan</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -313,7 +345,9 @@ The SelfIp resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
-        <span>Traffic<wbr>Group</span>
+        <span id="trafficgroup_go">
+<a href="#trafficgroup_go" style="color: inherit; text-decoration: inherit;">Traffic<wbr>Group</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -329,7 +363,9 @@ The SelfIp resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-required"
             title="Required">
-        <span>ip</span>
+        <span id="ip_nodejs">
+<a href="#ip_nodejs" style="color: inherit; text-decoration: inherit;">ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -338,7 +374,9 @@ The SelfIp resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -347,7 +385,9 @@ The SelfIp resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-required"
             title="Required">
-        <span>vlan</span>
+        <span id="vlan_nodejs">
+<a href="#vlan_nodejs" style="color: inherit; text-decoration: inherit;">vlan</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -356,7 +396,9 @@ The SelfIp resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
-        <span>traffic<wbr>Group</span>
+        <span id="trafficgroup_nodejs">
+<a href="#trafficgroup_nodejs" style="color: inherit; text-decoration: inherit;">traffic<wbr>Group</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -372,7 +414,9 @@ The SelfIp resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-required"
             title="Required">
-        <span>ip</span>
+        <span id="ip_python">
+<a href="#ip_python" style="color: inherit; text-decoration: inherit;">ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -381,7 +425,9 @@ The SelfIp resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -390,7 +436,9 @@ The SelfIp resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-required"
             title="Required">
-        <span>vlan</span>
+        <span id="vlan_python">
+<a href="#vlan_python" style="color: inherit; text-decoration: inherit;">vlan</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -399,7 +447,9 @@ The SelfIp resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
-        <span>traffic_<wbr>group</span>
+        <span id="traffic_group_python">
+<a href="#traffic_group_python" style="color: inherit; text-decoration: inherit;">traffic_<wbr>group</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -426,7 +476,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -441,7 +493,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -456,7 +510,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -471,7 +527,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -612,7 +670,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ip</span>
+        <span id="state_ip_csharp">
+<a href="#state_ip_csharp" style="color: inherit; text-decoration: inherit;">Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -621,7 +681,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -630,7 +692,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Traffic<wbr>Group</span>
+        <span id="state_trafficgroup_csharp">
+<a href="#state_trafficgroup_csharp" style="color: inherit; text-decoration: inherit;">Traffic<wbr>Group</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -639,7 +703,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vlan</span>
+        <span id="state_vlan_csharp">
+<a href="#state_vlan_csharp" style="color: inherit; text-decoration: inherit;">Vlan</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -655,7 +721,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ip</span>
+        <span id="state_ip_go">
+<a href="#state_ip_go" style="color: inherit; text-decoration: inherit;">Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -664,7 +732,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -673,7 +743,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Traffic<wbr>Group</span>
+        <span id="state_trafficgroup_go">
+<a href="#state_trafficgroup_go" style="color: inherit; text-decoration: inherit;">Traffic<wbr>Group</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -682,7 +754,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vlan</span>
+        <span id="state_vlan_go">
+<a href="#state_vlan_go" style="color: inherit; text-decoration: inherit;">Vlan</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -698,7 +772,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>ip</span>
+        <span id="state_ip_nodejs">
+<a href="#state_ip_nodejs" style="color: inherit; text-decoration: inherit;">ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -707,7 +783,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -716,7 +794,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>traffic<wbr>Group</span>
+        <span id="state_trafficgroup_nodejs">
+<a href="#state_trafficgroup_nodejs" style="color: inherit; text-decoration: inherit;">traffic<wbr>Group</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -725,7 +805,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>vlan</span>
+        <span id="state_vlan_nodejs">
+<a href="#state_vlan_nodejs" style="color: inherit; text-decoration: inherit;">vlan</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -741,7 +823,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>ip</span>
+        <span id="state_ip_python">
+<a href="#state_ip_python" style="color: inherit; text-decoration: inherit;">ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -750,7 +834,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -759,7 +845,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>traffic_<wbr>group</span>
+        <span id="state_traffic_group_python">
+<a href="#state_traffic_group_python" style="color: inherit; text-decoration: inherit;">traffic_<wbr>group</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -768,7 +856,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>vlan</span>
+        <span id="state_vlan_python">
+<a href="#state_vlan_python" style="color: inherit; text-decoration: inherit;">vlan</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

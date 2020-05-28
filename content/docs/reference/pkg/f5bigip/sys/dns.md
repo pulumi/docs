@@ -23,7 +23,31 @@ meta_desc: "Explore the Dns resource of the sys module, including examples, inpu
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using F5BigIP = Pulumi.F5BigIP;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var dns1 = new F5BigIP.Sys.Dns("dns1", new F5BigIP.Sys.DnsArgs
+        {
+            Description = "/Common/DNS1",
+            NameServers = 
+            {
+                "1.1.1.1",
+            },
+            NumberOfDots = 2,
+            Searches = 
+            {
+                "f5.com",
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -243,7 +267,9 @@ The Dns resource accepts the following [input]({{< relref "/docs/intro/concepts/
 
     <dt class="property-required"
             title="Required">
-        <span>Description</span>
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -252,7 +278,9 @@ The Dns resource accepts the following [input]({{< relref "/docs/intro/concepts/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name<wbr>Servers</span>
+        <span id="nameservers_csharp">
+<a href="#nameservers_csharp" style="color: inherit; text-decoration: inherit;">Name<wbr>Servers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -261,7 +289,9 @@ The Dns resource accepts the following [input]({{< relref "/docs/intro/concepts/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Number<wbr>Of<wbr>Dots</span>
+        <span id="numberofdots_csharp">
+<a href="#numberofdots_csharp" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Dots</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -270,7 +300,9 @@ The Dns resource accepts the following [input]({{< relref "/docs/intro/concepts/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Searches</span>
+        <span id="searches_csharp">
+<a href="#searches_csharp" style="color: inherit; text-decoration: inherit;">Searches</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -286,7 +318,9 @@ The Dns resource accepts the following [input]({{< relref "/docs/intro/concepts/
 
     <dt class="property-required"
             title="Required">
-        <span>Description</span>
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -295,7 +329,9 @@ The Dns resource accepts the following [input]({{< relref "/docs/intro/concepts/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name<wbr>Servers</span>
+        <span id="nameservers_go">
+<a href="#nameservers_go" style="color: inherit; text-decoration: inherit;">Name<wbr>Servers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -304,7 +340,9 @@ The Dns resource accepts the following [input]({{< relref "/docs/intro/concepts/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Number<wbr>Of<wbr>Dots</span>
+        <span id="numberofdots_go">
+<a href="#numberofdots_go" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Dots</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -313,7 +351,9 @@ The Dns resource accepts the following [input]({{< relref "/docs/intro/concepts/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Searches</span>
+        <span id="searches_go">
+<a href="#searches_go" style="color: inherit; text-decoration: inherit;">Searches</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -329,7 +369,9 @@ The Dns resource accepts the following [input]({{< relref "/docs/intro/concepts/
 
     <dt class="property-required"
             title="Required">
-        <span>description</span>
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -338,7 +380,9 @@ The Dns resource accepts the following [input]({{< relref "/docs/intro/concepts/
 
     <dt class="property-optional"
             title="Optional">
-        <span>name<wbr>Servers</span>
+        <span id="nameservers_nodejs">
+<a href="#nameservers_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Servers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -347,7 +391,9 @@ The Dns resource accepts the following [input]({{< relref "/docs/intro/concepts/
 
     <dt class="property-optional"
             title="Optional">
-        <span>number<wbr>Of<wbr>Dots</span>
+        <span id="numberofdots_nodejs">
+<a href="#numberofdots_nodejs" style="color: inherit; text-decoration: inherit;">number<wbr>Of<wbr>Dots</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -356,7 +402,9 @@ The Dns resource accepts the following [input]({{< relref "/docs/intro/concepts/
 
     <dt class="property-optional"
             title="Optional">
-        <span>searches</span>
+        <span id="searches_nodejs">
+<a href="#searches_nodejs" style="color: inherit; text-decoration: inherit;">searches</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -372,7 +420,9 @@ The Dns resource accepts the following [input]({{< relref "/docs/intro/concepts/
 
     <dt class="property-required"
             title="Required">
-        <span>description</span>
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -381,7 +431,9 @@ The Dns resource accepts the following [input]({{< relref "/docs/intro/concepts/
 
     <dt class="property-optional"
             title="Optional">
-        <span>name_<wbr>servers</span>
+        <span id="name_servers_python">
+<a href="#name_servers_python" style="color: inherit; text-decoration: inherit;">name_<wbr>servers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -390,7 +442,9 @@ The Dns resource accepts the following [input]({{< relref "/docs/intro/concepts/
 
     <dt class="property-optional"
             title="Optional">
-        <span>number_<wbr>of_<wbr>dots</span>
+        <span id="number_of_dots_python">
+<a href="#number_of_dots_python" style="color: inherit; text-decoration: inherit;">number_<wbr>of_<wbr>dots</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -399,7 +453,9 @@ The Dns resource accepts the following [input]({{< relref "/docs/intro/concepts/
 
     <dt class="property-optional"
             title="Optional">
-        <span>searches</span>
+        <span id="searches_python">
+<a href="#searches_python" style="color: inherit; text-decoration: inherit;">searches</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -426,7 +482,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -441,7 +499,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -456,7 +516,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -471,7 +533,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -612,7 +676,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="state_description_csharp">
+<a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -621,7 +687,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name<wbr>Servers</span>
+        <span id="state_nameservers_csharp">
+<a href="#state_nameservers_csharp" style="color: inherit; text-decoration: inherit;">Name<wbr>Servers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -630,7 +698,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Number<wbr>Of<wbr>Dots</span>
+        <span id="state_numberofdots_csharp">
+<a href="#state_numberofdots_csharp" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Dots</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -639,7 +709,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Searches</span>
+        <span id="state_searches_csharp">
+<a href="#state_searches_csharp" style="color: inherit; text-decoration: inherit;">Searches</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -655,7 +727,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="state_description_go">
+<a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -664,7 +738,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name<wbr>Servers</span>
+        <span id="state_nameservers_go">
+<a href="#state_nameservers_go" style="color: inherit; text-decoration: inherit;">Name<wbr>Servers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -673,7 +749,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Number<wbr>Of<wbr>Dots</span>
+        <span id="state_numberofdots_go">
+<a href="#state_numberofdots_go" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Dots</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -682,7 +760,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Searches</span>
+        <span id="state_searches_go">
+<a href="#state_searches_go" style="color: inherit; text-decoration: inherit;">Searches</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -698,7 +778,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="state_description_nodejs">
+<a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -707,7 +789,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name<wbr>Servers</span>
+        <span id="state_nameservers_nodejs">
+<a href="#state_nameservers_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Servers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -716,7 +800,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>number<wbr>Of<wbr>Dots</span>
+        <span id="state_numberofdots_nodejs">
+<a href="#state_numberofdots_nodejs" style="color: inherit; text-decoration: inherit;">number<wbr>Of<wbr>Dots</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -725,7 +811,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>searches</span>
+        <span id="state_searches_nodejs">
+<a href="#state_searches_nodejs" style="color: inherit; text-decoration: inherit;">searches</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -741,7 +829,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="state_description_python">
+<a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -750,7 +840,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name_<wbr>servers</span>
+        <span id="state_name_servers_python">
+<a href="#state_name_servers_python" style="color: inherit; text-decoration: inherit;">name_<wbr>servers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -759,7 +851,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>number_<wbr>of_<wbr>dots</span>
+        <span id="state_number_of_dots_python">
+<a href="#state_number_of_dots_python" style="color: inherit; text-decoration: inherit;">number_<wbr>of_<wbr>dots</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -768,7 +862,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>searches</span>
+        <span id="state_searches_python">
+<a href="#state_searches_python" style="color: inherit; text-decoration: inherit;">searches</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>

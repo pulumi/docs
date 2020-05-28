@@ -23,7 +23,40 @@ For resources should be named with their "full path". The full path is the combi
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using F5BigIP = Pulumi.F5BigIP;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var sjhttpcompression = new F5BigIP.Ltm.ProfileHttpCompress("sjhttpcompression", new F5BigIP.Ltm.ProfileHttpCompressArgs
+        {
+            ContentTypeExcludes = 
+            {
+                "nicecontentexclude.com",
+            },
+            ContentTypeIncludes = 
+            {
+                "nicecontent.com",
+            },
+            DefaultsFrom = "/Common/httpcompression",
+            Name = "/Common/sjhttpcompression2",
+            UriExcludes = 
+            {
+                "www.abc.f5.com",
+                "www.abc2.f5.com",
+            },
+            UriIncludes = 
+            {
+                "www.xyzbc.cisco.com",
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -253,7 +286,9 @@ The ProfileHttpCompress resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -262,7 +297,9 @@ The ProfileHttpCompress resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>Content<wbr>Type<wbr>Excludes</span>
+        <span id="contenttypeexcludes_csharp">
+<a href="#contenttypeexcludes_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Type<wbr>Excludes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -271,7 +308,9 @@ The ProfileHttpCompress resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>Content<wbr>Type<wbr>Includes</span>
+        <span id="contenttypeincludes_csharp">
+<a href="#contenttypeincludes_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Type<wbr>Includes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -280,7 +319,9 @@ The ProfileHttpCompress resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>Defaults<wbr>From</span>
+        <span id="defaultsfrom_csharp">
+<a href="#defaultsfrom_csharp" style="color: inherit; text-decoration: inherit;">Defaults<wbr>From</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -289,7 +330,9 @@ The ProfileHttpCompress resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>Uri<wbr>Excludes</span>
+        <span id="uriexcludes_csharp">
+<a href="#uriexcludes_csharp" style="color: inherit; text-decoration: inherit;">Uri<wbr>Excludes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -298,7 +341,9 @@ The ProfileHttpCompress resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>Uri<wbr>Includes</span>
+        <span id="uriincludes_csharp">
+<a href="#uriincludes_csharp" style="color: inherit; text-decoration: inherit;">Uri<wbr>Includes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -314,7 +359,9 @@ The ProfileHttpCompress resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -323,7 +370,9 @@ The ProfileHttpCompress resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>Content<wbr>Type<wbr>Excludes</span>
+        <span id="contenttypeexcludes_go">
+<a href="#contenttypeexcludes_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Type<wbr>Excludes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -332,7 +381,9 @@ The ProfileHttpCompress resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>Content<wbr>Type<wbr>Includes</span>
+        <span id="contenttypeincludes_go">
+<a href="#contenttypeincludes_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Type<wbr>Includes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -341,7 +392,9 @@ The ProfileHttpCompress resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>Defaults<wbr>From</span>
+        <span id="defaultsfrom_go">
+<a href="#defaultsfrom_go" style="color: inherit; text-decoration: inherit;">Defaults<wbr>From</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -350,7 +403,9 @@ The ProfileHttpCompress resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>Uri<wbr>Excludes</span>
+        <span id="uriexcludes_go">
+<a href="#uriexcludes_go" style="color: inherit; text-decoration: inherit;">Uri<wbr>Excludes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -359,7 +414,9 @@ The ProfileHttpCompress resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>Uri<wbr>Includes</span>
+        <span id="uriincludes_go">
+<a href="#uriincludes_go" style="color: inherit; text-decoration: inherit;">Uri<wbr>Includes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -375,7 +432,9 @@ The ProfileHttpCompress resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -384,7 +443,9 @@ The ProfileHttpCompress resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>content<wbr>Type<wbr>Excludes</span>
+        <span id="contenttypeexcludes_nodejs">
+<a href="#contenttypeexcludes_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Type<wbr>Excludes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -393,7 +454,9 @@ The ProfileHttpCompress resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>content<wbr>Type<wbr>Includes</span>
+        <span id="contenttypeincludes_nodejs">
+<a href="#contenttypeincludes_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Type<wbr>Includes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -402,7 +465,9 @@ The ProfileHttpCompress resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>defaults<wbr>From</span>
+        <span id="defaultsfrom_nodejs">
+<a href="#defaultsfrom_nodejs" style="color: inherit; text-decoration: inherit;">defaults<wbr>From</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -411,7 +476,9 @@ The ProfileHttpCompress resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>uri<wbr>Excludes</span>
+        <span id="uriexcludes_nodejs">
+<a href="#uriexcludes_nodejs" style="color: inherit; text-decoration: inherit;">uri<wbr>Excludes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -420,7 +487,9 @@ The ProfileHttpCompress resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>uri<wbr>Includes</span>
+        <span id="uriincludes_nodejs">
+<a href="#uriincludes_nodejs" style="color: inherit; text-decoration: inherit;">uri<wbr>Includes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -436,7 +505,9 @@ The ProfileHttpCompress resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -445,7 +516,9 @@ The ProfileHttpCompress resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>content_<wbr>type_<wbr>excludes</span>
+        <span id="content_type_excludes_python">
+<a href="#content_type_excludes_python" style="color: inherit; text-decoration: inherit;">content_<wbr>type_<wbr>excludes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -454,7 +527,9 @@ The ProfileHttpCompress resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>content_<wbr>type_<wbr>includes</span>
+        <span id="content_type_includes_python">
+<a href="#content_type_includes_python" style="color: inherit; text-decoration: inherit;">content_<wbr>type_<wbr>includes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -463,7 +538,9 @@ The ProfileHttpCompress resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>defaults_<wbr>from</span>
+        <span id="defaults_from_python">
+<a href="#defaults_from_python" style="color: inherit; text-decoration: inherit;">defaults_<wbr>from</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -472,7 +549,9 @@ The ProfileHttpCompress resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>uri_<wbr>excludes</span>
+        <span id="uri_excludes_python">
+<a href="#uri_excludes_python" style="color: inherit; text-decoration: inherit;">uri_<wbr>excludes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -481,7 +560,9 @@ The ProfileHttpCompress resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>uri_<wbr>includes</span>
+        <span id="uri_includes_python">
+<a href="#uri_includes_python" style="color: inherit; text-decoration: inherit;">uri_<wbr>includes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -508,7 +589,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -523,7 +606,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -538,7 +623,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -553,7 +640,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -694,7 +783,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Content<wbr>Type<wbr>Excludes</span>
+        <span id="state_contenttypeexcludes_csharp">
+<a href="#state_contenttypeexcludes_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Type<wbr>Excludes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -703,7 +794,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Content<wbr>Type<wbr>Includes</span>
+        <span id="state_contenttypeincludes_csharp">
+<a href="#state_contenttypeincludes_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Type<wbr>Includes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -712,7 +805,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Defaults<wbr>From</span>
+        <span id="state_defaultsfrom_csharp">
+<a href="#state_defaultsfrom_csharp" style="color: inherit; text-decoration: inherit;">Defaults<wbr>From</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -721,7 +816,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -730,7 +827,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Uri<wbr>Excludes</span>
+        <span id="state_uriexcludes_csharp">
+<a href="#state_uriexcludes_csharp" style="color: inherit; text-decoration: inherit;">Uri<wbr>Excludes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -739,7 +838,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Uri<wbr>Includes</span>
+        <span id="state_uriincludes_csharp">
+<a href="#state_uriincludes_csharp" style="color: inherit; text-decoration: inherit;">Uri<wbr>Includes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -755,7 +856,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Content<wbr>Type<wbr>Excludes</span>
+        <span id="state_contenttypeexcludes_go">
+<a href="#state_contenttypeexcludes_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Type<wbr>Excludes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -764,7 +867,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Content<wbr>Type<wbr>Includes</span>
+        <span id="state_contenttypeincludes_go">
+<a href="#state_contenttypeincludes_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Type<wbr>Includes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -773,7 +878,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Defaults<wbr>From</span>
+        <span id="state_defaultsfrom_go">
+<a href="#state_defaultsfrom_go" style="color: inherit; text-decoration: inherit;">Defaults<wbr>From</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -782,7 +889,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -791,7 +900,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Uri<wbr>Excludes</span>
+        <span id="state_uriexcludes_go">
+<a href="#state_uriexcludes_go" style="color: inherit; text-decoration: inherit;">Uri<wbr>Excludes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -800,7 +911,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Uri<wbr>Includes</span>
+        <span id="state_uriincludes_go">
+<a href="#state_uriincludes_go" style="color: inherit; text-decoration: inherit;">Uri<wbr>Includes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -816,7 +929,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>content<wbr>Type<wbr>Excludes</span>
+        <span id="state_contenttypeexcludes_nodejs">
+<a href="#state_contenttypeexcludes_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Type<wbr>Excludes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -825,7 +940,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>content<wbr>Type<wbr>Includes</span>
+        <span id="state_contenttypeincludes_nodejs">
+<a href="#state_contenttypeincludes_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Type<wbr>Includes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -834,7 +951,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>defaults<wbr>From</span>
+        <span id="state_defaultsfrom_nodejs">
+<a href="#state_defaultsfrom_nodejs" style="color: inherit; text-decoration: inherit;">defaults<wbr>From</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -843,7 +962,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -852,7 +973,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>uri<wbr>Excludes</span>
+        <span id="state_uriexcludes_nodejs">
+<a href="#state_uriexcludes_nodejs" style="color: inherit; text-decoration: inherit;">uri<wbr>Excludes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -861,7 +984,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>uri<wbr>Includes</span>
+        <span id="state_uriincludes_nodejs">
+<a href="#state_uriincludes_nodejs" style="color: inherit; text-decoration: inherit;">uri<wbr>Includes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -877,7 +1002,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>content_<wbr>type_<wbr>excludes</span>
+        <span id="state_content_type_excludes_python">
+<a href="#state_content_type_excludes_python" style="color: inherit; text-decoration: inherit;">content_<wbr>type_<wbr>excludes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -886,7 +1013,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>content_<wbr>type_<wbr>includes</span>
+        <span id="state_content_type_includes_python">
+<a href="#state_content_type_includes_python" style="color: inherit; text-decoration: inherit;">content_<wbr>type_<wbr>includes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -895,7 +1024,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>defaults_<wbr>from</span>
+        <span id="state_defaults_from_python">
+<a href="#state_defaults_from_python" style="color: inherit; text-decoration: inherit;">defaults_<wbr>from</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -904,7 +1035,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -913,7 +1046,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>uri_<wbr>excludes</span>
+        <span id="state_uri_excludes_python">
+<a href="#state_uri_excludes_python" style="color: inherit; text-decoration: inherit;">uri_<wbr>excludes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -922,7 +1057,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>uri_<wbr>includes</span>
+        <span id="state_uri_includes_python">
+<a href="#state_uri_includes_python" style="color: inherit; text-decoration: inherit;">uri_<wbr>includes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>

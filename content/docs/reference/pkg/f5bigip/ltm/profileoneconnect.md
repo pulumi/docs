@@ -22,7 +22,30 @@ For resources should be named with their "full path". The full path is the combi
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using F5BigIP = Pulumi.F5BigIP;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var oneconnect_sanjose = new F5BigIP.Ltm.ProfileOneConnect("oneconnect-sanjose", new F5BigIP.Ltm.ProfileOneConnectArgs
+        {
+            DefaultsFrom = "/Common/oneconnect",
+            IdleTimeoutOverride = "disabled",
+            MaxAge = 3600,
+            MaxReuse = 1000,
+            MaxSize = 1000,
+            Name = "sanjose",
+            Partition = "Common",
+            SharePools = "disabled",
+            SourceMask = "255.255.255.255",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -252,7 +275,9 @@ The ProfileOneConnect resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -261,7 +286,9 @@ The ProfileOneConnect resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Defaults<wbr>From</span>
+        <span id="defaultsfrom_csharp">
+<a href="#defaultsfrom_csharp" style="color: inherit; text-decoration: inherit;">Defaults<wbr>From</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -270,7 +297,9 @@ The ProfileOneConnect resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Idle<wbr>Timeout<wbr>Override</span>
+        <span id="idletimeoutoverride_csharp">
+<a href="#idletimeoutoverride_csharp" style="color: inherit; text-decoration: inherit;">Idle<wbr>Timeout<wbr>Override</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -279,7 +308,9 @@ The ProfileOneConnect resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Age</span>
+        <span id="maxage_csharp">
+<a href="#maxage_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Age</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -288,7 +319,9 @@ The ProfileOneConnect resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Reuse</span>
+        <span id="maxreuse_csharp">
+<a href="#maxreuse_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Reuse</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -297,7 +330,9 @@ The ProfileOneConnect resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Size</span>
+        <span id="maxsize_csharp">
+<a href="#maxsize_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -306,7 +341,9 @@ The ProfileOneConnect resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Partition</span>
+        <span id="partition_csharp">
+<a href="#partition_csharp" style="color: inherit; text-decoration: inherit;">Partition</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -315,7 +352,9 @@ The ProfileOneConnect resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Share<wbr>Pools</span>
+        <span id="sharepools_csharp">
+<a href="#sharepools_csharp" style="color: inherit; text-decoration: inherit;">Share<wbr>Pools</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -324,7 +363,9 @@ The ProfileOneConnect resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Source<wbr>Mask</span>
+        <span id="sourcemask_csharp">
+<a href="#sourcemask_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Mask</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -340,7 +381,9 @@ The ProfileOneConnect resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -349,7 +392,9 @@ The ProfileOneConnect resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Defaults<wbr>From</span>
+        <span id="defaultsfrom_go">
+<a href="#defaultsfrom_go" style="color: inherit; text-decoration: inherit;">Defaults<wbr>From</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -358,7 +403,9 @@ The ProfileOneConnect resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Idle<wbr>Timeout<wbr>Override</span>
+        <span id="idletimeoutoverride_go">
+<a href="#idletimeoutoverride_go" style="color: inherit; text-decoration: inherit;">Idle<wbr>Timeout<wbr>Override</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -367,7 +414,9 @@ The ProfileOneConnect resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Age</span>
+        <span id="maxage_go">
+<a href="#maxage_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Age</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -376,7 +425,9 @@ The ProfileOneConnect resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Reuse</span>
+        <span id="maxreuse_go">
+<a href="#maxreuse_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Reuse</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -385,7 +436,9 @@ The ProfileOneConnect resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Size</span>
+        <span id="maxsize_go">
+<a href="#maxsize_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -394,7 +447,9 @@ The ProfileOneConnect resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Partition</span>
+        <span id="partition_go">
+<a href="#partition_go" style="color: inherit; text-decoration: inherit;">Partition</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -403,7 +458,9 @@ The ProfileOneConnect resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Share<wbr>Pools</span>
+        <span id="sharepools_go">
+<a href="#sharepools_go" style="color: inherit; text-decoration: inherit;">Share<wbr>Pools</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -412,7 +469,9 @@ The ProfileOneConnect resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Source<wbr>Mask</span>
+        <span id="sourcemask_go">
+<a href="#sourcemask_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Mask</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -428,7 +487,9 @@ The ProfileOneConnect resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -437,7 +498,9 @@ The ProfileOneConnect resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>defaults<wbr>From</span>
+        <span id="defaultsfrom_nodejs">
+<a href="#defaultsfrom_nodejs" style="color: inherit; text-decoration: inherit;">defaults<wbr>From</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -446,7 +509,9 @@ The ProfileOneConnect resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>idle<wbr>Timeout<wbr>Override</span>
+        <span id="idletimeoutoverride_nodejs">
+<a href="#idletimeoutoverride_nodejs" style="color: inherit; text-decoration: inherit;">idle<wbr>Timeout<wbr>Override</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -455,7 +520,9 @@ The ProfileOneConnect resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Age</span>
+        <span id="maxage_nodejs">
+<a href="#maxage_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Age</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -464,7 +531,9 @@ The ProfileOneConnect resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Reuse</span>
+        <span id="maxreuse_nodejs">
+<a href="#maxreuse_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Reuse</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -473,7 +542,9 @@ The ProfileOneConnect resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Size</span>
+        <span id="maxsize_nodejs">
+<a href="#maxsize_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -482,7 +553,9 @@ The ProfileOneConnect resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>partition</span>
+        <span id="partition_nodejs">
+<a href="#partition_nodejs" style="color: inherit; text-decoration: inherit;">partition</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -491,7 +564,9 @@ The ProfileOneConnect resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>share<wbr>Pools</span>
+        <span id="sharepools_nodejs">
+<a href="#sharepools_nodejs" style="color: inherit; text-decoration: inherit;">share<wbr>Pools</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -500,7 +575,9 @@ The ProfileOneConnect resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>source<wbr>Mask</span>
+        <span id="sourcemask_nodejs">
+<a href="#sourcemask_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Mask</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -516,7 +593,9 @@ The ProfileOneConnect resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -525,7 +604,9 @@ The ProfileOneConnect resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>defaults_<wbr>from</span>
+        <span id="defaults_from_python">
+<a href="#defaults_from_python" style="color: inherit; text-decoration: inherit;">defaults_<wbr>from</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -534,7 +615,9 @@ The ProfileOneConnect resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>idle_<wbr>timeout_<wbr>override</span>
+        <span id="idle_timeout_override_python">
+<a href="#idle_timeout_override_python" style="color: inherit; text-decoration: inherit;">idle_<wbr>timeout_<wbr>override</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -543,7 +626,9 @@ The ProfileOneConnect resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>max_<wbr>age</span>
+        <span id="max_age_python">
+<a href="#max_age_python" style="color: inherit; text-decoration: inherit;">max_<wbr>age</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -552,7 +637,9 @@ The ProfileOneConnect resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>max_<wbr>reuse</span>
+        <span id="max_reuse_python">
+<a href="#max_reuse_python" style="color: inherit; text-decoration: inherit;">max_<wbr>reuse</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -561,7 +648,9 @@ The ProfileOneConnect resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>max_<wbr>size</span>
+        <span id="max_size_python">
+<a href="#max_size_python" style="color: inherit; text-decoration: inherit;">max_<wbr>size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -570,7 +659,9 @@ The ProfileOneConnect resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>partition</span>
+        <span id="partition_python">
+<a href="#partition_python" style="color: inherit; text-decoration: inherit;">partition</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -579,7 +670,9 @@ The ProfileOneConnect resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>share_<wbr>pools</span>
+        <span id="share_pools_python">
+<a href="#share_pools_python" style="color: inherit; text-decoration: inherit;">share_<wbr>pools</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -588,7 +681,9 @@ The ProfileOneConnect resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>source_<wbr>mask</span>
+        <span id="source_mask_python">
+<a href="#source_mask_python" style="color: inherit; text-decoration: inherit;">source_<wbr>mask</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -615,7 +710,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -630,7 +727,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -645,7 +744,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -660,7 +761,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -801,7 +904,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Defaults<wbr>From</span>
+        <span id="state_defaultsfrom_csharp">
+<a href="#state_defaultsfrom_csharp" style="color: inherit; text-decoration: inherit;">Defaults<wbr>From</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -810,7 +915,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Idle<wbr>Timeout<wbr>Override</span>
+        <span id="state_idletimeoutoverride_csharp">
+<a href="#state_idletimeoutoverride_csharp" style="color: inherit; text-decoration: inherit;">Idle<wbr>Timeout<wbr>Override</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -819,7 +926,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Age</span>
+        <span id="state_maxage_csharp">
+<a href="#state_maxage_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Age</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -828,7 +937,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Reuse</span>
+        <span id="state_maxreuse_csharp">
+<a href="#state_maxreuse_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Reuse</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -837,7 +948,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Size</span>
+        <span id="state_maxsize_csharp">
+<a href="#state_maxsize_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -846,7 +959,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -855,7 +970,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Partition</span>
+        <span id="state_partition_csharp">
+<a href="#state_partition_csharp" style="color: inherit; text-decoration: inherit;">Partition</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -864,7 +981,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Share<wbr>Pools</span>
+        <span id="state_sharepools_csharp">
+<a href="#state_sharepools_csharp" style="color: inherit; text-decoration: inherit;">Share<wbr>Pools</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -873,7 +992,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Source<wbr>Mask</span>
+        <span id="state_sourcemask_csharp">
+<a href="#state_sourcemask_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Mask</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -889,7 +1010,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Defaults<wbr>From</span>
+        <span id="state_defaultsfrom_go">
+<a href="#state_defaultsfrom_go" style="color: inherit; text-decoration: inherit;">Defaults<wbr>From</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -898,7 +1021,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Idle<wbr>Timeout<wbr>Override</span>
+        <span id="state_idletimeoutoverride_go">
+<a href="#state_idletimeoutoverride_go" style="color: inherit; text-decoration: inherit;">Idle<wbr>Timeout<wbr>Override</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -907,7 +1032,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Age</span>
+        <span id="state_maxage_go">
+<a href="#state_maxage_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Age</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -916,7 +1043,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Reuse</span>
+        <span id="state_maxreuse_go">
+<a href="#state_maxreuse_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Reuse</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -925,7 +1054,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Size</span>
+        <span id="state_maxsize_go">
+<a href="#state_maxsize_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -934,7 +1065,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -943,7 +1076,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Partition</span>
+        <span id="state_partition_go">
+<a href="#state_partition_go" style="color: inherit; text-decoration: inherit;">Partition</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -952,7 +1087,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Share<wbr>Pools</span>
+        <span id="state_sharepools_go">
+<a href="#state_sharepools_go" style="color: inherit; text-decoration: inherit;">Share<wbr>Pools</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -961,7 +1098,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Source<wbr>Mask</span>
+        <span id="state_sourcemask_go">
+<a href="#state_sourcemask_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Mask</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -977,7 +1116,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>defaults<wbr>From</span>
+        <span id="state_defaultsfrom_nodejs">
+<a href="#state_defaultsfrom_nodejs" style="color: inherit; text-decoration: inherit;">defaults<wbr>From</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -986,7 +1127,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>idle<wbr>Timeout<wbr>Override</span>
+        <span id="state_idletimeoutoverride_nodejs">
+<a href="#state_idletimeoutoverride_nodejs" style="color: inherit; text-decoration: inherit;">idle<wbr>Timeout<wbr>Override</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -995,7 +1138,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Age</span>
+        <span id="state_maxage_nodejs">
+<a href="#state_maxage_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Age</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1004,7 +1149,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Reuse</span>
+        <span id="state_maxreuse_nodejs">
+<a href="#state_maxreuse_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Reuse</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1013,7 +1160,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Size</span>
+        <span id="state_maxsize_nodejs">
+<a href="#state_maxsize_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1022,7 +1171,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1031,7 +1182,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>partition</span>
+        <span id="state_partition_nodejs">
+<a href="#state_partition_nodejs" style="color: inherit; text-decoration: inherit;">partition</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1040,7 +1193,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>share<wbr>Pools</span>
+        <span id="state_sharepools_nodejs">
+<a href="#state_sharepools_nodejs" style="color: inherit; text-decoration: inherit;">share<wbr>Pools</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1049,7 +1204,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>source<wbr>Mask</span>
+        <span id="state_sourcemask_nodejs">
+<a href="#state_sourcemask_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Mask</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1065,7 +1222,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>defaults_<wbr>from</span>
+        <span id="state_defaults_from_python">
+<a href="#state_defaults_from_python" style="color: inherit; text-decoration: inherit;">defaults_<wbr>from</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1074,7 +1233,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>idle_<wbr>timeout_<wbr>override</span>
+        <span id="state_idle_timeout_override_python">
+<a href="#state_idle_timeout_override_python" style="color: inherit; text-decoration: inherit;">idle_<wbr>timeout_<wbr>override</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1083,7 +1244,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>max_<wbr>age</span>
+        <span id="state_max_age_python">
+<a href="#state_max_age_python" style="color: inherit; text-decoration: inherit;">max_<wbr>age</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1092,7 +1255,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>max_<wbr>reuse</span>
+        <span id="state_max_reuse_python">
+<a href="#state_max_reuse_python" style="color: inherit; text-decoration: inherit;">max_<wbr>reuse</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1101,7 +1266,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>max_<wbr>size</span>
+        <span id="state_max_size_python">
+<a href="#state_max_size_python" style="color: inherit; text-decoration: inherit;">max_<wbr>size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1110,7 +1277,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1119,7 +1288,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>partition</span>
+        <span id="state_partition_python">
+<a href="#state_partition_python" style="color: inherit; text-decoration: inherit;">partition</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1128,7 +1299,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>share_<wbr>pools</span>
+        <span id="state_share_pools_python">
+<a href="#state_share_pools_python" style="color: inherit; text-decoration: inherit;">share_<wbr>pools</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1137,7 +1310,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>source_<wbr>mask</span>
+        <span id="state_source_mask_python">
+<a href="#state_source_mask_python" style="color: inherit; text-decoration: inherit;">source_<wbr>mask</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
