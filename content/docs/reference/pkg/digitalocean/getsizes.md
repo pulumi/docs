@@ -22,7 +22,38 @@ will be returned.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using DigitalOcean = Pulumi.DigitalOcean;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var main = Output.Create(DigitalOcean.GetSizes.InvokeAsync(new DigitalOcean.GetSizesArgs
+        {
+            Filter = 
+            {
+                
+                {
+                    { "key", "slug" },
+                    { "values", 
+                    {
+                        "s-1vcpu-1gb",
+                    } },
+                },
+            },
+        }));
+        var web = new DigitalOcean.Droplet("web", new DigitalOcean.DropletArgs
+        {
+            Image = "ubuntu-18-04-x64",
+            Region = "sgp1",
+            Size = main.Apply(main => main.Sizes)[0].Apply(sizes => sizes.Slug),
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -41,7 +72,7 @@ main = digitalocean.get_sizes(filter=[{
 web = digitalocean.Droplet("web",
     image="ubuntu-18-04-x64",
     region="sgp1",
-    size=main.sizes[0].slug)
+    size=main.sizes[0]["slug"])
 ```
 {{% /example %}}
 
@@ -105,7 +136,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Filters</span>
+        <span id="filters_csharp">
+<a href="#filters_csharp" style="color: inherit; text-decoration: inherit;">Filters</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getsizesfilter">List&lt;Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Get<wbr>Sizes<wbr>Filter<wbr>Args&gt;</a></span>
     </dt>
@@ -115,7 +148,9 @@ The `filter` block is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Sorts</span>
+        <span id="sorts_csharp">
+<a href="#sorts_csharp" style="color: inherit; text-decoration: inherit;">Sorts</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getsizessort">List&lt;Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Get<wbr>Sizes<wbr>Sort<wbr>Args&gt;</a></span>
     </dt>
@@ -132,7 +167,9 @@ The `sort` block is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Filters</span>
+        <span id="filters_go">
+<a href="#filters_go" style="color: inherit; text-decoration: inherit;">Filters</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getsizesfilter">[]Get<wbr>Sizes<wbr>Filter</a></span>
     </dt>
@@ -142,7 +179,9 @@ The `filter` block is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Sorts</span>
+        <span id="sorts_go">
+<a href="#sorts_go" style="color: inherit; text-decoration: inherit;">Sorts</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getsizessort">[]Get<wbr>Sizes<wbr>Sort</a></span>
     </dt>
@@ -159,7 +198,9 @@ The `sort` block is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>filters</span>
+        <span id="filters_nodejs">
+<a href="#filters_nodejs" style="color: inherit; text-decoration: inherit;">filters</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getsizesfilter">Get<wbr>Sizes<wbr>Filter[]</a></span>
     </dt>
@@ -169,7 +210,9 @@ The `filter` block is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>sorts</span>
+        <span id="sorts_nodejs">
+<a href="#sorts_nodejs" style="color: inherit; text-decoration: inherit;">sorts</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getsizessort">Get<wbr>Sizes<wbr>Sort[]</a></span>
     </dt>
@@ -186,7 +229,9 @@ The `sort` block is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>filters</span>
+        <span id="filters_python">
+<a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getsizesfilter">List[Get<wbr>Sizes<wbr>Filter]</a></span>
     </dt>
@@ -196,7 +241,9 @@ The `filter` block is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>sorts</span>
+        <span id="sorts_python">
+<a href="#sorts_python" style="color: inherit; text-decoration: inherit;">sorts</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getsizessort">List[Get<wbr>Sizes<wbr>Sort]</a></span>
     </dt>
@@ -226,7 +273,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -235,7 +284,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Sizes</span>
+        <span id="sizes_csharp">
+<a href="#sizes_csharp" style="color: inherit; text-decoration: inherit;">Sizes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getsizessize">List&lt;Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Outputs.<wbr>Get<wbr>Sizes<wbr>Size&gt;</a></span>
     </dt>
@@ -243,7 +294,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Filters</span>
+        <span id="filters_csharp">
+<a href="#filters_csharp" style="color: inherit; text-decoration: inherit;">Filters</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getsizesfilter">List&lt;Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Outputs.<wbr>Get<wbr>Sizes<wbr>Filter&gt;</a></span>
     </dt>
@@ -251,7 +304,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Sorts</span>
+        <span id="sorts_csharp">
+<a href="#sorts_csharp" style="color: inherit; text-decoration: inherit;">Sorts</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getsizessort">List&lt;Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Outputs.<wbr>Get<wbr>Sizes<wbr>Sort&gt;</a></span>
     </dt>
@@ -266,7 +321,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -275,7 +332,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Sizes</span>
+        <span id="sizes_go">
+<a href="#sizes_go" style="color: inherit; text-decoration: inherit;">Sizes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getsizessize">[]Get<wbr>Sizes<wbr>Size</a></span>
     </dt>
@@ -283,7 +342,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Filters</span>
+        <span id="filters_go">
+<a href="#filters_go" style="color: inherit; text-decoration: inherit;">Filters</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getsizesfilter">[]Get<wbr>Sizes<wbr>Filter</a></span>
     </dt>
@@ -291,7 +352,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Sorts</span>
+        <span id="sorts_go">
+<a href="#sorts_go" style="color: inherit; text-decoration: inherit;">Sorts</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getsizessort">[]Get<wbr>Sizes<wbr>Sort</a></span>
     </dt>
@@ -306,7 +369,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -315,7 +380,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>sizes</span>
+        <span id="sizes_nodejs">
+<a href="#sizes_nodejs" style="color: inherit; text-decoration: inherit;">sizes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getsizessize">Get<wbr>Sizes<wbr>Size[]</a></span>
     </dt>
@@ -323,7 +390,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>filters</span>
+        <span id="filters_nodejs">
+<a href="#filters_nodejs" style="color: inherit; text-decoration: inherit;">filters</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getsizesfilter">Get<wbr>Sizes<wbr>Filter[]</a></span>
     </dt>
@@ -331,7 +400,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>sorts</span>
+        <span id="sorts_nodejs">
+<a href="#sorts_nodejs" style="color: inherit; text-decoration: inherit;">sorts</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getsizessort">Get<wbr>Sizes<wbr>Sort[]</a></span>
     </dt>
@@ -346,7 +417,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -355,7 +428,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>sizes</span>
+        <span id="sizes_python">
+<a href="#sizes_python" style="color: inherit; text-decoration: inherit;">sizes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getsizessize">List[Get<wbr>Sizes<wbr>Size]</a></span>
     </dt>
@@ -363,7 +438,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>filters</span>
+        <span id="filters_python">
+<a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getsizesfilter">List[Get<wbr>Sizes<wbr>Filter]</a></span>
     </dt>
@@ -371,7 +448,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>sorts</span>
+        <span id="sorts_python">
+<a href="#sorts_python" style="color: inherit; text-decoration: inherit;">sorts</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getsizessort">List[Get<wbr>Sizes<wbr>Sort]</a></span>
     </dt>
@@ -410,7 +489,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Key</span>
+        <span id="key_csharp">
+<a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -421,7 +502,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Values</span>
+        <span id="values_csharp">
+<a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -438,7 +521,9 @@ one of the values provided here.
 
     <dt class="property-required"
             title="Required">
-        <span>Key</span>
+        <span id="key_go">
+<a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -449,7 +534,9 @@ one of the values provided here.
 
     <dt class="property-required"
             title="Required">
-        <span>Values</span>
+        <span id="values_go">
+<a href="#values_go" style="color: inherit; text-decoration: inherit;">Values</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -466,7 +553,9 @@ one of the values provided here.
 
     <dt class="property-required"
             title="Required">
-        <span>key</span>
+        <span id="key_nodejs">
+<a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -477,7 +566,9 @@ one of the values provided here.
 
     <dt class="property-required"
             title="Required">
-        <span>values</span>
+        <span id="values_nodejs">
+<a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -494,7 +585,9 @@ one of the values provided here.
 
     <dt class="property-required"
             title="Required">
-        <span>key</span>
+        <span id="key_python">
+<a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -505,7 +598,9 @@ one of the values provided here.
 
     <dt class="property-required"
             title="Required">
-        <span>values</span>
+        <span id="values_python">
+<a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -540,7 +635,9 @@ one of the values provided here.
 
     <dt class="property-required"
             title="Required">
-        <span>Available</span>
+        <span id="available_csharp">
+<a href="#available_csharp" style="color: inherit; text-decoration: inherit;">Available</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -549,7 +646,9 @@ one of the values provided here.
 
     <dt class="property-required"
             title="Required">
-        <span>Disk</span>
+        <span id="disk_csharp">
+<a href="#disk_csharp" style="color: inherit; text-decoration: inherit;">Disk</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -558,7 +657,9 @@ one of the values provided here.
 
     <dt class="property-required"
             title="Required">
-        <span>Memory</span>
+        <span id="memory_csharp">
+<a href="#memory_csharp" style="color: inherit; text-decoration: inherit;">Memory</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -567,7 +668,9 @@ one of the values provided here.
 
     <dt class="property-required"
             title="Required">
-        <span>Price<wbr>Hourly</span>
+        <span id="pricehourly_csharp">
+<a href="#pricehourly_csharp" style="color: inherit; text-decoration: inherit;">Price<wbr>Hourly</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
@@ -576,7 +679,9 @@ one of the values provided here.
 
     <dt class="property-required"
             title="Required">
-        <span>Price<wbr>Monthly</span>
+        <span id="pricemonthly_csharp">
+<a href="#pricemonthly_csharp" style="color: inherit; text-decoration: inherit;">Price<wbr>Monthly</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
@@ -585,7 +690,9 @@ one of the values provided here.
 
     <dt class="property-required"
             title="Required">
-        <span>Regions</span>
+        <span id="regions_csharp">
+<a href="#regions_csharp" style="color: inherit; text-decoration: inherit;">Regions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -594,7 +701,9 @@ one of the values provided here.
 
     <dt class="property-required"
             title="Required">
-        <span>Slug</span>
+        <span id="slug_csharp">
+<a href="#slug_csharp" style="color: inherit; text-decoration: inherit;">Slug</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -603,7 +712,9 @@ one of the values provided here.
 
     <dt class="property-required"
             title="Required">
-        <span>Transfer</span>
+        <span id="transfer_csharp">
+<a href="#transfer_csharp" style="color: inherit; text-decoration: inherit;">Transfer</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
@@ -612,7 +723,9 @@ one of the values provided here.
 
     <dt class="property-required"
             title="Required">
-        <span>Vcpus</span>
+        <span id="vcpus_csharp">
+<a href="#vcpus_csharp" style="color: inherit; text-decoration: inherit;">Vcpus</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -628,7 +741,9 @@ one of the values provided here.
 
     <dt class="property-required"
             title="Required">
-        <span>Available</span>
+        <span id="available_go">
+<a href="#available_go" style="color: inherit; text-decoration: inherit;">Available</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -637,7 +752,9 @@ one of the values provided here.
 
     <dt class="property-required"
             title="Required">
-        <span>Disk</span>
+        <span id="disk_go">
+<a href="#disk_go" style="color: inherit; text-decoration: inherit;">Disk</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -646,7 +763,9 @@ one of the values provided here.
 
     <dt class="property-required"
             title="Required">
-        <span>Memory</span>
+        <span id="memory_go">
+<a href="#memory_go" style="color: inherit; text-decoration: inherit;">Memory</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -655,7 +774,9 @@ one of the values provided here.
 
     <dt class="property-required"
             title="Required">
-        <span>Price<wbr>Hourly</span>
+        <span id="pricehourly_go">
+<a href="#pricehourly_go" style="color: inherit; text-decoration: inherit;">Price<wbr>Hourly</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
@@ -664,7 +785,9 @@ one of the values provided here.
 
     <dt class="property-required"
             title="Required">
-        <span>Price<wbr>Monthly</span>
+        <span id="pricemonthly_go">
+<a href="#pricemonthly_go" style="color: inherit; text-decoration: inherit;">Price<wbr>Monthly</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
@@ -673,7 +796,9 @@ one of the values provided here.
 
     <dt class="property-required"
             title="Required">
-        <span>Regions</span>
+        <span id="regions_go">
+<a href="#regions_go" style="color: inherit; text-decoration: inherit;">Regions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -682,7 +807,9 @@ one of the values provided here.
 
     <dt class="property-required"
             title="Required">
-        <span>Slug</span>
+        <span id="slug_go">
+<a href="#slug_go" style="color: inherit; text-decoration: inherit;">Slug</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -691,7 +818,9 @@ one of the values provided here.
 
     <dt class="property-required"
             title="Required">
-        <span>Transfer</span>
+        <span id="transfer_go">
+<a href="#transfer_go" style="color: inherit; text-decoration: inherit;">Transfer</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
@@ -700,7 +829,9 @@ one of the values provided here.
 
     <dt class="property-required"
             title="Required">
-        <span>Vcpus</span>
+        <span id="vcpus_go">
+<a href="#vcpus_go" style="color: inherit; text-decoration: inherit;">Vcpus</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -716,7 +847,9 @@ one of the values provided here.
 
     <dt class="property-required"
             title="Required">
-        <span>available</span>
+        <span id="available_nodejs">
+<a href="#available_nodejs" style="color: inherit; text-decoration: inherit;">available</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -725,7 +858,9 @@ one of the values provided here.
 
     <dt class="property-required"
             title="Required">
-        <span>disk</span>
+        <span id="disk_nodejs">
+<a href="#disk_nodejs" style="color: inherit; text-decoration: inherit;">disk</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -734,7 +869,9 @@ one of the values provided here.
 
     <dt class="property-required"
             title="Required">
-        <span>memory</span>
+        <span id="memory_nodejs">
+<a href="#memory_nodejs" style="color: inherit; text-decoration: inherit;">memory</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -743,7 +880,9 @@ one of the values provided here.
 
     <dt class="property-required"
             title="Required">
-        <span>price<wbr>Hourly</span>
+        <span id="pricehourly_nodejs">
+<a href="#pricehourly_nodejs" style="color: inherit; text-decoration: inherit;">price<wbr>Hourly</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
@@ -752,7 +891,9 @@ one of the values provided here.
 
     <dt class="property-required"
             title="Required">
-        <span>price<wbr>Monthly</span>
+        <span id="pricemonthly_nodejs">
+<a href="#pricemonthly_nodejs" style="color: inherit; text-decoration: inherit;">price<wbr>Monthly</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
@@ -761,7 +902,9 @@ one of the values provided here.
 
     <dt class="property-required"
             title="Required">
-        <span>regions</span>
+        <span id="regions_nodejs">
+<a href="#regions_nodejs" style="color: inherit; text-decoration: inherit;">regions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -770,7 +913,9 @@ one of the values provided here.
 
     <dt class="property-required"
             title="Required">
-        <span>slug</span>
+        <span id="slug_nodejs">
+<a href="#slug_nodejs" style="color: inherit; text-decoration: inherit;">slug</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -779,7 +924,9 @@ one of the values provided here.
 
     <dt class="property-required"
             title="Required">
-        <span>transfer</span>
+        <span id="transfer_nodejs">
+<a href="#transfer_nodejs" style="color: inherit; text-decoration: inherit;">transfer</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
@@ -788,7 +935,9 @@ one of the values provided here.
 
     <dt class="property-required"
             title="Required">
-        <span>vcpus</span>
+        <span id="vcpus_nodejs">
+<a href="#vcpus_nodejs" style="color: inherit; text-decoration: inherit;">vcpus</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -804,7 +953,9 @@ one of the values provided here.
 
     <dt class="property-required"
             title="Required">
-        <span>available</span>
+        <span id="available_python">
+<a href="#available_python" style="color: inherit; text-decoration: inherit;">available</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -813,7 +964,9 @@ one of the values provided here.
 
     <dt class="property-required"
             title="Required">
-        <span>disk</span>
+        <span id="disk_python">
+<a href="#disk_python" style="color: inherit; text-decoration: inherit;">disk</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -822,7 +975,9 @@ one of the values provided here.
 
     <dt class="property-required"
             title="Required">
-        <span>memory</span>
+        <span id="memory_python">
+<a href="#memory_python" style="color: inherit; text-decoration: inherit;">memory</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -831,7 +986,9 @@ one of the values provided here.
 
     <dt class="property-required"
             title="Required">
-        <span>price_<wbr>hourly</span>
+        <span id="price_hourly_python">
+<a href="#price_hourly_python" style="color: inherit; text-decoration: inherit;">price_<wbr>hourly</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -840,7 +997,9 @@ one of the values provided here.
 
     <dt class="property-required"
             title="Required">
-        <span>price_<wbr>monthly</span>
+        <span id="price_monthly_python">
+<a href="#price_monthly_python" style="color: inherit; text-decoration: inherit;">price_<wbr>monthly</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -849,7 +1008,9 @@ one of the values provided here.
 
     <dt class="property-required"
             title="Required">
-        <span>regions</span>
+        <span id="regions_python">
+<a href="#regions_python" style="color: inherit; text-decoration: inherit;">regions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -858,7 +1019,9 @@ one of the values provided here.
 
     <dt class="property-required"
             title="Required">
-        <span>slug</span>
+        <span id="slug_python">
+<a href="#slug_python" style="color: inherit; text-decoration: inherit;">slug</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -867,7 +1030,9 @@ one of the values provided here.
 
     <dt class="property-required"
             title="Required">
-        <span>transfer</span>
+        <span id="transfer_python">
+<a href="#transfer_python" style="color: inherit; text-decoration: inherit;">transfer</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -876,7 +1041,9 @@ one of the values provided here.
 
     <dt class="property-required"
             title="Required">
-        <span>vcpus</span>
+        <span id="vcpus_python">
+<a href="#vcpus_python" style="color: inherit; text-decoration: inherit;">vcpus</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -910,7 +1077,9 @@ one of the values provided here.
 
     <dt class="property-required"
             title="Required">
-        <span>Key</span>
+        <span id="key_csharp">
+<a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -920,7 +1089,9 @@ one of the values provided here.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Direction</span>
+        <span id="direction_csharp">
+<a href="#direction_csharp" style="color: inherit; text-decoration: inherit;">Direction</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -936,7 +1107,9 @@ one of the values provided here.
 
     <dt class="property-required"
             title="Required">
-        <span>Key</span>
+        <span id="key_go">
+<a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -946,7 +1119,9 @@ one of the values provided here.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Direction</span>
+        <span id="direction_go">
+<a href="#direction_go" style="color: inherit; text-decoration: inherit;">Direction</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -962,7 +1137,9 @@ one of the values provided here.
 
     <dt class="property-required"
             title="Required">
-        <span>key</span>
+        <span id="key_nodejs">
+<a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -972,7 +1149,9 @@ one of the values provided here.
 
     <dt class="property-optional"
             title="Optional">
-        <span>direction</span>
+        <span id="direction_nodejs">
+<a href="#direction_nodejs" style="color: inherit; text-decoration: inherit;">direction</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -988,7 +1167,9 @@ one of the values provided here.
 
     <dt class="property-required"
             title="Required">
-        <span>key</span>
+        <span id="key_python">
+<a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -998,7 +1179,9 @@ one of the values provided here.
 
     <dt class="property-optional"
             title="Optional">
-        <span>direction</span>
+        <span id="direction_python">
+<a href="#direction_python" style="color: inherit; text-decoration: inherit;">direction</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

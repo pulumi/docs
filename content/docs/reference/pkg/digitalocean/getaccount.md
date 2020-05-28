@@ -20,7 +20,19 @@ Get information on your DigitalOcean account.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using DigitalOcean = Pulumi.DigitalOcean;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = Output.Create(DigitalOcean.GetAccount.InvokeAsync());
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -90,7 +102,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Droplet<wbr>Limit</span>
+        <span id="dropletlimit_csharp">
+<a href="#dropletlimit_csharp" style="color: inherit; text-decoration: inherit;">Droplet<wbr>Limit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -98,7 +112,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Email</span>
+        <span id="email_csharp">
+<a href="#email_csharp" style="color: inherit; text-decoration: inherit;">Email</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -106,7 +122,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Email<wbr>Verified</span>
+        <span id="emailverified_csharp">
+<a href="#emailverified_csharp" style="color: inherit; text-decoration: inherit;">Email<wbr>Verified</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -114,7 +132,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Floating<wbr>Ip<wbr>Limit</span>
+        <span id="floatingiplimit_csharp">
+<a href="#floatingiplimit_csharp" style="color: inherit; text-decoration: inherit;">Floating<wbr>Ip<wbr>Limit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -122,7 +142,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -131,7 +153,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Status</span>
+        <span id="status_csharp">
+<a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -139,7 +163,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Status<wbr>Message</span>
+        <span id="statusmessage_csharp">
+<a href="#statusmessage_csharp" style="color: inherit; text-decoration: inherit;">Status<wbr>Message</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -147,7 +173,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Uuid</span>
+        <span id="uuid_csharp">
+<a href="#uuid_csharp" style="color: inherit; text-decoration: inherit;">Uuid</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -162,7 +190,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Droplet<wbr>Limit</span>
+        <span id="dropletlimit_go">
+<a href="#dropletlimit_go" style="color: inherit; text-decoration: inherit;">Droplet<wbr>Limit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -170,7 +200,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Email</span>
+        <span id="email_go">
+<a href="#email_go" style="color: inherit; text-decoration: inherit;">Email</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -178,7 +210,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Email<wbr>Verified</span>
+        <span id="emailverified_go">
+<a href="#emailverified_go" style="color: inherit; text-decoration: inherit;">Email<wbr>Verified</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -186,7 +220,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Floating<wbr>Ip<wbr>Limit</span>
+        <span id="floatingiplimit_go">
+<a href="#floatingiplimit_go" style="color: inherit; text-decoration: inherit;">Floating<wbr>Ip<wbr>Limit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -194,7 +230,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -203,7 +241,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Status</span>
+        <span id="status_go">
+<a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -211,7 +251,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Status<wbr>Message</span>
+        <span id="statusmessage_go">
+<a href="#statusmessage_go" style="color: inherit; text-decoration: inherit;">Status<wbr>Message</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -219,7 +261,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Uuid</span>
+        <span id="uuid_go">
+<a href="#uuid_go" style="color: inherit; text-decoration: inherit;">Uuid</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -234,7 +278,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>droplet<wbr>Limit</span>
+        <span id="dropletlimit_nodejs">
+<a href="#dropletlimit_nodejs" style="color: inherit; text-decoration: inherit;">droplet<wbr>Limit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -242,7 +288,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>email</span>
+        <span id="email_nodejs">
+<a href="#email_nodejs" style="color: inherit; text-decoration: inherit;">email</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -250,7 +298,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>email<wbr>Verified</span>
+        <span id="emailverified_nodejs">
+<a href="#emailverified_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Verified</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -258,7 +308,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>floating<wbr>Ip<wbr>Limit</span>
+        <span id="floatingiplimit_nodejs">
+<a href="#floatingiplimit_nodejs" style="color: inherit; text-decoration: inherit;">floating<wbr>Ip<wbr>Limit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -266,7 +318,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -275,7 +329,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>status</span>
+        <span id="status_nodejs">
+<a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -283,7 +339,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>status<wbr>Message</span>
+        <span id="statusmessage_nodejs">
+<a href="#statusmessage_nodejs" style="color: inherit; text-decoration: inherit;">status<wbr>Message</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -291,7 +349,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>uuid</span>
+        <span id="uuid_nodejs">
+<a href="#uuid_nodejs" style="color: inherit; text-decoration: inherit;">uuid</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -306,7 +366,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>droplet_<wbr>limit</span>
+        <span id="droplet_limit_python">
+<a href="#droplet_limit_python" style="color: inherit; text-decoration: inherit;">droplet_<wbr>limit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -314,7 +376,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>email</span>
+        <span id="email_python">
+<a href="#email_python" style="color: inherit; text-decoration: inherit;">email</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -322,7 +386,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>email_<wbr>verified</span>
+        <span id="email_verified_python">
+<a href="#email_verified_python" style="color: inherit; text-decoration: inherit;">email_<wbr>verified</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -330,7 +396,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>floating_<wbr>ip_<wbr>limit</span>
+        <span id="floating_ip_limit_python">
+<a href="#floating_ip_limit_python" style="color: inherit; text-decoration: inherit;">floating_<wbr>ip_<wbr>limit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -338,7 +406,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -347,7 +417,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>status</span>
+        <span id="status_python">
+<a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -355,7 +427,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>status_<wbr>message</span>
+        <span id="status_message_python">
+<a href="#status_message_python" style="color: inherit; text-decoration: inherit;">status_<wbr>message</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -363,7 +437,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>uuid</span>
+        <span id="uuid_python">
+<a href="#uuid_python" style="color: inherit; text-decoration: inherit;">uuid</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

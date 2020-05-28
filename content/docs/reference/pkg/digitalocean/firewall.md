@@ -13,168 +13,9 @@ meta_desc: "Explore the Firewall resource of the Digital Ocean package, includin
 Provides a DigitalOcean Cloud Firewall resource. This can be used to create,
 modify, and delete Firewalls.
 
-
-
 {{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_digitalocean as digitalocean
-
-web_droplet = digitalocean.Droplet("webDroplet",
-    size="s-1vcpu-1gb",
-    image="ubuntu-18-04-x64",
-    region="nyc3")
-web_firewall = digitalocean.Firewall("webFirewall",
-    droplet_ids=[web_droplet.id],
-    inbound_rule=[
-        {
-            "protocol": "tcp",
-            "portRange": "22",
-            "sourceAddresses": [
-                "192.168.1.0/24",
-                "2002:1:2::/48",
-            ],
-        },
-        {
-            "protocol": "tcp",
-            "portRange": "80",
-            "sourceAddresses": [
-                "0.0.0.0/0",
-                "::/0",
-            ],
-        },
-        {
-            "protocol": "tcp",
-            "portRange": "443",
-            "sourceAddresses": [
-                "0.0.0.0/0",
-                "::/0",
-            ],
-        },
-        {
-            "protocol": "icmp",
-            "sourceAddresses": [
-                "0.0.0.0/0",
-                "::/0",
-            ],
-        },
-    ],
-    outbound_rule=[
-        {
-            "protocol": "tcp",
-            "portRange": "53",
-            "destinationAddresses": [
-                "0.0.0.0/0",
-                "::/0",
-            ],
-        },
-        {
-            "protocol": "udp",
-            "portRange": "53",
-            "destinationAddresses": [
-                "0.0.0.0/0",
-                "::/0",
-            ],
-        },
-        {
-            "protocol": "icmp",
-            "destinationAddresses": [
-                "0.0.0.0/0",
-                "::/0",
-            ],
-        },
-    ])
-```
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as digitalocean from "@pulumi/digitalocean";
-
-const webDroplet = new digitalocean.Droplet("webDroplet", {
-    size: "s-1vcpu-1gb",
-    image: "ubuntu-18-04-x64",
-    region: "nyc3",
-});
-const webFirewall = new digitalocean.Firewall("webFirewall", {
-    dropletIds: [webDroplet.id],
-    inbound_rule: [
-        {
-            protocol: "tcp",
-            portRange: "22",
-            sourceAddresses: [
-                "192.168.1.0/24",
-                "2002:1:2::/48",
-            ],
-        },
-        {
-            protocol: "tcp",
-            portRange: "80",
-            sourceAddresses: [
-                "0.0.0.0/0",
-                "::/0",
-            ],
-        },
-        {
-            protocol: "tcp",
-            portRange: "443",
-            sourceAddresses: [
-                "0.0.0.0/0",
-                "::/0",
-            ],
-        },
-        {
-            protocol: "icmp",
-            sourceAddresses: [
-                "0.0.0.0/0",
-                "::/0",
-            ],
-        },
-    ],
-    outbound_rule: [
-        {
-            protocol: "tcp",
-            portRange: "53",
-            destinationAddresses: [
-                "0.0.0.0/0",
-                "::/0",
-            ],
-        },
-        {
-            protocol: "udp",
-            portRange: "53",
-            destinationAddresses: [
-                "0.0.0.0/0",
-                "::/0",
-            ],
-        },
-        {
-            protocol: "icmp",
-            destinationAddresses: [
-                "0.0.0.0/0",
-                "::/0",
-            ],
-        },
-    ],
-});
-```
-{{% /example %}}
-
 {{% /examples %}}
+
 
 
 ## Create a Firewall Resource {#create}
@@ -360,7 +201,9 @@ The Firewall resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Droplet<wbr>Ids</span>
+        <span id="dropletids_csharp">
+<a href="#dropletids_csharp" style="color: inherit; text-decoration: inherit;">Droplet<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;int&gt;</a></span>
     </dt>
@@ -370,7 +213,9 @@ to the Firewall.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Inbound<wbr>Rules</span>
+        <span id="inboundrules_csharp">
+<a href="#inboundrules_csharp" style="color: inherit; text-decoration: inherit;">Inbound<wbr>Rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallinboundrule">List&lt;Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Firewall<wbr>Inbound<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
@@ -380,7 +225,9 @@ The `inbound_rule` block is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -389,7 +236,9 @@ The `inbound_rule` block is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Outbound<wbr>Rules</span>
+        <span id="outboundrules_csharp">
+<a href="#outboundrules_csharp" style="color: inherit; text-decoration: inherit;">Outbound<wbr>Rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewalloutboundrule">List&lt;Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Firewall<wbr>Outbound<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
@@ -399,7 +248,9 @@ The `outbound_rule` block is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -415,7 +266,9 @@ The `outbound_rule` block is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Droplet<wbr>Ids</span>
+        <span id="dropletids_go">
+<a href="#dropletids_go" style="color: inherit; text-decoration: inherit;">Droplet<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">[]int</a></span>
     </dt>
@@ -425,7 +278,9 @@ to the Firewall.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Inbound<wbr>Rules</span>
+        <span id="inboundrules_go">
+<a href="#inboundrules_go" style="color: inherit; text-decoration: inherit;">Inbound<wbr>Rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallinboundrule">[]Firewall<wbr>Inbound<wbr>Rule</a></span>
     </dt>
@@ -435,7 +290,9 @@ The `inbound_rule` block is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -444,7 +301,9 @@ The `inbound_rule` block is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Outbound<wbr>Rules</span>
+        <span id="outboundrules_go">
+<a href="#outboundrules_go" style="color: inherit; text-decoration: inherit;">Outbound<wbr>Rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewalloutboundrule">[]Firewall<wbr>Outbound<wbr>Rule</a></span>
     </dt>
@@ -454,7 +313,9 @@ The `outbound_rule` block is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -470,7 +331,9 @@ The `outbound_rule` block is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>droplet<wbr>Ids</span>
+        <span id="dropletids_nodejs">
+<a href="#dropletids_nodejs" style="color: inherit; text-decoration: inherit;">droplet<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number[]</a></span>
     </dt>
@@ -480,7 +343,9 @@ to the Firewall.
 
     <dt class="property-optional"
             title="Optional">
-        <span>inbound<wbr>Rules</span>
+        <span id="inboundrules_nodejs">
+<a href="#inboundrules_nodejs" style="color: inherit; text-decoration: inherit;">inbound<wbr>Rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallinboundrule">Firewall<wbr>Inbound<wbr>Rule[]</a></span>
     </dt>
@@ -490,7 +355,9 @@ The `inbound_rule` block is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -499,7 +366,9 @@ The `inbound_rule` block is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>outbound<wbr>Rules</span>
+        <span id="outboundrules_nodejs">
+<a href="#outboundrules_nodejs" style="color: inherit; text-decoration: inherit;">outbound<wbr>Rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewalloutboundrule">Firewall<wbr>Outbound<wbr>Rule[]</a></span>
     </dt>
@@ -509,7 +378,9 @@ The `outbound_rule` block is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -525,7 +396,9 @@ The `outbound_rule` block is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>droplet_<wbr>ids</span>
+        <span id="droplet_ids_python">
+<a href="#droplet_ids_python" style="color: inherit; text-decoration: inherit;">droplet_<wbr>ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Integer]</a></span>
     </dt>
@@ -535,7 +408,9 @@ to the Firewall.
 
     <dt class="property-optional"
             title="Optional">
-        <span>inbound_<wbr>rules</span>
+        <span id="inbound_rules_python">
+<a href="#inbound_rules_python" style="color: inherit; text-decoration: inherit;">inbound_<wbr>rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallinboundrule">List[Firewall<wbr>Inbound<wbr>Rule]</a></span>
     </dt>
@@ -545,7 +420,9 @@ The `inbound_rule` block is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -554,7 +431,9 @@ The `inbound_rule` block is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>outbound_<wbr>rules</span>
+        <span id="outbound_rules_python">
+<a href="#outbound_rules_python" style="color: inherit; text-decoration: inherit;">outbound_<wbr>rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewalloutboundrule">List[Firewall<wbr>Outbound<wbr>Rule]</a></span>
     </dt>
@@ -564,7 +443,9 @@ The `outbound_rule` block is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -591,7 +472,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Created<wbr>At</span>
+        <span id="createdat_csharp">
+<a href="#createdat_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -601,7 +484,9 @@ that represents when the Firewall was created.
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -609,7 +494,9 @@ that represents when the Firewall was created.
 
     <dt class="property-"
             title="">
-        <span>Pending<wbr>Changes</span>
+        <span id="pendingchanges_csharp">
+<a href="#pendingchanges_csharp" style="color: inherit; text-decoration: inherit;">Pending<wbr>Changes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallpendingchange">List&lt;Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Outputs.<wbr>Firewall<wbr>Pending<wbr>Change&gt;</a></span>
     </dt>
@@ -621,7 +508,9 @@ have been successfully applied.
 
     <dt class="property-"
             title="">
-        <span>Status</span>
+        <span id="status_csharp">
+<a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -638,7 +527,9 @@ This can be "waiting", "succeeded", or "failed".
 
     <dt class="property-"
             title="">
-        <span>Created<wbr>At</span>
+        <span id="createdat_go">
+<a href="#createdat_go" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -648,7 +539,9 @@ that represents when the Firewall was created.
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -656,7 +549,9 @@ that represents when the Firewall was created.
 
     <dt class="property-"
             title="">
-        <span>Pending<wbr>Changes</span>
+        <span id="pendingchanges_go">
+<a href="#pendingchanges_go" style="color: inherit; text-decoration: inherit;">Pending<wbr>Changes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallpendingchange">[]Firewall<wbr>Pending<wbr>Change</a></span>
     </dt>
@@ -668,7 +563,9 @@ have been successfully applied.
 
     <dt class="property-"
             title="">
-        <span>Status</span>
+        <span id="status_go">
+<a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -685,7 +582,9 @@ This can be "waiting", "succeeded", or "failed".
 
     <dt class="property-"
             title="">
-        <span>created<wbr>At</span>
+        <span id="createdat_nodejs">
+<a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -695,7 +594,9 @@ that represents when the Firewall was created.
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -703,7 +604,9 @@ that represents when the Firewall was created.
 
     <dt class="property-"
             title="">
-        <span>pending<wbr>Changes</span>
+        <span id="pendingchanges_nodejs">
+<a href="#pendingchanges_nodejs" style="color: inherit; text-decoration: inherit;">pending<wbr>Changes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallpendingchange">Firewall<wbr>Pending<wbr>Change[]</a></span>
     </dt>
@@ -715,7 +618,9 @@ have been successfully applied.
 
     <dt class="property-"
             title="">
-        <span>status</span>
+        <span id="status_nodejs">
+<a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -732,7 +637,9 @@ This can be "waiting", "succeeded", or "failed".
 
     <dt class="property-"
             title="">
-        <span>created_<wbr>at</span>
+        <span id="created_at_python">
+<a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -742,7 +649,9 @@ that represents when the Firewall was created.
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -750,7 +659,9 @@ that represents when the Firewall was created.
 
     <dt class="property-"
             title="">
-        <span>pending_<wbr>changes</span>
+        <span id="pending_changes_python">
+<a href="#pending_changes_python" style="color: inherit; text-decoration: inherit;">pending_<wbr>changes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallpendingchange">List[Firewall<wbr>Pending<wbr>Change]</a></span>
     </dt>
@@ -762,7 +673,9 @@ have been successfully applied.
 
     <dt class="property-"
             title="">
-        <span>status</span>
+        <span id="status_python">
+<a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -905,7 +818,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Created<wbr>At</span>
+        <span id="state_createdat_csharp">
+<a href="#state_createdat_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -915,7 +830,9 @@ that represents when the Firewall was created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Droplet<wbr>Ids</span>
+        <span id="state_dropletids_csharp">
+<a href="#state_dropletids_csharp" style="color: inherit; text-decoration: inherit;">Droplet<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;int&gt;</a></span>
     </dt>
@@ -925,7 +842,9 @@ to the Firewall.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Inbound<wbr>Rules</span>
+        <span id="state_inboundrules_csharp">
+<a href="#state_inboundrules_csharp" style="color: inherit; text-decoration: inherit;">Inbound<wbr>Rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallinboundrule">List&lt;Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Firewall<wbr>Inbound<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
@@ -935,7 +854,9 @@ The `inbound_rule` block is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -944,7 +865,9 @@ The `inbound_rule` block is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Outbound<wbr>Rules</span>
+        <span id="state_outboundrules_csharp">
+<a href="#state_outboundrules_csharp" style="color: inherit; text-decoration: inherit;">Outbound<wbr>Rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewalloutboundrule">List&lt;Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Firewall<wbr>Outbound<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
@@ -954,7 +877,9 @@ The `outbound_rule` block is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Pending<wbr>Changes</span>
+        <span id="state_pendingchanges_csharp">
+<a href="#state_pendingchanges_csharp" style="color: inherit; text-decoration: inherit;">Pending<wbr>Changes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallpendingchange">List&lt;Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Firewall<wbr>Pending<wbr>Change<wbr>Args&gt;</a></span>
     </dt>
@@ -966,7 +891,9 @@ have been successfully applied.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Status</span>
+        <span id="state_status_csharp">
+<a href="#state_status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -976,7 +903,9 @@ This can be "waiting", "succeeded", or "failed".
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="state_tags_csharp">
+<a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -992,7 +921,9 @@ This can be "waiting", "succeeded", or "failed".
 
     <dt class="property-optional"
             title="Optional">
-        <span>Created<wbr>At</span>
+        <span id="state_createdat_go">
+<a href="#state_createdat_go" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1002,7 +933,9 @@ that represents when the Firewall was created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Droplet<wbr>Ids</span>
+        <span id="state_dropletids_go">
+<a href="#state_dropletids_go" style="color: inherit; text-decoration: inherit;">Droplet<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">[]int</a></span>
     </dt>
@@ -1012,7 +945,9 @@ to the Firewall.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Inbound<wbr>Rules</span>
+        <span id="state_inboundrules_go">
+<a href="#state_inboundrules_go" style="color: inherit; text-decoration: inherit;">Inbound<wbr>Rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallinboundrule">[]Firewall<wbr>Inbound<wbr>Rule</a></span>
     </dt>
@@ -1022,7 +957,9 @@ The `inbound_rule` block is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1031,7 +968,9 @@ The `inbound_rule` block is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Outbound<wbr>Rules</span>
+        <span id="state_outboundrules_go">
+<a href="#state_outboundrules_go" style="color: inherit; text-decoration: inherit;">Outbound<wbr>Rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewalloutboundrule">[]Firewall<wbr>Outbound<wbr>Rule</a></span>
     </dt>
@@ -1041,7 +980,9 @@ The `outbound_rule` block is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Pending<wbr>Changes</span>
+        <span id="state_pendingchanges_go">
+<a href="#state_pendingchanges_go" style="color: inherit; text-decoration: inherit;">Pending<wbr>Changes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallpendingchange">[]Firewall<wbr>Pending<wbr>Change</a></span>
     </dt>
@@ -1053,7 +994,9 @@ have been successfully applied.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Status</span>
+        <span id="state_status_go">
+<a href="#state_status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1063,7 +1006,9 @@ This can be "waiting", "succeeded", or "failed".
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="state_tags_go">
+<a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1079,7 +1024,9 @@ This can be "waiting", "succeeded", or "failed".
 
     <dt class="property-optional"
             title="Optional">
-        <span>created<wbr>At</span>
+        <span id="state_createdat_nodejs">
+<a href="#state_createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1089,7 +1036,9 @@ that represents when the Firewall was created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>droplet<wbr>Ids</span>
+        <span id="state_dropletids_nodejs">
+<a href="#state_dropletids_nodejs" style="color: inherit; text-decoration: inherit;">droplet<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number[]</a></span>
     </dt>
@@ -1099,7 +1048,9 @@ to the Firewall.
 
     <dt class="property-optional"
             title="Optional">
-        <span>inbound<wbr>Rules</span>
+        <span id="state_inboundrules_nodejs">
+<a href="#state_inboundrules_nodejs" style="color: inherit; text-decoration: inherit;">inbound<wbr>Rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallinboundrule">Firewall<wbr>Inbound<wbr>Rule[]</a></span>
     </dt>
@@ -1109,7 +1060,9 @@ The `inbound_rule` block is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1118,7 +1071,9 @@ The `inbound_rule` block is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>outbound<wbr>Rules</span>
+        <span id="state_outboundrules_nodejs">
+<a href="#state_outboundrules_nodejs" style="color: inherit; text-decoration: inherit;">outbound<wbr>Rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewalloutboundrule">Firewall<wbr>Outbound<wbr>Rule[]</a></span>
     </dt>
@@ -1128,7 +1083,9 @@ The `outbound_rule` block is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>pending<wbr>Changes</span>
+        <span id="state_pendingchanges_nodejs">
+<a href="#state_pendingchanges_nodejs" style="color: inherit; text-decoration: inherit;">pending<wbr>Changes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallpendingchange">Firewall<wbr>Pending<wbr>Change[]</a></span>
     </dt>
@@ -1140,7 +1097,9 @@ have been successfully applied.
 
     <dt class="property-optional"
             title="Optional">
-        <span>status</span>
+        <span id="state_status_nodejs">
+<a href="#state_status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1150,7 +1109,9 @@ This can be "waiting", "succeeded", or "failed".
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="state_tags_nodejs">
+<a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1166,7 +1127,9 @@ This can be "waiting", "succeeded", or "failed".
 
     <dt class="property-optional"
             title="Optional">
-        <span>created_<wbr>at</span>
+        <span id="state_created_at_python">
+<a href="#state_created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1176,7 +1139,9 @@ that represents when the Firewall was created.
 
     <dt class="property-optional"
             title="Optional">
-        <span>droplet_<wbr>ids</span>
+        <span id="state_droplet_ids_python">
+<a href="#state_droplet_ids_python" style="color: inherit; text-decoration: inherit;">droplet_<wbr>ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Integer]</a></span>
     </dt>
@@ -1186,7 +1151,9 @@ to the Firewall.
 
     <dt class="property-optional"
             title="Optional">
-        <span>inbound_<wbr>rules</span>
+        <span id="state_inbound_rules_python">
+<a href="#state_inbound_rules_python" style="color: inherit; text-decoration: inherit;">inbound_<wbr>rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallinboundrule">List[Firewall<wbr>Inbound<wbr>Rule]</a></span>
     </dt>
@@ -1196,7 +1163,9 @@ The `inbound_rule` block is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1205,7 +1174,9 @@ The `inbound_rule` block is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>outbound_<wbr>rules</span>
+        <span id="state_outbound_rules_python">
+<a href="#state_outbound_rules_python" style="color: inherit; text-decoration: inherit;">outbound_<wbr>rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewalloutboundrule">List[Firewall<wbr>Outbound<wbr>Rule]</a></span>
     </dt>
@@ -1215,7 +1186,9 @@ The `outbound_rule` block is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>pending_<wbr>changes</span>
+        <span id="state_pending_changes_python">
+<a href="#state_pending_changes_python" style="color: inherit; text-decoration: inherit;">pending_<wbr>changes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallpendingchange">List[Firewall<wbr>Pending<wbr>Change]</a></span>
     </dt>
@@ -1227,7 +1200,9 @@ have been successfully applied.
 
     <dt class="property-optional"
             title="Optional">
-        <span>status</span>
+        <span id="state_status_python">
+<a href="#state_status_python" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1237,7 +1212,9 @@ This can be "waiting", "succeeded", or "failed".
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="state_tags_python">
+<a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1279,7 +1256,9 @@ This can be "waiting", "succeeded", or "failed".
 
     <dt class="property-required"
             title="Required">
-        <span>Protocol</span>
+        <span id="protocol_csharp">
+<a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1289,7 +1268,9 @@ This may be one of "tcp", "udp", or "icmp".
 
     <dt class="property-optional"
             title="Optional">
-        <span>Port<wbr>Range</span>
+        <span id="portrange_csharp">
+<a href="#portrange_csharp" style="color: inherit; text-decoration: inherit;">Port<wbr>Range</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1301,7 +1282,9 @@ or "1-65535" to open all ports for a protocol. Required for when protocol is
 
     <dt class="property-optional"
             title="Optional">
-        <span>Source<wbr>Addresses</span>
+        <span id="sourceaddresses_csharp">
+<a href="#sourceaddresses_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Addresses</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1312,7 +1295,9 @@ inbound traffic will be accepted.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Source<wbr>Droplet<wbr>Ids</span>
+        <span id="sourcedropletids_csharp">
+<a href="#sourcedropletids_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Droplet<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;int&gt;</a></span>
     </dt>
@@ -1322,7 +1307,9 @@ the Droplets from which the inbound traffic will be accepted.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Source<wbr>Load<wbr>Balancer<wbr>Uids</span>
+        <span id="sourceloadbalanceruids_csharp">
+<a href="#sourceloadbalanceruids_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Load<wbr>Balancer<wbr>Uids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1332,7 +1319,9 @@ of the Load Balancers from which the inbound traffic will be accepted.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Source<wbr>Tags</span>
+        <span id="sourcetags_csharp">
+<a href="#sourcetags_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1350,7 +1339,9 @@ will be accepted.
 
     <dt class="property-required"
             title="Required">
-        <span>Protocol</span>
+        <span id="protocol_go">
+<a href="#protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1360,7 +1351,9 @@ This may be one of "tcp", "udp", or "icmp".
 
     <dt class="property-optional"
             title="Optional">
-        <span>Port<wbr>Range</span>
+        <span id="portrange_go">
+<a href="#portrange_go" style="color: inherit; text-decoration: inherit;">Port<wbr>Range</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1372,7 +1365,9 @@ or "1-65535" to open all ports for a protocol. Required for when protocol is
 
     <dt class="property-optional"
             title="Optional">
-        <span>Source<wbr>Addresses</span>
+        <span id="sourceaddresses_go">
+<a href="#sourceaddresses_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Addresses</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1383,7 +1378,9 @@ inbound traffic will be accepted.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Source<wbr>Droplet<wbr>Ids</span>
+        <span id="sourcedropletids_go">
+<a href="#sourcedropletids_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Droplet<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">[]int</a></span>
     </dt>
@@ -1393,7 +1390,9 @@ the Droplets from which the inbound traffic will be accepted.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Source<wbr>Load<wbr>Balancer<wbr>Uids</span>
+        <span id="sourceloadbalanceruids_go">
+<a href="#sourceloadbalanceruids_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Load<wbr>Balancer<wbr>Uids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1403,7 +1402,9 @@ of the Load Balancers from which the inbound traffic will be accepted.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Source<wbr>Tags</span>
+        <span id="sourcetags_go">
+<a href="#sourcetags_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1421,7 +1422,9 @@ will be accepted.
 
     <dt class="property-required"
             title="Required">
-        <span>protocol</span>
+        <span id="protocol_nodejs">
+<a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1431,7 +1434,9 @@ This may be one of "tcp", "udp", or "icmp".
 
     <dt class="property-optional"
             title="Optional">
-        <span>port<wbr>Range</span>
+        <span id="portrange_nodejs">
+<a href="#portrange_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Range</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1443,7 +1448,9 @@ or "1-65535" to open all ports for a protocol. Required for when protocol is
 
     <dt class="property-optional"
             title="Optional">
-        <span>source<wbr>Addresses</span>
+        <span id="sourceaddresses_nodejs">
+<a href="#sourceaddresses_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Addresses</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1454,7 +1461,9 @@ inbound traffic will be accepted.
 
     <dt class="property-optional"
             title="Optional">
-        <span>source<wbr>Droplet<wbr>Ids</span>
+        <span id="sourcedropletids_nodejs">
+<a href="#sourcedropletids_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Droplet<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number[]</a></span>
     </dt>
@@ -1464,7 +1473,9 @@ the Droplets from which the inbound traffic will be accepted.
 
     <dt class="property-optional"
             title="Optional">
-        <span>source<wbr>Load<wbr>Balancer<wbr>Uids</span>
+        <span id="sourceloadbalanceruids_nodejs">
+<a href="#sourceloadbalanceruids_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Load<wbr>Balancer<wbr>Uids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1474,7 +1485,9 @@ of the Load Balancers from which the inbound traffic will be accepted.
 
     <dt class="property-optional"
             title="Optional">
-        <span>source<wbr>Tags</span>
+        <span id="sourcetags_nodejs">
+<a href="#sourcetags_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1492,7 +1505,9 @@ will be accepted.
 
     <dt class="property-required"
             title="Required">
-        <span>protocol</span>
+        <span id="protocol_python">
+<a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1502,7 +1517,9 @@ This may be one of "tcp", "udp", or "icmp".
 
     <dt class="property-optional"
             title="Optional">
-        <span>port<wbr>Range</span>
+        <span id="portrange_python">
+<a href="#portrange_python" style="color: inherit; text-decoration: inherit;">port<wbr>Range</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1514,7 +1531,9 @@ or "1-65535" to open all ports for a protocol. Required for when protocol is
 
     <dt class="property-optional"
             title="Optional">
-        <span>source<wbr>Addresses</span>
+        <span id="sourceaddresses_python">
+<a href="#sourceaddresses_python" style="color: inherit; text-decoration: inherit;">source<wbr>Addresses</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1525,7 +1544,9 @@ inbound traffic will be accepted.
 
     <dt class="property-optional"
             title="Optional">
-        <span>source<wbr>Droplet<wbr>Ids</span>
+        <span id="sourcedropletids_python">
+<a href="#sourcedropletids_python" style="color: inherit; text-decoration: inherit;">source<wbr>Droplet<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Integer]</a></span>
     </dt>
@@ -1535,7 +1556,9 @@ the Droplets from which the inbound traffic will be accepted.
 
     <dt class="property-optional"
             title="Optional">
-        <span>source<wbr>Load<wbr>Balancer<wbr>Uids</span>
+        <span id="sourceloadbalanceruids_python">
+<a href="#sourceloadbalanceruids_python" style="color: inherit; text-decoration: inherit;">source<wbr>Load<wbr>Balancer<wbr>Uids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1545,7 +1568,9 @@ of the Load Balancers from which the inbound traffic will be accepted.
 
     <dt class="property-optional"
             title="Optional">
-        <span>source<wbr>Tags</span>
+        <span id="sourcetags_python">
+<a href="#sourcetags_python" style="color: inherit; text-decoration: inherit;">source<wbr>Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1581,7 +1606,9 @@ will be accepted.
 
     <dt class="property-required"
             title="Required">
-        <span>Protocol</span>
+        <span id="protocol_csharp">
+<a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1591,7 +1618,9 @@ This may be one of "tcp", "udp", or "icmp".
 
     <dt class="property-optional"
             title="Optional">
-        <span>Destination<wbr>Addresses</span>
+        <span id="destinationaddresses_csharp">
+<a href="#destinationaddresses_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Addresses</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1602,7 +1631,9 @@ outbound traffic will be allowed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Destination<wbr>Droplet<wbr>Ids</span>
+        <span id="destinationdropletids_csharp">
+<a href="#destinationdropletids_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Droplet<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;int&gt;</a></span>
     </dt>
@@ -1612,7 +1643,9 @@ the Droplets to which the outbound traffic will be allowed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Destination<wbr>Load<wbr>Balancer<wbr>Uids</span>
+        <span id="destinationloadbalanceruids_csharp">
+<a href="#destinationloadbalanceruids_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Load<wbr>Balancer<wbr>Uids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1622,7 +1655,9 @@ of the Load Balancers to which the outbound traffic will be allowed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Destination<wbr>Tags</span>
+        <span id="destinationtags_csharp">
+<a href="#destinationtags_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1634,7 +1669,9 @@ traffic.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Port<wbr>Range</span>
+        <span id="portrange_csharp">
+<a href="#portrange_csharp" style="color: inherit; text-decoration: inherit;">Port<wbr>Range</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1653,7 +1690,9 @@ or "1-65535" to open all ports for a protocol. Required for when protocol is
 
     <dt class="property-required"
             title="Required">
-        <span>Protocol</span>
+        <span id="protocol_go">
+<a href="#protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1663,7 +1702,9 @@ This may be one of "tcp", "udp", or "icmp".
 
     <dt class="property-optional"
             title="Optional">
-        <span>Destination<wbr>Addresses</span>
+        <span id="destinationaddresses_go">
+<a href="#destinationaddresses_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Addresses</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1674,7 +1715,9 @@ outbound traffic will be allowed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Destination<wbr>Droplet<wbr>Ids</span>
+        <span id="destinationdropletids_go">
+<a href="#destinationdropletids_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Droplet<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">[]int</a></span>
     </dt>
@@ -1684,7 +1727,9 @@ the Droplets to which the outbound traffic will be allowed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Destination<wbr>Load<wbr>Balancer<wbr>Uids</span>
+        <span id="destinationloadbalanceruids_go">
+<a href="#destinationloadbalanceruids_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Load<wbr>Balancer<wbr>Uids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1694,7 +1739,9 @@ of the Load Balancers to which the outbound traffic will be allowed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Destination<wbr>Tags</span>
+        <span id="destinationtags_go">
+<a href="#destinationtags_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1706,7 +1753,9 @@ traffic.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Port<wbr>Range</span>
+        <span id="portrange_go">
+<a href="#portrange_go" style="color: inherit; text-decoration: inherit;">Port<wbr>Range</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1725,7 +1774,9 @@ or "1-65535" to open all ports for a protocol. Required for when protocol is
 
     <dt class="property-required"
             title="Required">
-        <span>protocol</span>
+        <span id="protocol_nodejs">
+<a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1735,7 +1786,9 @@ This may be one of "tcp", "udp", or "icmp".
 
     <dt class="property-optional"
             title="Optional">
-        <span>destination<wbr>Addresses</span>
+        <span id="destinationaddresses_nodejs">
+<a href="#destinationaddresses_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Addresses</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1746,7 +1799,9 @@ outbound traffic will be allowed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>destination<wbr>Droplet<wbr>Ids</span>
+        <span id="destinationdropletids_nodejs">
+<a href="#destinationdropletids_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Droplet<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number[]</a></span>
     </dt>
@@ -1756,7 +1811,9 @@ the Droplets to which the outbound traffic will be allowed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>destination<wbr>Load<wbr>Balancer<wbr>Uids</span>
+        <span id="destinationloadbalanceruids_nodejs">
+<a href="#destinationloadbalanceruids_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Load<wbr>Balancer<wbr>Uids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1766,7 +1823,9 @@ of the Load Balancers to which the outbound traffic will be allowed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>destination<wbr>Tags</span>
+        <span id="destinationtags_nodejs">
+<a href="#destinationtags_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1778,7 +1837,9 @@ traffic.
 
     <dt class="property-optional"
             title="Optional">
-        <span>port<wbr>Range</span>
+        <span id="portrange_nodejs">
+<a href="#portrange_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Range</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1797,7 +1858,9 @@ or "1-65535" to open all ports for a protocol. Required for when protocol is
 
     <dt class="property-required"
             title="Required">
-        <span>protocol</span>
+        <span id="protocol_python">
+<a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1807,7 +1870,9 @@ This may be one of "tcp", "udp", or "icmp".
 
     <dt class="property-optional"
             title="Optional">
-        <span>destination<wbr>Addresses</span>
+        <span id="destinationaddresses_python">
+<a href="#destinationaddresses_python" style="color: inherit; text-decoration: inherit;">destination<wbr>Addresses</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1818,7 +1883,9 @@ outbound traffic will be allowed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>destination<wbr>Droplet<wbr>Ids</span>
+        <span id="destinationdropletids_python">
+<a href="#destinationdropletids_python" style="color: inherit; text-decoration: inherit;">destination<wbr>Droplet<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Integer]</a></span>
     </dt>
@@ -1828,7 +1895,9 @@ the Droplets to which the outbound traffic will be allowed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>destination<wbr>Load<wbr>Balancer<wbr>Uids</span>
+        <span id="destinationloadbalanceruids_python">
+<a href="#destinationloadbalanceruids_python" style="color: inherit; text-decoration: inherit;">destination<wbr>Load<wbr>Balancer<wbr>Uids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1838,7 +1907,9 @@ of the Load Balancers to which the outbound traffic will be allowed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>destination<wbr>Tags</span>
+        <span id="destinationtags_python">
+<a href="#destinationtags_python" style="color: inherit; text-decoration: inherit;">destination<wbr>Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1850,7 +1921,9 @@ traffic.
 
     <dt class="property-optional"
             title="Optional">
-        <span>port<wbr>Range</span>
+        <span id="portrange_python">
+<a href="#portrange_python" style="color: inherit; text-decoration: inherit;">port<wbr>Range</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1887,7 +1960,9 @@ or "1-65535" to open all ports for a protocol. Required for when protocol is
 
     <dt class="property-optional"
             title="Optional">
-        <span>Droplet<wbr>Id</span>
+        <span id="dropletid_csharp">
+<a href="#dropletid_csharp" style="color: inherit; text-decoration: inherit;">Droplet<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1895,7 +1970,9 @@ or "1-65535" to open all ports for a protocol. Required for when protocol is
 
     <dt class="property-optional"
             title="Optional">
-        <span>Removing</span>
+        <span id="removing_csharp">
+<a href="#removing_csharp" style="color: inherit; text-decoration: inherit;">Removing</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1903,7 +1980,9 @@ or "1-65535" to open all ports for a protocol. Required for when protocol is
 
     <dt class="property-optional"
             title="Optional">
-        <span>Status</span>
+        <span id="status_csharp">
+<a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1920,7 +1999,9 @@ This can be "waiting", "succeeded", or "failed".
 
     <dt class="property-optional"
             title="Optional">
-        <span>Droplet<wbr>Id</span>
+        <span id="dropletid_go">
+<a href="#dropletid_go" style="color: inherit; text-decoration: inherit;">Droplet<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1928,7 +2009,9 @@ This can be "waiting", "succeeded", or "failed".
 
     <dt class="property-optional"
             title="Optional">
-        <span>Removing</span>
+        <span id="removing_go">
+<a href="#removing_go" style="color: inherit; text-decoration: inherit;">Removing</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1936,7 +2019,9 @@ This can be "waiting", "succeeded", or "failed".
 
     <dt class="property-optional"
             title="Optional">
-        <span>Status</span>
+        <span id="status_go">
+<a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1953,7 +2038,9 @@ This can be "waiting", "succeeded", or "failed".
 
     <dt class="property-optional"
             title="Optional">
-        <span>droplet<wbr>Id</span>
+        <span id="dropletid_nodejs">
+<a href="#dropletid_nodejs" style="color: inherit; text-decoration: inherit;">droplet<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1961,7 +2048,9 @@ This can be "waiting", "succeeded", or "failed".
 
     <dt class="property-optional"
             title="Optional">
-        <span>removing</span>
+        <span id="removing_nodejs">
+<a href="#removing_nodejs" style="color: inherit; text-decoration: inherit;">removing</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1969,7 +2058,9 @@ This can be "waiting", "succeeded", or "failed".
 
     <dt class="property-optional"
             title="Optional">
-        <span>status</span>
+        <span id="status_nodejs">
+<a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1986,7 +2077,9 @@ This can be "waiting", "succeeded", or "failed".
 
     <dt class="property-optional"
             title="Optional">
-        <span>droplet_<wbr>id</span>
+        <span id="droplet_id_python">
+<a href="#droplet_id_python" style="color: inherit; text-decoration: inherit;">droplet_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1994,7 +2087,9 @@ This can be "waiting", "succeeded", or "failed".
 
     <dt class="property-optional"
             title="Optional">
-        <span>removing</span>
+        <span id="removing_python">
+<a href="#removing_python" style="color: inherit; text-decoration: inherit;">removing</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2002,7 +2097,9 @@ This can be "waiting", "succeeded", or "failed".
 
     <dt class="property-optional"
             title="Optional">
-        <span>status</span>
+        <span id="status_python">
+<a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

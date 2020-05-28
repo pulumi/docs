@@ -24,7 +24,32 @@ to obtain metadata about a single region if you already know the `slug` to retri
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using DigitalOcean = Pulumi.DigitalOcean;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var available = Output.Create(DigitalOcean.GetRegions.InvokeAsync(new DigitalOcean.GetRegionsArgs
+        {
+            Filters = 
+            {
+                new DigitalOcean.Inputs.GetRegionsFilterArgs
+                {
+                    Key = "available",
+                    Values = 
+                    {
+                        "true",
+                    },
+                },
+            },
+        }));
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -98,7 +123,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Filters</span>
+        <span id="filters_csharp">
+<a href="#filters_csharp" style="color: inherit; text-decoration: inherit;">Filters</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getregionsfilter">List&lt;Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Get<wbr>Regions<wbr>Filter<wbr>Args&gt;</a></span>
     </dt>
@@ -108,7 +135,9 @@ The `filter` block is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Sorts</span>
+        <span id="sorts_csharp">
+<a href="#sorts_csharp" style="color: inherit; text-decoration: inherit;">Sorts</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getregionssort">List&lt;Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Get<wbr>Regions<wbr>Sort<wbr>Args&gt;</a></span>
     </dt>
@@ -125,7 +154,9 @@ The `sort` block is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Filters</span>
+        <span id="filters_go">
+<a href="#filters_go" style="color: inherit; text-decoration: inherit;">Filters</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getregionsfilter">[]Get<wbr>Regions<wbr>Filter</a></span>
     </dt>
@@ -135,7 +166,9 @@ The `filter` block is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Sorts</span>
+        <span id="sorts_go">
+<a href="#sorts_go" style="color: inherit; text-decoration: inherit;">Sorts</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getregionssort">[]Get<wbr>Regions<wbr>Sort</a></span>
     </dt>
@@ -152,7 +185,9 @@ The `sort` block is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>filters</span>
+        <span id="filters_nodejs">
+<a href="#filters_nodejs" style="color: inherit; text-decoration: inherit;">filters</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getregionsfilter">Get<wbr>Regions<wbr>Filter[]</a></span>
     </dt>
@@ -162,7 +197,9 @@ The `filter` block is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>sorts</span>
+        <span id="sorts_nodejs">
+<a href="#sorts_nodejs" style="color: inherit; text-decoration: inherit;">sorts</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getregionssort">Get<wbr>Regions<wbr>Sort[]</a></span>
     </dt>
@@ -179,7 +216,9 @@ The `sort` block is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>filters</span>
+        <span id="filters_python">
+<a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getregionsfilter">List[Get<wbr>Regions<wbr>Filter]</a></span>
     </dt>
@@ -189,7 +228,9 @@ The `filter` block is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>sorts</span>
+        <span id="sorts_python">
+<a href="#sorts_python" style="color: inherit; text-decoration: inherit;">sorts</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getregionssort">List[Get<wbr>Regions<wbr>Sort]</a></span>
     </dt>
@@ -219,7 +260,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -228,7 +271,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Regions</span>
+        <span id="regions_csharp">
+<a href="#regions_csharp" style="color: inherit; text-decoration: inherit;">Regions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getregionsregion">List&lt;Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Outputs.<wbr>Get<wbr>Regions<wbr>Region&gt;</a></span>
     </dt>
@@ -242,7 +287,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Filters</span>
+        <span id="filters_csharp">
+<a href="#filters_csharp" style="color: inherit; text-decoration: inherit;">Filters</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getregionsfilter">List&lt;Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Outputs.<wbr>Get<wbr>Regions<wbr>Filter&gt;</a></span>
     </dt>
@@ -250,7 +297,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Sorts</span>
+        <span id="sorts_csharp">
+<a href="#sorts_csharp" style="color: inherit; text-decoration: inherit;">Sorts</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getregionssort">List&lt;Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Outputs.<wbr>Get<wbr>Regions<wbr>Sort&gt;</a></span>
     </dt>
@@ -265,7 +314,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -274,7 +325,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Regions</span>
+        <span id="regions_go">
+<a href="#regions_go" style="color: inherit; text-decoration: inherit;">Regions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getregionsregion">[]Get<wbr>Regions<wbr>Region</a></span>
     </dt>
@@ -288,7 +341,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Filters</span>
+        <span id="filters_go">
+<a href="#filters_go" style="color: inherit; text-decoration: inherit;">Filters</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getregionsfilter">[]Get<wbr>Regions<wbr>Filter</a></span>
     </dt>
@@ -296,7 +351,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Sorts</span>
+        <span id="sorts_go">
+<a href="#sorts_go" style="color: inherit; text-decoration: inherit;">Sorts</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getregionssort">[]Get<wbr>Regions<wbr>Sort</a></span>
     </dt>
@@ -311,7 +368,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -320,7 +379,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>regions</span>
+        <span id="regions_nodejs">
+<a href="#regions_nodejs" style="color: inherit; text-decoration: inherit;">regions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getregionsregion">Get<wbr>Regions<wbr>Region[]</a></span>
     </dt>
@@ -334,7 +395,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>filters</span>
+        <span id="filters_nodejs">
+<a href="#filters_nodejs" style="color: inherit; text-decoration: inherit;">filters</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getregionsfilter">Get<wbr>Regions<wbr>Filter[]</a></span>
     </dt>
@@ -342,7 +405,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>sorts</span>
+        <span id="sorts_nodejs">
+<a href="#sorts_nodejs" style="color: inherit; text-decoration: inherit;">sorts</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getregionssort">Get<wbr>Regions<wbr>Sort[]</a></span>
     </dt>
@@ -357,7 +422,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -366,7 +433,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>regions</span>
+        <span id="regions_python">
+<a href="#regions_python" style="color: inherit; text-decoration: inherit;">regions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getregionsregion">List[Get<wbr>Regions<wbr>Region]</a></span>
     </dt>
@@ -380,7 +449,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>filters</span>
+        <span id="filters_python">
+<a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getregionsfilter">List[Get<wbr>Regions<wbr>Filter]</a></span>
     </dt>
@@ -388,7 +459,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>sorts</span>
+        <span id="sorts_python">
+<a href="#sorts_python" style="color: inherit; text-decoration: inherit;">sorts</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getregionssort">List[Get<wbr>Regions<wbr>Sort]</a></span>
     </dt>
@@ -427,7 +500,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Key</span>
+        <span id="key_csharp">
+<a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -437,7 +512,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Values</span>
+        <span id="values_csharp">
+<a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -454,7 +531,9 @@ where the `key` field takes on one or more of the values provided here.
 
     <dt class="property-required"
             title="Required">
-        <span>Key</span>
+        <span id="key_go">
+<a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -464,7 +543,9 @@ where the `key` field takes on one or more of the values provided here.
 
     <dt class="property-required"
             title="Required">
-        <span>Values</span>
+        <span id="values_go">
+<a href="#values_go" style="color: inherit; text-decoration: inherit;">Values</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -481,7 +562,9 @@ where the `key` field takes on one or more of the values provided here.
 
     <dt class="property-required"
             title="Required">
-        <span>key</span>
+        <span id="key_nodejs">
+<a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -491,7 +574,9 @@ where the `key` field takes on one or more of the values provided here.
 
     <dt class="property-required"
             title="Required">
-        <span>values</span>
+        <span id="values_nodejs">
+<a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -508,7 +593,9 @@ where the `key` field takes on one or more of the values provided here.
 
     <dt class="property-required"
             title="Required">
-        <span>key</span>
+        <span id="key_python">
+<a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -518,7 +605,9 @@ where the `key` field takes on one or more of the values provided here.
 
     <dt class="property-required"
             title="Required">
-        <span>values</span>
+        <span id="values_python">
+<a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -553,7 +642,9 @@ where the `key` field takes on one or more of the values provided here.
 
     <dt class="property-required"
             title="Required">
-        <span>Available</span>
+        <span id="available_csharp">
+<a href="#available_csharp" style="color: inherit; text-decoration: inherit;">Available</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -561,7 +652,9 @@ where the `key` field takes on one or more of the values provided here.
 
     <dt class="property-required"
             title="Required">
-        <span>Features</span>
+        <span id="features_csharp">
+<a href="#features_csharp" style="color: inherit; text-decoration: inherit;">Features</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -569,7 +662,9 @@ where the `key` field takes on one or more of the values provided here.
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -577,7 +672,9 @@ where the `key` field takes on one or more of the values provided here.
 
     <dt class="property-required"
             title="Required">
-        <span>Sizes</span>
+        <span id="sizes_csharp">
+<a href="#sizes_csharp" style="color: inherit; text-decoration: inherit;">Sizes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -585,7 +682,9 @@ where the `key` field takes on one or more of the values provided here.
 
     <dt class="property-required"
             title="Required">
-        <span>Slug</span>
+        <span id="slug_csharp">
+<a href="#slug_csharp" style="color: inherit; text-decoration: inherit;">Slug</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -600,7 +699,9 @@ where the `key` field takes on one or more of the values provided here.
 
     <dt class="property-required"
             title="Required">
-        <span>Available</span>
+        <span id="available_go">
+<a href="#available_go" style="color: inherit; text-decoration: inherit;">Available</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -608,7 +709,9 @@ where the `key` field takes on one or more of the values provided here.
 
     <dt class="property-required"
             title="Required">
-        <span>Features</span>
+        <span id="features_go">
+<a href="#features_go" style="color: inherit; text-decoration: inherit;">Features</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -616,7 +719,9 @@ where the `key` field takes on one or more of the values provided here.
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -624,7 +729,9 @@ where the `key` field takes on one or more of the values provided here.
 
     <dt class="property-required"
             title="Required">
-        <span>Sizes</span>
+        <span id="sizes_go">
+<a href="#sizes_go" style="color: inherit; text-decoration: inherit;">Sizes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -632,7 +739,9 @@ where the `key` field takes on one or more of the values provided here.
 
     <dt class="property-required"
             title="Required">
-        <span>Slug</span>
+        <span id="slug_go">
+<a href="#slug_go" style="color: inherit; text-decoration: inherit;">Slug</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -647,7 +756,9 @@ where the `key` field takes on one or more of the values provided here.
 
     <dt class="property-required"
             title="Required">
-        <span>available</span>
+        <span id="available_nodejs">
+<a href="#available_nodejs" style="color: inherit; text-decoration: inherit;">available</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -655,7 +766,9 @@ where the `key` field takes on one or more of the values provided here.
 
     <dt class="property-required"
             title="Required">
-        <span>features</span>
+        <span id="features_nodejs">
+<a href="#features_nodejs" style="color: inherit; text-decoration: inherit;">features</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -663,7 +776,9 @@ where the `key` field takes on one or more of the values provided here.
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -671,7 +786,9 @@ where the `key` field takes on one or more of the values provided here.
 
     <dt class="property-required"
             title="Required">
-        <span>sizes</span>
+        <span id="sizes_nodejs">
+<a href="#sizes_nodejs" style="color: inherit; text-decoration: inherit;">sizes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -679,7 +796,9 @@ where the `key` field takes on one or more of the values provided here.
 
     <dt class="property-required"
             title="Required">
-        <span>slug</span>
+        <span id="slug_nodejs">
+<a href="#slug_nodejs" style="color: inherit; text-decoration: inherit;">slug</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -694,7 +813,9 @@ where the `key` field takes on one or more of the values provided here.
 
     <dt class="property-required"
             title="Required">
-        <span>available</span>
+        <span id="available_python">
+<a href="#available_python" style="color: inherit; text-decoration: inherit;">available</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -702,7 +823,9 @@ where the `key` field takes on one or more of the values provided here.
 
     <dt class="property-required"
             title="Required">
-        <span>features</span>
+        <span id="features_python">
+<a href="#features_python" style="color: inherit; text-decoration: inherit;">features</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -710,7 +833,9 @@ where the `key` field takes on one or more of the values provided here.
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -718,7 +843,9 @@ where the `key` field takes on one or more of the values provided here.
 
     <dt class="property-required"
             title="Required">
-        <span>sizes</span>
+        <span id="sizes_python">
+<a href="#sizes_python" style="color: inherit; text-decoration: inherit;">sizes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -726,7 +853,9 @@ where the `key` field takes on one or more of the values provided here.
 
     <dt class="property-required"
             title="Required">
-        <span>slug</span>
+        <span id="slug_python">
+<a href="#slug_python" style="color: inherit; text-decoration: inherit;">slug</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -759,7 +888,9 @@ where the `key` field takes on one or more of the values provided here.
 
     <dt class="property-required"
             title="Required">
-        <span>Key</span>
+        <span id="key_csharp">
+<a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -769,7 +900,9 @@ where the `key` field takes on one or more of the values provided here.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Direction</span>
+        <span id="direction_csharp">
+<a href="#direction_csharp" style="color: inherit; text-decoration: inherit;">Direction</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -785,7 +918,9 @@ where the `key` field takes on one or more of the values provided here.
 
     <dt class="property-required"
             title="Required">
-        <span>Key</span>
+        <span id="key_go">
+<a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -795,7 +930,9 @@ where the `key` field takes on one or more of the values provided here.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Direction</span>
+        <span id="direction_go">
+<a href="#direction_go" style="color: inherit; text-decoration: inherit;">Direction</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -811,7 +948,9 @@ where the `key` field takes on one or more of the values provided here.
 
     <dt class="property-required"
             title="Required">
-        <span>key</span>
+        <span id="key_nodejs">
+<a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -821,7 +960,9 @@ where the `key` field takes on one or more of the values provided here.
 
     <dt class="property-optional"
             title="Optional">
-        <span>direction</span>
+        <span id="direction_nodejs">
+<a href="#direction_nodejs" style="color: inherit; text-decoration: inherit;">direction</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -837,7 +978,9 @@ where the `key` field takes on one or more of the values provided here.
 
     <dt class="property-required"
             title="Required">
-        <span>key</span>
+        <span id="key_python">
+<a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -847,7 +990,9 @@ where the `key` field takes on one or more of the values provided here.
 
     <dt class="property-optional"
             title="Optional">
-        <span>direction</span>
+        <span id="direction_python">
+<a href="#direction_python" style="color: inherit; text-decoration: inherit;">direction</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

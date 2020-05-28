@@ -28,7 +28,7 @@ example:
 import * as pulumi from "@pulumi/pulumi";
 import * as digitalocean from "@pulumi/digitalocean";
 
-const static-assets = new digitalocean.SpacesBucket("static-assets", {});
+const static_assets = new digitalocean.SpacesBucket("static-assets", {});
 // ...
 ```
 ```python
@@ -36,6 +36,22 @@ import pulumi
 import pulumi_digitalocean as digitalocean
 
 static_assets = digitalocean.SpacesBucket("static-assets")
+```
+```csharp
+using Pulumi;
+using DigitalOcean = Pulumi.DigitalOcean;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var static_assets = new DigitalOcean.SpacesBucket("static-assets", new DigitalOcean.SpacesBucketArgs
+        {
+        });
+        // ...
+    }
+
+}
 ```
 
 For more information, See [An Introduction to DigitalOcean Spaces](https://www.digitalocean.com/community/tutorials/an-introduction-to-digitalocean-spaces)
@@ -48,7 +64,22 @@ For more information, See [An Introduction to DigitalOcean Spaces](https://www.d
 {{< chooser language "typescript,python,go,csharp" / >}}
 ### Create a New Bucket
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using DigitalOcean = Pulumi.DigitalOcean;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var foobar = new DigitalOcean.SpacesBucket("foobar", new DigitalOcean.SpacesBucketArgs
+        {
+            Region = "nyc3",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -77,7 +108,59 @@ const foobar = new digitalocean.SpacesBucket("foobar", {
 
 ### Create a New Bucket With CORS Rules
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using DigitalOcean = Pulumi.DigitalOcean;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var foobar = new DigitalOcean.SpacesBucket("foobar", new DigitalOcean.SpacesBucketArgs
+        {
+            CorsRules = 
+            {
+                new DigitalOcean.Inputs.SpacesBucketCorsRuleArgs
+                {
+                    AllowedHeaders = 
+                    {
+                        "*",
+                    },
+                    AllowedMethods = 
+                    {
+                        "GET",
+                    },
+                    AllowedOrigins = 
+                    {
+                        "*",
+                    },
+                    MaxAgeSeconds = 3000,
+                },
+                new DigitalOcean.Inputs.SpacesBucketCorsRuleArgs
+                {
+                    AllowedHeaders = 
+                    {
+                        "*",
+                    },
+                    AllowedMethods = 
+                    {
+                        "PUT",
+                        "POST",
+                        "DELETE",
+                    },
+                    AllowedOrigins = 
+                    {
+                        "https://www.example.com",
+                    },
+                    MaxAgeSeconds = 3000,
+                },
+            },
+            Region = "nyc3",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -327,7 +410,9 @@ The SpacesBucket resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Acl</span>
+        <span id="acl_csharp">
+<a href="#acl_csharp" style="color: inherit; text-decoration: inherit;">Acl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -336,7 +421,9 @@ The SpacesBucket resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cors<wbr>Rules</span>
+        <span id="corsrules_csharp">
+<a href="#corsrules_csharp" style="color: inherit; text-decoration: inherit;">Cors<wbr>Rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spacesbucketcorsrule">List&lt;Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Spaces<wbr>Bucket<wbr>Cors<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
@@ -345,7 +432,9 @@ The SpacesBucket resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Force<wbr>Destroy</span>
+        <span id="forcedestroy_csharp">
+<a href="#forcedestroy_csharp" style="color: inherit; text-decoration: inherit;">Force<wbr>Destroy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -354,7 +443,9 @@ The SpacesBucket resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Lifecycle<wbr>Rules</span>
+        <span id="lifecyclerules_csharp">
+<a href="#lifecyclerules_csharp" style="color: inherit; text-decoration: inherit;">Lifecycle<wbr>Rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spacesbucketlifecyclerule">List&lt;Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Spaces<wbr>Bucket<wbr>Lifecycle<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
@@ -363,7 +454,9 @@ The SpacesBucket resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -372,7 +465,9 @@ The SpacesBucket resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="region_csharp">
+<a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -381,7 +476,9 @@ The SpacesBucket resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Versioning</span>
+        <span id="versioning_csharp">
+<a href="#versioning_csharp" style="color: inherit; text-decoration: inherit;">Versioning</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spacesbucketversioning">Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Spaces<wbr>Bucket<wbr>Versioning<wbr>Args</a></span>
     </dt>
@@ -397,7 +494,9 @@ The SpacesBucket resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Acl</span>
+        <span id="acl_go">
+<a href="#acl_go" style="color: inherit; text-decoration: inherit;">Acl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -406,7 +505,9 @@ The SpacesBucket resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cors<wbr>Rules</span>
+        <span id="corsrules_go">
+<a href="#corsrules_go" style="color: inherit; text-decoration: inherit;">Cors<wbr>Rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spacesbucketcorsrule">[]Spaces<wbr>Bucket<wbr>Cors<wbr>Rule</a></span>
     </dt>
@@ -415,7 +516,9 @@ The SpacesBucket resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Force<wbr>Destroy</span>
+        <span id="forcedestroy_go">
+<a href="#forcedestroy_go" style="color: inherit; text-decoration: inherit;">Force<wbr>Destroy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -424,7 +527,9 @@ The SpacesBucket resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Lifecycle<wbr>Rules</span>
+        <span id="lifecyclerules_go">
+<a href="#lifecyclerules_go" style="color: inherit; text-decoration: inherit;">Lifecycle<wbr>Rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spacesbucketlifecyclerule">[]Spaces<wbr>Bucket<wbr>Lifecycle<wbr>Rule</a></span>
     </dt>
@@ -433,7 +538,9 @@ The SpacesBucket resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -442,7 +549,9 @@ The SpacesBucket resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="region_go">
+<a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -451,7 +560,9 @@ The SpacesBucket resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Versioning</span>
+        <span id="versioning_go">
+<a href="#versioning_go" style="color: inherit; text-decoration: inherit;">Versioning</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spacesbucketversioning">Spaces<wbr>Bucket<wbr>Versioning</a></span>
     </dt>
@@ -467,7 +578,9 @@ The SpacesBucket resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>acl</span>
+        <span id="acl_nodejs">
+<a href="#acl_nodejs" style="color: inherit; text-decoration: inherit;">acl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -476,7 +589,9 @@ The SpacesBucket resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>cors<wbr>Rules</span>
+        <span id="corsrules_nodejs">
+<a href="#corsrules_nodejs" style="color: inherit; text-decoration: inherit;">cors<wbr>Rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spacesbucketcorsrule">Spaces<wbr>Bucket<wbr>Cors<wbr>Rule[]</a></span>
     </dt>
@@ -485,7 +600,9 @@ The SpacesBucket resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>force<wbr>Destroy</span>
+        <span id="forcedestroy_nodejs">
+<a href="#forcedestroy_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Destroy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -494,7 +611,9 @@ The SpacesBucket resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>lifecycle<wbr>Rules</span>
+        <span id="lifecyclerules_nodejs">
+<a href="#lifecyclerules_nodejs" style="color: inherit; text-decoration: inherit;">lifecycle<wbr>Rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spacesbucketlifecyclerule">Spaces<wbr>Bucket<wbr>Lifecycle<wbr>Rule[]</a></span>
     </dt>
@@ -503,7 +622,9 @@ The SpacesBucket resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -512,7 +633,9 @@ The SpacesBucket resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="region_nodejs">
+<a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Region</span>
     </dt>
@@ -521,7 +644,9 @@ The SpacesBucket resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>versioning</span>
+        <span id="versioning_nodejs">
+<a href="#versioning_nodejs" style="color: inherit; text-decoration: inherit;">versioning</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spacesbucketversioning">Spaces<wbr>Bucket<wbr>Versioning</a></span>
     </dt>
@@ -537,7 +662,9 @@ The SpacesBucket resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>acl</span>
+        <span id="acl_python">
+<a href="#acl_python" style="color: inherit; text-decoration: inherit;">acl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -546,7 +673,9 @@ The SpacesBucket resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>cors_<wbr>rules</span>
+        <span id="cors_rules_python">
+<a href="#cors_rules_python" style="color: inherit; text-decoration: inherit;">cors_<wbr>rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spacesbucketcorsrule">List[Spaces<wbr>Bucket<wbr>Cors<wbr>Rule]</a></span>
     </dt>
@@ -555,7 +684,9 @@ The SpacesBucket resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>force_<wbr>destroy</span>
+        <span id="force_destroy_python">
+<a href="#force_destroy_python" style="color: inherit; text-decoration: inherit;">force_<wbr>destroy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -564,7 +695,9 @@ The SpacesBucket resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>lifecycle_<wbr>rules</span>
+        <span id="lifecycle_rules_python">
+<a href="#lifecycle_rules_python" style="color: inherit; text-decoration: inherit;">lifecycle_<wbr>rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spacesbucketlifecyclerule">List[Spaces<wbr>Bucket<wbr>Lifecycle<wbr>Rule]</a></span>
     </dt>
@@ -573,7 +706,9 @@ The SpacesBucket resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -582,7 +717,9 @@ The SpacesBucket resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="region_python">
+<a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -591,7 +728,9 @@ The SpacesBucket resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>versioning</span>
+        <span id="versioning_python">
+<a href="#versioning_python" style="color: inherit; text-decoration: inherit;">versioning</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spacesbucketversioning">Dict[Spaces<wbr>Bucket<wbr>Versioning]</a></span>
     </dt>
@@ -618,7 +757,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Bucket<wbr>Domain<wbr>Name</span>
+        <span id="bucketdomainname_csharp">
+<a href="#bucketdomainname_csharp" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Domain<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -627,7 +768,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -635,7 +778,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Urn</span>
+        <span id="urn_csharp">
+<a href="#urn_csharp" style="color: inherit; text-decoration: inherit;">Urn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -651,7 +796,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Bucket<wbr>Domain<wbr>Name</span>
+        <span id="bucketdomainname_go">
+<a href="#bucketdomainname_go" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Domain<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -660,7 +807,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -668,7 +817,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Urn</span>
+        <span id="urn_go">
+<a href="#urn_go" style="color: inherit; text-decoration: inherit;">Urn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -684,7 +835,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>bucket<wbr>Domain<wbr>Name</span>
+        <span id="bucketdomainname_nodejs">
+<a href="#bucketdomainname_nodejs" style="color: inherit; text-decoration: inherit;">bucket<wbr>Domain<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -693,7 +846,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -701,7 +856,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>urn</span>
+        <span id="urn_nodejs">
+<a href="#urn_nodejs" style="color: inherit; text-decoration: inherit;">urn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -717,7 +874,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>bucket_<wbr>domain_<wbr>name</span>
+        <span id="bucket_domain_name_python">
+<a href="#bucket_domain_name_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>domain_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -726,7 +885,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -734,7 +895,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>urn</span>
+        <span id="urn_python">
+<a href="#urn_python" style="color: inherit; text-decoration: inherit;">urn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -876,7 +1039,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Acl</span>
+        <span id="state_acl_csharp">
+<a href="#state_acl_csharp" style="color: inherit; text-decoration: inherit;">Acl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -885,7 +1050,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Bucket<wbr>Domain<wbr>Name</span>
+        <span id="state_bucketdomainname_csharp">
+<a href="#state_bucketdomainname_csharp" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Domain<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -894,7 +1061,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cors<wbr>Rules</span>
+        <span id="state_corsrules_csharp">
+<a href="#state_corsrules_csharp" style="color: inherit; text-decoration: inherit;">Cors<wbr>Rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spacesbucketcorsrule">List&lt;Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Spaces<wbr>Bucket<wbr>Cors<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
@@ -903,7 +1072,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Force<wbr>Destroy</span>
+        <span id="state_forcedestroy_csharp">
+<a href="#state_forcedestroy_csharp" style="color: inherit; text-decoration: inherit;">Force<wbr>Destroy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -912,7 +1083,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Lifecycle<wbr>Rules</span>
+        <span id="state_lifecyclerules_csharp">
+<a href="#state_lifecyclerules_csharp" style="color: inherit; text-decoration: inherit;">Lifecycle<wbr>Rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spacesbucketlifecyclerule">List&lt;Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Spaces<wbr>Bucket<wbr>Lifecycle<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
@@ -921,7 +1094,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -930,7 +1105,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="state_region_csharp">
+<a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -939,7 +1116,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Urn</span>
+        <span id="state_urn_csharp">
+<a href="#state_urn_csharp" style="color: inherit; text-decoration: inherit;">Urn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -948,7 +1127,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Versioning</span>
+        <span id="state_versioning_csharp">
+<a href="#state_versioning_csharp" style="color: inherit; text-decoration: inherit;">Versioning</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spacesbucketversioning">Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Spaces<wbr>Bucket<wbr>Versioning<wbr>Args</a></span>
     </dt>
@@ -964,7 +1145,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Acl</span>
+        <span id="state_acl_go">
+<a href="#state_acl_go" style="color: inherit; text-decoration: inherit;">Acl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -973,7 +1156,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Bucket<wbr>Domain<wbr>Name</span>
+        <span id="state_bucketdomainname_go">
+<a href="#state_bucketdomainname_go" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Domain<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -982,7 +1167,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cors<wbr>Rules</span>
+        <span id="state_corsrules_go">
+<a href="#state_corsrules_go" style="color: inherit; text-decoration: inherit;">Cors<wbr>Rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spacesbucketcorsrule">[]Spaces<wbr>Bucket<wbr>Cors<wbr>Rule</a></span>
     </dt>
@@ -991,7 +1178,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Force<wbr>Destroy</span>
+        <span id="state_forcedestroy_go">
+<a href="#state_forcedestroy_go" style="color: inherit; text-decoration: inherit;">Force<wbr>Destroy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1000,7 +1189,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Lifecycle<wbr>Rules</span>
+        <span id="state_lifecyclerules_go">
+<a href="#state_lifecyclerules_go" style="color: inherit; text-decoration: inherit;">Lifecycle<wbr>Rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spacesbucketlifecyclerule">[]Spaces<wbr>Bucket<wbr>Lifecycle<wbr>Rule</a></span>
     </dt>
@@ -1009,7 +1200,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1018,7 +1211,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="state_region_go">
+<a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -1027,7 +1222,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Urn</span>
+        <span id="state_urn_go">
+<a href="#state_urn_go" style="color: inherit; text-decoration: inherit;">Urn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1036,7 +1233,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Versioning</span>
+        <span id="state_versioning_go">
+<a href="#state_versioning_go" style="color: inherit; text-decoration: inherit;">Versioning</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spacesbucketversioning">Spaces<wbr>Bucket<wbr>Versioning</a></span>
     </dt>
@@ -1052,7 +1251,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>acl</span>
+        <span id="state_acl_nodejs">
+<a href="#state_acl_nodejs" style="color: inherit; text-decoration: inherit;">acl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1061,7 +1262,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>bucket<wbr>Domain<wbr>Name</span>
+        <span id="state_bucketdomainname_nodejs">
+<a href="#state_bucketdomainname_nodejs" style="color: inherit; text-decoration: inherit;">bucket<wbr>Domain<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1070,7 +1273,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>cors<wbr>Rules</span>
+        <span id="state_corsrules_nodejs">
+<a href="#state_corsrules_nodejs" style="color: inherit; text-decoration: inherit;">cors<wbr>Rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spacesbucketcorsrule">Spaces<wbr>Bucket<wbr>Cors<wbr>Rule[]</a></span>
     </dt>
@@ -1079,7 +1284,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>force<wbr>Destroy</span>
+        <span id="state_forcedestroy_nodejs">
+<a href="#state_forcedestroy_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Destroy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1088,7 +1295,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>lifecycle<wbr>Rules</span>
+        <span id="state_lifecyclerules_nodejs">
+<a href="#state_lifecyclerules_nodejs" style="color: inherit; text-decoration: inherit;">lifecycle<wbr>Rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spacesbucketlifecyclerule">Spaces<wbr>Bucket<wbr>Lifecycle<wbr>Rule[]</a></span>
     </dt>
@@ -1097,7 +1306,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1106,7 +1317,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="state_region_nodejs">
+<a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Region</span>
     </dt>
@@ -1115,7 +1328,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>urn</span>
+        <span id="state_urn_nodejs">
+<a href="#state_urn_nodejs" style="color: inherit; text-decoration: inherit;">urn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1124,7 +1339,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>versioning</span>
+        <span id="state_versioning_nodejs">
+<a href="#state_versioning_nodejs" style="color: inherit; text-decoration: inherit;">versioning</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spacesbucketversioning">Spaces<wbr>Bucket<wbr>Versioning</a></span>
     </dt>
@@ -1140,7 +1357,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>acl</span>
+        <span id="state_acl_python">
+<a href="#state_acl_python" style="color: inherit; text-decoration: inherit;">acl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1149,7 +1368,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>bucket_<wbr>domain_<wbr>name</span>
+        <span id="state_bucket_domain_name_python">
+<a href="#state_bucket_domain_name_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>domain_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1158,7 +1379,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>cors_<wbr>rules</span>
+        <span id="state_cors_rules_python">
+<a href="#state_cors_rules_python" style="color: inherit; text-decoration: inherit;">cors_<wbr>rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spacesbucketcorsrule">List[Spaces<wbr>Bucket<wbr>Cors<wbr>Rule]</a></span>
     </dt>
@@ -1167,7 +1390,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>force_<wbr>destroy</span>
+        <span id="state_force_destroy_python">
+<a href="#state_force_destroy_python" style="color: inherit; text-decoration: inherit;">force_<wbr>destroy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1176,7 +1401,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>lifecycle_<wbr>rules</span>
+        <span id="state_lifecycle_rules_python">
+<a href="#state_lifecycle_rules_python" style="color: inherit; text-decoration: inherit;">lifecycle_<wbr>rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spacesbucketlifecyclerule">List[Spaces<wbr>Bucket<wbr>Lifecycle<wbr>Rule]</a></span>
     </dt>
@@ -1185,7 +1412,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1194,7 +1423,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="state_region_python">
+<a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -1203,7 +1434,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>urn</span>
+        <span id="state_urn_python">
+<a href="#state_urn_python" style="color: inherit; text-decoration: inherit;">urn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1212,7 +1445,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>versioning</span>
+        <span id="state_versioning_python">
+<a href="#state_versioning_python" style="color: inherit; text-decoration: inherit;">versioning</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spacesbucketversioning">Dict[Spaces<wbr>Bucket<wbr>Versioning]</a></span>
     </dt>
@@ -1254,7 +1489,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Allowed<wbr>Methods</span>
+        <span id="allowedmethods_csharp">
+<a href="#allowedmethods_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Methods</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1263,7 +1500,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Allowed<wbr>Origins</span>
+        <span id="allowedorigins_csharp">
+<a href="#allowedorigins_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Origins</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1272,7 +1511,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Allowed<wbr>Headers</span>
+        <span id="allowedheaders_csharp">
+<a href="#allowedheaders_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Headers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1281,7 +1522,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Age<wbr>Seconds</span>
+        <span id="maxageseconds_csharp">
+<a href="#maxageseconds_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Age<wbr>Seconds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1297,7 +1540,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Allowed<wbr>Methods</span>
+        <span id="allowedmethods_go">
+<a href="#allowedmethods_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Methods</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1306,7 +1551,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Allowed<wbr>Origins</span>
+        <span id="allowedorigins_go">
+<a href="#allowedorigins_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Origins</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1315,7 +1562,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Allowed<wbr>Headers</span>
+        <span id="allowedheaders_go">
+<a href="#allowedheaders_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Headers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1324,7 +1573,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Age<wbr>Seconds</span>
+        <span id="maxageseconds_go">
+<a href="#maxageseconds_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Age<wbr>Seconds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1340,7 +1591,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>allowed<wbr>Methods</span>
+        <span id="allowedmethods_nodejs">
+<a href="#allowedmethods_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Methods</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1349,7 +1602,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>allowed<wbr>Origins</span>
+        <span id="allowedorigins_nodejs">
+<a href="#allowedorigins_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Origins</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1358,7 +1613,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>allowed<wbr>Headers</span>
+        <span id="allowedheaders_nodejs">
+<a href="#allowedheaders_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Headers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1367,7 +1624,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Age<wbr>Seconds</span>
+        <span id="maxageseconds_nodejs">
+<a href="#maxageseconds_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Age<wbr>Seconds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1383,7 +1642,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>allowed<wbr>Methods</span>
+        <span id="allowedmethods_python">
+<a href="#allowedmethods_python" style="color: inherit; text-decoration: inherit;">allowed<wbr>Methods</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1392,7 +1653,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>allowed<wbr>Origins</span>
+        <span id="allowedorigins_python">
+<a href="#allowedorigins_python" style="color: inherit; text-decoration: inherit;">allowed<wbr>Origins</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1401,7 +1664,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>allowed<wbr>Headers</span>
+        <span id="allowedheaders_python">
+<a href="#allowedheaders_python" style="color: inherit; text-decoration: inherit;">allowed<wbr>Headers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1410,7 +1675,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Age<wbr>Seconds</span>
+        <span id="maxageseconds_python">
+<a href="#maxageseconds_python" style="color: inherit; text-decoration: inherit;">max<wbr>Age<wbr>Seconds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1444,7 +1711,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Enabled</span>
+        <span id="enabled_csharp">
+<a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1453,7 +1722,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Abort<wbr>Incomplete<wbr>Multipart<wbr>Upload<wbr>Days</span>
+        <span id="abortincompletemultipartuploaddays_csharp">
+<a href="#abortincompletemultipartuploaddays_csharp" style="color: inherit; text-decoration: inherit;">Abort<wbr>Incomplete<wbr>Multipart<wbr>Upload<wbr>Days</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1463,7 +1734,9 @@ upload when the multipart upload must be completed or else Spaces will abort the
 
     <dt class="property-optional"
             title="Optional">
-        <span>Expiration</span>
+        <span id="expiration_csharp">
+<a href="#expiration_csharp" style="color: inherit; text-decoration: inherit;">Expiration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spacesbucketlifecycleruleexpiration">Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Spaces<wbr>Bucket<wbr>Lifecycle<wbr>Rule<wbr>Expiration<wbr>Args</a></span>
     </dt>
@@ -1472,7 +1745,9 @@ upload when the multipart upload must be completed or else Spaces will abort the
 
     <dt class="property-optional"
             title="Optional">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1481,7 +1756,9 @@ upload when the multipart upload must be completed or else Spaces will abort the
 
     <dt class="property-optional"
             title="Optional">
-        <span>Noncurrent<wbr>Version<wbr>Expiration</span>
+        <span id="noncurrentversionexpiration_csharp">
+<a href="#noncurrentversionexpiration_csharp" style="color: inherit; text-decoration: inherit;">Noncurrent<wbr>Version<wbr>Expiration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spacesbucketlifecyclerulenoncurrentversionexpiration">Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Spaces<wbr>Bucket<wbr>Lifecycle<wbr>Rule<wbr>Noncurrent<wbr>Version<wbr>Expiration<wbr>Args</a></span>
     </dt>
@@ -1490,7 +1767,9 @@ upload when the multipart upload must be completed or else Spaces will abort the
 
     <dt class="property-optional"
             title="Optional">
-        <span>Prefix</span>
+        <span id="prefix_csharp">
+<a href="#prefix_csharp" style="color: inherit; text-decoration: inherit;">Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1506,7 +1785,9 @@ upload when the multipart upload must be completed or else Spaces will abort the
 
     <dt class="property-required"
             title="Required">
-        <span>Enabled</span>
+        <span id="enabled_go">
+<a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1515,7 +1796,9 @@ upload when the multipart upload must be completed or else Spaces will abort the
 
     <dt class="property-optional"
             title="Optional">
-        <span>Abort<wbr>Incomplete<wbr>Multipart<wbr>Upload<wbr>Days</span>
+        <span id="abortincompletemultipartuploaddays_go">
+<a href="#abortincompletemultipartuploaddays_go" style="color: inherit; text-decoration: inherit;">Abort<wbr>Incomplete<wbr>Multipart<wbr>Upload<wbr>Days</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1525,7 +1808,9 @@ upload when the multipart upload must be completed or else Spaces will abort the
 
     <dt class="property-optional"
             title="Optional">
-        <span>Expiration</span>
+        <span id="expiration_go">
+<a href="#expiration_go" style="color: inherit; text-decoration: inherit;">Expiration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spacesbucketlifecycleruleexpiration">Spaces<wbr>Bucket<wbr>Lifecycle<wbr>Rule<wbr>Expiration</a></span>
     </dt>
@@ -1534,7 +1819,9 @@ upload when the multipart upload must be completed or else Spaces will abort the
 
     <dt class="property-optional"
             title="Optional">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1543,7 +1830,9 @@ upload when the multipart upload must be completed or else Spaces will abort the
 
     <dt class="property-optional"
             title="Optional">
-        <span>Noncurrent<wbr>Version<wbr>Expiration</span>
+        <span id="noncurrentversionexpiration_go">
+<a href="#noncurrentversionexpiration_go" style="color: inherit; text-decoration: inherit;">Noncurrent<wbr>Version<wbr>Expiration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spacesbucketlifecyclerulenoncurrentversionexpiration">Spaces<wbr>Bucket<wbr>Lifecycle<wbr>Rule<wbr>Noncurrent<wbr>Version<wbr>Expiration</a></span>
     </dt>
@@ -1552,7 +1841,9 @@ upload when the multipart upload must be completed or else Spaces will abort the
 
     <dt class="property-optional"
             title="Optional">
-        <span>Prefix</span>
+        <span id="prefix_go">
+<a href="#prefix_go" style="color: inherit; text-decoration: inherit;">Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1568,7 +1859,9 @@ upload when the multipart upload must be completed or else Spaces will abort the
 
     <dt class="property-required"
             title="Required">
-        <span>enabled</span>
+        <span id="enabled_nodejs">
+<a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1577,7 +1870,9 @@ upload when the multipart upload must be completed or else Spaces will abort the
 
     <dt class="property-optional"
             title="Optional">
-        <span>abort<wbr>Incomplete<wbr>Multipart<wbr>Upload<wbr>Days</span>
+        <span id="abortincompletemultipartuploaddays_nodejs">
+<a href="#abortincompletemultipartuploaddays_nodejs" style="color: inherit; text-decoration: inherit;">abort<wbr>Incomplete<wbr>Multipart<wbr>Upload<wbr>Days</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1587,7 +1882,9 @@ upload when the multipart upload must be completed or else Spaces will abort the
 
     <dt class="property-optional"
             title="Optional">
-        <span>expiration</span>
+        <span id="expiration_nodejs">
+<a href="#expiration_nodejs" style="color: inherit; text-decoration: inherit;">expiration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spacesbucketlifecycleruleexpiration">Spaces<wbr>Bucket<wbr>Lifecycle<wbr>Rule<wbr>Expiration</a></span>
     </dt>
@@ -1596,7 +1893,9 @@ upload when the multipart upload must be completed or else Spaces will abort the
 
     <dt class="property-optional"
             title="Optional">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1605,7 +1904,9 @@ upload when the multipart upload must be completed or else Spaces will abort the
 
     <dt class="property-optional"
             title="Optional">
-        <span>noncurrent<wbr>Version<wbr>Expiration</span>
+        <span id="noncurrentversionexpiration_nodejs">
+<a href="#noncurrentversionexpiration_nodejs" style="color: inherit; text-decoration: inherit;">noncurrent<wbr>Version<wbr>Expiration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spacesbucketlifecyclerulenoncurrentversionexpiration">Spaces<wbr>Bucket<wbr>Lifecycle<wbr>Rule<wbr>Noncurrent<wbr>Version<wbr>Expiration</a></span>
     </dt>
@@ -1614,7 +1915,9 @@ upload when the multipart upload must be completed or else Spaces will abort the
 
     <dt class="property-optional"
             title="Optional">
-        <span>prefix</span>
+        <span id="prefix_nodejs">
+<a href="#prefix_nodejs" style="color: inherit; text-decoration: inherit;">prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1630,7 +1933,9 @@ upload when the multipart upload must be completed or else Spaces will abort the
 
     <dt class="property-required"
             title="Required">
-        <span>enabled</span>
+        <span id="enabled_python">
+<a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1639,7 +1944,9 @@ upload when the multipart upload must be completed or else Spaces will abort the
 
     <dt class="property-optional"
             title="Optional">
-        <span>abort<wbr>Incomplete<wbr>Multipart<wbr>Upload<wbr>Days</span>
+        <span id="abortincompletemultipartuploaddays_python">
+<a href="#abortincompletemultipartuploaddays_python" style="color: inherit; text-decoration: inherit;">abort<wbr>Incomplete<wbr>Multipart<wbr>Upload<wbr>Days</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1649,7 +1956,9 @@ upload when the multipart upload must be completed or else Spaces will abort the
 
     <dt class="property-optional"
             title="Optional">
-        <span>expiration</span>
+        <span id="expiration_python">
+<a href="#expiration_python" style="color: inherit; text-decoration: inherit;">expiration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spacesbucketlifecycleruleexpiration">Dict[Spaces<wbr>Bucket<wbr>Lifecycle<wbr>Rule<wbr>Expiration]</a></span>
     </dt>
@@ -1658,7 +1967,9 @@ upload when the multipart upload must be completed or else Spaces will abort the
 
     <dt class="property-optional"
             title="Optional">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1667,7 +1978,9 @@ upload when the multipart upload must be completed or else Spaces will abort the
 
     <dt class="property-optional"
             title="Optional">
-        <span>noncurrent<wbr>Version<wbr>Expiration</span>
+        <span id="noncurrentversionexpiration_python">
+<a href="#noncurrentversionexpiration_python" style="color: inherit; text-decoration: inherit;">noncurrent<wbr>Version<wbr>Expiration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spacesbucketlifecyclerulenoncurrentversionexpiration">Dict[Spaces<wbr>Bucket<wbr>Lifecycle<wbr>Rule<wbr>Noncurrent<wbr>Version<wbr>Expiration]</a></span>
     </dt>
@@ -1676,7 +1989,9 @@ upload when the multipart upload must be completed or else Spaces will abort the
 
     <dt class="property-optional"
             title="Optional">
-        <span>prefix</span>
+        <span id="prefix_python">
+<a href="#prefix_python" style="color: inherit; text-decoration: inherit;">prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1710,7 +2025,9 @@ upload when the multipart upload must be completed or else Spaces will abort the
 
     <dt class="property-optional"
             title="Optional">
-        <span>Date</span>
+        <span id="date_csharp">
+<a href="#date_csharp" style="color: inherit; text-decoration: inherit;">Date</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1720,7 +2037,9 @@ RFC3339 format, e.g. "2020-03-22T15:03:55Z" or parts thereof e.g. "2019-02-28".
 
     <dt class="property-optional"
             title="Optional">
-        <span>Days</span>
+        <span id="days_csharp">
+<a href="#days_csharp" style="color: inherit; text-decoration: inherit;">Days</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1729,7 +2048,9 @@ RFC3339 format, e.g. "2020-03-22T15:03:55Z" or parts thereof e.g. "2019-02-28".
 
     <dt class="property-optional"
             title="Optional">
-        <span>Expired<wbr>Object<wbr>Delete<wbr>Marker</span>
+        <span id="expiredobjectdeletemarker_csharp">
+<a href="#expiredobjectdeletemarker_csharp" style="color: inherit; text-decoration: inherit;">Expired<wbr>Object<wbr>Delete<wbr>Marker</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1746,7 +2067,9 @@ bucket), setting this to true directs Spaces to delete expired object delete mar
 
     <dt class="property-optional"
             title="Optional">
-        <span>Date</span>
+        <span id="date_go">
+<a href="#date_go" style="color: inherit; text-decoration: inherit;">Date</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1756,7 +2079,9 @@ RFC3339 format, e.g. "2020-03-22T15:03:55Z" or parts thereof e.g. "2019-02-28".
 
     <dt class="property-optional"
             title="Optional">
-        <span>Days</span>
+        <span id="days_go">
+<a href="#days_go" style="color: inherit; text-decoration: inherit;">Days</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1765,7 +2090,9 @@ RFC3339 format, e.g. "2020-03-22T15:03:55Z" or parts thereof e.g. "2019-02-28".
 
     <dt class="property-optional"
             title="Optional">
-        <span>Expired<wbr>Object<wbr>Delete<wbr>Marker</span>
+        <span id="expiredobjectdeletemarker_go">
+<a href="#expiredobjectdeletemarker_go" style="color: inherit; text-decoration: inherit;">Expired<wbr>Object<wbr>Delete<wbr>Marker</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1782,7 +2109,9 @@ bucket), setting this to true directs Spaces to delete expired object delete mar
 
     <dt class="property-optional"
             title="Optional">
-        <span>date</span>
+        <span id="date_nodejs">
+<a href="#date_nodejs" style="color: inherit; text-decoration: inherit;">date</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1792,7 +2121,9 @@ RFC3339 format, e.g. "2020-03-22T15:03:55Z" or parts thereof e.g. "2019-02-28".
 
     <dt class="property-optional"
             title="Optional">
-        <span>days</span>
+        <span id="days_nodejs">
+<a href="#days_nodejs" style="color: inherit; text-decoration: inherit;">days</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1801,7 +2132,9 @@ RFC3339 format, e.g. "2020-03-22T15:03:55Z" or parts thereof e.g. "2019-02-28".
 
     <dt class="property-optional"
             title="Optional">
-        <span>expired<wbr>Object<wbr>Delete<wbr>Marker</span>
+        <span id="expiredobjectdeletemarker_nodejs">
+<a href="#expiredobjectdeletemarker_nodejs" style="color: inherit; text-decoration: inherit;">expired<wbr>Object<wbr>Delete<wbr>Marker</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1818,7 +2151,9 @@ bucket), setting this to true directs Spaces to delete expired object delete mar
 
     <dt class="property-optional"
             title="Optional">
-        <span>date</span>
+        <span id="date_python">
+<a href="#date_python" style="color: inherit; text-decoration: inherit;">date</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1828,7 +2163,9 @@ RFC3339 format, e.g. "2020-03-22T15:03:55Z" or parts thereof e.g. "2019-02-28".
 
     <dt class="property-optional"
             title="Optional">
-        <span>days</span>
+        <span id="days_python">
+<a href="#days_python" style="color: inherit; text-decoration: inherit;">days</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1837,7 +2174,9 @@ RFC3339 format, e.g. "2020-03-22T15:03:55Z" or parts thereof e.g. "2019-02-28".
 
     <dt class="property-optional"
             title="Optional">
-        <span>expired<wbr>Object<wbr>Delete<wbr>Marker</span>
+        <span id="expiredobjectdeletemarker_python">
+<a href="#expiredobjectdeletemarker_python" style="color: inherit; text-decoration: inherit;">expired<wbr>Object<wbr>Delete<wbr>Marker</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1872,7 +2211,9 @@ bucket), setting this to true directs Spaces to delete expired object delete mar
 
     <dt class="property-optional"
             title="Optional">
-        <span>Days</span>
+        <span id="days_csharp">
+<a href="#days_csharp" style="color: inherit; text-decoration: inherit;">Days</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1888,7 +2229,9 @@ bucket), setting this to true directs Spaces to delete expired object delete mar
 
     <dt class="property-optional"
             title="Optional">
-        <span>Days</span>
+        <span id="days_go">
+<a href="#days_go" style="color: inherit; text-decoration: inherit;">Days</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1904,7 +2247,9 @@ bucket), setting this to true directs Spaces to delete expired object delete mar
 
     <dt class="property-optional"
             title="Optional">
-        <span>days</span>
+        <span id="days_nodejs">
+<a href="#days_nodejs" style="color: inherit; text-decoration: inherit;">days</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1920,7 +2265,9 @@ bucket), setting this to true directs Spaces to delete expired object delete mar
 
     <dt class="property-optional"
             title="Optional">
-        <span>days</span>
+        <span id="days_python">
+<a href="#days_python" style="color: inherit; text-decoration: inherit;">days</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1954,7 +2301,9 @@ bucket), setting this to true directs Spaces to delete expired object delete mar
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enabled</span>
+        <span id="enabled_csharp">
+<a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1971,7 +2320,9 @@ state. You can, however, suspend versioning on that bucket.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enabled</span>
+        <span id="enabled_go">
+<a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1988,7 +2339,9 @@ state. You can, however, suspend versioning on that bucket.
 
     <dt class="property-optional"
             title="Optional">
-        <span>enabled</span>
+        <span id="enabled_nodejs">
+<a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -2005,7 +2358,9 @@ state. You can, however, suspend versioning on that bucket.
 
     <dt class="property-optional"
             title="Optional">
-        <span>enabled</span>
+        <span id="enabled_python">
+<a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>

@@ -22,7 +22,25 @@ modify, and delete Droplets. Droplets also support
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using DigitalOcean = Pulumi.DigitalOcean;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        // Create a new Web Droplet in the nyc2 region
+        var web = new DigitalOcean.Droplet("web", new DigitalOcean.DropletArgs
+        {
+            Image = "ubuntu-18-04-x64",
+            Region = "nyc2",
+            Size = "s-1vcpu-1gb",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -242,7 +260,9 @@ The Droplet resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-required"
             title="Required">
-        <span>Image</span>
+        <span id="image_csharp">
+<a href="#image_csharp" style="color: inherit; text-decoration: inherit;">Image</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -251,7 +271,9 @@ The Droplet resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-required"
             title="Required">
-        <span>Region</span>
+        <span id="region_csharp">
+<a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -260,7 +282,9 @@ The Droplet resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-required"
             title="Required">
-        <span>Size</span>
+        <span id="size_csharp">
+<a href="#size_csharp" style="color: inherit; text-decoration: inherit;">Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -269,7 +293,9 @@ The Droplet resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>Backups</span>
+        <span id="backups_csharp">
+<a href="#backups_csharp" style="color: inherit; text-decoration: inherit;">Backups</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -279,7 +305,9 @@ false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ipv6</span>
+        <span id="ipv6_csharp">
+<a href="#ipv6_csharp" style="color: inherit; text-decoration: inherit;">Ipv6</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -288,7 +316,9 @@ false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Monitoring</span>
+        <span id="monitoring_csharp">
+<a href="#monitoring_csharp" style="color: inherit; text-decoration: inherit;">Monitoring</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -298,7 +328,9 @@ Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -307,7 +339,9 @@ Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Private<wbr>Networking</span>
+        <span id="privatenetworking_csharp">
+<a href="#privatenetworking_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Networking</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -319,7 +353,9 @@ Droplet inside of your account's default VPC for the region. Use the
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resize<wbr>Disk</span>
+        <span id="resizedisk_csharp">
+<a href="#resizedisk_csharp" style="color: inherit; text-decoration: inherit;">Resize<wbr>Disk</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -331,7 +367,9 @@ size is a permanent change**. Increasing only RAM and CPU is reversible.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ssh<wbr>Keys</span>
+        <span id="sshkeys_csharp">
+<a href="#sshkeys_csharp" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Keys</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -343,7 +381,9 @@ to retrieve them.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -352,7 +392,9 @@ to retrieve them.
 
     <dt class="property-optional"
             title="Optional">
-        <span>User<wbr>Data</span>
+        <span id="userdata_csharp">
+<a href="#userdata_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -361,7 +403,9 @@ to retrieve them.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Volume<wbr>Ids</span>
+        <span id="volumeids_csharp">
+<a href="#volumeids_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -370,7 +414,9 @@ to retrieve them.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vpc<wbr>Uuid</span>
+        <span id="vpcuuid_csharp">
+<a href="#vpcuuid_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Uuid</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -386,7 +432,9 @@ to retrieve them.
 
     <dt class="property-required"
             title="Required">
-        <span>Image</span>
+        <span id="image_go">
+<a href="#image_go" style="color: inherit; text-decoration: inherit;">Image</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -395,7 +443,9 @@ to retrieve them.
 
     <dt class="property-required"
             title="Required">
-        <span>Region</span>
+        <span id="region_go">
+<a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -404,7 +454,9 @@ to retrieve them.
 
     <dt class="property-required"
             title="Required">
-        <span>Size</span>
+        <span id="size_go">
+<a href="#size_go" style="color: inherit; text-decoration: inherit;">Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -413,7 +465,9 @@ to retrieve them.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Backups</span>
+        <span id="backups_go">
+<a href="#backups_go" style="color: inherit; text-decoration: inherit;">Backups</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -423,7 +477,9 @@ false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ipv6</span>
+        <span id="ipv6_go">
+<a href="#ipv6_go" style="color: inherit; text-decoration: inherit;">Ipv6</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -432,7 +488,9 @@ false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Monitoring</span>
+        <span id="monitoring_go">
+<a href="#monitoring_go" style="color: inherit; text-decoration: inherit;">Monitoring</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -442,7 +500,9 @@ Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -451,7 +511,9 @@ Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Private<wbr>Networking</span>
+        <span id="privatenetworking_go">
+<a href="#privatenetworking_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Networking</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -463,7 +525,9 @@ Droplet inside of your account's default VPC for the region. Use the
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resize<wbr>Disk</span>
+        <span id="resizedisk_go">
+<a href="#resizedisk_go" style="color: inherit; text-decoration: inherit;">Resize<wbr>Disk</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -475,7 +539,9 @@ size is a permanent change**. Increasing only RAM and CPU is reversible.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ssh<wbr>Keys</span>
+        <span id="sshkeys_go">
+<a href="#sshkeys_go" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Keys</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -487,7 +553,9 @@ to retrieve them.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -496,7 +564,9 @@ to retrieve them.
 
     <dt class="property-optional"
             title="Optional">
-        <span>User<wbr>Data</span>
+        <span id="userdata_go">
+<a href="#userdata_go" style="color: inherit; text-decoration: inherit;">User<wbr>Data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -505,7 +575,9 @@ to retrieve them.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Volume<wbr>Ids</span>
+        <span id="volumeids_go">
+<a href="#volumeids_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -514,7 +586,9 @@ to retrieve them.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vpc<wbr>Uuid</span>
+        <span id="vpcuuid_go">
+<a href="#vpcuuid_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Uuid</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -530,7 +604,9 @@ to retrieve them.
 
     <dt class="property-required"
             title="Required">
-        <span>image</span>
+        <span id="image_nodejs">
+<a href="#image_nodejs" style="color: inherit; text-decoration: inherit;">image</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -539,7 +615,9 @@ to retrieve them.
 
     <dt class="property-required"
             title="Required">
-        <span>region</span>
+        <span id="region_nodejs">
+<a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Region</span>
     </dt>
@@ -548,7 +626,9 @@ to retrieve them.
 
     <dt class="property-required"
             title="Required">
-        <span>size</span>
+        <span id="size_nodejs">
+<a href="#size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Droplet<wbr>Slug</span>
     </dt>
@@ -557,7 +637,9 @@ to retrieve them.
 
     <dt class="property-optional"
             title="Optional">
-        <span>backups</span>
+        <span id="backups_nodejs">
+<a href="#backups_nodejs" style="color: inherit; text-decoration: inherit;">backups</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -567,7 +649,9 @@ false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ipv6</span>
+        <span id="ipv6_nodejs">
+<a href="#ipv6_nodejs" style="color: inherit; text-decoration: inherit;">ipv6</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -576,7 +660,9 @@ false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>monitoring</span>
+        <span id="monitoring_nodejs">
+<a href="#monitoring_nodejs" style="color: inherit; text-decoration: inherit;">monitoring</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -586,7 +672,9 @@ Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -595,7 +683,9 @@ Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>private<wbr>Networking</span>
+        <span id="privatenetworking_nodejs">
+<a href="#privatenetworking_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Networking</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -607,7 +697,9 @@ Droplet inside of your account's default VPC for the region. Use the
 
     <dt class="property-optional"
             title="Optional">
-        <span>resize<wbr>Disk</span>
+        <span id="resizedisk_nodejs">
+<a href="#resizedisk_nodejs" style="color: inherit; text-decoration: inherit;">resize<wbr>Disk</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -619,7 +711,9 @@ size is a permanent change**. Increasing only RAM and CPU is reversible.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ssh<wbr>Keys</span>
+        <span id="sshkeys_nodejs">
+<a href="#sshkeys_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>Keys</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -631,7 +725,9 @@ to retrieve them.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -640,7 +736,9 @@ to retrieve them.
 
     <dt class="property-optional"
             title="Optional">
-        <span>user<wbr>Data</span>
+        <span id="userdata_nodejs">
+<a href="#userdata_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -649,7 +747,9 @@ to retrieve them.
 
     <dt class="property-optional"
             title="Optional">
-        <span>volume<wbr>Ids</span>
+        <span id="volumeids_nodejs">
+<a href="#volumeids_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -658,7 +758,9 @@ to retrieve them.
 
     <dt class="property-optional"
             title="Optional">
-        <span>vpc<wbr>Uuid</span>
+        <span id="vpcuuid_nodejs">
+<a href="#vpcuuid_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Uuid</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -674,7 +776,9 @@ to retrieve them.
 
     <dt class="property-required"
             title="Required">
-        <span>image</span>
+        <span id="image_python">
+<a href="#image_python" style="color: inherit; text-decoration: inherit;">image</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -683,7 +787,9 @@ to retrieve them.
 
     <dt class="property-required"
             title="Required">
-        <span>region</span>
+        <span id="region_python">
+<a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -692,7 +798,9 @@ to retrieve them.
 
     <dt class="property-required"
             title="Required">
-        <span>size</span>
+        <span id="size_python">
+<a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -701,7 +809,9 @@ to retrieve them.
 
     <dt class="property-optional"
             title="Optional">
-        <span>backups</span>
+        <span id="backups_python">
+<a href="#backups_python" style="color: inherit; text-decoration: inherit;">backups</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -711,7 +821,9 @@ false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ipv6</span>
+        <span id="ipv6_python">
+<a href="#ipv6_python" style="color: inherit; text-decoration: inherit;">ipv6</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -720,7 +832,9 @@ false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>monitoring</span>
+        <span id="monitoring_python">
+<a href="#monitoring_python" style="color: inherit; text-decoration: inherit;">monitoring</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -730,7 +844,9 @@ Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -739,7 +855,9 @@ Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>private_<wbr>networking</span>
+        <span id="private_networking_python">
+<a href="#private_networking_python" style="color: inherit; text-decoration: inherit;">private_<wbr>networking</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -751,7 +869,9 @@ Droplet inside of your account's default VPC for the region. Use the
 
     <dt class="property-optional"
             title="Optional">
-        <span>resize_<wbr>disk</span>
+        <span id="resize_disk_python">
+<a href="#resize_disk_python" style="color: inherit; text-decoration: inherit;">resize_<wbr>disk</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -763,7 +883,9 @@ size is a permanent change**. Increasing only RAM and CPU is reversible.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ssh_<wbr>keys</span>
+        <span id="ssh_keys_python">
+<a href="#ssh_keys_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>keys</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -775,7 +897,9 @@ to retrieve them.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -784,7 +908,9 @@ to retrieve them.
 
     <dt class="property-optional"
             title="Optional">
-        <span>user_<wbr>data</span>
+        <span id="user_data_python">
+<a href="#user_data_python" style="color: inherit; text-decoration: inherit;">user_<wbr>data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -793,7 +919,9 @@ to retrieve them.
 
     <dt class="property-optional"
             title="Optional">
-        <span>volume_<wbr>ids</span>
+        <span id="volume_ids_python">
+<a href="#volume_ids_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -802,7 +930,9 @@ to retrieve them.
 
     <dt class="property-optional"
             title="Optional">
-        <span>vpc_<wbr>uuid</span>
+        <span id="vpc_uuid_python">
+<a href="#vpc_uuid_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>uuid</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -829,7 +959,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Created<wbr>At</span>
+        <span id="createdat_csharp">
+<a href="#createdat_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -837,7 +969,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Disk</span>
+        <span id="disk_csharp">
+<a href="#disk_csharp" style="color: inherit; text-decoration: inherit;">Disk</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -846,7 +980,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -854,7 +990,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Ipv4Address</span>
+        <span id="ipv4address_csharp">
+<a href="#ipv4address_csharp" style="color: inherit; text-decoration: inherit;">Ipv4Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -863,7 +1001,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Ipv4Address<wbr>Private</span>
+        <span id="ipv4addressprivate_csharp">
+<a href="#ipv4addressprivate_csharp" style="color: inherit; text-decoration: inherit;">Ipv4Address<wbr>Private</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -872,7 +1012,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Ipv6Address</span>
+        <span id="ipv6address_csharp">
+<a href="#ipv6address_csharp" style="color: inherit; text-decoration: inherit;">Ipv6Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -881,7 +1023,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Locked</span>
+        <span id="locked_csharp">
+<a href="#locked_csharp" style="color: inherit; text-decoration: inherit;">Locked</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -890,7 +1034,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Memory</span>
+        <span id="memory_csharp">
+<a href="#memory_csharp" style="color: inherit; text-decoration: inherit;">Memory</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -898,7 +1044,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Price<wbr>Hourly</span>
+        <span id="pricehourly_csharp">
+<a href="#pricehourly_csharp" style="color: inherit; text-decoration: inherit;">Price<wbr>Hourly</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
@@ -907,7 +1055,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Price<wbr>Monthly</span>
+        <span id="pricemonthly_csharp">
+<a href="#pricemonthly_csharp" style="color: inherit; text-decoration: inherit;">Price<wbr>Monthly</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
@@ -916,7 +1066,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Status</span>
+        <span id="status_csharp">
+<a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -925,7 +1077,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Urn</span>
+        <span id="urn_csharp">
+<a href="#urn_csharp" style="color: inherit; text-decoration: inherit;">Urn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -935,7 +1089,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Vcpus</span>
+        <span id="vcpus_csharp">
+<a href="#vcpus_csharp" style="color: inherit; text-decoration: inherit;">Vcpus</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -951,7 +1107,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Created<wbr>At</span>
+        <span id="createdat_go">
+<a href="#createdat_go" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -959,7 +1117,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Disk</span>
+        <span id="disk_go">
+<a href="#disk_go" style="color: inherit; text-decoration: inherit;">Disk</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -968,7 +1128,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -976,7 +1138,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Ipv4Address</span>
+        <span id="ipv4address_go">
+<a href="#ipv4address_go" style="color: inherit; text-decoration: inherit;">Ipv4Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -985,7 +1149,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Ipv4Address<wbr>Private</span>
+        <span id="ipv4addressprivate_go">
+<a href="#ipv4addressprivate_go" style="color: inherit; text-decoration: inherit;">Ipv4Address<wbr>Private</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -994,7 +1160,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Ipv6Address</span>
+        <span id="ipv6address_go">
+<a href="#ipv6address_go" style="color: inherit; text-decoration: inherit;">Ipv6Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1003,7 +1171,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Locked</span>
+        <span id="locked_go">
+<a href="#locked_go" style="color: inherit; text-decoration: inherit;">Locked</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1012,7 +1182,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Memory</span>
+        <span id="memory_go">
+<a href="#memory_go" style="color: inherit; text-decoration: inherit;">Memory</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1020,7 +1192,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Price<wbr>Hourly</span>
+        <span id="pricehourly_go">
+<a href="#pricehourly_go" style="color: inherit; text-decoration: inherit;">Price<wbr>Hourly</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
@@ -1029,7 +1203,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Price<wbr>Monthly</span>
+        <span id="pricemonthly_go">
+<a href="#pricemonthly_go" style="color: inherit; text-decoration: inherit;">Price<wbr>Monthly</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
@@ -1038,7 +1214,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Status</span>
+        <span id="status_go">
+<a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1047,7 +1225,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Urn</span>
+        <span id="urn_go">
+<a href="#urn_go" style="color: inherit; text-decoration: inherit;">Urn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1057,7 +1237,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Vcpus</span>
+        <span id="vcpus_go">
+<a href="#vcpus_go" style="color: inherit; text-decoration: inherit;">Vcpus</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1073,7 +1255,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>created<wbr>At</span>
+        <span id="createdat_nodejs">
+<a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1081,7 +1265,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>disk</span>
+        <span id="disk_nodejs">
+<a href="#disk_nodejs" style="color: inherit; text-decoration: inherit;">disk</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1090,7 +1276,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1098,7 +1286,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>ipv4Address</span>
+        <span id="ipv4address_nodejs">
+<a href="#ipv4address_nodejs" style="color: inherit; text-decoration: inherit;">ipv4Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1107,7 +1297,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>ipv4Address<wbr>Private</span>
+        <span id="ipv4addressprivate_nodejs">
+<a href="#ipv4addressprivate_nodejs" style="color: inherit; text-decoration: inherit;">ipv4Address<wbr>Private</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1116,7 +1308,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>ipv6Address</span>
+        <span id="ipv6address_nodejs">
+<a href="#ipv6address_nodejs" style="color: inherit; text-decoration: inherit;">ipv6Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1125,7 +1319,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>locked</span>
+        <span id="locked_nodejs">
+<a href="#locked_nodejs" style="color: inherit; text-decoration: inherit;">locked</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1134,7 +1330,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>memory</span>
+        <span id="memory_nodejs">
+<a href="#memory_nodejs" style="color: inherit; text-decoration: inherit;">memory</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1142,7 +1340,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>price<wbr>Hourly</span>
+        <span id="pricehourly_nodejs">
+<a href="#pricehourly_nodejs" style="color: inherit; text-decoration: inherit;">price<wbr>Hourly</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
@@ -1151,7 +1351,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>price<wbr>Monthly</span>
+        <span id="pricemonthly_nodejs">
+<a href="#pricemonthly_nodejs" style="color: inherit; text-decoration: inherit;">price<wbr>Monthly</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
@@ -1160,7 +1362,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>status</span>
+        <span id="status_nodejs">
+<a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1169,7 +1373,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>urn</span>
+        <span id="urn_nodejs">
+<a href="#urn_nodejs" style="color: inherit; text-decoration: inherit;">urn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1179,7 +1385,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>vcpus</span>
+        <span id="vcpus_nodejs">
+<a href="#vcpus_nodejs" style="color: inherit; text-decoration: inherit;">vcpus</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1195,7 +1403,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>created_<wbr>at</span>
+        <span id="created_at_python">
+<a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1203,7 +1413,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>disk</span>
+        <span id="disk_python">
+<a href="#disk_python" style="color: inherit; text-decoration: inherit;">disk</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1212,7 +1424,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1220,7 +1434,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>ipv4_<wbr>address</span>
+        <span id="ipv4_address_python">
+<a href="#ipv4_address_python" style="color: inherit; text-decoration: inherit;">ipv4_<wbr>address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1229,7 +1445,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>ipv4_<wbr>address_<wbr>private</span>
+        <span id="ipv4_address_private_python">
+<a href="#ipv4_address_private_python" style="color: inherit; text-decoration: inherit;">ipv4_<wbr>address_<wbr>private</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1238,7 +1456,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>ipv6_<wbr>address</span>
+        <span id="ipv6_address_python">
+<a href="#ipv6_address_python" style="color: inherit; text-decoration: inherit;">ipv6_<wbr>address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1247,7 +1467,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>locked</span>
+        <span id="locked_python">
+<a href="#locked_python" style="color: inherit; text-decoration: inherit;">locked</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1256,7 +1478,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>memory</span>
+        <span id="memory_python">
+<a href="#memory_python" style="color: inherit; text-decoration: inherit;">memory</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1264,7 +1488,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>price_<wbr>hourly</span>
+        <span id="price_hourly_python">
+<a href="#price_hourly_python" style="color: inherit; text-decoration: inherit;">price_<wbr>hourly</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1273,7 +1499,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>price_<wbr>monthly</span>
+        <span id="price_monthly_python">
+<a href="#price_monthly_python" style="color: inherit; text-decoration: inherit;">price_<wbr>monthly</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1282,7 +1510,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>status</span>
+        <span id="status_python">
+<a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1291,7 +1521,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>urn</span>
+        <span id="urn_python">
+<a href="#urn_python" style="color: inherit; text-decoration: inherit;">urn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1301,7 +1533,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>vcpus</span>
+        <span id="vcpus_python">
+<a href="#vcpus_python" style="color: inherit; text-decoration: inherit;">vcpus</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1443,7 +1677,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Backups</span>
+        <span id="state_backups_csharp">
+<a href="#state_backups_csharp" style="color: inherit; text-decoration: inherit;">Backups</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1453,7 +1689,9 @@ false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Created<wbr>At</span>
+        <span id="state_createdat_csharp">
+<a href="#state_createdat_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1461,7 +1699,9 @@ false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Disk</span>
+        <span id="state_disk_csharp">
+<a href="#state_disk_csharp" style="color: inherit; text-decoration: inherit;">Disk</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1470,7 +1710,9 @@ false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Image</span>
+        <span id="state_image_csharp">
+<a href="#state_image_csharp" style="color: inherit; text-decoration: inherit;">Image</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1479,7 +1721,9 @@ false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ipv4Address</span>
+        <span id="state_ipv4address_csharp">
+<a href="#state_ipv4address_csharp" style="color: inherit; text-decoration: inherit;">Ipv4Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1488,7 +1732,9 @@ false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ipv4Address<wbr>Private</span>
+        <span id="state_ipv4addressprivate_csharp">
+<a href="#state_ipv4addressprivate_csharp" style="color: inherit; text-decoration: inherit;">Ipv4Address<wbr>Private</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1497,7 +1743,9 @@ false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ipv6</span>
+        <span id="state_ipv6_csharp">
+<a href="#state_ipv6_csharp" style="color: inherit; text-decoration: inherit;">Ipv6</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1506,7 +1754,9 @@ false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ipv6Address</span>
+        <span id="state_ipv6address_csharp">
+<a href="#state_ipv6address_csharp" style="color: inherit; text-decoration: inherit;">Ipv6Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1515,7 +1765,9 @@ false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Locked</span>
+        <span id="state_locked_csharp">
+<a href="#state_locked_csharp" style="color: inherit; text-decoration: inherit;">Locked</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1524,7 +1776,9 @@ false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Memory</span>
+        <span id="state_memory_csharp">
+<a href="#state_memory_csharp" style="color: inherit; text-decoration: inherit;">Memory</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1532,7 +1786,9 @@ false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Monitoring</span>
+        <span id="state_monitoring_csharp">
+<a href="#state_monitoring_csharp" style="color: inherit; text-decoration: inherit;">Monitoring</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1542,7 +1798,9 @@ Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1551,7 +1809,9 @@ Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Price<wbr>Hourly</span>
+        <span id="state_pricehourly_csharp">
+<a href="#state_pricehourly_csharp" style="color: inherit; text-decoration: inherit;">Price<wbr>Hourly</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
@@ -1560,7 +1820,9 @@ Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Price<wbr>Monthly</span>
+        <span id="state_pricemonthly_csharp">
+<a href="#state_pricemonthly_csharp" style="color: inherit; text-decoration: inherit;">Price<wbr>Monthly</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
@@ -1569,7 +1831,9 @@ Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Private<wbr>Networking</span>
+        <span id="state_privatenetworking_csharp">
+<a href="#state_privatenetworking_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Networking</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1581,7 +1845,9 @@ Droplet inside of your account's default VPC for the region. Use the
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="state_region_csharp">
+<a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -1590,7 +1856,9 @@ Droplet inside of your account's default VPC for the region. Use the
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resize<wbr>Disk</span>
+        <span id="state_resizedisk_csharp">
+<a href="#state_resizedisk_csharp" style="color: inherit; text-decoration: inherit;">Resize<wbr>Disk</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1602,7 +1870,9 @@ size is a permanent change**. Increasing only RAM and CPU is reversible.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Size</span>
+        <span id="state_size_csharp">
+<a href="#state_size_csharp" style="color: inherit; text-decoration: inherit;">Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -1611,7 +1881,9 @@ size is a permanent change**. Increasing only RAM and CPU is reversible.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ssh<wbr>Keys</span>
+        <span id="state_sshkeys_csharp">
+<a href="#state_sshkeys_csharp" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Keys</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1623,7 +1895,9 @@ to retrieve them.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Status</span>
+        <span id="state_status_csharp">
+<a href="#state_status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1632,7 +1906,9 @@ to retrieve them.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="state_tags_csharp">
+<a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1641,7 +1917,9 @@ to retrieve them.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Urn</span>
+        <span id="state_urn_csharp">
+<a href="#state_urn_csharp" style="color: inherit; text-decoration: inherit;">Urn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1651,7 +1929,9 @@ to retrieve them.
 
     <dt class="property-optional"
             title="Optional">
-        <span>User<wbr>Data</span>
+        <span id="state_userdata_csharp">
+<a href="#state_userdata_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1660,7 +1940,9 @@ to retrieve them.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vcpus</span>
+        <span id="state_vcpus_csharp">
+<a href="#state_vcpus_csharp" style="color: inherit; text-decoration: inherit;">Vcpus</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1669,7 +1951,9 @@ to retrieve them.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Volume<wbr>Ids</span>
+        <span id="state_volumeids_csharp">
+<a href="#state_volumeids_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1678,7 +1962,9 @@ to retrieve them.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vpc<wbr>Uuid</span>
+        <span id="state_vpcuuid_csharp">
+<a href="#state_vpcuuid_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Uuid</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1694,7 +1980,9 @@ to retrieve them.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Backups</span>
+        <span id="state_backups_go">
+<a href="#state_backups_go" style="color: inherit; text-decoration: inherit;">Backups</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1704,7 +1992,9 @@ false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Created<wbr>At</span>
+        <span id="state_createdat_go">
+<a href="#state_createdat_go" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1712,7 +2002,9 @@ false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Disk</span>
+        <span id="state_disk_go">
+<a href="#state_disk_go" style="color: inherit; text-decoration: inherit;">Disk</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1721,7 +2013,9 @@ false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Image</span>
+        <span id="state_image_go">
+<a href="#state_image_go" style="color: inherit; text-decoration: inherit;">Image</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1730,7 +2024,9 @@ false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ipv4Address</span>
+        <span id="state_ipv4address_go">
+<a href="#state_ipv4address_go" style="color: inherit; text-decoration: inherit;">Ipv4Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1739,7 +2035,9 @@ false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ipv4Address<wbr>Private</span>
+        <span id="state_ipv4addressprivate_go">
+<a href="#state_ipv4addressprivate_go" style="color: inherit; text-decoration: inherit;">Ipv4Address<wbr>Private</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1748,7 +2046,9 @@ false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ipv6</span>
+        <span id="state_ipv6_go">
+<a href="#state_ipv6_go" style="color: inherit; text-decoration: inherit;">Ipv6</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1757,7 +2057,9 @@ false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ipv6Address</span>
+        <span id="state_ipv6address_go">
+<a href="#state_ipv6address_go" style="color: inherit; text-decoration: inherit;">Ipv6Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1766,7 +2068,9 @@ false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Locked</span>
+        <span id="state_locked_go">
+<a href="#state_locked_go" style="color: inherit; text-decoration: inherit;">Locked</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1775,7 +2079,9 @@ false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Memory</span>
+        <span id="state_memory_go">
+<a href="#state_memory_go" style="color: inherit; text-decoration: inherit;">Memory</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1783,7 +2089,9 @@ false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Monitoring</span>
+        <span id="state_monitoring_go">
+<a href="#state_monitoring_go" style="color: inherit; text-decoration: inherit;">Monitoring</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1793,7 +2101,9 @@ Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1802,7 +2112,9 @@ Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Price<wbr>Hourly</span>
+        <span id="state_pricehourly_go">
+<a href="#state_pricehourly_go" style="color: inherit; text-decoration: inherit;">Price<wbr>Hourly</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
@@ -1811,7 +2123,9 @@ Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Price<wbr>Monthly</span>
+        <span id="state_pricemonthly_go">
+<a href="#state_pricemonthly_go" style="color: inherit; text-decoration: inherit;">Price<wbr>Monthly</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
@@ -1820,7 +2134,9 @@ Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Private<wbr>Networking</span>
+        <span id="state_privatenetworking_go">
+<a href="#state_privatenetworking_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Networking</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1832,7 +2148,9 @@ Droplet inside of your account's default VPC for the region. Use the
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="state_region_go">
+<a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -1841,7 +2159,9 @@ Droplet inside of your account's default VPC for the region. Use the
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resize<wbr>Disk</span>
+        <span id="state_resizedisk_go">
+<a href="#state_resizedisk_go" style="color: inherit; text-decoration: inherit;">Resize<wbr>Disk</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1853,7 +2173,9 @@ size is a permanent change**. Increasing only RAM and CPU is reversible.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Size</span>
+        <span id="state_size_go">
+<a href="#state_size_go" style="color: inherit; text-decoration: inherit;">Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -1862,7 +2184,9 @@ size is a permanent change**. Increasing only RAM and CPU is reversible.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ssh<wbr>Keys</span>
+        <span id="state_sshkeys_go">
+<a href="#state_sshkeys_go" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Keys</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1874,7 +2198,9 @@ to retrieve them.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Status</span>
+        <span id="state_status_go">
+<a href="#state_status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1883,7 +2209,9 @@ to retrieve them.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="state_tags_go">
+<a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1892,7 +2220,9 @@ to retrieve them.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Urn</span>
+        <span id="state_urn_go">
+<a href="#state_urn_go" style="color: inherit; text-decoration: inherit;">Urn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1902,7 +2232,9 @@ to retrieve them.
 
     <dt class="property-optional"
             title="Optional">
-        <span>User<wbr>Data</span>
+        <span id="state_userdata_go">
+<a href="#state_userdata_go" style="color: inherit; text-decoration: inherit;">User<wbr>Data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1911,7 +2243,9 @@ to retrieve them.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vcpus</span>
+        <span id="state_vcpus_go">
+<a href="#state_vcpus_go" style="color: inherit; text-decoration: inherit;">Vcpus</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1920,7 +2254,9 @@ to retrieve them.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Volume<wbr>Ids</span>
+        <span id="state_volumeids_go">
+<a href="#state_volumeids_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1929,7 +2265,9 @@ to retrieve them.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vpc<wbr>Uuid</span>
+        <span id="state_vpcuuid_go">
+<a href="#state_vpcuuid_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Uuid</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1945,7 +2283,9 @@ to retrieve them.
 
     <dt class="property-optional"
             title="Optional">
-        <span>backups</span>
+        <span id="state_backups_nodejs">
+<a href="#state_backups_nodejs" style="color: inherit; text-decoration: inherit;">backups</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1955,7 +2295,9 @@ false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>created<wbr>At</span>
+        <span id="state_createdat_nodejs">
+<a href="#state_createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1963,7 +2305,9 @@ false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>disk</span>
+        <span id="state_disk_nodejs">
+<a href="#state_disk_nodejs" style="color: inherit; text-decoration: inherit;">disk</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1972,7 +2316,9 @@ false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>image</span>
+        <span id="state_image_nodejs">
+<a href="#state_image_nodejs" style="color: inherit; text-decoration: inherit;">image</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1981,7 +2327,9 @@ false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ipv4Address</span>
+        <span id="state_ipv4address_nodejs">
+<a href="#state_ipv4address_nodejs" style="color: inherit; text-decoration: inherit;">ipv4Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1990,7 +2338,9 @@ false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ipv4Address<wbr>Private</span>
+        <span id="state_ipv4addressprivate_nodejs">
+<a href="#state_ipv4addressprivate_nodejs" style="color: inherit; text-decoration: inherit;">ipv4Address<wbr>Private</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1999,7 +2349,9 @@ false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ipv6</span>
+        <span id="state_ipv6_nodejs">
+<a href="#state_ipv6_nodejs" style="color: inherit; text-decoration: inherit;">ipv6</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -2008,7 +2360,9 @@ false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ipv6Address</span>
+        <span id="state_ipv6address_nodejs">
+<a href="#state_ipv6address_nodejs" style="color: inherit; text-decoration: inherit;">ipv6Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2017,7 +2371,9 @@ false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>locked</span>
+        <span id="state_locked_nodejs">
+<a href="#state_locked_nodejs" style="color: inherit; text-decoration: inherit;">locked</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -2026,7 +2382,9 @@ false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>memory</span>
+        <span id="state_memory_nodejs">
+<a href="#state_memory_nodejs" style="color: inherit; text-decoration: inherit;">memory</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -2034,7 +2392,9 @@ false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>monitoring</span>
+        <span id="state_monitoring_nodejs">
+<a href="#state_monitoring_nodejs" style="color: inherit; text-decoration: inherit;">monitoring</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -2044,7 +2404,9 @@ Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2053,7 +2415,9 @@ Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>price<wbr>Hourly</span>
+        <span id="state_pricehourly_nodejs">
+<a href="#state_pricehourly_nodejs" style="color: inherit; text-decoration: inherit;">price<wbr>Hourly</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
@@ -2062,7 +2426,9 @@ Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>price<wbr>Monthly</span>
+        <span id="state_pricemonthly_nodejs">
+<a href="#state_pricemonthly_nodejs" style="color: inherit; text-decoration: inherit;">price<wbr>Monthly</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
@@ -2071,7 +2437,9 @@ Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>private<wbr>Networking</span>
+        <span id="state_privatenetworking_nodejs">
+<a href="#state_privatenetworking_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Networking</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -2083,7 +2451,9 @@ Droplet inside of your account's default VPC for the region. Use the
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="state_region_nodejs">
+<a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Region</span>
     </dt>
@@ -2092,7 +2462,9 @@ Droplet inside of your account's default VPC for the region. Use the
 
     <dt class="property-optional"
             title="Optional">
-        <span>resize<wbr>Disk</span>
+        <span id="state_resizedisk_nodejs">
+<a href="#state_resizedisk_nodejs" style="color: inherit; text-decoration: inherit;">resize<wbr>Disk</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -2104,7 +2476,9 @@ size is a permanent change**. Increasing only RAM and CPU is reversible.
 
     <dt class="property-optional"
             title="Optional">
-        <span>size</span>
+        <span id="state_size_nodejs">
+<a href="#state_size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Droplet<wbr>Slug</span>
     </dt>
@@ -2113,7 +2487,9 @@ size is a permanent change**. Increasing only RAM and CPU is reversible.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ssh<wbr>Keys</span>
+        <span id="state_sshkeys_nodejs">
+<a href="#state_sshkeys_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>Keys</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -2125,7 +2501,9 @@ to retrieve them.
 
     <dt class="property-optional"
             title="Optional">
-        <span>status</span>
+        <span id="state_status_nodejs">
+<a href="#state_status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2134,7 +2512,9 @@ to retrieve them.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="state_tags_nodejs">
+<a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -2143,7 +2523,9 @@ to retrieve them.
 
     <dt class="property-optional"
             title="Optional">
-        <span>urn</span>
+        <span id="state_urn_nodejs">
+<a href="#state_urn_nodejs" style="color: inherit; text-decoration: inherit;">urn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2153,7 +2535,9 @@ to retrieve them.
 
     <dt class="property-optional"
             title="Optional">
-        <span>user<wbr>Data</span>
+        <span id="state_userdata_nodejs">
+<a href="#state_userdata_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2162,7 +2546,9 @@ to retrieve them.
 
     <dt class="property-optional"
             title="Optional">
-        <span>vcpus</span>
+        <span id="state_vcpus_nodejs">
+<a href="#state_vcpus_nodejs" style="color: inherit; text-decoration: inherit;">vcpus</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -2171,7 +2557,9 @@ to retrieve them.
 
     <dt class="property-optional"
             title="Optional">
-        <span>volume<wbr>Ids</span>
+        <span id="state_volumeids_nodejs">
+<a href="#state_volumeids_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -2180,7 +2568,9 @@ to retrieve them.
 
     <dt class="property-optional"
             title="Optional">
-        <span>vpc<wbr>Uuid</span>
+        <span id="state_vpcuuid_nodejs">
+<a href="#state_vpcuuid_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Uuid</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2196,7 +2586,9 @@ to retrieve them.
 
     <dt class="property-optional"
             title="Optional">
-        <span>backups</span>
+        <span id="state_backups_python">
+<a href="#state_backups_python" style="color: inherit; text-decoration: inherit;">backups</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2206,7 +2598,9 @@ false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>created_<wbr>at</span>
+        <span id="state_created_at_python">
+<a href="#state_created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2214,7 +2608,9 @@ false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>disk</span>
+        <span id="state_disk_python">
+<a href="#state_disk_python" style="color: inherit; text-decoration: inherit;">disk</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -2223,7 +2619,9 @@ false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>image</span>
+        <span id="state_image_python">
+<a href="#state_image_python" style="color: inherit; text-decoration: inherit;">image</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2232,7 +2630,9 @@ false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ipv4_<wbr>address</span>
+        <span id="state_ipv4_address_python">
+<a href="#state_ipv4_address_python" style="color: inherit; text-decoration: inherit;">ipv4_<wbr>address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2241,7 +2641,9 @@ false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ipv4_<wbr>address_<wbr>private</span>
+        <span id="state_ipv4_address_private_python">
+<a href="#state_ipv4_address_private_python" style="color: inherit; text-decoration: inherit;">ipv4_<wbr>address_<wbr>private</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2250,7 +2652,9 @@ false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ipv6</span>
+        <span id="state_ipv6_python">
+<a href="#state_ipv6_python" style="color: inherit; text-decoration: inherit;">ipv6</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2259,7 +2663,9 @@ false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ipv6_<wbr>address</span>
+        <span id="state_ipv6_address_python">
+<a href="#state_ipv6_address_python" style="color: inherit; text-decoration: inherit;">ipv6_<wbr>address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2268,7 +2674,9 @@ false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>locked</span>
+        <span id="state_locked_python">
+<a href="#state_locked_python" style="color: inherit; text-decoration: inherit;">locked</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2277,7 +2685,9 @@ false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>memory</span>
+        <span id="state_memory_python">
+<a href="#state_memory_python" style="color: inherit; text-decoration: inherit;">memory</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -2285,7 +2695,9 @@ false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>monitoring</span>
+        <span id="state_monitoring_python">
+<a href="#state_monitoring_python" style="color: inherit; text-decoration: inherit;">monitoring</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2295,7 +2707,9 @@ Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2304,7 +2718,9 @@ Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>price_<wbr>hourly</span>
+        <span id="state_price_hourly_python">
+<a href="#state_price_hourly_python" style="color: inherit; text-decoration: inherit;">price_<wbr>hourly</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -2313,7 +2729,9 @@ Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>price_<wbr>monthly</span>
+        <span id="state_price_monthly_python">
+<a href="#state_price_monthly_python" style="color: inherit; text-decoration: inherit;">price_<wbr>monthly</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -2322,7 +2740,9 @@ Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>private_<wbr>networking</span>
+        <span id="state_private_networking_python">
+<a href="#state_private_networking_python" style="color: inherit; text-decoration: inherit;">private_<wbr>networking</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2334,7 +2754,9 @@ Droplet inside of your account's default VPC for the region. Use the
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="state_region_python">
+<a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -2343,7 +2765,9 @@ Droplet inside of your account's default VPC for the region. Use the
 
     <dt class="property-optional"
             title="Optional">
-        <span>resize_<wbr>disk</span>
+        <span id="state_resize_disk_python">
+<a href="#state_resize_disk_python" style="color: inherit; text-decoration: inherit;">resize_<wbr>disk</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2355,7 +2779,9 @@ size is a permanent change**. Increasing only RAM and CPU is reversible.
 
     <dt class="property-optional"
             title="Optional">
-        <span>size</span>
+        <span id="state_size_python">
+<a href="#state_size_python" style="color: inherit; text-decoration: inherit;">size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -2364,7 +2790,9 @@ size is a permanent change**. Increasing only RAM and CPU is reversible.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ssh_<wbr>keys</span>
+        <span id="state_ssh_keys_python">
+<a href="#state_ssh_keys_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>keys</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -2376,7 +2804,9 @@ to retrieve them.
 
     <dt class="property-optional"
             title="Optional">
-        <span>status</span>
+        <span id="state_status_python">
+<a href="#state_status_python" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2385,7 +2815,9 @@ to retrieve them.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="state_tags_python">
+<a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -2394,7 +2826,9 @@ to retrieve them.
 
     <dt class="property-optional"
             title="Optional">
-        <span>urn</span>
+        <span id="state_urn_python">
+<a href="#state_urn_python" style="color: inherit; text-decoration: inherit;">urn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2404,7 +2838,9 @@ to retrieve them.
 
     <dt class="property-optional"
             title="Optional">
-        <span>user_<wbr>data</span>
+        <span id="state_user_data_python">
+<a href="#state_user_data_python" style="color: inherit; text-decoration: inherit;">user_<wbr>data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2413,7 +2849,9 @@ to retrieve them.
 
     <dt class="property-optional"
             title="Optional">
-        <span>vcpus</span>
+        <span id="state_vcpus_python">
+<a href="#state_vcpus_python" style="color: inherit; text-decoration: inherit;">vcpus</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -2422,7 +2860,9 @@ to retrieve them.
 
     <dt class="property-optional"
             title="Optional">
-        <span>volume_<wbr>ids</span>
+        <span id="state_volume_ids_python">
+<a href="#state_volume_ids_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -2431,7 +2871,9 @@ to retrieve them.
 
     <dt class="property-optional"
             title="Optional">
-        <span>vpc_<wbr>uuid</span>
+        <span id="state_vpc_uuid_python">
+<a href="#state_vpc_uuid_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>uuid</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
