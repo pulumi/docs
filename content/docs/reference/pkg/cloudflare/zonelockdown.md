@@ -20,7 +20,37 @@ Provides a Cloudflare Zone Lockdown resource. Zone Lockdown allows you to define
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Cloudflare = Pulumi.Cloudflare;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        // Restrict access to these endpoints to requests from a known IP address.
+        var endpointLockdown = new Cloudflare.ZoneLockdown("endpointLockdown", new Cloudflare.ZoneLockdownArgs
+        {
+            Configurations = 
+            {
+                new Cloudflare.Inputs.ZoneLockdownConfigurationArgs
+                {
+                    Target = "ip",
+                    Value = "198.51.100.4",
+                },
+            },
+            Description = "Restrict access to these endpoints to requests from a known IP address",
+            Paused = "false",
+            Urls = 
+            {
+                "api.mysite.com/some/endpoint*",
+            },
+            ZoneId = "d41d8cd98f00b204e9800998ecf8427e",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

@@ -20,7 +20,29 @@ Provides a Cloudflare worker route resource. A route will also require a `cloudf
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Cloudflare = Pulumi.Cloudflare;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var myScript = new Cloudflare.WorkerScript("myScript", new Cloudflare.WorkerScriptArgs
+        {
+        });
+        // see "cloudflare..WorkerScript" documentation ...
+        // Runs the specified worker script for all URLs that match `example.com/*`
+        var myRoute = new Cloudflare.WorkerRoute("myRoute", new Cloudflare.WorkerRouteArgs
+        {
+            ZoneId = "d41d8cd98f00b204e9800998ecf8427e",
+            Pattern = "example.com/*",
+            ScriptName = myScript.Name,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

@@ -20,7 +20,25 @@ Provides a resource which manages Cloudflare custom error pages.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Cloudflare = Pulumi.Cloudflare;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var basicChallenge = new Cloudflare.CustomPages("basicChallenge", new Cloudflare.CustomPagesArgs
+        {
+            State = "customized",
+            Type = "basic_challenge",
+            Url = "https://example.com/challenge.html",
+            ZoneId = "d41d8cd98f00b204e9800998ecf8427e",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

@@ -20,7 +20,27 @@ Provides a resource which manages Cloudflare account members.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Cloudflare = Pulumi.Cloudflare;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleUser = new Cloudflare.AccountMember("exampleUser", new Cloudflare.AccountMemberArgs
+        {
+            EmailAddress = "user@example.com",
+            RoleIds = 
+            {
+                "68b329da9893e34099c7d8ad5cb9c940",
+                "d784fa8b6d98d27699781bd9a7cf19f0",
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

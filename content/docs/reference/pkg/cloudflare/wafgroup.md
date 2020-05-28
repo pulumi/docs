@@ -20,7 +20,24 @@ Provides a Cloudflare WAF rule group resource for a particular zone. This can be
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Cloudflare = Pulumi.Cloudflare;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var honeyPot = new Cloudflare.WafGroup("honeyPot", new Cloudflare.WafGroupArgs
+        {
+            GroupId = "de677e5818985db1285d0e80225f06e5",
+            Mode = "on",
+            ZoneId = "ae36f999674d196762efcc5abb06b345",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

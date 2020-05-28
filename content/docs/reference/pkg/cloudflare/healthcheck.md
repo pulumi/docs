@@ -35,99 +35,46 @@ Coming soon!
 Coming soon!
 {{% /example %}}
 
-### HTTPS Health Check
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_cloudflare as cloudflare
-
-http_health_check = cloudflare.Healthcheck("httpHealthCheck",
-    zone_id=var["cloudflare_zone_id"],
-    name="http-health-check",
-    description="example http health check",
-    address="example.com",
-    suspended=False,
-    check_regions=[
-        "WEU",
-        "EEU",
-    ],
-    notification_suspended=False,
-    notification_email_addresses=["hostmaster@example.com"],
-    type="HTTPS",
-    port="443",
-    method="GET",
-    path="/health",
-    expected_body="alive",
-    expected_codes=[
-        "2xx",
-        "301",
-    ],
-    follow_redirects=True,
-    allow_insecure=False,
-    header=[{
-        "header": "Host",
-        "values": ["example.com"],
-    }],
-    timeout=10,
-    retries=2,
-    interval=60,
-    consecutive_fails=3,
-    consecutive_successes=2)
-```
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as cloudflare from "@pulumi/cloudflare";
-
-const httpHealthCheck = new cloudflare.Healthcheck("httpHealthCheck", {
-    zoneId: var.cloudflare_zone_id,
-    name: "http-health-check",
-    description: "example http health check",
-    address: "example.com",
-    suspended: false,
-    checkRegions: [
-        "WEU",
-        "EEU",
-    ],
-    notificationSuspended: false,
-    notificationEmailAddresses: ["hostmaster@example.com"],
-    type: "HTTPS",
-    port: "443",
-    method: "GET",
-    path: "/health",
-    expectedBody: "alive",
-    expectedCodes: [
-        "2xx",
-        "301",
-    ],
-    followRedirects: true,
-    allowInsecure: false,
-    header: [{
-        header: "Host",
-        values: ["example.com"],
-    }],
-    timeout: 10,
-    retries: 2,
-    interval: 60,
-    consecutiveFails: 3,
-    consecutiveSuccesses: 2,
-});
-```
-{{% /example %}}
-
 ### TCP Monitor
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Cloudflare = Pulumi.Cloudflare;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var tcpHealthCheck = new Cloudflare.Healthcheck("tcpHealthCheck", new Cloudflare.HealthcheckArgs
+        {
+            ZoneId = @var.Cloudflare_zone_id,
+            Name = "tcp-health-check",
+            Description = "example tcp health check",
+            Address = "example.com",
+            Suspended = false,
+            CheckRegions = 
+            {
+                "WEU",
+                "EEU",
+            },
+            NotificationSuspended = false,
+            NotificationEmailAddresses = 
+            {
+                "hostmaster@example.com",
+            },
+            Type = "TCP",
+            Port = "22",
+            Method = "connection_established",
+            Timeout = 10,
+            Retries = 2,
+            Interval = 60,
+            ConsecutiveFails = 3,
+            ConsecutiveSuccesses = 2,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -168,7 +115,7 @@ import * as pulumi from "@pulumi/pulumi";
 import * as cloudflare from "@pulumi/cloudflare";
 
 const tcpHealthCheck = new cloudflare.Healthcheck("tcpHealthCheck", {
-    zoneId: var.cloudflare_zone_id,
+    zoneId: _var.cloudflare_zone_id,
     name: "tcp-health-check",
     description: "example tcp health check",
     address: "example.com",

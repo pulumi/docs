@@ -20,7 +20,43 @@ If you're using Cloudflare's Load Balancing to load-balance across multiple orig
 {{< chooser language "typescript,python,go,csharp" / >}}
 ### HTTP Monitor
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Cloudflare = Pulumi.Cloudflare;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var httpMonitor = new Cloudflare.LoadBalancerMonitor("httpMonitor", new Cloudflare.LoadBalancerMonitorArgs
+        {
+            AllowInsecure = false,
+            Description = "example http load balancer",
+            ExpectedBody = "alive",
+            ExpectedCodes = "2xx",
+            FollowRedirects = true,
+            Headers = 
+            {
+                new Cloudflare.Inputs.LoadBalancerMonitorHeaderArgs
+                {
+                    Header = "Host",
+                    Values = 
+                    {
+                        "example.com",
+                    },
+                },
+            },
+            Interval = 60,
+            Method = "GET",
+            Path = "/health",
+            Retries = 5,
+            Timeout = 7,
+            Type = "http",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -78,7 +114,27 @@ const httpMonitor = new cloudflare.LoadBalancerMonitor("http_monitor", {
 
 ### TCP Monitor
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Cloudflare = Pulumi.Cloudflare;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var tcpMonitor = new Cloudflare.LoadBalancerMonitor("tcpMonitor", new Cloudflare.LoadBalancerMonitorArgs
+        {
+            Description = "example tcp load balancer",
+            Interval = 60,
+            Method = "connection_established",
+            Retries = 5,
+            Timeout = 7,
+            Type = "tcp",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

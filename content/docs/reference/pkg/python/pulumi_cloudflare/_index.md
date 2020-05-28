@@ -757,8 +757,8 @@ used as an authentication or authorisation source within Access.</p>
 <span class="n">github_oauth</span> <span class="o">=</span> <span class="n">cloudflare</span><span class="o">.</span><span class="n">AccessIdentityProvider</span><span class="p">(</span><span class="s2">&quot;githubOauth&quot;</span><span class="p">,</span>
     <span class="n">account_id</span><span class="o">=</span><span class="s2">&quot;1d5fdc9e88c8a8c4518b068cd94331fe&quot;</span><span class="p">,</span>
     <span class="n">configs</span><span class="o">=</span><span class="p">[{</span>
-        <span class="s2">&quot;clientId&quot;</span><span class="p">:</span> <span class="s2">&quot;example&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;clientSecret&quot;</span><span class="p">:</span> <span class="s2">&quot;secret_key&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;client_id&quot;</span><span class="p">:</span> <span class="s2">&quot;example&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;client_secret&quot;</span><span class="p">:</span> <span class="s2">&quot;secret_key&quot;</span><span class="p">,</span>
     <span class="p">}],</span>
     <span class="n">name</span><span class="o">=</span><span class="s2">&quot;GitHub OAuth&quot;</span><span class="p">,</span>
     <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;github&quot;</span><span class="p">)</span>
@@ -1935,6 +1935,105 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd></dd></dl>
 
 <dl class="py class">
+<dt id="pulumi_cloudflare.ByoIpPrefix">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">ByoIpPrefix</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">advertisement</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">prefix_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.ByoIpPrefix" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides the ability to manage Bring-Your-Own-IP prefixes (BYOIP) which are used with or without Magic Transit.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_cloudflare</span> <span class="k">as</span> <span class="nn">cloudflare</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">cloudflare</span><span class="o">.</span><span class="n">ByoIpPrefix</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">advertisement</span><span class="o">=</span><span class="s2">&quot;on&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Example IP Prefix&quot;</span><span class="p">,</span>
+    <span class="n">prefix_id</span><span class="o">=</span><span class="s2">&quot;d41d8cd98f00b204e9800998ecf8427e&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>advertisement</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Whether or not the prefix shall be announced. A prefix can be activated or deactivated once every 15 minutes (attempting more regular updates will trigger rate limiting). Valid values: <code class="docutils literal notranslate"><span class="pre">on</span></code> or <code class="docutils literal notranslate"><span class="pre">off</span></code>.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the prefix.</p></li>
+<li><p><strong>prefix_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The assigned Bring-Your-Own-IP prefix ID.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt id="pulumi_cloudflare.ByoIpPrefix.advertisement">
+<code class="sig-name descname">advertisement</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.ByoIpPrefix.advertisement" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether or not the prefix shall be announced. A prefix can be activated or deactivated once every 15 minutes (attempting more regular updates will trigger rate limiting). Valid values: <code class="docutils literal notranslate"><span class="pre">on</span></code> or <code class="docutils literal notranslate"><span class="pre">off</span></code>.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_cloudflare.ByoIpPrefix.description">
+<code class="sig-name descname">description</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.ByoIpPrefix.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>The description of the prefix.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_cloudflare.ByoIpPrefix.prefix_id">
+<code class="sig-name descname">prefix_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.ByoIpPrefix.prefix_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The assigned Bring-Your-Own-IP prefix ID.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_cloudflare.ByoIpPrefix.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">advertisement</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">prefix_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.ByoIpPrefix.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing ByoIpPrefix resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>advertisement</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Whether or not the prefix shall be announced. A prefix can be activated or deactivated once every 15 minutes (attempting more regular updates will trigger rate limiting). Valid values: <code class="docutils literal notranslate"><span class="pre">on</span></code> or <code class="docutils literal notranslate"><span class="pre">off</span></code>.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the prefix.</p></li>
+<li><p><strong>prefix_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The assigned Bring-Your-Own-IP prefix ID.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_cloudflare.ByoIpPrefix.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.ByoIpPrefix.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_cloudflare.ByoIpPrefix.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.ByoIpPrefix.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt id="pulumi_cloudflare.CustomPages">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">CustomPages</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">account_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">url</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.CustomPages" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a resource which manages Cloudflare custom error pages.</p>
@@ -2500,6 +2599,324 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="py class">
+<dt id="pulumi_cloudflare.Healthcheck">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">Healthcheck</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">address</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allow_insecure</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">check_regions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">consecutive_fails</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">consecutive_successes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">expected_body</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">expected_codes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">follow_redirects</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">headers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">interval</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">method</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">notification_email_addresses</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">notification_suspended</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">path</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">port</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">retries</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">suspended</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">timeout</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.Healthcheck" title="Permalink to this definition">¶</a></dt>
+<dd><p>Standalone Health Checks provide a way to monitor origin servers without needing a Cloudflare Load Balancer.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_cloudflare</span> <span class="k">as</span> <span class="nn">cloudflare</span>
+
+<span class="n">http_health_check</span> <span class="o">=</span> <span class="n">cloudflare</span><span class="o">.</span><span class="n">Healthcheck</span><span class="p">(</span><span class="s2">&quot;httpHealthCheck&quot;</span><span class="p">,</span>
+    <span class="n">zone_id</span><span class="o">=</span><span class="n">var</span><span class="p">[</span><span class="s2">&quot;cloudflare_zone_id&quot;</span><span class="p">],</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;http-health-check&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;example http health check&quot;</span><span class="p">,</span>
+    <span class="n">address</span><span class="o">=</span><span class="s2">&quot;example.com&quot;</span><span class="p">,</span>
+    <span class="n">suspended</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">check_regions</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;WEU&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;EEU&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="n">notification_suspended</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">notification_email_addresses</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;hostmaster@example.com&quot;</span><span class="p">],</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;HTTPS&quot;</span><span class="p">,</span>
+    <span class="n">port</span><span class="o">=</span><span class="s2">&quot;443&quot;</span><span class="p">,</span>
+    <span class="n">method</span><span class="o">=</span><span class="s2">&quot;GET&quot;</span><span class="p">,</span>
+    <span class="n">path</span><span class="o">=</span><span class="s2">&quot;/health&quot;</span><span class="p">,</span>
+    <span class="n">expected_body</span><span class="o">=</span><span class="s2">&quot;alive&quot;</span><span class="p">,</span>
+    <span class="n">expected_codes</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;2xx&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;301&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="n">follow_redirects</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">allow_insecure</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">header</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;header&quot;</span><span class="p">:</span> <span class="s2">&quot;Host&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;values&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;example.com&quot;</span><span class="p">],</span>
+    <span class="p">}],</span>
+    <span class="n">timeout</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+    <span class="n">retries</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+    <span class="n">interval</span><span class="o">=</span><span class="mi">60</span><span class="p">,</span>
+    <span class="n">consecutive_fails</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
+    <span class="n">consecutive_successes</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_cloudflare</span> <span class="k">as</span> <span class="nn">cloudflare</span>
+
+<span class="n">tcp_health_check</span> <span class="o">=</span> <span class="n">cloudflare</span><span class="o">.</span><span class="n">Healthcheck</span><span class="p">(</span><span class="s2">&quot;tcpHealthCheck&quot;</span><span class="p">,</span>
+    <span class="n">zone_id</span><span class="o">=</span><span class="n">var</span><span class="p">[</span><span class="s2">&quot;cloudflare_zone_id&quot;</span><span class="p">],</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;tcp-health-check&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;example tcp health check&quot;</span><span class="p">,</span>
+    <span class="n">address</span><span class="o">=</span><span class="s2">&quot;example.com&quot;</span><span class="p">,</span>
+    <span class="n">suspended</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">check_regions</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;WEU&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;EEU&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="n">notification_suspended</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">notification_email_addresses</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;hostmaster@example.com&quot;</span><span class="p">],</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;TCP&quot;</span><span class="p">,</span>
+    <span class="n">port</span><span class="o">=</span><span class="s2">&quot;22&quot;</span><span class="p">,</span>
+    <span class="n">method</span><span class="o">=</span><span class="s2">&quot;connection_established&quot;</span><span class="p">,</span>
+    <span class="n">timeout</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+    <span class="n">retries</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+    <span class="n">interval</span><span class="o">=</span><span class="mi">60</span><span class="p">,</span>
+    <span class="n">consecutive_fails</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
+    <span class="n">consecutive_successes</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The hostname or IP address of the origin server to run health checks on.</p></li>
+<li><p><strong>allow_insecure</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Do not validate the certificate when the health check uses HTTPS. Valid values: <code class="docutils literal notranslate"><span class="pre">true</span></code> or <code class="docutils literal notranslate"><span class="pre">false</span></code> (Default: <code class="docutils literal notranslate"><span class="pre">false</span></code>).</p></li>
+<li><p><strong>check_regions</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of regions from which to run health checks. If not set Cloudflare will pick a default region. Valid values: <code class="docutils literal notranslate"><span class="pre">WNAM</span></code>, <code class="docutils literal notranslate"><span class="pre">ENAM</span></code>, <code class="docutils literal notranslate"><span class="pre">WEU</span></code>, <code class="docutils literal notranslate"><span class="pre">EEU</span></code>, <code class="docutils literal notranslate"><span class="pre">NSAM</span></code>, <code class="docutils literal notranslate"><span class="pre">SSAM</span></code>, <code class="docutils literal notranslate"><span class="pre">OC</span></code>, <code class="docutils literal notranslate"><span class="pre">ME</span></code>, <code class="docutils literal notranslate"><span class="pre">NAF</span></code>, <code class="docutils literal notranslate"><span class="pre">SAF</span></code>, <code class="docutils literal notranslate"><span class="pre">IN</span></code>, <code class="docutils literal notranslate"><span class="pre">SEAS</span></code>, <code class="docutils literal notranslate"><span class="pre">NEAS</span></code>, <code class="docutils literal notranslate"><span class="pre">ALL_REGIONS</span></code>.</p></li>
+<li><p><strong>consecutive_fails</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of consecutive fails required from a health check before changing the health to unhealthy. (Default: <code class="docutils literal notranslate"><span class="pre">1</span></code>)</p></li>
+<li><p><strong>consecutive_successes</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of consecutive successes required from a health check before changing the health to healthy. (Default: <code class="docutils literal notranslate"><span class="pre">1</span></code>)</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A human-readable description of the health check.</p></li>
+<li><p><strong>expected_body</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A case-insensitive sub-string to look for in the response body. If this string is not found, the origin will be marked as unhealthy.</p></li>
+<li><p><strong>expected_codes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The expected HTTP response codes (e.g. “200”) or code ranges (e.g. “2xx” for all codes starting with 2) of the health check. (Default: <code class="docutils literal notranslate"><span class="pre">[&quot;200&quot;]</span></code>)</p></li>
+<li><p><strong>follow_redirects</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Follow redirects if the origin returns a 3xx status code. Valid values: <code class="docutils literal notranslate"><span class="pre">true</span></code> or <code class="docutils literal notranslate"><span class="pre">false</span></code> (Default: <code class="docutils literal notranslate"><span class="pre">false</span></code>).</p></li>
+<li><p><strong>headers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The header name.</p></li>
+<li><p><strong>interval</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The interval between each health check. Shorter intervals may give quicker notifications if the origin status changes, but will increase load on the origin as we check from multiple locations. (Default: <code class="docutils literal notranslate"><span class="pre">60</span></code>)</p></li>
+<li><p><strong>method</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The TCP connection method to use for the health check. Valid values: <code class="docutils literal notranslate"><span class="pre">connection_established</span></code> (Default: <code class="docutils literal notranslate"><span class="pre">connection_established</span></code>).</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A short name to identify the health check. Only alphanumeric characters, hyphens and underscores are allowed.</p></li>
+<li><p><strong>notification_email_addresses</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of email addresses we want to send the notifications to.</p></li>
+<li><p><strong>notification_suspended</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether the notifications are suspended or not. Useful for maintenance periods. Valid values: <code class="docutils literal notranslate"><span class="pre">true</span></code> or <code class="docutils literal notranslate"><span class="pre">false</span></code> (Default: <code class="docutils literal notranslate"><span class="pre">false</span></code>).</p></li>
+<li><p><strong>path</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The endpoint path to health check against. (Default: <code class="docutils literal notranslate"><span class="pre">/</span></code>)</p></li>
+<li><p><strong>port</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Port number to connect to for the health check.  Valid values are in the rage <code class="docutils literal notranslate"><span class="pre">0-65535</span></code> (Default: <code class="docutils literal notranslate"><span class="pre">80</span></code>).</p></li>
+<li><p><strong>retries</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of retries to attempt in case of a timeout before marking the origin as unhealthy. Retries are attempted immediately. (Default: <code class="docutils literal notranslate"><span class="pre">2</span></code>)</p></li>
+<li><p><strong>suspended</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If suspended, no health checks are sent to the origin. Valid values: <code class="docutils literal notranslate"><span class="pre">true</span></code> or <code class="docutils literal notranslate"><span class="pre">false</span></code> (Default: <code class="docutils literal notranslate"><span class="pre">false</span></code>).</p></li>
+<li><p><strong>timeout</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The timeout (in seconds) before marking the health check as failed. (Default: <code class="docutils literal notranslate"><span class="pre">5</span></code>)</p></li>
+<li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The protocol to use for the health check. Valid values: <code class="docutils literal notranslate"><span class="pre">HTTP</span></code>, <code class="docutils literal notranslate"><span class="pre">HTTPS</span></code>, <code class="docutils literal notranslate"><span class="pre">TCP</span></code>.</p></li>
+<li><p><strong>zone_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The DNS zone ID to which apply settings.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>headers</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">header</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The header name.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of string values for the header.</p></li>
+</ul>
+<dl class="py attribute">
+<dt id="pulumi_cloudflare.Healthcheck.address">
+<code class="sig-name descname">address</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.Healthcheck.address" title="Permalink to this definition">¶</a></dt>
+<dd><p>The hostname or IP address of the origin server to run health checks on.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_cloudflare.Healthcheck.allow_insecure">
+<code class="sig-name descname">allow_insecure</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.Healthcheck.allow_insecure" title="Permalink to this definition">¶</a></dt>
+<dd><p>Do not validate the certificate when the health check uses HTTPS. Valid values: <code class="docutils literal notranslate"><span class="pre">true</span></code> or <code class="docutils literal notranslate"><span class="pre">false</span></code> (Default: <code class="docutils literal notranslate"><span class="pre">false</span></code>).</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_cloudflare.Healthcheck.check_regions">
+<code class="sig-name descname">check_regions</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.Healthcheck.check_regions" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of regions from which to run health checks. If not set Cloudflare will pick a default region. Valid values: <code class="docutils literal notranslate"><span class="pre">WNAM</span></code>, <code class="docutils literal notranslate"><span class="pre">ENAM</span></code>, <code class="docutils literal notranslate"><span class="pre">WEU</span></code>, <code class="docutils literal notranslate"><span class="pre">EEU</span></code>, <code class="docutils literal notranslate"><span class="pre">NSAM</span></code>, <code class="docutils literal notranslate"><span class="pre">SSAM</span></code>, <code class="docutils literal notranslate"><span class="pre">OC</span></code>, <code class="docutils literal notranslate"><span class="pre">ME</span></code>, <code class="docutils literal notranslate"><span class="pre">NAF</span></code>, <code class="docutils literal notranslate"><span class="pre">SAF</span></code>, <code class="docutils literal notranslate"><span class="pre">IN</span></code>, <code class="docutils literal notranslate"><span class="pre">SEAS</span></code>, <code class="docutils literal notranslate"><span class="pre">NEAS</span></code>, <code class="docutils literal notranslate"><span class="pre">ALL_REGIONS</span></code>.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_cloudflare.Healthcheck.consecutive_fails">
+<code class="sig-name descname">consecutive_fails</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.Healthcheck.consecutive_fails" title="Permalink to this definition">¶</a></dt>
+<dd><p>The number of consecutive fails required from a health check before changing the health to unhealthy. (Default: <code class="docutils literal notranslate"><span class="pre">1</span></code>)</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_cloudflare.Healthcheck.consecutive_successes">
+<code class="sig-name descname">consecutive_successes</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.Healthcheck.consecutive_successes" title="Permalink to this definition">¶</a></dt>
+<dd><p>The number of consecutive successes required from a health check before changing the health to healthy. (Default: <code class="docutils literal notranslate"><span class="pre">1</span></code>)</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_cloudflare.Healthcheck.description">
+<code class="sig-name descname">description</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.Healthcheck.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>A human-readable description of the health check.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_cloudflare.Healthcheck.expected_body">
+<code class="sig-name descname">expected_body</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.Healthcheck.expected_body" title="Permalink to this definition">¶</a></dt>
+<dd><p>A case-insensitive sub-string to look for in the response body. If this string is not found, the origin will be marked as unhealthy.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_cloudflare.Healthcheck.expected_codes">
+<code class="sig-name descname">expected_codes</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.Healthcheck.expected_codes" title="Permalink to this definition">¶</a></dt>
+<dd><p>The expected HTTP response codes (e.g. “200”) or code ranges (e.g. “2xx” for all codes starting with 2) of the health check. (Default: <code class="docutils literal notranslate"><span class="pre">[&quot;200&quot;]</span></code>)</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_cloudflare.Healthcheck.follow_redirects">
+<code class="sig-name descname">follow_redirects</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.Healthcheck.follow_redirects" title="Permalink to this definition">¶</a></dt>
+<dd><p>Follow redirects if the origin returns a 3xx status code. Valid values: <code class="docutils literal notranslate"><span class="pre">true</span></code> or <code class="docutils literal notranslate"><span class="pre">false</span></code> (Default: <code class="docutils literal notranslate"><span class="pre">false</span></code>).</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_cloudflare.Healthcheck.headers">
+<code class="sig-name descname">headers</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.Healthcheck.headers" title="Permalink to this definition">¶</a></dt>
+<dd><p>The header name.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">header</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The header name.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of string values for the header.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_cloudflare.Healthcheck.interval">
+<code class="sig-name descname">interval</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.Healthcheck.interval" title="Permalink to this definition">¶</a></dt>
+<dd><p>The interval between each health check. Shorter intervals may give quicker notifications if the origin status changes, but will increase load on the origin as we check from multiple locations. (Default: <code class="docutils literal notranslate"><span class="pre">60</span></code>)</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_cloudflare.Healthcheck.method">
+<code class="sig-name descname">method</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.Healthcheck.method" title="Permalink to this definition">¶</a></dt>
+<dd><p>The TCP connection method to use for the health check. Valid values: <code class="docutils literal notranslate"><span class="pre">connection_established</span></code> (Default: <code class="docutils literal notranslate"><span class="pre">connection_established</span></code>).</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_cloudflare.Healthcheck.name">
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.Healthcheck.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>A short name to identify the health check. Only alphanumeric characters, hyphens and underscores are allowed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_cloudflare.Healthcheck.notification_email_addresses">
+<code class="sig-name descname">notification_email_addresses</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.Healthcheck.notification_email_addresses" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of email addresses we want to send the notifications to.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_cloudflare.Healthcheck.notification_suspended">
+<code class="sig-name descname">notification_suspended</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.Healthcheck.notification_suspended" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether the notifications are suspended or not. Useful for maintenance periods. Valid values: <code class="docutils literal notranslate"><span class="pre">true</span></code> or <code class="docutils literal notranslate"><span class="pre">false</span></code> (Default: <code class="docutils literal notranslate"><span class="pre">false</span></code>).</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_cloudflare.Healthcheck.path">
+<code class="sig-name descname">path</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.Healthcheck.path" title="Permalink to this definition">¶</a></dt>
+<dd><p>The endpoint path to health check against. (Default: <code class="docutils literal notranslate"><span class="pre">/</span></code>)</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_cloudflare.Healthcheck.port">
+<code class="sig-name descname">port</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.Healthcheck.port" title="Permalink to this definition">¶</a></dt>
+<dd><p>Port number to connect to for the health check.  Valid values are in the rage <code class="docutils literal notranslate"><span class="pre">0-65535</span></code> (Default: <code class="docutils literal notranslate"><span class="pre">80</span></code>).</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_cloudflare.Healthcheck.retries">
+<code class="sig-name descname">retries</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.Healthcheck.retries" title="Permalink to this definition">¶</a></dt>
+<dd><p>The number of retries to attempt in case of a timeout before marking the origin as unhealthy. Retries are attempted immediately. (Default: <code class="docutils literal notranslate"><span class="pre">2</span></code>)</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_cloudflare.Healthcheck.suspended">
+<code class="sig-name descname">suspended</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.Healthcheck.suspended" title="Permalink to this definition">¶</a></dt>
+<dd><p>If suspended, no health checks are sent to the origin. Valid values: <code class="docutils literal notranslate"><span class="pre">true</span></code> or <code class="docutils literal notranslate"><span class="pre">false</span></code> (Default: <code class="docutils literal notranslate"><span class="pre">false</span></code>).</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_cloudflare.Healthcheck.timeout">
+<code class="sig-name descname">timeout</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.Healthcheck.timeout" title="Permalink to this definition">¶</a></dt>
+<dd><p>The timeout (in seconds) before marking the health check as failed. (Default: <code class="docutils literal notranslate"><span class="pre">5</span></code>)</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_cloudflare.Healthcheck.type">
+<code class="sig-name descname">type</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.Healthcheck.type" title="Permalink to this definition">¶</a></dt>
+<dd><p>The protocol to use for the health check. Valid values: <code class="docutils literal notranslate"><span class="pre">HTTP</span></code>, <code class="docutils literal notranslate"><span class="pre">HTTPS</span></code>, <code class="docutils literal notranslate"><span class="pre">TCP</span></code>.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_cloudflare.Healthcheck.zone_id">
+<code class="sig-name descname">zone_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.Healthcheck.zone_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The DNS zone ID to which apply settings.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_cloudflare.Healthcheck.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">address</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allow_insecure</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">check_regions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">consecutive_fails</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">consecutive_successes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">created_on</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">expected_body</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">expected_codes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">follow_redirects</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">headers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">interval</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">method</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">modified_on</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">notification_email_addresses</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">notification_suspended</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">path</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">port</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">retries</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">suspended</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">timeout</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.Healthcheck.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Healthcheck resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The hostname or IP address of the origin server to run health checks on.</p></li>
+<li><p><strong>allow_insecure</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Do not validate the certificate when the health check uses HTTPS. Valid values: <code class="docutils literal notranslate"><span class="pre">true</span></code> or <code class="docutils literal notranslate"><span class="pre">false</span></code> (Default: <code class="docutils literal notranslate"><span class="pre">false</span></code>).</p></li>
+<li><p><strong>check_regions</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of regions from which to run health checks. If not set Cloudflare will pick a default region. Valid values: <code class="docutils literal notranslate"><span class="pre">WNAM</span></code>, <code class="docutils literal notranslate"><span class="pre">ENAM</span></code>, <code class="docutils literal notranslate"><span class="pre">WEU</span></code>, <code class="docutils literal notranslate"><span class="pre">EEU</span></code>, <code class="docutils literal notranslate"><span class="pre">NSAM</span></code>, <code class="docutils literal notranslate"><span class="pre">SSAM</span></code>, <code class="docutils literal notranslate"><span class="pre">OC</span></code>, <code class="docutils literal notranslate"><span class="pre">ME</span></code>, <code class="docutils literal notranslate"><span class="pre">NAF</span></code>, <code class="docutils literal notranslate"><span class="pre">SAF</span></code>, <code class="docutils literal notranslate"><span class="pre">IN</span></code>, <code class="docutils literal notranslate"><span class="pre">SEAS</span></code>, <code class="docutils literal notranslate"><span class="pre">NEAS</span></code>, <code class="docutils literal notranslate"><span class="pre">ALL_REGIONS</span></code>.</p></li>
+<li><p><strong>consecutive_fails</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of consecutive fails required from a health check before changing the health to unhealthy. (Default: <code class="docutils literal notranslate"><span class="pre">1</span></code>)</p></li>
+<li><p><strong>consecutive_successes</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of consecutive successes required from a health check before changing the health to healthy. (Default: <code class="docutils literal notranslate"><span class="pre">1</span></code>)</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A human-readable description of the health check.</p></li>
+<li><p><strong>expected_body</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A case-insensitive sub-string to look for in the response body. If this string is not found, the origin will be marked as unhealthy.</p></li>
+<li><p><strong>expected_codes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The expected HTTP response codes (e.g. “200”) or code ranges (e.g. “2xx” for all codes starting with 2) of the health check. (Default: <code class="docutils literal notranslate"><span class="pre">[&quot;200&quot;]</span></code>)</p></li>
+<li><p><strong>follow_redirects</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Follow redirects if the origin returns a 3xx status code. Valid values: <code class="docutils literal notranslate"><span class="pre">true</span></code> or <code class="docutils literal notranslate"><span class="pre">false</span></code> (Default: <code class="docutils literal notranslate"><span class="pre">false</span></code>).</p></li>
+<li><p><strong>headers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The header name.</p></li>
+<li><p><strong>interval</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The interval between each health check. Shorter intervals may give quicker notifications if the origin status changes, but will increase load on the origin as we check from multiple locations. (Default: <code class="docutils literal notranslate"><span class="pre">60</span></code>)</p></li>
+<li><p><strong>method</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The TCP connection method to use for the health check. Valid values: <code class="docutils literal notranslate"><span class="pre">connection_established</span></code> (Default: <code class="docutils literal notranslate"><span class="pre">connection_established</span></code>).</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A short name to identify the health check. Only alphanumeric characters, hyphens and underscores are allowed.</p></li>
+<li><p><strong>notification_email_addresses</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of email addresses we want to send the notifications to.</p></li>
+<li><p><strong>notification_suspended</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether the notifications are suspended or not. Useful for maintenance periods. Valid values: <code class="docutils literal notranslate"><span class="pre">true</span></code> or <code class="docutils literal notranslate"><span class="pre">false</span></code> (Default: <code class="docutils literal notranslate"><span class="pre">false</span></code>).</p></li>
+<li><p><strong>path</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The endpoint path to health check against. (Default: <code class="docutils literal notranslate"><span class="pre">/</span></code>)</p></li>
+<li><p><strong>port</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Port number to connect to for the health check.  Valid values are in the rage <code class="docutils literal notranslate"><span class="pre">0-65535</span></code> (Default: <code class="docutils literal notranslate"><span class="pre">80</span></code>).</p></li>
+<li><p><strong>retries</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of retries to attempt in case of a timeout before marking the origin as unhealthy. Retries are attempted immediately. (Default: <code class="docutils literal notranslate"><span class="pre">2</span></code>)</p></li>
+<li><p><strong>suspended</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If suspended, no health checks are sent to the origin. Valid values: <code class="docutils literal notranslate"><span class="pre">true</span></code> or <code class="docutils literal notranslate"><span class="pre">false</span></code> (Default: <code class="docutils literal notranslate"><span class="pre">false</span></code>).</p></li>
+<li><p><strong>timeout</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The timeout (in seconds) before marking the health check as failed. (Default: <code class="docutils literal notranslate"><span class="pre">5</span></code>)</p></li>
+<li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The protocol to use for the health check. Valid values: <code class="docutils literal notranslate"><span class="pre">HTTP</span></code>, <code class="docutils literal notranslate"><span class="pre">HTTPS</span></code>, <code class="docutils literal notranslate"><span class="pre">TCP</span></code>.</p></li>
+<li><p><strong>zone_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The DNS zone ID to which apply settings.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>headers</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">header</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The header name.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of string values for the header.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_cloudflare.Healthcheck.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.Healthcheck.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_cloudflare.Healthcheck.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.Healthcheck.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt id="pulumi_cloudflare.LoadBalancer">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">LoadBalancer</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_pool_ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">fallback_pool_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pop_pools</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">proxied</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region_pools</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">session_affinity</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">steering_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ttl</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.LoadBalancer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Cloudflare Load Balancer resource. This sits in front of a number of defined pools of origins and provides various options for geographically-aware load balancing. Note that the load balancing feature must be enabled in your Cloudflare account before you can use this resource.</p>
@@ -2995,7 +3412,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>minimum_origins</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The minimum number of origins that must be healthy for this pool to serve traffic. If the number of healthy origins falls below this number, the pool will be marked unhealthy and we will failover to the next available pool. Default: 1.</p></li>
 <li><p><strong>monitor</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Monitor to use for health checking origins within this pool.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A human-identifiable name for the origin.</p></li>
-<li><p><strong>notification_email</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The email address to send health status notifications to. This can be an individual mailbox or a mailing list.</p></li>
+<li><p><strong>notification_email</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The email address to send health status notifications to. This can be an individual mailbox or a mailing list. Multiple emails can be supplied as a comma delimited list.</p></li>
 <li><p><strong>origins</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The list of origins within this pool. Traffic directed at this pool is balanced across all currently healthy origins, provided the pool itself is healthy. It’s a complex value. See description below.</p></li>
 </ul>
 </dd>
@@ -3058,7 +3475,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py attribute">
 <dt id="pulumi_cloudflare.LoadBalancerPool.notification_email">
 <code class="sig-name descname">notification_email</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.LoadBalancerPool.notification_email" title="Permalink to this definition">¶</a></dt>
-<dd><p>The email address to send health status notifications to. This can be an individual mailbox or a mailing list.</p>
+<dd><p>The email address to send health status notifications to. This can be an individual mailbox or a mailing list. Multiple emails can be supplied as a comma delimited list.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -3093,7 +3510,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>modified_on</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The RFC3339 timestamp of when the load balancer was last modified.</p></li>
 <li><p><strong>monitor</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Monitor to use for health checking origins within this pool.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A human-identifiable name for the origin.</p></li>
-<li><p><strong>notification_email</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The email address to send health status notifications to. This can be an individual mailbox or a mailing list.</p></li>
+<li><p><strong>notification_email</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The email address to send health status notifications to. This can be an individual mailbox or a mailing list. Multiple emails can be supplied as a comma delimited list.</p></li>
 <li><p><strong>origins</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The list of origins within this pool. Traffic directed at this pool is balanced across all currently healthy origins, provided the pool itself is healthy. It’s a complex value. See description below.</p></li>
 </ul>
 </dd>
@@ -3146,20 +3563,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="py class">
-<dt id="pulumi_cloudflare.LogpushJob">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">LogpushJob</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dataset</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">destination_conf</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">logpull_options</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ownership_challenge</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.LogpushJob" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides a resource which manages Cloudflare logpush jobs.</p>
+<dt id="pulumi_cloudflare.LogpullRetention">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">LogpullRetention</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.LogpullRetention" title="Permalink to this definition">¶</a></dt>
+<dd><p>Allows management of the Logpull Retention settings used to control whether or not to retain HTTP request logs.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_cloudflare</span> <span class="k">as</span> <span class="nn">cloudflare</span>
 
-<span class="n">example_job</span> <span class="o">=</span> <span class="n">cloudflare</span><span class="o">.</span><span class="n">LogpushJob</span><span class="p">(</span><span class="s2">&quot;exampleJob&quot;</span><span class="p">,</span>
-    <span class="n">dataset</span><span class="o">=</span><span class="s2">&quot;http_requests&quot;</span><span class="p">,</span>
-    <span class="n">destination_conf</span><span class="o">=</span><span class="s2">&quot;s3://my-bucket-path?region=us-west-2&quot;</span><span class="p">,</span>
-    <span class="n">enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-    <span class="n">logpull_options</span><span class="o">=</span><span class="s2">&quot;fields=RayID,ClientIP,EdgeStartTimestamp&amp;timestamps=rfc3339&quot;</span><span class="p">,</span>
-    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;My-logpush-job&quot;</span><span class="p">,</span>
-    <span class="n">ownership_challenge</span><span class="o">=</span><span class="s2">&quot;00000000000000000&quot;</span><span class="p">,</span>
-    <span class="n">zone_id</span><span class="o">=</span><span class="s2">&quot;d41d8cd98f00b204e9800998ecf8427e&quot;</span><span class="p">)</span>
+<span class="n">example</span> <span class="o">=</span> <span class="n">cloudflare</span><span class="o">.</span><span class="n">LogpullRetention</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">enabled</span><span class="o">=</span><span class="s2">&quot;true&quot;</span><span class="p">,</span>
+    <span class="n">zone_id</span><span class="o">=</span><span class="s2">&quot;fb54f084ca7f7b732d3d3ecbd8ef7bf2&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -3167,15 +3579,91 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>dataset</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Which type of dataset resource to use. Available values are <code class="docutils literal notranslate"><span class="pre">&quot;firewall_events&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;http_requests&quot;</span></code>, and <code class="docutils literal notranslate"><span class="pre">&quot;spectrum_events&quot;</span></code>.</p></li>
-<li><p><strong>destination_conf</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Uniquely identifies a resource (such as an s3 bucket) where data will be pushed. Additional configuration parameters supported by the destination may be included. See <a class="reference external" href="https://developers.cloudflare.com/logs/logpush/logpush-configuration-api/understanding-logpush-api/#destination">Logpush destination documentation</a>.</p></li>
-<li><p><strong>logpull_options</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Configuration string for the Logshare API. It specifies things like requested fields and timestamp formats. See <a class="reference external" href="https://developers.cloudflare.com/logs/logpush/logpush-configuration-api/understanding-logpush-api/#options">Logpull options documentation</a>.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the logpush job to create. Must match the regular expression <code class="docutils literal notranslate"><span class="pre">^[a-zA-Z0-9\-\.]*$</span></code>.</p></li>
-<li><p><strong>ownership_challenge</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Ownership challenge token to prove destination ownership. See <a class="reference external" href="https://developers.cloudflare.com/logs/logpush/logpush-configuration-api/understanding-logpush-api/#usage">Developer documentation</a>.</p></li>
-<li><p><strong>zone_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The zone ID where the logpush job should be created.</p></li>
+<li><p><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether you wish to retain logs or not.</p></li>
+<li><p><strong>zone_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The zone ID to apply the log retention to.</p></li>
 </ul>
 </dd>
 </dl>
+<dl class="py attribute">
+<dt id="pulumi_cloudflare.LogpullRetention.enabled">
+<code class="sig-name descname">enabled</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.LogpullRetention.enabled" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether you wish to retain logs or not.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_cloudflare.LogpullRetention.zone_id">
+<code class="sig-name descname">zone_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.LogpullRetention.zone_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The zone ID to apply the log retention to.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_cloudflare.LogpullRetention.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.LogpullRetention.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing LogpullRetention resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether you wish to retain logs or not.</p></li>
+<li><p><strong>zone_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The zone ID to apply the log retention to.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_cloudflare.LogpullRetention.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.LogpullRetention.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_cloudflare.LogpullRetention.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.LogpullRetention.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_cloudflare.LogpushJob">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">LogpushJob</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dataset</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">destination_conf</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">logpull_options</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ownership_challenge</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.LogpushJob" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a LogpushJob resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] dataset: Which type of dataset resource to use. Available values are <code class="docutils literal notranslate"><span class="pre">&quot;firewall_events&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;http_requests&quot;</span></code>, and <code class="docutils literal notranslate"><span class="pre">&quot;spectrum_events&quot;</span></code>.
+:param pulumi.Input[str] destination_conf: Uniquely identifies a resource (such as an s3 bucket) where data will be pushed. Additional configuration parameters supported by the destination may be included. See <a class="reference external" href="https://developers.cloudflare.com/logs/logpush/logpush-configuration-api/understanding-logpush-api/#destination">Logpush destination documentation</a>.
+:param pulumi.Input[str] logpull_options: Configuration string for the Logshare API. It specifies things like requested fields and timestamp formats. See <a class="reference external" href="https://developers.cloudflare.com/logs/logpush/logpush-configuration-api/understanding-logpush-api/#options">Logpull options documentation</a>.
+:param pulumi.Input[str] name: The name of the logpush job to create. Must match the regular expression <code class="docutils literal notranslate"><span class="pre">^[a-zA-Z0-9\-\.]*$</span></code>.
+:param pulumi.Input[str] ownership_challenge: Ownership challenge token to prove destination ownership. See <a class="reference external" href="https://developers.cloudflare.com/logs/logpush/logpush-configuration-api/understanding-logpush-api/#usage">Developer documentation</a>.
+:param pulumi.Input[str] zone_id: The zone ID where the logpush job should be created.</p>
 <dl class="py attribute">
 <dt id="pulumi_cloudflare.LogpushJob.dataset">
 <code class="sig-name descname">dataset</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.LogpushJob.dataset" title="Permalink to this definition">¶</a></dt>
@@ -3434,6 +3922,42 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">bypassCacheOnCookie</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - String value of cookie name to conditionally bypass cache the page.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">cacheByDeviceType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Whether this action is <code class="docutils literal notranslate"><span class="pre">&quot;on&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;off&quot;</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">cacheDeceptionArmor</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Whether this action is <code class="docutils literal notranslate"><span class="pre">&quot;on&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;off&quot;</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cacheKeyFields</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Controls how Cloudflare creates Cache Keys used to identify files in cache. See below for full description.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">cookie</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Controls what cookies go into Cache Key:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">checkPresences</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Check for presence of specified HTTP headers, without including their actual values.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">includes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Only use values of specified query string parameters in Cache Key.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">header</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Controls what HTTP headers go into Cache Key:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">checkPresences</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Check for presence of specified HTTP headers, without including their actual values.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">excludes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Exclude these query string parameters from Cache Key.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">includes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Only use values of specified query string parameters in Cache Key.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">host</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Controls which Host header goes into Cache Key:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">resolved</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - <code class="docutils literal notranslate"><span class="pre">false</span></code> (default) - includes the Host header in the HTTP request sent to the origin; <code class="docutils literal notranslate"><span class="pre">true</span></code> - includes the Host header that was resolved to get the origin IP for the request (e.g. changed with Resolve Override Page Rule).</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">queryString</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Controls which URL query string parameters go into the Cache Key.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">excludes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Exclude these query string parameters from Cache Key.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ignore</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - <code class="docutils literal notranslate"><span class="pre">false</span></code> (default) - all query string parameters are used for Cache Key, unless explicitly excluded; <code class="docutils literal notranslate"><span class="pre">true</span></code> - all query string parameters are ignored; value is ignored if any of <code class="docutils literal notranslate"><span class="pre">exclude</span></code> or <code class="docutils literal notranslate"><span class="pre">include</span></code> is non-empty.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">includes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Only use values of specified query string parameters in Cache Key.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">user</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Controls which end user-related features go into the Cache Key.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">deviceType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - <code class="docutils literal notranslate"><span class="pre">true</span></code> - classifies a request as “mobile”, “desktop”, or “tablet” based on the User Agent; defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">geo</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - <code class="docutils literal notranslate"><span class="pre">true</span></code> - includes the client’s country, derived from the IP address; defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lang</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - <code class="docutils literal notranslate"><span class="pre">true</span></code> - includes the first language code contained in the <code class="docutils literal notranslate"><span class="pre">Accept-Language</span></code> header sent by the client; defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+</ul>
+</li>
+</ul>
+</li>
 <li><p><code class="docutils literal notranslate"><span class="pre">cacheLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Whether to set the cache level to <code class="docutils literal notranslate"><span class="pre">&quot;bypass&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;basic&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;simplified&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;aggressive&quot;</span></code>, or <code class="docutils literal notranslate"><span class="pre">&quot;cache_everything&quot;</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">cacheOnCookie</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - String value of cookie name to conditionally cache the page.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">disableApps</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Boolean of whether this action is enabled. Default: false.</p></li>
@@ -3486,6 +4010,42 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">bypassCacheOnCookie</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - String value of cookie name to conditionally bypass cache the page.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">cacheByDeviceType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Whether this action is <code class="docutils literal notranslate"><span class="pre">&quot;on&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;off&quot;</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">cacheDeceptionArmor</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Whether this action is <code class="docutils literal notranslate"><span class="pre">&quot;on&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;off&quot;</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cacheKeyFields</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Controls how Cloudflare creates Cache Keys used to identify files in cache. See below for full description.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">cookie</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Controls what cookies go into Cache Key:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">checkPresences</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Check for presence of specified HTTP headers, without including their actual values.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">includes</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Only use values of specified query string parameters in Cache Key.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">header</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Controls what HTTP headers go into Cache Key:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">checkPresences</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Check for presence of specified HTTP headers, without including their actual values.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">excludes</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Exclude these query string parameters from Cache Key.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">includes</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Only use values of specified query string parameters in Cache Key.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">host</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Controls which Host header goes into Cache Key:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">resolved</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - <code class="docutils literal notranslate"><span class="pre">false</span></code> (default) - includes the Host header in the HTTP request sent to the origin; <code class="docutils literal notranslate"><span class="pre">true</span></code> - includes the Host header that was resolved to get the origin IP for the request (e.g. changed with Resolve Override Page Rule).</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">queryString</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Controls which URL query string parameters go into the Cache Key.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">excludes</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Exclude these query string parameters from Cache Key.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ignore</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - <code class="docutils literal notranslate"><span class="pre">false</span></code> (default) - all query string parameters are used for Cache Key, unless explicitly excluded; <code class="docutils literal notranslate"><span class="pre">true</span></code> - all query string parameters are ignored; value is ignored if any of <code class="docutils literal notranslate"><span class="pre">exclude</span></code> or <code class="docutils literal notranslate"><span class="pre">include</span></code> is non-empty.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">includes</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Only use values of specified query string parameters in Cache Key.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">user</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Controls which end user-related features go into the Cache Key.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">deviceType</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - <code class="docutils literal notranslate"><span class="pre">true</span></code> - classifies a request as “mobile”, “desktop”, or “tablet” based on the User Agent; defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">geo</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - <code class="docutils literal notranslate"><span class="pre">true</span></code> - includes the client’s country, derived from the IP address; defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lang</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - <code class="docutils literal notranslate"><span class="pre">true</span></code> - includes the first language code contained in the <code class="docutils literal notranslate"><span class="pre">Accept-Language</span></code> header sent by the client; defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+</ul>
+</li>
+</ul>
+</li>
 <li><p><code class="docutils literal notranslate"><span class="pre">cacheLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Whether to set the cache level to <code class="docutils literal notranslate"><span class="pre">&quot;bypass&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;basic&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;simplified&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;aggressive&quot;</span></code>, or <code class="docutils literal notranslate"><span class="pre">&quot;cache_everything&quot;</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">cacheOnCookie</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - String value of cookie name to conditionally cache the page.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">disableApps</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Boolean of whether this action is enabled. Default: false.</p></li>
@@ -3581,6 +4141,42 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">bypassCacheOnCookie</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - String value of cookie name to conditionally bypass cache the page.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">cacheByDeviceType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Whether this action is <code class="docutils literal notranslate"><span class="pre">&quot;on&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;off&quot;</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">cacheDeceptionArmor</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Whether this action is <code class="docutils literal notranslate"><span class="pre">&quot;on&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;off&quot;</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cacheKeyFields</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Controls how Cloudflare creates Cache Keys used to identify files in cache. See below for full description.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">cookie</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Controls what cookies go into Cache Key:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">checkPresences</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Check for presence of specified HTTP headers, without including their actual values.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">includes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Only use values of specified query string parameters in Cache Key.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">header</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Controls what HTTP headers go into Cache Key:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">checkPresences</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Check for presence of specified HTTP headers, without including their actual values.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">excludes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Exclude these query string parameters from Cache Key.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">includes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Only use values of specified query string parameters in Cache Key.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">host</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Controls which Host header goes into Cache Key:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">resolved</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - <code class="docutils literal notranslate"><span class="pre">false</span></code> (default) - includes the Host header in the HTTP request sent to the origin; <code class="docutils literal notranslate"><span class="pre">true</span></code> - includes the Host header that was resolved to get the origin IP for the request (e.g. changed with Resolve Override Page Rule).</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">queryString</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Controls which URL query string parameters go into the Cache Key.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">excludes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Exclude these query string parameters from Cache Key.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ignore</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - <code class="docutils literal notranslate"><span class="pre">false</span></code> (default) - all query string parameters are used for Cache Key, unless explicitly excluded; <code class="docutils literal notranslate"><span class="pre">true</span></code> - all query string parameters are ignored; value is ignored if any of <code class="docutils literal notranslate"><span class="pre">exclude</span></code> or <code class="docutils literal notranslate"><span class="pre">include</span></code> is non-empty.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">includes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Only use values of specified query string parameters in Cache Key.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">user</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Controls which end user-related features go into the Cache Key.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">deviceType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - <code class="docutils literal notranslate"><span class="pre">true</span></code> - classifies a request as “mobile”, “desktop”, or “tablet” based on the User Agent; defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">geo</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - <code class="docutils literal notranslate"><span class="pre">true</span></code> - includes the client’s country, derived from the IP address; defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lang</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - <code class="docutils literal notranslate"><span class="pre">true</span></code> - includes the first language code contained in the <code class="docutils literal notranslate"><span class="pre">Accept-Language</span></code> header sent by the client; defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+</ul>
+</li>
+</ul>
+</li>
 <li><p><code class="docutils literal notranslate"><span class="pre">cacheLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Whether to set the cache level to <code class="docutils literal notranslate"><span class="pre">&quot;bypass&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;basic&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;simplified&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;aggressive&quot;</span></code>, or <code class="docutils literal notranslate"><span class="pre">&quot;cache_everything&quot;</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">cacheOnCookie</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - String value of cookie name to conditionally cache the page.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">disableApps</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Boolean of whether this action is enabled. Default: false.</p></li>
@@ -4826,7 +5422,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_cloudflare.WorkerRoute">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">WorkerRoute</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pattern</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">script_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.WorkerRoute" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides a Cloudflare worker route resource. A route will also require a <code class="docutils literal notranslate"><span class="pre">.WorkerScript</span></code>.</p>
+<dd><p>Provides a Cloudflare worker route resource. A route will also require a <code class="docutils literal notranslate"><span class="pre">.WorkerScript</span></code>. <em>NOTE:</em>  This resource uses the Cloudflare account APIs. This requires setting the <code class="docutils literal notranslate"><span class="pre">CLOUDFLARE_ACCOUNT_ID</span></code> environment variable or <code class="docutils literal notranslate"><span class="pre">account_id</span></code> provider argument.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_cloudflare</span> <span class="k">as</span> <span class="nn">cloudflare</span>
 
@@ -4929,7 +5525,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_cloudflare.WorkerScript">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">WorkerScript</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">content</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kv_namespace_bindings</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.WorkerScript" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides a Cloudflare worker script resource. In order for a script to be active, you’ll also need to setup a <code class="docutils literal notranslate"><span class="pre">.WorkerRoute</span></code>.</p>
+<dd><p>Provides a Cloudflare worker script resource. In order for a script to be active, you’ll also need to setup a <code class="docutils literal notranslate"><span class="pre">.WorkerRoute</span></code>. <em>NOTE:</em>  This resource uses the Cloudflare account APIs. This requires setting the <code class="docutils literal notranslate"><span class="pre">CLOUDFLARE_ACCOUNT_ID</span></code> environment variable or <code class="docutils literal notranslate"><span class="pre">account_id</span></code> provider argument.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_cloudflare</span> <span class="k">as</span> <span class="nn">cloudflare</span>
 
@@ -4940,7 +5536,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">content</span><span class="o">=</span><span class="p">(</span><span class="k">lambda</span> <span class="n">path</span><span class="p">:</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())(</span><span class="s2">&quot;script.js&quot;</span><span class="p">),</span>
     <span class="n">kv_namespace_binding</span><span class="o">=</span><span class="p">[{</span>
         <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;my_binding&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;namespaceId&quot;</span><span class="p">:</span> <span class="n">my_namespace</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;namespace_id&quot;</span><span class="p">:</span> <span class="n">my_namespace</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
     <span class="p">}])</span>
 </pre></div>
 </div>
@@ -6039,7 +6635,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="nb">filter</span><span class="o">=</span><span class="p">{</span>
         <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;.*example.*&quot;</span><span class="p">,</span>
         <span class="s2">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;on&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;groupId&quot;</span><span class="p">:</span> <span class="s2">&quot;de677e5818985db1285d0e80225f06e5&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;group_id&quot;</span><span class="p">:</span> <span class="s2">&quot;de677e5818985db1285d0e80225f06e5&quot;</span><span class="p">,</span>
     <span class="p">})</span>
 <span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;wafRules&quot;</span><span class="p">,</span> <span class="n">test</span><span class="o">.</span><span class="n">rules</span><span class="p">)</span>
 </pre></div>

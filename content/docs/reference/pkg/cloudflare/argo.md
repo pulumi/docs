@@ -20,7 +20,24 @@ Cloudflare Argo controls the routing to your origin and tiered caching options t
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Cloudflare = Pulumi.Cloudflare;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Cloudflare.Argo("example", new Cloudflare.ArgoArgs
+        {
+            SmartRouting = "on",
+            TieredCaching = "on",
+            ZoneId = "d41d8cd98f00b204e9800998ecf8427e",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

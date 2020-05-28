@@ -20,7 +20,78 @@ Provides a Cloudflare rate limit resource for a given zone. This can be used to 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Cloudflare = Pulumi.Cloudflare;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Cloudflare.RateLimit("example", new Cloudflare.RateLimitArgs
+        {
+            ZoneId = @var.Cloudflare_zone_id,
+            Threshold = 2000,
+            Period = 2,
+            Match = new Cloudflare.Inputs.RateLimitMatchArgs
+            {
+                Request = new Cloudflare.Inputs.RateLimitMatchRequestArgs
+                {
+                    UrlPattern = $"{@var.Cloudflare_zone}/*",
+                    Schemes = 
+                    {
+                        "HTTP",
+                        "HTTPS",
+                    },
+                    Methods = 
+                    {
+                        "GET",
+                        "POST",
+                        "PUT",
+                        "DELETE",
+                        "PATCH",
+                        "HEAD",
+                    },
+                },
+                Response = new Cloudflare.Inputs.RateLimitMatchResponseArgs
+                {
+                    Statuses = 
+                    {
+                        200,
+                        201,
+                        202,
+                        301,
+                        429,
+                    },
+                    OriginTraffic = false,
+                },
+            },
+            Action = new Cloudflare.Inputs.RateLimitActionArgs
+            {
+                Mode = "simulate",
+                Timeout = 43200,
+                Response = new Cloudflare.Inputs.RateLimitActionResponseArgs
+                {
+                    ContentType = "text/plain",
+                    Body = "custom response body",
+                },
+            },
+            Correlate = new Cloudflare.Inputs.RateLimitCorrelateArgs
+            {
+                By = "nat",
+            },
+            Disabled = false,
+            Description = "example rate limit for a zone",
+            BypassUrlPatterns = 
+            {
+                $"{@var.Cloudflare_zone}/bypass1",
+                $"{@var.Cloudflare_zone}/bypass2",
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -89,12 +160,12 @@ import * as pulumi from "@pulumi/pulumi";
 import * as cloudflare from "@pulumi/cloudflare";
 
 const example = new cloudflare.RateLimit("example", {
-    zoneId: var.cloudflare_zone_id,
+    zoneId: _var.cloudflare_zone_id,
     threshold: 2000,
     period: 2,
     match: {
         request: {
-            urlPattern: `${var.cloudflare_zone}/*`,
+            urlPattern: `${_var.cloudflare_zone}/*`,
             schemes: [
                 "HTTP",
                 "HTTPS",
@@ -133,8 +204,8 @@ const example = new cloudflare.RateLimit("example", {
     disabled: false,
     description: "example rate limit for a zone",
     bypassUrlPatterns: [
-        `${var.cloudflare_zone}/bypass1`,
-        `${var.cloudflare_zone}/bypass2`,
+        `${_var.cloudflare_zone}/bypass1`,
+        `${_var.cloudflare_zone}/bypass2`,
     ],
 });
 ```
