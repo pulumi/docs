@@ -210,7 +210,9 @@ The ConfigGroup resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Files</span>
+        <span id="files_csharp">
+<a href="#files_csharp" style="color: inherit; text-decoration: inherit;">Files</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Union&lt;string, Immutable<wbr>Array&lt;string&gt;&gt;</span>
     </dt>
@@ -218,7 +220,9 @@ The ConfigGroup resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Objs</span>
+        <span id="objs_csharp">
+<a href="#objs_csharp" style="color: inherit; text-decoration: inherit;">Objs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Union&lt;object, Immutable<wbr>Array&lt;object&gt;&gt;</span>
     </dt>
@@ -226,7 +230,9 @@ The ConfigGroup resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resource<wbr>Prefix</span>
+        <span id="resourceprefix_csharp">
+<a href="#resourceprefix_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -234,7 +240,9 @@ The ConfigGroup resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Transformations</span>
+        <span id="transformations_csharp">
+<a href="#transformations_csharp" style="color: inherit; text-decoration: inherit;">Transformations</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;object&gt;</a></span>
     </dt>
@@ -242,7 +250,9 @@ The ConfigGroup resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Yaml</span>
+        <span id="yaml_csharp">
+<a href="#yaml_csharp" style="color: inherit; text-decoration: inherit;">Yaml</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Union&lt;string, Immutable<wbr>Array&lt;string&gt;&gt;</span>
     </dt>
@@ -257,7 +267,9 @@ The ConfigGroup resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Files</span>
+        <span id="files_go">
+<a href="#files_go" style="color: inherit; text-decoration: inherit;">Files</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">interface{}</span>
     </dt>
@@ -265,7 +277,9 @@ The ConfigGroup resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Objs</span>
+        <span id="objs_go">
+<a href="#objs_go" style="color: inherit; text-decoration: inherit;">Objs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">interface{}</span>
     </dt>
@@ -273,7 +287,9 @@ The ConfigGroup resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resource<wbr>Prefix</span>
+        <span id="resourceprefix_go">
+<a href="#resourceprefix_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -281,7 +297,9 @@ The ConfigGroup resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Transformations</span>
+        <span id="transformations_go">
+<a href="#transformations_go" style="color: inherit; text-decoration: inherit;">Transformations</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">[]interface{}</a></span>
     </dt>
@@ -289,7 +307,9 @@ The ConfigGroup resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Yaml</span>
+        <span id="yaml_go">
+<a href="#yaml_go" style="color: inherit; text-decoration: inherit;">Yaml</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">interface{}</span>
     </dt>
@@ -304,7 +324,9 @@ The ConfigGroup resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>files</span>
+        <span id="files_nodejs">
+<a href="#files_nodejs" style="color: inherit; text-decoration: inherit;">files</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">string | string[]</span>
     </dt>
@@ -312,7 +334,9 @@ The ConfigGroup resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>objs</span>
+        <span id="objs_nodejs">
+<a href="#objs_nodejs" style="color: inherit; text-decoration: inherit;">objs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">any | any[]</span>
     </dt>
@@ -320,7 +344,9 @@ The ConfigGroup resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource<wbr>Prefix</span>
+        <span id="resourceprefix_nodejs">
+<a href="#resourceprefix_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -328,7 +354,9 @@ The ConfigGroup resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>transformations</span>
+        <span id="transformations_nodejs">
+<a href="#transformations_nodejs" style="color: inherit; text-decoration: inherit;">transformations</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any[]</a></span>
     </dt>
@@ -336,7 +364,9 @@ The ConfigGroup resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>yaml</span>
+        <span id="yaml_nodejs">
+<a href="#yaml_nodejs" style="color: inherit; text-decoration: inherit;">yaml</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">string | string[]</span>
     </dt>
@@ -351,7 +381,9 @@ The ConfigGroup resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>files</span>
+        <span id="files_python">
+<a href="#files_python" style="color: inherit; text-decoration: inherit;">files</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">string | List[str]</span>
     </dt>
@@ -359,7 +391,9 @@ The ConfigGroup resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>objs</span>
+        <span id="objs_python">
+<a href="#objs_python" style="color: inherit; text-decoration: inherit;">objs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">pulumi:pulumi:Any | List[Any]</span>
     </dt>
@@ -367,7 +401,9 @@ The ConfigGroup resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource_<wbr>prefix</span>
+        <span id="resource_prefix_python">
+<a href="#resource_prefix_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -375,7 +411,9 @@ The ConfigGroup resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>transformations</span>
+        <span id="transformations_python">
+<a href="#transformations_python" style="color: inherit; text-decoration: inherit;">transformations</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
     </dt>
@@ -383,7 +421,9 @@ The ConfigGroup resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>yaml</span>
+        <span id="yaml_python">
+<a href="#yaml_python" style="color: inherit; text-decoration: inherit;">yaml</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">string | List[str]</span>
     </dt>
@@ -409,7 +449,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -417,7 +459,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Resources</span>
+        <span id="resources_csharp">
+<a href="#resources_csharp" style="color: inherit; text-decoration: inherit;">Resources</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -425,7 +469,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Urn</span>
+        <span id="urn_csharp">
+<a href="#urn_csharp" style="color: inherit; text-decoration: inherit;">Urn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -440,7 +486,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -448,7 +496,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Resources</span>
+        <span id="resources_go">
+<a href="#resources_go" style="color: inherit; text-decoration: inherit;">Resources</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -456,7 +506,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Urn</span>
+        <span id="urn_go">
+<a href="#urn_go" style="color: inherit; text-decoration: inherit;">Urn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -471,7 +523,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -479,7 +533,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>resources</span>
+        <span id="resources_nodejs">
+<a href="#resources_nodejs" style="color: inherit; text-decoration: inherit;">resources</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -487,7 +543,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>urn</span>
+        <span id="urn_nodejs">
+<a href="#urn_nodejs" style="color: inherit; text-decoration: inherit;">urn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -502,7 +560,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -510,7 +570,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>resources</span>
+        <span id="resources_python">
+<a href="#resources_python" style="color: inherit; text-decoration: inherit;">resources</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -518,7 +580,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>urn</span>
+        <span id="urn_python">
+<a href="#urn_python" style="color: inherit; text-decoration: inherit;">urn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

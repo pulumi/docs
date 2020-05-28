@@ -459,8 +459,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_kubernetes.extensions.v1beta1.Ingress">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_kubernetes.extensions.v1beta1.</code><code class="sig-name descname">Ingress</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">metadata</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">spec</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.extensions.v1beta1.Ingress" title="Permalink to this definition">¶</a></dt>
-<dd><p>DEPRECATED - extensions/v1beta1/Ingress is deprecated by networking/v1beta1/Ingress and not
-supported by Kubernetes v1.20+ clusters.</p>
+<dd><p>DEPRECATED - extensions/v1beta1/Ingress is deprecated by networking.k8s.io/v1beta1/Ingress and
+not supported by Kubernetes v1.20+ clusters.</p>
 <p>Ingress is a collection of rules that allow inbound connections to reach the endpoints defined
 by a backend. An Ingress can be configured to give services externally-reachable urls, load
 balance traffic, terminate SSL, offer name based virtual hosting etc.</p>

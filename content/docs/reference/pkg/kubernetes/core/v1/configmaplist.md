@@ -196,7 +196,9 @@ The ConfigMapList resource accepts the following [input]({{< relref "/docs/intro
 
     <dt class="property-required"
             title="Required">
-        <span>Items</span>
+        <span id="items_csharp">
+<a href="#items_csharp" style="color: inherit; text-decoration: inherit;">Items</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#configmap">List&lt;Config<wbr>Map<wbr>Args&gt;</a></span>
     </dt>
@@ -204,7 +206,9 @@ The ConfigMapList resource accepts the following [input]({{< relref "/docs/intro
 
     <dt class="property-optional"
             title="Optional">
-        <span>Metadata</span>
+        <span id="metadata_csharp">
+<a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#listmeta">Pulumi.<wbr>Kubernetes.<wbr>Meta.<wbr>V1.<wbr>Inputs.<wbr>List<wbr>Meta<wbr>Args</a></span>
     </dt>
@@ -219,7 +223,9 @@ The ConfigMapList resource accepts the following [input]({{< relref "/docs/intro
 
     <dt class="property-required"
             title="Required">
-        <span>Items</span>
+        <span id="items_go">
+<a href="#items_go" style="color: inherit; text-decoration: inherit;">Items</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#configmap">[]Config<wbr>Map<wbr>Type</a></span>
     </dt>
@@ -227,7 +233,9 @@ The ConfigMapList resource accepts the following [input]({{< relref "/docs/intro
 
     <dt class="property-optional"
             title="Optional">
-        <span>Metadata</span>
+        <span id="metadata_go">
+<a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#listmeta">List<wbr>Meta</a></span>
     </dt>
@@ -242,7 +250,9 @@ The ConfigMapList resource accepts the following [input]({{< relref "/docs/intro
 
     <dt class="property-required"
             title="Required">
-        <span>items</span>
+        <span id="items_nodejs">
+<a href="#items_nodejs" style="color: inherit; text-decoration: inherit;">items</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#configmap">Config<wbr>Map[]</a></span>
     </dt>
@@ -250,7 +260,9 @@ The ConfigMapList resource accepts the following [input]({{< relref "/docs/intro
 
     <dt class="property-optional"
             title="Optional">
-        <span>metadata</span>
+        <span id="metadata_nodejs">
+<a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#listmeta">meta.v1.<wbr>List<wbr>Meta</a></span>
     </dt>
@@ -265,7 +277,9 @@ The ConfigMapList resource accepts the following [input]({{< relref "/docs/intro
 
     <dt class="property-required"
             title="Required">
-        <span>items</span>
+        <span id="items_python">
+<a href="#items_python" style="color: inherit; text-decoration: inherit;">items</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#configmap">List[Config<wbr>Map]</a></span>
     </dt>
@@ -273,7 +287,9 @@ The ConfigMapList resource accepts the following [input]({{< relref "/docs/intro
 
     <dt class="property-optional"
             title="Optional">
-        <span>metadata</span>
+        <span id="metadata_python">
+<a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#listmeta">Dict[List<wbr>Meta]</a></span>
     </dt>
@@ -299,7 +315,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -314,7 +332,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -329,7 +349,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -344,7 +366,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -383,7 +407,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Binary<wbr>Data</span>
+        <span id="binarydata_csharp">
+<a href="#binarydata_csharp" style="color: inherit; text-decoration: inherit;">Binary<wbr>Data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -391,7 +417,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Data</span>
+        <span id="data_csharp">
+<a href="#data_csharp" style="color: inherit; text-decoration: inherit;">Data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -399,7 +427,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Immutable</span>
+        <span id="immutable_csharp">
+<a href="#immutable_csharp" style="color: inherit; text-decoration: inherit;">Immutable</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -407,7 +437,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Metadata</span>
+        <span id="metadata_csharp">
+<a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#objectmeta">Pulumi.<wbr>Kubernetes.<wbr>Meta.<wbr>V1.<wbr>Inputs.<wbr>Object<wbr>Meta<wbr>Args</a></span>
     </dt>
@@ -422,7 +454,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Binary<wbr>Data</span>
+        <span id="binarydata_go">
+<a href="#binarydata_go" style="color: inherit; text-decoration: inherit;">Binary<wbr>Data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -430,7 +464,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Data</span>
+        <span id="data_go">
+<a href="#data_go" style="color: inherit; text-decoration: inherit;">Data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -438,7 +474,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Immutable</span>
+        <span id="immutable_go">
+<a href="#immutable_go" style="color: inherit; text-decoration: inherit;">Immutable</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -446,7 +484,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Metadata</span>
+        <span id="metadata_go">
+<a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#objectmeta">Object<wbr>Meta</a></span>
     </dt>
@@ -461,7 +501,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>binary<wbr>Data</span>
+        <span id="binarydata_nodejs">
+<a href="#binarydata_nodejs" style="color: inherit; text-decoration: inherit;">binary<wbr>Data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -469,7 +511,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>data</span>
+        <span id="data_nodejs">
+<a href="#data_nodejs" style="color: inherit; text-decoration: inherit;">data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -477,7 +521,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>immutable</span>
+        <span id="immutable_nodejs">
+<a href="#immutable_nodejs" style="color: inherit; text-decoration: inherit;">immutable</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -485,7 +531,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>metadata</span>
+        <span id="metadata_nodejs">
+<a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#objectmeta">meta.v1.<wbr>Object<wbr>Meta</a></span>
     </dt>
@@ -500,7 +548,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>binary_<wbr>data</span>
+        <span id="binary_data_python">
+<a href="#binary_data_python" style="color: inherit; text-decoration: inherit;">binary_<wbr>data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -508,7 +558,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>data</span>
+        <span id="data_python">
+<a href="#data_python" style="color: inherit; text-decoration: inherit;">data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -516,7 +568,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>immutable</span>
+        <span id="immutable_python">
+<a href="#immutable_python" style="color: inherit; text-decoration: inherit;">immutable</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -524,7 +578,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>metadata</span>
+        <span id="metadata_python">
+<a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#objectmeta">Dict[Object<wbr>Meta]</a></span>
     </dt>
@@ -554,7 +610,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Continue</span>
+        <span id="continue_csharp">
+<a href="#continue_csharp" style="color: inherit; text-decoration: inherit;">Continue</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -562,7 +620,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Remaining<wbr>Item<wbr>Count</span>
+        <span id="remainingitemcount_csharp">
+<a href="#remainingitemcount_csharp" style="color: inherit; text-decoration: inherit;">Remaining<wbr>Item<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -570,7 +630,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resource<wbr>Version</span>
+        <span id="resourceversion_csharp">
+<a href="#resourceversion_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -578,7 +640,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span>Self<wbr>Link</span>
+        <span id="selflink_csharp">
+<a href="#selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -595,7 +659,9 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
     <dt class="property-optional"
             title="Optional">
-        <span>Continue</span>
+        <span id="continue_go">
+<a href="#continue_go" style="color: inherit; text-decoration: inherit;">Continue</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -603,7 +669,9 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
     <dt class="property-optional"
             title="Optional">
-        <span>Remaining<wbr>Item<wbr>Count</span>
+        <span id="remainingitemcount_go">
+<a href="#remainingitemcount_go" style="color: inherit; text-decoration: inherit;">Remaining<wbr>Item<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -611,7 +679,9 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resource<wbr>Version</span>
+        <span id="resourceversion_go">
+<a href="#resourceversion_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -619,7 +689,9 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
     <dt class="property-optional"
             title="Optional">
-        <span>Self<wbr>Link</span>
+        <span id="selflink_go">
+<a href="#selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -636,7 +708,9 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
     <dt class="property-optional"
             title="Optional">
-        <span>continue</span>
+        <span id="continue_nodejs">
+<a href="#continue_nodejs" style="color: inherit; text-decoration: inherit;">continue</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -644,7 +718,9 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
     <dt class="property-optional"
             title="Optional">
-        <span>remaining<wbr>Item<wbr>Count</span>
+        <span id="remainingitemcount_nodejs">
+<a href="#remainingitemcount_nodejs" style="color: inherit; text-decoration: inherit;">remaining<wbr>Item<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -652,7 +728,9 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource<wbr>Version</span>
+        <span id="resourceversion_nodejs">
+<a href="#resourceversion_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -660,7 +738,9 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
     <dt class="property-optional"
             title="Optional">
-        <span>self<wbr>Link</span>
+        <span id="selflink_nodejs">
+<a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -677,7 +757,9 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
     <dt class="property-optional"
             title="Optional">
-        <span>continue_</span>
+        <span id="continue__python">
+<a href="#continue__python" style="color: inherit; text-decoration: inherit;">continue_</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -685,7 +767,9 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
     <dt class="property-optional"
             title="Optional">
-        <span>remaining_<wbr>item_<wbr>count</span>
+        <span id="remaining_item_count_python">
+<a href="#remaining_item_count_python" style="color: inherit; text-decoration: inherit;">remaining_<wbr>item_<wbr>count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -693,7 +777,9 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource_<wbr>version</span>
+        <span id="resource_version_python">
+<a href="#resource_version_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -701,7 +787,9 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
     <dt class="property-optional"
             title="Optional">
-        <span>self_<wbr>link</span>
+        <span id="self_link_python">
+<a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -733,7 +821,9 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
     <dt class="property-optional"
             title="Optional">
-        <span>Fields<wbr>Type</span>
+        <span id="fieldstype_csharp">
+<a href="#fieldstype_csharp" style="color: inherit; text-decoration: inherit;">Fields<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -741,7 +831,9 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
     <dt class="property-optional"
             title="Optional">
-        <span>Fields<wbr>V1</span>
+        <span id="fieldsv1_csharp">
+<a href="#fieldsv1_csharp" style="color: inherit; text-decoration: inherit;">Fields<wbr>V1</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">object</a></span>
     </dt>
@@ -749,7 +841,9 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
     <dt class="property-optional"
             title="Optional">
-        <span>Manager</span>
+        <span id="manager_csharp">
+<a href="#manager_csharp" style="color: inherit; text-decoration: inherit;">Manager</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -757,7 +851,9 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
     <dt class="property-optional"
             title="Optional">
-        <span>Operation</span>
+        <span id="operation_csharp">
+<a href="#operation_csharp" style="color: inherit; text-decoration: inherit;">Operation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -765,7 +861,9 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
     <dt class="property-optional"
             title="Optional">
-        <span>Time</span>
+        <span id="time_csharp">
+<a href="#time_csharp" style="color: inherit; text-decoration: inherit;">Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -780,7 +878,9 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
     <dt class="property-optional"
             title="Optional">
-        <span>Fields<wbr>Type</span>
+        <span id="fieldstype_go">
+<a href="#fieldstype_go" style="color: inherit; text-decoration: inherit;">Fields<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -788,7 +888,9 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
     <dt class="property-optional"
             title="Optional">
-        <span>Fields<wbr>V1</span>
+        <span id="fieldsv1_go">
+<a href="#fieldsv1_go" style="color: inherit; text-decoration: inherit;">Fields<wbr>V1</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">interface{}</a></span>
     </dt>
@@ -796,7 +898,9 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
     <dt class="property-optional"
             title="Optional">
-        <span>Manager</span>
+        <span id="manager_go">
+<a href="#manager_go" style="color: inherit; text-decoration: inherit;">Manager</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -804,7 +908,9 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
     <dt class="property-optional"
             title="Optional">
-        <span>Operation</span>
+        <span id="operation_go">
+<a href="#operation_go" style="color: inherit; text-decoration: inherit;">Operation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -812,7 +918,9 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
     <dt class="property-optional"
             title="Optional">
-        <span>Time</span>
+        <span id="time_go">
+<a href="#time_go" style="color: inherit; text-decoration: inherit;">Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -827,7 +935,9 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
     <dt class="property-optional"
             title="Optional">
-        <span>fields<wbr>Type</span>
+        <span id="fieldstype_nodejs">
+<a href="#fieldstype_nodejs" style="color: inherit; text-decoration: inherit;">fields<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -835,7 +945,9 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
     <dt class="property-optional"
             title="Optional">
-        <span>fields<wbr>V1</span>
+        <span id="fieldsv1_nodejs">
+<a href="#fieldsv1_nodejs" style="color: inherit; text-decoration: inherit;">fields<wbr>V1</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any</a></span>
     </dt>
@@ -843,7 +955,9 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
     <dt class="property-optional"
             title="Optional">
-        <span>manager</span>
+        <span id="manager_nodejs">
+<a href="#manager_nodejs" style="color: inherit; text-decoration: inherit;">manager</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -851,7 +965,9 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
     <dt class="property-optional"
             title="Optional">
-        <span>operation</span>
+        <span id="operation_nodejs">
+<a href="#operation_nodejs" style="color: inherit; text-decoration: inherit;">operation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -859,7 +975,9 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
     <dt class="property-optional"
             title="Optional">
-        <span>time</span>
+        <span id="time_nodejs">
+<a href="#time_nodejs" style="color: inherit; text-decoration: inherit;">time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -874,7 +992,9 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
     <dt class="property-optional"
             title="Optional">
-        <span>fields_<wbr>type</span>
+        <span id="fields_type_python">
+<a href="#fields_type_python" style="color: inherit; text-decoration: inherit;">fields_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -882,7 +1002,9 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
     <dt class="property-optional"
             title="Optional">
-        <span>fields_<wbr>v1</span>
+        <span id="fields_v1_python">
+<a href="#fields_v1_python" style="color: inherit; text-decoration: inherit;">fields_<wbr>v1</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
     </dt>
@@ -890,7 +1012,9 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
     <dt class="property-optional"
             title="Optional">
-        <span>manager</span>
+        <span id="manager_python">
+<a href="#manager_python" style="color: inherit; text-decoration: inherit;">manager</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -898,7 +1022,9 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
     <dt class="property-optional"
             title="Optional">
-        <span>operation</span>
+        <span id="operation_python">
+<a href="#operation_python" style="color: inherit; text-decoration: inherit;">operation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -906,7 +1032,9 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
     <dt class="property-optional"
             title="Optional">
-        <span>time</span>
+        <span id="time_python">
+<a href="#time_python" style="color: inherit; text-decoration: inherit;">time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -936,7 +1064,9 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
     <dt class="property-optional"
             title="Optional">
-        <span>Annotations</span>
+        <span id="annotations_csharp">
+<a href="#annotations_csharp" style="color: inherit; text-decoration: inherit;">Annotations</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -944,7 +1074,9 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cluster<wbr>Name</span>
+        <span id="clustername_csharp">
+<a href="#clustername_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -952,7 +1084,9 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
     <dt class="property-optional"
             title="Optional">
-        <span>Creation<wbr>Timestamp</span>
+        <span id="creationtimestamp_csharp">
+<a href="#creationtimestamp_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Timestamp</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -962,7 +1096,9 @@ Populated by the system. Read-only. Null for lists. More info: https://git.k8s.i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Deletion<wbr>Grace<wbr>Period<wbr>Seconds</span>
+        <span id="deletiongraceperiodseconds_csharp">
+<a href="#deletiongraceperiodseconds_csharp" style="color: inherit; text-decoration: inherit;">Deletion<wbr>Grace<wbr>Period<wbr>Seconds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -970,7 +1106,9 @@ Populated by the system. Read-only. Null for lists. More info: https://git.k8s.i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Deletion<wbr>Timestamp</span>
+        <span id="deletiontimestamp_csharp">
+<a href="#deletiontimestamp_csharp" style="color: inherit; text-decoration: inherit;">Deletion<wbr>Timestamp</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -980,7 +1118,9 @@ Populated by the system when a graceful deletion is requested. Read-only. More i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Finalizers</span>
+        <span id="finalizers_csharp">
+<a href="#finalizers_csharp" style="color: inherit; text-decoration: inherit;">Finalizers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -988,7 +1128,9 @@ Populated by the system when a graceful deletion is requested. Read-only. More i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Generate<wbr>Name</span>
+        <span id="generatename_csharp">
+<a href="#generatename_csharp" style="color: inherit; text-decoration: inherit;">Generate<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1000,7 +1142,9 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Generation</span>
+        <span id="generation_csharp">
+<a href="#generation_csharp" style="color: inherit; text-decoration: inherit;">Generation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1008,7 +1152,9 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Labels</span>
+        <span id="labels_csharp">
+<a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -1016,7 +1162,9 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Managed<wbr>Fields</span>
+        <span id="managedfields_csharp">
+<a href="#managedfields_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Fields</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedfieldsentry">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Meta.<wbr>V1.<wbr>Inputs.<wbr>Managed<wbr>Fields<wbr>Entry<wbr>Args&gt;</a></span>
     </dt>
@@ -1024,7 +1172,9 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1032,7 +1182,9 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Namespace</span>
+        <span id="namespace_csharp">
+<a href="#namespace_csharp" style="color: inherit; text-decoration: inherit;">Namespace</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1042,7 +1194,9 @@ Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/use
 
     <dt class="property-optional"
             title="Optional">
-        <span>Owner<wbr>References</span>
+        <span id="ownerreferences_csharp">
+<a href="#ownerreferences_csharp" style="color: inherit; text-decoration: inherit;">Owner<wbr>References</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ownerreference">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Meta.<wbr>V1.<wbr>Inputs.<wbr>Owner<wbr>Reference<wbr>Args&gt;</a></span>
     </dt>
@@ -1050,7 +1204,9 @@ Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/use
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resource<wbr>Version</span>
+        <span id="resourceversion_csharp">
+<a href="#resourceversion_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1060,7 +1216,9 @@ Populated by the system. Read-only. Value must be treated as opaque by clients a
 
     <dt class="property-optional"
             title="Optional">
-        <span>Self<wbr>Link</span>
+        <span id="selflink_csharp">
+<a href="#selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1070,7 +1228,9 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
     <dt class="property-optional"
             title="Optional">
-        <span>Uid</span>
+        <span id="uid_csharp">
+<a href="#uid_csharp" style="color: inherit; text-decoration: inherit;">Uid</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1087,7 +1247,9 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>Annotations</span>
+        <span id="annotations_go">
+<a href="#annotations_go" style="color: inherit; text-decoration: inherit;">Annotations</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -1095,7 +1257,9 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cluster<wbr>Name</span>
+        <span id="clustername_go">
+<a href="#clustername_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1103,7 +1267,9 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>Creation<wbr>Timestamp</span>
+        <span id="creationtimestamp_go">
+<a href="#creationtimestamp_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Timestamp</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1113,7 +1279,9 @@ Populated by the system. Read-only. Null for lists. More info: https://git.k8s.i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Deletion<wbr>Grace<wbr>Period<wbr>Seconds</span>
+        <span id="deletiongraceperiodseconds_go">
+<a href="#deletiongraceperiodseconds_go" style="color: inherit; text-decoration: inherit;">Deletion<wbr>Grace<wbr>Period<wbr>Seconds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1121,7 +1289,9 @@ Populated by the system. Read-only. Null for lists. More info: https://git.k8s.i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Deletion<wbr>Timestamp</span>
+        <span id="deletiontimestamp_go">
+<a href="#deletiontimestamp_go" style="color: inherit; text-decoration: inherit;">Deletion<wbr>Timestamp</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1131,7 +1301,9 @@ Populated by the system when a graceful deletion is requested. Read-only. More i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Finalizers</span>
+        <span id="finalizers_go">
+<a href="#finalizers_go" style="color: inherit; text-decoration: inherit;">Finalizers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1139,7 +1311,9 @@ Populated by the system when a graceful deletion is requested. Read-only. More i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Generate<wbr>Name</span>
+        <span id="generatename_go">
+<a href="#generatename_go" style="color: inherit; text-decoration: inherit;">Generate<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1151,7 +1325,9 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Generation</span>
+        <span id="generation_go">
+<a href="#generation_go" style="color: inherit; text-decoration: inherit;">Generation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1159,7 +1335,9 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Labels</span>
+        <span id="labels_go">
+<a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -1167,7 +1345,9 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Managed<wbr>Fields</span>
+        <span id="managedfields_go">
+<a href="#managedfields_go" style="color: inherit; text-decoration: inherit;">Managed<wbr>Fields</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedfieldsentry">Managed<wbr>Fields<wbr>Entry</a></span>
     </dt>
@@ -1175,7 +1355,9 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1183,7 +1365,9 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Namespace</span>
+        <span id="namespace_go">
+<a href="#namespace_go" style="color: inherit; text-decoration: inherit;">Namespace</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1193,7 +1377,9 @@ Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/use
 
     <dt class="property-optional"
             title="Optional">
-        <span>Owner<wbr>References</span>
+        <span id="ownerreferences_go">
+<a href="#ownerreferences_go" style="color: inherit; text-decoration: inherit;">Owner<wbr>References</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ownerreference">Owner<wbr>Reference</a></span>
     </dt>
@@ -1201,7 +1387,9 @@ Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/use
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resource<wbr>Version</span>
+        <span id="resourceversion_go">
+<a href="#resourceversion_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1211,7 +1399,9 @@ Populated by the system. Read-only. Value must be treated as opaque by clients a
 
     <dt class="property-optional"
             title="Optional">
-        <span>Self<wbr>Link</span>
+        <span id="selflink_go">
+<a href="#selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1221,7 +1411,9 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
     <dt class="property-optional"
             title="Optional">
-        <span>Uid</span>
+        <span id="uid_go">
+<a href="#uid_go" style="color: inherit; text-decoration: inherit;">Uid</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1238,7 +1430,9 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>annotations</span>
+        <span id="annotations_nodejs">
+<a href="#annotations_nodejs" style="color: inherit; text-decoration: inherit;">annotations</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -1246,7 +1440,9 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>cluster<wbr>Name</span>
+        <span id="clustername_nodejs">
+<a href="#clustername_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1254,7 +1450,9 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>creation<wbr>Timestamp</span>
+        <span id="creationtimestamp_nodejs">
+<a href="#creationtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Timestamp</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1264,7 +1462,9 @@ Populated by the system. Read-only. Null for lists. More info: https://git.k8s.i
 
     <dt class="property-optional"
             title="Optional">
-        <span>deletion<wbr>Grace<wbr>Period<wbr>Seconds</span>
+        <span id="deletiongraceperiodseconds_nodejs">
+<a href="#deletiongraceperiodseconds_nodejs" style="color: inherit; text-decoration: inherit;">deletion<wbr>Grace<wbr>Period<wbr>Seconds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1272,7 +1472,9 @@ Populated by the system. Read-only. Null for lists. More info: https://git.k8s.i
 
     <dt class="property-optional"
             title="Optional">
-        <span>deletion<wbr>Timestamp</span>
+        <span id="deletiontimestamp_nodejs">
+<a href="#deletiontimestamp_nodejs" style="color: inherit; text-decoration: inherit;">deletion<wbr>Timestamp</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1282,7 +1484,9 @@ Populated by the system when a graceful deletion is requested. Read-only. More i
 
     <dt class="property-optional"
             title="Optional">
-        <span>finalizers</span>
+        <span id="finalizers_nodejs">
+<a href="#finalizers_nodejs" style="color: inherit; text-decoration: inherit;">finalizers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1290,7 +1494,9 @@ Populated by the system when a graceful deletion is requested. Read-only. More i
 
     <dt class="property-optional"
             title="Optional">
-        <span>generate<wbr>Name</span>
+        <span id="generatename_nodejs">
+<a href="#generatename_nodejs" style="color: inherit; text-decoration: inherit;">generate<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1302,7 +1508,9 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>generation</span>
+        <span id="generation_nodejs">
+<a href="#generation_nodejs" style="color: inherit; text-decoration: inherit;">generation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1310,7 +1518,9 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>labels</span>
+        <span id="labels_nodejs">
+<a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -1318,7 +1528,9 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>managed<wbr>Fields</span>
+        <span id="managedfields_nodejs">
+<a href="#managedfields_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Fields</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedfieldsentry">meta.v1.<wbr>Managed<wbr>Fields<wbr>Entry[]</a></span>
     </dt>
@@ -1326,7 +1538,9 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1334,7 +1548,9 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>namespace</span>
+        <span id="namespace_nodejs">
+<a href="#namespace_nodejs" style="color: inherit; text-decoration: inherit;">namespace</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1344,7 +1560,9 @@ Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/use
 
     <dt class="property-optional"
             title="Optional">
-        <span>owner<wbr>References</span>
+        <span id="ownerreferences_nodejs">
+<a href="#ownerreferences_nodejs" style="color: inherit; text-decoration: inherit;">owner<wbr>References</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ownerreference">meta.v1.<wbr>Owner<wbr>Reference[]</a></span>
     </dt>
@@ -1352,7 +1570,9 @@ Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/use
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource<wbr>Version</span>
+        <span id="resourceversion_nodejs">
+<a href="#resourceversion_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1362,7 +1582,9 @@ Populated by the system. Read-only. Value must be treated as opaque by clients a
 
     <dt class="property-optional"
             title="Optional">
-        <span>self<wbr>Link</span>
+        <span id="selflink_nodejs">
+<a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1372,7 +1594,9 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
     <dt class="property-optional"
             title="Optional">
-        <span>uid</span>
+        <span id="uid_nodejs">
+<a href="#uid_nodejs" style="color: inherit; text-decoration: inherit;">uid</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1389,7 +1613,9 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>annotations</span>
+        <span id="annotations_python">
+<a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -1397,7 +1623,9 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>cluster_<wbr>name</span>
+        <span id="cluster_name_python">
+<a href="#cluster_name_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1405,7 +1633,9 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>creation_<wbr>timestamp</span>
+        <span id="creation_timestamp_python">
+<a href="#creation_timestamp_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>timestamp</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1415,7 +1645,9 @@ Populated by the system. Read-only. Null for lists. More info: https://git.k8s.i
 
     <dt class="property-optional"
             title="Optional">
-        <span>deletion_<wbr>grace_<wbr>period_<wbr>seconds</span>
+        <span id="deletion_grace_period_seconds_python">
+<a href="#deletion_grace_period_seconds_python" style="color: inherit; text-decoration: inherit;">deletion_<wbr>grace_<wbr>period_<wbr>seconds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1423,7 +1655,9 @@ Populated by the system. Read-only. Null for lists. More info: https://git.k8s.i
 
     <dt class="property-optional"
             title="Optional">
-        <span>deletion_<wbr>timestamp</span>
+        <span id="deletion_timestamp_python">
+<a href="#deletion_timestamp_python" style="color: inherit; text-decoration: inherit;">deletion_<wbr>timestamp</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1433,7 +1667,9 @@ Populated by the system when a graceful deletion is requested. Read-only. More i
 
     <dt class="property-optional"
             title="Optional">
-        <span>finalizers</span>
+        <span id="finalizers_python">
+<a href="#finalizers_python" style="color: inherit; text-decoration: inherit;">finalizers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1441,7 +1677,9 @@ Populated by the system when a graceful deletion is requested. Read-only. More i
 
     <dt class="property-optional"
             title="Optional">
-        <span>generate_<wbr>name</span>
+        <span id="generate_name_python">
+<a href="#generate_name_python" style="color: inherit; text-decoration: inherit;">generate_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1453,7 +1691,9 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>generation</span>
+        <span id="generation_python">
+<a href="#generation_python" style="color: inherit; text-decoration: inherit;">generation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1461,7 +1701,9 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>labels</span>
+        <span id="labels_python">
+<a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -1469,7 +1711,9 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>managed_<wbr>fields</span>
+        <span id="managed_fields_python">
+<a href="#managed_fields_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>fields</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedfieldsentry">List[Managed<wbr>Fields<wbr>Entry]</a></span>
     </dt>
@@ -1477,7 +1721,9 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1485,7 +1731,9 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>namespace</span>
+        <span id="namespace_python">
+<a href="#namespace_python" style="color: inherit; text-decoration: inherit;">namespace</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1495,7 +1743,9 @@ Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/use
 
     <dt class="property-optional"
             title="Optional">
-        <span>owner_<wbr>references</span>
+        <span id="owner_references_python">
+<a href="#owner_references_python" style="color: inherit; text-decoration: inherit;">owner_<wbr>references</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ownerreference">List[Owner<wbr>Reference]</a></span>
     </dt>
@@ -1503,7 +1753,9 @@ Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/use
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource_<wbr>version</span>
+        <span id="resource_version_python">
+<a href="#resource_version_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1513,7 +1765,9 @@ Populated by the system. Read-only. Value must be treated as opaque by clients a
 
     <dt class="property-optional"
             title="Optional">
-        <span>self_<wbr>link</span>
+        <span id="self_link_python">
+<a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1523,7 +1777,9 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
     <dt class="property-optional"
             title="Optional">
-        <span>uid</span>
+        <span id="uid_python">
+<a href="#uid_python" style="color: inherit; text-decoration: inherit;">uid</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1555,7 +1811,9 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1563,7 +1821,9 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-required"
             title="Required">
-        <span>Uid</span>
+        <span id="uid_csharp">
+<a href="#uid_csharp" style="color: inherit; text-decoration: inherit;">Uid</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1571,7 +1831,9 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>Block<wbr>Owner<wbr>Deletion</span>
+        <span id="blockownerdeletion_csharp">
+<a href="#blockownerdeletion_csharp" style="color: inherit; text-decoration: inherit;">Block<wbr>Owner<wbr>Deletion</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1579,7 +1841,9 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>Controller</span>
+        <span id="controller_csharp">
+<a href="#controller_csharp" style="color: inherit; text-decoration: inherit;">Controller</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1594,7 +1858,9 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1602,7 +1868,9 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-required"
             title="Required">
-        <span>Uid</span>
+        <span id="uid_go">
+<a href="#uid_go" style="color: inherit; text-decoration: inherit;">Uid</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1610,7 +1878,9 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>Block<wbr>Owner<wbr>Deletion</span>
+        <span id="blockownerdeletion_go">
+<a href="#blockownerdeletion_go" style="color: inherit; text-decoration: inherit;">Block<wbr>Owner<wbr>Deletion</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1618,7 +1888,9 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>Controller</span>
+        <span id="controller_go">
+<a href="#controller_go" style="color: inherit; text-decoration: inherit;">Controller</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1633,7 +1905,9 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1641,7 +1915,9 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-required"
             title="Required">
-        <span>uid</span>
+        <span id="uid_nodejs">
+<a href="#uid_nodejs" style="color: inherit; text-decoration: inherit;">uid</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1649,7 +1925,9 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>block<wbr>Owner<wbr>Deletion</span>
+        <span id="blockownerdeletion_nodejs">
+<a href="#blockownerdeletion_nodejs" style="color: inherit; text-decoration: inherit;">block<wbr>Owner<wbr>Deletion</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1657,7 +1935,9 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>controller</span>
+        <span id="controller_nodejs">
+<a href="#controller_nodejs" style="color: inherit; text-decoration: inherit;">controller</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1672,7 +1952,9 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1680,7 +1962,9 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-required"
             title="Required">
-        <span>uid</span>
+        <span id="uid_python">
+<a href="#uid_python" style="color: inherit; text-decoration: inherit;">uid</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1688,7 +1972,9 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>block_<wbr>owner_<wbr>deletion</span>
+        <span id="block_owner_deletion_python">
+<a href="#block_owner_deletion_python" style="color: inherit; text-decoration: inherit;">block_<wbr>owner_<wbr>deletion</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1696,7 +1982,9 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>controller</span>
+        <span id="controller_python">
+<a href="#controller_python" style="color: inherit; text-decoration: inherit;">controller</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
