@@ -20,7 +20,33 @@ Use this data source to get the [IP ranges](https://docs.fastly.com/guides/secur
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+using Fastly = Pulumi.Fastly;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var fastly = Output.Create(Fastly.GetFastlyIpRanges.InvokeAsync());
+        var fromFastly = new Aws.Ec2.SecurityGroup("fromFastly", new Aws.Ec2.SecurityGroupArgs
+        {
+            Ingress = 
+            {
+                new Aws.Ec2.Inputs.SecurityGroupIngressArgs
+                {
+                    CidrBlocks = fastly.Apply(fastly => fastly.CidrBlocks),
+                    FromPort = "443",
+                    Protocol = "tcp",
+                    ToPort = "443",
+                },
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -35,10 +61,10 @@ import pulumi_fastly as fastly
 
 fastly = fastly.get_fastly_ip_ranges()
 from_fastly = aws.ec2.SecurityGroup("fromFastly", ingress=[{
-    "cidrBlocks": fastly.cidr_blocks,
-    "fromPort": "443",
+    "cidr_blocks": fastly.cidr_blocks,
+    "from_port": "443",
     "protocol": "tcp",
-    "toPort": "443",
+    "to_port": "443",
 }])
 ```
 {{% /example %}}
@@ -106,7 +132,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Cidr<wbr>Blocks</span>
+        <span id="cidrblocks_csharp">
+<a href="#cidrblocks_csharp" style="color: inherit; text-decoration: inherit;">Cidr<wbr>Blocks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -115,7 +143,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -131,7 +161,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Cidr<wbr>Blocks</span>
+        <span id="cidrblocks_go">
+<a href="#cidrblocks_go" style="color: inherit; text-decoration: inherit;">Cidr<wbr>Blocks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -140,7 +172,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -156,7 +190,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>cidr<wbr>Blocks</span>
+        <span id="cidrblocks_nodejs">
+<a href="#cidrblocks_nodejs" style="color: inherit; text-decoration: inherit;">cidr<wbr>Blocks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -165,7 +201,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -181,7 +219,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>cidr_<wbr>blocks</span>
+        <span id="cidr_blocks_python">
+<a href="#cidr_blocks_python" style="color: inherit; text-decoration: inherit;">cidr_<wbr>blocks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -190,7 +230,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

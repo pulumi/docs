@@ -1825,10 +1825,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <span class="n">fastly</span> <span class="o">=</span> <span class="n">fastly</span><span class="o">.</span><span class="n">get_fastly_ip_ranges</span><span class="p">()</span>
 <span class="n">from_fastly</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">SecurityGroup</span><span class="p">(</span><span class="s2">&quot;fromFastly&quot;</span><span class="p">,</span> <span class="n">ingress</span><span class="o">=</span><span class="p">[{</span>
-    <span class="s2">&quot;cidrBlocks&quot;</span><span class="p">:</span> <span class="n">fastly</span><span class="o">.</span><span class="n">cidr_blocks</span><span class="p">,</span>
-    <span class="s2">&quot;fromPort&quot;</span><span class="p">:</span> <span class="s2">&quot;443&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;cidr_blocks&quot;</span><span class="p">:</span> <span class="n">fastly</span><span class="o">.</span><span class="n">cidr_blocks</span><span class="p">,</span>
+    <span class="s2">&quot;from_port&quot;</span><span class="p">:</span> <span class="s2">&quot;443&quot;</span><span class="p">,</span>
     <span class="s2">&quot;protocol&quot;</span><span class="p">:</span> <span class="s2">&quot;tcp&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;toPort&quot;</span><span class="p">:</span> <span class="s2">&quot;443&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;to_port&quot;</span><span class="p">:</span> <span class="s2">&quot;443&quot;</span><span class="p">,</span>
 <span class="p">}])</span>
 </pre></div>
 </div>
