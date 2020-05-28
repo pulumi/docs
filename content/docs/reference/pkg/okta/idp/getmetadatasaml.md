@@ -20,7 +20,22 @@ Use this data source to retrieve SAML IdP metadata from Okta.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Okta = Pulumi.Okta;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = Output.Create(Okta.Idp.GetMetadataSaml.InvokeAsync(new Okta.Idp.GetMetadataSamlArgs
+        {
+            Id = "<idp id>",
+        }));
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -88,7 +103,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Idp<wbr>Id</span>
+        <span id="idpid_csharp">
+<a href="#idpid_csharp" style="color: inherit; text-decoration: inherit;">Idp<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -104,7 +121,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Idp<wbr>Id</span>
+        <span id="idpid_go">
+<a href="#idpid_go" style="color: inherit; text-decoration: inherit;">Idp<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -120,7 +139,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>idp<wbr>Id</span>
+        <span id="idpid_nodejs">
+<a href="#idpid_nodejs" style="color: inherit; text-decoration: inherit;">idp<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -136,7 +157,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>idp_<wbr>id</span>
+        <span id="idp_id_python">
+<a href="#idp_id_python" style="color: inherit; text-decoration: inherit;">idp_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -165,7 +188,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Assertions<wbr>Signed</span>
+        <span id="assertionssigned_csharp">
+<a href="#assertionssigned_csharp" style="color: inherit; text-decoration: inherit;">Assertions<wbr>Signed</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -174,7 +199,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Authn<wbr>Request<wbr>Signed</span>
+        <span id="authnrequestsigned_csharp">
+<a href="#authnrequestsigned_csharp" style="color: inherit; text-decoration: inherit;">Authn<wbr>Request<wbr>Signed</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -183,7 +210,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Encryption<wbr>Certificate</span>
+        <span id="encryptioncertificate_csharp">
+<a href="#encryptioncertificate_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Certificate</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -192,7 +221,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Entity<wbr>Id</span>
+        <span id="entityid_csharp">
+<a href="#entityid_csharp" style="color: inherit; text-decoration: inherit;">Entity<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -201,7 +232,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Http<wbr>Post<wbr>Binding</span>
+        <span id="httppostbinding_csharp">
+<a href="#httppostbinding_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Post<wbr>Binding</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -210,7 +243,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Http<wbr>Redirect<wbr>Binding</span>
+        <span id="httpredirectbinding_csharp">
+<a href="#httpredirectbinding_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Redirect<wbr>Binding</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -219,7 +254,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -228,7 +265,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Metadata</span>
+        <span id="metadata_csharp">
+<a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -237,7 +276,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Signing<wbr>Certificate</span>
+        <span id="signingcertificate_csharp">
+<a href="#signingcertificate_csharp" style="color: inherit; text-decoration: inherit;">Signing<wbr>Certificate</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -246,7 +287,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Idp<wbr>Id</span>
+        <span id="idpid_csharp">
+<a href="#idpid_csharp" style="color: inherit; text-decoration: inherit;">Idp<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -261,7 +304,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Assertions<wbr>Signed</span>
+        <span id="assertionssigned_go">
+<a href="#assertionssigned_go" style="color: inherit; text-decoration: inherit;">Assertions<wbr>Signed</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -270,7 +315,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Authn<wbr>Request<wbr>Signed</span>
+        <span id="authnrequestsigned_go">
+<a href="#authnrequestsigned_go" style="color: inherit; text-decoration: inherit;">Authn<wbr>Request<wbr>Signed</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -279,7 +326,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Encryption<wbr>Certificate</span>
+        <span id="encryptioncertificate_go">
+<a href="#encryptioncertificate_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Certificate</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -288,7 +337,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Entity<wbr>Id</span>
+        <span id="entityid_go">
+<a href="#entityid_go" style="color: inherit; text-decoration: inherit;">Entity<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -297,7 +348,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Http<wbr>Post<wbr>Binding</span>
+        <span id="httppostbinding_go">
+<a href="#httppostbinding_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Post<wbr>Binding</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -306,7 +359,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Http<wbr>Redirect<wbr>Binding</span>
+        <span id="httpredirectbinding_go">
+<a href="#httpredirectbinding_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Redirect<wbr>Binding</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -315,7 +370,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -324,7 +381,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Metadata</span>
+        <span id="metadata_go">
+<a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -333,7 +392,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Signing<wbr>Certificate</span>
+        <span id="signingcertificate_go">
+<a href="#signingcertificate_go" style="color: inherit; text-decoration: inherit;">Signing<wbr>Certificate</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -342,7 +403,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Idp<wbr>Id</span>
+        <span id="idpid_go">
+<a href="#idpid_go" style="color: inherit; text-decoration: inherit;">Idp<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -357,7 +420,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>assertions<wbr>Signed</span>
+        <span id="assertionssigned_nodejs">
+<a href="#assertionssigned_nodejs" style="color: inherit; text-decoration: inherit;">assertions<wbr>Signed</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -366,7 +431,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>authn<wbr>Request<wbr>Signed</span>
+        <span id="authnrequestsigned_nodejs">
+<a href="#authnrequestsigned_nodejs" style="color: inherit; text-decoration: inherit;">authn<wbr>Request<wbr>Signed</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -375,7 +442,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>encryption<wbr>Certificate</span>
+        <span id="encryptioncertificate_nodejs">
+<a href="#encryptioncertificate_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Certificate</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -384,7 +453,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>entity<wbr>Id</span>
+        <span id="entityid_nodejs">
+<a href="#entityid_nodejs" style="color: inherit; text-decoration: inherit;">entity<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -393,7 +464,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>http<wbr>Post<wbr>Binding</span>
+        <span id="httppostbinding_nodejs">
+<a href="#httppostbinding_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Post<wbr>Binding</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -402,7 +475,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>http<wbr>Redirect<wbr>Binding</span>
+        <span id="httpredirectbinding_nodejs">
+<a href="#httpredirectbinding_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Redirect<wbr>Binding</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -411,7 +486,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -420,7 +497,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>metadata</span>
+        <span id="metadata_nodejs">
+<a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -429,7 +508,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>signing<wbr>Certificate</span>
+        <span id="signingcertificate_nodejs">
+<a href="#signingcertificate_nodejs" style="color: inherit; text-decoration: inherit;">signing<wbr>Certificate</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -438,7 +519,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>idp<wbr>Id</span>
+        <span id="idpid_nodejs">
+<a href="#idpid_nodejs" style="color: inherit; text-decoration: inherit;">idp<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -453,7 +536,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>assertions_<wbr>signed</span>
+        <span id="assertions_signed_python">
+<a href="#assertions_signed_python" style="color: inherit; text-decoration: inherit;">assertions_<wbr>signed</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -462,7 +547,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>authn_<wbr>request_<wbr>signed</span>
+        <span id="authn_request_signed_python">
+<a href="#authn_request_signed_python" style="color: inherit; text-decoration: inherit;">authn_<wbr>request_<wbr>signed</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -471,7 +558,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>encryption_<wbr>certificate</span>
+        <span id="encryption_certificate_python">
+<a href="#encryption_certificate_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>certificate</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -480,7 +569,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>entity_<wbr>id</span>
+        <span id="entity_id_python">
+<a href="#entity_id_python" style="color: inherit; text-decoration: inherit;">entity_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -489,7 +580,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>http_<wbr>post_<wbr>binding</span>
+        <span id="http_post_binding_python">
+<a href="#http_post_binding_python" style="color: inherit; text-decoration: inherit;">http_<wbr>post_<wbr>binding</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -498,7 +591,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>http_<wbr>redirect_<wbr>binding</span>
+        <span id="http_redirect_binding_python">
+<a href="#http_redirect_binding_python" style="color: inherit; text-decoration: inherit;">http_<wbr>redirect_<wbr>binding</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -507,7 +602,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -516,7 +613,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>metadata</span>
+        <span id="metadata_python">
+<a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -525,7 +624,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>signing_<wbr>certificate</span>
+        <span id="signing_certificate_python">
+<a href="#signing_certificate_python" style="color: inherit; text-decoration: inherit;">signing_<wbr>certificate</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -534,7 +635,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>idp_<wbr>id</span>
+        <span id="idp_id_python">
+<a href="#idp_id_python" style="color: inherit; text-decoration: inherit;">idp_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
