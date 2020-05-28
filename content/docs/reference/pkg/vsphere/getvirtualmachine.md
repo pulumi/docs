@@ -24,7 +24,27 @@ reads the guest ID so that can be supplied as well.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using VSphere = Pulumi.VSphere;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var datacenter = Output.Create(VSphere.GetDatacenter.InvokeAsync(new VSphere.GetDatacenterArgs
+        {
+            Name = "dc1",
+        }));
+        var template = datacenter.Apply(datacenter => Output.Create(VSphere.GetVirtualMachine.InvokeAsync(new VSphere.GetVirtualMachineArgs
+        {
+            DatacenterId = datacenter.Id,
+            Name = "test-vm-template",
+        })));
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -66,7 +86,7 @@ const template = datacenter.apply(datacenter => vsphere.getVirtualMachine({
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getVirtualMachine<span class="p">(</span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#GetVirtualMachineArgs">GetVirtualMachineArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#GetVirtualMachineResult">GetVirtualMachineResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getVirtualMachine<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#GetVirtualMachineArgs">GetVirtualMachineArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#GetVirtualMachineResult">GetVirtualMachineResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -76,13 +96,16 @@ const template = datacenter.apply(datacenter => vsphere.getVirtualMachine({
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupVirtualMachine<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#LookupVirtualMachineArgs">LookupVirtualMachineArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#LookupVirtualMachineResult">LookupVirtualMachineResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupVirtualMachine<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#LookupVirtualMachineArgs">LookupVirtualMachineArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#LookupVirtualMachineResult">LookupVirtualMachineResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `LookupVirtualMachine` in the Go SDK.
+
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetVirtualMachine </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.GetVirtualMachineResult.html">GetVirtualMachineResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.GetVirtualMachineArgs.html">GetVirtualMachineArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.GetVirtualMachineResult.html">GetVirtualMachineResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.GetVirtualMachineArgs.html">GetVirtualMachineArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -97,7 +120,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -107,7 +132,9 @@ path.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Datacenter<wbr>Id</span>
+        <span id="datacenterid_csharp">
+<a href="#datacenterid_csharp" style="color: inherit; text-decoration: inherit;">Datacenter<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -120,7 +147,9 @@ For default datacenters, use the `id` attribute from an empty
 
     <dt class="property-optional"
             title="Optional">
-        <span>Scsi<wbr>Controller<wbr>Scan<wbr>Count</span>
+        <span id="scsicontrollerscancount_csharp">
+<a href="#scsicontrollerscancount_csharp" style="color: inherit; text-decoration: inherit;">Scsi<wbr>Controller<wbr>Scan<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -137,7 +166,9 @@ scan for disk attributes and controller types on. Default: `1`.
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -147,7 +178,9 @@ path.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Datacenter<wbr>Id</span>
+        <span id="datacenterid_go">
+<a href="#datacenterid_go" style="color: inherit; text-decoration: inherit;">Datacenter<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -160,7 +193,9 @@ For default datacenters, use the `id` attribute from an empty
 
     <dt class="property-optional"
             title="Optional">
-        <span>Scsi<wbr>Controller<wbr>Scan<wbr>Count</span>
+        <span id="scsicontrollerscancount_go">
+<a href="#scsicontrollerscancount_go" style="color: inherit; text-decoration: inherit;">Scsi<wbr>Controller<wbr>Scan<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -177,7 +212,9 @@ scan for disk attributes and controller types on. Default: `1`.
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -187,7 +224,9 @@ path.
 
     <dt class="property-optional"
             title="Optional">
-        <span>datacenter<wbr>Id</span>
+        <span id="datacenterid_nodejs">
+<a href="#datacenterid_nodejs" style="color: inherit; text-decoration: inherit;">datacenter<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -200,7 +239,9 @@ For default datacenters, use the `id` attribute from an empty
 
     <dt class="property-optional"
             title="Optional">
-        <span>scsi<wbr>Controller<wbr>Scan<wbr>Count</span>
+        <span id="scsicontrollerscancount_nodejs">
+<a href="#scsicontrollerscancount_nodejs" style="color: inherit; text-decoration: inherit;">scsi<wbr>Controller<wbr>Scan<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -217,7 +258,9 @@ scan for disk attributes and controller types on. Default: `1`.
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -227,7 +270,9 @@ path.
 
     <dt class="property-optional"
             title="Optional">
-        <span>datacenter_<wbr>id</span>
+        <span id="datacenter_id_python">
+<a href="#datacenter_id_python" style="color: inherit; text-decoration: inherit;">datacenter_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -240,7 +285,9 @@ For default datacenters, use the `id` attribute from an empty
 
     <dt class="property-optional"
             title="Optional">
-        <span>scsi_<wbr>controller_<wbr>scan_<wbr>count</span>
+        <span id="scsi_controller_scan_count_python">
+<a href="#scsi_controller_scan_count_python" style="color: inherit; text-decoration: inherit;">scsi_<wbr>controller_<wbr>scan_<wbr>count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -270,7 +317,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Alternate<wbr>Guest<wbr>Name</span>
+        <span id="alternateguestname_csharp">
+<a href="#alternateguestname_csharp" style="color: inherit; text-decoration: inherit;">Alternate<wbr>Guest<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -280,7 +329,9 @@ guest_id is a non-specific operating system, like `otherGuest`.
 
     <dt class="property-"
             title="">
-        <span>Disks</span>
+        <span id="disks_csharp">
+<a href="#disks_csharp" style="color: inherit; text-decoration: inherit;">Disks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getvirtualmachinedisk">List&lt;Pulumi.<wbr>VSphere.<wbr>Outputs.<wbr>Get<wbr>Virtual<wbr>Machine<wbr>Disk&gt;</a></span>
     </dt>
@@ -296,7 +347,9 @@ are scanned for disks. The sub-attributes are:
 
     <dt class="property-"
             title="">
-        <span>Firmware</span>
+        <span id="firmware_csharp">
+<a href="#firmware_csharp" style="color: inherit; text-decoration: inherit;">Firmware</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -305,7 +358,9 @@ are scanned for disks. The sub-attributes are:
 
     <dt class="property-"
             title="">
-        <span>Guest<wbr>Id</span>
+        <span id="guestid_csharp">
+<a href="#guestid_csharp" style="color: inherit; text-decoration: inherit;">Guest<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -314,7 +369,9 @@ are scanned for disks. The sub-attributes are:
 
     <dt class="property-"
             title="">
-        <span>Guest<wbr>Ip<wbr>Addresses</span>
+        <span id="guestipaddresses_csharp">
+<a href="#guestipaddresses_csharp" style="color: inherit; text-decoration: inherit;">Guest<wbr>Ip<wbr>Addresses</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -323,7 +380,9 @@ are scanned for disks. The sub-attributes are:
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -332,7 +391,9 @@ are scanned for disks. The sub-attributes are:
 
     <dt class="property-"
             title="">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -340,7 +401,9 @@ are scanned for disks. The sub-attributes are:
 
     <dt class="property-"
             title="">
-        <span>Network<wbr>Interface<wbr>Types</span>
+        <span id="networkinterfacetypes_csharp">
+<a href="#networkinterfacetypes_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Interface<wbr>Types</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -351,7 +414,9 @@ interface found on the virtual machine, in device bus order. Will be one of
 
     <dt class="property-"
             title="">
-        <span>Scsi<wbr>Bus<wbr>Sharing</span>
+        <span id="scsibussharing_csharp">
+<a href="#scsibussharing_csharp" style="color: inherit; text-decoration: inherit;">Scsi<wbr>Bus<wbr>Sharing</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -362,7 +427,9 @@ controllers defined by `scsi_controller_scan_count` are scanned.
 
     <dt class="property-"
             title="">
-        <span>Scsi<wbr>Type</span>
+        <span id="scsitype_csharp">
+<a href="#scsitype_csharp" style="color: inherit; text-decoration: inherit;">Scsi<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -375,7 +442,9 @@ defined by `scsi_controller_scan_count` are scanned.
 
     <dt class="property-"
             title="">
-        <span>Datacenter<wbr>Id</span>
+        <span id="datacenterid_csharp">
+<a href="#datacenterid_csharp" style="color: inherit; text-decoration: inherit;">Datacenter<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -383,7 +452,9 @@ defined by `scsi_controller_scan_count` are scanned.
 
     <dt class="property-"
             title="">
-        <span>Scsi<wbr>Controller<wbr>Scan<wbr>Count</span>
+        <span id="scsicontrollerscancount_csharp">
+<a href="#scsicontrollerscancount_csharp" style="color: inherit; text-decoration: inherit;">Scsi<wbr>Controller<wbr>Scan<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -398,7 +469,9 @@ defined by `scsi_controller_scan_count` are scanned.
 
     <dt class="property-"
             title="">
-        <span>Alternate<wbr>Guest<wbr>Name</span>
+        <span id="alternateguestname_go">
+<a href="#alternateguestname_go" style="color: inherit; text-decoration: inherit;">Alternate<wbr>Guest<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -408,7 +481,9 @@ guest_id is a non-specific operating system, like `otherGuest`.
 
     <dt class="property-"
             title="">
-        <span>Disks</span>
+        <span id="disks_go">
+<a href="#disks_go" style="color: inherit; text-decoration: inherit;">Disks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getvirtualmachinedisk">[]Get<wbr>Virtual<wbr>Machine<wbr>Disk</a></span>
     </dt>
@@ -424,7 +499,9 @@ are scanned for disks. The sub-attributes are:
 
     <dt class="property-"
             title="">
-        <span>Firmware</span>
+        <span id="firmware_go">
+<a href="#firmware_go" style="color: inherit; text-decoration: inherit;">Firmware</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -433,7 +510,9 @@ are scanned for disks. The sub-attributes are:
 
     <dt class="property-"
             title="">
-        <span>Guest<wbr>Id</span>
+        <span id="guestid_go">
+<a href="#guestid_go" style="color: inherit; text-decoration: inherit;">Guest<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -442,7 +521,9 @@ are scanned for disks. The sub-attributes are:
 
     <dt class="property-"
             title="">
-        <span>Guest<wbr>Ip<wbr>Addresses</span>
+        <span id="guestipaddresses_go">
+<a href="#guestipaddresses_go" style="color: inherit; text-decoration: inherit;">Guest<wbr>Ip<wbr>Addresses</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -451,7 +532,9 @@ are scanned for disks. The sub-attributes are:
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -460,7 +543,9 @@ are scanned for disks. The sub-attributes are:
 
     <dt class="property-"
             title="">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -468,7 +553,9 @@ are scanned for disks. The sub-attributes are:
 
     <dt class="property-"
             title="">
-        <span>Network<wbr>Interface<wbr>Types</span>
+        <span id="networkinterfacetypes_go">
+<a href="#networkinterfacetypes_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Interface<wbr>Types</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -479,7 +566,9 @@ interface found on the virtual machine, in device bus order. Will be one of
 
     <dt class="property-"
             title="">
-        <span>Scsi<wbr>Bus<wbr>Sharing</span>
+        <span id="scsibussharing_go">
+<a href="#scsibussharing_go" style="color: inherit; text-decoration: inherit;">Scsi<wbr>Bus<wbr>Sharing</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -490,7 +579,9 @@ controllers defined by `scsi_controller_scan_count` are scanned.
 
     <dt class="property-"
             title="">
-        <span>Scsi<wbr>Type</span>
+        <span id="scsitype_go">
+<a href="#scsitype_go" style="color: inherit; text-decoration: inherit;">Scsi<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -503,7 +594,9 @@ defined by `scsi_controller_scan_count` are scanned.
 
     <dt class="property-"
             title="">
-        <span>Datacenter<wbr>Id</span>
+        <span id="datacenterid_go">
+<a href="#datacenterid_go" style="color: inherit; text-decoration: inherit;">Datacenter<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -511,7 +604,9 @@ defined by `scsi_controller_scan_count` are scanned.
 
     <dt class="property-"
             title="">
-        <span>Scsi<wbr>Controller<wbr>Scan<wbr>Count</span>
+        <span id="scsicontrollerscancount_go">
+<a href="#scsicontrollerscancount_go" style="color: inherit; text-decoration: inherit;">Scsi<wbr>Controller<wbr>Scan<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -526,7 +621,9 @@ defined by `scsi_controller_scan_count` are scanned.
 
     <dt class="property-"
             title="">
-        <span>alternate<wbr>Guest<wbr>Name</span>
+        <span id="alternateguestname_nodejs">
+<a href="#alternateguestname_nodejs" style="color: inherit; text-decoration: inherit;">alternate<wbr>Guest<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -536,7 +633,9 @@ guest_id is a non-specific operating system, like `otherGuest`.
 
     <dt class="property-"
             title="">
-        <span>disks</span>
+        <span id="disks_nodejs">
+<a href="#disks_nodejs" style="color: inherit; text-decoration: inherit;">disks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getvirtualmachinedisk">Get<wbr>Virtual<wbr>Machine<wbr>Disk[]</a></span>
     </dt>
@@ -552,7 +651,9 @@ are scanned for disks. The sub-attributes are:
 
     <dt class="property-"
             title="">
-        <span>firmware</span>
+        <span id="firmware_nodejs">
+<a href="#firmware_nodejs" style="color: inherit; text-decoration: inherit;">firmware</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -561,7 +662,9 @@ are scanned for disks. The sub-attributes are:
 
     <dt class="property-"
             title="">
-        <span>guest<wbr>Id</span>
+        <span id="guestid_nodejs">
+<a href="#guestid_nodejs" style="color: inherit; text-decoration: inherit;">guest<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -570,7 +673,9 @@ are scanned for disks. The sub-attributes are:
 
     <dt class="property-"
             title="">
-        <span>guest<wbr>Ip<wbr>Addresses</span>
+        <span id="guestipaddresses_nodejs">
+<a href="#guestipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">guest<wbr>Ip<wbr>Addresses</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -579,7 +684,9 @@ are scanned for disks. The sub-attributes are:
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -588,7 +695,9 @@ are scanned for disks. The sub-attributes are:
 
     <dt class="property-"
             title="">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -596,7 +705,9 @@ are scanned for disks. The sub-attributes are:
 
     <dt class="property-"
             title="">
-        <span>network<wbr>Interface<wbr>Types</span>
+        <span id="networkinterfacetypes_nodejs">
+<a href="#networkinterfacetypes_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Interface<wbr>Types</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -607,7 +718,9 @@ interface found on the virtual machine, in device bus order. Will be one of
 
     <dt class="property-"
             title="">
-        <span>scsi<wbr>Bus<wbr>Sharing</span>
+        <span id="scsibussharing_nodejs">
+<a href="#scsibussharing_nodejs" style="color: inherit; text-decoration: inherit;">scsi<wbr>Bus<wbr>Sharing</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -618,7 +731,9 @@ controllers defined by `scsi_controller_scan_count` are scanned.
 
     <dt class="property-"
             title="">
-        <span>scsi<wbr>Type</span>
+        <span id="scsitype_nodejs">
+<a href="#scsitype_nodejs" style="color: inherit; text-decoration: inherit;">scsi<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -631,7 +746,9 @@ defined by `scsi_controller_scan_count` are scanned.
 
     <dt class="property-"
             title="">
-        <span>datacenter<wbr>Id</span>
+        <span id="datacenterid_nodejs">
+<a href="#datacenterid_nodejs" style="color: inherit; text-decoration: inherit;">datacenter<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -639,7 +756,9 @@ defined by `scsi_controller_scan_count` are scanned.
 
     <dt class="property-"
             title="">
-        <span>scsi<wbr>Controller<wbr>Scan<wbr>Count</span>
+        <span id="scsicontrollerscancount_nodejs">
+<a href="#scsicontrollerscancount_nodejs" style="color: inherit; text-decoration: inherit;">scsi<wbr>Controller<wbr>Scan<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -654,7 +773,9 @@ defined by `scsi_controller_scan_count` are scanned.
 
     <dt class="property-"
             title="">
-        <span>alternate_<wbr>guest_<wbr>name</span>
+        <span id="alternate_guest_name_python">
+<a href="#alternate_guest_name_python" style="color: inherit; text-decoration: inherit;">alternate_<wbr>guest_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -664,7 +785,9 @@ guest_id is a non-specific operating system, like `otherGuest`.
 
     <dt class="property-"
             title="">
-        <span>disks</span>
+        <span id="disks_python">
+<a href="#disks_python" style="color: inherit; text-decoration: inherit;">disks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getvirtualmachinedisk">List[Get<wbr>Virtual<wbr>Machine<wbr>Disk]</a></span>
     </dt>
@@ -680,7 +803,9 @@ are scanned for disks. The sub-attributes are:
 
     <dt class="property-"
             title="">
-        <span>firmware</span>
+        <span id="firmware_python">
+<a href="#firmware_python" style="color: inherit; text-decoration: inherit;">firmware</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -689,7 +814,9 @@ are scanned for disks. The sub-attributes are:
 
     <dt class="property-"
             title="">
-        <span>guest_<wbr>id</span>
+        <span id="guest_id_python">
+<a href="#guest_id_python" style="color: inherit; text-decoration: inherit;">guest_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -698,7 +825,9 @@ are scanned for disks. The sub-attributes are:
 
     <dt class="property-"
             title="">
-        <span>guest_<wbr>ip_<wbr>addresses</span>
+        <span id="guest_ip_addresses_python">
+<a href="#guest_ip_addresses_python" style="color: inherit; text-decoration: inherit;">guest_<wbr>ip_<wbr>addresses</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -707,7 +836,9 @@ are scanned for disks. The sub-attributes are:
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -716,7 +847,9 @@ are scanned for disks. The sub-attributes are:
 
     <dt class="property-"
             title="">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -724,7 +857,9 @@ are scanned for disks. The sub-attributes are:
 
     <dt class="property-"
             title="">
-        <span>network_<wbr>interface_<wbr>types</span>
+        <span id="network_interface_types_python">
+<a href="#network_interface_types_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interface_<wbr>types</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -735,7 +870,9 @@ interface found on the virtual machine, in device bus order. Will be one of
 
     <dt class="property-"
             title="">
-        <span>scsi_<wbr>bus_<wbr>sharing</span>
+        <span id="scsi_bus_sharing_python">
+<a href="#scsi_bus_sharing_python" style="color: inherit; text-decoration: inherit;">scsi_<wbr>bus_<wbr>sharing</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -746,7 +883,9 @@ controllers defined by `scsi_controller_scan_count` are scanned.
 
     <dt class="property-"
             title="">
-        <span>scsi_<wbr>type</span>
+        <span id="scsi_type_python">
+<a href="#scsi_type_python" style="color: inherit; text-decoration: inherit;">scsi_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -759,7 +898,9 @@ defined by `scsi_controller_scan_count` are scanned.
 
     <dt class="property-"
             title="">
-        <span>datacenter_<wbr>id</span>
+        <span id="datacenter_id_python">
+<a href="#datacenter_id_python" style="color: inherit; text-decoration: inherit;">datacenter_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -767,7 +908,9 @@ defined by `scsi_controller_scan_count` are scanned.
 
     <dt class="property-"
             title="">
-        <span>scsi_<wbr>controller_<wbr>scan_<wbr>count</span>
+        <span id="scsi_controller_scan_count_python">
+<a href="#scsi_controller_scan_count_python" style="color: inherit; text-decoration: inherit;">scsi_<wbr>controller_<wbr>scan_<wbr>count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -806,7 +949,9 @@ defined by `scsi_controller_scan_count` are scanned.
 
     <dt class="property-required"
             title="Required">
-        <span>Eagerly<wbr>Scrub</span>
+        <span id="eagerlyscrub_csharp">
+<a href="#eagerlyscrub_csharp" style="color: inherit; text-decoration: inherit;">Eagerly<wbr>Scrub</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -815,7 +960,9 @@ defined by `scsi_controller_scan_count` are scanned.
 
     <dt class="property-required"
             title="Required">
-        <span>Size</span>
+        <span id="size_csharp">
+<a href="#size_csharp" style="color: inherit; text-decoration: inherit;">Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -824,7 +971,9 @@ defined by `scsi_controller_scan_count` are scanned.
 
     <dt class="property-required"
             title="Required">
-        <span>Thin<wbr>Provisioned</span>
+        <span id="thinprovisioned_csharp">
+<a href="#thinprovisioned_csharp" style="color: inherit; text-decoration: inherit;">Thin<wbr>Provisioned</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -840,7 +989,9 @@ defined by `scsi_controller_scan_count` are scanned.
 
     <dt class="property-required"
             title="Required">
-        <span>Eagerly<wbr>Scrub</span>
+        <span id="eagerlyscrub_go">
+<a href="#eagerlyscrub_go" style="color: inherit; text-decoration: inherit;">Eagerly<wbr>Scrub</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -849,7 +1000,9 @@ defined by `scsi_controller_scan_count` are scanned.
 
     <dt class="property-required"
             title="Required">
-        <span>Size</span>
+        <span id="size_go">
+<a href="#size_go" style="color: inherit; text-decoration: inherit;">Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -858,7 +1011,9 @@ defined by `scsi_controller_scan_count` are scanned.
 
     <dt class="property-required"
             title="Required">
-        <span>Thin<wbr>Provisioned</span>
+        <span id="thinprovisioned_go">
+<a href="#thinprovisioned_go" style="color: inherit; text-decoration: inherit;">Thin<wbr>Provisioned</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -874,7 +1029,9 @@ defined by `scsi_controller_scan_count` are scanned.
 
     <dt class="property-required"
             title="Required">
-        <span>eagerly<wbr>Scrub</span>
+        <span id="eagerlyscrub_nodejs">
+<a href="#eagerlyscrub_nodejs" style="color: inherit; text-decoration: inherit;">eagerly<wbr>Scrub</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -883,7 +1040,9 @@ defined by `scsi_controller_scan_count` are scanned.
 
     <dt class="property-required"
             title="Required">
-        <span>size</span>
+        <span id="size_nodejs">
+<a href="#size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -892,7 +1051,9 @@ defined by `scsi_controller_scan_count` are scanned.
 
     <dt class="property-required"
             title="Required">
-        <span>thin<wbr>Provisioned</span>
+        <span id="thinprovisioned_nodejs">
+<a href="#thinprovisioned_nodejs" style="color: inherit; text-decoration: inherit;">thin<wbr>Provisioned</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -908,7 +1069,9 @@ defined by `scsi_controller_scan_count` are scanned.
 
     <dt class="property-required"
             title="Required">
-        <span>eagerly<wbr>Scrub</span>
+        <span id="eagerlyscrub_python">
+<a href="#eagerlyscrub_python" style="color: inherit; text-decoration: inherit;">eagerly<wbr>Scrub</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -917,7 +1080,9 @@ defined by `scsi_controller_scan_count` are scanned.
 
     <dt class="property-required"
             title="Required">
-        <span>size</span>
+        <span id="size_python">
+<a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -926,7 +1091,9 @@ defined by `scsi_controller_scan_count` are scanned.
 
     <dt class="property-required"
             title="Required">
-        <span>thin<wbr>Provisioned</span>
+        <span id="thinprovisioned_python">
+<a href="#thinprovisioned_python" style="color: inherit; text-decoration: inherit;">thin<wbr>Provisioned</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>

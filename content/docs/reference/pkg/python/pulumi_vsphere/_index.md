@@ -10590,7 +10590,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <span class="n">d1</span> <span class="o">=</span> <span class="n">vsphere</span><span class="o">.</span><span class="n">DistributedVirtualSwitch</span><span class="p">(</span><span class="s2">&quot;d1&quot;</span><span class="p">,</span>
     <span class="n">datacenter_id</span><span class="o">=</span><span class="n">dc</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
     <span class="n">host</span><span class="o">=</span><span class="p">[{</span>
-        <span class="s2">&quot;hostSystemId&quot;</span><span class="p">:</span> <span class="n">h1</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;host_system_id&quot;</span><span class="p">:</span> <span class="n">h1</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
         <span class="s2">&quot;devices&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;vnic3&quot;</span><span class="p">],</span>
     <span class="p">}])</span>
 <span class="n">p1</span> <span class="o">=</span> <span class="n">vsphere</span><span class="o">.</span><span class="n">DistributedPortGroup</span><span class="p">(</span><span class="s2">&quot;p1&quot;</span><span class="p">,</span>

@@ -18,19 +18,19 @@ meta_desc: "Explore the VappEntity resource of the vSphere package, including ex
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#VappEntity">VappEntity</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#VappEntityArgs">VappEntityArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#VappEntity">VappEntity</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#VappEntityArgs">VappEntityArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">VappEntity</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>container_id=None<span class="p">, </span>custom_attributes=None<span class="p">, </span>start_action=None<span class="p">, </span>start_delay=None<span class="p">, </span>start_order=None<span class="p">, </span>stop_action=None<span class="p">, </span>stop_delay=None<span class="p">, </span>tags=None<span class="p">, </span>target_id=None<span class="p">, </span>wait_for_guest=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/vsphere/#VappEntity">VappEntity</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>container_id=None<span class="p">, </span>custom_attributes=None<span class="p">, </span>start_action=None<span class="p">, </span>start_delay=None<span class="p">, </span>start_order=None<span class="p">, </span>stop_action=None<span class="p">, </span>stop_delay=None<span class="p">, </span>tags=None<span class="p">, </span>target_id=None<span class="p">, </span>wait_for_guest=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewVappEntity<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#VappEntityArgs">VappEntityArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#VappEntity">VappEntity</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#VappEntity">NewVappEntity</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#VappEntityArgs">VappEntityArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#VappEntity">VappEntity</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.VappEntity.html">VappEntity</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.VappEntityArgs.html">VappEntityArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.VappEntity.html">VappEntity</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.VappEntityArgs.html">VappEntityArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -196,7 +196,9 @@ The VappEntity resource accepts the following [input]({{< relref "/docs/intro/co
 
     <dt class="property-required"
             title="Required">
-        <span>Container<wbr>Id</span>
+        <span id="containerid_csharp">
+<a href="#containerid_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -206,7 +208,9 @@ container the entity is a member of.
 
     <dt class="property-required"
             title="Required">
-        <span>Target<wbr>Id</span>
+        <span id="targetid_csharp">
+<a href="#targetid_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -216,7 +220,9 @@ to power on or power off. This can be a virtual machine or a vApp.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Custom<wbr>Attributes</span>
+        <span id="customattributes_csharp">
+<a href="#customattributes_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Attributes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -225,7 +231,9 @@ to power on or power off. This can be a virtual machine or a vApp.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Start<wbr>Action</span>
+        <span id="startaction_csharp">
+<a href="#startaction_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Action</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -236,7 +244,9 @@ Default: powerOn
 
     <dt class="property-optional"
             title="Optional">
-        <span>Start<wbr>Delay</span>
+        <span id="startdelay_csharp">
+<a href="#startdelay_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Delay</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -246,7 +256,9 @@ entity in the order of entities to be started. Default: 120
 
     <dt class="property-optional"
             title="Optional">
-        <span>Start<wbr>Order</span>
+        <span id="startorder_csharp">
+<a href="#startorder_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Order</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -255,7 +267,9 @@ entity in the order of entities to be started. Default: 120
 
     <dt class="property-optional"
             title="Optional">
-        <span>Stop<wbr>Action</span>
+        <span id="stopaction_csharp">
+<a href="#stopaction_csharp" style="color: inherit; text-decoration: inherit;">Stop<wbr>Action</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -266,7 +280,9 @@ does not participate in auto-stop. Default: powerOff
 
     <dt class="property-optional"
             title="Optional">
-        <span>Stop<wbr>Delay</span>
+        <span id="stopdelay_csharp">
+<a href="#stopdelay_csharp" style="color: inherit; text-decoration: inherit;">Stop<wbr>Delay</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -277,7 +293,9 @@ guestShutdown. Default: 120
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -286,7 +304,9 @@ guestShutdown. Default: 120
 
     <dt class="property-optional"
             title="Optional">
-        <span>Wait<wbr>For<wbr>Guest</span>
+        <span id="waitforguest_csharp">
+<a href="#waitforguest_csharp" style="color: inherit; text-decoration: inherit;">Wait<wbr>For<wbr>Guest</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -304,7 +324,9 @@ property has no effect for vApps. Default: false
 
     <dt class="property-required"
             title="Required">
-        <span>Container<wbr>Id</span>
+        <span id="containerid_go">
+<a href="#containerid_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -314,7 +336,9 @@ container the entity is a member of.
 
     <dt class="property-required"
             title="Required">
-        <span>Target<wbr>Id</span>
+        <span id="targetid_go">
+<a href="#targetid_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -324,7 +348,9 @@ to power on or power off. This can be a virtual machine or a vApp.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Custom<wbr>Attributes</span>
+        <span id="customattributes_go">
+<a href="#customattributes_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Attributes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -333,7 +359,9 @@ to power on or power off. This can be a virtual machine or a vApp.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Start<wbr>Action</span>
+        <span id="startaction_go">
+<a href="#startaction_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Action</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -344,7 +372,9 @@ Default: powerOn
 
     <dt class="property-optional"
             title="Optional">
-        <span>Start<wbr>Delay</span>
+        <span id="startdelay_go">
+<a href="#startdelay_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Delay</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -354,7 +384,9 @@ entity in the order of entities to be started. Default: 120
 
     <dt class="property-optional"
             title="Optional">
-        <span>Start<wbr>Order</span>
+        <span id="startorder_go">
+<a href="#startorder_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Order</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -363,7 +395,9 @@ entity in the order of entities to be started. Default: 120
 
     <dt class="property-optional"
             title="Optional">
-        <span>Stop<wbr>Action</span>
+        <span id="stopaction_go">
+<a href="#stopaction_go" style="color: inherit; text-decoration: inherit;">Stop<wbr>Action</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -374,7 +408,9 @@ does not participate in auto-stop. Default: powerOff
 
     <dt class="property-optional"
             title="Optional">
-        <span>Stop<wbr>Delay</span>
+        <span id="stopdelay_go">
+<a href="#stopdelay_go" style="color: inherit; text-decoration: inherit;">Stop<wbr>Delay</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -385,7 +421,9 @@ guestShutdown. Default: 120
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -394,7 +432,9 @@ guestShutdown. Default: 120
 
     <dt class="property-optional"
             title="Optional">
-        <span>Wait<wbr>For<wbr>Guest</span>
+        <span id="waitforguest_go">
+<a href="#waitforguest_go" style="color: inherit; text-decoration: inherit;">Wait<wbr>For<wbr>Guest</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -412,7 +452,9 @@ property has no effect for vApps. Default: false
 
     <dt class="property-required"
             title="Required">
-        <span>container<wbr>Id</span>
+        <span id="containerid_nodejs">
+<a href="#containerid_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -422,7 +464,9 @@ container the entity is a member of.
 
     <dt class="property-required"
             title="Required">
-        <span>target<wbr>Id</span>
+        <span id="targetid_nodejs">
+<a href="#targetid_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -432,7 +476,9 @@ to power on or power off. This can be a virtual machine or a vApp.
 
     <dt class="property-optional"
             title="Optional">
-        <span>custom<wbr>Attributes</span>
+        <span id="customattributes_nodejs">
+<a href="#customattributes_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Attributes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -441,7 +487,9 @@ to power on or power off. This can be a virtual machine or a vApp.
 
     <dt class="property-optional"
             title="Optional">
-        <span>start<wbr>Action</span>
+        <span id="startaction_nodejs">
+<a href="#startaction_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Action</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -452,7 +500,9 @@ Default: powerOn
 
     <dt class="property-optional"
             title="Optional">
-        <span>start<wbr>Delay</span>
+        <span id="startdelay_nodejs">
+<a href="#startdelay_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Delay</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -462,7 +512,9 @@ entity in the order of entities to be started. Default: 120
 
     <dt class="property-optional"
             title="Optional">
-        <span>start<wbr>Order</span>
+        <span id="startorder_nodejs">
+<a href="#startorder_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Order</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -471,7 +523,9 @@ entity in the order of entities to be started. Default: 120
 
     <dt class="property-optional"
             title="Optional">
-        <span>stop<wbr>Action</span>
+        <span id="stopaction_nodejs">
+<a href="#stopaction_nodejs" style="color: inherit; text-decoration: inherit;">stop<wbr>Action</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -482,7 +536,9 @@ does not participate in auto-stop. Default: powerOff
 
     <dt class="property-optional"
             title="Optional">
-        <span>stop<wbr>Delay</span>
+        <span id="stopdelay_nodejs">
+<a href="#stopdelay_nodejs" style="color: inherit; text-decoration: inherit;">stop<wbr>Delay</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -493,7 +549,9 @@ guestShutdown. Default: 120
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -502,7 +560,9 @@ guestShutdown. Default: 120
 
     <dt class="property-optional"
             title="Optional">
-        <span>wait<wbr>For<wbr>Guest</span>
+        <span id="waitforguest_nodejs">
+<a href="#waitforguest_nodejs" style="color: inherit; text-decoration: inherit;">wait<wbr>For<wbr>Guest</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -520,7 +580,9 @@ property has no effect for vApps. Default: false
 
     <dt class="property-required"
             title="Required">
-        <span>container_<wbr>id</span>
+        <span id="container_id_python">
+<a href="#container_id_python" style="color: inherit; text-decoration: inherit;">container_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -530,7 +592,9 @@ container the entity is a member of.
 
     <dt class="property-required"
             title="Required">
-        <span>target_<wbr>id</span>
+        <span id="target_id_python">
+<a href="#target_id_python" style="color: inherit; text-decoration: inherit;">target_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -540,7 +604,9 @@ to power on or power off. This can be a virtual machine or a vApp.
 
     <dt class="property-optional"
             title="Optional">
-        <span>custom_<wbr>attributes</span>
+        <span id="custom_attributes_python">
+<a href="#custom_attributes_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>attributes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -549,7 +615,9 @@ to power on or power off. This can be a virtual machine or a vApp.
 
     <dt class="property-optional"
             title="Optional">
-        <span>start_<wbr>action</span>
+        <span id="start_action_python">
+<a href="#start_action_python" style="color: inherit; text-decoration: inherit;">start_<wbr>action</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -560,7 +628,9 @@ Default: powerOn
 
     <dt class="property-optional"
             title="Optional">
-        <span>start_<wbr>delay</span>
+        <span id="start_delay_python">
+<a href="#start_delay_python" style="color: inherit; text-decoration: inherit;">start_<wbr>delay</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -570,7 +640,9 @@ entity in the order of entities to be started. Default: 120
 
     <dt class="property-optional"
             title="Optional">
-        <span>start_<wbr>order</span>
+        <span id="start_order_python">
+<a href="#start_order_python" style="color: inherit; text-decoration: inherit;">start_<wbr>order</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -579,7 +651,9 @@ entity in the order of entities to be started. Default: 120
 
     <dt class="property-optional"
             title="Optional">
-        <span>stop_<wbr>action</span>
+        <span id="stop_action_python">
+<a href="#stop_action_python" style="color: inherit; text-decoration: inherit;">stop_<wbr>action</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -590,7 +664,9 @@ does not participate in auto-stop. Default: powerOff
 
     <dt class="property-optional"
             title="Optional">
-        <span>stop_<wbr>delay</span>
+        <span id="stop_delay_python">
+<a href="#stop_delay_python" style="color: inherit; text-decoration: inherit;">stop_<wbr>delay</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -601,7 +677,9 @@ guestShutdown. Default: 120
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -610,7 +688,9 @@ guestShutdown. Default: 120
 
     <dt class="property-optional"
             title="Optional">
-        <span>wait_<wbr>for_<wbr>guest</span>
+        <span id="wait_for_guest_python">
+<a href="#wait_for_guest_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>for_<wbr>guest</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -639,7 +719,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -654,7 +736,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -669,7 +753,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -684,7 +770,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -705,7 +793,7 @@ Get an existing VappEntity resource's state with the given name, ID, and optiona
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#VappEntityState">VappEntityState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#VappEntity">VappEntity</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#VappEntityState">VappEntityState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#VappEntity">VappEntity</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -713,11 +801,11 @@ Get an existing VappEntity resource's state with the given name, ID, and optiona
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetVappEntity<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#VappEntityState">VappEntityState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#VappEntity">VappEntity</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetVappEntity<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#VappEntityState">VappEntityState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#VappEntity">VappEntity</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.VappEntity.html">VappEntity</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere..VappEntityState.html">VappEntityState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.VappEntity.html">VappEntity</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere..VappEntityState.html">VappEntityState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -825,7 +913,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Container<wbr>Id</span>
+        <span id="state_containerid_csharp">
+<a href="#state_containerid_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -835,7 +925,9 @@ container the entity is a member of.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Custom<wbr>Attributes</span>
+        <span id="state_customattributes_csharp">
+<a href="#state_customattributes_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Attributes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -844,7 +936,9 @@ container the entity is a member of.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Start<wbr>Action</span>
+        <span id="state_startaction_csharp">
+<a href="#state_startaction_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Action</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -855,7 +949,9 @@ Default: powerOn
 
     <dt class="property-optional"
             title="Optional">
-        <span>Start<wbr>Delay</span>
+        <span id="state_startdelay_csharp">
+<a href="#state_startdelay_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Delay</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -865,7 +961,9 @@ entity in the order of entities to be started. Default: 120
 
     <dt class="property-optional"
             title="Optional">
-        <span>Start<wbr>Order</span>
+        <span id="state_startorder_csharp">
+<a href="#state_startorder_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Order</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -874,7 +972,9 @@ entity in the order of entities to be started. Default: 120
 
     <dt class="property-optional"
             title="Optional">
-        <span>Stop<wbr>Action</span>
+        <span id="state_stopaction_csharp">
+<a href="#state_stopaction_csharp" style="color: inherit; text-decoration: inherit;">Stop<wbr>Action</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -885,7 +985,9 @@ does not participate in auto-stop. Default: powerOff
 
     <dt class="property-optional"
             title="Optional">
-        <span>Stop<wbr>Delay</span>
+        <span id="state_stopdelay_csharp">
+<a href="#state_stopdelay_csharp" style="color: inherit; text-decoration: inherit;">Stop<wbr>Delay</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -896,7 +998,9 @@ guestShutdown. Default: 120
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="state_tags_csharp">
+<a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -905,7 +1009,9 @@ guestShutdown. Default: 120
 
     <dt class="property-optional"
             title="Optional">
-        <span>Target<wbr>Id</span>
+        <span id="state_targetid_csharp">
+<a href="#state_targetid_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -915,7 +1021,9 @@ to power on or power off. This can be a virtual machine or a vApp.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Wait<wbr>For<wbr>Guest</span>
+        <span id="state_waitforguest_csharp">
+<a href="#state_waitforguest_csharp" style="color: inherit; text-decoration: inherit;">Wait<wbr>For<wbr>Guest</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -933,7 +1041,9 @@ property has no effect for vApps. Default: false
 
     <dt class="property-optional"
             title="Optional">
-        <span>Container<wbr>Id</span>
+        <span id="state_containerid_go">
+<a href="#state_containerid_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -943,7 +1053,9 @@ container the entity is a member of.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Custom<wbr>Attributes</span>
+        <span id="state_customattributes_go">
+<a href="#state_customattributes_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Attributes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -952,7 +1064,9 @@ container the entity is a member of.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Start<wbr>Action</span>
+        <span id="state_startaction_go">
+<a href="#state_startaction_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Action</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -963,7 +1077,9 @@ Default: powerOn
 
     <dt class="property-optional"
             title="Optional">
-        <span>Start<wbr>Delay</span>
+        <span id="state_startdelay_go">
+<a href="#state_startdelay_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Delay</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -973,7 +1089,9 @@ entity in the order of entities to be started. Default: 120
 
     <dt class="property-optional"
             title="Optional">
-        <span>Start<wbr>Order</span>
+        <span id="state_startorder_go">
+<a href="#state_startorder_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Order</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -982,7 +1100,9 @@ entity in the order of entities to be started. Default: 120
 
     <dt class="property-optional"
             title="Optional">
-        <span>Stop<wbr>Action</span>
+        <span id="state_stopaction_go">
+<a href="#state_stopaction_go" style="color: inherit; text-decoration: inherit;">Stop<wbr>Action</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -993,7 +1113,9 @@ does not participate in auto-stop. Default: powerOff
 
     <dt class="property-optional"
             title="Optional">
-        <span>Stop<wbr>Delay</span>
+        <span id="state_stopdelay_go">
+<a href="#state_stopdelay_go" style="color: inherit; text-decoration: inherit;">Stop<wbr>Delay</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1004,7 +1126,9 @@ guestShutdown. Default: 120
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="state_tags_go">
+<a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1013,7 +1137,9 @@ guestShutdown. Default: 120
 
     <dt class="property-optional"
             title="Optional">
-        <span>Target<wbr>Id</span>
+        <span id="state_targetid_go">
+<a href="#state_targetid_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1023,7 +1149,9 @@ to power on or power off. This can be a virtual machine or a vApp.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Wait<wbr>For<wbr>Guest</span>
+        <span id="state_waitforguest_go">
+<a href="#state_waitforguest_go" style="color: inherit; text-decoration: inherit;">Wait<wbr>For<wbr>Guest</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1041,7 +1169,9 @@ property has no effect for vApps. Default: false
 
     <dt class="property-optional"
             title="Optional">
-        <span>container<wbr>Id</span>
+        <span id="state_containerid_nodejs">
+<a href="#state_containerid_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1051,7 +1181,9 @@ container the entity is a member of.
 
     <dt class="property-optional"
             title="Optional">
-        <span>custom<wbr>Attributes</span>
+        <span id="state_customattributes_nodejs">
+<a href="#state_customattributes_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Attributes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -1060,7 +1192,9 @@ container the entity is a member of.
 
     <dt class="property-optional"
             title="Optional">
-        <span>start<wbr>Action</span>
+        <span id="state_startaction_nodejs">
+<a href="#state_startaction_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Action</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1071,7 +1205,9 @@ Default: powerOn
 
     <dt class="property-optional"
             title="Optional">
-        <span>start<wbr>Delay</span>
+        <span id="state_startdelay_nodejs">
+<a href="#state_startdelay_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Delay</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1081,7 +1217,9 @@ entity in the order of entities to be started. Default: 120
 
     <dt class="property-optional"
             title="Optional">
-        <span>start<wbr>Order</span>
+        <span id="state_startorder_nodejs">
+<a href="#state_startorder_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Order</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1090,7 +1228,9 @@ entity in the order of entities to be started. Default: 120
 
     <dt class="property-optional"
             title="Optional">
-        <span>stop<wbr>Action</span>
+        <span id="state_stopaction_nodejs">
+<a href="#state_stopaction_nodejs" style="color: inherit; text-decoration: inherit;">stop<wbr>Action</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1101,7 +1241,9 @@ does not participate in auto-stop. Default: powerOff
 
     <dt class="property-optional"
             title="Optional">
-        <span>stop<wbr>Delay</span>
+        <span id="state_stopdelay_nodejs">
+<a href="#state_stopdelay_nodejs" style="color: inherit; text-decoration: inherit;">stop<wbr>Delay</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1112,7 +1254,9 @@ guestShutdown. Default: 120
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="state_tags_nodejs">
+<a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1121,7 +1265,9 @@ guestShutdown. Default: 120
 
     <dt class="property-optional"
             title="Optional">
-        <span>target<wbr>Id</span>
+        <span id="state_targetid_nodejs">
+<a href="#state_targetid_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1131,7 +1277,9 @@ to power on or power off. This can be a virtual machine or a vApp.
 
     <dt class="property-optional"
             title="Optional">
-        <span>wait<wbr>For<wbr>Guest</span>
+        <span id="state_waitforguest_nodejs">
+<a href="#state_waitforguest_nodejs" style="color: inherit; text-decoration: inherit;">wait<wbr>For<wbr>Guest</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1149,7 +1297,9 @@ property has no effect for vApps. Default: false
 
     <dt class="property-optional"
             title="Optional">
-        <span>container_<wbr>id</span>
+        <span id="state_container_id_python">
+<a href="#state_container_id_python" style="color: inherit; text-decoration: inherit;">container_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1159,7 +1309,9 @@ container the entity is a member of.
 
     <dt class="property-optional"
             title="Optional">
-        <span>custom_<wbr>attributes</span>
+        <span id="state_custom_attributes_python">
+<a href="#state_custom_attributes_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>attributes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -1168,7 +1320,9 @@ container the entity is a member of.
 
     <dt class="property-optional"
             title="Optional">
-        <span>start_<wbr>action</span>
+        <span id="state_start_action_python">
+<a href="#state_start_action_python" style="color: inherit; text-decoration: inherit;">start_<wbr>action</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1179,7 +1333,9 @@ Default: powerOn
 
     <dt class="property-optional"
             title="Optional">
-        <span>start_<wbr>delay</span>
+        <span id="state_start_delay_python">
+<a href="#state_start_delay_python" style="color: inherit; text-decoration: inherit;">start_<wbr>delay</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1189,7 +1345,9 @@ entity in the order of entities to be started. Default: 120
 
     <dt class="property-optional"
             title="Optional">
-        <span>start_<wbr>order</span>
+        <span id="state_start_order_python">
+<a href="#state_start_order_python" style="color: inherit; text-decoration: inherit;">start_<wbr>order</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1198,7 +1356,9 @@ entity in the order of entities to be started. Default: 120
 
     <dt class="property-optional"
             title="Optional">
-        <span>stop_<wbr>action</span>
+        <span id="state_stop_action_python">
+<a href="#state_stop_action_python" style="color: inherit; text-decoration: inherit;">stop_<wbr>action</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1209,7 +1369,9 @@ does not participate in auto-stop. Default: powerOff
 
     <dt class="property-optional"
             title="Optional">
-        <span>stop_<wbr>delay</span>
+        <span id="state_stop_delay_python">
+<a href="#state_stop_delay_python" style="color: inherit; text-decoration: inherit;">stop_<wbr>delay</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1220,7 +1382,9 @@ guestShutdown. Default: 120
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="state_tags_python">
+<a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1229,7 +1393,9 @@ guestShutdown. Default: 120
 
     <dt class="property-optional"
             title="Optional">
-        <span>target_<wbr>id</span>
+        <span id="state_target_id_python">
+<a href="#state_target_id_python" style="color: inherit; text-decoration: inherit;">target_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1239,7 +1405,9 @@ to power on or power off. This can be a virtual machine or a vApp.
 
     <dt class="property-optional"
             title="Optional">
-        <span>wait_<wbr>for_<wbr>guest</span>
+        <span id="state_wait_for_guest_python">
+<a href="#state_wait_for_guest_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>for_<wbr>guest</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>

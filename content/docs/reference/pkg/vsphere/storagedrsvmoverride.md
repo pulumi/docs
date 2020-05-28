@@ -29,7 +29,71 @@ page][ref-vsphere-datastore-clusters].
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using VSphere = Pulumi.VSphere;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var dc = Output.Create(VSphere.GetDatacenter.InvokeAsync(new VSphere.GetDatacenterArgs
+        {
+            Name = "dc1",
+        }));
+        var datastoreCluster = dc.Apply(dc => Output.Create(VSphere.GetDatastoreCluster.InvokeAsync(new VSphere.GetDatastoreClusterArgs
+        {
+            DatacenterId = dc.Id,
+            Name = "datastore-cluster1",
+        })));
+        var memberDatastore = dc.Apply(dc => Output.Create(VSphere.GetDatastore.InvokeAsync(new VSphere.GetDatastoreArgs
+        {
+            DatacenterId = dc.Id,
+            Name = "datastore-cluster1-member1",
+        })));
+        var pool = dc.Apply(dc => Output.Create(VSphere.GetResourcePool.InvokeAsync(new VSphere.GetResourcePoolArgs
+        {
+            DatacenterId = dc.Id,
+            Name = "cluster1/Resources",
+        })));
+        var network = dc.Apply(dc => Output.Create(VSphere.GetNetwork.InvokeAsync(new VSphere.GetNetworkArgs
+        {
+            DatacenterId = dc.Id,
+            Name = "public",
+        })));
+        var vm = new VSphere.VirtualMachine("vm", new VSphere.VirtualMachineArgs
+        {
+            DatastoreId = memberDatastore.Apply(memberDatastore => memberDatastore.Id),
+            Disks = 
+            {
+                new VSphere.Inputs.VirtualMachineDiskArgs
+                {
+                    Label = "disk0",
+                    Size = 20,
+                },
+            },
+            GuestId = "other3xLinux64Guest",
+            Memory = 1024,
+            NetworkInterfaces = 
+            {
+                new VSphere.Inputs.VirtualMachineNetworkInterfaceArgs
+                {
+                    NetworkId = network.Apply(network => network.Id),
+                },
+            },
+            NumCpus = 2,
+            ResourcePoolId = pool.Apply(pool => pool.Id),
+        });
+        var drsVmOverride = new VSphere.StorageDrsVmOverride("drsVmOverride", new VSphere.StorageDrsVmOverrideArgs
+        {
+            DatastoreClusterId = datastoreCluster.Apply(datastoreCluster => datastoreCluster.Id),
+            SdrsEnabled = false,
+            VirtualMachineId = vm.Id,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -124,19 +188,19 @@ const drsVmOverride = new vsphere.StorageDrsVmOverride("drs_vm_override", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#StorageDrsVmOverride">StorageDrsVmOverride</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#StorageDrsVmOverrideArgs">StorageDrsVmOverrideArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#StorageDrsVmOverride">StorageDrsVmOverride</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#StorageDrsVmOverrideArgs">StorageDrsVmOverrideArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">StorageDrsVmOverride</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>datastore_cluster_id=None<span class="p">, </span>sdrs_automation_level=None<span class="p">, </span>sdrs_enabled=None<span class="p">, </span>sdrs_intra_vm_affinity=None<span class="p">, </span>virtual_machine_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/vsphere/#StorageDrsVmOverride">StorageDrsVmOverride</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>datastore_cluster_id=None<span class="p">, </span>sdrs_automation_level=None<span class="p">, </span>sdrs_enabled=None<span class="p">, </span>sdrs_intra_vm_affinity=None<span class="p">, </span>virtual_machine_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewStorageDrsVmOverride<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#StorageDrsVmOverrideArgs">StorageDrsVmOverrideArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#StorageDrsVmOverride">StorageDrsVmOverride</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#StorageDrsVmOverride">NewStorageDrsVmOverride</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#StorageDrsVmOverrideArgs">StorageDrsVmOverrideArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#StorageDrsVmOverride">StorageDrsVmOverride</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.StorageDrsVmOverride.html">StorageDrsVmOverride</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.StorageDrsVmOverrideArgs.html">StorageDrsVmOverrideArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.StorageDrsVmOverride.html">StorageDrsVmOverride</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.StorageDrsVmOverrideArgs.html">StorageDrsVmOverrideArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -302,7 +366,9 @@ The StorageDrsVmOverride resource accepts the following [input]({{< relref "/doc
 
     <dt class="property-required"
             title="Required">
-        <span>Datastore<wbr>Cluster<wbr>Id</span>
+        <span id="datastoreclusterid_csharp">
+<a href="#datastoreclusterid_csharp" style="color: inherit; text-decoration: inherit;">Datastore<wbr>Cluster<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -313,7 +379,9 @@ Forces a new resource if changed.
 
     <dt class="property-required"
             title="Required">
-        <span>Virtual<wbr>Machine<wbr>Id</span>
+        <span id="virtualmachineid_csharp">
+<a href="#virtualmachineid_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -323,7 +391,9 @@ the override for.  Forces a new resource if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Sdrs<wbr>Automation<wbr>Level</span>
+        <span id="sdrsautomationlevel_csharp">
+<a href="#sdrsautomationlevel_csharp" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Automation<wbr>Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -335,7 +405,9 @@ specific SDRS subsystem.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Sdrs<wbr>Enabled</span>
+        <span id="sdrsenabled_csharp">
+<a href="#sdrsenabled_csharp" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -346,7 +418,9 @@ used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Sdrs<wbr>Intra<wbr>Vm<wbr>Affinity</span>
+        <span id="sdrsintravmaffinity_csharp">
+<a href="#sdrsintravmaffinity_csharp" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Intra<wbr>Vm<wbr>Affinity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -366,7 +440,9 @@ requirements. When not specified, the datastore cluster's settings are used.
 
     <dt class="property-required"
             title="Required">
-        <span>Datastore<wbr>Cluster<wbr>Id</span>
+        <span id="datastoreclusterid_go">
+<a href="#datastoreclusterid_go" style="color: inherit; text-decoration: inherit;">Datastore<wbr>Cluster<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -377,7 +453,9 @@ Forces a new resource if changed.
 
     <dt class="property-required"
             title="Required">
-        <span>Virtual<wbr>Machine<wbr>Id</span>
+        <span id="virtualmachineid_go">
+<a href="#virtualmachineid_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -387,7 +465,9 @@ the override for.  Forces a new resource if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Sdrs<wbr>Automation<wbr>Level</span>
+        <span id="sdrsautomationlevel_go">
+<a href="#sdrsautomationlevel_go" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Automation<wbr>Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -399,7 +479,9 @@ specific SDRS subsystem.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Sdrs<wbr>Enabled</span>
+        <span id="sdrsenabled_go">
+<a href="#sdrsenabled_go" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -410,7 +492,9 @@ used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Sdrs<wbr>Intra<wbr>Vm<wbr>Affinity</span>
+        <span id="sdrsintravmaffinity_go">
+<a href="#sdrsintravmaffinity_go" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Intra<wbr>Vm<wbr>Affinity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -430,7 +514,9 @@ requirements. When not specified, the datastore cluster's settings are used.
 
     <dt class="property-required"
             title="Required">
-        <span>datastore<wbr>Cluster<wbr>Id</span>
+        <span id="datastoreclusterid_nodejs">
+<a href="#datastoreclusterid_nodejs" style="color: inherit; text-decoration: inherit;">datastore<wbr>Cluster<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -441,7 +527,9 @@ Forces a new resource if changed.
 
     <dt class="property-required"
             title="Required">
-        <span>virtual<wbr>Machine<wbr>Id</span>
+        <span id="virtualmachineid_nodejs">
+<a href="#virtualmachineid_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -451,7 +539,9 @@ the override for.  Forces a new resource if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>sdrs<wbr>Automation<wbr>Level</span>
+        <span id="sdrsautomationlevel_nodejs">
+<a href="#sdrsautomationlevel_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Automation<wbr>Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -463,7 +553,9 @@ specific SDRS subsystem.
 
     <dt class="property-optional"
             title="Optional">
-        <span>sdrs<wbr>Enabled</span>
+        <span id="sdrsenabled_nodejs">
+<a href="#sdrsenabled_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -474,7 +566,9 @@ used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>sdrs<wbr>Intra<wbr>Vm<wbr>Affinity</span>
+        <span id="sdrsintravmaffinity_nodejs">
+<a href="#sdrsintravmaffinity_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Intra<wbr>Vm<wbr>Affinity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -494,7 +588,9 @@ requirements. When not specified, the datastore cluster's settings are used.
 
     <dt class="property-required"
             title="Required">
-        <span>datastore_<wbr>cluster_<wbr>id</span>
+        <span id="datastore_cluster_id_python">
+<a href="#datastore_cluster_id_python" style="color: inherit; text-decoration: inherit;">datastore_<wbr>cluster_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -505,7 +601,9 @@ Forces a new resource if changed.
 
     <dt class="property-required"
             title="Required">
-        <span>virtual_<wbr>machine_<wbr>id</span>
+        <span id="virtual_machine_id_python">
+<a href="#virtual_machine_id_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machine_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -515,7 +613,9 @@ the override for.  Forces a new resource if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>sdrs_<wbr>automation_<wbr>level</span>
+        <span id="sdrs_automation_level_python">
+<a href="#sdrs_automation_level_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>automation_<wbr>level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -527,7 +627,9 @@ specific SDRS subsystem.
 
     <dt class="property-optional"
             title="Optional">
-        <span>sdrs_<wbr>enabled</span>
+        <span id="sdrs_enabled_python">
+<a href="#sdrs_enabled_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -538,7 +640,9 @@ used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>sdrs_<wbr>intra_<wbr>vm_<wbr>affinity</span>
+        <span id="sdrs_intra_vm_affinity_python">
+<a href="#sdrs_intra_vm_affinity_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>intra_<wbr>vm_<wbr>affinity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -569,7 +673,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -584,7 +690,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -599,7 +707,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -614,7 +724,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -635,7 +747,7 @@ Get an existing StorageDrsVmOverride resource's state with the given name, ID, a
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#StorageDrsVmOverrideState">StorageDrsVmOverrideState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#StorageDrsVmOverride">StorageDrsVmOverride</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#StorageDrsVmOverrideState">StorageDrsVmOverrideState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#StorageDrsVmOverride">StorageDrsVmOverride</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -643,11 +755,11 @@ Get an existing StorageDrsVmOverride resource's state with the given name, ID, a
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetStorageDrsVmOverride<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#StorageDrsVmOverrideState">StorageDrsVmOverrideState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#StorageDrsVmOverride">StorageDrsVmOverride</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetStorageDrsVmOverride<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#StorageDrsVmOverrideState">StorageDrsVmOverrideState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#StorageDrsVmOverride">StorageDrsVmOverride</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.StorageDrsVmOverride.html">StorageDrsVmOverride</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere..StorageDrsVmOverrideState.html">StorageDrsVmOverrideState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.StorageDrsVmOverride.html">StorageDrsVmOverride</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere..StorageDrsVmOverrideState.html">StorageDrsVmOverrideState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -755,7 +867,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Datastore<wbr>Cluster<wbr>Id</span>
+        <span id="state_datastoreclusterid_csharp">
+<a href="#state_datastoreclusterid_csharp" style="color: inherit; text-decoration: inherit;">Datastore<wbr>Cluster<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -766,7 +880,9 @@ Forces a new resource if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Sdrs<wbr>Automation<wbr>Level</span>
+        <span id="state_sdrsautomationlevel_csharp">
+<a href="#state_sdrsautomationlevel_csharp" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Automation<wbr>Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -778,7 +894,9 @@ specific SDRS subsystem.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Sdrs<wbr>Enabled</span>
+        <span id="state_sdrsenabled_csharp">
+<a href="#state_sdrsenabled_csharp" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -789,7 +907,9 @@ used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Sdrs<wbr>Intra<wbr>Vm<wbr>Affinity</span>
+        <span id="state_sdrsintravmaffinity_csharp">
+<a href="#state_sdrsintravmaffinity_csharp" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Intra<wbr>Vm<wbr>Affinity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -802,7 +922,9 @@ requirements. When not specified, the datastore cluster's settings are used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Virtual<wbr>Machine<wbr>Id</span>
+        <span id="state_virtualmachineid_csharp">
+<a href="#state_virtualmachineid_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -819,7 +941,9 @@ the override for.  Forces a new resource if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Datastore<wbr>Cluster<wbr>Id</span>
+        <span id="state_datastoreclusterid_go">
+<a href="#state_datastoreclusterid_go" style="color: inherit; text-decoration: inherit;">Datastore<wbr>Cluster<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -830,7 +954,9 @@ Forces a new resource if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Sdrs<wbr>Automation<wbr>Level</span>
+        <span id="state_sdrsautomationlevel_go">
+<a href="#state_sdrsautomationlevel_go" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Automation<wbr>Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -842,7 +968,9 @@ specific SDRS subsystem.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Sdrs<wbr>Enabled</span>
+        <span id="state_sdrsenabled_go">
+<a href="#state_sdrsenabled_go" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -853,7 +981,9 @@ used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Sdrs<wbr>Intra<wbr>Vm<wbr>Affinity</span>
+        <span id="state_sdrsintravmaffinity_go">
+<a href="#state_sdrsintravmaffinity_go" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Intra<wbr>Vm<wbr>Affinity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -866,7 +996,9 @@ requirements. When not specified, the datastore cluster's settings are used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Virtual<wbr>Machine<wbr>Id</span>
+        <span id="state_virtualmachineid_go">
+<a href="#state_virtualmachineid_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -883,7 +1015,9 @@ the override for.  Forces a new resource if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>datastore<wbr>Cluster<wbr>Id</span>
+        <span id="state_datastoreclusterid_nodejs">
+<a href="#state_datastoreclusterid_nodejs" style="color: inherit; text-decoration: inherit;">datastore<wbr>Cluster<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -894,7 +1028,9 @@ Forces a new resource if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>sdrs<wbr>Automation<wbr>Level</span>
+        <span id="state_sdrsautomationlevel_nodejs">
+<a href="#state_sdrsautomationlevel_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Automation<wbr>Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -906,7 +1042,9 @@ specific SDRS subsystem.
 
     <dt class="property-optional"
             title="Optional">
-        <span>sdrs<wbr>Enabled</span>
+        <span id="state_sdrsenabled_nodejs">
+<a href="#state_sdrsenabled_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -917,7 +1055,9 @@ used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>sdrs<wbr>Intra<wbr>Vm<wbr>Affinity</span>
+        <span id="state_sdrsintravmaffinity_nodejs">
+<a href="#state_sdrsintravmaffinity_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Intra<wbr>Vm<wbr>Affinity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -930,7 +1070,9 @@ requirements. When not specified, the datastore cluster's settings are used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>virtual<wbr>Machine<wbr>Id</span>
+        <span id="state_virtualmachineid_nodejs">
+<a href="#state_virtualmachineid_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -947,7 +1089,9 @@ the override for.  Forces a new resource if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>datastore_<wbr>cluster_<wbr>id</span>
+        <span id="state_datastore_cluster_id_python">
+<a href="#state_datastore_cluster_id_python" style="color: inherit; text-decoration: inherit;">datastore_<wbr>cluster_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -958,7 +1102,9 @@ Forces a new resource if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>sdrs_<wbr>automation_<wbr>level</span>
+        <span id="state_sdrs_automation_level_python">
+<a href="#state_sdrs_automation_level_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>automation_<wbr>level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -970,7 +1116,9 @@ specific SDRS subsystem.
 
     <dt class="property-optional"
             title="Optional">
-        <span>sdrs_<wbr>enabled</span>
+        <span id="state_sdrs_enabled_python">
+<a href="#state_sdrs_enabled_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -981,7 +1129,9 @@ used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>sdrs_<wbr>intra_<wbr>vm_<wbr>affinity</span>
+        <span id="state_sdrs_intra_vm_affinity_python">
+<a href="#state_sdrs_intra_vm_affinity_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>intra_<wbr>vm_<wbr>affinity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -994,7 +1144,9 @@ requirements. When not specified, the datastore cluster's settings are used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>virtual_<wbr>machine_<wbr>id</span>
+        <span id="state_virtual_machine_id_python">
+<a href="#state_virtual_machine_id_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machine_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

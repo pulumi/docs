@@ -26,7 +26,34 @@ page][ref-vsphere-resource_pools].
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using VSphere = Pulumi.VSphere;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var config = new Config();
+        var datacenter = config.Get("datacenter") ?? "dc1";
+        var cluster = config.Get("cluster") ?? "cluster1";
+        var dc = Output.Create(VSphere.GetDatacenter.InvokeAsync(new VSphere.GetDatacenterArgs
+        {
+            Name = datacenter,
+        }));
+        var computeCluster = dc.Apply(dc => Output.Create(VSphere.GetComputeCluster.InvokeAsync(new VSphere.GetComputeClusterArgs
+        {
+            DatacenterId = dc.Id,
+            Name = cluster,
+        })));
+        var resourcePool = new VSphere.ResourcePool("resourcePool", new VSphere.ResourcePoolArgs
+        {
+            ParentResourcePoolId = computeCluster.Apply(computeCluster => computeCluster.ResourcePoolId),
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -82,19 +109,19 @@ const resourcePool = new vsphere.ResourcePool("resource_pool", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#ResourcePool">ResourcePool</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#ResourcePoolArgs">ResourcePoolArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#ResourcePool">ResourcePool</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#ResourcePoolArgs">ResourcePoolArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ResourcePool</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>cpu_expandable=None<span class="p">, </span>cpu_limit=None<span class="p">, </span>cpu_reservation=None<span class="p">, </span>cpu_share_level=None<span class="p">, </span>cpu_shares=None<span class="p">, </span>custom_attributes=None<span class="p">, </span>memory_expandable=None<span class="p">, </span>memory_limit=None<span class="p">, </span>memory_reservation=None<span class="p">, </span>memory_share_level=None<span class="p">, </span>memory_shares=None<span class="p">, </span>name=None<span class="p">, </span>parent_resource_pool_id=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/vsphere/#ResourcePool">ResourcePool</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>cpu_expandable=None<span class="p">, </span>cpu_limit=None<span class="p">, </span>cpu_reservation=None<span class="p">, </span>cpu_share_level=None<span class="p">, </span>cpu_shares=None<span class="p">, </span>custom_attributes=None<span class="p">, </span>memory_expandable=None<span class="p">, </span>memory_limit=None<span class="p">, </span>memory_reservation=None<span class="p">, </span>memory_share_level=None<span class="p">, </span>memory_shares=None<span class="p">, </span>name=None<span class="p">, </span>parent_resource_pool_id=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewResourcePool<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#ResourcePoolArgs">ResourcePoolArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#ResourcePool">ResourcePool</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#ResourcePool">NewResourcePool</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#ResourcePoolArgs">ResourcePoolArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#ResourcePool">ResourcePool</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.ResourcePool.html">ResourcePool</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.ResourcePoolArgs.html">ResourcePoolArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.ResourcePool.html">ResourcePool</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.ResourcePoolArgs.html">ResourcePoolArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -260,7 +287,9 @@ The ResourcePool resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-required"
             title="Required">
-        <span>Parent<wbr>Resource<wbr>Pool<wbr>Id</span>
+        <span id="parentresourcepoolid_csharp">
+<a href="#parentresourcepoolid_csharp" style="color: inherit; text-decoration: inherit;">Parent<wbr>Resource<wbr>Pool<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -273,7 +302,9 @@ resource pool or the move will fail.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cpu<wbr>Expandable</span>
+        <span id="cpuexpandable_csharp">
+<a href="#cpuexpandable_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Expandable</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -284,7 +315,9 @@ unreserved resources. Default: `true`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cpu<wbr>Limit</span>
+        <span id="cpulimit_csharp">
+<a href="#cpulimit_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Limit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -295,7 +328,9 @@ Default: `-1`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cpu<wbr>Reservation</span>
+        <span id="cpureservation_csharp">
+<a href="#cpureservation_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Reservation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -305,7 +340,9 @@ available to the resource pool. Default: `0`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cpu<wbr>Share<wbr>Level</span>
+        <span id="cpusharelevel_csharp">
+<a href="#cpusharelevel_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Share<wbr>Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -318,7 +355,9 @@ ignored.  Default: `normal`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cpu<wbr>Shares</span>
+        <span id="cpushares_csharp">
+<a href="#cpushares_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Shares</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -329,7 +368,9 @@ determine resource allocation in case of resource contention. If this is set,
 
     <dt class="property-optional"
             title="Optional">
-        <span>Custom<wbr>Attributes</span>
+        <span id="customattributes_csharp">
+<a href="#customattributes_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Attributes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -338,7 +379,9 @@ determine resource allocation in case of resource contention. If this is set,
 
     <dt class="property-optional"
             title="Optional">
-        <span>Memory<wbr>Expandable</span>
+        <span id="memoryexpandable_csharp">
+<a href="#memoryexpandable_csharp" style="color: inherit; text-decoration: inherit;">Memory<wbr>Expandable</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -349,7 +392,9 @@ unreserved resources. Default: `true`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Memory<wbr>Limit</span>
+        <span id="memorylimit_csharp">
+<a href="#memorylimit_csharp" style="color: inherit; text-decoration: inherit;">Memory<wbr>Limit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -360,7 +405,9 @@ Default: `-1`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Memory<wbr>Reservation</span>
+        <span id="memoryreservation_csharp">
+<a href="#memoryreservation_csharp" style="color: inherit; text-decoration: inherit;">Memory<wbr>Reservation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -370,7 +417,9 @@ available to the resource pool. Default: `0`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Memory<wbr>Share<wbr>Level</span>
+        <span id="memorysharelevel_csharp">
+<a href="#memorysharelevel_csharp" style="color: inherit; text-decoration: inherit;">Memory<wbr>Share<wbr>Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -383,7 +432,9 @@ ignored.  Default: `normal`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Memory<wbr>Shares</span>
+        <span id="memoryshares_csharp">
+<a href="#memoryshares_csharp" style="color: inherit; text-decoration: inherit;">Memory<wbr>Shares</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -394,7 +445,9 @@ determine resource allocation in case of resource contention. If this is set,
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -403,7 +456,9 @@ determine resource allocation in case of resource contention. If this is set,
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -419,7 +474,9 @@ determine resource allocation in case of resource contention. If this is set,
 
     <dt class="property-required"
             title="Required">
-        <span>Parent<wbr>Resource<wbr>Pool<wbr>Id</span>
+        <span id="parentresourcepoolid_go">
+<a href="#parentresourcepoolid_go" style="color: inherit; text-decoration: inherit;">Parent<wbr>Resource<wbr>Pool<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -432,7 +489,9 @@ resource pool or the move will fail.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cpu<wbr>Expandable</span>
+        <span id="cpuexpandable_go">
+<a href="#cpuexpandable_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Expandable</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -443,7 +502,9 @@ unreserved resources. Default: `true`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cpu<wbr>Limit</span>
+        <span id="cpulimit_go">
+<a href="#cpulimit_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Limit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -454,7 +515,9 @@ Default: `-1`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cpu<wbr>Reservation</span>
+        <span id="cpureservation_go">
+<a href="#cpureservation_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Reservation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -464,7 +527,9 @@ available to the resource pool. Default: `0`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cpu<wbr>Share<wbr>Level</span>
+        <span id="cpusharelevel_go">
+<a href="#cpusharelevel_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Share<wbr>Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -477,7 +542,9 @@ ignored.  Default: `normal`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cpu<wbr>Shares</span>
+        <span id="cpushares_go">
+<a href="#cpushares_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Shares</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -488,7 +555,9 @@ determine resource allocation in case of resource contention. If this is set,
 
     <dt class="property-optional"
             title="Optional">
-        <span>Custom<wbr>Attributes</span>
+        <span id="customattributes_go">
+<a href="#customattributes_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Attributes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -497,7 +566,9 @@ determine resource allocation in case of resource contention. If this is set,
 
     <dt class="property-optional"
             title="Optional">
-        <span>Memory<wbr>Expandable</span>
+        <span id="memoryexpandable_go">
+<a href="#memoryexpandable_go" style="color: inherit; text-decoration: inherit;">Memory<wbr>Expandable</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -508,7 +579,9 @@ unreserved resources. Default: `true`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Memory<wbr>Limit</span>
+        <span id="memorylimit_go">
+<a href="#memorylimit_go" style="color: inherit; text-decoration: inherit;">Memory<wbr>Limit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -519,7 +592,9 @@ Default: `-1`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Memory<wbr>Reservation</span>
+        <span id="memoryreservation_go">
+<a href="#memoryreservation_go" style="color: inherit; text-decoration: inherit;">Memory<wbr>Reservation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -529,7 +604,9 @@ available to the resource pool. Default: `0`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Memory<wbr>Share<wbr>Level</span>
+        <span id="memorysharelevel_go">
+<a href="#memorysharelevel_go" style="color: inherit; text-decoration: inherit;">Memory<wbr>Share<wbr>Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -542,7 +619,9 @@ ignored.  Default: `normal`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Memory<wbr>Shares</span>
+        <span id="memoryshares_go">
+<a href="#memoryshares_go" style="color: inherit; text-decoration: inherit;">Memory<wbr>Shares</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -553,7 +632,9 @@ determine resource allocation in case of resource contention. If this is set,
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -562,7 +643,9 @@ determine resource allocation in case of resource contention. If this is set,
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -578,7 +661,9 @@ determine resource allocation in case of resource contention. If this is set,
 
     <dt class="property-required"
             title="Required">
-        <span>parent<wbr>Resource<wbr>Pool<wbr>Id</span>
+        <span id="parentresourcepoolid_nodejs">
+<a href="#parentresourcepoolid_nodejs" style="color: inherit; text-decoration: inherit;">parent<wbr>Resource<wbr>Pool<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -591,7 +676,9 @@ resource pool or the move will fail.
 
     <dt class="property-optional"
             title="Optional">
-        <span>cpu<wbr>Expandable</span>
+        <span id="cpuexpandable_nodejs">
+<a href="#cpuexpandable_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Expandable</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -602,7 +689,9 @@ unreserved resources. Default: `true`
 
     <dt class="property-optional"
             title="Optional">
-        <span>cpu<wbr>Limit</span>
+        <span id="cpulimit_nodejs">
+<a href="#cpulimit_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Limit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -613,7 +702,9 @@ Default: `-1`
 
     <dt class="property-optional"
             title="Optional">
-        <span>cpu<wbr>Reservation</span>
+        <span id="cpureservation_nodejs">
+<a href="#cpureservation_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Reservation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -623,7 +714,9 @@ available to the resource pool. Default: `0`
 
     <dt class="property-optional"
             title="Optional">
-        <span>cpu<wbr>Share<wbr>Level</span>
+        <span id="cpusharelevel_nodejs">
+<a href="#cpusharelevel_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Share<wbr>Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -636,7 +729,9 @@ ignored.  Default: `normal`
 
     <dt class="property-optional"
             title="Optional">
-        <span>cpu<wbr>Shares</span>
+        <span id="cpushares_nodejs">
+<a href="#cpushares_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Shares</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -647,7 +742,9 @@ determine resource allocation in case of resource contention. If this is set,
 
     <dt class="property-optional"
             title="Optional">
-        <span>custom<wbr>Attributes</span>
+        <span id="customattributes_nodejs">
+<a href="#customattributes_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Attributes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -656,7 +753,9 @@ determine resource allocation in case of resource contention. If this is set,
 
     <dt class="property-optional"
             title="Optional">
-        <span>memory<wbr>Expandable</span>
+        <span id="memoryexpandable_nodejs">
+<a href="#memoryexpandable_nodejs" style="color: inherit; text-decoration: inherit;">memory<wbr>Expandable</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -667,7 +766,9 @@ unreserved resources. Default: `true`
 
     <dt class="property-optional"
             title="Optional">
-        <span>memory<wbr>Limit</span>
+        <span id="memorylimit_nodejs">
+<a href="#memorylimit_nodejs" style="color: inherit; text-decoration: inherit;">memory<wbr>Limit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -678,7 +779,9 @@ Default: `-1`
 
     <dt class="property-optional"
             title="Optional">
-        <span>memory<wbr>Reservation</span>
+        <span id="memoryreservation_nodejs">
+<a href="#memoryreservation_nodejs" style="color: inherit; text-decoration: inherit;">memory<wbr>Reservation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -688,7 +791,9 @@ available to the resource pool. Default: `0`
 
     <dt class="property-optional"
             title="Optional">
-        <span>memory<wbr>Share<wbr>Level</span>
+        <span id="memorysharelevel_nodejs">
+<a href="#memorysharelevel_nodejs" style="color: inherit; text-decoration: inherit;">memory<wbr>Share<wbr>Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -701,7 +806,9 @@ ignored.  Default: `normal`
 
     <dt class="property-optional"
             title="Optional">
-        <span>memory<wbr>Shares</span>
+        <span id="memoryshares_nodejs">
+<a href="#memoryshares_nodejs" style="color: inherit; text-decoration: inherit;">memory<wbr>Shares</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -712,7 +819,9 @@ determine resource allocation in case of resource contention. If this is set,
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -721,7 +830,9 @@ determine resource allocation in case of resource contention. If this is set,
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -737,7 +848,9 @@ determine resource allocation in case of resource contention. If this is set,
 
     <dt class="property-required"
             title="Required">
-        <span>parent_<wbr>resource_<wbr>pool_<wbr>id</span>
+        <span id="parent_resource_pool_id_python">
+<a href="#parent_resource_pool_id_python" style="color: inherit; text-decoration: inherit;">parent_<wbr>resource_<wbr>pool_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -750,7 +863,9 @@ resource pool or the move will fail.
 
     <dt class="property-optional"
             title="Optional">
-        <span>cpu_<wbr>expandable</span>
+        <span id="cpu_expandable_python">
+<a href="#cpu_expandable_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>expandable</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -761,7 +876,9 @@ unreserved resources. Default: `true`
 
     <dt class="property-optional"
             title="Optional">
-        <span>cpu_<wbr>limit</span>
+        <span id="cpu_limit_python">
+<a href="#cpu_limit_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>limit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -772,7 +889,9 @@ Default: `-1`
 
     <dt class="property-optional"
             title="Optional">
-        <span>cpu_<wbr>reservation</span>
+        <span id="cpu_reservation_python">
+<a href="#cpu_reservation_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>reservation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -782,7 +901,9 @@ available to the resource pool. Default: `0`
 
     <dt class="property-optional"
             title="Optional">
-        <span>cpu_<wbr>share_<wbr>level</span>
+        <span id="cpu_share_level_python">
+<a href="#cpu_share_level_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>share_<wbr>level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -795,7 +916,9 @@ ignored.  Default: `normal`
 
     <dt class="property-optional"
             title="Optional">
-        <span>cpu_<wbr>shares</span>
+        <span id="cpu_shares_python">
+<a href="#cpu_shares_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>shares</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -806,7 +929,9 @@ determine resource allocation in case of resource contention. If this is set,
 
     <dt class="property-optional"
             title="Optional">
-        <span>custom_<wbr>attributes</span>
+        <span id="custom_attributes_python">
+<a href="#custom_attributes_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>attributes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -815,7 +940,9 @@ determine resource allocation in case of resource contention. If this is set,
 
     <dt class="property-optional"
             title="Optional">
-        <span>memory_<wbr>expandable</span>
+        <span id="memory_expandable_python">
+<a href="#memory_expandable_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>expandable</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -826,7 +953,9 @@ unreserved resources. Default: `true`
 
     <dt class="property-optional"
             title="Optional">
-        <span>memory_<wbr>limit</span>
+        <span id="memory_limit_python">
+<a href="#memory_limit_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>limit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -837,7 +966,9 @@ Default: `-1`
 
     <dt class="property-optional"
             title="Optional">
-        <span>memory_<wbr>reservation</span>
+        <span id="memory_reservation_python">
+<a href="#memory_reservation_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>reservation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -847,7 +978,9 @@ available to the resource pool. Default: `0`
 
     <dt class="property-optional"
             title="Optional">
-        <span>memory_<wbr>share_<wbr>level</span>
+        <span id="memory_share_level_python">
+<a href="#memory_share_level_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>share_<wbr>level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -860,7 +993,9 @@ ignored.  Default: `normal`
 
     <dt class="property-optional"
             title="Optional">
-        <span>memory_<wbr>shares</span>
+        <span id="memory_shares_python">
+<a href="#memory_shares_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>shares</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -871,7 +1006,9 @@ determine resource allocation in case of resource contention. If this is set,
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -880,7 +1017,9 @@ determine resource allocation in case of resource contention. If this is set,
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -907,7 +1046,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -922,7 +1063,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -937,7 +1080,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -952,7 +1097,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -973,7 +1120,7 @@ Get an existing ResourcePool resource's state with the given name, ID, and optio
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#ResourcePoolState">ResourcePoolState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#ResourcePool">ResourcePool</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#ResourcePoolState">ResourcePoolState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#ResourcePool">ResourcePool</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -981,11 +1128,11 @@ Get an existing ResourcePool resource's state with the given name, ID, and optio
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetResourcePool<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#ResourcePoolState">ResourcePoolState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#ResourcePool">ResourcePool</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetResourcePool<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#ResourcePoolState">ResourcePoolState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#ResourcePool">ResourcePool</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.ResourcePool.html">ResourcePool</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere..ResourcePoolState.html">ResourcePoolState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.ResourcePool.html">ResourcePool</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere..ResourcePoolState.html">ResourcePoolState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1093,7 +1240,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cpu<wbr>Expandable</span>
+        <span id="state_cpuexpandable_csharp">
+<a href="#state_cpuexpandable_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Expandable</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1104,7 +1253,9 @@ unreserved resources. Default: `true`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cpu<wbr>Limit</span>
+        <span id="state_cpulimit_csharp">
+<a href="#state_cpulimit_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Limit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1115,7 +1266,9 @@ Default: `-1`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cpu<wbr>Reservation</span>
+        <span id="state_cpureservation_csharp">
+<a href="#state_cpureservation_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Reservation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1125,7 +1278,9 @@ available to the resource pool. Default: `0`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cpu<wbr>Share<wbr>Level</span>
+        <span id="state_cpusharelevel_csharp">
+<a href="#state_cpusharelevel_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Share<wbr>Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1138,7 +1293,9 @@ ignored.  Default: `normal`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cpu<wbr>Shares</span>
+        <span id="state_cpushares_csharp">
+<a href="#state_cpushares_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Shares</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1149,7 +1306,9 @@ determine resource allocation in case of resource contention. If this is set,
 
     <dt class="property-optional"
             title="Optional">
-        <span>Custom<wbr>Attributes</span>
+        <span id="state_customattributes_csharp">
+<a href="#state_customattributes_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Attributes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -1158,7 +1317,9 @@ determine resource allocation in case of resource contention. If this is set,
 
     <dt class="property-optional"
             title="Optional">
-        <span>Memory<wbr>Expandable</span>
+        <span id="state_memoryexpandable_csharp">
+<a href="#state_memoryexpandable_csharp" style="color: inherit; text-decoration: inherit;">Memory<wbr>Expandable</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1169,7 +1330,9 @@ unreserved resources. Default: `true`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Memory<wbr>Limit</span>
+        <span id="state_memorylimit_csharp">
+<a href="#state_memorylimit_csharp" style="color: inherit; text-decoration: inherit;">Memory<wbr>Limit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1180,7 +1343,9 @@ Default: `-1`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Memory<wbr>Reservation</span>
+        <span id="state_memoryreservation_csharp">
+<a href="#state_memoryreservation_csharp" style="color: inherit; text-decoration: inherit;">Memory<wbr>Reservation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1190,7 +1355,9 @@ available to the resource pool. Default: `0`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Memory<wbr>Share<wbr>Level</span>
+        <span id="state_memorysharelevel_csharp">
+<a href="#state_memorysharelevel_csharp" style="color: inherit; text-decoration: inherit;">Memory<wbr>Share<wbr>Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1203,7 +1370,9 @@ ignored.  Default: `normal`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Memory<wbr>Shares</span>
+        <span id="state_memoryshares_csharp">
+<a href="#state_memoryshares_csharp" style="color: inherit; text-decoration: inherit;">Memory<wbr>Shares</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1214,7 +1383,9 @@ determine resource allocation in case of resource contention. If this is set,
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1223,7 +1394,9 @@ determine resource allocation in case of resource contention. If this is set,
 
     <dt class="property-optional"
             title="Optional">
-        <span>Parent<wbr>Resource<wbr>Pool<wbr>Id</span>
+        <span id="state_parentresourcepoolid_csharp">
+<a href="#state_parentresourcepoolid_csharp" style="color: inherit; text-decoration: inherit;">Parent<wbr>Resource<wbr>Pool<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1236,7 +1409,9 @@ resource pool or the move will fail.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="state_tags_csharp">
+<a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1252,7 +1427,9 @@ resource pool or the move will fail.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cpu<wbr>Expandable</span>
+        <span id="state_cpuexpandable_go">
+<a href="#state_cpuexpandable_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Expandable</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1263,7 +1440,9 @@ unreserved resources. Default: `true`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cpu<wbr>Limit</span>
+        <span id="state_cpulimit_go">
+<a href="#state_cpulimit_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Limit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1274,7 +1453,9 @@ Default: `-1`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cpu<wbr>Reservation</span>
+        <span id="state_cpureservation_go">
+<a href="#state_cpureservation_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Reservation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1284,7 +1465,9 @@ available to the resource pool. Default: `0`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cpu<wbr>Share<wbr>Level</span>
+        <span id="state_cpusharelevel_go">
+<a href="#state_cpusharelevel_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Share<wbr>Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1297,7 +1480,9 @@ ignored.  Default: `normal`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cpu<wbr>Shares</span>
+        <span id="state_cpushares_go">
+<a href="#state_cpushares_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Shares</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1308,7 +1493,9 @@ determine resource allocation in case of resource contention. If this is set,
 
     <dt class="property-optional"
             title="Optional">
-        <span>Custom<wbr>Attributes</span>
+        <span id="state_customattributes_go">
+<a href="#state_customattributes_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Attributes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -1317,7 +1504,9 @@ determine resource allocation in case of resource contention. If this is set,
 
     <dt class="property-optional"
             title="Optional">
-        <span>Memory<wbr>Expandable</span>
+        <span id="state_memoryexpandable_go">
+<a href="#state_memoryexpandable_go" style="color: inherit; text-decoration: inherit;">Memory<wbr>Expandable</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1328,7 +1517,9 @@ unreserved resources. Default: `true`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Memory<wbr>Limit</span>
+        <span id="state_memorylimit_go">
+<a href="#state_memorylimit_go" style="color: inherit; text-decoration: inherit;">Memory<wbr>Limit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1339,7 +1530,9 @@ Default: `-1`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Memory<wbr>Reservation</span>
+        <span id="state_memoryreservation_go">
+<a href="#state_memoryreservation_go" style="color: inherit; text-decoration: inherit;">Memory<wbr>Reservation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1349,7 +1542,9 @@ available to the resource pool. Default: `0`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Memory<wbr>Share<wbr>Level</span>
+        <span id="state_memorysharelevel_go">
+<a href="#state_memorysharelevel_go" style="color: inherit; text-decoration: inherit;">Memory<wbr>Share<wbr>Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1362,7 +1557,9 @@ ignored.  Default: `normal`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Memory<wbr>Shares</span>
+        <span id="state_memoryshares_go">
+<a href="#state_memoryshares_go" style="color: inherit; text-decoration: inherit;">Memory<wbr>Shares</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1373,7 +1570,9 @@ determine resource allocation in case of resource contention. If this is set,
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1382,7 +1581,9 @@ determine resource allocation in case of resource contention. If this is set,
 
     <dt class="property-optional"
             title="Optional">
-        <span>Parent<wbr>Resource<wbr>Pool<wbr>Id</span>
+        <span id="state_parentresourcepoolid_go">
+<a href="#state_parentresourcepoolid_go" style="color: inherit; text-decoration: inherit;">Parent<wbr>Resource<wbr>Pool<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1395,7 +1596,9 @@ resource pool or the move will fail.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="state_tags_go">
+<a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1411,7 +1614,9 @@ resource pool or the move will fail.
 
     <dt class="property-optional"
             title="Optional">
-        <span>cpu<wbr>Expandable</span>
+        <span id="state_cpuexpandable_nodejs">
+<a href="#state_cpuexpandable_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Expandable</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1422,7 +1627,9 @@ unreserved resources. Default: `true`
 
     <dt class="property-optional"
             title="Optional">
-        <span>cpu<wbr>Limit</span>
+        <span id="state_cpulimit_nodejs">
+<a href="#state_cpulimit_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Limit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1433,7 +1640,9 @@ Default: `-1`
 
     <dt class="property-optional"
             title="Optional">
-        <span>cpu<wbr>Reservation</span>
+        <span id="state_cpureservation_nodejs">
+<a href="#state_cpureservation_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Reservation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1443,7 +1652,9 @@ available to the resource pool. Default: `0`
 
     <dt class="property-optional"
             title="Optional">
-        <span>cpu<wbr>Share<wbr>Level</span>
+        <span id="state_cpusharelevel_nodejs">
+<a href="#state_cpusharelevel_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Share<wbr>Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1456,7 +1667,9 @@ ignored.  Default: `normal`
 
     <dt class="property-optional"
             title="Optional">
-        <span>cpu<wbr>Shares</span>
+        <span id="state_cpushares_nodejs">
+<a href="#state_cpushares_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Shares</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1467,7 +1680,9 @@ determine resource allocation in case of resource contention. If this is set,
 
     <dt class="property-optional"
             title="Optional">
-        <span>custom<wbr>Attributes</span>
+        <span id="state_customattributes_nodejs">
+<a href="#state_customattributes_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Attributes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -1476,7 +1691,9 @@ determine resource allocation in case of resource contention. If this is set,
 
     <dt class="property-optional"
             title="Optional">
-        <span>memory<wbr>Expandable</span>
+        <span id="state_memoryexpandable_nodejs">
+<a href="#state_memoryexpandable_nodejs" style="color: inherit; text-decoration: inherit;">memory<wbr>Expandable</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1487,7 +1704,9 @@ unreserved resources. Default: `true`
 
     <dt class="property-optional"
             title="Optional">
-        <span>memory<wbr>Limit</span>
+        <span id="state_memorylimit_nodejs">
+<a href="#state_memorylimit_nodejs" style="color: inherit; text-decoration: inherit;">memory<wbr>Limit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1498,7 +1717,9 @@ Default: `-1`
 
     <dt class="property-optional"
             title="Optional">
-        <span>memory<wbr>Reservation</span>
+        <span id="state_memoryreservation_nodejs">
+<a href="#state_memoryreservation_nodejs" style="color: inherit; text-decoration: inherit;">memory<wbr>Reservation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1508,7 +1729,9 @@ available to the resource pool. Default: `0`
 
     <dt class="property-optional"
             title="Optional">
-        <span>memory<wbr>Share<wbr>Level</span>
+        <span id="state_memorysharelevel_nodejs">
+<a href="#state_memorysharelevel_nodejs" style="color: inherit; text-decoration: inherit;">memory<wbr>Share<wbr>Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1521,7 +1744,9 @@ ignored.  Default: `normal`
 
     <dt class="property-optional"
             title="Optional">
-        <span>memory<wbr>Shares</span>
+        <span id="state_memoryshares_nodejs">
+<a href="#state_memoryshares_nodejs" style="color: inherit; text-decoration: inherit;">memory<wbr>Shares</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1532,7 +1757,9 @@ determine resource allocation in case of resource contention. If this is set,
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1541,7 +1768,9 @@ determine resource allocation in case of resource contention. If this is set,
 
     <dt class="property-optional"
             title="Optional">
-        <span>parent<wbr>Resource<wbr>Pool<wbr>Id</span>
+        <span id="state_parentresourcepoolid_nodejs">
+<a href="#state_parentresourcepoolid_nodejs" style="color: inherit; text-decoration: inherit;">parent<wbr>Resource<wbr>Pool<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1554,7 +1783,9 @@ resource pool or the move will fail.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="state_tags_nodejs">
+<a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1570,7 +1801,9 @@ resource pool or the move will fail.
 
     <dt class="property-optional"
             title="Optional">
-        <span>cpu_<wbr>expandable</span>
+        <span id="state_cpu_expandable_python">
+<a href="#state_cpu_expandable_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>expandable</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1581,7 +1814,9 @@ unreserved resources. Default: `true`
 
     <dt class="property-optional"
             title="Optional">
-        <span>cpu_<wbr>limit</span>
+        <span id="state_cpu_limit_python">
+<a href="#state_cpu_limit_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>limit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1592,7 +1827,9 @@ Default: `-1`
 
     <dt class="property-optional"
             title="Optional">
-        <span>cpu_<wbr>reservation</span>
+        <span id="state_cpu_reservation_python">
+<a href="#state_cpu_reservation_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>reservation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1602,7 +1839,9 @@ available to the resource pool. Default: `0`
 
     <dt class="property-optional"
             title="Optional">
-        <span>cpu_<wbr>share_<wbr>level</span>
+        <span id="state_cpu_share_level_python">
+<a href="#state_cpu_share_level_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>share_<wbr>level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1615,7 +1854,9 @@ ignored.  Default: `normal`
 
     <dt class="property-optional"
             title="Optional">
-        <span>cpu_<wbr>shares</span>
+        <span id="state_cpu_shares_python">
+<a href="#state_cpu_shares_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>shares</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1626,7 +1867,9 @@ determine resource allocation in case of resource contention. If this is set,
 
     <dt class="property-optional"
             title="Optional">
-        <span>custom_<wbr>attributes</span>
+        <span id="state_custom_attributes_python">
+<a href="#state_custom_attributes_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>attributes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -1635,7 +1878,9 @@ determine resource allocation in case of resource contention. If this is set,
 
     <dt class="property-optional"
             title="Optional">
-        <span>memory_<wbr>expandable</span>
+        <span id="state_memory_expandable_python">
+<a href="#state_memory_expandable_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>expandable</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1646,7 +1891,9 @@ unreserved resources. Default: `true`
 
     <dt class="property-optional"
             title="Optional">
-        <span>memory_<wbr>limit</span>
+        <span id="state_memory_limit_python">
+<a href="#state_memory_limit_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>limit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1657,7 +1904,9 @@ Default: `-1`
 
     <dt class="property-optional"
             title="Optional">
-        <span>memory_<wbr>reservation</span>
+        <span id="state_memory_reservation_python">
+<a href="#state_memory_reservation_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>reservation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1667,7 +1916,9 @@ available to the resource pool. Default: `0`
 
     <dt class="property-optional"
             title="Optional">
-        <span>memory_<wbr>share_<wbr>level</span>
+        <span id="state_memory_share_level_python">
+<a href="#state_memory_share_level_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>share_<wbr>level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1680,7 +1931,9 @@ ignored.  Default: `normal`
 
     <dt class="property-optional"
             title="Optional">
-        <span>memory_<wbr>shares</span>
+        <span id="state_memory_shares_python">
+<a href="#state_memory_shares_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>shares</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1691,7 +1944,9 @@ determine resource allocation in case of resource contention. If this is set,
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1700,7 +1955,9 @@ determine resource allocation in case of resource contention. If this is set,
 
     <dt class="property-optional"
             title="Optional">
-        <span>parent_<wbr>resource_<wbr>pool_<wbr>id</span>
+        <span id="state_parent_resource_pool_id_python">
+<a href="#state_parent_resource_pool_id_python" style="color: inherit; text-decoration: inherit;">parent_<wbr>resource_<wbr>pool_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1713,7 +1970,9 @@ resource pool or the move will fail.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="state_tags_python">
+<a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>

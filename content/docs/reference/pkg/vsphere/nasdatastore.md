@@ -29,19 +29,19 @@ multiple hosts, you must specify each host that you want to add in the
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#NasDatastore">NasDatastore</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#NasDatastoreArgs">NasDatastoreArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#NasDatastore">NasDatastore</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#NasDatastoreArgs">NasDatastoreArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">NasDatastore</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>access_mode=None<span class="p">, </span>custom_attributes=None<span class="p">, </span>datastore_cluster_id=None<span class="p">, </span>folder=None<span class="p">, </span>host_system_ids=None<span class="p">, </span>name=None<span class="p">, </span>remote_hosts=None<span class="p">, </span>remote_path=None<span class="p">, </span>security_type=None<span class="p">, </span>tags=None<span class="p">, </span>type=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/vsphere/#NasDatastore">NasDatastore</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>access_mode=None<span class="p">, </span>custom_attributes=None<span class="p">, </span>datastore_cluster_id=None<span class="p">, </span>folder=None<span class="p">, </span>host_system_ids=None<span class="p">, </span>name=None<span class="p">, </span>remote_hosts=None<span class="p">, </span>remote_path=None<span class="p">, </span>security_type=None<span class="p">, </span>tags=None<span class="p">, </span>type=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewNasDatastore<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#NasDatastoreArgs">NasDatastoreArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#NasDatastore">NasDatastore</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#NasDatastore">NewNasDatastore</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#NasDatastoreArgs">NasDatastoreArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#NasDatastore">NasDatastore</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.NasDatastore.html">NasDatastore</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.NasDatastoreArgs.html">NasDatastoreArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.NasDatastore.html">NasDatastore</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.NasDatastoreArgs.html">NasDatastoreArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -207,7 +207,9 @@ The NasDatastore resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-required"
             title="Required">
-        <span>Host<wbr>System<wbr>Ids</span>
+        <span id="hostsystemids_csharp">
+<a href="#hostsystemids_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>System<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -217,7 +219,9 @@ the hosts to mount the datastore on.
 
     <dt class="property-required"
             title="Required">
-        <span>Remote<wbr>Hosts</span>
+        <span id="remotehosts_csharp">
+<a href="#remotehosts_csharp" style="color: inherit; text-decoration: inherit;">Remote<wbr>Hosts</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -228,7 +232,9 @@ can be present for NFS v4.1. Forces a new resource if changed.
 
     <dt class="property-required"
             title="Required">
-        <span>Remote<wbr>Path</span>
+        <span id="remotepath_csharp">
+<a href="#remotepath_csharp" style="color: inherit; text-decoration: inherit;">Remote<wbr>Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -238,7 +244,9 @@ resource if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Access<wbr>Mode</span>
+        <span id="accessmode_csharp">
+<a href="#accessmode_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -250,7 +258,9 @@ actual share. Default: `readWrite`. Forces a new resource if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Custom<wbr>Attributes</span>
+        <span id="customattributes_csharp">
+<a href="#customattributes_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Attributes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -260,7 +270,9 @@ value strings to set on datasource resource.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Datastore<wbr>Cluster<wbr>Id</span>
+        <span id="datastoreclusterid_csharp">
+<a href="#datastoreclusterid_csharp" style="color: inherit; text-decoration: inherit;">Datastore<wbr>Cluster<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -271,7 +283,9 @@ Conflicts with `folder`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Folder</span>
+        <span id="folder_csharp">
+<a href="#folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -286,7 +300,9 @@ located at `/dc1/datastore/foo/bar`, with the final inventory path being
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -296,7 +312,9 @@ changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Security<wbr>Type</span>
+        <span id="securitytype_csharp">
+<a href="#securitytype_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -307,7 +325,9 @@ if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -316,7 +336,9 @@ if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Type</span>
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -334,7 +356,9 @@ changed.
 
     <dt class="property-required"
             title="Required">
-        <span>Host<wbr>System<wbr>Ids</span>
+        <span id="hostsystemids_go">
+<a href="#hostsystemids_go" style="color: inherit; text-decoration: inherit;">Host<wbr>System<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -344,7 +368,9 @@ the hosts to mount the datastore on.
 
     <dt class="property-required"
             title="Required">
-        <span>Remote<wbr>Hosts</span>
+        <span id="remotehosts_go">
+<a href="#remotehosts_go" style="color: inherit; text-decoration: inherit;">Remote<wbr>Hosts</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -355,7 +381,9 @@ can be present for NFS v4.1. Forces a new resource if changed.
 
     <dt class="property-required"
             title="Required">
-        <span>Remote<wbr>Path</span>
+        <span id="remotepath_go">
+<a href="#remotepath_go" style="color: inherit; text-decoration: inherit;">Remote<wbr>Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -365,7 +393,9 @@ resource if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Access<wbr>Mode</span>
+        <span id="accessmode_go">
+<a href="#accessmode_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -377,7 +407,9 @@ actual share. Default: `readWrite`. Forces a new resource if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Custom<wbr>Attributes</span>
+        <span id="customattributes_go">
+<a href="#customattributes_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Attributes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -387,7 +419,9 @@ value strings to set on datasource resource.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Datastore<wbr>Cluster<wbr>Id</span>
+        <span id="datastoreclusterid_go">
+<a href="#datastoreclusterid_go" style="color: inherit; text-decoration: inherit;">Datastore<wbr>Cluster<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -398,7 +432,9 @@ Conflicts with `folder`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Folder</span>
+        <span id="folder_go">
+<a href="#folder_go" style="color: inherit; text-decoration: inherit;">Folder</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -413,7 +449,9 @@ located at `/dc1/datastore/foo/bar`, with the final inventory path being
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -423,7 +461,9 @@ changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Security<wbr>Type</span>
+        <span id="securitytype_go">
+<a href="#securitytype_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -434,7 +474,9 @@ if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -443,7 +485,9 @@ if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Type</span>
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -461,7 +505,9 @@ changed.
 
     <dt class="property-required"
             title="Required">
-        <span>host<wbr>System<wbr>Ids</span>
+        <span id="hostsystemids_nodejs">
+<a href="#hostsystemids_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>System<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -471,7 +517,9 @@ the hosts to mount the datastore on.
 
     <dt class="property-required"
             title="Required">
-        <span>remote<wbr>Hosts</span>
+        <span id="remotehosts_nodejs">
+<a href="#remotehosts_nodejs" style="color: inherit; text-decoration: inherit;">remote<wbr>Hosts</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -482,7 +530,9 @@ can be present for NFS v4.1. Forces a new resource if changed.
 
     <dt class="property-required"
             title="Required">
-        <span>remote<wbr>Path</span>
+        <span id="remotepath_nodejs">
+<a href="#remotepath_nodejs" style="color: inherit; text-decoration: inherit;">remote<wbr>Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -492,7 +542,9 @@ resource if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>access<wbr>Mode</span>
+        <span id="accessmode_nodejs">
+<a href="#accessmode_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -504,7 +556,9 @@ actual share. Default: `readWrite`. Forces a new resource if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>custom<wbr>Attributes</span>
+        <span id="customattributes_nodejs">
+<a href="#customattributes_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Attributes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -514,7 +568,9 @@ value strings to set on datasource resource.
 
     <dt class="property-optional"
             title="Optional">
-        <span>datastore<wbr>Cluster<wbr>Id</span>
+        <span id="datastoreclusterid_nodejs">
+<a href="#datastoreclusterid_nodejs" style="color: inherit; text-decoration: inherit;">datastore<wbr>Cluster<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -525,7 +581,9 @@ Conflicts with `folder`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>folder</span>
+        <span id="folder_nodejs">
+<a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -540,7 +598,9 @@ located at `/dc1/datastore/foo/bar`, with the final inventory path being
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -550,7 +610,9 @@ changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>security<wbr>Type</span>
+        <span id="securitytype_nodejs">
+<a href="#securitytype_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -561,7 +623,9 @@ if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -570,7 +634,9 @@ if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>type</span>
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -588,7 +654,9 @@ changed.
 
     <dt class="property-required"
             title="Required">
-        <span>host_<wbr>system_<wbr>ids</span>
+        <span id="host_system_ids_python">
+<a href="#host_system_ids_python" style="color: inherit; text-decoration: inherit;">host_<wbr>system_<wbr>ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -598,7 +666,9 @@ the hosts to mount the datastore on.
 
     <dt class="property-required"
             title="Required">
-        <span>remote_<wbr>hosts</span>
+        <span id="remote_hosts_python">
+<a href="#remote_hosts_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>hosts</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -609,7 +679,9 @@ can be present for NFS v4.1. Forces a new resource if changed.
 
     <dt class="property-required"
             title="Required">
-        <span>remote_<wbr>path</span>
+        <span id="remote_path_python">
+<a href="#remote_path_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -619,7 +691,9 @@ resource if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>access_<wbr>mode</span>
+        <span id="access_mode_python">
+<a href="#access_mode_python" style="color: inherit; text-decoration: inherit;">access_<wbr>mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -631,7 +705,9 @@ actual share. Default: `readWrite`. Forces a new resource if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>custom_<wbr>attributes</span>
+        <span id="custom_attributes_python">
+<a href="#custom_attributes_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>attributes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -641,7 +717,9 @@ value strings to set on datasource resource.
 
     <dt class="property-optional"
             title="Optional">
-        <span>datastore_<wbr>cluster_<wbr>id</span>
+        <span id="datastore_cluster_id_python">
+<a href="#datastore_cluster_id_python" style="color: inherit; text-decoration: inherit;">datastore_<wbr>cluster_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -652,7 +730,9 @@ Conflicts with `folder`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>folder</span>
+        <span id="folder_python">
+<a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -667,7 +747,9 @@ located at `/dc1/datastore/foo/bar`, with the final inventory path being
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -677,7 +759,9 @@ changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>security_<wbr>type</span>
+        <span id="security_type_python">
+<a href="#security_type_python" style="color: inherit; text-decoration: inherit;">security_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -688,7 +772,9 @@ if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -697,7 +783,9 @@ if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>type</span>
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -726,7 +814,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Accessible</span>
+        <span id="accessible_csharp">
+<a href="#accessible_csharp" style="color: inherit; text-decoration: inherit;">Accessible</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -736,7 +826,9 @@ some other computed attributes may be out of date.
 
     <dt class="property-"
             title="">
-        <span>Capacity</span>
+        <span id="capacity_csharp">
+<a href="#capacity_csharp" style="color: inherit; text-decoration: inherit;">Capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -745,7 +837,9 @@ some other computed attributes may be out of date.
 
     <dt class="property-"
             title="">
-        <span>Free<wbr>Space</span>
+        <span id="freespace_csharp">
+<a href="#freespace_csharp" style="color: inherit; text-decoration: inherit;">Free<wbr>Space</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -754,7 +848,9 @@ some other computed attributes may be out of date.
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -762,7 +858,9 @@ some other computed attributes may be out of date.
 
     <dt class="property-"
             title="">
-        <span>Maintenance<wbr>Mode</span>
+        <span id="maintenancemode_csharp">
+<a href="#maintenancemode_csharp" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -771,7 +869,9 @@ some other computed attributes may be out of date.
 
     <dt class="property-"
             title="">
-        <span>Multiple<wbr>Host<wbr>Access</span>
+        <span id="multiplehostaccess_csharp">
+<a href="#multiplehostaccess_csharp" style="color: inherit; text-decoration: inherit;">Multiple<wbr>Host<wbr>Access</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -781,7 +881,9 @@ been configured with access to the datastore.
 
     <dt class="property-"
             title="">
-        <span>Protocol<wbr>Endpoint</span>
+        <span id="protocolendpoint_csharp">
+<a href="#protocolendpoint_csharp" style="color: inherit; text-decoration: inherit;">Protocol<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -791,7 +893,9 @@ This field is only populated if the host supports virtual datastores.
 
     <dt class="property-"
             title="">
-        <span>Uncommitted<wbr>Space</span>
+        <span id="uncommittedspace_csharp">
+<a href="#uncommittedspace_csharp" style="color: inherit; text-decoration: inherit;">Uncommitted<wbr>Space</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -801,7 +905,9 @@ potentially used by all virtual machines on this datastore.
 
     <dt class="property-"
             title="">
-        <span>Url</span>
+        <span id="url_csharp">
+<a href="#url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -817,7 +923,9 @@ potentially used by all virtual machines on this datastore.
 
     <dt class="property-"
             title="">
-        <span>Accessible</span>
+        <span id="accessible_go">
+<a href="#accessible_go" style="color: inherit; text-decoration: inherit;">Accessible</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -827,7 +935,9 @@ some other computed attributes may be out of date.
 
     <dt class="property-"
             title="">
-        <span>Capacity</span>
+        <span id="capacity_go">
+<a href="#capacity_go" style="color: inherit; text-decoration: inherit;">Capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -836,7 +946,9 @@ some other computed attributes may be out of date.
 
     <dt class="property-"
             title="">
-        <span>Free<wbr>Space</span>
+        <span id="freespace_go">
+<a href="#freespace_go" style="color: inherit; text-decoration: inherit;">Free<wbr>Space</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -845,7 +957,9 @@ some other computed attributes may be out of date.
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -853,7 +967,9 @@ some other computed attributes may be out of date.
 
     <dt class="property-"
             title="">
-        <span>Maintenance<wbr>Mode</span>
+        <span id="maintenancemode_go">
+<a href="#maintenancemode_go" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -862,7 +978,9 @@ some other computed attributes may be out of date.
 
     <dt class="property-"
             title="">
-        <span>Multiple<wbr>Host<wbr>Access</span>
+        <span id="multiplehostaccess_go">
+<a href="#multiplehostaccess_go" style="color: inherit; text-decoration: inherit;">Multiple<wbr>Host<wbr>Access</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -872,7 +990,9 @@ been configured with access to the datastore.
 
     <dt class="property-"
             title="">
-        <span>Protocol<wbr>Endpoint</span>
+        <span id="protocolendpoint_go">
+<a href="#protocolendpoint_go" style="color: inherit; text-decoration: inherit;">Protocol<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -882,7 +1002,9 @@ This field is only populated if the host supports virtual datastores.
 
     <dt class="property-"
             title="">
-        <span>Uncommitted<wbr>Space</span>
+        <span id="uncommittedspace_go">
+<a href="#uncommittedspace_go" style="color: inherit; text-decoration: inherit;">Uncommitted<wbr>Space</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -892,7 +1014,9 @@ potentially used by all virtual machines on this datastore.
 
     <dt class="property-"
             title="">
-        <span>Url</span>
+        <span id="url_go">
+<a href="#url_go" style="color: inherit; text-decoration: inherit;">Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -908,7 +1032,9 @@ potentially used by all virtual machines on this datastore.
 
     <dt class="property-"
             title="">
-        <span>accessible</span>
+        <span id="accessible_nodejs">
+<a href="#accessible_nodejs" style="color: inherit; text-decoration: inherit;">accessible</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -918,7 +1044,9 @@ some other computed attributes may be out of date.
 
     <dt class="property-"
             title="">
-        <span>capacity</span>
+        <span id="capacity_nodejs">
+<a href="#capacity_nodejs" style="color: inherit; text-decoration: inherit;">capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -927,7 +1055,9 @@ some other computed attributes may be out of date.
 
     <dt class="property-"
             title="">
-        <span>free<wbr>Space</span>
+        <span id="freespace_nodejs">
+<a href="#freespace_nodejs" style="color: inherit; text-decoration: inherit;">free<wbr>Space</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -936,7 +1066,9 @@ some other computed attributes may be out of date.
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -944,7 +1076,9 @@ some other computed attributes may be out of date.
 
     <dt class="property-"
             title="">
-        <span>maintenance<wbr>Mode</span>
+        <span id="maintenancemode_nodejs">
+<a href="#maintenancemode_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -953,7 +1087,9 @@ some other computed attributes may be out of date.
 
     <dt class="property-"
             title="">
-        <span>multiple<wbr>Host<wbr>Access</span>
+        <span id="multiplehostaccess_nodejs">
+<a href="#multiplehostaccess_nodejs" style="color: inherit; text-decoration: inherit;">multiple<wbr>Host<wbr>Access</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -963,7 +1099,9 @@ been configured with access to the datastore.
 
     <dt class="property-"
             title="">
-        <span>protocol<wbr>Endpoint</span>
+        <span id="protocolendpoint_nodejs">
+<a href="#protocolendpoint_nodejs" style="color: inherit; text-decoration: inherit;">protocol<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -973,7 +1111,9 @@ This field is only populated if the host supports virtual datastores.
 
     <dt class="property-"
             title="">
-        <span>uncommitted<wbr>Space</span>
+        <span id="uncommittedspace_nodejs">
+<a href="#uncommittedspace_nodejs" style="color: inherit; text-decoration: inherit;">uncommitted<wbr>Space</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -983,7 +1123,9 @@ potentially used by all virtual machines on this datastore.
 
     <dt class="property-"
             title="">
-        <span>url</span>
+        <span id="url_nodejs">
+<a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -999,7 +1141,9 @@ potentially used by all virtual machines on this datastore.
 
     <dt class="property-"
             title="">
-        <span>accessible</span>
+        <span id="accessible_python">
+<a href="#accessible_python" style="color: inherit; text-decoration: inherit;">accessible</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1009,7 +1153,9 @@ some other computed attributes may be out of date.
 
     <dt class="property-"
             title="">
-        <span>capacity</span>
+        <span id="capacity_python">
+<a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1018,7 +1164,9 @@ some other computed attributes may be out of date.
 
     <dt class="property-"
             title="">
-        <span>free_<wbr>space</span>
+        <span id="free_space_python">
+<a href="#free_space_python" style="color: inherit; text-decoration: inherit;">free_<wbr>space</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1027,7 +1175,9 @@ some other computed attributes may be out of date.
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1035,7 +1185,9 @@ some other computed attributes may be out of date.
 
     <dt class="property-"
             title="">
-        <span>maintenance_<wbr>mode</span>
+        <span id="maintenance_mode_python">
+<a href="#maintenance_mode_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1044,7 +1196,9 @@ some other computed attributes may be out of date.
 
     <dt class="property-"
             title="">
-        <span>multiple_<wbr>host_<wbr>access</span>
+        <span id="multiple_host_access_python">
+<a href="#multiple_host_access_python" style="color: inherit; text-decoration: inherit;">multiple_<wbr>host_<wbr>access</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1054,7 +1208,9 @@ been configured with access to the datastore.
 
     <dt class="property-"
             title="">
-        <span>protocol_<wbr>endpoint</span>
+        <span id="protocol_endpoint_python">
+<a href="#protocol_endpoint_python" style="color: inherit; text-decoration: inherit;">protocol_<wbr>endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1064,7 +1220,9 @@ This field is only populated if the host supports virtual datastores.
 
     <dt class="property-"
             title="">
-        <span>uncommitted_<wbr>space</span>
+        <span id="uncommitted_space_python">
+<a href="#uncommitted_space_python" style="color: inherit; text-decoration: inherit;">uncommitted_<wbr>space</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1074,7 +1232,9 @@ potentially used by all virtual machines on this datastore.
 
     <dt class="property-"
             title="">
-        <span>url</span>
+        <span id="url_python">
+<a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1096,7 +1256,7 @@ Get an existing NasDatastore resource's state with the given name, ID, and optio
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#NasDatastoreState">NasDatastoreState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#NasDatastore">NasDatastore</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#NasDatastoreState">NasDatastoreState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#NasDatastore">NasDatastore</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1104,11 +1264,11 @@ Get an existing NasDatastore resource's state with the given name, ID, and optio
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetNasDatastore<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#NasDatastoreState">NasDatastoreState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#NasDatastore">NasDatastore</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetNasDatastore<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#NasDatastoreState">NasDatastoreState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#NasDatastore">NasDatastore</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.NasDatastore.html">NasDatastore</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere..NasDatastoreState.html">NasDatastoreState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.NasDatastore.html">NasDatastore</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere..NasDatastoreState.html">NasDatastoreState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1216,7 +1376,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Access<wbr>Mode</span>
+        <span id="state_accessmode_csharp">
+<a href="#state_accessmode_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1228,7 +1390,9 @@ actual share. Default: `readWrite`. Forces a new resource if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Accessible</span>
+        <span id="state_accessible_csharp">
+<a href="#state_accessible_csharp" style="color: inherit; text-decoration: inherit;">Accessible</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1238,7 +1402,9 @@ some other computed attributes may be out of date.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Capacity</span>
+        <span id="state_capacity_csharp">
+<a href="#state_capacity_csharp" style="color: inherit; text-decoration: inherit;">Capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1247,7 +1413,9 @@ some other computed attributes may be out of date.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Custom<wbr>Attributes</span>
+        <span id="state_customattributes_csharp">
+<a href="#state_customattributes_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Attributes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -1257,7 +1425,9 @@ value strings to set on datasource resource.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Datastore<wbr>Cluster<wbr>Id</span>
+        <span id="state_datastoreclusterid_csharp">
+<a href="#state_datastoreclusterid_csharp" style="color: inherit; text-decoration: inherit;">Datastore<wbr>Cluster<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1268,7 +1438,9 @@ Conflicts with `folder`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Folder</span>
+        <span id="state_folder_csharp">
+<a href="#state_folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1283,7 +1455,9 @@ located at `/dc1/datastore/foo/bar`, with the final inventory path being
 
     <dt class="property-optional"
             title="Optional">
-        <span>Free<wbr>Space</span>
+        <span id="state_freespace_csharp">
+<a href="#state_freespace_csharp" style="color: inherit; text-decoration: inherit;">Free<wbr>Space</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1292,7 +1466,9 @@ located at `/dc1/datastore/foo/bar`, with the final inventory path being
 
     <dt class="property-optional"
             title="Optional">
-        <span>Host<wbr>System<wbr>Ids</span>
+        <span id="state_hostsystemids_csharp">
+<a href="#state_hostsystemids_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>System<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1302,7 +1478,9 @@ the hosts to mount the datastore on.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Maintenance<wbr>Mode</span>
+        <span id="state_maintenancemode_csharp">
+<a href="#state_maintenancemode_csharp" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1311,7 +1489,9 @@ the hosts to mount the datastore on.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Multiple<wbr>Host<wbr>Access</span>
+        <span id="state_multiplehostaccess_csharp">
+<a href="#state_multiplehostaccess_csharp" style="color: inherit; text-decoration: inherit;">Multiple<wbr>Host<wbr>Access</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1321,7 +1501,9 @@ been configured with access to the datastore.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1331,7 +1513,9 @@ changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Protocol<wbr>Endpoint</span>
+        <span id="state_protocolendpoint_csharp">
+<a href="#state_protocolendpoint_csharp" style="color: inherit; text-decoration: inherit;">Protocol<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1341,7 +1525,9 @@ This field is only populated if the host supports virtual datastores.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Remote<wbr>Hosts</span>
+        <span id="state_remotehosts_csharp">
+<a href="#state_remotehosts_csharp" style="color: inherit; text-decoration: inherit;">Remote<wbr>Hosts</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1352,7 +1538,9 @@ can be present for NFS v4.1. Forces a new resource if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Remote<wbr>Path</span>
+        <span id="state_remotepath_csharp">
+<a href="#state_remotepath_csharp" style="color: inherit; text-decoration: inherit;">Remote<wbr>Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1362,7 +1550,9 @@ resource if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Security<wbr>Type</span>
+        <span id="state_securitytype_csharp">
+<a href="#state_securitytype_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1373,7 +1563,9 @@ if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="state_tags_csharp">
+<a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1382,7 +1574,9 @@ if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Type</span>
+        <span id="state_type_csharp">
+<a href="#state_type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1393,7 +1587,9 @@ changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Uncommitted<wbr>Space</span>
+        <span id="state_uncommittedspace_csharp">
+<a href="#state_uncommittedspace_csharp" style="color: inherit; text-decoration: inherit;">Uncommitted<wbr>Space</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1403,7 +1599,9 @@ potentially used by all virtual machines on this datastore.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Url</span>
+        <span id="state_url_csharp">
+<a href="#state_url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1419,7 +1617,9 @@ potentially used by all virtual machines on this datastore.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Access<wbr>Mode</span>
+        <span id="state_accessmode_go">
+<a href="#state_accessmode_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1431,7 +1631,9 @@ actual share. Default: `readWrite`. Forces a new resource if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Accessible</span>
+        <span id="state_accessible_go">
+<a href="#state_accessible_go" style="color: inherit; text-decoration: inherit;">Accessible</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1441,7 +1643,9 @@ some other computed attributes may be out of date.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Capacity</span>
+        <span id="state_capacity_go">
+<a href="#state_capacity_go" style="color: inherit; text-decoration: inherit;">Capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1450,7 +1654,9 @@ some other computed attributes may be out of date.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Custom<wbr>Attributes</span>
+        <span id="state_customattributes_go">
+<a href="#state_customattributes_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Attributes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -1460,7 +1666,9 @@ value strings to set on datasource resource.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Datastore<wbr>Cluster<wbr>Id</span>
+        <span id="state_datastoreclusterid_go">
+<a href="#state_datastoreclusterid_go" style="color: inherit; text-decoration: inherit;">Datastore<wbr>Cluster<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1471,7 +1679,9 @@ Conflicts with `folder`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Folder</span>
+        <span id="state_folder_go">
+<a href="#state_folder_go" style="color: inherit; text-decoration: inherit;">Folder</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1486,7 +1696,9 @@ located at `/dc1/datastore/foo/bar`, with the final inventory path being
 
     <dt class="property-optional"
             title="Optional">
-        <span>Free<wbr>Space</span>
+        <span id="state_freespace_go">
+<a href="#state_freespace_go" style="color: inherit; text-decoration: inherit;">Free<wbr>Space</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1495,7 +1707,9 @@ located at `/dc1/datastore/foo/bar`, with the final inventory path being
 
     <dt class="property-optional"
             title="Optional">
-        <span>Host<wbr>System<wbr>Ids</span>
+        <span id="state_hostsystemids_go">
+<a href="#state_hostsystemids_go" style="color: inherit; text-decoration: inherit;">Host<wbr>System<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1505,7 +1719,9 @@ the hosts to mount the datastore on.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Maintenance<wbr>Mode</span>
+        <span id="state_maintenancemode_go">
+<a href="#state_maintenancemode_go" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1514,7 +1730,9 @@ the hosts to mount the datastore on.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Multiple<wbr>Host<wbr>Access</span>
+        <span id="state_multiplehostaccess_go">
+<a href="#state_multiplehostaccess_go" style="color: inherit; text-decoration: inherit;">Multiple<wbr>Host<wbr>Access</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1524,7 +1742,9 @@ been configured with access to the datastore.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1534,7 +1754,9 @@ changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Protocol<wbr>Endpoint</span>
+        <span id="state_protocolendpoint_go">
+<a href="#state_protocolendpoint_go" style="color: inherit; text-decoration: inherit;">Protocol<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1544,7 +1766,9 @@ This field is only populated if the host supports virtual datastores.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Remote<wbr>Hosts</span>
+        <span id="state_remotehosts_go">
+<a href="#state_remotehosts_go" style="color: inherit; text-decoration: inherit;">Remote<wbr>Hosts</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1555,7 +1779,9 @@ can be present for NFS v4.1. Forces a new resource if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Remote<wbr>Path</span>
+        <span id="state_remotepath_go">
+<a href="#state_remotepath_go" style="color: inherit; text-decoration: inherit;">Remote<wbr>Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1565,7 +1791,9 @@ resource if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Security<wbr>Type</span>
+        <span id="state_securitytype_go">
+<a href="#state_securitytype_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1576,7 +1804,9 @@ if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="state_tags_go">
+<a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1585,7 +1815,9 @@ if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Type</span>
+        <span id="state_type_go">
+<a href="#state_type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1596,7 +1828,9 @@ changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Uncommitted<wbr>Space</span>
+        <span id="state_uncommittedspace_go">
+<a href="#state_uncommittedspace_go" style="color: inherit; text-decoration: inherit;">Uncommitted<wbr>Space</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1606,7 +1840,9 @@ potentially used by all virtual machines on this datastore.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Url</span>
+        <span id="state_url_go">
+<a href="#state_url_go" style="color: inherit; text-decoration: inherit;">Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1622,7 +1858,9 @@ potentially used by all virtual machines on this datastore.
 
     <dt class="property-optional"
             title="Optional">
-        <span>access<wbr>Mode</span>
+        <span id="state_accessmode_nodejs">
+<a href="#state_accessmode_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1634,7 +1872,9 @@ actual share. Default: `readWrite`. Forces a new resource if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>accessible</span>
+        <span id="state_accessible_nodejs">
+<a href="#state_accessible_nodejs" style="color: inherit; text-decoration: inherit;">accessible</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1644,7 +1884,9 @@ some other computed attributes may be out of date.
 
     <dt class="property-optional"
             title="Optional">
-        <span>capacity</span>
+        <span id="state_capacity_nodejs">
+<a href="#state_capacity_nodejs" style="color: inherit; text-decoration: inherit;">capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1653,7 +1895,9 @@ some other computed attributes may be out of date.
 
     <dt class="property-optional"
             title="Optional">
-        <span>custom<wbr>Attributes</span>
+        <span id="state_customattributes_nodejs">
+<a href="#state_customattributes_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Attributes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -1663,7 +1907,9 @@ value strings to set on datasource resource.
 
     <dt class="property-optional"
             title="Optional">
-        <span>datastore<wbr>Cluster<wbr>Id</span>
+        <span id="state_datastoreclusterid_nodejs">
+<a href="#state_datastoreclusterid_nodejs" style="color: inherit; text-decoration: inherit;">datastore<wbr>Cluster<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1674,7 +1920,9 @@ Conflicts with `folder`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>folder</span>
+        <span id="state_folder_nodejs">
+<a href="#state_folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1689,7 +1937,9 @@ located at `/dc1/datastore/foo/bar`, with the final inventory path being
 
     <dt class="property-optional"
             title="Optional">
-        <span>free<wbr>Space</span>
+        <span id="state_freespace_nodejs">
+<a href="#state_freespace_nodejs" style="color: inherit; text-decoration: inherit;">free<wbr>Space</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1698,7 +1948,9 @@ located at `/dc1/datastore/foo/bar`, with the final inventory path being
 
     <dt class="property-optional"
             title="Optional">
-        <span>host<wbr>System<wbr>Ids</span>
+        <span id="state_hostsystemids_nodejs">
+<a href="#state_hostsystemids_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>System<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1708,7 +1960,9 @@ the hosts to mount the datastore on.
 
     <dt class="property-optional"
             title="Optional">
-        <span>maintenance<wbr>Mode</span>
+        <span id="state_maintenancemode_nodejs">
+<a href="#state_maintenancemode_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1717,7 +1971,9 @@ the hosts to mount the datastore on.
 
     <dt class="property-optional"
             title="Optional">
-        <span>multiple<wbr>Host<wbr>Access</span>
+        <span id="state_multiplehostaccess_nodejs">
+<a href="#state_multiplehostaccess_nodejs" style="color: inherit; text-decoration: inherit;">multiple<wbr>Host<wbr>Access</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1727,7 +1983,9 @@ been configured with access to the datastore.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1737,7 +1995,9 @@ changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>protocol<wbr>Endpoint</span>
+        <span id="state_protocolendpoint_nodejs">
+<a href="#state_protocolendpoint_nodejs" style="color: inherit; text-decoration: inherit;">protocol<wbr>Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1747,7 +2007,9 @@ This field is only populated if the host supports virtual datastores.
 
     <dt class="property-optional"
             title="Optional">
-        <span>remote<wbr>Hosts</span>
+        <span id="state_remotehosts_nodejs">
+<a href="#state_remotehosts_nodejs" style="color: inherit; text-decoration: inherit;">remote<wbr>Hosts</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1758,7 +2020,9 @@ can be present for NFS v4.1. Forces a new resource if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>remote<wbr>Path</span>
+        <span id="state_remotepath_nodejs">
+<a href="#state_remotepath_nodejs" style="color: inherit; text-decoration: inherit;">remote<wbr>Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1768,7 +2032,9 @@ resource if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>security<wbr>Type</span>
+        <span id="state_securitytype_nodejs">
+<a href="#state_securitytype_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1779,7 +2045,9 @@ if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="state_tags_nodejs">
+<a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1788,7 +2056,9 @@ if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>type</span>
+        <span id="state_type_nodejs">
+<a href="#state_type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1799,7 +2069,9 @@ changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>uncommitted<wbr>Space</span>
+        <span id="state_uncommittedspace_nodejs">
+<a href="#state_uncommittedspace_nodejs" style="color: inherit; text-decoration: inherit;">uncommitted<wbr>Space</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1809,7 +2081,9 @@ potentially used by all virtual machines on this datastore.
 
     <dt class="property-optional"
             title="Optional">
-        <span>url</span>
+        <span id="state_url_nodejs">
+<a href="#state_url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1825,7 +2099,9 @@ potentially used by all virtual machines on this datastore.
 
     <dt class="property-optional"
             title="Optional">
-        <span>access_<wbr>mode</span>
+        <span id="state_access_mode_python">
+<a href="#state_access_mode_python" style="color: inherit; text-decoration: inherit;">access_<wbr>mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1837,7 +2113,9 @@ actual share. Default: `readWrite`. Forces a new resource if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>accessible</span>
+        <span id="state_accessible_python">
+<a href="#state_accessible_python" style="color: inherit; text-decoration: inherit;">accessible</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1847,7 +2125,9 @@ some other computed attributes may be out of date.
 
     <dt class="property-optional"
             title="Optional">
-        <span>capacity</span>
+        <span id="state_capacity_python">
+<a href="#state_capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1856,7 +2136,9 @@ some other computed attributes may be out of date.
 
     <dt class="property-optional"
             title="Optional">
-        <span>custom_<wbr>attributes</span>
+        <span id="state_custom_attributes_python">
+<a href="#state_custom_attributes_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>attributes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -1866,7 +2148,9 @@ value strings to set on datasource resource.
 
     <dt class="property-optional"
             title="Optional">
-        <span>datastore_<wbr>cluster_<wbr>id</span>
+        <span id="state_datastore_cluster_id_python">
+<a href="#state_datastore_cluster_id_python" style="color: inherit; text-decoration: inherit;">datastore_<wbr>cluster_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1877,7 +2161,9 @@ Conflicts with `folder`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>folder</span>
+        <span id="state_folder_python">
+<a href="#state_folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1892,7 +2178,9 @@ located at `/dc1/datastore/foo/bar`, with the final inventory path being
 
     <dt class="property-optional"
             title="Optional">
-        <span>free_<wbr>space</span>
+        <span id="state_free_space_python">
+<a href="#state_free_space_python" style="color: inherit; text-decoration: inherit;">free_<wbr>space</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1901,7 +2189,9 @@ located at `/dc1/datastore/foo/bar`, with the final inventory path being
 
     <dt class="property-optional"
             title="Optional">
-        <span>host_<wbr>system_<wbr>ids</span>
+        <span id="state_host_system_ids_python">
+<a href="#state_host_system_ids_python" style="color: inherit; text-decoration: inherit;">host_<wbr>system_<wbr>ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1911,7 +2201,9 @@ the hosts to mount the datastore on.
 
     <dt class="property-optional"
             title="Optional">
-        <span>maintenance_<wbr>mode</span>
+        <span id="state_maintenance_mode_python">
+<a href="#state_maintenance_mode_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1920,7 +2212,9 @@ the hosts to mount the datastore on.
 
     <dt class="property-optional"
             title="Optional">
-        <span>multiple_<wbr>host_<wbr>access</span>
+        <span id="state_multiple_host_access_python">
+<a href="#state_multiple_host_access_python" style="color: inherit; text-decoration: inherit;">multiple_<wbr>host_<wbr>access</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1930,7 +2224,9 @@ been configured with access to the datastore.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1940,7 +2236,9 @@ changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>protocol_<wbr>endpoint</span>
+        <span id="state_protocol_endpoint_python">
+<a href="#state_protocol_endpoint_python" style="color: inherit; text-decoration: inherit;">protocol_<wbr>endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1950,7 +2248,9 @@ This field is only populated if the host supports virtual datastores.
 
     <dt class="property-optional"
             title="Optional">
-        <span>remote_<wbr>hosts</span>
+        <span id="state_remote_hosts_python">
+<a href="#state_remote_hosts_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>hosts</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1961,7 +2261,9 @@ can be present for NFS v4.1. Forces a new resource if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>remote_<wbr>path</span>
+        <span id="state_remote_path_python">
+<a href="#state_remote_path_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1971,7 +2273,9 @@ resource if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>security_<wbr>type</span>
+        <span id="state_security_type_python">
+<a href="#state_security_type_python" style="color: inherit; text-decoration: inherit;">security_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1982,7 +2286,9 @@ if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="state_tags_python">
+<a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1991,7 +2297,9 @@ if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>type</span>
+        <span id="state_type_python">
+<a href="#state_type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2002,7 +2310,9 @@ changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>uncommitted_<wbr>space</span>
+        <span id="state_uncommitted_space_python">
+<a href="#state_uncommitted_space_python" style="color: inherit; text-decoration: inherit;">uncommitted_<wbr>space</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -2012,7 +2322,9 @@ potentially used by all virtual machines on this datastore.
 
     <dt class="property-optional"
             title="Optional">
-        <span>url</span>
+        <span id="state_url_python">
+<a href="#state_url_python" style="color: inherit; text-decoration: inherit;">url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

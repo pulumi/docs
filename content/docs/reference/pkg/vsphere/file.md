@@ -31,7 +31,25 @@ the old location.
 {{< chooser language "typescript,python,go,csharp" / >}}
 ### Uploading a file
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using VSphere = Pulumi.VSphere;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var ubuntuDiskUpload = new VSphere.File("ubuntuDiskUpload", new VSphere.FileArgs
+        {
+            Datacenter = "my_datacenter",
+            Datastore = "local",
+            DestinationFile = "/my_path/disks/custom_ubuntu.vmdk",
+            SourceFile = "/home/ubuntu/my_disks/custom_ubuntu.vmdk",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -67,7 +85,27 @@ const ubuntuDiskUpload = new vsphere.File("ubuntu_disk_upload", {
 
 ### Copying a file
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using VSphere = Pulumi.VSphere;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var ubuntuDiskCopy = new VSphere.File("ubuntuDiskCopy", new VSphere.FileArgs
+        {
+            Datacenter = "my_datacenter",
+            Datastore = "local",
+            DestinationFile = "/my_path/custom_ubuntu_id.vmdk",
+            SourceDatacenter = "my_datacenter",
+            SourceDatastore = "local",
+            SourceFile = "/my_path/disks/custom_ubuntu.vmdk",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -113,19 +151,19 @@ const ubuntuDiskCopy = new vsphere.File("ubuntu_disk_copy", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#File">File</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#FileArgs">FileArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#File">File</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#FileArgs">FileArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">File</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>create_directories=None<span class="p">, </span>datacenter=None<span class="p">, </span>datastore=None<span class="p">, </span>destination_file=None<span class="p">, </span>source_datacenter=None<span class="p">, </span>source_datastore=None<span class="p">, </span>source_file=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/vsphere/#File">File</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>create_directories=None<span class="p">, </span>datacenter=None<span class="p">, </span>datastore=None<span class="p">, </span>destination_file=None<span class="p">, </span>source_datacenter=None<span class="p">, </span>source_datastore=None<span class="p">, </span>source_file=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewFile<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#FileArgs">FileArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#File">File</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#File">NewFile</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#FileArgs">FileArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#File">File</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.File.html">File</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.FileArgs.html">FileArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.File.html">File</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.FileArgs.html">FileArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -291,7 +329,9 @@ The File resource accepts the following [input]({{< relref "/docs/intro/concepts
 
     <dt class="property-required"
             title="Required">
-        <span>Datastore</span>
+        <span id="datastore_csharp">
+<a href="#datastore_csharp" style="color: inherit; text-decoration: inherit;">Datastore</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -301,7 +341,9 @@ file to.
 
     <dt class="property-required"
             title="Required">
-        <span>Destination<wbr>File</span>
+        <span id="destinationfile_csharp">
+<a href="#destinationfile_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>File</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -311,7 +353,9 @@ or copied to on vSphere.
 
     <dt class="property-required"
             title="Required">
-        <span>Source<wbr>File</span>
+        <span id="sourcefile_csharp">
+<a href="#sourcefile_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>File</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -322,7 +366,9 @@ changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Create<wbr>Directories</span>
+        <span id="createdirectories_csharp">
+<a href="#createdirectories_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Directories</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -332,7 +378,9 @@ path parameter if any missing for copy operation.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Datacenter</span>
+        <span id="datacenter_csharp">
+<a href="#datacenter_csharp" style="color: inherit; text-decoration: inherit;">Datacenter</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -342,7 +390,9 @@ uploaded to.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Source<wbr>Datacenter</span>
+        <span id="sourcedatacenter_csharp">
+<a href="#sourcedatacenter_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Datacenter</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -352,7 +402,9 @@ will be copied from. Forces a new resource if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Source<wbr>Datastore</span>
+        <span id="sourcedatastore_csharp">
+<a href="#sourcedatastore_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Datastore</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -369,7 +421,9 @@ be copied from. Forces a new resource if changed.
 
     <dt class="property-required"
             title="Required">
-        <span>Datastore</span>
+        <span id="datastore_go">
+<a href="#datastore_go" style="color: inherit; text-decoration: inherit;">Datastore</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -379,7 +433,9 @@ file to.
 
     <dt class="property-required"
             title="Required">
-        <span>Destination<wbr>File</span>
+        <span id="destinationfile_go">
+<a href="#destinationfile_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>File</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -389,7 +445,9 @@ or copied to on vSphere.
 
     <dt class="property-required"
             title="Required">
-        <span>Source<wbr>File</span>
+        <span id="sourcefile_go">
+<a href="#sourcefile_go" style="color: inherit; text-decoration: inherit;">Source<wbr>File</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -400,7 +458,9 @@ changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Create<wbr>Directories</span>
+        <span id="createdirectories_go">
+<a href="#createdirectories_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Directories</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -410,7 +470,9 @@ path parameter if any missing for copy operation.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Datacenter</span>
+        <span id="datacenter_go">
+<a href="#datacenter_go" style="color: inherit; text-decoration: inherit;">Datacenter</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -420,7 +482,9 @@ uploaded to.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Source<wbr>Datacenter</span>
+        <span id="sourcedatacenter_go">
+<a href="#sourcedatacenter_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Datacenter</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -430,7 +494,9 @@ will be copied from. Forces a new resource if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Source<wbr>Datastore</span>
+        <span id="sourcedatastore_go">
+<a href="#sourcedatastore_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Datastore</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -447,7 +513,9 @@ be copied from. Forces a new resource if changed.
 
     <dt class="property-required"
             title="Required">
-        <span>datastore</span>
+        <span id="datastore_nodejs">
+<a href="#datastore_nodejs" style="color: inherit; text-decoration: inherit;">datastore</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -457,7 +525,9 @@ file to.
 
     <dt class="property-required"
             title="Required">
-        <span>destination<wbr>File</span>
+        <span id="destinationfile_nodejs">
+<a href="#destinationfile_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>File</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -467,7 +537,9 @@ or copied to on vSphere.
 
     <dt class="property-required"
             title="Required">
-        <span>source<wbr>File</span>
+        <span id="sourcefile_nodejs">
+<a href="#sourcefile_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>File</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -478,7 +550,9 @@ changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>create<wbr>Directories</span>
+        <span id="createdirectories_nodejs">
+<a href="#createdirectories_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Directories</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -488,7 +562,9 @@ path parameter if any missing for copy operation.
 
     <dt class="property-optional"
             title="Optional">
-        <span>datacenter</span>
+        <span id="datacenter_nodejs">
+<a href="#datacenter_nodejs" style="color: inherit; text-decoration: inherit;">datacenter</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -498,7 +574,9 @@ uploaded to.
 
     <dt class="property-optional"
             title="Optional">
-        <span>source<wbr>Datacenter</span>
+        <span id="sourcedatacenter_nodejs">
+<a href="#sourcedatacenter_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Datacenter</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -508,7 +586,9 @@ will be copied from. Forces a new resource if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>source<wbr>Datastore</span>
+        <span id="sourcedatastore_nodejs">
+<a href="#sourcedatastore_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Datastore</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -525,7 +605,9 @@ be copied from. Forces a new resource if changed.
 
     <dt class="property-required"
             title="Required">
-        <span>datastore</span>
+        <span id="datastore_python">
+<a href="#datastore_python" style="color: inherit; text-decoration: inherit;">datastore</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -535,7 +617,9 @@ file to.
 
     <dt class="property-required"
             title="Required">
-        <span>destination_<wbr>file</span>
+        <span id="destination_file_python">
+<a href="#destination_file_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>file</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -545,7 +629,9 @@ or copied to on vSphere.
 
     <dt class="property-required"
             title="Required">
-        <span>source_<wbr>file</span>
+        <span id="source_file_python">
+<a href="#source_file_python" style="color: inherit; text-decoration: inherit;">source_<wbr>file</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -556,7 +642,9 @@ changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>create_<wbr>directories</span>
+        <span id="create_directories_python">
+<a href="#create_directories_python" style="color: inherit; text-decoration: inherit;">create_<wbr>directories</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -566,7 +654,9 @@ path parameter if any missing for copy operation.
 
     <dt class="property-optional"
             title="Optional">
-        <span>datacenter</span>
+        <span id="datacenter_python">
+<a href="#datacenter_python" style="color: inherit; text-decoration: inherit;">datacenter</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -576,7 +666,9 @@ uploaded to.
 
     <dt class="property-optional"
             title="Optional">
-        <span>source_<wbr>datacenter</span>
+        <span id="source_datacenter_python">
+<a href="#source_datacenter_python" style="color: inherit; text-decoration: inherit;">source_<wbr>datacenter</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -586,7 +678,9 @@ will be copied from. Forces a new resource if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>source_<wbr>datastore</span>
+        <span id="source_datastore_python">
+<a href="#source_datastore_python" style="color: inherit; text-decoration: inherit;">source_<wbr>datastore</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -614,7 +708,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -629,7 +725,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -644,7 +742,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -659,7 +759,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -680,7 +782,7 @@ Get an existing File resource's state with the given name, ID, and optional extr
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#FileState">FileState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#File">File</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#FileState">FileState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#File">File</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -688,11 +790,11 @@ Get an existing File resource's state with the given name, ID, and optional extr
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetFile<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#FileState">FileState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#File">File</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetFile<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#FileState">FileState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#File">File</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.File.html">File</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere..FileState.html">FileState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.File.html">File</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere..FileState.html">FileState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -800,7 +902,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Create<wbr>Directories</span>
+        <span id="state_createdirectories_csharp">
+<a href="#state_createdirectories_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Directories</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -810,7 +914,9 @@ path parameter if any missing for copy operation.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Datacenter</span>
+        <span id="state_datacenter_csharp">
+<a href="#state_datacenter_csharp" style="color: inherit; text-decoration: inherit;">Datacenter</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -820,7 +926,9 @@ uploaded to.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Datastore</span>
+        <span id="state_datastore_csharp">
+<a href="#state_datastore_csharp" style="color: inherit; text-decoration: inherit;">Datastore</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -830,7 +938,9 @@ file to.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Destination<wbr>File</span>
+        <span id="state_destinationfile_csharp">
+<a href="#state_destinationfile_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>File</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -840,7 +950,9 @@ or copied to on vSphere.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Source<wbr>Datacenter</span>
+        <span id="state_sourcedatacenter_csharp">
+<a href="#state_sourcedatacenter_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Datacenter</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -850,7 +962,9 @@ will be copied from. Forces a new resource if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Source<wbr>Datastore</span>
+        <span id="state_sourcedatastore_csharp">
+<a href="#state_sourcedatastore_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Datastore</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -860,7 +974,9 @@ be copied from. Forces a new resource if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Source<wbr>File</span>
+        <span id="state_sourcefile_csharp">
+<a href="#state_sourcefile_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>File</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -878,7 +994,9 @@ changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Create<wbr>Directories</span>
+        <span id="state_createdirectories_go">
+<a href="#state_createdirectories_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Directories</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -888,7 +1006,9 @@ path parameter if any missing for copy operation.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Datacenter</span>
+        <span id="state_datacenter_go">
+<a href="#state_datacenter_go" style="color: inherit; text-decoration: inherit;">Datacenter</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -898,7 +1018,9 @@ uploaded to.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Datastore</span>
+        <span id="state_datastore_go">
+<a href="#state_datastore_go" style="color: inherit; text-decoration: inherit;">Datastore</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -908,7 +1030,9 @@ file to.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Destination<wbr>File</span>
+        <span id="state_destinationfile_go">
+<a href="#state_destinationfile_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>File</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -918,7 +1042,9 @@ or copied to on vSphere.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Source<wbr>Datacenter</span>
+        <span id="state_sourcedatacenter_go">
+<a href="#state_sourcedatacenter_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Datacenter</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -928,7 +1054,9 @@ will be copied from. Forces a new resource if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Source<wbr>Datastore</span>
+        <span id="state_sourcedatastore_go">
+<a href="#state_sourcedatastore_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Datastore</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -938,7 +1066,9 @@ be copied from. Forces a new resource if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Source<wbr>File</span>
+        <span id="state_sourcefile_go">
+<a href="#state_sourcefile_go" style="color: inherit; text-decoration: inherit;">Source<wbr>File</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -956,7 +1086,9 @@ changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>create<wbr>Directories</span>
+        <span id="state_createdirectories_nodejs">
+<a href="#state_createdirectories_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Directories</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -966,7 +1098,9 @@ path parameter if any missing for copy operation.
 
     <dt class="property-optional"
             title="Optional">
-        <span>datacenter</span>
+        <span id="state_datacenter_nodejs">
+<a href="#state_datacenter_nodejs" style="color: inherit; text-decoration: inherit;">datacenter</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -976,7 +1110,9 @@ uploaded to.
 
     <dt class="property-optional"
             title="Optional">
-        <span>datastore</span>
+        <span id="state_datastore_nodejs">
+<a href="#state_datastore_nodejs" style="color: inherit; text-decoration: inherit;">datastore</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -986,7 +1122,9 @@ file to.
 
     <dt class="property-optional"
             title="Optional">
-        <span>destination<wbr>File</span>
+        <span id="state_destinationfile_nodejs">
+<a href="#state_destinationfile_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>File</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -996,7 +1134,9 @@ or copied to on vSphere.
 
     <dt class="property-optional"
             title="Optional">
-        <span>source<wbr>Datacenter</span>
+        <span id="state_sourcedatacenter_nodejs">
+<a href="#state_sourcedatacenter_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Datacenter</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1006,7 +1146,9 @@ will be copied from. Forces a new resource if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>source<wbr>Datastore</span>
+        <span id="state_sourcedatastore_nodejs">
+<a href="#state_sourcedatastore_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Datastore</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1016,7 +1158,9 @@ be copied from. Forces a new resource if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>source<wbr>File</span>
+        <span id="state_sourcefile_nodejs">
+<a href="#state_sourcefile_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>File</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1034,7 +1178,9 @@ changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>create_<wbr>directories</span>
+        <span id="state_create_directories_python">
+<a href="#state_create_directories_python" style="color: inherit; text-decoration: inherit;">create_<wbr>directories</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1044,7 +1190,9 @@ path parameter if any missing for copy operation.
 
     <dt class="property-optional"
             title="Optional">
-        <span>datacenter</span>
+        <span id="state_datacenter_python">
+<a href="#state_datacenter_python" style="color: inherit; text-decoration: inherit;">datacenter</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1054,7 +1202,9 @@ uploaded to.
 
     <dt class="property-optional"
             title="Optional">
-        <span>datastore</span>
+        <span id="state_datastore_python">
+<a href="#state_datastore_python" style="color: inherit; text-decoration: inherit;">datastore</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1064,7 +1214,9 @@ file to.
 
     <dt class="property-optional"
             title="Optional">
-        <span>destination_<wbr>file</span>
+        <span id="state_destination_file_python">
+<a href="#state_destination_file_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>file</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1074,7 +1226,9 @@ or copied to on vSphere.
 
     <dt class="property-optional"
             title="Optional">
-        <span>source_<wbr>datacenter</span>
+        <span id="state_source_datacenter_python">
+<a href="#state_source_datacenter_python" style="color: inherit; text-decoration: inherit;">source_<wbr>datacenter</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1084,7 +1238,9 @@ will be copied from. Forces a new resource if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>source_<wbr>datastore</span>
+        <span id="state_source_datastore_python">
+<a href="#state_source_datastore_python" style="color: inherit; text-decoration: inherit;">source_<wbr>datastore</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1094,7 +1250,9 @@ be copied from. Forces a new resource if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>source_<wbr>file</span>
+        <span id="state_source_file_python">
+<a href="#state_source_file_python" style="color: inherit; text-decoration: inherit;">source_<wbr>file</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

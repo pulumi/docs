@@ -33,7 +33,72 @@ connections.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using VSphere = Pulumi.VSphere;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var dc = Output.Create(VSphere.GetDatacenter.InvokeAsync(new VSphere.GetDatacenterArgs
+        {
+            Name = "dc1",
+        }));
+        var datastore = dc.Apply(dc => Output.Create(VSphere.GetDatastore.InvokeAsync(new VSphere.GetDatastoreArgs
+        {
+            DatacenterId = dc.Id,
+            Name = "datastore1",
+        })));
+        var cluster = dc.Apply(dc => Output.Create(VSphere.GetComputeCluster.InvokeAsync(new VSphere.GetComputeClusterArgs
+        {
+            DatacenterId = dc.Id,
+            Name = "cluster1",
+        })));
+        var host = dc.Apply(dc => Output.Create(VSphere.GetHost.InvokeAsync(new VSphere.GetHostArgs
+        {
+            DatacenterId = dc.Id,
+            Name = "esxi1",
+        })));
+        var network = dc.Apply(dc => Output.Create(VSphere.GetNetwork.InvokeAsync(new VSphere.GetNetworkArgs
+        {
+            DatacenterId = dc.Id,
+            Name = "network1",
+        })));
+        var vm = new VSphere.VirtualMachine("vm", new VSphere.VirtualMachineArgs
+        {
+            DatastoreId = datastore.Apply(datastore => datastore.Id),
+            Disks = 
+            {
+                new VSphere.Inputs.VirtualMachineDiskArgs
+                {
+                    Label = "disk0",
+                    Size = 20,
+                },
+            },
+            GuestId = "other3xLinux64Guest",
+            HostSystemId = host.Apply(host => host.Id),
+            Memory = 2048,
+            NetworkInterfaces = 
+            {
+                new VSphere.Inputs.VirtualMachineNetworkInterfaceArgs
+                {
+                    NetworkId = network.Apply(network => network.Id),
+                },
+            },
+            NumCpus = 2,
+            ResourcePoolId = cluster.Apply(cluster => cluster.ResourcePoolId),
+        });
+        var drsVmOverride = new VSphere.DrsVmOverride("drsVmOverride", new VSphere.DrsVmOverrideArgs
+        {
+            ComputeClusterId = cluster.Apply(cluster => cluster.Id),
+            DrsEnabled = false,
+            VirtualMachineId = vm.Id,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -130,19 +195,19 @@ const drsVmOverride = new vsphere.DrsVmOverride("drs_vm_override", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#DrsVmOverride">DrsVmOverride</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#DrsVmOverrideArgs">DrsVmOverrideArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#DrsVmOverride">DrsVmOverride</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#DrsVmOverrideArgs">DrsVmOverrideArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">DrsVmOverride</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>compute_cluster_id=None<span class="p">, </span>drs_automation_level=None<span class="p">, </span>drs_enabled=None<span class="p">, </span>virtual_machine_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/vsphere/#DrsVmOverride">DrsVmOverride</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>compute_cluster_id=None<span class="p">, </span>drs_automation_level=None<span class="p">, </span>drs_enabled=None<span class="p">, </span>virtual_machine_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewDrsVmOverride<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#DrsVmOverrideArgs">DrsVmOverrideArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#DrsVmOverride">DrsVmOverride</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#DrsVmOverride">NewDrsVmOverride</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#DrsVmOverrideArgs">DrsVmOverrideArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#DrsVmOverride">DrsVmOverride</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.DrsVmOverride.html">DrsVmOverride</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.DrsVmOverrideArgs.html">DrsVmOverrideArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.DrsVmOverride.html">DrsVmOverride</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.DrsVmOverrideArgs.html">DrsVmOverrideArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -308,7 +373,9 @@ The DrsVmOverride resource accepts the following [input]({{< relref "/docs/intro
 
     <dt class="property-required"
             title="Required">
-        <span>Compute<wbr>Cluster<wbr>Id</span>
+        <span id="computeclusterid_csharp">
+<a href="#computeclusterid_csharp" style="color: inherit; text-decoration: inherit;">Compute<wbr>Cluster<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -319,7 +386,9 @@ resource if changed.
 
     <dt class="property-required"
             title="Required">
-        <span>Virtual<wbr>Machine<wbr>Id</span>
+        <span id="virtualmachineid_csharp">
+<a href="#virtualmachineid_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -329,7 +398,9 @@ the override for.  Forces a new resource if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Drs<wbr>Automation<wbr>Level</span>
+        <span id="drsautomationlevel_csharp">
+<a href="#drsautomationlevel_csharp" style="color: inherit; text-decoration: inherit;">Drs<wbr>Automation<wbr>Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -340,7 +411,9 @@ machine in the cluster. Can be one of `manual`, `partiallyAutomated`, or
 
     <dt class="property-optional"
             title="Optional">
-        <span>Drs<wbr>Enabled</span>
+        <span id="drsenabled_csharp">
+<a href="#drsenabled_csharp" style="color: inherit; text-decoration: inherit;">Drs<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -357,7 +430,9 @@ machine. Can be either `true` or `false`. Default: `false`.
 
     <dt class="property-required"
             title="Required">
-        <span>Compute<wbr>Cluster<wbr>Id</span>
+        <span id="computeclusterid_go">
+<a href="#computeclusterid_go" style="color: inherit; text-decoration: inherit;">Compute<wbr>Cluster<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -368,7 +443,9 @@ resource if changed.
 
     <dt class="property-required"
             title="Required">
-        <span>Virtual<wbr>Machine<wbr>Id</span>
+        <span id="virtualmachineid_go">
+<a href="#virtualmachineid_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -378,7 +455,9 @@ the override for.  Forces a new resource if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Drs<wbr>Automation<wbr>Level</span>
+        <span id="drsautomationlevel_go">
+<a href="#drsautomationlevel_go" style="color: inherit; text-decoration: inherit;">Drs<wbr>Automation<wbr>Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -389,7 +468,9 @@ machine in the cluster. Can be one of `manual`, `partiallyAutomated`, or
 
     <dt class="property-optional"
             title="Optional">
-        <span>Drs<wbr>Enabled</span>
+        <span id="drsenabled_go">
+<a href="#drsenabled_go" style="color: inherit; text-decoration: inherit;">Drs<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -406,7 +487,9 @@ machine. Can be either `true` or `false`. Default: `false`.
 
     <dt class="property-required"
             title="Required">
-        <span>compute<wbr>Cluster<wbr>Id</span>
+        <span id="computeclusterid_nodejs">
+<a href="#computeclusterid_nodejs" style="color: inherit; text-decoration: inherit;">compute<wbr>Cluster<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -417,7 +500,9 @@ resource if changed.
 
     <dt class="property-required"
             title="Required">
-        <span>virtual<wbr>Machine<wbr>Id</span>
+        <span id="virtualmachineid_nodejs">
+<a href="#virtualmachineid_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -427,7 +512,9 @@ the override for.  Forces a new resource if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>drs<wbr>Automation<wbr>Level</span>
+        <span id="drsautomationlevel_nodejs">
+<a href="#drsautomationlevel_nodejs" style="color: inherit; text-decoration: inherit;">drs<wbr>Automation<wbr>Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -438,7 +525,9 @@ machine in the cluster. Can be one of `manual`, `partiallyAutomated`, or
 
     <dt class="property-optional"
             title="Optional">
-        <span>drs<wbr>Enabled</span>
+        <span id="drsenabled_nodejs">
+<a href="#drsenabled_nodejs" style="color: inherit; text-decoration: inherit;">drs<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -455,7 +544,9 @@ machine. Can be either `true` or `false`. Default: `false`.
 
     <dt class="property-required"
             title="Required">
-        <span>compute_<wbr>cluster_<wbr>id</span>
+        <span id="compute_cluster_id_python">
+<a href="#compute_cluster_id_python" style="color: inherit; text-decoration: inherit;">compute_<wbr>cluster_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -466,7 +557,9 @@ resource if changed.
 
     <dt class="property-required"
             title="Required">
-        <span>virtual_<wbr>machine_<wbr>id</span>
+        <span id="virtual_machine_id_python">
+<a href="#virtual_machine_id_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machine_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -476,7 +569,9 @@ the override for.  Forces a new resource if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>drs_<wbr>automation_<wbr>level</span>
+        <span id="drs_automation_level_python">
+<a href="#drs_automation_level_python" style="color: inherit; text-decoration: inherit;">drs_<wbr>automation_<wbr>level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -487,7 +582,9 @@ machine in the cluster. Can be one of `manual`, `partiallyAutomated`, or
 
     <dt class="property-optional"
             title="Optional">
-        <span>drs_<wbr>enabled</span>
+        <span id="drs_enabled_python">
+<a href="#drs_enabled_python" style="color: inherit; text-decoration: inherit;">drs_<wbr>enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -515,7 +612,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -530,7 +629,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -545,7 +646,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -560,7 +663,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -581,7 +686,7 @@ Get an existing DrsVmOverride resource's state with the given name, ID, and opti
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#DrsVmOverrideState">DrsVmOverrideState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#DrsVmOverride">DrsVmOverride</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#DrsVmOverrideState">DrsVmOverrideState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#DrsVmOverride">DrsVmOverride</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -589,11 +694,11 @@ Get an existing DrsVmOverride resource's state with the given name, ID, and opti
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDrsVmOverride<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#DrsVmOverrideState">DrsVmOverrideState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#DrsVmOverride">DrsVmOverride</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDrsVmOverride<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#DrsVmOverrideState">DrsVmOverrideState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#DrsVmOverride">DrsVmOverride</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.DrsVmOverride.html">DrsVmOverride</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere..DrsVmOverrideState.html">DrsVmOverrideState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.DrsVmOverride.html">DrsVmOverride</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere..DrsVmOverrideState.html">DrsVmOverrideState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -701,7 +806,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Compute<wbr>Cluster<wbr>Id</span>
+        <span id="state_computeclusterid_csharp">
+<a href="#state_computeclusterid_csharp" style="color: inherit; text-decoration: inherit;">Compute<wbr>Cluster<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -712,7 +819,9 @@ resource if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Drs<wbr>Automation<wbr>Level</span>
+        <span id="state_drsautomationlevel_csharp">
+<a href="#state_drsautomationlevel_csharp" style="color: inherit; text-decoration: inherit;">Drs<wbr>Automation<wbr>Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -723,7 +832,9 @@ machine in the cluster. Can be one of `manual`, `partiallyAutomated`, or
 
     <dt class="property-optional"
             title="Optional">
-        <span>Drs<wbr>Enabled</span>
+        <span id="state_drsenabled_csharp">
+<a href="#state_drsenabled_csharp" style="color: inherit; text-decoration: inherit;">Drs<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -733,7 +844,9 @@ machine. Can be either `true` or `false`. Default: `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Virtual<wbr>Machine<wbr>Id</span>
+        <span id="state_virtualmachineid_csharp">
+<a href="#state_virtualmachineid_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -750,7 +863,9 @@ the override for.  Forces a new resource if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Compute<wbr>Cluster<wbr>Id</span>
+        <span id="state_computeclusterid_go">
+<a href="#state_computeclusterid_go" style="color: inherit; text-decoration: inherit;">Compute<wbr>Cluster<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -761,7 +876,9 @@ resource if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Drs<wbr>Automation<wbr>Level</span>
+        <span id="state_drsautomationlevel_go">
+<a href="#state_drsautomationlevel_go" style="color: inherit; text-decoration: inherit;">Drs<wbr>Automation<wbr>Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -772,7 +889,9 @@ machine in the cluster. Can be one of `manual`, `partiallyAutomated`, or
 
     <dt class="property-optional"
             title="Optional">
-        <span>Drs<wbr>Enabled</span>
+        <span id="state_drsenabled_go">
+<a href="#state_drsenabled_go" style="color: inherit; text-decoration: inherit;">Drs<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -782,7 +901,9 @@ machine. Can be either `true` or `false`. Default: `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Virtual<wbr>Machine<wbr>Id</span>
+        <span id="state_virtualmachineid_go">
+<a href="#state_virtualmachineid_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -799,7 +920,9 @@ the override for.  Forces a new resource if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>compute<wbr>Cluster<wbr>Id</span>
+        <span id="state_computeclusterid_nodejs">
+<a href="#state_computeclusterid_nodejs" style="color: inherit; text-decoration: inherit;">compute<wbr>Cluster<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -810,7 +933,9 @@ resource if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>drs<wbr>Automation<wbr>Level</span>
+        <span id="state_drsautomationlevel_nodejs">
+<a href="#state_drsautomationlevel_nodejs" style="color: inherit; text-decoration: inherit;">drs<wbr>Automation<wbr>Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -821,7 +946,9 @@ machine in the cluster. Can be one of `manual`, `partiallyAutomated`, or
 
     <dt class="property-optional"
             title="Optional">
-        <span>drs<wbr>Enabled</span>
+        <span id="state_drsenabled_nodejs">
+<a href="#state_drsenabled_nodejs" style="color: inherit; text-decoration: inherit;">drs<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -831,7 +958,9 @@ machine. Can be either `true` or `false`. Default: `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>virtual<wbr>Machine<wbr>Id</span>
+        <span id="state_virtualmachineid_nodejs">
+<a href="#state_virtualmachineid_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -848,7 +977,9 @@ the override for.  Forces a new resource if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>compute_<wbr>cluster_<wbr>id</span>
+        <span id="state_compute_cluster_id_python">
+<a href="#state_compute_cluster_id_python" style="color: inherit; text-decoration: inherit;">compute_<wbr>cluster_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -859,7 +990,9 @@ resource if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>drs_<wbr>automation_<wbr>level</span>
+        <span id="state_drs_automation_level_python">
+<a href="#state_drs_automation_level_python" style="color: inherit; text-decoration: inherit;">drs_<wbr>automation_<wbr>level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -870,7 +1003,9 @@ machine in the cluster. Can be one of `manual`, `partiallyAutomated`, or
 
     <dt class="property-optional"
             title="Optional">
-        <span>drs_<wbr>enabled</span>
+        <span id="state_drs_enabled_python">
+<a href="#state_drs_enabled_python" style="color: inherit; text-decoration: inherit;">drs_<wbr>enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -880,7 +1015,9 @@ machine. Can be either `true` or `false`. Default: `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>virtual_<wbr>machine_<wbr>id</span>
+        <span id="state_virtual_machine_id_python">
+<a href="#state_virtual_machine_id_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machine_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

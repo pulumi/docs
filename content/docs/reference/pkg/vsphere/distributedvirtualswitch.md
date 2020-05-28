@@ -39,7 +39,35 @@ connections.
 {{< chooser language "typescript,python,go,csharp" / >}}
 ### Uplink name and count control
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using VSphere = Pulumi.VSphere;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var dvs = new VSphere.DistributedVirtualSwitch("dvs", new VSphere.DistributedVirtualSwitchArgs
+        {
+            ActiveUplinks = 
+            {
+                "tfup1",
+            },
+            DatacenterId = data.Vsphere_datacenter.Dc.Id,
+            StandbyUplinks = 
+            {
+                "tfup2",
+            },
+            Uplinks = 
+            {
+                "tfup1",
+                "tfup2",
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -87,19 +115,19 @@ const dvs = new vsphere.DistributedVirtualSwitch("dvs", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#DistributedVirtualSwitch">DistributedVirtualSwitch</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#DistributedVirtualSwitchArgs">DistributedVirtualSwitchArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#DistributedVirtualSwitch">DistributedVirtualSwitch</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#DistributedVirtualSwitchArgs">DistributedVirtualSwitchArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">DistributedVirtualSwitch</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>active_uplinks=None<span class="p">, </span>allow_forged_transmits=None<span class="p">, </span>allow_mac_changes=None<span class="p">, </span>allow_promiscuous=None<span class="p">, </span>block_all_ports=None<span class="p">, </span>check_beacon=None<span class="p">, </span>contact_detail=None<span class="p">, </span>contact_name=None<span class="p">, </span>custom_attributes=None<span class="p">, </span>datacenter_id=None<span class="p">, </span>description=None<span class="p">, </span>directpath_gen2_allowed=None<span class="p">, </span>egress_shaping_average_bandwidth=None<span class="p">, </span>egress_shaping_burst_size=None<span class="p">, </span>egress_shaping_enabled=None<span class="p">, </span>egress_shaping_peak_bandwidth=None<span class="p">, </span>failback=None<span class="p">, </span>faulttolerance_maximum_mbit=None<span class="p">, </span>faulttolerance_reservation_mbit=None<span class="p">, </span>faulttolerance_share_count=None<span class="p">, </span>faulttolerance_share_level=None<span class="p">, </span>folder=None<span class="p">, </span>hbr_maximum_mbit=None<span class="p">, </span>hbr_reservation_mbit=None<span class="p">, </span>hbr_share_count=None<span class="p">, </span>hbr_share_level=None<span class="p">, </span>hosts=None<span class="p">, </span>ingress_shaping_average_bandwidth=None<span class="p">, </span>ingress_shaping_burst_size=None<span class="p">, </span>ingress_shaping_enabled=None<span class="p">, </span>ingress_shaping_peak_bandwidth=None<span class="p">, </span>ipv4_address=None<span class="p">, </span>iscsi_maximum_mbit=None<span class="p">, </span>iscsi_reservation_mbit=None<span class="p">, </span>iscsi_share_count=None<span class="p">, </span>iscsi_share_level=None<span class="p">, </span>lacp_api_version=None<span class="p">, </span>lacp_enabled=None<span class="p">, </span>lacp_mode=None<span class="p">, </span>link_discovery_operation=None<span class="p">, </span>link_discovery_protocol=None<span class="p">, </span>management_maximum_mbit=None<span class="p">, </span>management_reservation_mbit=None<span class="p">, </span>management_share_count=None<span class="p">, </span>management_share_level=None<span class="p">, </span>max_mtu=None<span class="p">, </span>multicast_filtering_mode=None<span class="p">, </span>name=None<span class="p">, </span>netflow_active_flow_timeout=None<span class="p">, </span>netflow_collector_ip_address=None<span class="p">, </span>netflow_collector_port=None<span class="p">, </span>netflow_enabled=None<span class="p">, </span>netflow_idle_flow_timeout=None<span class="p">, </span>netflow_internal_flows_only=None<span class="p">, </span>netflow_observation_domain_id=None<span class="p">, </span>netflow_sampling_rate=None<span class="p">, </span>network_resource_control_enabled=None<span class="p">, </span>network_resource_control_version=None<span class="p">, </span>nfs_maximum_mbit=None<span class="p">, </span>nfs_reservation_mbit=None<span class="p">, </span>nfs_share_count=None<span class="p">, </span>nfs_share_level=None<span class="p">, </span>notify_switches=None<span class="p">, </span>port_private_secondary_vlan_id=None<span class="p">, </span>standby_uplinks=None<span class="p">, </span>tags=None<span class="p">, </span>teaming_policy=None<span class="p">, </span>tx_uplink=None<span class="p">, </span>uplinks=None<span class="p">, </span>vdp_maximum_mbit=None<span class="p">, </span>vdp_reservation_mbit=None<span class="p">, </span>vdp_share_count=None<span class="p">, </span>vdp_share_level=None<span class="p">, </span>version=None<span class="p">, </span>virtualmachine_maximum_mbit=None<span class="p">, </span>virtualmachine_reservation_mbit=None<span class="p">, </span>virtualmachine_share_count=None<span class="p">, </span>virtualmachine_share_level=None<span class="p">, </span>vlan_id=None<span class="p">, </span>vlan_ranges=None<span class="p">, </span>vmotion_maximum_mbit=None<span class="p">, </span>vmotion_reservation_mbit=None<span class="p">, </span>vmotion_share_count=None<span class="p">, </span>vmotion_share_level=None<span class="p">, </span>vsan_maximum_mbit=None<span class="p">, </span>vsan_reservation_mbit=None<span class="p">, </span>vsan_share_count=None<span class="p">, </span>vsan_share_level=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/vsphere/#DistributedVirtualSwitch">DistributedVirtualSwitch</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>active_uplinks=None<span class="p">, </span>allow_forged_transmits=None<span class="p">, </span>allow_mac_changes=None<span class="p">, </span>allow_promiscuous=None<span class="p">, </span>block_all_ports=None<span class="p">, </span>check_beacon=None<span class="p">, </span>contact_detail=None<span class="p">, </span>contact_name=None<span class="p">, </span>custom_attributes=None<span class="p">, </span>datacenter_id=None<span class="p">, </span>description=None<span class="p">, </span>directpath_gen2_allowed=None<span class="p">, </span>egress_shaping_average_bandwidth=None<span class="p">, </span>egress_shaping_burst_size=None<span class="p">, </span>egress_shaping_enabled=None<span class="p">, </span>egress_shaping_peak_bandwidth=None<span class="p">, </span>failback=None<span class="p">, </span>faulttolerance_maximum_mbit=None<span class="p">, </span>faulttolerance_reservation_mbit=None<span class="p">, </span>faulttolerance_share_count=None<span class="p">, </span>faulttolerance_share_level=None<span class="p">, </span>folder=None<span class="p">, </span>hbr_maximum_mbit=None<span class="p">, </span>hbr_reservation_mbit=None<span class="p">, </span>hbr_share_count=None<span class="p">, </span>hbr_share_level=None<span class="p">, </span>hosts=None<span class="p">, </span>ingress_shaping_average_bandwidth=None<span class="p">, </span>ingress_shaping_burst_size=None<span class="p">, </span>ingress_shaping_enabled=None<span class="p">, </span>ingress_shaping_peak_bandwidth=None<span class="p">, </span>ipv4_address=None<span class="p">, </span>iscsi_maximum_mbit=None<span class="p">, </span>iscsi_reservation_mbit=None<span class="p">, </span>iscsi_share_count=None<span class="p">, </span>iscsi_share_level=None<span class="p">, </span>lacp_api_version=None<span class="p">, </span>lacp_enabled=None<span class="p">, </span>lacp_mode=None<span class="p">, </span>link_discovery_operation=None<span class="p">, </span>link_discovery_protocol=None<span class="p">, </span>management_maximum_mbit=None<span class="p">, </span>management_reservation_mbit=None<span class="p">, </span>management_share_count=None<span class="p">, </span>management_share_level=None<span class="p">, </span>max_mtu=None<span class="p">, </span>multicast_filtering_mode=None<span class="p">, </span>name=None<span class="p">, </span>netflow_active_flow_timeout=None<span class="p">, </span>netflow_collector_ip_address=None<span class="p">, </span>netflow_collector_port=None<span class="p">, </span>netflow_enabled=None<span class="p">, </span>netflow_idle_flow_timeout=None<span class="p">, </span>netflow_internal_flows_only=None<span class="p">, </span>netflow_observation_domain_id=None<span class="p">, </span>netflow_sampling_rate=None<span class="p">, </span>network_resource_control_enabled=None<span class="p">, </span>network_resource_control_version=None<span class="p">, </span>nfs_maximum_mbit=None<span class="p">, </span>nfs_reservation_mbit=None<span class="p">, </span>nfs_share_count=None<span class="p">, </span>nfs_share_level=None<span class="p">, </span>notify_switches=None<span class="p">, </span>port_private_secondary_vlan_id=None<span class="p">, </span>standby_uplinks=None<span class="p">, </span>tags=None<span class="p">, </span>teaming_policy=None<span class="p">, </span>tx_uplink=None<span class="p">, </span>uplinks=None<span class="p">, </span>vdp_maximum_mbit=None<span class="p">, </span>vdp_reservation_mbit=None<span class="p">, </span>vdp_share_count=None<span class="p">, </span>vdp_share_level=None<span class="p">, </span>version=None<span class="p">, </span>virtualmachine_maximum_mbit=None<span class="p">, </span>virtualmachine_reservation_mbit=None<span class="p">, </span>virtualmachine_share_count=None<span class="p">, </span>virtualmachine_share_level=None<span class="p">, </span>vlan_id=None<span class="p">, </span>vlan_ranges=None<span class="p">, </span>vmotion_maximum_mbit=None<span class="p">, </span>vmotion_reservation_mbit=None<span class="p">, </span>vmotion_share_count=None<span class="p">, </span>vmotion_share_level=None<span class="p">, </span>vsan_maximum_mbit=None<span class="p">, </span>vsan_reservation_mbit=None<span class="p">, </span>vsan_share_count=None<span class="p">, </span>vsan_share_level=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewDistributedVirtualSwitch<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#DistributedVirtualSwitchArgs">DistributedVirtualSwitchArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#DistributedVirtualSwitch">DistributedVirtualSwitch</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#DistributedVirtualSwitch">NewDistributedVirtualSwitch</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#DistributedVirtualSwitchArgs">DistributedVirtualSwitchArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#DistributedVirtualSwitch">DistributedVirtualSwitch</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.DistributedVirtualSwitch.html">DistributedVirtualSwitch</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.DistributedVirtualSwitchArgs.html">DistributedVirtualSwitchArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.DistributedVirtualSwitch.html">DistributedVirtualSwitch</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.DistributedVirtualSwitchArgs.html">DistributedVirtualSwitchArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -265,7 +293,9 @@ The DistributedVirtualSwitch resource accepts the following [input]({{< relref "
 
     <dt class="property-required"
             title="Required">
-        <span>Datacenter<wbr>Id</span>
+        <span id="datacenterid_csharp">
+<a href="#datacenterid_csharp" style="color: inherit; text-decoration: inherit;">Datacenter<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -275,7 +305,9 @@ virtual switch will be created. Forces a new resource if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Active<wbr>Uplinks</span>
+        <span id="activeuplinks_csharp">
+<a href="#activeuplinks_csharp" style="color: inherit; text-decoration: inherit;">Active<wbr>Uplinks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -287,7 +319,9 @@ here for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Allow<wbr>Forged<wbr>Transmits</span>
+        <span id="allowforgedtransmits_csharp">
+<a href="#allowforgedtransmits_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Forged<wbr>Transmits</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -298,7 +332,9 @@ address than that of its own.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Allow<wbr>Mac<wbr>Changes</span>
+        <span id="allowmacchanges_csharp">
+<a href="#allowmacchanges_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Mac<wbr>Changes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -308,7 +344,9 @@ Control (MAC) address can be changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Allow<wbr>Promiscuous</span>
+        <span id="allowpromiscuous_csharp">
+<a href="#allowpromiscuous_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Promiscuous</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -318,7 +356,9 @@ flag indicates whether or not all traffic is seen on a given port.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Block<wbr>All<wbr>Ports</span>
+        <span id="blockallports_csharp">
+<a href="#blockallports_csharp" style="color: inherit; text-decoration: inherit;">Block<wbr>All<wbr>Ports</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -329,7 +369,9 @@ virtual devices.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Check<wbr>Beacon</span>
+        <span id="checkbeacon_csharp">
+<a href="#checkbeacon_csharp" style="color: inherit; text-decoration: inherit;">Check<wbr>Beacon</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -339,7 +381,9 @@ to detect NIC failure.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Contact<wbr>Detail</span>
+        <span id="contactdetail_csharp">
+<a href="#contactdetail_csharp" style="color: inherit; text-decoration: inherit;">Contact<wbr>Detail</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -349,7 +393,9 @@ who is responsible for the DVS.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Contact<wbr>Name</span>
+        <span id="contactname_csharp">
+<a href="#contactname_csharp" style="color: inherit; text-decoration: inherit;">Contact<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -359,7 +405,9 @@ DVS.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Custom<wbr>Attributes</span>
+        <span id="customattributes_csharp">
+<a href="#customattributes_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Attributes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -369,7 +417,9 @@ value strings to set for virtual switch.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -378,7 +428,9 @@ value strings to set for virtual switch.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Directpath<wbr>Gen2Allowed</span>
+        <span id="directpathgen2allowed_csharp">
+<a href="#directpathgen2allowed_csharp" style="color: inherit; text-decoration: inherit;">Directpath<wbr>Gen2Allowed</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -388,7 +440,9 @@ for which this policy applies to.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Egress<wbr>Shaping<wbr>Average<wbr>Bandwidth</span>
+        <span id="egressshapingaveragebandwidth_csharp">
+<a href="#egressshapingaveragebandwidth_csharp" style="color: inherit; text-decoration: inherit;">Egress<wbr>Shaping<wbr>Average<wbr>Bandwidth</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -398,7 +452,9 @@ per second if egress traffic shaping is enabled on the port.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Egress<wbr>Shaping<wbr>Burst<wbr>Size</span>
+        <span id="egressshapingburstsize_csharp">
+<a href="#egressshapingburstsize_csharp" style="color: inherit; text-decoration: inherit;">Egress<wbr>Shaping<wbr>Burst<wbr>Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -408,7 +464,9 @@ bytes if egress traffic shaping is enabled on the port.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Egress<wbr>Shaping<wbr>Enabled</span>
+        <span id="egressshapingenabled_csharp">
+<a href="#egressshapingenabled_csharp" style="color: inherit; text-decoration: inherit;">Egress<wbr>Shaping<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -418,7 +476,9 @@ on the port for egress traffic.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Egress<wbr>Shaping<wbr>Peak<wbr>Bandwidth</span>
+        <span id="egressshapingpeakbandwidth_csharp">
+<a href="#egressshapingpeakbandwidth_csharp" style="color: inherit; text-decoration: inherit;">Egress<wbr>Shaping<wbr>Peak<wbr>Bandwidth</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -428,7 +488,9 @@ in bits per second if egress traffic shaping is enabled on the port.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Failback</span>
+        <span id="failback_csharp">
+<a href="#failback_csharp" style="color: inherit; text-decoration: inherit;">Failback</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -438,7 +500,9 @@ uplinks higher in precedence when they come back up.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Faulttolerance<wbr>Maximum<wbr>Mbit</span>
+        <span id="faulttolerancemaximummbit_csharp">
+<a href="#faulttolerancemaximummbit_csharp" style="color: inherit; text-decoration: inherit;">Faulttolerance<wbr>Maximum<wbr>Mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -447,7 +511,9 @@ uplinks higher in precedence when they come back up.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Faulttolerance<wbr>Reservation<wbr>Mbit</span>
+        <span id="faulttolerancereservationmbit_csharp">
+<a href="#faulttolerancereservationmbit_csharp" style="color: inherit; text-decoration: inherit;">Faulttolerance<wbr>Reservation<wbr>Mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -456,7 +522,9 @@ uplinks higher in precedence when they come back up.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Faulttolerance<wbr>Share<wbr>Count</span>
+        <span id="faulttolerancesharecount_csharp">
+<a href="#faulttolerancesharecount_csharp" style="color: inherit; text-decoration: inherit;">Faulttolerance<wbr>Share<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -465,7 +533,9 @@ uplinks higher in precedence when they come back up.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Faulttolerance<wbr>Share<wbr>Level</span>
+        <span id="faulttolerancesharelevel_csharp">
+<a href="#faulttolerancesharelevel_csharp" style="color: inherit; text-decoration: inherit;">Faulttolerance<wbr>Share<wbr>Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -474,7 +544,9 @@ uplinks higher in precedence when they come back up.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Folder</span>
+        <span id="folder_csharp">
+<a href="#folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -484,7 +556,9 @@ if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Hbr<wbr>Maximum<wbr>Mbit</span>
+        <span id="hbrmaximummbit_csharp">
+<a href="#hbrmaximummbit_csharp" style="color: inherit; text-decoration: inherit;">Hbr<wbr>Maximum<wbr>Mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -493,7 +567,9 @@ if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Hbr<wbr>Reservation<wbr>Mbit</span>
+        <span id="hbrreservationmbit_csharp">
+<a href="#hbrreservationmbit_csharp" style="color: inherit; text-decoration: inherit;">Hbr<wbr>Reservation<wbr>Mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -502,7 +578,9 @@ if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Hbr<wbr>Share<wbr>Count</span>
+        <span id="hbrsharecount_csharp">
+<a href="#hbrsharecount_csharp" style="color: inherit; text-decoration: inherit;">Hbr<wbr>Share<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -511,7 +589,9 @@ if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Hbr<wbr>Share<wbr>Level</span>
+        <span id="hbrsharelevel_csharp">
+<a href="#hbrsharelevel_csharp" style="color: inherit; text-decoration: inherit;">Hbr<wbr>Share<wbr>Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -520,7 +600,9 @@ if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Hosts</span>
+        <span id="hosts_csharp">
+<a href="#hosts_csharp" style="color: inherit; text-decoration: inherit;">Hosts</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributedvirtualswitchhost">List&lt;Pulumi.<wbr>VSphere.<wbr>Inputs.<wbr>Distributed<wbr>Virtual<wbr>Switch<wbr>Host<wbr>Args&gt;</a></span>
     </dt>
@@ -530,7 +612,9 @@ options are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ingress<wbr>Shaping<wbr>Average<wbr>Bandwidth</span>
+        <span id="ingressshapingaveragebandwidth_csharp">
+<a href="#ingressshapingaveragebandwidth_csharp" style="color: inherit; text-decoration: inherit;">Ingress<wbr>Shaping<wbr>Average<wbr>Bandwidth</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -540,7 +624,9 @@ bits per second if ingress traffic shaping is enabled on the port.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ingress<wbr>Shaping<wbr>Burst<wbr>Size</span>
+        <span id="ingressshapingburstsize_csharp">
+<a href="#ingressshapingburstsize_csharp" style="color: inherit; text-decoration: inherit;">Ingress<wbr>Shaping<wbr>Burst<wbr>Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -550,7 +636,9 @@ bytes if ingress traffic shaping is enabled on the port.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ingress<wbr>Shaping<wbr>Enabled</span>
+        <span id="ingressshapingenabled_csharp">
+<a href="#ingressshapingenabled_csharp" style="color: inherit; text-decoration: inherit;">Ingress<wbr>Shaping<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -560,7 +648,9 @@ enabled on the port for ingress traffic.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ingress<wbr>Shaping<wbr>Peak<wbr>Bandwidth</span>
+        <span id="ingressshapingpeakbandwidth_csharp">
+<a href="#ingressshapingpeakbandwidth_csharp" style="color: inherit; text-decoration: inherit;">Ingress<wbr>Shaping<wbr>Peak<wbr>Bandwidth</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -570,7 +660,9 @@ bursts in bits per second if ingress traffic shaping is enabled on the port.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ipv4Address</span>
+        <span id="ipv4address_csharp">
+<a href="#ipv4address_csharp" style="color: inherit; text-decoration: inherit;">Ipv4Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -581,7 +673,9 @@ below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Iscsi<wbr>Maximum<wbr>Mbit</span>
+        <span id="iscsimaximummbit_csharp">
+<a href="#iscsimaximummbit_csharp" style="color: inherit; text-decoration: inherit;">Iscsi<wbr>Maximum<wbr>Mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -590,7 +684,9 @@ below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Iscsi<wbr>Reservation<wbr>Mbit</span>
+        <span id="iscsireservationmbit_csharp">
+<a href="#iscsireservationmbit_csharp" style="color: inherit; text-decoration: inherit;">Iscsi<wbr>Reservation<wbr>Mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -599,7 +695,9 @@ below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Iscsi<wbr>Share<wbr>Count</span>
+        <span id="iscsisharecount_csharp">
+<a href="#iscsisharecount_csharp" style="color: inherit; text-decoration: inherit;">Iscsi<wbr>Share<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -608,7 +706,9 @@ below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Iscsi<wbr>Share<wbr>Level</span>
+        <span id="iscsisharelevel_csharp">
+<a href="#iscsisharelevel_csharp" style="color: inherit; text-decoration: inherit;">Iscsi<wbr>Share<wbr>Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -617,7 +717,9 @@ below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Lacp<wbr>Api<wbr>Version</span>
+        <span id="lacpapiversion_csharp">
+<a href="#lacpapiversion_csharp" style="color: inherit; text-decoration: inherit;">Lacp<wbr>Api<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -628,7 +730,9 @@ version to use with the switch. Possible values are `singleLag` and
 
     <dt class="property-optional"
             title="Optional">
-        <span>Lacp<wbr>Enabled</span>
+        <span id="lacpenabled_csharp">
+<a href="#lacpenabled_csharp" style="color: inherit; text-decoration: inherit;">Lacp<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -638,7 +742,9 @@ applies to.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Lacp<wbr>Mode</span>
+        <span id="lacpmode_csharp">
+<a href="#lacpmode_csharp" style="color: inherit; text-decoration: inherit;">Lacp<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -647,7 +753,9 @@ applies to.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Link<wbr>Discovery<wbr>Operation</span>
+        <span id="linkdiscoveryoperation_csharp">
+<a href="#linkdiscoveryoperation_csharp" style="color: inherit; text-decoration: inherit;">Link<wbr>Discovery<wbr>Operation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -657,7 +765,9 @@ for link discovery traffic.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Link<wbr>Discovery<wbr>Protocol</span>
+        <span id="linkdiscoveryprotocol_csharp">
+<a href="#linkdiscoveryprotocol_csharp" style="color: inherit; text-decoration: inherit;">Link<wbr>Discovery<wbr>Protocol</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -667,7 +777,9 @@ types are `cdp` and `lldp`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Management<wbr>Maximum<wbr>Mbit</span>
+        <span id="managementmaximummbit_csharp">
+<a href="#managementmaximummbit_csharp" style="color: inherit; text-decoration: inherit;">Management<wbr>Maximum<wbr>Mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -676,7 +788,9 @@ types are `cdp` and `lldp`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Management<wbr>Reservation<wbr>Mbit</span>
+        <span id="managementreservationmbit_csharp">
+<a href="#managementreservationmbit_csharp" style="color: inherit; text-decoration: inherit;">Management<wbr>Reservation<wbr>Mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -685,7 +799,9 @@ types are `cdp` and `lldp`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Management<wbr>Share<wbr>Count</span>
+        <span id="managementsharecount_csharp">
+<a href="#managementsharecount_csharp" style="color: inherit; text-decoration: inherit;">Management<wbr>Share<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -694,7 +810,9 @@ types are `cdp` and `lldp`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Management<wbr>Share<wbr>Level</span>
+        <span id="managementsharelevel_csharp">
+<a href="#managementsharelevel_csharp" style="color: inherit; text-decoration: inherit;">Management<wbr>Share<wbr>Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -703,7 +821,9 @@ types are `cdp` and `lldp`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Mtu</span>
+        <span id="maxmtu_csharp">
+<a href="#maxmtu_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Mtu</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -713,7 +833,9 @@ switch.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Multicast<wbr>Filtering<wbr>Mode</span>
+        <span id="multicastfilteringmode_csharp">
+<a href="#multicastfilteringmode_csharp" style="color: inherit; text-decoration: inherit;">Multicast<wbr>Filtering<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -723,7 +845,9 @@ with the switch. Can be one of `legacyFiltering` or `snooping`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -732,7 +856,9 @@ with the switch. Can be one of `legacyFiltering` or `snooping`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Netflow<wbr>Active<wbr>Flow<wbr>Timeout</span>
+        <span id="netflowactiveflowtimeout_csharp">
+<a href="#netflowactiveflowtimeout_csharp" style="color: inherit; text-decoration: inherit;">Netflow<wbr>Active<wbr>Flow<wbr>Timeout</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -743,7 +869,9 @@ active flows are forced to be exported to the collector. Allowed range is
 
     <dt class="property-optional"
             title="Optional">
-        <span>Netflow<wbr>Collector<wbr>Ip<wbr>Address</span>
+        <span id="netflowcollectoripaddress_csharp">
+<a href="#netflowcollectoripaddress_csharp" style="color: inherit; text-decoration: inherit;">Netflow<wbr>Collector<wbr>Ip<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -754,7 +882,9 @@ Switch Version 6.0 or later. Must be set before Netflow can be enabled.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Netflow<wbr>Collector<wbr>Port</span>
+        <span id="netflowcollectorport_csharp">
+<a href="#netflowcollectorport_csharp" style="color: inherit; text-decoration: inherit;">Netflow<wbr>Collector<wbr>Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -764,7 +894,9 @@ must be set before Netflow can be enabled.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Netflow<wbr>Enabled</span>
+        <span id="netflowenabled_csharp">
+<a href="#netflowenabled_csharp" style="color: inherit; text-decoration: inherit;">Netflow<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -774,7 +906,9 @@ applies to.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Netflow<wbr>Idle<wbr>Flow<wbr>Timeout</span>
+        <span id="netflowidleflowtimeout_csharp">
+<a href="#netflowidleflowtimeout_csharp" style="color: inherit; text-decoration: inherit;">Netflow<wbr>Idle<wbr>Flow<wbr>Timeout</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -785,7 +919,9 @@ to `600`. Default: `15`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Netflow<wbr>Internal<wbr>Flows<wbr>Only</span>
+        <span id="netflowinternalflowsonly_csharp">
+<a href="#netflowinternalflowsonly_csharp" style="color: inherit; text-decoration: inherit;">Netflow<wbr>Internal<wbr>Flows<wbr>Only</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -796,7 +932,9 @@ Default: `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Netflow<wbr>Observation<wbr>Domain<wbr>Id</span>
+        <span id="netflowobservationdomainid_csharp">
+<a href="#netflowobservationdomainid_csharp" style="color: inherit; text-decoration: inherit;">Netflow<wbr>Observation<wbr>Domain<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -806,7 +944,9 @@ the Netflow collector.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Netflow<wbr>Sampling<wbr>Rate</span>
+        <span id="netflowsamplingrate_csharp">
+<a href="#netflowsamplingrate_csharp" style="color: inherit; text-decoration: inherit;">Netflow<wbr>Sampling<wbr>Rate</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -818,7 +958,9 @@ indicates an analysis rate of 0.001%.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Network<wbr>Resource<wbr>Control<wbr>Enabled</span>
+        <span id="networkresourcecontrolenabled_csharp">
+<a href="#networkresourcecontrolenabled_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Resource<wbr>Control<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -828,7 +970,9 @@ network I/O control. Default: `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Network<wbr>Resource<wbr>Control<wbr>Version</span>
+        <span id="networkresourcecontrolversion_csharp">
+<a href="#networkresourcecontrolversion_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Resource<wbr>Control<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -838,7 +982,9 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Nfs<wbr>Maximum<wbr>Mbit</span>
+        <span id="nfsmaximummbit_csharp">
+<a href="#nfsmaximummbit_csharp" style="color: inherit; text-decoration: inherit;">Nfs<wbr>Maximum<wbr>Mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -847,7 +993,9 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Nfs<wbr>Reservation<wbr>Mbit</span>
+        <span id="nfsreservationmbit_csharp">
+<a href="#nfsreservationmbit_csharp" style="color: inherit; text-decoration: inherit;">Nfs<wbr>Reservation<wbr>Mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -856,7 +1004,9 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Nfs<wbr>Share<wbr>Count</span>
+        <span id="nfssharecount_csharp">
+<a href="#nfssharecount_csharp" style="color: inherit; text-decoration: inherit;">Nfs<wbr>Share<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -865,7 +1015,9 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Nfs<wbr>Share<wbr>Level</span>
+        <span id="nfssharelevel_csharp">
+<a href="#nfssharelevel_csharp" style="color: inherit; text-decoration: inherit;">Nfs<wbr>Share<wbr>Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -874,7 +1026,9 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Notify<wbr>Switches</span>
+        <span id="notifyswitches_csharp">
+<a href="#notifyswitches_csharp" style="color: inherit; text-decoration: inherit;">Notify<wbr>Switches</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -884,7 +1038,9 @@ broadcast network of an uplink failover, triggering cache updates.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Port<wbr>Private<wbr>Secondary<wbr>Vlan<wbr>Id</span>
+        <span id="portprivatesecondaryvlanid_csharp">
+<a href="#portprivatesecondaryvlanid_csharp" style="color: inherit; text-decoration: inherit;">Port<wbr>Private<wbr>Secondary<wbr>Vlan<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -894,7 +1050,9 @@ ID when using private VLANs.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Standby<wbr>Uplinks</span>
+        <span id="standbyuplinks_csharp">
+<a href="#standbyuplinks_csharp" style="color: inherit; text-decoration: inherit;">Standby<wbr>Uplinks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -906,7 +1064,9 @@ here for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -915,7 +1075,9 @@ here for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Teaming<wbr>Policy</span>
+        <span id="teamingpolicy_csharp">
+<a href="#teamingpolicy_csharp" style="color: inherit; text-decoration: inherit;">Teaming<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -926,7 +1088,9 @@ here for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tx<wbr>Uplink</span>
+        <span id="txuplink_csharp">
+<a href="#txuplink_csharp" style="color: inherit; text-decoration: inherit;">Tx<wbr>Uplink</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -936,7 +1100,9 @@ this policy applies to its DVS uplinks.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Uplinks</span>
+        <span id="uplinks_csharp">
+<a href="#uplinks_csharp" style="color: inherit; text-decoration: inherit;">Uplinks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -949,7 +1115,9 @@ use this option.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vdp<wbr>Maximum<wbr>Mbit</span>
+        <span id="vdpmaximummbit_csharp">
+<a href="#vdpmaximummbit_csharp" style="color: inherit; text-decoration: inherit;">Vdp<wbr>Maximum<wbr>Mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -958,7 +1126,9 @@ use this option.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vdp<wbr>Reservation<wbr>Mbit</span>
+        <span id="vdpreservationmbit_csharp">
+<a href="#vdpreservationmbit_csharp" style="color: inherit; text-decoration: inherit;">Vdp<wbr>Reservation<wbr>Mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -967,7 +1137,9 @@ use this option.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vdp<wbr>Share<wbr>Count</span>
+        <span id="vdpsharecount_csharp">
+<a href="#vdpsharecount_csharp" style="color: inherit; text-decoration: inherit;">Vdp<wbr>Share<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -976,7 +1148,9 @@ use this option.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vdp<wbr>Share<wbr>Level</span>
+        <span id="vdpsharelevel_csharp">
+<a href="#vdpsharelevel_csharp" style="color: inherit; text-decoration: inherit;">Vdp<wbr>Share<wbr>Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -985,7 +1159,9 @@ use this option.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Version</span>
+        <span id="version_csharp">
+<a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -997,7 +1173,9 @@ downgraded.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Virtualmachine<wbr>Maximum<wbr>Mbit</span>
+        <span id="virtualmachinemaximummbit_csharp">
+<a href="#virtualmachinemaximummbit_csharp" style="color: inherit; text-decoration: inherit;">Virtualmachine<wbr>Maximum<wbr>Mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1006,7 +1184,9 @@ downgraded.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Virtualmachine<wbr>Reservation<wbr>Mbit</span>
+        <span id="virtualmachinereservationmbit_csharp">
+<a href="#virtualmachinereservationmbit_csharp" style="color: inherit; text-decoration: inherit;">Virtualmachine<wbr>Reservation<wbr>Mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1015,7 +1195,9 @@ downgraded.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Virtualmachine<wbr>Share<wbr>Count</span>
+        <span id="virtualmachinesharecount_csharp">
+<a href="#virtualmachinesharecount_csharp" style="color: inherit; text-decoration: inherit;">Virtualmachine<wbr>Share<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1024,7 +1206,9 @@ downgraded.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Virtualmachine<wbr>Share<wbr>Level</span>
+        <span id="virtualmachinesharelevel_csharp">
+<a href="#virtualmachinesharelevel_csharp" style="color: inherit; text-decoration: inherit;">Virtualmachine<wbr>Share<wbr>Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1033,7 +1217,9 @@ downgraded.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vlan<wbr>Id</span>
+        <span id="vlanid_csharp">
+<a href="#vlanid_csharp" style="color: inherit; text-decoration: inherit;">Vlan<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1042,7 +1228,9 @@ downgraded.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vlan<wbr>Ranges</span>
+        <span id="vlanranges_csharp">
+<a href="#vlanranges_csharp" style="color: inherit; text-decoration: inherit;">Vlan<wbr>Ranges</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributedvirtualswitchvlanrange">List&lt;Pulumi.<wbr>VSphere.<wbr>Inputs.<wbr>Distributed<wbr>Virtual<wbr>Switch<wbr>Vlan<wbr>Range<wbr>Args&gt;</a></span>
     </dt>
@@ -1054,7 +1242,9 @@ below:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vmotion<wbr>Maximum<wbr>Mbit</span>
+        <span id="vmotionmaximummbit_csharp">
+<a href="#vmotionmaximummbit_csharp" style="color: inherit; text-decoration: inherit;">Vmotion<wbr>Maximum<wbr>Mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1063,7 +1253,9 @@ below:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vmotion<wbr>Reservation<wbr>Mbit</span>
+        <span id="vmotionreservationmbit_csharp">
+<a href="#vmotionreservationmbit_csharp" style="color: inherit; text-decoration: inherit;">Vmotion<wbr>Reservation<wbr>Mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1072,7 +1264,9 @@ below:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vmotion<wbr>Share<wbr>Count</span>
+        <span id="vmotionsharecount_csharp">
+<a href="#vmotionsharecount_csharp" style="color: inherit; text-decoration: inherit;">Vmotion<wbr>Share<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1081,7 +1275,9 @@ below:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vmotion<wbr>Share<wbr>Level</span>
+        <span id="vmotionsharelevel_csharp">
+<a href="#vmotionsharelevel_csharp" style="color: inherit; text-decoration: inherit;">Vmotion<wbr>Share<wbr>Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1090,7 +1286,9 @@ below:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vsan<wbr>Maximum<wbr>Mbit</span>
+        <span id="vsanmaximummbit_csharp">
+<a href="#vsanmaximummbit_csharp" style="color: inherit; text-decoration: inherit;">Vsan<wbr>Maximum<wbr>Mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1099,7 +1297,9 @@ below:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vsan<wbr>Reservation<wbr>Mbit</span>
+        <span id="vsanreservationmbit_csharp">
+<a href="#vsanreservationmbit_csharp" style="color: inherit; text-decoration: inherit;">Vsan<wbr>Reservation<wbr>Mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1108,7 +1308,9 @@ below:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vsan<wbr>Share<wbr>Count</span>
+        <span id="vsansharecount_csharp">
+<a href="#vsansharecount_csharp" style="color: inherit; text-decoration: inherit;">Vsan<wbr>Share<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1117,7 +1319,9 @@ below:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vsan<wbr>Share<wbr>Level</span>
+        <span id="vsansharelevel_csharp">
+<a href="#vsansharelevel_csharp" style="color: inherit; text-decoration: inherit;">Vsan<wbr>Share<wbr>Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1133,7 +1337,9 @@ below:
 
     <dt class="property-required"
             title="Required">
-        <span>Datacenter<wbr>Id</span>
+        <span id="datacenterid_go">
+<a href="#datacenterid_go" style="color: inherit; text-decoration: inherit;">Datacenter<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1143,7 +1349,9 @@ virtual switch will be created. Forces a new resource if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Active<wbr>Uplinks</span>
+        <span id="activeuplinks_go">
+<a href="#activeuplinks_go" style="color: inherit; text-decoration: inherit;">Active<wbr>Uplinks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1155,7 +1363,9 @@ here for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Allow<wbr>Forged<wbr>Transmits</span>
+        <span id="allowforgedtransmits_go">
+<a href="#allowforgedtransmits_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Forged<wbr>Transmits</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1166,7 +1376,9 @@ address than that of its own.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Allow<wbr>Mac<wbr>Changes</span>
+        <span id="allowmacchanges_go">
+<a href="#allowmacchanges_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Mac<wbr>Changes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1176,7 +1388,9 @@ Control (MAC) address can be changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Allow<wbr>Promiscuous</span>
+        <span id="allowpromiscuous_go">
+<a href="#allowpromiscuous_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Promiscuous</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1186,7 +1400,9 @@ flag indicates whether or not all traffic is seen on a given port.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Block<wbr>All<wbr>Ports</span>
+        <span id="blockallports_go">
+<a href="#blockallports_go" style="color: inherit; text-decoration: inherit;">Block<wbr>All<wbr>Ports</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1197,7 +1413,9 @@ virtual devices.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Check<wbr>Beacon</span>
+        <span id="checkbeacon_go">
+<a href="#checkbeacon_go" style="color: inherit; text-decoration: inherit;">Check<wbr>Beacon</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1207,7 +1425,9 @@ to detect NIC failure.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Contact<wbr>Detail</span>
+        <span id="contactdetail_go">
+<a href="#contactdetail_go" style="color: inherit; text-decoration: inherit;">Contact<wbr>Detail</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1217,7 +1437,9 @@ who is responsible for the DVS.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Contact<wbr>Name</span>
+        <span id="contactname_go">
+<a href="#contactname_go" style="color: inherit; text-decoration: inherit;">Contact<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1227,7 +1449,9 @@ DVS.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Custom<wbr>Attributes</span>
+        <span id="customattributes_go">
+<a href="#customattributes_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Attributes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -1237,7 +1461,9 @@ value strings to set for virtual switch.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1246,7 +1472,9 @@ value strings to set for virtual switch.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Directpath<wbr>Gen2Allowed</span>
+        <span id="directpathgen2allowed_go">
+<a href="#directpathgen2allowed_go" style="color: inherit; text-decoration: inherit;">Directpath<wbr>Gen2Allowed</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1256,7 +1484,9 @@ for which this policy applies to.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Egress<wbr>Shaping<wbr>Average<wbr>Bandwidth</span>
+        <span id="egressshapingaveragebandwidth_go">
+<a href="#egressshapingaveragebandwidth_go" style="color: inherit; text-decoration: inherit;">Egress<wbr>Shaping<wbr>Average<wbr>Bandwidth</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1266,7 +1496,9 @@ per second if egress traffic shaping is enabled on the port.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Egress<wbr>Shaping<wbr>Burst<wbr>Size</span>
+        <span id="egressshapingburstsize_go">
+<a href="#egressshapingburstsize_go" style="color: inherit; text-decoration: inherit;">Egress<wbr>Shaping<wbr>Burst<wbr>Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1276,7 +1508,9 @@ bytes if egress traffic shaping is enabled on the port.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Egress<wbr>Shaping<wbr>Enabled</span>
+        <span id="egressshapingenabled_go">
+<a href="#egressshapingenabled_go" style="color: inherit; text-decoration: inherit;">Egress<wbr>Shaping<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1286,7 +1520,9 @@ on the port for egress traffic.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Egress<wbr>Shaping<wbr>Peak<wbr>Bandwidth</span>
+        <span id="egressshapingpeakbandwidth_go">
+<a href="#egressshapingpeakbandwidth_go" style="color: inherit; text-decoration: inherit;">Egress<wbr>Shaping<wbr>Peak<wbr>Bandwidth</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1296,7 +1532,9 @@ in bits per second if egress traffic shaping is enabled on the port.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Failback</span>
+        <span id="failback_go">
+<a href="#failback_go" style="color: inherit; text-decoration: inherit;">Failback</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1306,7 +1544,9 @@ uplinks higher in precedence when they come back up.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Faulttolerance<wbr>Maximum<wbr>Mbit</span>
+        <span id="faulttolerancemaximummbit_go">
+<a href="#faulttolerancemaximummbit_go" style="color: inherit; text-decoration: inherit;">Faulttolerance<wbr>Maximum<wbr>Mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1315,7 +1555,9 @@ uplinks higher in precedence when they come back up.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Faulttolerance<wbr>Reservation<wbr>Mbit</span>
+        <span id="faulttolerancereservationmbit_go">
+<a href="#faulttolerancereservationmbit_go" style="color: inherit; text-decoration: inherit;">Faulttolerance<wbr>Reservation<wbr>Mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1324,7 +1566,9 @@ uplinks higher in precedence when they come back up.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Faulttolerance<wbr>Share<wbr>Count</span>
+        <span id="faulttolerancesharecount_go">
+<a href="#faulttolerancesharecount_go" style="color: inherit; text-decoration: inherit;">Faulttolerance<wbr>Share<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1333,7 +1577,9 @@ uplinks higher in precedence when they come back up.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Faulttolerance<wbr>Share<wbr>Level</span>
+        <span id="faulttolerancesharelevel_go">
+<a href="#faulttolerancesharelevel_go" style="color: inherit; text-decoration: inherit;">Faulttolerance<wbr>Share<wbr>Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1342,7 +1588,9 @@ uplinks higher in precedence when they come back up.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Folder</span>
+        <span id="folder_go">
+<a href="#folder_go" style="color: inherit; text-decoration: inherit;">Folder</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1352,7 +1600,9 @@ if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Hbr<wbr>Maximum<wbr>Mbit</span>
+        <span id="hbrmaximummbit_go">
+<a href="#hbrmaximummbit_go" style="color: inherit; text-decoration: inherit;">Hbr<wbr>Maximum<wbr>Mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1361,7 +1611,9 @@ if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Hbr<wbr>Reservation<wbr>Mbit</span>
+        <span id="hbrreservationmbit_go">
+<a href="#hbrreservationmbit_go" style="color: inherit; text-decoration: inherit;">Hbr<wbr>Reservation<wbr>Mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1370,7 +1622,9 @@ if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Hbr<wbr>Share<wbr>Count</span>
+        <span id="hbrsharecount_go">
+<a href="#hbrsharecount_go" style="color: inherit; text-decoration: inherit;">Hbr<wbr>Share<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1379,7 +1633,9 @@ if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Hbr<wbr>Share<wbr>Level</span>
+        <span id="hbrsharelevel_go">
+<a href="#hbrsharelevel_go" style="color: inherit; text-decoration: inherit;">Hbr<wbr>Share<wbr>Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1388,7 +1644,9 @@ if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Hosts</span>
+        <span id="hosts_go">
+<a href="#hosts_go" style="color: inherit; text-decoration: inherit;">Hosts</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributedvirtualswitchhost">[]Distributed<wbr>Virtual<wbr>Switch<wbr>Host</a></span>
     </dt>
@@ -1398,7 +1656,9 @@ options are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ingress<wbr>Shaping<wbr>Average<wbr>Bandwidth</span>
+        <span id="ingressshapingaveragebandwidth_go">
+<a href="#ingressshapingaveragebandwidth_go" style="color: inherit; text-decoration: inherit;">Ingress<wbr>Shaping<wbr>Average<wbr>Bandwidth</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1408,7 +1668,9 @@ bits per second if ingress traffic shaping is enabled on the port.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ingress<wbr>Shaping<wbr>Burst<wbr>Size</span>
+        <span id="ingressshapingburstsize_go">
+<a href="#ingressshapingburstsize_go" style="color: inherit; text-decoration: inherit;">Ingress<wbr>Shaping<wbr>Burst<wbr>Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1418,7 +1680,9 @@ bytes if ingress traffic shaping is enabled on the port.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ingress<wbr>Shaping<wbr>Enabled</span>
+        <span id="ingressshapingenabled_go">
+<a href="#ingressshapingenabled_go" style="color: inherit; text-decoration: inherit;">Ingress<wbr>Shaping<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1428,7 +1692,9 @@ enabled on the port for ingress traffic.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ingress<wbr>Shaping<wbr>Peak<wbr>Bandwidth</span>
+        <span id="ingressshapingpeakbandwidth_go">
+<a href="#ingressshapingpeakbandwidth_go" style="color: inherit; text-decoration: inherit;">Ingress<wbr>Shaping<wbr>Peak<wbr>Bandwidth</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1438,7 +1704,9 @@ bursts in bits per second if ingress traffic shaping is enabled on the port.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ipv4Address</span>
+        <span id="ipv4address_go">
+<a href="#ipv4address_go" style="color: inherit; text-decoration: inherit;">Ipv4Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1449,7 +1717,9 @@ below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Iscsi<wbr>Maximum<wbr>Mbit</span>
+        <span id="iscsimaximummbit_go">
+<a href="#iscsimaximummbit_go" style="color: inherit; text-decoration: inherit;">Iscsi<wbr>Maximum<wbr>Mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1458,7 +1728,9 @@ below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Iscsi<wbr>Reservation<wbr>Mbit</span>
+        <span id="iscsireservationmbit_go">
+<a href="#iscsireservationmbit_go" style="color: inherit; text-decoration: inherit;">Iscsi<wbr>Reservation<wbr>Mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1467,7 +1739,9 @@ below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Iscsi<wbr>Share<wbr>Count</span>
+        <span id="iscsisharecount_go">
+<a href="#iscsisharecount_go" style="color: inherit; text-decoration: inherit;">Iscsi<wbr>Share<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1476,7 +1750,9 @@ below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Iscsi<wbr>Share<wbr>Level</span>
+        <span id="iscsisharelevel_go">
+<a href="#iscsisharelevel_go" style="color: inherit; text-decoration: inherit;">Iscsi<wbr>Share<wbr>Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1485,7 +1761,9 @@ below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Lacp<wbr>Api<wbr>Version</span>
+        <span id="lacpapiversion_go">
+<a href="#lacpapiversion_go" style="color: inherit; text-decoration: inherit;">Lacp<wbr>Api<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1496,7 +1774,9 @@ version to use with the switch. Possible values are `singleLag` and
 
     <dt class="property-optional"
             title="Optional">
-        <span>Lacp<wbr>Enabled</span>
+        <span id="lacpenabled_go">
+<a href="#lacpenabled_go" style="color: inherit; text-decoration: inherit;">Lacp<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1506,7 +1786,9 @@ applies to.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Lacp<wbr>Mode</span>
+        <span id="lacpmode_go">
+<a href="#lacpmode_go" style="color: inherit; text-decoration: inherit;">Lacp<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1515,7 +1797,9 @@ applies to.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Link<wbr>Discovery<wbr>Operation</span>
+        <span id="linkdiscoveryoperation_go">
+<a href="#linkdiscoveryoperation_go" style="color: inherit; text-decoration: inherit;">Link<wbr>Discovery<wbr>Operation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1525,7 +1809,9 @@ for link discovery traffic.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Link<wbr>Discovery<wbr>Protocol</span>
+        <span id="linkdiscoveryprotocol_go">
+<a href="#linkdiscoveryprotocol_go" style="color: inherit; text-decoration: inherit;">Link<wbr>Discovery<wbr>Protocol</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1535,7 +1821,9 @@ types are `cdp` and `lldp`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Management<wbr>Maximum<wbr>Mbit</span>
+        <span id="managementmaximummbit_go">
+<a href="#managementmaximummbit_go" style="color: inherit; text-decoration: inherit;">Management<wbr>Maximum<wbr>Mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1544,7 +1832,9 @@ types are `cdp` and `lldp`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Management<wbr>Reservation<wbr>Mbit</span>
+        <span id="managementreservationmbit_go">
+<a href="#managementreservationmbit_go" style="color: inherit; text-decoration: inherit;">Management<wbr>Reservation<wbr>Mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1553,7 +1843,9 @@ types are `cdp` and `lldp`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Management<wbr>Share<wbr>Count</span>
+        <span id="managementsharecount_go">
+<a href="#managementsharecount_go" style="color: inherit; text-decoration: inherit;">Management<wbr>Share<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1562,7 +1854,9 @@ types are `cdp` and `lldp`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Management<wbr>Share<wbr>Level</span>
+        <span id="managementsharelevel_go">
+<a href="#managementsharelevel_go" style="color: inherit; text-decoration: inherit;">Management<wbr>Share<wbr>Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1571,7 +1865,9 @@ types are `cdp` and `lldp`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Mtu</span>
+        <span id="maxmtu_go">
+<a href="#maxmtu_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Mtu</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1581,7 +1877,9 @@ switch.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Multicast<wbr>Filtering<wbr>Mode</span>
+        <span id="multicastfilteringmode_go">
+<a href="#multicastfilteringmode_go" style="color: inherit; text-decoration: inherit;">Multicast<wbr>Filtering<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1591,7 +1889,9 @@ with the switch. Can be one of `legacyFiltering` or `snooping`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1600,7 +1900,9 @@ with the switch. Can be one of `legacyFiltering` or `snooping`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Netflow<wbr>Active<wbr>Flow<wbr>Timeout</span>
+        <span id="netflowactiveflowtimeout_go">
+<a href="#netflowactiveflowtimeout_go" style="color: inherit; text-decoration: inherit;">Netflow<wbr>Active<wbr>Flow<wbr>Timeout</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1611,7 +1913,9 @@ active flows are forced to be exported to the collector. Allowed range is
 
     <dt class="property-optional"
             title="Optional">
-        <span>Netflow<wbr>Collector<wbr>Ip<wbr>Address</span>
+        <span id="netflowcollectoripaddress_go">
+<a href="#netflowcollectoripaddress_go" style="color: inherit; text-decoration: inherit;">Netflow<wbr>Collector<wbr>Ip<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1622,7 +1926,9 @@ Switch Version 6.0 or later. Must be set before Netflow can be enabled.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Netflow<wbr>Collector<wbr>Port</span>
+        <span id="netflowcollectorport_go">
+<a href="#netflowcollectorport_go" style="color: inherit; text-decoration: inherit;">Netflow<wbr>Collector<wbr>Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1632,7 +1938,9 @@ must be set before Netflow can be enabled.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Netflow<wbr>Enabled</span>
+        <span id="netflowenabled_go">
+<a href="#netflowenabled_go" style="color: inherit; text-decoration: inherit;">Netflow<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1642,7 +1950,9 @@ applies to.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Netflow<wbr>Idle<wbr>Flow<wbr>Timeout</span>
+        <span id="netflowidleflowtimeout_go">
+<a href="#netflowidleflowtimeout_go" style="color: inherit; text-decoration: inherit;">Netflow<wbr>Idle<wbr>Flow<wbr>Timeout</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1653,7 +1963,9 @@ to `600`. Default: `15`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Netflow<wbr>Internal<wbr>Flows<wbr>Only</span>
+        <span id="netflowinternalflowsonly_go">
+<a href="#netflowinternalflowsonly_go" style="color: inherit; text-decoration: inherit;">Netflow<wbr>Internal<wbr>Flows<wbr>Only</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1664,7 +1976,9 @@ Default: `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Netflow<wbr>Observation<wbr>Domain<wbr>Id</span>
+        <span id="netflowobservationdomainid_go">
+<a href="#netflowobservationdomainid_go" style="color: inherit; text-decoration: inherit;">Netflow<wbr>Observation<wbr>Domain<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1674,7 +1988,9 @@ the Netflow collector.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Netflow<wbr>Sampling<wbr>Rate</span>
+        <span id="netflowsamplingrate_go">
+<a href="#netflowsamplingrate_go" style="color: inherit; text-decoration: inherit;">Netflow<wbr>Sampling<wbr>Rate</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1686,7 +2002,9 @@ indicates an analysis rate of 0.001%.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Network<wbr>Resource<wbr>Control<wbr>Enabled</span>
+        <span id="networkresourcecontrolenabled_go">
+<a href="#networkresourcecontrolenabled_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Resource<wbr>Control<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1696,7 +2014,9 @@ network I/O control. Default: `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Network<wbr>Resource<wbr>Control<wbr>Version</span>
+        <span id="networkresourcecontrolversion_go">
+<a href="#networkresourcecontrolversion_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Resource<wbr>Control<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1706,7 +2026,9 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Nfs<wbr>Maximum<wbr>Mbit</span>
+        <span id="nfsmaximummbit_go">
+<a href="#nfsmaximummbit_go" style="color: inherit; text-decoration: inherit;">Nfs<wbr>Maximum<wbr>Mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1715,7 +2037,9 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Nfs<wbr>Reservation<wbr>Mbit</span>
+        <span id="nfsreservationmbit_go">
+<a href="#nfsreservationmbit_go" style="color: inherit; text-decoration: inherit;">Nfs<wbr>Reservation<wbr>Mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1724,7 +2048,9 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Nfs<wbr>Share<wbr>Count</span>
+        <span id="nfssharecount_go">
+<a href="#nfssharecount_go" style="color: inherit; text-decoration: inherit;">Nfs<wbr>Share<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1733,7 +2059,9 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Nfs<wbr>Share<wbr>Level</span>
+        <span id="nfssharelevel_go">
+<a href="#nfssharelevel_go" style="color: inherit; text-decoration: inherit;">Nfs<wbr>Share<wbr>Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1742,7 +2070,9 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Notify<wbr>Switches</span>
+        <span id="notifyswitches_go">
+<a href="#notifyswitches_go" style="color: inherit; text-decoration: inherit;">Notify<wbr>Switches</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1752,7 +2082,9 @@ broadcast network of an uplink failover, triggering cache updates.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Port<wbr>Private<wbr>Secondary<wbr>Vlan<wbr>Id</span>
+        <span id="portprivatesecondaryvlanid_go">
+<a href="#portprivatesecondaryvlanid_go" style="color: inherit; text-decoration: inherit;">Port<wbr>Private<wbr>Secondary<wbr>Vlan<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1762,7 +2094,9 @@ ID when using private VLANs.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Standby<wbr>Uplinks</span>
+        <span id="standbyuplinks_go">
+<a href="#standbyuplinks_go" style="color: inherit; text-decoration: inherit;">Standby<wbr>Uplinks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1774,7 +2108,9 @@ here for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1783,7 +2119,9 @@ here for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Teaming<wbr>Policy</span>
+        <span id="teamingpolicy_go">
+<a href="#teamingpolicy_go" style="color: inherit; text-decoration: inherit;">Teaming<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1794,7 +2132,9 @@ here for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tx<wbr>Uplink</span>
+        <span id="txuplink_go">
+<a href="#txuplink_go" style="color: inherit; text-decoration: inherit;">Tx<wbr>Uplink</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1804,7 +2144,9 @@ this policy applies to its DVS uplinks.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Uplinks</span>
+        <span id="uplinks_go">
+<a href="#uplinks_go" style="color: inherit; text-decoration: inherit;">Uplinks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1817,7 +2159,9 @@ use this option.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vdp<wbr>Maximum<wbr>Mbit</span>
+        <span id="vdpmaximummbit_go">
+<a href="#vdpmaximummbit_go" style="color: inherit; text-decoration: inherit;">Vdp<wbr>Maximum<wbr>Mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1826,7 +2170,9 @@ use this option.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vdp<wbr>Reservation<wbr>Mbit</span>
+        <span id="vdpreservationmbit_go">
+<a href="#vdpreservationmbit_go" style="color: inherit; text-decoration: inherit;">Vdp<wbr>Reservation<wbr>Mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1835,7 +2181,9 @@ use this option.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vdp<wbr>Share<wbr>Count</span>
+        <span id="vdpsharecount_go">
+<a href="#vdpsharecount_go" style="color: inherit; text-decoration: inherit;">Vdp<wbr>Share<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1844,7 +2192,9 @@ use this option.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vdp<wbr>Share<wbr>Level</span>
+        <span id="vdpsharelevel_go">
+<a href="#vdpsharelevel_go" style="color: inherit; text-decoration: inherit;">Vdp<wbr>Share<wbr>Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1853,7 +2203,9 @@ use this option.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Version</span>
+        <span id="version_go">
+<a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1865,7 +2217,9 @@ downgraded.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Virtualmachine<wbr>Maximum<wbr>Mbit</span>
+        <span id="virtualmachinemaximummbit_go">
+<a href="#virtualmachinemaximummbit_go" style="color: inherit; text-decoration: inherit;">Virtualmachine<wbr>Maximum<wbr>Mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1874,7 +2228,9 @@ downgraded.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Virtualmachine<wbr>Reservation<wbr>Mbit</span>
+        <span id="virtualmachinereservationmbit_go">
+<a href="#virtualmachinereservationmbit_go" style="color: inherit; text-decoration: inherit;">Virtualmachine<wbr>Reservation<wbr>Mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1883,7 +2239,9 @@ downgraded.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Virtualmachine<wbr>Share<wbr>Count</span>
+        <span id="virtualmachinesharecount_go">
+<a href="#virtualmachinesharecount_go" style="color: inherit; text-decoration: inherit;">Virtualmachine<wbr>Share<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1892,7 +2250,9 @@ downgraded.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Virtualmachine<wbr>Share<wbr>Level</span>
+        <span id="virtualmachinesharelevel_go">
+<a href="#virtualmachinesharelevel_go" style="color: inherit; text-decoration: inherit;">Virtualmachine<wbr>Share<wbr>Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1901,7 +2261,9 @@ downgraded.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vlan<wbr>Id</span>
+        <span id="vlanid_go">
+<a href="#vlanid_go" style="color: inherit; text-decoration: inherit;">Vlan<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1910,7 +2272,9 @@ downgraded.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vlan<wbr>Ranges</span>
+        <span id="vlanranges_go">
+<a href="#vlanranges_go" style="color: inherit; text-decoration: inherit;">Vlan<wbr>Ranges</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributedvirtualswitchvlanrange">[]Distributed<wbr>Virtual<wbr>Switch<wbr>Vlan<wbr>Range</a></span>
     </dt>
@@ -1922,7 +2286,9 @@ below:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vmotion<wbr>Maximum<wbr>Mbit</span>
+        <span id="vmotionmaximummbit_go">
+<a href="#vmotionmaximummbit_go" style="color: inherit; text-decoration: inherit;">Vmotion<wbr>Maximum<wbr>Mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1931,7 +2297,9 @@ below:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vmotion<wbr>Reservation<wbr>Mbit</span>
+        <span id="vmotionreservationmbit_go">
+<a href="#vmotionreservationmbit_go" style="color: inherit; text-decoration: inherit;">Vmotion<wbr>Reservation<wbr>Mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1940,7 +2308,9 @@ below:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vmotion<wbr>Share<wbr>Count</span>
+        <span id="vmotionsharecount_go">
+<a href="#vmotionsharecount_go" style="color: inherit; text-decoration: inherit;">Vmotion<wbr>Share<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1949,7 +2319,9 @@ below:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vmotion<wbr>Share<wbr>Level</span>
+        <span id="vmotionsharelevel_go">
+<a href="#vmotionsharelevel_go" style="color: inherit; text-decoration: inherit;">Vmotion<wbr>Share<wbr>Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1958,7 +2330,9 @@ below:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vsan<wbr>Maximum<wbr>Mbit</span>
+        <span id="vsanmaximummbit_go">
+<a href="#vsanmaximummbit_go" style="color: inherit; text-decoration: inherit;">Vsan<wbr>Maximum<wbr>Mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1967,7 +2341,9 @@ below:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vsan<wbr>Reservation<wbr>Mbit</span>
+        <span id="vsanreservationmbit_go">
+<a href="#vsanreservationmbit_go" style="color: inherit; text-decoration: inherit;">Vsan<wbr>Reservation<wbr>Mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1976,7 +2352,9 @@ below:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vsan<wbr>Share<wbr>Count</span>
+        <span id="vsansharecount_go">
+<a href="#vsansharecount_go" style="color: inherit; text-decoration: inherit;">Vsan<wbr>Share<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1985,7 +2363,9 @@ below:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vsan<wbr>Share<wbr>Level</span>
+        <span id="vsansharelevel_go">
+<a href="#vsansharelevel_go" style="color: inherit; text-decoration: inherit;">Vsan<wbr>Share<wbr>Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2001,7 +2381,9 @@ below:
 
     <dt class="property-required"
             title="Required">
-        <span>datacenter<wbr>Id</span>
+        <span id="datacenterid_nodejs">
+<a href="#datacenterid_nodejs" style="color: inherit; text-decoration: inherit;">datacenter<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2011,7 +2393,9 @@ virtual switch will be created. Forces a new resource if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>active<wbr>Uplinks</span>
+        <span id="activeuplinks_nodejs">
+<a href="#activeuplinks_nodejs" style="color: inherit; text-decoration: inherit;">active<wbr>Uplinks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -2023,7 +2407,9 @@ here for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>allow<wbr>Forged<wbr>Transmits</span>
+        <span id="allowforgedtransmits_nodejs">
+<a href="#allowforgedtransmits_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Forged<wbr>Transmits</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -2034,7 +2420,9 @@ address than that of its own.
 
     <dt class="property-optional"
             title="Optional">
-        <span>allow<wbr>Mac<wbr>Changes</span>
+        <span id="allowmacchanges_nodejs">
+<a href="#allowmacchanges_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Mac<wbr>Changes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -2044,7 +2432,9 @@ Control (MAC) address can be changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>allow<wbr>Promiscuous</span>
+        <span id="allowpromiscuous_nodejs">
+<a href="#allowpromiscuous_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Promiscuous</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -2054,7 +2444,9 @@ flag indicates whether or not all traffic is seen on a given port.
 
     <dt class="property-optional"
             title="Optional">
-        <span>block<wbr>All<wbr>Ports</span>
+        <span id="blockallports_nodejs">
+<a href="#blockallports_nodejs" style="color: inherit; text-decoration: inherit;">block<wbr>All<wbr>Ports</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -2065,7 +2457,9 @@ virtual devices.
 
     <dt class="property-optional"
             title="Optional">
-        <span>check<wbr>Beacon</span>
+        <span id="checkbeacon_nodejs">
+<a href="#checkbeacon_nodejs" style="color: inherit; text-decoration: inherit;">check<wbr>Beacon</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -2075,7 +2469,9 @@ to detect NIC failure.
 
     <dt class="property-optional"
             title="Optional">
-        <span>contact<wbr>Detail</span>
+        <span id="contactdetail_nodejs">
+<a href="#contactdetail_nodejs" style="color: inherit; text-decoration: inherit;">contact<wbr>Detail</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2085,7 +2481,9 @@ who is responsible for the DVS.
 
     <dt class="property-optional"
             title="Optional">
-        <span>contact<wbr>Name</span>
+        <span id="contactname_nodejs">
+<a href="#contactname_nodejs" style="color: inherit; text-decoration: inherit;">contact<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2095,7 +2493,9 @@ DVS.
 
     <dt class="property-optional"
             title="Optional">
-        <span>custom<wbr>Attributes</span>
+        <span id="customattributes_nodejs">
+<a href="#customattributes_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Attributes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -2105,7 +2505,9 @@ value strings to set for virtual switch.
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2114,7 +2516,9 @@ value strings to set for virtual switch.
 
     <dt class="property-optional"
             title="Optional">
-        <span>directpath<wbr>Gen2Allowed</span>
+        <span id="directpathgen2allowed_nodejs">
+<a href="#directpathgen2allowed_nodejs" style="color: inherit; text-decoration: inherit;">directpath<wbr>Gen2Allowed</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -2124,7 +2528,9 @@ for which this policy applies to.
 
     <dt class="property-optional"
             title="Optional">
-        <span>egress<wbr>Shaping<wbr>Average<wbr>Bandwidth</span>
+        <span id="egressshapingaveragebandwidth_nodejs">
+<a href="#egressshapingaveragebandwidth_nodejs" style="color: inherit; text-decoration: inherit;">egress<wbr>Shaping<wbr>Average<wbr>Bandwidth</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -2134,7 +2540,9 @@ per second if egress traffic shaping is enabled on the port.
 
     <dt class="property-optional"
             title="Optional">
-        <span>egress<wbr>Shaping<wbr>Burst<wbr>Size</span>
+        <span id="egressshapingburstsize_nodejs">
+<a href="#egressshapingburstsize_nodejs" style="color: inherit; text-decoration: inherit;">egress<wbr>Shaping<wbr>Burst<wbr>Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -2144,7 +2552,9 @@ bytes if egress traffic shaping is enabled on the port.
 
     <dt class="property-optional"
             title="Optional">
-        <span>egress<wbr>Shaping<wbr>Enabled</span>
+        <span id="egressshapingenabled_nodejs">
+<a href="#egressshapingenabled_nodejs" style="color: inherit; text-decoration: inherit;">egress<wbr>Shaping<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -2154,7 +2564,9 @@ on the port for egress traffic.
 
     <dt class="property-optional"
             title="Optional">
-        <span>egress<wbr>Shaping<wbr>Peak<wbr>Bandwidth</span>
+        <span id="egressshapingpeakbandwidth_nodejs">
+<a href="#egressshapingpeakbandwidth_nodejs" style="color: inherit; text-decoration: inherit;">egress<wbr>Shaping<wbr>Peak<wbr>Bandwidth</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -2164,7 +2576,9 @@ in bits per second if egress traffic shaping is enabled on the port.
 
     <dt class="property-optional"
             title="Optional">
-        <span>failback</span>
+        <span id="failback_nodejs">
+<a href="#failback_nodejs" style="color: inherit; text-decoration: inherit;">failback</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -2174,7 +2588,9 @@ uplinks higher in precedence when they come back up.
 
     <dt class="property-optional"
             title="Optional">
-        <span>faulttolerance<wbr>Maximum<wbr>Mbit</span>
+        <span id="faulttolerancemaximummbit_nodejs">
+<a href="#faulttolerancemaximummbit_nodejs" style="color: inherit; text-decoration: inherit;">faulttolerance<wbr>Maximum<wbr>Mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -2183,7 +2599,9 @@ uplinks higher in precedence when they come back up.
 
     <dt class="property-optional"
             title="Optional">
-        <span>faulttolerance<wbr>Reservation<wbr>Mbit</span>
+        <span id="faulttolerancereservationmbit_nodejs">
+<a href="#faulttolerancereservationmbit_nodejs" style="color: inherit; text-decoration: inherit;">faulttolerance<wbr>Reservation<wbr>Mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -2192,7 +2610,9 @@ uplinks higher in precedence when they come back up.
 
     <dt class="property-optional"
             title="Optional">
-        <span>faulttolerance<wbr>Share<wbr>Count</span>
+        <span id="faulttolerancesharecount_nodejs">
+<a href="#faulttolerancesharecount_nodejs" style="color: inherit; text-decoration: inherit;">faulttolerance<wbr>Share<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -2201,7 +2621,9 @@ uplinks higher in precedence when they come back up.
 
     <dt class="property-optional"
             title="Optional">
-        <span>faulttolerance<wbr>Share<wbr>Level</span>
+        <span id="faulttolerancesharelevel_nodejs">
+<a href="#faulttolerancesharelevel_nodejs" style="color: inherit; text-decoration: inherit;">faulttolerance<wbr>Share<wbr>Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2210,7 +2632,9 @@ uplinks higher in precedence when they come back up.
 
     <dt class="property-optional"
             title="Optional">
-        <span>folder</span>
+        <span id="folder_nodejs">
+<a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2220,7 +2644,9 @@ if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>hbr<wbr>Maximum<wbr>Mbit</span>
+        <span id="hbrmaximummbit_nodejs">
+<a href="#hbrmaximummbit_nodejs" style="color: inherit; text-decoration: inherit;">hbr<wbr>Maximum<wbr>Mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -2229,7 +2655,9 @@ if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>hbr<wbr>Reservation<wbr>Mbit</span>
+        <span id="hbrreservationmbit_nodejs">
+<a href="#hbrreservationmbit_nodejs" style="color: inherit; text-decoration: inherit;">hbr<wbr>Reservation<wbr>Mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -2238,7 +2666,9 @@ if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>hbr<wbr>Share<wbr>Count</span>
+        <span id="hbrsharecount_nodejs">
+<a href="#hbrsharecount_nodejs" style="color: inherit; text-decoration: inherit;">hbr<wbr>Share<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -2247,7 +2677,9 @@ if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>hbr<wbr>Share<wbr>Level</span>
+        <span id="hbrsharelevel_nodejs">
+<a href="#hbrsharelevel_nodejs" style="color: inherit; text-decoration: inherit;">hbr<wbr>Share<wbr>Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2256,7 +2688,9 @@ if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>hosts</span>
+        <span id="hosts_nodejs">
+<a href="#hosts_nodejs" style="color: inherit; text-decoration: inherit;">hosts</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributedvirtualswitchhost">Distributed<wbr>Virtual<wbr>Switch<wbr>Host[]</a></span>
     </dt>
@@ -2266,7 +2700,9 @@ options are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>ingress<wbr>Shaping<wbr>Average<wbr>Bandwidth</span>
+        <span id="ingressshapingaveragebandwidth_nodejs">
+<a href="#ingressshapingaveragebandwidth_nodejs" style="color: inherit; text-decoration: inherit;">ingress<wbr>Shaping<wbr>Average<wbr>Bandwidth</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -2276,7 +2712,9 @@ bits per second if ingress traffic shaping is enabled on the port.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ingress<wbr>Shaping<wbr>Burst<wbr>Size</span>
+        <span id="ingressshapingburstsize_nodejs">
+<a href="#ingressshapingburstsize_nodejs" style="color: inherit; text-decoration: inherit;">ingress<wbr>Shaping<wbr>Burst<wbr>Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -2286,7 +2724,9 @@ bytes if ingress traffic shaping is enabled on the port.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ingress<wbr>Shaping<wbr>Enabled</span>
+        <span id="ingressshapingenabled_nodejs">
+<a href="#ingressshapingenabled_nodejs" style="color: inherit; text-decoration: inherit;">ingress<wbr>Shaping<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -2296,7 +2736,9 @@ enabled on the port for ingress traffic.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ingress<wbr>Shaping<wbr>Peak<wbr>Bandwidth</span>
+        <span id="ingressshapingpeakbandwidth_nodejs">
+<a href="#ingressshapingpeakbandwidth_nodejs" style="color: inherit; text-decoration: inherit;">ingress<wbr>Shaping<wbr>Peak<wbr>Bandwidth</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -2306,7 +2748,9 @@ bursts in bits per second if ingress traffic shaping is enabled on the port.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ipv4Address</span>
+        <span id="ipv4address_nodejs">
+<a href="#ipv4address_nodejs" style="color: inherit; text-decoration: inherit;">ipv4Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2317,7 +2761,9 @@ below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>iscsi<wbr>Maximum<wbr>Mbit</span>
+        <span id="iscsimaximummbit_nodejs">
+<a href="#iscsimaximummbit_nodejs" style="color: inherit; text-decoration: inherit;">iscsi<wbr>Maximum<wbr>Mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -2326,7 +2772,9 @@ below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>iscsi<wbr>Reservation<wbr>Mbit</span>
+        <span id="iscsireservationmbit_nodejs">
+<a href="#iscsireservationmbit_nodejs" style="color: inherit; text-decoration: inherit;">iscsi<wbr>Reservation<wbr>Mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -2335,7 +2783,9 @@ below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>iscsi<wbr>Share<wbr>Count</span>
+        <span id="iscsisharecount_nodejs">
+<a href="#iscsisharecount_nodejs" style="color: inherit; text-decoration: inherit;">iscsi<wbr>Share<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -2344,7 +2794,9 @@ below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>iscsi<wbr>Share<wbr>Level</span>
+        <span id="iscsisharelevel_nodejs">
+<a href="#iscsisharelevel_nodejs" style="color: inherit; text-decoration: inherit;">iscsi<wbr>Share<wbr>Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2353,7 +2805,9 @@ below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>lacp<wbr>Api<wbr>Version</span>
+        <span id="lacpapiversion_nodejs">
+<a href="#lacpapiversion_nodejs" style="color: inherit; text-decoration: inherit;">lacp<wbr>Api<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2364,7 +2818,9 @@ version to use with the switch. Possible values are `singleLag` and
 
     <dt class="property-optional"
             title="Optional">
-        <span>lacp<wbr>Enabled</span>
+        <span id="lacpenabled_nodejs">
+<a href="#lacpenabled_nodejs" style="color: inherit; text-decoration: inherit;">lacp<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -2374,7 +2830,9 @@ applies to.
 
     <dt class="property-optional"
             title="Optional">
-        <span>lacp<wbr>Mode</span>
+        <span id="lacpmode_nodejs">
+<a href="#lacpmode_nodejs" style="color: inherit; text-decoration: inherit;">lacp<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2383,7 +2841,9 @@ applies to.
 
     <dt class="property-optional"
             title="Optional">
-        <span>link<wbr>Discovery<wbr>Operation</span>
+        <span id="linkdiscoveryoperation_nodejs">
+<a href="#linkdiscoveryoperation_nodejs" style="color: inherit; text-decoration: inherit;">link<wbr>Discovery<wbr>Operation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2393,7 +2853,9 @@ for link discovery traffic.
 
     <dt class="property-optional"
             title="Optional">
-        <span>link<wbr>Discovery<wbr>Protocol</span>
+        <span id="linkdiscoveryprotocol_nodejs">
+<a href="#linkdiscoveryprotocol_nodejs" style="color: inherit; text-decoration: inherit;">link<wbr>Discovery<wbr>Protocol</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2403,7 +2865,9 @@ types are `cdp` and `lldp`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>management<wbr>Maximum<wbr>Mbit</span>
+        <span id="managementmaximummbit_nodejs">
+<a href="#managementmaximummbit_nodejs" style="color: inherit; text-decoration: inherit;">management<wbr>Maximum<wbr>Mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -2412,7 +2876,9 @@ types are `cdp` and `lldp`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>management<wbr>Reservation<wbr>Mbit</span>
+        <span id="managementreservationmbit_nodejs">
+<a href="#managementreservationmbit_nodejs" style="color: inherit; text-decoration: inherit;">management<wbr>Reservation<wbr>Mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -2421,7 +2887,9 @@ types are `cdp` and `lldp`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>management<wbr>Share<wbr>Count</span>
+        <span id="managementsharecount_nodejs">
+<a href="#managementsharecount_nodejs" style="color: inherit; text-decoration: inherit;">management<wbr>Share<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -2430,7 +2898,9 @@ types are `cdp` and `lldp`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>management<wbr>Share<wbr>Level</span>
+        <span id="managementsharelevel_nodejs">
+<a href="#managementsharelevel_nodejs" style="color: inherit; text-decoration: inherit;">management<wbr>Share<wbr>Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2439,7 +2909,9 @@ types are `cdp` and `lldp`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Mtu</span>
+        <span id="maxmtu_nodejs">
+<a href="#maxmtu_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Mtu</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -2449,7 +2921,9 @@ switch.
 
     <dt class="property-optional"
             title="Optional">
-        <span>multicast<wbr>Filtering<wbr>Mode</span>
+        <span id="multicastfilteringmode_nodejs">
+<a href="#multicastfilteringmode_nodejs" style="color: inherit; text-decoration: inherit;">multicast<wbr>Filtering<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2459,7 +2933,9 @@ with the switch. Can be one of `legacyFiltering` or `snooping`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2468,7 +2944,9 @@ with the switch. Can be one of `legacyFiltering` or `snooping`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>netflow<wbr>Active<wbr>Flow<wbr>Timeout</span>
+        <span id="netflowactiveflowtimeout_nodejs">
+<a href="#netflowactiveflowtimeout_nodejs" style="color: inherit; text-decoration: inherit;">netflow<wbr>Active<wbr>Flow<wbr>Timeout</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -2479,7 +2957,9 @@ active flows are forced to be exported to the collector. Allowed range is
 
     <dt class="property-optional"
             title="Optional">
-        <span>netflow<wbr>Collector<wbr>Ip<wbr>Address</span>
+        <span id="netflowcollectoripaddress_nodejs">
+<a href="#netflowcollectoripaddress_nodejs" style="color: inherit; text-decoration: inherit;">netflow<wbr>Collector<wbr>Ip<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2490,7 +2970,9 @@ Switch Version 6.0 or later. Must be set before Netflow can be enabled.
 
     <dt class="property-optional"
             title="Optional">
-        <span>netflow<wbr>Collector<wbr>Port</span>
+        <span id="netflowcollectorport_nodejs">
+<a href="#netflowcollectorport_nodejs" style="color: inherit; text-decoration: inherit;">netflow<wbr>Collector<wbr>Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -2500,7 +2982,9 @@ must be set before Netflow can be enabled.
 
     <dt class="property-optional"
             title="Optional">
-        <span>netflow<wbr>Enabled</span>
+        <span id="netflowenabled_nodejs">
+<a href="#netflowenabled_nodejs" style="color: inherit; text-decoration: inherit;">netflow<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -2510,7 +2994,9 @@ applies to.
 
     <dt class="property-optional"
             title="Optional">
-        <span>netflow<wbr>Idle<wbr>Flow<wbr>Timeout</span>
+        <span id="netflowidleflowtimeout_nodejs">
+<a href="#netflowidleflowtimeout_nodejs" style="color: inherit; text-decoration: inherit;">netflow<wbr>Idle<wbr>Flow<wbr>Timeout</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -2521,7 +3007,9 @@ to `600`. Default: `15`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>netflow<wbr>Internal<wbr>Flows<wbr>Only</span>
+        <span id="netflowinternalflowsonly_nodejs">
+<a href="#netflowinternalflowsonly_nodejs" style="color: inherit; text-decoration: inherit;">netflow<wbr>Internal<wbr>Flows<wbr>Only</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -2532,7 +3020,9 @@ Default: `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>netflow<wbr>Observation<wbr>Domain<wbr>Id</span>
+        <span id="netflowobservationdomainid_nodejs">
+<a href="#netflowobservationdomainid_nodejs" style="color: inherit; text-decoration: inherit;">netflow<wbr>Observation<wbr>Domain<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -2542,7 +3032,9 @@ the Netflow collector.
 
     <dt class="property-optional"
             title="Optional">
-        <span>netflow<wbr>Sampling<wbr>Rate</span>
+        <span id="netflowsamplingrate_nodejs">
+<a href="#netflowsamplingrate_nodejs" style="color: inherit; text-decoration: inherit;">netflow<wbr>Sampling<wbr>Rate</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -2554,7 +3046,9 @@ indicates an analysis rate of 0.001%.
 
     <dt class="property-optional"
             title="Optional">
-        <span>network<wbr>Resource<wbr>Control<wbr>Enabled</span>
+        <span id="networkresourcecontrolenabled_nodejs">
+<a href="#networkresourcecontrolenabled_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Resource<wbr>Control<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -2564,7 +3058,9 @@ network I/O control. Default: `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>network<wbr>Resource<wbr>Control<wbr>Version</span>
+        <span id="networkresourcecontrolversion_nodejs">
+<a href="#networkresourcecontrolversion_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Resource<wbr>Control<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2574,7 +3070,9 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>nfs<wbr>Maximum<wbr>Mbit</span>
+        <span id="nfsmaximummbit_nodejs">
+<a href="#nfsmaximummbit_nodejs" style="color: inherit; text-decoration: inherit;">nfs<wbr>Maximum<wbr>Mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -2583,7 +3081,9 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>nfs<wbr>Reservation<wbr>Mbit</span>
+        <span id="nfsreservationmbit_nodejs">
+<a href="#nfsreservationmbit_nodejs" style="color: inherit; text-decoration: inherit;">nfs<wbr>Reservation<wbr>Mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -2592,7 +3092,9 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>nfs<wbr>Share<wbr>Count</span>
+        <span id="nfssharecount_nodejs">
+<a href="#nfssharecount_nodejs" style="color: inherit; text-decoration: inherit;">nfs<wbr>Share<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -2601,7 +3103,9 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>nfs<wbr>Share<wbr>Level</span>
+        <span id="nfssharelevel_nodejs">
+<a href="#nfssharelevel_nodejs" style="color: inherit; text-decoration: inherit;">nfs<wbr>Share<wbr>Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2610,7 +3114,9 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>notify<wbr>Switches</span>
+        <span id="notifyswitches_nodejs">
+<a href="#notifyswitches_nodejs" style="color: inherit; text-decoration: inherit;">notify<wbr>Switches</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -2620,7 +3126,9 @@ broadcast network of an uplink failover, triggering cache updates.
 
     <dt class="property-optional"
             title="Optional">
-        <span>port<wbr>Private<wbr>Secondary<wbr>Vlan<wbr>Id</span>
+        <span id="portprivatesecondaryvlanid_nodejs">
+<a href="#portprivatesecondaryvlanid_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Private<wbr>Secondary<wbr>Vlan<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -2630,7 +3138,9 @@ ID when using private VLANs.
 
     <dt class="property-optional"
             title="Optional">
-        <span>standby<wbr>Uplinks</span>
+        <span id="standbyuplinks_nodejs">
+<a href="#standbyuplinks_nodejs" style="color: inherit; text-decoration: inherit;">standby<wbr>Uplinks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -2642,7 +3152,9 @@ here for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -2651,7 +3163,9 @@ here for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>teaming<wbr>Policy</span>
+        <span id="teamingpolicy_nodejs">
+<a href="#teamingpolicy_nodejs" style="color: inherit; text-decoration: inherit;">teaming<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2662,7 +3176,9 @@ here for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tx<wbr>Uplink</span>
+        <span id="txuplink_nodejs">
+<a href="#txuplink_nodejs" style="color: inherit; text-decoration: inherit;">tx<wbr>Uplink</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -2672,7 +3188,9 @@ this policy applies to its DVS uplinks.
 
     <dt class="property-optional"
             title="Optional">
-        <span>uplinks</span>
+        <span id="uplinks_nodejs">
+<a href="#uplinks_nodejs" style="color: inherit; text-decoration: inherit;">uplinks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -2685,7 +3203,9 @@ use this option.
 
     <dt class="property-optional"
             title="Optional">
-        <span>vdp<wbr>Maximum<wbr>Mbit</span>
+        <span id="vdpmaximummbit_nodejs">
+<a href="#vdpmaximummbit_nodejs" style="color: inherit; text-decoration: inherit;">vdp<wbr>Maximum<wbr>Mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -2694,7 +3214,9 @@ use this option.
 
     <dt class="property-optional"
             title="Optional">
-        <span>vdp<wbr>Reservation<wbr>Mbit</span>
+        <span id="vdpreservationmbit_nodejs">
+<a href="#vdpreservationmbit_nodejs" style="color: inherit; text-decoration: inherit;">vdp<wbr>Reservation<wbr>Mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -2703,7 +3225,9 @@ use this option.
 
     <dt class="property-optional"
             title="Optional">
-        <span>vdp<wbr>Share<wbr>Count</span>
+        <span id="vdpsharecount_nodejs">
+<a href="#vdpsharecount_nodejs" style="color: inherit; text-decoration: inherit;">vdp<wbr>Share<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -2712,7 +3236,9 @@ use this option.
 
     <dt class="property-optional"
             title="Optional">
-        <span>vdp<wbr>Share<wbr>Level</span>
+        <span id="vdpsharelevel_nodejs">
+<a href="#vdpsharelevel_nodejs" style="color: inherit; text-decoration: inherit;">vdp<wbr>Share<wbr>Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2721,7 +3247,9 @@ use this option.
 
     <dt class="property-optional"
             title="Optional">
-        <span>version</span>
+        <span id="version_nodejs">
+<a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2733,7 +3261,9 @@ downgraded.
 
     <dt class="property-optional"
             title="Optional">
-        <span>virtualmachine<wbr>Maximum<wbr>Mbit</span>
+        <span id="virtualmachinemaximummbit_nodejs">
+<a href="#virtualmachinemaximummbit_nodejs" style="color: inherit; text-decoration: inherit;">virtualmachine<wbr>Maximum<wbr>Mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -2742,7 +3272,9 @@ downgraded.
 
     <dt class="property-optional"
             title="Optional">
-        <span>virtualmachine<wbr>Reservation<wbr>Mbit</span>
+        <span id="virtualmachinereservationmbit_nodejs">
+<a href="#virtualmachinereservationmbit_nodejs" style="color: inherit; text-decoration: inherit;">virtualmachine<wbr>Reservation<wbr>Mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -2751,7 +3283,9 @@ downgraded.
 
     <dt class="property-optional"
             title="Optional">
-        <span>virtualmachine<wbr>Share<wbr>Count</span>
+        <span id="virtualmachinesharecount_nodejs">
+<a href="#virtualmachinesharecount_nodejs" style="color: inherit; text-decoration: inherit;">virtualmachine<wbr>Share<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -2760,7 +3294,9 @@ downgraded.
 
     <dt class="property-optional"
             title="Optional">
-        <span>virtualmachine<wbr>Share<wbr>Level</span>
+        <span id="virtualmachinesharelevel_nodejs">
+<a href="#virtualmachinesharelevel_nodejs" style="color: inherit; text-decoration: inherit;">virtualmachine<wbr>Share<wbr>Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2769,7 +3305,9 @@ downgraded.
 
     <dt class="property-optional"
             title="Optional">
-        <span>vlan<wbr>Id</span>
+        <span id="vlanid_nodejs">
+<a href="#vlanid_nodejs" style="color: inherit; text-decoration: inherit;">vlan<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -2778,7 +3316,9 @@ downgraded.
 
     <dt class="property-optional"
             title="Optional">
-        <span>vlan<wbr>Ranges</span>
+        <span id="vlanranges_nodejs">
+<a href="#vlanranges_nodejs" style="color: inherit; text-decoration: inherit;">vlan<wbr>Ranges</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributedvirtualswitchvlanrange">Distributed<wbr>Virtual<wbr>Switch<wbr>Vlan<wbr>Range[]</a></span>
     </dt>
@@ -2790,7 +3330,9 @@ below:
 
     <dt class="property-optional"
             title="Optional">
-        <span>vmotion<wbr>Maximum<wbr>Mbit</span>
+        <span id="vmotionmaximummbit_nodejs">
+<a href="#vmotionmaximummbit_nodejs" style="color: inherit; text-decoration: inherit;">vmotion<wbr>Maximum<wbr>Mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -2799,7 +3341,9 @@ below:
 
     <dt class="property-optional"
             title="Optional">
-        <span>vmotion<wbr>Reservation<wbr>Mbit</span>
+        <span id="vmotionreservationmbit_nodejs">
+<a href="#vmotionreservationmbit_nodejs" style="color: inherit; text-decoration: inherit;">vmotion<wbr>Reservation<wbr>Mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -2808,7 +3352,9 @@ below:
 
     <dt class="property-optional"
             title="Optional">
-        <span>vmotion<wbr>Share<wbr>Count</span>
+        <span id="vmotionsharecount_nodejs">
+<a href="#vmotionsharecount_nodejs" style="color: inherit; text-decoration: inherit;">vmotion<wbr>Share<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -2817,7 +3363,9 @@ below:
 
     <dt class="property-optional"
             title="Optional">
-        <span>vmotion<wbr>Share<wbr>Level</span>
+        <span id="vmotionsharelevel_nodejs">
+<a href="#vmotionsharelevel_nodejs" style="color: inherit; text-decoration: inherit;">vmotion<wbr>Share<wbr>Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2826,7 +3374,9 @@ below:
 
     <dt class="property-optional"
             title="Optional">
-        <span>vsan<wbr>Maximum<wbr>Mbit</span>
+        <span id="vsanmaximummbit_nodejs">
+<a href="#vsanmaximummbit_nodejs" style="color: inherit; text-decoration: inherit;">vsan<wbr>Maximum<wbr>Mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -2835,7 +3385,9 @@ below:
 
     <dt class="property-optional"
             title="Optional">
-        <span>vsan<wbr>Reservation<wbr>Mbit</span>
+        <span id="vsanreservationmbit_nodejs">
+<a href="#vsanreservationmbit_nodejs" style="color: inherit; text-decoration: inherit;">vsan<wbr>Reservation<wbr>Mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -2844,7 +3396,9 @@ below:
 
     <dt class="property-optional"
             title="Optional">
-        <span>vsan<wbr>Share<wbr>Count</span>
+        <span id="vsansharecount_nodejs">
+<a href="#vsansharecount_nodejs" style="color: inherit; text-decoration: inherit;">vsan<wbr>Share<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -2853,7 +3407,9 @@ below:
 
     <dt class="property-optional"
             title="Optional">
-        <span>vsan<wbr>Share<wbr>Level</span>
+        <span id="vsansharelevel_nodejs">
+<a href="#vsansharelevel_nodejs" style="color: inherit; text-decoration: inherit;">vsan<wbr>Share<wbr>Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2869,7 +3425,9 @@ below:
 
     <dt class="property-required"
             title="Required">
-        <span>datacenter_<wbr>id</span>
+        <span id="datacenter_id_python">
+<a href="#datacenter_id_python" style="color: inherit; text-decoration: inherit;">datacenter_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2879,7 +3437,9 @@ virtual switch will be created. Forces a new resource if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>active_<wbr>uplinks</span>
+        <span id="active_uplinks_python">
+<a href="#active_uplinks_python" style="color: inherit; text-decoration: inherit;">active_<wbr>uplinks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -2891,7 +3451,9 @@ here for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>allow_<wbr>forged_<wbr>transmits</span>
+        <span id="allow_forged_transmits_python">
+<a href="#allow_forged_transmits_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>forged_<wbr>transmits</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2902,7 +3464,9 @@ address than that of its own.
 
     <dt class="property-optional"
             title="Optional">
-        <span>allow_<wbr>mac_<wbr>changes</span>
+        <span id="allow_mac_changes_python">
+<a href="#allow_mac_changes_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>mac_<wbr>changes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2912,7 +3476,9 @@ Control (MAC) address can be changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>allow_<wbr>promiscuous</span>
+        <span id="allow_promiscuous_python">
+<a href="#allow_promiscuous_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>promiscuous</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2922,7 +3488,9 @@ flag indicates whether or not all traffic is seen on a given port.
 
     <dt class="property-optional"
             title="Optional">
-        <span>block_<wbr>all_<wbr>ports</span>
+        <span id="block_all_ports_python">
+<a href="#block_all_ports_python" style="color: inherit; text-decoration: inherit;">block_<wbr>all_<wbr>ports</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2933,7 +3501,9 @@ virtual devices.
 
     <dt class="property-optional"
             title="Optional">
-        <span>check_<wbr>beacon</span>
+        <span id="check_beacon_python">
+<a href="#check_beacon_python" style="color: inherit; text-decoration: inherit;">check_<wbr>beacon</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2943,7 +3513,9 @@ to detect NIC failure.
 
     <dt class="property-optional"
             title="Optional">
-        <span>contact_<wbr>detail</span>
+        <span id="contact_detail_python">
+<a href="#contact_detail_python" style="color: inherit; text-decoration: inherit;">contact_<wbr>detail</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2953,7 +3525,9 @@ who is responsible for the DVS.
 
     <dt class="property-optional"
             title="Optional">
-        <span>contact_<wbr>name</span>
+        <span id="contact_name_python">
+<a href="#contact_name_python" style="color: inherit; text-decoration: inherit;">contact_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2963,7 +3537,9 @@ DVS.
 
     <dt class="property-optional"
             title="Optional">
-        <span>custom_<wbr>attributes</span>
+        <span id="custom_attributes_python">
+<a href="#custom_attributes_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>attributes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -2973,7 +3549,9 @@ value strings to set for virtual switch.
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2982,7 +3560,9 @@ value strings to set for virtual switch.
 
     <dt class="property-optional"
             title="Optional">
-        <span>directpath_<wbr>gen2_<wbr>allowed</span>
+        <span id="directpath_gen2_allowed_python">
+<a href="#directpath_gen2_allowed_python" style="color: inherit; text-decoration: inherit;">directpath_<wbr>gen2_<wbr>allowed</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2992,7 +3572,9 @@ for which this policy applies to.
 
     <dt class="property-optional"
             title="Optional">
-        <span>egress_<wbr>shaping_<wbr>average_<wbr>bandwidth</span>
+        <span id="egress_shaping_average_bandwidth_python">
+<a href="#egress_shaping_average_bandwidth_python" style="color: inherit; text-decoration: inherit;">egress_<wbr>shaping_<wbr>average_<wbr>bandwidth</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -3002,7 +3584,9 @@ per second if egress traffic shaping is enabled on the port.
 
     <dt class="property-optional"
             title="Optional">
-        <span>egress_<wbr>shaping_<wbr>burst_<wbr>size</span>
+        <span id="egress_shaping_burst_size_python">
+<a href="#egress_shaping_burst_size_python" style="color: inherit; text-decoration: inherit;">egress_<wbr>shaping_<wbr>burst_<wbr>size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -3012,7 +3596,9 @@ bytes if egress traffic shaping is enabled on the port.
 
     <dt class="property-optional"
             title="Optional">
-        <span>egress_<wbr>shaping_<wbr>enabled</span>
+        <span id="egress_shaping_enabled_python">
+<a href="#egress_shaping_enabled_python" style="color: inherit; text-decoration: inherit;">egress_<wbr>shaping_<wbr>enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -3022,7 +3608,9 @@ on the port for egress traffic.
 
     <dt class="property-optional"
             title="Optional">
-        <span>egress_<wbr>shaping_<wbr>peak_<wbr>bandwidth</span>
+        <span id="egress_shaping_peak_bandwidth_python">
+<a href="#egress_shaping_peak_bandwidth_python" style="color: inherit; text-decoration: inherit;">egress_<wbr>shaping_<wbr>peak_<wbr>bandwidth</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -3032,7 +3620,9 @@ in bits per second if egress traffic shaping is enabled on the port.
 
     <dt class="property-optional"
             title="Optional">
-        <span>failback</span>
+        <span id="failback_python">
+<a href="#failback_python" style="color: inherit; text-decoration: inherit;">failback</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -3042,7 +3632,9 @@ uplinks higher in precedence when they come back up.
 
     <dt class="property-optional"
             title="Optional">
-        <span>faulttolerance_<wbr>maximum_<wbr>mbit</span>
+        <span id="faulttolerance_maximum_mbit_python">
+<a href="#faulttolerance_maximum_mbit_python" style="color: inherit; text-decoration: inherit;">faulttolerance_<wbr>maximum_<wbr>mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -3051,7 +3643,9 @@ uplinks higher in precedence when they come back up.
 
     <dt class="property-optional"
             title="Optional">
-        <span>faulttolerance_<wbr>reservation_<wbr>mbit</span>
+        <span id="faulttolerance_reservation_mbit_python">
+<a href="#faulttolerance_reservation_mbit_python" style="color: inherit; text-decoration: inherit;">faulttolerance_<wbr>reservation_<wbr>mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -3060,7 +3654,9 @@ uplinks higher in precedence when they come back up.
 
     <dt class="property-optional"
             title="Optional">
-        <span>faulttolerance_<wbr>share_<wbr>count</span>
+        <span id="faulttolerance_share_count_python">
+<a href="#faulttolerance_share_count_python" style="color: inherit; text-decoration: inherit;">faulttolerance_<wbr>share_<wbr>count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -3069,7 +3665,9 @@ uplinks higher in precedence when they come back up.
 
     <dt class="property-optional"
             title="Optional">
-        <span>faulttolerance_<wbr>share_<wbr>level</span>
+        <span id="faulttolerance_share_level_python">
+<a href="#faulttolerance_share_level_python" style="color: inherit; text-decoration: inherit;">faulttolerance_<wbr>share_<wbr>level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3078,7 +3676,9 @@ uplinks higher in precedence when they come back up.
 
     <dt class="property-optional"
             title="Optional">
-        <span>folder</span>
+        <span id="folder_python">
+<a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3088,7 +3688,9 @@ if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>hbr_<wbr>maximum_<wbr>mbit</span>
+        <span id="hbr_maximum_mbit_python">
+<a href="#hbr_maximum_mbit_python" style="color: inherit; text-decoration: inherit;">hbr_<wbr>maximum_<wbr>mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -3097,7 +3699,9 @@ if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>hbr_<wbr>reservation_<wbr>mbit</span>
+        <span id="hbr_reservation_mbit_python">
+<a href="#hbr_reservation_mbit_python" style="color: inherit; text-decoration: inherit;">hbr_<wbr>reservation_<wbr>mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -3106,7 +3710,9 @@ if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>hbr_<wbr>share_<wbr>count</span>
+        <span id="hbr_share_count_python">
+<a href="#hbr_share_count_python" style="color: inherit; text-decoration: inherit;">hbr_<wbr>share_<wbr>count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -3115,7 +3721,9 @@ if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>hbr_<wbr>share_<wbr>level</span>
+        <span id="hbr_share_level_python">
+<a href="#hbr_share_level_python" style="color: inherit; text-decoration: inherit;">hbr_<wbr>share_<wbr>level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3124,7 +3732,9 @@ if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>hosts</span>
+        <span id="hosts_python">
+<a href="#hosts_python" style="color: inherit; text-decoration: inherit;">hosts</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributedvirtualswitchhost">List[Distributed<wbr>Virtual<wbr>Switch<wbr>Host]</a></span>
     </dt>
@@ -3134,7 +3744,9 @@ options are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>ingress_<wbr>shaping_<wbr>average_<wbr>bandwidth</span>
+        <span id="ingress_shaping_average_bandwidth_python">
+<a href="#ingress_shaping_average_bandwidth_python" style="color: inherit; text-decoration: inherit;">ingress_<wbr>shaping_<wbr>average_<wbr>bandwidth</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -3144,7 +3756,9 @@ bits per second if ingress traffic shaping is enabled on the port.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ingress_<wbr>shaping_<wbr>burst_<wbr>size</span>
+        <span id="ingress_shaping_burst_size_python">
+<a href="#ingress_shaping_burst_size_python" style="color: inherit; text-decoration: inherit;">ingress_<wbr>shaping_<wbr>burst_<wbr>size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -3154,7 +3768,9 @@ bytes if ingress traffic shaping is enabled on the port.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ingress_<wbr>shaping_<wbr>enabled</span>
+        <span id="ingress_shaping_enabled_python">
+<a href="#ingress_shaping_enabled_python" style="color: inherit; text-decoration: inherit;">ingress_<wbr>shaping_<wbr>enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -3164,7 +3780,9 @@ enabled on the port for ingress traffic.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ingress_<wbr>shaping_<wbr>peak_<wbr>bandwidth</span>
+        <span id="ingress_shaping_peak_bandwidth_python">
+<a href="#ingress_shaping_peak_bandwidth_python" style="color: inherit; text-decoration: inherit;">ingress_<wbr>shaping_<wbr>peak_<wbr>bandwidth</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -3174,7 +3792,9 @@ bursts in bits per second if ingress traffic shaping is enabled on the port.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ipv4_<wbr>address</span>
+        <span id="ipv4_address_python">
+<a href="#ipv4_address_python" style="color: inherit; text-decoration: inherit;">ipv4_<wbr>address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3185,7 +3805,9 @@ below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>iscsi_<wbr>maximum_<wbr>mbit</span>
+        <span id="iscsi_maximum_mbit_python">
+<a href="#iscsi_maximum_mbit_python" style="color: inherit; text-decoration: inherit;">iscsi_<wbr>maximum_<wbr>mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -3194,7 +3816,9 @@ below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>iscsi_<wbr>reservation_<wbr>mbit</span>
+        <span id="iscsi_reservation_mbit_python">
+<a href="#iscsi_reservation_mbit_python" style="color: inherit; text-decoration: inherit;">iscsi_<wbr>reservation_<wbr>mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -3203,7 +3827,9 @@ below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>iscsi_<wbr>share_<wbr>count</span>
+        <span id="iscsi_share_count_python">
+<a href="#iscsi_share_count_python" style="color: inherit; text-decoration: inherit;">iscsi_<wbr>share_<wbr>count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -3212,7 +3838,9 @@ below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>iscsi_<wbr>share_<wbr>level</span>
+        <span id="iscsi_share_level_python">
+<a href="#iscsi_share_level_python" style="color: inherit; text-decoration: inherit;">iscsi_<wbr>share_<wbr>level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3221,7 +3849,9 @@ below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>lacp_<wbr>api_<wbr>version</span>
+        <span id="lacp_api_version_python">
+<a href="#lacp_api_version_python" style="color: inherit; text-decoration: inherit;">lacp_<wbr>api_<wbr>version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3232,7 +3862,9 @@ version to use with the switch. Possible values are `singleLag` and
 
     <dt class="property-optional"
             title="Optional">
-        <span>lacp_<wbr>enabled</span>
+        <span id="lacp_enabled_python">
+<a href="#lacp_enabled_python" style="color: inherit; text-decoration: inherit;">lacp_<wbr>enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -3242,7 +3874,9 @@ applies to.
 
     <dt class="property-optional"
             title="Optional">
-        <span>lacp_<wbr>mode</span>
+        <span id="lacp_mode_python">
+<a href="#lacp_mode_python" style="color: inherit; text-decoration: inherit;">lacp_<wbr>mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3251,7 +3885,9 @@ applies to.
 
     <dt class="property-optional"
             title="Optional">
-        <span>link_<wbr>discovery_<wbr>operation</span>
+        <span id="link_discovery_operation_python">
+<a href="#link_discovery_operation_python" style="color: inherit; text-decoration: inherit;">link_<wbr>discovery_<wbr>operation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3261,7 +3897,9 @@ for link discovery traffic.
 
     <dt class="property-optional"
             title="Optional">
-        <span>link_<wbr>discovery_<wbr>protocol</span>
+        <span id="link_discovery_protocol_python">
+<a href="#link_discovery_protocol_python" style="color: inherit; text-decoration: inherit;">link_<wbr>discovery_<wbr>protocol</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3271,7 +3909,9 @@ types are `cdp` and `lldp`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>management_<wbr>maximum_<wbr>mbit</span>
+        <span id="management_maximum_mbit_python">
+<a href="#management_maximum_mbit_python" style="color: inherit; text-decoration: inherit;">management_<wbr>maximum_<wbr>mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -3280,7 +3920,9 @@ types are `cdp` and `lldp`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>management_<wbr>reservation_<wbr>mbit</span>
+        <span id="management_reservation_mbit_python">
+<a href="#management_reservation_mbit_python" style="color: inherit; text-decoration: inherit;">management_<wbr>reservation_<wbr>mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -3289,7 +3931,9 @@ types are `cdp` and `lldp`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>management_<wbr>share_<wbr>count</span>
+        <span id="management_share_count_python">
+<a href="#management_share_count_python" style="color: inherit; text-decoration: inherit;">management_<wbr>share_<wbr>count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -3298,7 +3942,9 @@ types are `cdp` and `lldp`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>management_<wbr>share_<wbr>level</span>
+        <span id="management_share_level_python">
+<a href="#management_share_level_python" style="color: inherit; text-decoration: inherit;">management_<wbr>share_<wbr>level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3307,7 +3953,9 @@ types are `cdp` and `lldp`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>max_<wbr>mtu</span>
+        <span id="max_mtu_python">
+<a href="#max_mtu_python" style="color: inherit; text-decoration: inherit;">max_<wbr>mtu</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -3317,7 +3965,9 @@ switch.
 
     <dt class="property-optional"
             title="Optional">
-        <span>multicast_<wbr>filtering_<wbr>mode</span>
+        <span id="multicast_filtering_mode_python">
+<a href="#multicast_filtering_mode_python" style="color: inherit; text-decoration: inherit;">multicast_<wbr>filtering_<wbr>mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3327,7 +3977,9 @@ with the switch. Can be one of `legacyFiltering` or `snooping`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3336,7 +3988,9 @@ with the switch. Can be one of `legacyFiltering` or `snooping`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>netflow_<wbr>active_<wbr>flow_<wbr>timeout</span>
+        <span id="netflow_active_flow_timeout_python">
+<a href="#netflow_active_flow_timeout_python" style="color: inherit; text-decoration: inherit;">netflow_<wbr>active_<wbr>flow_<wbr>timeout</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -3347,7 +4001,9 @@ active flows are forced to be exported to the collector. Allowed range is
 
     <dt class="property-optional"
             title="Optional">
-        <span>netflow_<wbr>collector_<wbr>ip_<wbr>address</span>
+        <span id="netflow_collector_ip_address_python">
+<a href="#netflow_collector_ip_address_python" style="color: inherit; text-decoration: inherit;">netflow_<wbr>collector_<wbr>ip_<wbr>address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3358,7 +4014,9 @@ Switch Version 6.0 or later. Must be set before Netflow can be enabled.
 
     <dt class="property-optional"
             title="Optional">
-        <span>netflow_<wbr>collector_<wbr>port</span>
+        <span id="netflow_collector_port_python">
+<a href="#netflow_collector_port_python" style="color: inherit; text-decoration: inherit;">netflow_<wbr>collector_<wbr>port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -3368,7 +4026,9 @@ must be set before Netflow can be enabled.
 
     <dt class="property-optional"
             title="Optional">
-        <span>netflow_<wbr>enabled</span>
+        <span id="netflow_enabled_python">
+<a href="#netflow_enabled_python" style="color: inherit; text-decoration: inherit;">netflow_<wbr>enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -3378,7 +4038,9 @@ applies to.
 
     <dt class="property-optional"
             title="Optional">
-        <span>netflow_<wbr>idle_<wbr>flow_<wbr>timeout</span>
+        <span id="netflow_idle_flow_timeout_python">
+<a href="#netflow_idle_flow_timeout_python" style="color: inherit; text-decoration: inherit;">netflow_<wbr>idle_<wbr>flow_<wbr>timeout</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -3389,7 +4051,9 @@ to `600`. Default: `15`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>netflow_<wbr>internal_<wbr>flows_<wbr>only</span>
+        <span id="netflow_internal_flows_only_python">
+<a href="#netflow_internal_flows_only_python" style="color: inherit; text-decoration: inherit;">netflow_<wbr>internal_<wbr>flows_<wbr>only</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -3400,7 +4064,9 @@ Default: `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>netflow_<wbr>observation_<wbr>domain_<wbr>id</span>
+        <span id="netflow_observation_domain_id_python">
+<a href="#netflow_observation_domain_id_python" style="color: inherit; text-decoration: inherit;">netflow_<wbr>observation_<wbr>domain_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -3410,7 +4076,9 @@ the Netflow collector.
 
     <dt class="property-optional"
             title="Optional">
-        <span>netflow_<wbr>sampling_<wbr>rate</span>
+        <span id="netflow_sampling_rate_python">
+<a href="#netflow_sampling_rate_python" style="color: inherit; text-decoration: inherit;">netflow_<wbr>sampling_<wbr>rate</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -3422,7 +4090,9 @@ indicates an analysis rate of 0.001%.
 
     <dt class="property-optional"
             title="Optional">
-        <span>network_<wbr>resource_<wbr>control_<wbr>enabled</span>
+        <span id="network_resource_control_enabled_python">
+<a href="#network_resource_control_enabled_python" style="color: inherit; text-decoration: inherit;">network_<wbr>resource_<wbr>control_<wbr>enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -3432,7 +4102,9 @@ network I/O control. Default: `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>network_<wbr>resource_<wbr>control_<wbr>version</span>
+        <span id="network_resource_control_version_python">
+<a href="#network_resource_control_version_python" style="color: inherit; text-decoration: inherit;">network_<wbr>resource_<wbr>control_<wbr>version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3442,7 +4114,9 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>nfs_<wbr>maximum_<wbr>mbit</span>
+        <span id="nfs_maximum_mbit_python">
+<a href="#nfs_maximum_mbit_python" style="color: inherit; text-decoration: inherit;">nfs_<wbr>maximum_<wbr>mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -3451,7 +4125,9 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>nfs_<wbr>reservation_<wbr>mbit</span>
+        <span id="nfs_reservation_mbit_python">
+<a href="#nfs_reservation_mbit_python" style="color: inherit; text-decoration: inherit;">nfs_<wbr>reservation_<wbr>mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -3460,7 +4136,9 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>nfs_<wbr>share_<wbr>count</span>
+        <span id="nfs_share_count_python">
+<a href="#nfs_share_count_python" style="color: inherit; text-decoration: inherit;">nfs_<wbr>share_<wbr>count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -3469,7 +4147,9 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>nfs_<wbr>share_<wbr>level</span>
+        <span id="nfs_share_level_python">
+<a href="#nfs_share_level_python" style="color: inherit; text-decoration: inherit;">nfs_<wbr>share_<wbr>level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3478,7 +4158,9 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>notify_<wbr>switches</span>
+        <span id="notify_switches_python">
+<a href="#notify_switches_python" style="color: inherit; text-decoration: inherit;">notify_<wbr>switches</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -3488,7 +4170,9 @@ broadcast network of an uplink failover, triggering cache updates.
 
     <dt class="property-optional"
             title="Optional">
-        <span>port_<wbr>private_<wbr>secondary_<wbr>vlan_<wbr>id</span>
+        <span id="port_private_secondary_vlan_id_python">
+<a href="#port_private_secondary_vlan_id_python" style="color: inherit; text-decoration: inherit;">port_<wbr>private_<wbr>secondary_<wbr>vlan_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -3498,7 +4182,9 @@ ID when using private VLANs.
 
     <dt class="property-optional"
             title="Optional">
-        <span>standby_<wbr>uplinks</span>
+        <span id="standby_uplinks_python">
+<a href="#standby_uplinks_python" style="color: inherit; text-decoration: inherit;">standby_<wbr>uplinks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -3510,7 +4196,9 @@ here for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -3519,7 +4207,9 @@ here for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>teaming_<wbr>policy</span>
+        <span id="teaming_policy_python">
+<a href="#teaming_policy_python" style="color: inherit; text-decoration: inherit;">teaming_<wbr>policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3530,7 +4220,9 @@ here for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tx_<wbr>uplink</span>
+        <span id="tx_uplink_python">
+<a href="#tx_uplink_python" style="color: inherit; text-decoration: inherit;">tx_<wbr>uplink</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -3540,7 +4232,9 @@ this policy applies to its DVS uplinks.
 
     <dt class="property-optional"
             title="Optional">
-        <span>uplinks</span>
+        <span id="uplinks_python">
+<a href="#uplinks_python" style="color: inherit; text-decoration: inherit;">uplinks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -3553,7 +4247,9 @@ use this option.
 
     <dt class="property-optional"
             title="Optional">
-        <span>vdp_<wbr>maximum_<wbr>mbit</span>
+        <span id="vdp_maximum_mbit_python">
+<a href="#vdp_maximum_mbit_python" style="color: inherit; text-decoration: inherit;">vdp_<wbr>maximum_<wbr>mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -3562,7 +4258,9 @@ use this option.
 
     <dt class="property-optional"
             title="Optional">
-        <span>vdp_<wbr>reservation_<wbr>mbit</span>
+        <span id="vdp_reservation_mbit_python">
+<a href="#vdp_reservation_mbit_python" style="color: inherit; text-decoration: inherit;">vdp_<wbr>reservation_<wbr>mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -3571,7 +4269,9 @@ use this option.
 
     <dt class="property-optional"
             title="Optional">
-        <span>vdp_<wbr>share_<wbr>count</span>
+        <span id="vdp_share_count_python">
+<a href="#vdp_share_count_python" style="color: inherit; text-decoration: inherit;">vdp_<wbr>share_<wbr>count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -3580,7 +4280,9 @@ use this option.
 
     <dt class="property-optional"
             title="Optional">
-        <span>vdp_<wbr>share_<wbr>level</span>
+        <span id="vdp_share_level_python">
+<a href="#vdp_share_level_python" style="color: inherit; text-decoration: inherit;">vdp_<wbr>share_<wbr>level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3589,7 +4291,9 @@ use this option.
 
     <dt class="property-optional"
             title="Optional">
-        <span>version</span>
+        <span id="version_python">
+<a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3601,7 +4305,9 @@ downgraded.
 
     <dt class="property-optional"
             title="Optional">
-        <span>virtualmachine_<wbr>maximum_<wbr>mbit</span>
+        <span id="virtualmachine_maximum_mbit_python">
+<a href="#virtualmachine_maximum_mbit_python" style="color: inherit; text-decoration: inherit;">virtualmachine_<wbr>maximum_<wbr>mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -3610,7 +4316,9 @@ downgraded.
 
     <dt class="property-optional"
             title="Optional">
-        <span>virtualmachine_<wbr>reservation_<wbr>mbit</span>
+        <span id="virtualmachine_reservation_mbit_python">
+<a href="#virtualmachine_reservation_mbit_python" style="color: inherit; text-decoration: inherit;">virtualmachine_<wbr>reservation_<wbr>mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -3619,7 +4327,9 @@ downgraded.
 
     <dt class="property-optional"
             title="Optional">
-        <span>virtualmachine_<wbr>share_<wbr>count</span>
+        <span id="virtualmachine_share_count_python">
+<a href="#virtualmachine_share_count_python" style="color: inherit; text-decoration: inherit;">virtualmachine_<wbr>share_<wbr>count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -3628,7 +4338,9 @@ downgraded.
 
     <dt class="property-optional"
             title="Optional">
-        <span>virtualmachine_<wbr>share_<wbr>level</span>
+        <span id="virtualmachine_share_level_python">
+<a href="#virtualmachine_share_level_python" style="color: inherit; text-decoration: inherit;">virtualmachine_<wbr>share_<wbr>level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3637,7 +4349,9 @@ downgraded.
 
     <dt class="property-optional"
             title="Optional">
-        <span>vlan_<wbr>id</span>
+        <span id="vlan_id_python">
+<a href="#vlan_id_python" style="color: inherit; text-decoration: inherit;">vlan_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -3646,7 +4360,9 @@ downgraded.
 
     <dt class="property-optional"
             title="Optional">
-        <span>vlan_<wbr>ranges</span>
+        <span id="vlan_ranges_python">
+<a href="#vlan_ranges_python" style="color: inherit; text-decoration: inherit;">vlan_<wbr>ranges</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributedvirtualswitchvlanrange">List[Distributed<wbr>Virtual<wbr>Switch<wbr>Vlan<wbr>Range]</a></span>
     </dt>
@@ -3658,7 +4374,9 @@ below:
 
     <dt class="property-optional"
             title="Optional">
-        <span>vmotion_<wbr>maximum_<wbr>mbit</span>
+        <span id="vmotion_maximum_mbit_python">
+<a href="#vmotion_maximum_mbit_python" style="color: inherit; text-decoration: inherit;">vmotion_<wbr>maximum_<wbr>mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -3667,7 +4385,9 @@ below:
 
     <dt class="property-optional"
             title="Optional">
-        <span>vmotion_<wbr>reservation_<wbr>mbit</span>
+        <span id="vmotion_reservation_mbit_python">
+<a href="#vmotion_reservation_mbit_python" style="color: inherit; text-decoration: inherit;">vmotion_<wbr>reservation_<wbr>mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -3676,7 +4396,9 @@ below:
 
     <dt class="property-optional"
             title="Optional">
-        <span>vmotion_<wbr>share_<wbr>count</span>
+        <span id="vmotion_share_count_python">
+<a href="#vmotion_share_count_python" style="color: inherit; text-decoration: inherit;">vmotion_<wbr>share_<wbr>count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -3685,7 +4407,9 @@ below:
 
     <dt class="property-optional"
             title="Optional">
-        <span>vmotion_<wbr>share_<wbr>level</span>
+        <span id="vmotion_share_level_python">
+<a href="#vmotion_share_level_python" style="color: inherit; text-decoration: inherit;">vmotion_<wbr>share_<wbr>level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3694,7 +4418,9 @@ below:
 
     <dt class="property-optional"
             title="Optional">
-        <span>vsan_<wbr>maximum_<wbr>mbit</span>
+        <span id="vsan_maximum_mbit_python">
+<a href="#vsan_maximum_mbit_python" style="color: inherit; text-decoration: inherit;">vsan_<wbr>maximum_<wbr>mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -3703,7 +4429,9 @@ below:
 
     <dt class="property-optional"
             title="Optional">
-        <span>vsan_<wbr>reservation_<wbr>mbit</span>
+        <span id="vsan_reservation_mbit_python">
+<a href="#vsan_reservation_mbit_python" style="color: inherit; text-decoration: inherit;">vsan_<wbr>reservation_<wbr>mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -3712,7 +4440,9 @@ below:
 
     <dt class="property-optional"
             title="Optional">
-        <span>vsan_<wbr>share_<wbr>count</span>
+        <span id="vsan_share_count_python">
+<a href="#vsan_share_count_python" style="color: inherit; text-decoration: inherit;">vsan_<wbr>share_<wbr>count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -3721,7 +4451,9 @@ below:
 
     <dt class="property-optional"
             title="Optional">
-        <span>vsan_<wbr>share_<wbr>level</span>
+        <span id="vsan_share_level_python">
+<a href="#vsan_share_level_python" style="color: inherit; text-decoration: inherit;">vsan_<wbr>share_<wbr>level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3748,7 +4480,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Config<wbr>Version</span>
+        <span id="configversion_csharp">
+<a href="#configversion_csharp" style="color: inherit; text-decoration: inherit;">Config<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3757,7 +4491,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3772,7 +4508,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Config<wbr>Version</span>
+        <span id="configversion_go">
+<a href="#configversion_go" style="color: inherit; text-decoration: inherit;">Config<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3781,7 +4519,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3796,7 +4536,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>config<wbr>Version</span>
+        <span id="configversion_nodejs">
+<a href="#configversion_nodejs" style="color: inherit; text-decoration: inherit;">config<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3805,7 +4547,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3820,7 +4564,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>config_<wbr>version</span>
+        <span id="config_version_python">
+<a href="#config_version_python" style="color: inherit; text-decoration: inherit;">config_<wbr>version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3829,7 +4575,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3850,7 +4598,7 @@ Get an existing DistributedVirtualSwitch resource's state with the given name, I
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#DistributedVirtualSwitchState">DistributedVirtualSwitchState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#DistributedVirtualSwitch">DistributedVirtualSwitch</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#DistributedVirtualSwitchState">DistributedVirtualSwitchState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#DistributedVirtualSwitch">DistributedVirtualSwitch</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -3858,11 +4606,11 @@ Get an existing DistributedVirtualSwitch resource's state with the given name, I
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDistributedVirtualSwitch<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#DistributedVirtualSwitchState">DistributedVirtualSwitchState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#DistributedVirtualSwitch">DistributedVirtualSwitch</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDistributedVirtualSwitch<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#DistributedVirtualSwitchState">DistributedVirtualSwitchState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#DistributedVirtualSwitch">DistributedVirtualSwitch</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.DistributedVirtualSwitch.html">DistributedVirtualSwitch</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere..DistributedVirtualSwitchState.html">DistributedVirtualSwitchState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.DistributedVirtualSwitch.html">DistributedVirtualSwitch</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere..DistributedVirtualSwitchState.html">DistributedVirtualSwitchState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -3970,7 +4718,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Active<wbr>Uplinks</span>
+        <span id="state_activeuplinks_csharp">
+<a href="#state_activeuplinks_csharp" style="color: inherit; text-decoration: inherit;">Active<wbr>Uplinks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -3982,7 +4732,9 @@ here for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Allow<wbr>Forged<wbr>Transmits</span>
+        <span id="state_allowforgedtransmits_csharp">
+<a href="#state_allowforgedtransmits_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Forged<wbr>Transmits</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -3993,7 +4745,9 @@ address than that of its own.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Allow<wbr>Mac<wbr>Changes</span>
+        <span id="state_allowmacchanges_csharp">
+<a href="#state_allowmacchanges_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Mac<wbr>Changes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -4003,7 +4757,9 @@ Control (MAC) address can be changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Allow<wbr>Promiscuous</span>
+        <span id="state_allowpromiscuous_csharp">
+<a href="#state_allowpromiscuous_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Promiscuous</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -4013,7 +4769,9 @@ flag indicates whether or not all traffic is seen on a given port.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Block<wbr>All<wbr>Ports</span>
+        <span id="state_blockallports_csharp">
+<a href="#state_blockallports_csharp" style="color: inherit; text-decoration: inherit;">Block<wbr>All<wbr>Ports</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -4024,7 +4782,9 @@ virtual devices.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Check<wbr>Beacon</span>
+        <span id="state_checkbeacon_csharp">
+<a href="#state_checkbeacon_csharp" style="color: inherit; text-decoration: inherit;">Check<wbr>Beacon</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -4034,7 +4794,9 @@ to detect NIC failure.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Config<wbr>Version</span>
+        <span id="state_configversion_csharp">
+<a href="#state_configversion_csharp" style="color: inherit; text-decoration: inherit;">Config<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -4043,7 +4805,9 @@ to detect NIC failure.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Contact<wbr>Detail</span>
+        <span id="state_contactdetail_csharp">
+<a href="#state_contactdetail_csharp" style="color: inherit; text-decoration: inherit;">Contact<wbr>Detail</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -4053,7 +4817,9 @@ who is responsible for the DVS.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Contact<wbr>Name</span>
+        <span id="state_contactname_csharp">
+<a href="#state_contactname_csharp" style="color: inherit; text-decoration: inherit;">Contact<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -4063,7 +4829,9 @@ DVS.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Custom<wbr>Attributes</span>
+        <span id="state_customattributes_csharp">
+<a href="#state_customattributes_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Attributes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -4073,7 +4841,9 @@ value strings to set for virtual switch.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Datacenter<wbr>Id</span>
+        <span id="state_datacenterid_csharp">
+<a href="#state_datacenterid_csharp" style="color: inherit; text-decoration: inherit;">Datacenter<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -4083,7 +4853,9 @@ virtual switch will be created. Forces a new resource if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="state_description_csharp">
+<a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -4092,7 +4864,9 @@ virtual switch will be created. Forces a new resource if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Directpath<wbr>Gen2Allowed</span>
+        <span id="state_directpathgen2allowed_csharp">
+<a href="#state_directpathgen2allowed_csharp" style="color: inherit; text-decoration: inherit;">Directpath<wbr>Gen2Allowed</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -4102,7 +4876,9 @@ for which this policy applies to.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Egress<wbr>Shaping<wbr>Average<wbr>Bandwidth</span>
+        <span id="state_egressshapingaveragebandwidth_csharp">
+<a href="#state_egressshapingaveragebandwidth_csharp" style="color: inherit; text-decoration: inherit;">Egress<wbr>Shaping<wbr>Average<wbr>Bandwidth</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -4112,7 +4888,9 @@ per second if egress traffic shaping is enabled on the port.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Egress<wbr>Shaping<wbr>Burst<wbr>Size</span>
+        <span id="state_egressshapingburstsize_csharp">
+<a href="#state_egressshapingburstsize_csharp" style="color: inherit; text-decoration: inherit;">Egress<wbr>Shaping<wbr>Burst<wbr>Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -4122,7 +4900,9 @@ bytes if egress traffic shaping is enabled on the port.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Egress<wbr>Shaping<wbr>Enabled</span>
+        <span id="state_egressshapingenabled_csharp">
+<a href="#state_egressshapingenabled_csharp" style="color: inherit; text-decoration: inherit;">Egress<wbr>Shaping<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -4132,7 +4912,9 @@ on the port for egress traffic.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Egress<wbr>Shaping<wbr>Peak<wbr>Bandwidth</span>
+        <span id="state_egressshapingpeakbandwidth_csharp">
+<a href="#state_egressshapingpeakbandwidth_csharp" style="color: inherit; text-decoration: inherit;">Egress<wbr>Shaping<wbr>Peak<wbr>Bandwidth</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -4142,7 +4924,9 @@ in bits per second if egress traffic shaping is enabled on the port.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Failback</span>
+        <span id="state_failback_csharp">
+<a href="#state_failback_csharp" style="color: inherit; text-decoration: inherit;">Failback</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -4152,7 +4936,9 @@ uplinks higher in precedence when they come back up.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Faulttolerance<wbr>Maximum<wbr>Mbit</span>
+        <span id="state_faulttolerancemaximummbit_csharp">
+<a href="#state_faulttolerancemaximummbit_csharp" style="color: inherit; text-decoration: inherit;">Faulttolerance<wbr>Maximum<wbr>Mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -4161,7 +4947,9 @@ uplinks higher in precedence when they come back up.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Faulttolerance<wbr>Reservation<wbr>Mbit</span>
+        <span id="state_faulttolerancereservationmbit_csharp">
+<a href="#state_faulttolerancereservationmbit_csharp" style="color: inherit; text-decoration: inherit;">Faulttolerance<wbr>Reservation<wbr>Mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -4170,7 +4958,9 @@ uplinks higher in precedence when they come back up.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Faulttolerance<wbr>Share<wbr>Count</span>
+        <span id="state_faulttolerancesharecount_csharp">
+<a href="#state_faulttolerancesharecount_csharp" style="color: inherit; text-decoration: inherit;">Faulttolerance<wbr>Share<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -4179,7 +4969,9 @@ uplinks higher in precedence when they come back up.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Faulttolerance<wbr>Share<wbr>Level</span>
+        <span id="state_faulttolerancesharelevel_csharp">
+<a href="#state_faulttolerancesharelevel_csharp" style="color: inherit; text-decoration: inherit;">Faulttolerance<wbr>Share<wbr>Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -4188,7 +4980,9 @@ uplinks higher in precedence when they come back up.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Folder</span>
+        <span id="state_folder_csharp">
+<a href="#state_folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -4198,7 +4992,9 @@ if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Hbr<wbr>Maximum<wbr>Mbit</span>
+        <span id="state_hbrmaximummbit_csharp">
+<a href="#state_hbrmaximummbit_csharp" style="color: inherit; text-decoration: inherit;">Hbr<wbr>Maximum<wbr>Mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -4207,7 +5003,9 @@ if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Hbr<wbr>Reservation<wbr>Mbit</span>
+        <span id="state_hbrreservationmbit_csharp">
+<a href="#state_hbrreservationmbit_csharp" style="color: inherit; text-decoration: inherit;">Hbr<wbr>Reservation<wbr>Mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -4216,7 +5014,9 @@ if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Hbr<wbr>Share<wbr>Count</span>
+        <span id="state_hbrsharecount_csharp">
+<a href="#state_hbrsharecount_csharp" style="color: inherit; text-decoration: inherit;">Hbr<wbr>Share<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -4225,7 +5025,9 @@ if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Hbr<wbr>Share<wbr>Level</span>
+        <span id="state_hbrsharelevel_csharp">
+<a href="#state_hbrsharelevel_csharp" style="color: inherit; text-decoration: inherit;">Hbr<wbr>Share<wbr>Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -4234,7 +5036,9 @@ if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Hosts</span>
+        <span id="state_hosts_csharp">
+<a href="#state_hosts_csharp" style="color: inherit; text-decoration: inherit;">Hosts</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributedvirtualswitchhost">List&lt;Pulumi.<wbr>VSphere.<wbr>Inputs.<wbr>Distributed<wbr>Virtual<wbr>Switch<wbr>Host<wbr>Args&gt;</a></span>
     </dt>
@@ -4244,7 +5048,9 @@ options are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ingress<wbr>Shaping<wbr>Average<wbr>Bandwidth</span>
+        <span id="state_ingressshapingaveragebandwidth_csharp">
+<a href="#state_ingressshapingaveragebandwidth_csharp" style="color: inherit; text-decoration: inherit;">Ingress<wbr>Shaping<wbr>Average<wbr>Bandwidth</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -4254,7 +5060,9 @@ bits per second if ingress traffic shaping is enabled on the port.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ingress<wbr>Shaping<wbr>Burst<wbr>Size</span>
+        <span id="state_ingressshapingburstsize_csharp">
+<a href="#state_ingressshapingburstsize_csharp" style="color: inherit; text-decoration: inherit;">Ingress<wbr>Shaping<wbr>Burst<wbr>Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -4264,7 +5072,9 @@ bytes if ingress traffic shaping is enabled on the port.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ingress<wbr>Shaping<wbr>Enabled</span>
+        <span id="state_ingressshapingenabled_csharp">
+<a href="#state_ingressshapingenabled_csharp" style="color: inherit; text-decoration: inherit;">Ingress<wbr>Shaping<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -4274,7 +5084,9 @@ enabled on the port for ingress traffic.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ingress<wbr>Shaping<wbr>Peak<wbr>Bandwidth</span>
+        <span id="state_ingressshapingpeakbandwidth_csharp">
+<a href="#state_ingressshapingpeakbandwidth_csharp" style="color: inherit; text-decoration: inherit;">Ingress<wbr>Shaping<wbr>Peak<wbr>Bandwidth</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -4284,7 +5096,9 @@ bursts in bits per second if ingress traffic shaping is enabled on the port.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ipv4Address</span>
+        <span id="state_ipv4address_csharp">
+<a href="#state_ipv4address_csharp" style="color: inherit; text-decoration: inherit;">Ipv4Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -4295,7 +5109,9 @@ below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Iscsi<wbr>Maximum<wbr>Mbit</span>
+        <span id="state_iscsimaximummbit_csharp">
+<a href="#state_iscsimaximummbit_csharp" style="color: inherit; text-decoration: inherit;">Iscsi<wbr>Maximum<wbr>Mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -4304,7 +5120,9 @@ below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Iscsi<wbr>Reservation<wbr>Mbit</span>
+        <span id="state_iscsireservationmbit_csharp">
+<a href="#state_iscsireservationmbit_csharp" style="color: inherit; text-decoration: inherit;">Iscsi<wbr>Reservation<wbr>Mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -4313,7 +5131,9 @@ below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Iscsi<wbr>Share<wbr>Count</span>
+        <span id="state_iscsisharecount_csharp">
+<a href="#state_iscsisharecount_csharp" style="color: inherit; text-decoration: inherit;">Iscsi<wbr>Share<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -4322,7 +5142,9 @@ below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Iscsi<wbr>Share<wbr>Level</span>
+        <span id="state_iscsisharelevel_csharp">
+<a href="#state_iscsisharelevel_csharp" style="color: inherit; text-decoration: inherit;">Iscsi<wbr>Share<wbr>Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -4331,7 +5153,9 @@ below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Lacp<wbr>Api<wbr>Version</span>
+        <span id="state_lacpapiversion_csharp">
+<a href="#state_lacpapiversion_csharp" style="color: inherit; text-decoration: inherit;">Lacp<wbr>Api<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -4342,7 +5166,9 @@ version to use with the switch. Possible values are `singleLag` and
 
     <dt class="property-optional"
             title="Optional">
-        <span>Lacp<wbr>Enabled</span>
+        <span id="state_lacpenabled_csharp">
+<a href="#state_lacpenabled_csharp" style="color: inherit; text-decoration: inherit;">Lacp<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -4352,7 +5178,9 @@ applies to.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Lacp<wbr>Mode</span>
+        <span id="state_lacpmode_csharp">
+<a href="#state_lacpmode_csharp" style="color: inherit; text-decoration: inherit;">Lacp<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -4361,7 +5189,9 @@ applies to.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Link<wbr>Discovery<wbr>Operation</span>
+        <span id="state_linkdiscoveryoperation_csharp">
+<a href="#state_linkdiscoveryoperation_csharp" style="color: inherit; text-decoration: inherit;">Link<wbr>Discovery<wbr>Operation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -4371,7 +5201,9 @@ for link discovery traffic.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Link<wbr>Discovery<wbr>Protocol</span>
+        <span id="state_linkdiscoveryprotocol_csharp">
+<a href="#state_linkdiscoveryprotocol_csharp" style="color: inherit; text-decoration: inherit;">Link<wbr>Discovery<wbr>Protocol</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -4381,7 +5213,9 @@ types are `cdp` and `lldp`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Management<wbr>Maximum<wbr>Mbit</span>
+        <span id="state_managementmaximummbit_csharp">
+<a href="#state_managementmaximummbit_csharp" style="color: inherit; text-decoration: inherit;">Management<wbr>Maximum<wbr>Mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -4390,7 +5224,9 @@ types are `cdp` and `lldp`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Management<wbr>Reservation<wbr>Mbit</span>
+        <span id="state_managementreservationmbit_csharp">
+<a href="#state_managementreservationmbit_csharp" style="color: inherit; text-decoration: inherit;">Management<wbr>Reservation<wbr>Mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -4399,7 +5235,9 @@ types are `cdp` and `lldp`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Management<wbr>Share<wbr>Count</span>
+        <span id="state_managementsharecount_csharp">
+<a href="#state_managementsharecount_csharp" style="color: inherit; text-decoration: inherit;">Management<wbr>Share<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -4408,7 +5246,9 @@ types are `cdp` and `lldp`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Management<wbr>Share<wbr>Level</span>
+        <span id="state_managementsharelevel_csharp">
+<a href="#state_managementsharelevel_csharp" style="color: inherit; text-decoration: inherit;">Management<wbr>Share<wbr>Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -4417,7 +5257,9 @@ types are `cdp` and `lldp`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Mtu</span>
+        <span id="state_maxmtu_csharp">
+<a href="#state_maxmtu_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Mtu</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -4427,7 +5269,9 @@ switch.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Multicast<wbr>Filtering<wbr>Mode</span>
+        <span id="state_multicastfilteringmode_csharp">
+<a href="#state_multicastfilteringmode_csharp" style="color: inherit; text-decoration: inherit;">Multicast<wbr>Filtering<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -4437,7 +5281,9 @@ with the switch. Can be one of `legacyFiltering` or `snooping`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -4446,7 +5292,9 @@ with the switch. Can be one of `legacyFiltering` or `snooping`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Netflow<wbr>Active<wbr>Flow<wbr>Timeout</span>
+        <span id="state_netflowactiveflowtimeout_csharp">
+<a href="#state_netflowactiveflowtimeout_csharp" style="color: inherit; text-decoration: inherit;">Netflow<wbr>Active<wbr>Flow<wbr>Timeout</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -4457,7 +5305,9 @@ active flows are forced to be exported to the collector. Allowed range is
 
     <dt class="property-optional"
             title="Optional">
-        <span>Netflow<wbr>Collector<wbr>Ip<wbr>Address</span>
+        <span id="state_netflowcollectoripaddress_csharp">
+<a href="#state_netflowcollectoripaddress_csharp" style="color: inherit; text-decoration: inherit;">Netflow<wbr>Collector<wbr>Ip<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -4468,7 +5318,9 @@ Switch Version 6.0 or later. Must be set before Netflow can be enabled.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Netflow<wbr>Collector<wbr>Port</span>
+        <span id="state_netflowcollectorport_csharp">
+<a href="#state_netflowcollectorport_csharp" style="color: inherit; text-decoration: inherit;">Netflow<wbr>Collector<wbr>Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -4478,7 +5330,9 @@ must be set before Netflow can be enabled.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Netflow<wbr>Enabled</span>
+        <span id="state_netflowenabled_csharp">
+<a href="#state_netflowenabled_csharp" style="color: inherit; text-decoration: inherit;">Netflow<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -4488,7 +5342,9 @@ applies to.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Netflow<wbr>Idle<wbr>Flow<wbr>Timeout</span>
+        <span id="state_netflowidleflowtimeout_csharp">
+<a href="#state_netflowidleflowtimeout_csharp" style="color: inherit; text-decoration: inherit;">Netflow<wbr>Idle<wbr>Flow<wbr>Timeout</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -4499,7 +5355,9 @@ to `600`. Default: `15`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Netflow<wbr>Internal<wbr>Flows<wbr>Only</span>
+        <span id="state_netflowinternalflowsonly_csharp">
+<a href="#state_netflowinternalflowsonly_csharp" style="color: inherit; text-decoration: inherit;">Netflow<wbr>Internal<wbr>Flows<wbr>Only</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -4510,7 +5368,9 @@ Default: `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Netflow<wbr>Observation<wbr>Domain<wbr>Id</span>
+        <span id="state_netflowobservationdomainid_csharp">
+<a href="#state_netflowobservationdomainid_csharp" style="color: inherit; text-decoration: inherit;">Netflow<wbr>Observation<wbr>Domain<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -4520,7 +5380,9 @@ the Netflow collector.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Netflow<wbr>Sampling<wbr>Rate</span>
+        <span id="state_netflowsamplingrate_csharp">
+<a href="#state_netflowsamplingrate_csharp" style="color: inherit; text-decoration: inherit;">Netflow<wbr>Sampling<wbr>Rate</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -4532,7 +5394,9 @@ indicates an analysis rate of 0.001%.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Network<wbr>Resource<wbr>Control<wbr>Enabled</span>
+        <span id="state_networkresourcecontrolenabled_csharp">
+<a href="#state_networkresourcecontrolenabled_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Resource<wbr>Control<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -4542,7 +5406,9 @@ network I/O control. Default: `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Network<wbr>Resource<wbr>Control<wbr>Version</span>
+        <span id="state_networkresourcecontrolversion_csharp">
+<a href="#state_networkresourcecontrolversion_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Resource<wbr>Control<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -4552,7 +5418,9 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Nfs<wbr>Maximum<wbr>Mbit</span>
+        <span id="state_nfsmaximummbit_csharp">
+<a href="#state_nfsmaximummbit_csharp" style="color: inherit; text-decoration: inherit;">Nfs<wbr>Maximum<wbr>Mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -4561,7 +5429,9 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Nfs<wbr>Reservation<wbr>Mbit</span>
+        <span id="state_nfsreservationmbit_csharp">
+<a href="#state_nfsreservationmbit_csharp" style="color: inherit; text-decoration: inherit;">Nfs<wbr>Reservation<wbr>Mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -4570,7 +5440,9 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Nfs<wbr>Share<wbr>Count</span>
+        <span id="state_nfssharecount_csharp">
+<a href="#state_nfssharecount_csharp" style="color: inherit; text-decoration: inherit;">Nfs<wbr>Share<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -4579,7 +5451,9 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Nfs<wbr>Share<wbr>Level</span>
+        <span id="state_nfssharelevel_csharp">
+<a href="#state_nfssharelevel_csharp" style="color: inherit; text-decoration: inherit;">Nfs<wbr>Share<wbr>Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -4588,7 +5462,9 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Notify<wbr>Switches</span>
+        <span id="state_notifyswitches_csharp">
+<a href="#state_notifyswitches_csharp" style="color: inherit; text-decoration: inherit;">Notify<wbr>Switches</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -4598,7 +5474,9 @@ broadcast network of an uplink failover, triggering cache updates.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Port<wbr>Private<wbr>Secondary<wbr>Vlan<wbr>Id</span>
+        <span id="state_portprivatesecondaryvlanid_csharp">
+<a href="#state_portprivatesecondaryvlanid_csharp" style="color: inherit; text-decoration: inherit;">Port<wbr>Private<wbr>Secondary<wbr>Vlan<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -4608,7 +5486,9 @@ ID when using private VLANs.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Standby<wbr>Uplinks</span>
+        <span id="state_standbyuplinks_csharp">
+<a href="#state_standbyuplinks_csharp" style="color: inherit; text-decoration: inherit;">Standby<wbr>Uplinks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -4620,7 +5500,9 @@ here for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="state_tags_csharp">
+<a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -4629,7 +5511,9 @@ here for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Teaming<wbr>Policy</span>
+        <span id="state_teamingpolicy_csharp">
+<a href="#state_teamingpolicy_csharp" style="color: inherit; text-decoration: inherit;">Teaming<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -4640,7 +5524,9 @@ here for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tx<wbr>Uplink</span>
+        <span id="state_txuplink_csharp">
+<a href="#state_txuplink_csharp" style="color: inherit; text-decoration: inherit;">Tx<wbr>Uplink</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -4650,7 +5536,9 @@ this policy applies to its DVS uplinks.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Uplinks</span>
+        <span id="state_uplinks_csharp">
+<a href="#state_uplinks_csharp" style="color: inherit; text-decoration: inherit;">Uplinks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -4663,7 +5551,9 @@ use this option.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vdp<wbr>Maximum<wbr>Mbit</span>
+        <span id="state_vdpmaximummbit_csharp">
+<a href="#state_vdpmaximummbit_csharp" style="color: inherit; text-decoration: inherit;">Vdp<wbr>Maximum<wbr>Mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -4672,7 +5562,9 @@ use this option.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vdp<wbr>Reservation<wbr>Mbit</span>
+        <span id="state_vdpreservationmbit_csharp">
+<a href="#state_vdpreservationmbit_csharp" style="color: inherit; text-decoration: inherit;">Vdp<wbr>Reservation<wbr>Mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -4681,7 +5573,9 @@ use this option.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vdp<wbr>Share<wbr>Count</span>
+        <span id="state_vdpsharecount_csharp">
+<a href="#state_vdpsharecount_csharp" style="color: inherit; text-decoration: inherit;">Vdp<wbr>Share<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -4690,7 +5584,9 @@ use this option.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vdp<wbr>Share<wbr>Level</span>
+        <span id="state_vdpsharelevel_csharp">
+<a href="#state_vdpsharelevel_csharp" style="color: inherit; text-decoration: inherit;">Vdp<wbr>Share<wbr>Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -4699,7 +5595,9 @@ use this option.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Version</span>
+        <span id="state_version_csharp">
+<a href="#state_version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -4711,7 +5609,9 @@ downgraded.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Virtualmachine<wbr>Maximum<wbr>Mbit</span>
+        <span id="state_virtualmachinemaximummbit_csharp">
+<a href="#state_virtualmachinemaximummbit_csharp" style="color: inherit; text-decoration: inherit;">Virtualmachine<wbr>Maximum<wbr>Mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -4720,7 +5620,9 @@ downgraded.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Virtualmachine<wbr>Reservation<wbr>Mbit</span>
+        <span id="state_virtualmachinereservationmbit_csharp">
+<a href="#state_virtualmachinereservationmbit_csharp" style="color: inherit; text-decoration: inherit;">Virtualmachine<wbr>Reservation<wbr>Mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -4729,7 +5631,9 @@ downgraded.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Virtualmachine<wbr>Share<wbr>Count</span>
+        <span id="state_virtualmachinesharecount_csharp">
+<a href="#state_virtualmachinesharecount_csharp" style="color: inherit; text-decoration: inherit;">Virtualmachine<wbr>Share<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -4738,7 +5642,9 @@ downgraded.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Virtualmachine<wbr>Share<wbr>Level</span>
+        <span id="state_virtualmachinesharelevel_csharp">
+<a href="#state_virtualmachinesharelevel_csharp" style="color: inherit; text-decoration: inherit;">Virtualmachine<wbr>Share<wbr>Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -4747,7 +5653,9 @@ downgraded.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vlan<wbr>Id</span>
+        <span id="state_vlanid_csharp">
+<a href="#state_vlanid_csharp" style="color: inherit; text-decoration: inherit;">Vlan<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -4756,7 +5664,9 @@ downgraded.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vlan<wbr>Ranges</span>
+        <span id="state_vlanranges_csharp">
+<a href="#state_vlanranges_csharp" style="color: inherit; text-decoration: inherit;">Vlan<wbr>Ranges</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributedvirtualswitchvlanrange">List&lt;Pulumi.<wbr>VSphere.<wbr>Inputs.<wbr>Distributed<wbr>Virtual<wbr>Switch<wbr>Vlan<wbr>Range<wbr>Args&gt;</a></span>
     </dt>
@@ -4768,7 +5678,9 @@ below:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vmotion<wbr>Maximum<wbr>Mbit</span>
+        <span id="state_vmotionmaximummbit_csharp">
+<a href="#state_vmotionmaximummbit_csharp" style="color: inherit; text-decoration: inherit;">Vmotion<wbr>Maximum<wbr>Mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -4777,7 +5689,9 @@ below:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vmotion<wbr>Reservation<wbr>Mbit</span>
+        <span id="state_vmotionreservationmbit_csharp">
+<a href="#state_vmotionreservationmbit_csharp" style="color: inherit; text-decoration: inherit;">Vmotion<wbr>Reservation<wbr>Mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -4786,7 +5700,9 @@ below:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vmotion<wbr>Share<wbr>Count</span>
+        <span id="state_vmotionsharecount_csharp">
+<a href="#state_vmotionsharecount_csharp" style="color: inherit; text-decoration: inherit;">Vmotion<wbr>Share<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -4795,7 +5711,9 @@ below:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vmotion<wbr>Share<wbr>Level</span>
+        <span id="state_vmotionsharelevel_csharp">
+<a href="#state_vmotionsharelevel_csharp" style="color: inherit; text-decoration: inherit;">Vmotion<wbr>Share<wbr>Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -4804,7 +5722,9 @@ below:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vsan<wbr>Maximum<wbr>Mbit</span>
+        <span id="state_vsanmaximummbit_csharp">
+<a href="#state_vsanmaximummbit_csharp" style="color: inherit; text-decoration: inherit;">Vsan<wbr>Maximum<wbr>Mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -4813,7 +5733,9 @@ below:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vsan<wbr>Reservation<wbr>Mbit</span>
+        <span id="state_vsanreservationmbit_csharp">
+<a href="#state_vsanreservationmbit_csharp" style="color: inherit; text-decoration: inherit;">Vsan<wbr>Reservation<wbr>Mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -4822,7 +5744,9 @@ below:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vsan<wbr>Share<wbr>Count</span>
+        <span id="state_vsansharecount_csharp">
+<a href="#state_vsansharecount_csharp" style="color: inherit; text-decoration: inherit;">Vsan<wbr>Share<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -4831,7 +5755,9 @@ below:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vsan<wbr>Share<wbr>Level</span>
+        <span id="state_vsansharelevel_csharp">
+<a href="#state_vsansharelevel_csharp" style="color: inherit; text-decoration: inherit;">Vsan<wbr>Share<wbr>Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -4847,7 +5773,9 @@ below:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Active<wbr>Uplinks</span>
+        <span id="state_activeuplinks_go">
+<a href="#state_activeuplinks_go" style="color: inherit; text-decoration: inherit;">Active<wbr>Uplinks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -4859,7 +5787,9 @@ here for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Allow<wbr>Forged<wbr>Transmits</span>
+        <span id="state_allowforgedtransmits_go">
+<a href="#state_allowforgedtransmits_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Forged<wbr>Transmits</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -4870,7 +5800,9 @@ address than that of its own.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Allow<wbr>Mac<wbr>Changes</span>
+        <span id="state_allowmacchanges_go">
+<a href="#state_allowmacchanges_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Mac<wbr>Changes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -4880,7 +5812,9 @@ Control (MAC) address can be changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Allow<wbr>Promiscuous</span>
+        <span id="state_allowpromiscuous_go">
+<a href="#state_allowpromiscuous_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Promiscuous</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -4890,7 +5824,9 @@ flag indicates whether or not all traffic is seen on a given port.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Block<wbr>All<wbr>Ports</span>
+        <span id="state_blockallports_go">
+<a href="#state_blockallports_go" style="color: inherit; text-decoration: inherit;">Block<wbr>All<wbr>Ports</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -4901,7 +5837,9 @@ virtual devices.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Check<wbr>Beacon</span>
+        <span id="state_checkbeacon_go">
+<a href="#state_checkbeacon_go" style="color: inherit; text-decoration: inherit;">Check<wbr>Beacon</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -4911,7 +5849,9 @@ to detect NIC failure.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Config<wbr>Version</span>
+        <span id="state_configversion_go">
+<a href="#state_configversion_go" style="color: inherit; text-decoration: inherit;">Config<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -4920,7 +5860,9 @@ to detect NIC failure.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Contact<wbr>Detail</span>
+        <span id="state_contactdetail_go">
+<a href="#state_contactdetail_go" style="color: inherit; text-decoration: inherit;">Contact<wbr>Detail</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -4930,7 +5872,9 @@ who is responsible for the DVS.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Contact<wbr>Name</span>
+        <span id="state_contactname_go">
+<a href="#state_contactname_go" style="color: inherit; text-decoration: inherit;">Contact<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -4940,7 +5884,9 @@ DVS.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Custom<wbr>Attributes</span>
+        <span id="state_customattributes_go">
+<a href="#state_customattributes_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Attributes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -4950,7 +5896,9 @@ value strings to set for virtual switch.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Datacenter<wbr>Id</span>
+        <span id="state_datacenterid_go">
+<a href="#state_datacenterid_go" style="color: inherit; text-decoration: inherit;">Datacenter<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -4960,7 +5908,9 @@ virtual switch will be created. Forces a new resource if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="state_description_go">
+<a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -4969,7 +5919,9 @@ virtual switch will be created. Forces a new resource if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Directpath<wbr>Gen2Allowed</span>
+        <span id="state_directpathgen2allowed_go">
+<a href="#state_directpathgen2allowed_go" style="color: inherit; text-decoration: inherit;">Directpath<wbr>Gen2Allowed</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -4979,7 +5931,9 @@ for which this policy applies to.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Egress<wbr>Shaping<wbr>Average<wbr>Bandwidth</span>
+        <span id="state_egressshapingaveragebandwidth_go">
+<a href="#state_egressshapingaveragebandwidth_go" style="color: inherit; text-decoration: inherit;">Egress<wbr>Shaping<wbr>Average<wbr>Bandwidth</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -4989,7 +5943,9 @@ per second if egress traffic shaping is enabled on the port.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Egress<wbr>Shaping<wbr>Burst<wbr>Size</span>
+        <span id="state_egressshapingburstsize_go">
+<a href="#state_egressshapingburstsize_go" style="color: inherit; text-decoration: inherit;">Egress<wbr>Shaping<wbr>Burst<wbr>Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -4999,7 +5955,9 @@ bytes if egress traffic shaping is enabled on the port.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Egress<wbr>Shaping<wbr>Enabled</span>
+        <span id="state_egressshapingenabled_go">
+<a href="#state_egressshapingenabled_go" style="color: inherit; text-decoration: inherit;">Egress<wbr>Shaping<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -5009,7 +5967,9 @@ on the port for egress traffic.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Egress<wbr>Shaping<wbr>Peak<wbr>Bandwidth</span>
+        <span id="state_egressshapingpeakbandwidth_go">
+<a href="#state_egressshapingpeakbandwidth_go" style="color: inherit; text-decoration: inherit;">Egress<wbr>Shaping<wbr>Peak<wbr>Bandwidth</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -5019,7 +5979,9 @@ in bits per second if egress traffic shaping is enabled on the port.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Failback</span>
+        <span id="state_failback_go">
+<a href="#state_failback_go" style="color: inherit; text-decoration: inherit;">Failback</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -5029,7 +5991,9 @@ uplinks higher in precedence when they come back up.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Faulttolerance<wbr>Maximum<wbr>Mbit</span>
+        <span id="state_faulttolerancemaximummbit_go">
+<a href="#state_faulttolerancemaximummbit_go" style="color: inherit; text-decoration: inherit;">Faulttolerance<wbr>Maximum<wbr>Mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -5038,7 +6002,9 @@ uplinks higher in precedence when they come back up.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Faulttolerance<wbr>Reservation<wbr>Mbit</span>
+        <span id="state_faulttolerancereservationmbit_go">
+<a href="#state_faulttolerancereservationmbit_go" style="color: inherit; text-decoration: inherit;">Faulttolerance<wbr>Reservation<wbr>Mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -5047,7 +6013,9 @@ uplinks higher in precedence when they come back up.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Faulttolerance<wbr>Share<wbr>Count</span>
+        <span id="state_faulttolerancesharecount_go">
+<a href="#state_faulttolerancesharecount_go" style="color: inherit; text-decoration: inherit;">Faulttolerance<wbr>Share<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -5056,7 +6024,9 @@ uplinks higher in precedence when they come back up.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Faulttolerance<wbr>Share<wbr>Level</span>
+        <span id="state_faulttolerancesharelevel_go">
+<a href="#state_faulttolerancesharelevel_go" style="color: inherit; text-decoration: inherit;">Faulttolerance<wbr>Share<wbr>Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -5065,7 +6035,9 @@ uplinks higher in precedence when they come back up.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Folder</span>
+        <span id="state_folder_go">
+<a href="#state_folder_go" style="color: inherit; text-decoration: inherit;">Folder</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -5075,7 +6047,9 @@ if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Hbr<wbr>Maximum<wbr>Mbit</span>
+        <span id="state_hbrmaximummbit_go">
+<a href="#state_hbrmaximummbit_go" style="color: inherit; text-decoration: inherit;">Hbr<wbr>Maximum<wbr>Mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -5084,7 +6058,9 @@ if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Hbr<wbr>Reservation<wbr>Mbit</span>
+        <span id="state_hbrreservationmbit_go">
+<a href="#state_hbrreservationmbit_go" style="color: inherit; text-decoration: inherit;">Hbr<wbr>Reservation<wbr>Mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -5093,7 +6069,9 @@ if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Hbr<wbr>Share<wbr>Count</span>
+        <span id="state_hbrsharecount_go">
+<a href="#state_hbrsharecount_go" style="color: inherit; text-decoration: inherit;">Hbr<wbr>Share<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -5102,7 +6080,9 @@ if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Hbr<wbr>Share<wbr>Level</span>
+        <span id="state_hbrsharelevel_go">
+<a href="#state_hbrsharelevel_go" style="color: inherit; text-decoration: inherit;">Hbr<wbr>Share<wbr>Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -5111,7 +6091,9 @@ if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Hosts</span>
+        <span id="state_hosts_go">
+<a href="#state_hosts_go" style="color: inherit; text-decoration: inherit;">Hosts</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributedvirtualswitchhost">[]Distributed<wbr>Virtual<wbr>Switch<wbr>Host</a></span>
     </dt>
@@ -5121,7 +6103,9 @@ options are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ingress<wbr>Shaping<wbr>Average<wbr>Bandwidth</span>
+        <span id="state_ingressshapingaveragebandwidth_go">
+<a href="#state_ingressshapingaveragebandwidth_go" style="color: inherit; text-decoration: inherit;">Ingress<wbr>Shaping<wbr>Average<wbr>Bandwidth</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -5131,7 +6115,9 @@ bits per second if ingress traffic shaping is enabled on the port.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ingress<wbr>Shaping<wbr>Burst<wbr>Size</span>
+        <span id="state_ingressshapingburstsize_go">
+<a href="#state_ingressshapingburstsize_go" style="color: inherit; text-decoration: inherit;">Ingress<wbr>Shaping<wbr>Burst<wbr>Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -5141,7 +6127,9 @@ bytes if ingress traffic shaping is enabled on the port.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ingress<wbr>Shaping<wbr>Enabled</span>
+        <span id="state_ingressshapingenabled_go">
+<a href="#state_ingressshapingenabled_go" style="color: inherit; text-decoration: inherit;">Ingress<wbr>Shaping<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -5151,7 +6139,9 @@ enabled on the port for ingress traffic.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ingress<wbr>Shaping<wbr>Peak<wbr>Bandwidth</span>
+        <span id="state_ingressshapingpeakbandwidth_go">
+<a href="#state_ingressshapingpeakbandwidth_go" style="color: inherit; text-decoration: inherit;">Ingress<wbr>Shaping<wbr>Peak<wbr>Bandwidth</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -5161,7 +6151,9 @@ bursts in bits per second if ingress traffic shaping is enabled on the port.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ipv4Address</span>
+        <span id="state_ipv4address_go">
+<a href="#state_ipv4address_go" style="color: inherit; text-decoration: inherit;">Ipv4Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -5172,7 +6164,9 @@ below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Iscsi<wbr>Maximum<wbr>Mbit</span>
+        <span id="state_iscsimaximummbit_go">
+<a href="#state_iscsimaximummbit_go" style="color: inherit; text-decoration: inherit;">Iscsi<wbr>Maximum<wbr>Mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -5181,7 +6175,9 @@ below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Iscsi<wbr>Reservation<wbr>Mbit</span>
+        <span id="state_iscsireservationmbit_go">
+<a href="#state_iscsireservationmbit_go" style="color: inherit; text-decoration: inherit;">Iscsi<wbr>Reservation<wbr>Mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -5190,7 +6186,9 @@ below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Iscsi<wbr>Share<wbr>Count</span>
+        <span id="state_iscsisharecount_go">
+<a href="#state_iscsisharecount_go" style="color: inherit; text-decoration: inherit;">Iscsi<wbr>Share<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -5199,7 +6197,9 @@ below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Iscsi<wbr>Share<wbr>Level</span>
+        <span id="state_iscsisharelevel_go">
+<a href="#state_iscsisharelevel_go" style="color: inherit; text-decoration: inherit;">Iscsi<wbr>Share<wbr>Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -5208,7 +6208,9 @@ below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Lacp<wbr>Api<wbr>Version</span>
+        <span id="state_lacpapiversion_go">
+<a href="#state_lacpapiversion_go" style="color: inherit; text-decoration: inherit;">Lacp<wbr>Api<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -5219,7 +6221,9 @@ version to use with the switch. Possible values are `singleLag` and
 
     <dt class="property-optional"
             title="Optional">
-        <span>Lacp<wbr>Enabled</span>
+        <span id="state_lacpenabled_go">
+<a href="#state_lacpenabled_go" style="color: inherit; text-decoration: inherit;">Lacp<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -5229,7 +6233,9 @@ applies to.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Lacp<wbr>Mode</span>
+        <span id="state_lacpmode_go">
+<a href="#state_lacpmode_go" style="color: inherit; text-decoration: inherit;">Lacp<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -5238,7 +6244,9 @@ applies to.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Link<wbr>Discovery<wbr>Operation</span>
+        <span id="state_linkdiscoveryoperation_go">
+<a href="#state_linkdiscoveryoperation_go" style="color: inherit; text-decoration: inherit;">Link<wbr>Discovery<wbr>Operation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -5248,7 +6256,9 @@ for link discovery traffic.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Link<wbr>Discovery<wbr>Protocol</span>
+        <span id="state_linkdiscoveryprotocol_go">
+<a href="#state_linkdiscoveryprotocol_go" style="color: inherit; text-decoration: inherit;">Link<wbr>Discovery<wbr>Protocol</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -5258,7 +6268,9 @@ types are `cdp` and `lldp`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Management<wbr>Maximum<wbr>Mbit</span>
+        <span id="state_managementmaximummbit_go">
+<a href="#state_managementmaximummbit_go" style="color: inherit; text-decoration: inherit;">Management<wbr>Maximum<wbr>Mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -5267,7 +6279,9 @@ types are `cdp` and `lldp`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Management<wbr>Reservation<wbr>Mbit</span>
+        <span id="state_managementreservationmbit_go">
+<a href="#state_managementreservationmbit_go" style="color: inherit; text-decoration: inherit;">Management<wbr>Reservation<wbr>Mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -5276,7 +6290,9 @@ types are `cdp` and `lldp`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Management<wbr>Share<wbr>Count</span>
+        <span id="state_managementsharecount_go">
+<a href="#state_managementsharecount_go" style="color: inherit; text-decoration: inherit;">Management<wbr>Share<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -5285,7 +6301,9 @@ types are `cdp` and `lldp`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Management<wbr>Share<wbr>Level</span>
+        <span id="state_managementsharelevel_go">
+<a href="#state_managementsharelevel_go" style="color: inherit; text-decoration: inherit;">Management<wbr>Share<wbr>Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -5294,7 +6312,9 @@ types are `cdp` and `lldp`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Mtu</span>
+        <span id="state_maxmtu_go">
+<a href="#state_maxmtu_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Mtu</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -5304,7 +6324,9 @@ switch.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Multicast<wbr>Filtering<wbr>Mode</span>
+        <span id="state_multicastfilteringmode_go">
+<a href="#state_multicastfilteringmode_go" style="color: inherit; text-decoration: inherit;">Multicast<wbr>Filtering<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -5314,7 +6336,9 @@ with the switch. Can be one of `legacyFiltering` or `snooping`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -5323,7 +6347,9 @@ with the switch. Can be one of `legacyFiltering` or `snooping`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Netflow<wbr>Active<wbr>Flow<wbr>Timeout</span>
+        <span id="state_netflowactiveflowtimeout_go">
+<a href="#state_netflowactiveflowtimeout_go" style="color: inherit; text-decoration: inherit;">Netflow<wbr>Active<wbr>Flow<wbr>Timeout</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -5334,7 +6360,9 @@ active flows are forced to be exported to the collector. Allowed range is
 
     <dt class="property-optional"
             title="Optional">
-        <span>Netflow<wbr>Collector<wbr>Ip<wbr>Address</span>
+        <span id="state_netflowcollectoripaddress_go">
+<a href="#state_netflowcollectoripaddress_go" style="color: inherit; text-decoration: inherit;">Netflow<wbr>Collector<wbr>Ip<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -5345,7 +6373,9 @@ Switch Version 6.0 or later. Must be set before Netflow can be enabled.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Netflow<wbr>Collector<wbr>Port</span>
+        <span id="state_netflowcollectorport_go">
+<a href="#state_netflowcollectorport_go" style="color: inherit; text-decoration: inherit;">Netflow<wbr>Collector<wbr>Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -5355,7 +6385,9 @@ must be set before Netflow can be enabled.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Netflow<wbr>Enabled</span>
+        <span id="state_netflowenabled_go">
+<a href="#state_netflowenabled_go" style="color: inherit; text-decoration: inherit;">Netflow<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -5365,7 +6397,9 @@ applies to.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Netflow<wbr>Idle<wbr>Flow<wbr>Timeout</span>
+        <span id="state_netflowidleflowtimeout_go">
+<a href="#state_netflowidleflowtimeout_go" style="color: inherit; text-decoration: inherit;">Netflow<wbr>Idle<wbr>Flow<wbr>Timeout</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -5376,7 +6410,9 @@ to `600`. Default: `15`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Netflow<wbr>Internal<wbr>Flows<wbr>Only</span>
+        <span id="state_netflowinternalflowsonly_go">
+<a href="#state_netflowinternalflowsonly_go" style="color: inherit; text-decoration: inherit;">Netflow<wbr>Internal<wbr>Flows<wbr>Only</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -5387,7 +6423,9 @@ Default: `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Netflow<wbr>Observation<wbr>Domain<wbr>Id</span>
+        <span id="state_netflowobservationdomainid_go">
+<a href="#state_netflowobservationdomainid_go" style="color: inherit; text-decoration: inherit;">Netflow<wbr>Observation<wbr>Domain<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -5397,7 +6435,9 @@ the Netflow collector.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Netflow<wbr>Sampling<wbr>Rate</span>
+        <span id="state_netflowsamplingrate_go">
+<a href="#state_netflowsamplingrate_go" style="color: inherit; text-decoration: inherit;">Netflow<wbr>Sampling<wbr>Rate</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -5409,7 +6449,9 @@ indicates an analysis rate of 0.001%.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Network<wbr>Resource<wbr>Control<wbr>Enabled</span>
+        <span id="state_networkresourcecontrolenabled_go">
+<a href="#state_networkresourcecontrolenabled_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Resource<wbr>Control<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -5419,7 +6461,9 @@ network I/O control. Default: `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Network<wbr>Resource<wbr>Control<wbr>Version</span>
+        <span id="state_networkresourcecontrolversion_go">
+<a href="#state_networkresourcecontrolversion_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Resource<wbr>Control<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -5429,7 +6473,9 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Nfs<wbr>Maximum<wbr>Mbit</span>
+        <span id="state_nfsmaximummbit_go">
+<a href="#state_nfsmaximummbit_go" style="color: inherit; text-decoration: inherit;">Nfs<wbr>Maximum<wbr>Mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -5438,7 +6484,9 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Nfs<wbr>Reservation<wbr>Mbit</span>
+        <span id="state_nfsreservationmbit_go">
+<a href="#state_nfsreservationmbit_go" style="color: inherit; text-decoration: inherit;">Nfs<wbr>Reservation<wbr>Mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -5447,7 +6495,9 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Nfs<wbr>Share<wbr>Count</span>
+        <span id="state_nfssharecount_go">
+<a href="#state_nfssharecount_go" style="color: inherit; text-decoration: inherit;">Nfs<wbr>Share<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -5456,7 +6506,9 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Nfs<wbr>Share<wbr>Level</span>
+        <span id="state_nfssharelevel_go">
+<a href="#state_nfssharelevel_go" style="color: inherit; text-decoration: inherit;">Nfs<wbr>Share<wbr>Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -5465,7 +6517,9 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Notify<wbr>Switches</span>
+        <span id="state_notifyswitches_go">
+<a href="#state_notifyswitches_go" style="color: inherit; text-decoration: inherit;">Notify<wbr>Switches</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -5475,7 +6529,9 @@ broadcast network of an uplink failover, triggering cache updates.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Port<wbr>Private<wbr>Secondary<wbr>Vlan<wbr>Id</span>
+        <span id="state_portprivatesecondaryvlanid_go">
+<a href="#state_portprivatesecondaryvlanid_go" style="color: inherit; text-decoration: inherit;">Port<wbr>Private<wbr>Secondary<wbr>Vlan<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -5485,7 +6541,9 @@ ID when using private VLANs.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Standby<wbr>Uplinks</span>
+        <span id="state_standbyuplinks_go">
+<a href="#state_standbyuplinks_go" style="color: inherit; text-decoration: inherit;">Standby<wbr>Uplinks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -5497,7 +6555,9 @@ here for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="state_tags_go">
+<a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -5506,7 +6566,9 @@ here for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Teaming<wbr>Policy</span>
+        <span id="state_teamingpolicy_go">
+<a href="#state_teamingpolicy_go" style="color: inherit; text-decoration: inherit;">Teaming<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -5517,7 +6579,9 @@ here for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tx<wbr>Uplink</span>
+        <span id="state_txuplink_go">
+<a href="#state_txuplink_go" style="color: inherit; text-decoration: inherit;">Tx<wbr>Uplink</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -5527,7 +6591,9 @@ this policy applies to its DVS uplinks.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Uplinks</span>
+        <span id="state_uplinks_go">
+<a href="#state_uplinks_go" style="color: inherit; text-decoration: inherit;">Uplinks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -5540,7 +6606,9 @@ use this option.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vdp<wbr>Maximum<wbr>Mbit</span>
+        <span id="state_vdpmaximummbit_go">
+<a href="#state_vdpmaximummbit_go" style="color: inherit; text-decoration: inherit;">Vdp<wbr>Maximum<wbr>Mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -5549,7 +6617,9 @@ use this option.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vdp<wbr>Reservation<wbr>Mbit</span>
+        <span id="state_vdpreservationmbit_go">
+<a href="#state_vdpreservationmbit_go" style="color: inherit; text-decoration: inherit;">Vdp<wbr>Reservation<wbr>Mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -5558,7 +6628,9 @@ use this option.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vdp<wbr>Share<wbr>Count</span>
+        <span id="state_vdpsharecount_go">
+<a href="#state_vdpsharecount_go" style="color: inherit; text-decoration: inherit;">Vdp<wbr>Share<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -5567,7 +6639,9 @@ use this option.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vdp<wbr>Share<wbr>Level</span>
+        <span id="state_vdpsharelevel_go">
+<a href="#state_vdpsharelevel_go" style="color: inherit; text-decoration: inherit;">Vdp<wbr>Share<wbr>Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -5576,7 +6650,9 @@ use this option.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Version</span>
+        <span id="state_version_go">
+<a href="#state_version_go" style="color: inherit; text-decoration: inherit;">Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -5588,7 +6664,9 @@ downgraded.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Virtualmachine<wbr>Maximum<wbr>Mbit</span>
+        <span id="state_virtualmachinemaximummbit_go">
+<a href="#state_virtualmachinemaximummbit_go" style="color: inherit; text-decoration: inherit;">Virtualmachine<wbr>Maximum<wbr>Mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -5597,7 +6675,9 @@ downgraded.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Virtualmachine<wbr>Reservation<wbr>Mbit</span>
+        <span id="state_virtualmachinereservationmbit_go">
+<a href="#state_virtualmachinereservationmbit_go" style="color: inherit; text-decoration: inherit;">Virtualmachine<wbr>Reservation<wbr>Mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -5606,7 +6686,9 @@ downgraded.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Virtualmachine<wbr>Share<wbr>Count</span>
+        <span id="state_virtualmachinesharecount_go">
+<a href="#state_virtualmachinesharecount_go" style="color: inherit; text-decoration: inherit;">Virtualmachine<wbr>Share<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -5615,7 +6697,9 @@ downgraded.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Virtualmachine<wbr>Share<wbr>Level</span>
+        <span id="state_virtualmachinesharelevel_go">
+<a href="#state_virtualmachinesharelevel_go" style="color: inherit; text-decoration: inherit;">Virtualmachine<wbr>Share<wbr>Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -5624,7 +6708,9 @@ downgraded.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vlan<wbr>Id</span>
+        <span id="state_vlanid_go">
+<a href="#state_vlanid_go" style="color: inherit; text-decoration: inherit;">Vlan<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -5633,7 +6719,9 @@ downgraded.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vlan<wbr>Ranges</span>
+        <span id="state_vlanranges_go">
+<a href="#state_vlanranges_go" style="color: inherit; text-decoration: inherit;">Vlan<wbr>Ranges</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributedvirtualswitchvlanrange">[]Distributed<wbr>Virtual<wbr>Switch<wbr>Vlan<wbr>Range</a></span>
     </dt>
@@ -5645,7 +6733,9 @@ below:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vmotion<wbr>Maximum<wbr>Mbit</span>
+        <span id="state_vmotionmaximummbit_go">
+<a href="#state_vmotionmaximummbit_go" style="color: inherit; text-decoration: inherit;">Vmotion<wbr>Maximum<wbr>Mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -5654,7 +6744,9 @@ below:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vmotion<wbr>Reservation<wbr>Mbit</span>
+        <span id="state_vmotionreservationmbit_go">
+<a href="#state_vmotionreservationmbit_go" style="color: inherit; text-decoration: inherit;">Vmotion<wbr>Reservation<wbr>Mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -5663,7 +6755,9 @@ below:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vmotion<wbr>Share<wbr>Count</span>
+        <span id="state_vmotionsharecount_go">
+<a href="#state_vmotionsharecount_go" style="color: inherit; text-decoration: inherit;">Vmotion<wbr>Share<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -5672,7 +6766,9 @@ below:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vmotion<wbr>Share<wbr>Level</span>
+        <span id="state_vmotionsharelevel_go">
+<a href="#state_vmotionsharelevel_go" style="color: inherit; text-decoration: inherit;">Vmotion<wbr>Share<wbr>Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -5681,7 +6777,9 @@ below:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vsan<wbr>Maximum<wbr>Mbit</span>
+        <span id="state_vsanmaximummbit_go">
+<a href="#state_vsanmaximummbit_go" style="color: inherit; text-decoration: inherit;">Vsan<wbr>Maximum<wbr>Mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -5690,7 +6788,9 @@ below:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vsan<wbr>Reservation<wbr>Mbit</span>
+        <span id="state_vsanreservationmbit_go">
+<a href="#state_vsanreservationmbit_go" style="color: inherit; text-decoration: inherit;">Vsan<wbr>Reservation<wbr>Mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -5699,7 +6799,9 @@ below:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vsan<wbr>Share<wbr>Count</span>
+        <span id="state_vsansharecount_go">
+<a href="#state_vsansharecount_go" style="color: inherit; text-decoration: inherit;">Vsan<wbr>Share<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -5708,7 +6810,9 @@ below:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vsan<wbr>Share<wbr>Level</span>
+        <span id="state_vsansharelevel_go">
+<a href="#state_vsansharelevel_go" style="color: inherit; text-decoration: inherit;">Vsan<wbr>Share<wbr>Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -5724,7 +6828,9 @@ below:
 
     <dt class="property-optional"
             title="Optional">
-        <span>active<wbr>Uplinks</span>
+        <span id="state_activeuplinks_nodejs">
+<a href="#state_activeuplinks_nodejs" style="color: inherit; text-decoration: inherit;">active<wbr>Uplinks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -5736,7 +6842,9 @@ here for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>allow<wbr>Forged<wbr>Transmits</span>
+        <span id="state_allowforgedtransmits_nodejs">
+<a href="#state_allowforgedtransmits_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Forged<wbr>Transmits</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -5747,7 +6855,9 @@ address than that of its own.
 
     <dt class="property-optional"
             title="Optional">
-        <span>allow<wbr>Mac<wbr>Changes</span>
+        <span id="state_allowmacchanges_nodejs">
+<a href="#state_allowmacchanges_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Mac<wbr>Changes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -5757,7 +6867,9 @@ Control (MAC) address can be changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>allow<wbr>Promiscuous</span>
+        <span id="state_allowpromiscuous_nodejs">
+<a href="#state_allowpromiscuous_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Promiscuous</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -5767,7 +6879,9 @@ flag indicates whether or not all traffic is seen on a given port.
 
     <dt class="property-optional"
             title="Optional">
-        <span>block<wbr>All<wbr>Ports</span>
+        <span id="state_blockallports_nodejs">
+<a href="#state_blockallports_nodejs" style="color: inherit; text-decoration: inherit;">block<wbr>All<wbr>Ports</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -5778,7 +6892,9 @@ virtual devices.
 
     <dt class="property-optional"
             title="Optional">
-        <span>check<wbr>Beacon</span>
+        <span id="state_checkbeacon_nodejs">
+<a href="#state_checkbeacon_nodejs" style="color: inherit; text-decoration: inherit;">check<wbr>Beacon</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -5788,7 +6904,9 @@ to detect NIC failure.
 
     <dt class="property-optional"
             title="Optional">
-        <span>config<wbr>Version</span>
+        <span id="state_configversion_nodejs">
+<a href="#state_configversion_nodejs" style="color: inherit; text-decoration: inherit;">config<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -5797,7 +6915,9 @@ to detect NIC failure.
 
     <dt class="property-optional"
             title="Optional">
-        <span>contact<wbr>Detail</span>
+        <span id="state_contactdetail_nodejs">
+<a href="#state_contactdetail_nodejs" style="color: inherit; text-decoration: inherit;">contact<wbr>Detail</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -5807,7 +6927,9 @@ who is responsible for the DVS.
 
     <dt class="property-optional"
             title="Optional">
-        <span>contact<wbr>Name</span>
+        <span id="state_contactname_nodejs">
+<a href="#state_contactname_nodejs" style="color: inherit; text-decoration: inherit;">contact<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -5817,7 +6939,9 @@ DVS.
 
     <dt class="property-optional"
             title="Optional">
-        <span>custom<wbr>Attributes</span>
+        <span id="state_customattributes_nodejs">
+<a href="#state_customattributes_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Attributes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -5827,7 +6951,9 @@ value strings to set for virtual switch.
 
     <dt class="property-optional"
             title="Optional">
-        <span>datacenter<wbr>Id</span>
+        <span id="state_datacenterid_nodejs">
+<a href="#state_datacenterid_nodejs" style="color: inherit; text-decoration: inherit;">datacenter<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -5837,7 +6963,9 @@ virtual switch will be created. Forces a new resource if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="state_description_nodejs">
+<a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -5846,7 +6974,9 @@ virtual switch will be created. Forces a new resource if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>directpath<wbr>Gen2Allowed</span>
+        <span id="state_directpathgen2allowed_nodejs">
+<a href="#state_directpathgen2allowed_nodejs" style="color: inherit; text-decoration: inherit;">directpath<wbr>Gen2Allowed</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -5856,7 +6986,9 @@ for which this policy applies to.
 
     <dt class="property-optional"
             title="Optional">
-        <span>egress<wbr>Shaping<wbr>Average<wbr>Bandwidth</span>
+        <span id="state_egressshapingaveragebandwidth_nodejs">
+<a href="#state_egressshapingaveragebandwidth_nodejs" style="color: inherit; text-decoration: inherit;">egress<wbr>Shaping<wbr>Average<wbr>Bandwidth</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -5866,7 +6998,9 @@ per second if egress traffic shaping is enabled on the port.
 
     <dt class="property-optional"
             title="Optional">
-        <span>egress<wbr>Shaping<wbr>Burst<wbr>Size</span>
+        <span id="state_egressshapingburstsize_nodejs">
+<a href="#state_egressshapingburstsize_nodejs" style="color: inherit; text-decoration: inherit;">egress<wbr>Shaping<wbr>Burst<wbr>Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -5876,7 +7010,9 @@ bytes if egress traffic shaping is enabled on the port.
 
     <dt class="property-optional"
             title="Optional">
-        <span>egress<wbr>Shaping<wbr>Enabled</span>
+        <span id="state_egressshapingenabled_nodejs">
+<a href="#state_egressshapingenabled_nodejs" style="color: inherit; text-decoration: inherit;">egress<wbr>Shaping<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -5886,7 +7022,9 @@ on the port for egress traffic.
 
     <dt class="property-optional"
             title="Optional">
-        <span>egress<wbr>Shaping<wbr>Peak<wbr>Bandwidth</span>
+        <span id="state_egressshapingpeakbandwidth_nodejs">
+<a href="#state_egressshapingpeakbandwidth_nodejs" style="color: inherit; text-decoration: inherit;">egress<wbr>Shaping<wbr>Peak<wbr>Bandwidth</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -5896,7 +7034,9 @@ in bits per second if egress traffic shaping is enabled on the port.
 
     <dt class="property-optional"
             title="Optional">
-        <span>failback</span>
+        <span id="state_failback_nodejs">
+<a href="#state_failback_nodejs" style="color: inherit; text-decoration: inherit;">failback</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -5906,7 +7046,9 @@ uplinks higher in precedence when they come back up.
 
     <dt class="property-optional"
             title="Optional">
-        <span>faulttolerance<wbr>Maximum<wbr>Mbit</span>
+        <span id="state_faulttolerancemaximummbit_nodejs">
+<a href="#state_faulttolerancemaximummbit_nodejs" style="color: inherit; text-decoration: inherit;">faulttolerance<wbr>Maximum<wbr>Mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -5915,7 +7057,9 @@ uplinks higher in precedence when they come back up.
 
     <dt class="property-optional"
             title="Optional">
-        <span>faulttolerance<wbr>Reservation<wbr>Mbit</span>
+        <span id="state_faulttolerancereservationmbit_nodejs">
+<a href="#state_faulttolerancereservationmbit_nodejs" style="color: inherit; text-decoration: inherit;">faulttolerance<wbr>Reservation<wbr>Mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -5924,7 +7068,9 @@ uplinks higher in precedence when they come back up.
 
     <dt class="property-optional"
             title="Optional">
-        <span>faulttolerance<wbr>Share<wbr>Count</span>
+        <span id="state_faulttolerancesharecount_nodejs">
+<a href="#state_faulttolerancesharecount_nodejs" style="color: inherit; text-decoration: inherit;">faulttolerance<wbr>Share<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -5933,7 +7079,9 @@ uplinks higher in precedence when they come back up.
 
     <dt class="property-optional"
             title="Optional">
-        <span>faulttolerance<wbr>Share<wbr>Level</span>
+        <span id="state_faulttolerancesharelevel_nodejs">
+<a href="#state_faulttolerancesharelevel_nodejs" style="color: inherit; text-decoration: inherit;">faulttolerance<wbr>Share<wbr>Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -5942,7 +7090,9 @@ uplinks higher in precedence when they come back up.
 
     <dt class="property-optional"
             title="Optional">
-        <span>folder</span>
+        <span id="state_folder_nodejs">
+<a href="#state_folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -5952,7 +7102,9 @@ if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>hbr<wbr>Maximum<wbr>Mbit</span>
+        <span id="state_hbrmaximummbit_nodejs">
+<a href="#state_hbrmaximummbit_nodejs" style="color: inherit; text-decoration: inherit;">hbr<wbr>Maximum<wbr>Mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -5961,7 +7113,9 @@ if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>hbr<wbr>Reservation<wbr>Mbit</span>
+        <span id="state_hbrreservationmbit_nodejs">
+<a href="#state_hbrreservationmbit_nodejs" style="color: inherit; text-decoration: inherit;">hbr<wbr>Reservation<wbr>Mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -5970,7 +7124,9 @@ if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>hbr<wbr>Share<wbr>Count</span>
+        <span id="state_hbrsharecount_nodejs">
+<a href="#state_hbrsharecount_nodejs" style="color: inherit; text-decoration: inherit;">hbr<wbr>Share<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -5979,7 +7135,9 @@ if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>hbr<wbr>Share<wbr>Level</span>
+        <span id="state_hbrsharelevel_nodejs">
+<a href="#state_hbrsharelevel_nodejs" style="color: inherit; text-decoration: inherit;">hbr<wbr>Share<wbr>Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -5988,7 +7146,9 @@ if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>hosts</span>
+        <span id="state_hosts_nodejs">
+<a href="#state_hosts_nodejs" style="color: inherit; text-decoration: inherit;">hosts</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributedvirtualswitchhost">Distributed<wbr>Virtual<wbr>Switch<wbr>Host[]</a></span>
     </dt>
@@ -5998,7 +7158,9 @@ options are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>ingress<wbr>Shaping<wbr>Average<wbr>Bandwidth</span>
+        <span id="state_ingressshapingaveragebandwidth_nodejs">
+<a href="#state_ingressshapingaveragebandwidth_nodejs" style="color: inherit; text-decoration: inherit;">ingress<wbr>Shaping<wbr>Average<wbr>Bandwidth</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -6008,7 +7170,9 @@ bits per second if ingress traffic shaping is enabled on the port.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ingress<wbr>Shaping<wbr>Burst<wbr>Size</span>
+        <span id="state_ingressshapingburstsize_nodejs">
+<a href="#state_ingressshapingburstsize_nodejs" style="color: inherit; text-decoration: inherit;">ingress<wbr>Shaping<wbr>Burst<wbr>Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -6018,7 +7182,9 @@ bytes if ingress traffic shaping is enabled on the port.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ingress<wbr>Shaping<wbr>Enabled</span>
+        <span id="state_ingressshapingenabled_nodejs">
+<a href="#state_ingressshapingenabled_nodejs" style="color: inherit; text-decoration: inherit;">ingress<wbr>Shaping<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -6028,7 +7194,9 @@ enabled on the port for ingress traffic.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ingress<wbr>Shaping<wbr>Peak<wbr>Bandwidth</span>
+        <span id="state_ingressshapingpeakbandwidth_nodejs">
+<a href="#state_ingressshapingpeakbandwidth_nodejs" style="color: inherit; text-decoration: inherit;">ingress<wbr>Shaping<wbr>Peak<wbr>Bandwidth</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -6038,7 +7206,9 @@ bursts in bits per second if ingress traffic shaping is enabled on the port.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ipv4Address</span>
+        <span id="state_ipv4address_nodejs">
+<a href="#state_ipv4address_nodejs" style="color: inherit; text-decoration: inherit;">ipv4Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -6049,7 +7219,9 @@ below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>iscsi<wbr>Maximum<wbr>Mbit</span>
+        <span id="state_iscsimaximummbit_nodejs">
+<a href="#state_iscsimaximummbit_nodejs" style="color: inherit; text-decoration: inherit;">iscsi<wbr>Maximum<wbr>Mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -6058,7 +7230,9 @@ below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>iscsi<wbr>Reservation<wbr>Mbit</span>
+        <span id="state_iscsireservationmbit_nodejs">
+<a href="#state_iscsireservationmbit_nodejs" style="color: inherit; text-decoration: inherit;">iscsi<wbr>Reservation<wbr>Mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -6067,7 +7241,9 @@ below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>iscsi<wbr>Share<wbr>Count</span>
+        <span id="state_iscsisharecount_nodejs">
+<a href="#state_iscsisharecount_nodejs" style="color: inherit; text-decoration: inherit;">iscsi<wbr>Share<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -6076,7 +7252,9 @@ below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>iscsi<wbr>Share<wbr>Level</span>
+        <span id="state_iscsisharelevel_nodejs">
+<a href="#state_iscsisharelevel_nodejs" style="color: inherit; text-decoration: inherit;">iscsi<wbr>Share<wbr>Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -6085,7 +7263,9 @@ below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>lacp<wbr>Api<wbr>Version</span>
+        <span id="state_lacpapiversion_nodejs">
+<a href="#state_lacpapiversion_nodejs" style="color: inherit; text-decoration: inherit;">lacp<wbr>Api<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -6096,7 +7276,9 @@ version to use with the switch. Possible values are `singleLag` and
 
     <dt class="property-optional"
             title="Optional">
-        <span>lacp<wbr>Enabled</span>
+        <span id="state_lacpenabled_nodejs">
+<a href="#state_lacpenabled_nodejs" style="color: inherit; text-decoration: inherit;">lacp<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -6106,7 +7288,9 @@ applies to.
 
     <dt class="property-optional"
             title="Optional">
-        <span>lacp<wbr>Mode</span>
+        <span id="state_lacpmode_nodejs">
+<a href="#state_lacpmode_nodejs" style="color: inherit; text-decoration: inherit;">lacp<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -6115,7 +7299,9 @@ applies to.
 
     <dt class="property-optional"
             title="Optional">
-        <span>link<wbr>Discovery<wbr>Operation</span>
+        <span id="state_linkdiscoveryoperation_nodejs">
+<a href="#state_linkdiscoveryoperation_nodejs" style="color: inherit; text-decoration: inherit;">link<wbr>Discovery<wbr>Operation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -6125,7 +7311,9 @@ for link discovery traffic.
 
     <dt class="property-optional"
             title="Optional">
-        <span>link<wbr>Discovery<wbr>Protocol</span>
+        <span id="state_linkdiscoveryprotocol_nodejs">
+<a href="#state_linkdiscoveryprotocol_nodejs" style="color: inherit; text-decoration: inherit;">link<wbr>Discovery<wbr>Protocol</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -6135,7 +7323,9 @@ types are `cdp` and `lldp`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>management<wbr>Maximum<wbr>Mbit</span>
+        <span id="state_managementmaximummbit_nodejs">
+<a href="#state_managementmaximummbit_nodejs" style="color: inherit; text-decoration: inherit;">management<wbr>Maximum<wbr>Mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -6144,7 +7334,9 @@ types are `cdp` and `lldp`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>management<wbr>Reservation<wbr>Mbit</span>
+        <span id="state_managementreservationmbit_nodejs">
+<a href="#state_managementreservationmbit_nodejs" style="color: inherit; text-decoration: inherit;">management<wbr>Reservation<wbr>Mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -6153,7 +7345,9 @@ types are `cdp` and `lldp`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>management<wbr>Share<wbr>Count</span>
+        <span id="state_managementsharecount_nodejs">
+<a href="#state_managementsharecount_nodejs" style="color: inherit; text-decoration: inherit;">management<wbr>Share<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -6162,7 +7356,9 @@ types are `cdp` and `lldp`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>management<wbr>Share<wbr>Level</span>
+        <span id="state_managementsharelevel_nodejs">
+<a href="#state_managementsharelevel_nodejs" style="color: inherit; text-decoration: inherit;">management<wbr>Share<wbr>Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -6171,7 +7367,9 @@ types are `cdp` and `lldp`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Mtu</span>
+        <span id="state_maxmtu_nodejs">
+<a href="#state_maxmtu_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Mtu</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -6181,7 +7379,9 @@ switch.
 
     <dt class="property-optional"
             title="Optional">
-        <span>multicast<wbr>Filtering<wbr>Mode</span>
+        <span id="state_multicastfilteringmode_nodejs">
+<a href="#state_multicastfilteringmode_nodejs" style="color: inherit; text-decoration: inherit;">multicast<wbr>Filtering<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -6191,7 +7391,9 @@ with the switch. Can be one of `legacyFiltering` or `snooping`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -6200,7 +7402,9 @@ with the switch. Can be one of `legacyFiltering` or `snooping`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>netflow<wbr>Active<wbr>Flow<wbr>Timeout</span>
+        <span id="state_netflowactiveflowtimeout_nodejs">
+<a href="#state_netflowactiveflowtimeout_nodejs" style="color: inherit; text-decoration: inherit;">netflow<wbr>Active<wbr>Flow<wbr>Timeout</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -6211,7 +7415,9 @@ active flows are forced to be exported to the collector. Allowed range is
 
     <dt class="property-optional"
             title="Optional">
-        <span>netflow<wbr>Collector<wbr>Ip<wbr>Address</span>
+        <span id="state_netflowcollectoripaddress_nodejs">
+<a href="#state_netflowcollectoripaddress_nodejs" style="color: inherit; text-decoration: inherit;">netflow<wbr>Collector<wbr>Ip<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -6222,7 +7428,9 @@ Switch Version 6.0 or later. Must be set before Netflow can be enabled.
 
     <dt class="property-optional"
             title="Optional">
-        <span>netflow<wbr>Collector<wbr>Port</span>
+        <span id="state_netflowcollectorport_nodejs">
+<a href="#state_netflowcollectorport_nodejs" style="color: inherit; text-decoration: inherit;">netflow<wbr>Collector<wbr>Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -6232,7 +7440,9 @@ must be set before Netflow can be enabled.
 
     <dt class="property-optional"
             title="Optional">
-        <span>netflow<wbr>Enabled</span>
+        <span id="state_netflowenabled_nodejs">
+<a href="#state_netflowenabled_nodejs" style="color: inherit; text-decoration: inherit;">netflow<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -6242,7 +7452,9 @@ applies to.
 
     <dt class="property-optional"
             title="Optional">
-        <span>netflow<wbr>Idle<wbr>Flow<wbr>Timeout</span>
+        <span id="state_netflowidleflowtimeout_nodejs">
+<a href="#state_netflowidleflowtimeout_nodejs" style="color: inherit; text-decoration: inherit;">netflow<wbr>Idle<wbr>Flow<wbr>Timeout</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -6253,7 +7465,9 @@ to `600`. Default: `15`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>netflow<wbr>Internal<wbr>Flows<wbr>Only</span>
+        <span id="state_netflowinternalflowsonly_nodejs">
+<a href="#state_netflowinternalflowsonly_nodejs" style="color: inherit; text-decoration: inherit;">netflow<wbr>Internal<wbr>Flows<wbr>Only</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -6264,7 +7478,9 @@ Default: `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>netflow<wbr>Observation<wbr>Domain<wbr>Id</span>
+        <span id="state_netflowobservationdomainid_nodejs">
+<a href="#state_netflowobservationdomainid_nodejs" style="color: inherit; text-decoration: inherit;">netflow<wbr>Observation<wbr>Domain<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -6274,7 +7490,9 @@ the Netflow collector.
 
     <dt class="property-optional"
             title="Optional">
-        <span>netflow<wbr>Sampling<wbr>Rate</span>
+        <span id="state_netflowsamplingrate_nodejs">
+<a href="#state_netflowsamplingrate_nodejs" style="color: inherit; text-decoration: inherit;">netflow<wbr>Sampling<wbr>Rate</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -6286,7 +7504,9 @@ indicates an analysis rate of 0.001%.
 
     <dt class="property-optional"
             title="Optional">
-        <span>network<wbr>Resource<wbr>Control<wbr>Enabled</span>
+        <span id="state_networkresourcecontrolenabled_nodejs">
+<a href="#state_networkresourcecontrolenabled_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Resource<wbr>Control<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -6296,7 +7516,9 @@ network I/O control. Default: `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>network<wbr>Resource<wbr>Control<wbr>Version</span>
+        <span id="state_networkresourcecontrolversion_nodejs">
+<a href="#state_networkresourcecontrolversion_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Resource<wbr>Control<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -6306,7 +7528,9 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>nfs<wbr>Maximum<wbr>Mbit</span>
+        <span id="state_nfsmaximummbit_nodejs">
+<a href="#state_nfsmaximummbit_nodejs" style="color: inherit; text-decoration: inherit;">nfs<wbr>Maximum<wbr>Mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -6315,7 +7539,9 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>nfs<wbr>Reservation<wbr>Mbit</span>
+        <span id="state_nfsreservationmbit_nodejs">
+<a href="#state_nfsreservationmbit_nodejs" style="color: inherit; text-decoration: inherit;">nfs<wbr>Reservation<wbr>Mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -6324,7 +7550,9 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>nfs<wbr>Share<wbr>Count</span>
+        <span id="state_nfssharecount_nodejs">
+<a href="#state_nfssharecount_nodejs" style="color: inherit; text-decoration: inherit;">nfs<wbr>Share<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -6333,7 +7561,9 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>nfs<wbr>Share<wbr>Level</span>
+        <span id="state_nfssharelevel_nodejs">
+<a href="#state_nfssharelevel_nodejs" style="color: inherit; text-decoration: inherit;">nfs<wbr>Share<wbr>Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -6342,7 +7572,9 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>notify<wbr>Switches</span>
+        <span id="state_notifyswitches_nodejs">
+<a href="#state_notifyswitches_nodejs" style="color: inherit; text-decoration: inherit;">notify<wbr>Switches</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -6352,7 +7584,9 @@ broadcast network of an uplink failover, triggering cache updates.
 
     <dt class="property-optional"
             title="Optional">
-        <span>port<wbr>Private<wbr>Secondary<wbr>Vlan<wbr>Id</span>
+        <span id="state_portprivatesecondaryvlanid_nodejs">
+<a href="#state_portprivatesecondaryvlanid_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Private<wbr>Secondary<wbr>Vlan<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -6362,7 +7596,9 @@ ID when using private VLANs.
 
     <dt class="property-optional"
             title="Optional">
-        <span>standby<wbr>Uplinks</span>
+        <span id="state_standbyuplinks_nodejs">
+<a href="#state_standbyuplinks_nodejs" style="color: inherit; text-decoration: inherit;">standby<wbr>Uplinks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -6374,7 +7610,9 @@ here for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="state_tags_nodejs">
+<a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -6383,7 +7621,9 @@ here for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>teaming<wbr>Policy</span>
+        <span id="state_teamingpolicy_nodejs">
+<a href="#state_teamingpolicy_nodejs" style="color: inherit; text-decoration: inherit;">teaming<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -6394,7 +7634,9 @@ here for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tx<wbr>Uplink</span>
+        <span id="state_txuplink_nodejs">
+<a href="#state_txuplink_nodejs" style="color: inherit; text-decoration: inherit;">tx<wbr>Uplink</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -6404,7 +7646,9 @@ this policy applies to its DVS uplinks.
 
     <dt class="property-optional"
             title="Optional">
-        <span>uplinks</span>
+        <span id="state_uplinks_nodejs">
+<a href="#state_uplinks_nodejs" style="color: inherit; text-decoration: inherit;">uplinks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -6417,7 +7661,9 @@ use this option.
 
     <dt class="property-optional"
             title="Optional">
-        <span>vdp<wbr>Maximum<wbr>Mbit</span>
+        <span id="state_vdpmaximummbit_nodejs">
+<a href="#state_vdpmaximummbit_nodejs" style="color: inherit; text-decoration: inherit;">vdp<wbr>Maximum<wbr>Mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -6426,7 +7672,9 @@ use this option.
 
     <dt class="property-optional"
             title="Optional">
-        <span>vdp<wbr>Reservation<wbr>Mbit</span>
+        <span id="state_vdpreservationmbit_nodejs">
+<a href="#state_vdpreservationmbit_nodejs" style="color: inherit; text-decoration: inherit;">vdp<wbr>Reservation<wbr>Mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -6435,7 +7683,9 @@ use this option.
 
     <dt class="property-optional"
             title="Optional">
-        <span>vdp<wbr>Share<wbr>Count</span>
+        <span id="state_vdpsharecount_nodejs">
+<a href="#state_vdpsharecount_nodejs" style="color: inherit; text-decoration: inherit;">vdp<wbr>Share<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -6444,7 +7694,9 @@ use this option.
 
     <dt class="property-optional"
             title="Optional">
-        <span>vdp<wbr>Share<wbr>Level</span>
+        <span id="state_vdpsharelevel_nodejs">
+<a href="#state_vdpsharelevel_nodejs" style="color: inherit; text-decoration: inherit;">vdp<wbr>Share<wbr>Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -6453,7 +7705,9 @@ use this option.
 
     <dt class="property-optional"
             title="Optional">
-        <span>version</span>
+        <span id="state_version_nodejs">
+<a href="#state_version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -6465,7 +7719,9 @@ downgraded.
 
     <dt class="property-optional"
             title="Optional">
-        <span>virtualmachine<wbr>Maximum<wbr>Mbit</span>
+        <span id="state_virtualmachinemaximummbit_nodejs">
+<a href="#state_virtualmachinemaximummbit_nodejs" style="color: inherit; text-decoration: inherit;">virtualmachine<wbr>Maximum<wbr>Mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -6474,7 +7730,9 @@ downgraded.
 
     <dt class="property-optional"
             title="Optional">
-        <span>virtualmachine<wbr>Reservation<wbr>Mbit</span>
+        <span id="state_virtualmachinereservationmbit_nodejs">
+<a href="#state_virtualmachinereservationmbit_nodejs" style="color: inherit; text-decoration: inherit;">virtualmachine<wbr>Reservation<wbr>Mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -6483,7 +7741,9 @@ downgraded.
 
     <dt class="property-optional"
             title="Optional">
-        <span>virtualmachine<wbr>Share<wbr>Count</span>
+        <span id="state_virtualmachinesharecount_nodejs">
+<a href="#state_virtualmachinesharecount_nodejs" style="color: inherit; text-decoration: inherit;">virtualmachine<wbr>Share<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -6492,7 +7752,9 @@ downgraded.
 
     <dt class="property-optional"
             title="Optional">
-        <span>virtualmachine<wbr>Share<wbr>Level</span>
+        <span id="state_virtualmachinesharelevel_nodejs">
+<a href="#state_virtualmachinesharelevel_nodejs" style="color: inherit; text-decoration: inherit;">virtualmachine<wbr>Share<wbr>Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -6501,7 +7763,9 @@ downgraded.
 
     <dt class="property-optional"
             title="Optional">
-        <span>vlan<wbr>Id</span>
+        <span id="state_vlanid_nodejs">
+<a href="#state_vlanid_nodejs" style="color: inherit; text-decoration: inherit;">vlan<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -6510,7 +7774,9 @@ downgraded.
 
     <dt class="property-optional"
             title="Optional">
-        <span>vlan<wbr>Ranges</span>
+        <span id="state_vlanranges_nodejs">
+<a href="#state_vlanranges_nodejs" style="color: inherit; text-decoration: inherit;">vlan<wbr>Ranges</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributedvirtualswitchvlanrange">Distributed<wbr>Virtual<wbr>Switch<wbr>Vlan<wbr>Range[]</a></span>
     </dt>
@@ -6522,7 +7788,9 @@ below:
 
     <dt class="property-optional"
             title="Optional">
-        <span>vmotion<wbr>Maximum<wbr>Mbit</span>
+        <span id="state_vmotionmaximummbit_nodejs">
+<a href="#state_vmotionmaximummbit_nodejs" style="color: inherit; text-decoration: inherit;">vmotion<wbr>Maximum<wbr>Mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -6531,7 +7799,9 @@ below:
 
     <dt class="property-optional"
             title="Optional">
-        <span>vmotion<wbr>Reservation<wbr>Mbit</span>
+        <span id="state_vmotionreservationmbit_nodejs">
+<a href="#state_vmotionreservationmbit_nodejs" style="color: inherit; text-decoration: inherit;">vmotion<wbr>Reservation<wbr>Mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -6540,7 +7810,9 @@ below:
 
     <dt class="property-optional"
             title="Optional">
-        <span>vmotion<wbr>Share<wbr>Count</span>
+        <span id="state_vmotionsharecount_nodejs">
+<a href="#state_vmotionsharecount_nodejs" style="color: inherit; text-decoration: inherit;">vmotion<wbr>Share<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -6549,7 +7821,9 @@ below:
 
     <dt class="property-optional"
             title="Optional">
-        <span>vmotion<wbr>Share<wbr>Level</span>
+        <span id="state_vmotionsharelevel_nodejs">
+<a href="#state_vmotionsharelevel_nodejs" style="color: inherit; text-decoration: inherit;">vmotion<wbr>Share<wbr>Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -6558,7 +7832,9 @@ below:
 
     <dt class="property-optional"
             title="Optional">
-        <span>vsan<wbr>Maximum<wbr>Mbit</span>
+        <span id="state_vsanmaximummbit_nodejs">
+<a href="#state_vsanmaximummbit_nodejs" style="color: inherit; text-decoration: inherit;">vsan<wbr>Maximum<wbr>Mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -6567,7 +7843,9 @@ below:
 
     <dt class="property-optional"
             title="Optional">
-        <span>vsan<wbr>Reservation<wbr>Mbit</span>
+        <span id="state_vsanreservationmbit_nodejs">
+<a href="#state_vsanreservationmbit_nodejs" style="color: inherit; text-decoration: inherit;">vsan<wbr>Reservation<wbr>Mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -6576,7 +7854,9 @@ below:
 
     <dt class="property-optional"
             title="Optional">
-        <span>vsan<wbr>Share<wbr>Count</span>
+        <span id="state_vsansharecount_nodejs">
+<a href="#state_vsansharecount_nodejs" style="color: inherit; text-decoration: inherit;">vsan<wbr>Share<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -6585,7 +7865,9 @@ below:
 
     <dt class="property-optional"
             title="Optional">
-        <span>vsan<wbr>Share<wbr>Level</span>
+        <span id="state_vsansharelevel_nodejs">
+<a href="#state_vsansharelevel_nodejs" style="color: inherit; text-decoration: inherit;">vsan<wbr>Share<wbr>Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -6601,7 +7883,9 @@ below:
 
     <dt class="property-optional"
             title="Optional">
-        <span>active_<wbr>uplinks</span>
+        <span id="state_active_uplinks_python">
+<a href="#state_active_uplinks_python" style="color: inherit; text-decoration: inherit;">active_<wbr>uplinks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -6613,7 +7897,9 @@ here for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>allow_<wbr>forged_<wbr>transmits</span>
+        <span id="state_allow_forged_transmits_python">
+<a href="#state_allow_forged_transmits_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>forged_<wbr>transmits</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -6624,7 +7910,9 @@ address than that of its own.
 
     <dt class="property-optional"
             title="Optional">
-        <span>allow_<wbr>mac_<wbr>changes</span>
+        <span id="state_allow_mac_changes_python">
+<a href="#state_allow_mac_changes_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>mac_<wbr>changes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -6634,7 +7922,9 @@ Control (MAC) address can be changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>allow_<wbr>promiscuous</span>
+        <span id="state_allow_promiscuous_python">
+<a href="#state_allow_promiscuous_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>promiscuous</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -6644,7 +7934,9 @@ flag indicates whether or not all traffic is seen on a given port.
 
     <dt class="property-optional"
             title="Optional">
-        <span>block_<wbr>all_<wbr>ports</span>
+        <span id="state_block_all_ports_python">
+<a href="#state_block_all_ports_python" style="color: inherit; text-decoration: inherit;">block_<wbr>all_<wbr>ports</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -6655,7 +7947,9 @@ virtual devices.
 
     <dt class="property-optional"
             title="Optional">
-        <span>check_<wbr>beacon</span>
+        <span id="state_check_beacon_python">
+<a href="#state_check_beacon_python" style="color: inherit; text-decoration: inherit;">check_<wbr>beacon</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -6665,7 +7959,9 @@ to detect NIC failure.
 
     <dt class="property-optional"
             title="Optional">
-        <span>config_<wbr>version</span>
+        <span id="state_config_version_python">
+<a href="#state_config_version_python" style="color: inherit; text-decoration: inherit;">config_<wbr>version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -6674,7 +7970,9 @@ to detect NIC failure.
 
     <dt class="property-optional"
             title="Optional">
-        <span>contact_<wbr>detail</span>
+        <span id="state_contact_detail_python">
+<a href="#state_contact_detail_python" style="color: inherit; text-decoration: inherit;">contact_<wbr>detail</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -6684,7 +7982,9 @@ who is responsible for the DVS.
 
     <dt class="property-optional"
             title="Optional">
-        <span>contact_<wbr>name</span>
+        <span id="state_contact_name_python">
+<a href="#state_contact_name_python" style="color: inherit; text-decoration: inherit;">contact_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -6694,7 +7994,9 @@ DVS.
 
     <dt class="property-optional"
             title="Optional">
-        <span>custom_<wbr>attributes</span>
+        <span id="state_custom_attributes_python">
+<a href="#state_custom_attributes_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>attributes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -6704,7 +8006,9 @@ value strings to set for virtual switch.
 
     <dt class="property-optional"
             title="Optional">
-        <span>datacenter_<wbr>id</span>
+        <span id="state_datacenter_id_python">
+<a href="#state_datacenter_id_python" style="color: inherit; text-decoration: inherit;">datacenter_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -6714,7 +8018,9 @@ virtual switch will be created. Forces a new resource if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="state_description_python">
+<a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -6723,7 +8029,9 @@ virtual switch will be created. Forces a new resource if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>directpath_<wbr>gen2_<wbr>allowed</span>
+        <span id="state_directpath_gen2_allowed_python">
+<a href="#state_directpath_gen2_allowed_python" style="color: inherit; text-decoration: inherit;">directpath_<wbr>gen2_<wbr>allowed</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -6733,7 +8041,9 @@ for which this policy applies to.
 
     <dt class="property-optional"
             title="Optional">
-        <span>egress_<wbr>shaping_<wbr>average_<wbr>bandwidth</span>
+        <span id="state_egress_shaping_average_bandwidth_python">
+<a href="#state_egress_shaping_average_bandwidth_python" style="color: inherit; text-decoration: inherit;">egress_<wbr>shaping_<wbr>average_<wbr>bandwidth</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -6743,7 +8053,9 @@ per second if egress traffic shaping is enabled on the port.
 
     <dt class="property-optional"
             title="Optional">
-        <span>egress_<wbr>shaping_<wbr>burst_<wbr>size</span>
+        <span id="state_egress_shaping_burst_size_python">
+<a href="#state_egress_shaping_burst_size_python" style="color: inherit; text-decoration: inherit;">egress_<wbr>shaping_<wbr>burst_<wbr>size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -6753,7 +8065,9 @@ bytes if egress traffic shaping is enabled on the port.
 
     <dt class="property-optional"
             title="Optional">
-        <span>egress_<wbr>shaping_<wbr>enabled</span>
+        <span id="state_egress_shaping_enabled_python">
+<a href="#state_egress_shaping_enabled_python" style="color: inherit; text-decoration: inherit;">egress_<wbr>shaping_<wbr>enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -6763,7 +8077,9 @@ on the port for egress traffic.
 
     <dt class="property-optional"
             title="Optional">
-        <span>egress_<wbr>shaping_<wbr>peak_<wbr>bandwidth</span>
+        <span id="state_egress_shaping_peak_bandwidth_python">
+<a href="#state_egress_shaping_peak_bandwidth_python" style="color: inherit; text-decoration: inherit;">egress_<wbr>shaping_<wbr>peak_<wbr>bandwidth</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -6773,7 +8089,9 @@ in bits per second if egress traffic shaping is enabled on the port.
 
     <dt class="property-optional"
             title="Optional">
-        <span>failback</span>
+        <span id="state_failback_python">
+<a href="#state_failback_python" style="color: inherit; text-decoration: inherit;">failback</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -6783,7 +8101,9 @@ uplinks higher in precedence when they come back up.
 
     <dt class="property-optional"
             title="Optional">
-        <span>faulttolerance_<wbr>maximum_<wbr>mbit</span>
+        <span id="state_faulttolerance_maximum_mbit_python">
+<a href="#state_faulttolerance_maximum_mbit_python" style="color: inherit; text-decoration: inherit;">faulttolerance_<wbr>maximum_<wbr>mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -6792,7 +8112,9 @@ uplinks higher in precedence when they come back up.
 
     <dt class="property-optional"
             title="Optional">
-        <span>faulttolerance_<wbr>reservation_<wbr>mbit</span>
+        <span id="state_faulttolerance_reservation_mbit_python">
+<a href="#state_faulttolerance_reservation_mbit_python" style="color: inherit; text-decoration: inherit;">faulttolerance_<wbr>reservation_<wbr>mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -6801,7 +8123,9 @@ uplinks higher in precedence when they come back up.
 
     <dt class="property-optional"
             title="Optional">
-        <span>faulttolerance_<wbr>share_<wbr>count</span>
+        <span id="state_faulttolerance_share_count_python">
+<a href="#state_faulttolerance_share_count_python" style="color: inherit; text-decoration: inherit;">faulttolerance_<wbr>share_<wbr>count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -6810,7 +8134,9 @@ uplinks higher in precedence when they come back up.
 
     <dt class="property-optional"
             title="Optional">
-        <span>faulttolerance_<wbr>share_<wbr>level</span>
+        <span id="state_faulttolerance_share_level_python">
+<a href="#state_faulttolerance_share_level_python" style="color: inherit; text-decoration: inherit;">faulttolerance_<wbr>share_<wbr>level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -6819,7 +8145,9 @@ uplinks higher in precedence when they come back up.
 
     <dt class="property-optional"
             title="Optional">
-        <span>folder</span>
+        <span id="state_folder_python">
+<a href="#state_folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -6829,7 +8157,9 @@ if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>hbr_<wbr>maximum_<wbr>mbit</span>
+        <span id="state_hbr_maximum_mbit_python">
+<a href="#state_hbr_maximum_mbit_python" style="color: inherit; text-decoration: inherit;">hbr_<wbr>maximum_<wbr>mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -6838,7 +8168,9 @@ if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>hbr_<wbr>reservation_<wbr>mbit</span>
+        <span id="state_hbr_reservation_mbit_python">
+<a href="#state_hbr_reservation_mbit_python" style="color: inherit; text-decoration: inherit;">hbr_<wbr>reservation_<wbr>mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -6847,7 +8179,9 @@ if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>hbr_<wbr>share_<wbr>count</span>
+        <span id="state_hbr_share_count_python">
+<a href="#state_hbr_share_count_python" style="color: inherit; text-decoration: inherit;">hbr_<wbr>share_<wbr>count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -6856,7 +8190,9 @@ if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>hbr_<wbr>share_<wbr>level</span>
+        <span id="state_hbr_share_level_python">
+<a href="#state_hbr_share_level_python" style="color: inherit; text-decoration: inherit;">hbr_<wbr>share_<wbr>level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -6865,7 +8201,9 @@ if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>hosts</span>
+        <span id="state_hosts_python">
+<a href="#state_hosts_python" style="color: inherit; text-decoration: inherit;">hosts</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributedvirtualswitchhost">List[Distributed<wbr>Virtual<wbr>Switch<wbr>Host]</a></span>
     </dt>
@@ -6875,7 +8213,9 @@ options are:
 
     <dt class="property-optional"
             title="Optional">
-        <span>ingress_<wbr>shaping_<wbr>average_<wbr>bandwidth</span>
+        <span id="state_ingress_shaping_average_bandwidth_python">
+<a href="#state_ingress_shaping_average_bandwidth_python" style="color: inherit; text-decoration: inherit;">ingress_<wbr>shaping_<wbr>average_<wbr>bandwidth</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -6885,7 +8225,9 @@ bits per second if ingress traffic shaping is enabled on the port.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ingress_<wbr>shaping_<wbr>burst_<wbr>size</span>
+        <span id="state_ingress_shaping_burst_size_python">
+<a href="#state_ingress_shaping_burst_size_python" style="color: inherit; text-decoration: inherit;">ingress_<wbr>shaping_<wbr>burst_<wbr>size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -6895,7 +8237,9 @@ bytes if ingress traffic shaping is enabled on the port.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ingress_<wbr>shaping_<wbr>enabled</span>
+        <span id="state_ingress_shaping_enabled_python">
+<a href="#state_ingress_shaping_enabled_python" style="color: inherit; text-decoration: inherit;">ingress_<wbr>shaping_<wbr>enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -6905,7 +8249,9 @@ enabled on the port for ingress traffic.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ingress_<wbr>shaping_<wbr>peak_<wbr>bandwidth</span>
+        <span id="state_ingress_shaping_peak_bandwidth_python">
+<a href="#state_ingress_shaping_peak_bandwidth_python" style="color: inherit; text-decoration: inherit;">ingress_<wbr>shaping_<wbr>peak_<wbr>bandwidth</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -6915,7 +8261,9 @@ bursts in bits per second if ingress traffic shaping is enabled on the port.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ipv4_<wbr>address</span>
+        <span id="state_ipv4_address_python">
+<a href="#state_ipv4_address_python" style="color: inherit; text-decoration: inherit;">ipv4_<wbr>address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -6926,7 +8274,9 @@ below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>iscsi_<wbr>maximum_<wbr>mbit</span>
+        <span id="state_iscsi_maximum_mbit_python">
+<a href="#state_iscsi_maximum_mbit_python" style="color: inherit; text-decoration: inherit;">iscsi_<wbr>maximum_<wbr>mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -6935,7 +8285,9 @@ below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>iscsi_<wbr>reservation_<wbr>mbit</span>
+        <span id="state_iscsi_reservation_mbit_python">
+<a href="#state_iscsi_reservation_mbit_python" style="color: inherit; text-decoration: inherit;">iscsi_<wbr>reservation_<wbr>mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -6944,7 +8296,9 @@ below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>iscsi_<wbr>share_<wbr>count</span>
+        <span id="state_iscsi_share_count_python">
+<a href="#state_iscsi_share_count_python" style="color: inherit; text-decoration: inherit;">iscsi_<wbr>share_<wbr>count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -6953,7 +8307,9 @@ below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>iscsi_<wbr>share_<wbr>level</span>
+        <span id="state_iscsi_share_level_python">
+<a href="#state_iscsi_share_level_python" style="color: inherit; text-decoration: inherit;">iscsi_<wbr>share_<wbr>level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -6962,7 +8318,9 @@ below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>lacp_<wbr>api_<wbr>version</span>
+        <span id="state_lacp_api_version_python">
+<a href="#state_lacp_api_version_python" style="color: inherit; text-decoration: inherit;">lacp_<wbr>api_<wbr>version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -6973,7 +8331,9 @@ version to use with the switch. Possible values are `singleLag` and
 
     <dt class="property-optional"
             title="Optional">
-        <span>lacp_<wbr>enabled</span>
+        <span id="state_lacp_enabled_python">
+<a href="#state_lacp_enabled_python" style="color: inherit; text-decoration: inherit;">lacp_<wbr>enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -6983,7 +8343,9 @@ applies to.
 
     <dt class="property-optional"
             title="Optional">
-        <span>lacp_<wbr>mode</span>
+        <span id="state_lacp_mode_python">
+<a href="#state_lacp_mode_python" style="color: inherit; text-decoration: inherit;">lacp_<wbr>mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -6992,7 +8354,9 @@ applies to.
 
     <dt class="property-optional"
             title="Optional">
-        <span>link_<wbr>discovery_<wbr>operation</span>
+        <span id="state_link_discovery_operation_python">
+<a href="#state_link_discovery_operation_python" style="color: inherit; text-decoration: inherit;">link_<wbr>discovery_<wbr>operation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -7002,7 +8366,9 @@ for link discovery traffic.
 
     <dt class="property-optional"
             title="Optional">
-        <span>link_<wbr>discovery_<wbr>protocol</span>
+        <span id="state_link_discovery_protocol_python">
+<a href="#state_link_discovery_protocol_python" style="color: inherit; text-decoration: inherit;">link_<wbr>discovery_<wbr>protocol</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -7012,7 +8378,9 @@ types are `cdp` and `lldp`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>management_<wbr>maximum_<wbr>mbit</span>
+        <span id="state_management_maximum_mbit_python">
+<a href="#state_management_maximum_mbit_python" style="color: inherit; text-decoration: inherit;">management_<wbr>maximum_<wbr>mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -7021,7 +8389,9 @@ types are `cdp` and `lldp`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>management_<wbr>reservation_<wbr>mbit</span>
+        <span id="state_management_reservation_mbit_python">
+<a href="#state_management_reservation_mbit_python" style="color: inherit; text-decoration: inherit;">management_<wbr>reservation_<wbr>mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -7030,7 +8400,9 @@ types are `cdp` and `lldp`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>management_<wbr>share_<wbr>count</span>
+        <span id="state_management_share_count_python">
+<a href="#state_management_share_count_python" style="color: inherit; text-decoration: inherit;">management_<wbr>share_<wbr>count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -7039,7 +8411,9 @@ types are `cdp` and `lldp`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>management_<wbr>share_<wbr>level</span>
+        <span id="state_management_share_level_python">
+<a href="#state_management_share_level_python" style="color: inherit; text-decoration: inherit;">management_<wbr>share_<wbr>level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -7048,7 +8422,9 @@ types are `cdp` and `lldp`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>max_<wbr>mtu</span>
+        <span id="state_max_mtu_python">
+<a href="#state_max_mtu_python" style="color: inherit; text-decoration: inherit;">max_<wbr>mtu</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -7058,7 +8434,9 @@ switch.
 
     <dt class="property-optional"
             title="Optional">
-        <span>multicast_<wbr>filtering_<wbr>mode</span>
+        <span id="state_multicast_filtering_mode_python">
+<a href="#state_multicast_filtering_mode_python" style="color: inherit; text-decoration: inherit;">multicast_<wbr>filtering_<wbr>mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -7068,7 +8446,9 @@ with the switch. Can be one of `legacyFiltering` or `snooping`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -7077,7 +8457,9 @@ with the switch. Can be one of `legacyFiltering` or `snooping`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>netflow_<wbr>active_<wbr>flow_<wbr>timeout</span>
+        <span id="state_netflow_active_flow_timeout_python">
+<a href="#state_netflow_active_flow_timeout_python" style="color: inherit; text-decoration: inherit;">netflow_<wbr>active_<wbr>flow_<wbr>timeout</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -7088,7 +8470,9 @@ active flows are forced to be exported to the collector. Allowed range is
 
     <dt class="property-optional"
             title="Optional">
-        <span>netflow_<wbr>collector_<wbr>ip_<wbr>address</span>
+        <span id="state_netflow_collector_ip_address_python">
+<a href="#state_netflow_collector_ip_address_python" style="color: inherit; text-decoration: inherit;">netflow_<wbr>collector_<wbr>ip_<wbr>address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -7099,7 +8483,9 @@ Switch Version 6.0 or later. Must be set before Netflow can be enabled.
 
     <dt class="property-optional"
             title="Optional">
-        <span>netflow_<wbr>collector_<wbr>port</span>
+        <span id="state_netflow_collector_port_python">
+<a href="#state_netflow_collector_port_python" style="color: inherit; text-decoration: inherit;">netflow_<wbr>collector_<wbr>port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -7109,7 +8495,9 @@ must be set before Netflow can be enabled.
 
     <dt class="property-optional"
             title="Optional">
-        <span>netflow_<wbr>enabled</span>
+        <span id="state_netflow_enabled_python">
+<a href="#state_netflow_enabled_python" style="color: inherit; text-decoration: inherit;">netflow_<wbr>enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -7119,7 +8507,9 @@ applies to.
 
     <dt class="property-optional"
             title="Optional">
-        <span>netflow_<wbr>idle_<wbr>flow_<wbr>timeout</span>
+        <span id="state_netflow_idle_flow_timeout_python">
+<a href="#state_netflow_idle_flow_timeout_python" style="color: inherit; text-decoration: inherit;">netflow_<wbr>idle_<wbr>flow_<wbr>timeout</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -7130,7 +8520,9 @@ to `600`. Default: `15`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>netflow_<wbr>internal_<wbr>flows_<wbr>only</span>
+        <span id="state_netflow_internal_flows_only_python">
+<a href="#state_netflow_internal_flows_only_python" style="color: inherit; text-decoration: inherit;">netflow_<wbr>internal_<wbr>flows_<wbr>only</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -7141,7 +8533,9 @@ Default: `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>netflow_<wbr>observation_<wbr>domain_<wbr>id</span>
+        <span id="state_netflow_observation_domain_id_python">
+<a href="#state_netflow_observation_domain_id_python" style="color: inherit; text-decoration: inherit;">netflow_<wbr>observation_<wbr>domain_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -7151,7 +8545,9 @@ the Netflow collector.
 
     <dt class="property-optional"
             title="Optional">
-        <span>netflow_<wbr>sampling_<wbr>rate</span>
+        <span id="state_netflow_sampling_rate_python">
+<a href="#state_netflow_sampling_rate_python" style="color: inherit; text-decoration: inherit;">netflow_<wbr>sampling_<wbr>rate</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -7163,7 +8559,9 @@ indicates an analysis rate of 0.001%.
 
     <dt class="property-optional"
             title="Optional">
-        <span>network_<wbr>resource_<wbr>control_<wbr>enabled</span>
+        <span id="state_network_resource_control_enabled_python">
+<a href="#state_network_resource_control_enabled_python" style="color: inherit; text-decoration: inherit;">network_<wbr>resource_<wbr>control_<wbr>enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -7173,7 +8571,9 @@ network I/O control. Default: `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>network_<wbr>resource_<wbr>control_<wbr>version</span>
+        <span id="state_network_resource_control_version_python">
+<a href="#state_network_resource_control_version_python" style="color: inherit; text-decoration: inherit;">network_<wbr>resource_<wbr>control_<wbr>version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -7183,7 +8583,9 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>nfs_<wbr>maximum_<wbr>mbit</span>
+        <span id="state_nfs_maximum_mbit_python">
+<a href="#state_nfs_maximum_mbit_python" style="color: inherit; text-decoration: inherit;">nfs_<wbr>maximum_<wbr>mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -7192,7 +8594,9 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>nfs_<wbr>reservation_<wbr>mbit</span>
+        <span id="state_nfs_reservation_mbit_python">
+<a href="#state_nfs_reservation_mbit_python" style="color: inherit; text-decoration: inherit;">nfs_<wbr>reservation_<wbr>mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -7201,7 +8605,9 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>nfs_<wbr>share_<wbr>count</span>
+        <span id="state_nfs_share_count_python">
+<a href="#state_nfs_share_count_python" style="color: inherit; text-decoration: inherit;">nfs_<wbr>share_<wbr>count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -7210,7 +8616,9 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>nfs_<wbr>share_<wbr>level</span>
+        <span id="state_nfs_share_level_python">
+<a href="#state_nfs_share_level_python" style="color: inherit; text-decoration: inherit;">nfs_<wbr>share_<wbr>level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -7219,7 +8627,9 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>notify_<wbr>switches</span>
+        <span id="state_notify_switches_python">
+<a href="#state_notify_switches_python" style="color: inherit; text-decoration: inherit;">notify_<wbr>switches</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -7229,7 +8639,9 @@ broadcast network of an uplink failover, triggering cache updates.
 
     <dt class="property-optional"
             title="Optional">
-        <span>port_<wbr>private_<wbr>secondary_<wbr>vlan_<wbr>id</span>
+        <span id="state_port_private_secondary_vlan_id_python">
+<a href="#state_port_private_secondary_vlan_id_python" style="color: inherit; text-decoration: inherit;">port_<wbr>private_<wbr>secondary_<wbr>vlan_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -7239,7 +8651,9 @@ ID when using private VLANs.
 
     <dt class="property-optional"
             title="Optional">
-        <span>standby_<wbr>uplinks</span>
+        <span id="state_standby_uplinks_python">
+<a href="#state_standby_uplinks_python" style="color: inherit; text-decoration: inherit;">standby_<wbr>uplinks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -7251,7 +8665,9 @@ here for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="state_tags_python">
+<a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -7260,7 +8676,9 @@ here for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>teaming_<wbr>policy</span>
+        <span id="state_teaming_policy_python">
+<a href="#state_teaming_policy_python" style="color: inherit; text-decoration: inherit;">teaming_<wbr>policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -7271,7 +8689,9 @@ here for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tx_<wbr>uplink</span>
+        <span id="state_tx_uplink_python">
+<a href="#state_tx_uplink_python" style="color: inherit; text-decoration: inherit;">tx_<wbr>uplink</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -7281,7 +8701,9 @@ this policy applies to its DVS uplinks.
 
     <dt class="property-optional"
             title="Optional">
-        <span>uplinks</span>
+        <span id="state_uplinks_python">
+<a href="#state_uplinks_python" style="color: inherit; text-decoration: inherit;">uplinks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -7294,7 +8716,9 @@ use this option.
 
     <dt class="property-optional"
             title="Optional">
-        <span>vdp_<wbr>maximum_<wbr>mbit</span>
+        <span id="state_vdp_maximum_mbit_python">
+<a href="#state_vdp_maximum_mbit_python" style="color: inherit; text-decoration: inherit;">vdp_<wbr>maximum_<wbr>mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -7303,7 +8727,9 @@ use this option.
 
     <dt class="property-optional"
             title="Optional">
-        <span>vdp_<wbr>reservation_<wbr>mbit</span>
+        <span id="state_vdp_reservation_mbit_python">
+<a href="#state_vdp_reservation_mbit_python" style="color: inherit; text-decoration: inherit;">vdp_<wbr>reservation_<wbr>mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -7312,7 +8738,9 @@ use this option.
 
     <dt class="property-optional"
             title="Optional">
-        <span>vdp_<wbr>share_<wbr>count</span>
+        <span id="state_vdp_share_count_python">
+<a href="#state_vdp_share_count_python" style="color: inherit; text-decoration: inherit;">vdp_<wbr>share_<wbr>count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -7321,7 +8749,9 @@ use this option.
 
     <dt class="property-optional"
             title="Optional">
-        <span>vdp_<wbr>share_<wbr>level</span>
+        <span id="state_vdp_share_level_python">
+<a href="#state_vdp_share_level_python" style="color: inherit; text-decoration: inherit;">vdp_<wbr>share_<wbr>level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -7330,7 +8760,9 @@ use this option.
 
     <dt class="property-optional"
             title="Optional">
-        <span>version</span>
+        <span id="state_version_python">
+<a href="#state_version_python" style="color: inherit; text-decoration: inherit;">version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -7342,7 +8774,9 @@ downgraded.
 
     <dt class="property-optional"
             title="Optional">
-        <span>virtualmachine_<wbr>maximum_<wbr>mbit</span>
+        <span id="state_virtualmachine_maximum_mbit_python">
+<a href="#state_virtualmachine_maximum_mbit_python" style="color: inherit; text-decoration: inherit;">virtualmachine_<wbr>maximum_<wbr>mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -7351,7 +8785,9 @@ downgraded.
 
     <dt class="property-optional"
             title="Optional">
-        <span>virtualmachine_<wbr>reservation_<wbr>mbit</span>
+        <span id="state_virtualmachine_reservation_mbit_python">
+<a href="#state_virtualmachine_reservation_mbit_python" style="color: inherit; text-decoration: inherit;">virtualmachine_<wbr>reservation_<wbr>mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -7360,7 +8796,9 @@ downgraded.
 
     <dt class="property-optional"
             title="Optional">
-        <span>virtualmachine_<wbr>share_<wbr>count</span>
+        <span id="state_virtualmachine_share_count_python">
+<a href="#state_virtualmachine_share_count_python" style="color: inherit; text-decoration: inherit;">virtualmachine_<wbr>share_<wbr>count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -7369,7 +8807,9 @@ downgraded.
 
     <dt class="property-optional"
             title="Optional">
-        <span>virtualmachine_<wbr>share_<wbr>level</span>
+        <span id="state_virtualmachine_share_level_python">
+<a href="#state_virtualmachine_share_level_python" style="color: inherit; text-decoration: inherit;">virtualmachine_<wbr>share_<wbr>level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -7378,7 +8818,9 @@ downgraded.
 
     <dt class="property-optional"
             title="Optional">
-        <span>vlan_<wbr>id</span>
+        <span id="state_vlan_id_python">
+<a href="#state_vlan_id_python" style="color: inherit; text-decoration: inherit;">vlan_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -7387,7 +8829,9 @@ downgraded.
 
     <dt class="property-optional"
             title="Optional">
-        <span>vlan_<wbr>ranges</span>
+        <span id="state_vlan_ranges_python">
+<a href="#state_vlan_ranges_python" style="color: inherit; text-decoration: inherit;">vlan_<wbr>ranges</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributedvirtualswitchvlanrange">List[Distributed<wbr>Virtual<wbr>Switch<wbr>Vlan<wbr>Range]</a></span>
     </dt>
@@ -7399,7 +8843,9 @@ below:
 
     <dt class="property-optional"
             title="Optional">
-        <span>vmotion_<wbr>maximum_<wbr>mbit</span>
+        <span id="state_vmotion_maximum_mbit_python">
+<a href="#state_vmotion_maximum_mbit_python" style="color: inherit; text-decoration: inherit;">vmotion_<wbr>maximum_<wbr>mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -7408,7 +8854,9 @@ below:
 
     <dt class="property-optional"
             title="Optional">
-        <span>vmotion_<wbr>reservation_<wbr>mbit</span>
+        <span id="state_vmotion_reservation_mbit_python">
+<a href="#state_vmotion_reservation_mbit_python" style="color: inherit; text-decoration: inherit;">vmotion_<wbr>reservation_<wbr>mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -7417,7 +8865,9 @@ below:
 
     <dt class="property-optional"
             title="Optional">
-        <span>vmotion_<wbr>share_<wbr>count</span>
+        <span id="state_vmotion_share_count_python">
+<a href="#state_vmotion_share_count_python" style="color: inherit; text-decoration: inherit;">vmotion_<wbr>share_<wbr>count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -7426,7 +8876,9 @@ below:
 
     <dt class="property-optional"
             title="Optional">
-        <span>vmotion_<wbr>share_<wbr>level</span>
+        <span id="state_vmotion_share_level_python">
+<a href="#state_vmotion_share_level_python" style="color: inherit; text-decoration: inherit;">vmotion_<wbr>share_<wbr>level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -7435,7 +8887,9 @@ below:
 
     <dt class="property-optional"
             title="Optional">
-        <span>vsan_<wbr>maximum_<wbr>mbit</span>
+        <span id="state_vsan_maximum_mbit_python">
+<a href="#state_vsan_maximum_mbit_python" style="color: inherit; text-decoration: inherit;">vsan_<wbr>maximum_<wbr>mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -7444,7 +8898,9 @@ below:
 
     <dt class="property-optional"
             title="Optional">
-        <span>vsan_<wbr>reservation_<wbr>mbit</span>
+        <span id="state_vsan_reservation_mbit_python">
+<a href="#state_vsan_reservation_mbit_python" style="color: inherit; text-decoration: inherit;">vsan_<wbr>reservation_<wbr>mbit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -7453,7 +8909,9 @@ below:
 
     <dt class="property-optional"
             title="Optional">
-        <span>vsan_<wbr>share_<wbr>count</span>
+        <span id="state_vsan_share_count_python">
+<a href="#state_vsan_share_count_python" style="color: inherit; text-decoration: inherit;">vsan_<wbr>share_<wbr>count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -7462,7 +8920,9 @@ below:
 
     <dt class="property-optional"
             title="Optional">
-        <span>vsan_<wbr>share_<wbr>level</span>
+        <span id="state_vsan_share_level_python">
+<a href="#state_vsan_share_level_python" style="color: inherit; text-decoration: inherit;">vsan_<wbr>share_<wbr>level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -7504,7 +8964,9 @@ below:
 
     <dt class="property-required"
             title="Required">
-        <span>Devices</span>
+        <span id="devices_csharp">
+<a href="#devices_csharp" style="color: inherit; text-decoration: inherit;">Devices</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -7514,7 +8976,9 @@ added in order they are specified.
 
     <dt class="property-required"
             title="Required">
-        <span>Host<wbr>System<wbr>Id</span>
+        <span id="hostsystemid_csharp">
+<a href="#hostsystemid_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>System<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -7531,7 +8995,9 @@ DVS.
 
     <dt class="property-required"
             title="Required">
-        <span>Devices</span>
+        <span id="devices_go">
+<a href="#devices_go" style="color: inherit; text-decoration: inherit;">Devices</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -7541,7 +9007,9 @@ added in order they are specified.
 
     <dt class="property-required"
             title="Required">
-        <span>Host<wbr>System<wbr>Id</span>
+        <span id="hostsystemid_go">
+<a href="#hostsystemid_go" style="color: inherit; text-decoration: inherit;">Host<wbr>System<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -7558,7 +9026,9 @@ DVS.
 
     <dt class="property-required"
             title="Required">
-        <span>devices</span>
+        <span id="devices_nodejs">
+<a href="#devices_nodejs" style="color: inherit; text-decoration: inherit;">devices</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -7568,7 +9038,9 @@ added in order they are specified.
 
     <dt class="property-required"
             title="Required">
-        <span>host<wbr>System<wbr>Id</span>
+        <span id="hostsystemid_nodejs">
+<a href="#hostsystemid_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>System<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -7585,7 +9057,9 @@ DVS.
 
     <dt class="property-required"
             title="Required">
-        <span>devices</span>
+        <span id="devices_python">
+<a href="#devices_python" style="color: inherit; text-decoration: inherit;">devices</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -7595,7 +9069,9 @@ added in order they are specified.
 
     <dt class="property-required"
             title="Required">
-        <span>host_<wbr>system_<wbr>id</span>
+        <span id="host_system_id_python">
+<a href="#host_system_id_python" style="color: inherit; text-decoration: inherit;">host_<wbr>system_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -7630,7 +9106,9 @@ DVS.
 
     <dt class="property-required"
             title="Required">
-        <span>Max<wbr>Vlan</span>
+        <span id="maxvlan_csharp">
+<a href="#maxvlan_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Vlan</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -7638,7 +9116,9 @@ DVS.
 
     <dt class="property-required"
             title="Required">
-        <span>Min<wbr>Vlan</span>
+        <span id="minvlan_csharp">
+<a href="#minvlan_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Vlan</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -7653,7 +9133,9 @@ DVS.
 
     <dt class="property-required"
             title="Required">
-        <span>Max<wbr>Vlan</span>
+        <span id="maxvlan_go">
+<a href="#maxvlan_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Vlan</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -7661,7 +9143,9 @@ DVS.
 
     <dt class="property-required"
             title="Required">
-        <span>Min<wbr>Vlan</span>
+        <span id="minvlan_go">
+<a href="#minvlan_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Vlan</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -7676,7 +9160,9 @@ DVS.
 
     <dt class="property-required"
             title="Required">
-        <span>max<wbr>Vlan</span>
+        <span id="maxvlan_nodejs">
+<a href="#maxvlan_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Vlan</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -7684,7 +9170,9 @@ DVS.
 
     <dt class="property-required"
             title="Required">
-        <span>min<wbr>Vlan</span>
+        <span id="minvlan_nodejs">
+<a href="#minvlan_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Vlan</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -7699,7 +9187,9 @@ DVS.
 
     <dt class="property-required"
             title="Required">
-        <span>max<wbr>Vlan</span>
+        <span id="maxvlan_python">
+<a href="#maxvlan_python" style="color: inherit; text-decoration: inherit;">max<wbr>Vlan</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -7707,7 +9197,9 @@ DVS.
 
     <dt class="property-required"
             title="Required">
-        <span>min<wbr>Vlan</span>
+        <span id="minvlan_python">
+<a href="#minvlan_python" style="color: inherit; text-decoration: inherit;">min<wbr>Vlan</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>

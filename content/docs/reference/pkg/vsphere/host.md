@@ -27,6 +27,17 @@ import * as pulumi from "@pulumi/pulumi";
 ```python
 import pulumi
 ```
+```csharp
+using Pulumi;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+    }
+
+}
+```
 
 The above would import the host with ID `host-123`.
 
@@ -36,7 +47,30 @@ The above would import the host with ID `host-123`.
 {{< chooser language "typescript,python,go,csharp" / >}}
 ### Create a standalone host
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using VSphere = Pulumi.VSphere;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var dc = Output.Create(VSphere.GetDatacenter.InvokeAsync(new VSphere.GetDatacenterArgs
+        {
+            Name = "my-datacenter",
+        }));
+        var h1 = new VSphere.Host("h1", new VSphere.HostArgs
+        {
+            Hostname = "10.10.10.1",
+            Username = "root",
+            Password = "password",
+            License = "00000-00000-00000-00000i-00000",
+            Datacenter = dc.Apply(dc => dc.Id),
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -78,7 +112,35 @@ const h1 = new vsphere.Host("h1", {
 
 ### Create host in a compute cluster
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using VSphere = Pulumi.VSphere;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var dc = Output.Create(VSphere.GetDatacenter.InvokeAsync(new VSphere.GetDatacenterArgs
+        {
+            Name = "TfDatacenter",
+        }));
+        var c1 = dc.Apply(dc => Output.Create(VSphere.GetComputeCluster.InvokeAsync(new VSphere.GetComputeClusterArgs
+        {
+            Name = "DC0_C0",
+            DatacenterId = dc.Id,
+        })));
+        var h1 = new VSphere.Host("h1", new VSphere.HostArgs
+        {
+            Hostname = "10.10.10.1",
+            Username = "root",
+            Password = "password",
+            License = "00000-00000-00000-00000i-00000",
+            Cluster = c1.Apply(c1 => c1.Id),
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -132,19 +194,19 @@ const h1 = new vsphere.Host("h1", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#Host">Host</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#HostArgs">HostArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#Host">Host</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#HostArgs">HostArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Host</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>cluster=None<span class="p">, </span>connected=None<span class="p">, </span>datacenter=None<span class="p">, </span>force=None<span class="p">, </span>hostname=None<span class="p">, </span>license=None<span class="p">, </span>lockdown=None<span class="p">, </span>maintenance=None<span class="p">, </span>password=None<span class="p">, </span>thumbprint=None<span class="p">, </span>username=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/vsphere/#Host">Host</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>cluster=None<span class="p">, </span>connected=None<span class="p">, </span>datacenter=None<span class="p">, </span>force=None<span class="p">, </span>hostname=None<span class="p">, </span>license=None<span class="p">, </span>lockdown=None<span class="p">, </span>maintenance=None<span class="p">, </span>password=None<span class="p">, </span>thumbprint=None<span class="p">, </span>username=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewHost<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#HostArgs">HostArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#Host">Host</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#Host">NewHost</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#HostArgs">HostArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#Host">Host</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.Host.html">Host</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.HostArgs.html">HostArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.Host.html">Host</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.HostArgs.html">HostArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -310,7 +372,9 @@ The Host resource accepts the following [input]({{< relref "/docs/intro/concepts
 
     <dt class="property-required"
             title="Required">
-        <span>Hostname</span>
+        <span id="hostname_csharp">
+<a href="#hostname_csharp" style="color: inherit; text-decoration: inherit;">Hostname</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -319,7 +383,9 @@ The Host resource accepts the following [input]({{< relref "/docs/intro/concepts
 
     <dt class="property-required"
             title="Required">
-        <span>Password</span>
+        <span id="password_csharp">
+<a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -329,7 +395,9 @@ to the host.
 
     <dt class="property-required"
             title="Required">
-        <span>Username</span>
+        <span id="username_csharp">
+<a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -339,7 +407,9 @@ to the host.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cluster</span>
+        <span id="cluster_csharp">
+<a href="#cluster_csharp" style="color: inherit; text-decoration: inherit;">Cluster</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -349,7 +419,9 @@ be added to. This should not be set if `datacenter` is set.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Connected</span>
+        <span id="connected_csharp">
+<a href="#connected_csharp" style="color: inherit; text-decoration: inherit;">Connected</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -359,7 +431,9 @@ Default is `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Datacenter</span>
+        <span id="datacenter_csharp">
+<a href="#datacenter_csharp" style="color: inherit; text-decoration: inherit;">Datacenter</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -369,7 +443,9 @@ be added to. This should not be set if `cluster` is set.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Force</span>
+        <span id="force_csharp">
+<a href="#force_csharp" style="color: inherit; text-decoration: inherit;">Force</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -379,7 +455,9 @@ if the host is already connected to a different vSphere instance. Default is `fa
 
     <dt class="property-optional"
             title="Optional">
-        <span>License</span>
+        <span id="license_csharp">
+<a href="#license_csharp" style="color: inherit; text-decoration: inherit;">License</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -389,7 +467,9 @@ The license key is expected to be present in vSphere.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Lockdown</span>
+        <span id="lockdown_csharp">
+<a href="#lockdown_csharp" style="color: inherit; text-decoration: inherit;">Lockdown</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -399,7 +479,9 @@ The license key is expected to be present in vSphere.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Maintenance</span>
+        <span id="maintenance_csharp">
+<a href="#maintenance_csharp" style="color: inherit; text-decoration: inherit;">Maintenance</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -408,7 +490,9 @@ The license key is expected to be present in vSphere.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Thumbprint</span>
+        <span id="thumbprint_csharp">
+<a href="#thumbprint_csharp" style="color: inherit; text-decoration: inherit;">Thumbprint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -426,7 +510,9 @@ and no thumbprint is set then the operation will fail.
 
     <dt class="property-required"
             title="Required">
-        <span>Hostname</span>
+        <span id="hostname_go">
+<a href="#hostname_go" style="color: inherit; text-decoration: inherit;">Hostname</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -435,7 +521,9 @@ and no thumbprint is set then the operation will fail.
 
     <dt class="property-required"
             title="Required">
-        <span>Password</span>
+        <span id="password_go">
+<a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -445,7 +533,9 @@ to the host.
 
     <dt class="property-required"
             title="Required">
-        <span>Username</span>
+        <span id="username_go">
+<a href="#username_go" style="color: inherit; text-decoration: inherit;">Username</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -455,7 +545,9 @@ to the host.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cluster</span>
+        <span id="cluster_go">
+<a href="#cluster_go" style="color: inherit; text-decoration: inherit;">Cluster</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -465,7 +557,9 @@ be added to. This should not be set if `datacenter` is set.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Connected</span>
+        <span id="connected_go">
+<a href="#connected_go" style="color: inherit; text-decoration: inherit;">Connected</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -475,7 +569,9 @@ Default is `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Datacenter</span>
+        <span id="datacenter_go">
+<a href="#datacenter_go" style="color: inherit; text-decoration: inherit;">Datacenter</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -485,7 +581,9 @@ be added to. This should not be set if `cluster` is set.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Force</span>
+        <span id="force_go">
+<a href="#force_go" style="color: inherit; text-decoration: inherit;">Force</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -495,7 +593,9 @@ if the host is already connected to a different vSphere instance. Default is `fa
 
     <dt class="property-optional"
             title="Optional">
-        <span>License</span>
+        <span id="license_go">
+<a href="#license_go" style="color: inherit; text-decoration: inherit;">License</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -505,7 +605,9 @@ The license key is expected to be present in vSphere.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Lockdown</span>
+        <span id="lockdown_go">
+<a href="#lockdown_go" style="color: inherit; text-decoration: inherit;">Lockdown</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -515,7 +617,9 @@ The license key is expected to be present in vSphere.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Maintenance</span>
+        <span id="maintenance_go">
+<a href="#maintenance_go" style="color: inherit; text-decoration: inherit;">Maintenance</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -524,7 +628,9 @@ The license key is expected to be present in vSphere.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Thumbprint</span>
+        <span id="thumbprint_go">
+<a href="#thumbprint_go" style="color: inherit; text-decoration: inherit;">Thumbprint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -542,7 +648,9 @@ and no thumbprint is set then the operation will fail.
 
     <dt class="property-required"
             title="Required">
-        <span>hostname</span>
+        <span id="hostname_nodejs">
+<a href="#hostname_nodejs" style="color: inherit; text-decoration: inherit;">hostname</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -551,7 +659,9 @@ and no thumbprint is set then the operation will fail.
 
     <dt class="property-required"
             title="Required">
-        <span>password</span>
+        <span id="password_nodejs">
+<a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -561,7 +671,9 @@ to the host.
 
     <dt class="property-required"
             title="Required">
-        <span>username</span>
+        <span id="username_nodejs">
+<a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -571,7 +683,9 @@ to the host.
 
     <dt class="property-optional"
             title="Optional">
-        <span>cluster</span>
+        <span id="cluster_nodejs">
+<a href="#cluster_nodejs" style="color: inherit; text-decoration: inherit;">cluster</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -581,7 +695,9 @@ be added to. This should not be set if `datacenter` is set.
 
     <dt class="property-optional"
             title="Optional">
-        <span>connected</span>
+        <span id="connected_nodejs">
+<a href="#connected_nodejs" style="color: inherit; text-decoration: inherit;">connected</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -591,7 +707,9 @@ Default is `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>datacenter</span>
+        <span id="datacenter_nodejs">
+<a href="#datacenter_nodejs" style="color: inherit; text-decoration: inherit;">datacenter</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -601,7 +719,9 @@ be added to. This should not be set if `cluster` is set.
 
     <dt class="property-optional"
             title="Optional">
-        <span>force</span>
+        <span id="force_nodejs">
+<a href="#force_nodejs" style="color: inherit; text-decoration: inherit;">force</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -611,7 +731,9 @@ if the host is already connected to a different vSphere instance. Default is `fa
 
     <dt class="property-optional"
             title="Optional">
-        <span>license</span>
+        <span id="license_nodejs">
+<a href="#license_nodejs" style="color: inherit; text-decoration: inherit;">license</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -621,7 +743,9 @@ The license key is expected to be present in vSphere.
 
     <dt class="property-optional"
             title="Optional">
-        <span>lockdown</span>
+        <span id="lockdown_nodejs">
+<a href="#lockdown_nodejs" style="color: inherit; text-decoration: inherit;">lockdown</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -631,7 +755,9 @@ The license key is expected to be present in vSphere.
 
     <dt class="property-optional"
             title="Optional">
-        <span>maintenance</span>
+        <span id="maintenance_nodejs">
+<a href="#maintenance_nodejs" style="color: inherit; text-decoration: inherit;">maintenance</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -640,7 +766,9 @@ The license key is expected to be present in vSphere.
 
     <dt class="property-optional"
             title="Optional">
-        <span>thumbprint</span>
+        <span id="thumbprint_nodejs">
+<a href="#thumbprint_nodejs" style="color: inherit; text-decoration: inherit;">thumbprint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -658,7 +786,9 @@ and no thumbprint is set then the operation will fail.
 
     <dt class="property-required"
             title="Required">
-        <span>hostname</span>
+        <span id="hostname_python">
+<a href="#hostname_python" style="color: inherit; text-decoration: inherit;">hostname</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -667,7 +797,9 @@ and no thumbprint is set then the operation will fail.
 
     <dt class="property-required"
             title="Required">
-        <span>password</span>
+        <span id="password_python">
+<a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -677,7 +809,9 @@ to the host.
 
     <dt class="property-required"
             title="Required">
-        <span>username</span>
+        <span id="username_python">
+<a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -687,7 +821,9 @@ to the host.
 
     <dt class="property-optional"
             title="Optional">
-        <span>cluster</span>
+        <span id="cluster_python">
+<a href="#cluster_python" style="color: inherit; text-decoration: inherit;">cluster</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -697,7 +833,9 @@ be added to. This should not be set if `datacenter` is set.
 
     <dt class="property-optional"
             title="Optional">
-        <span>connected</span>
+        <span id="connected_python">
+<a href="#connected_python" style="color: inherit; text-decoration: inherit;">connected</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -707,7 +845,9 @@ Default is `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>datacenter</span>
+        <span id="datacenter_python">
+<a href="#datacenter_python" style="color: inherit; text-decoration: inherit;">datacenter</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -717,7 +857,9 @@ be added to. This should not be set if `cluster` is set.
 
     <dt class="property-optional"
             title="Optional">
-        <span>force</span>
+        <span id="force_python">
+<a href="#force_python" style="color: inherit; text-decoration: inherit;">force</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -727,7 +869,9 @@ if the host is already connected to a different vSphere instance. Default is `fa
 
     <dt class="property-optional"
             title="Optional">
-        <span>license</span>
+        <span id="license_python">
+<a href="#license_python" style="color: inherit; text-decoration: inherit;">license</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -737,7 +881,9 @@ The license key is expected to be present in vSphere.
 
     <dt class="property-optional"
             title="Optional">
-        <span>lockdown</span>
+        <span id="lockdown_python">
+<a href="#lockdown_python" style="color: inherit; text-decoration: inherit;">lockdown</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -747,7 +893,9 @@ The license key is expected to be present in vSphere.
 
     <dt class="property-optional"
             title="Optional">
-        <span>maintenance</span>
+        <span id="maintenance_python">
+<a href="#maintenance_python" style="color: inherit; text-decoration: inherit;">maintenance</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -756,7 +904,9 @@ The license key is expected to be present in vSphere.
 
     <dt class="property-optional"
             title="Optional">
-        <span>thumbprint</span>
+        <span id="thumbprint_python">
+<a href="#thumbprint_python" style="color: inherit; text-decoration: inherit;">thumbprint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -785,7 +935,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -800,7 +952,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -815,7 +969,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -830,7 +986,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -851,7 +1009,7 @@ Get an existing Host resource's state with the given name, ID, and optional extr
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#HostState">HostState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#Host">Host</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#HostState">HostState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#Host">Host</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -859,11 +1017,11 @@ Get an existing Host resource's state with the given name, ID, and optional extr
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetHost<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#HostState">HostState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#Host">Host</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetHost<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#HostState">HostState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#Host">Host</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.Host.html">Host</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere..HostState.html">HostState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.Host.html">Host</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere..HostState.html">HostState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -971,7 +1129,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cluster</span>
+        <span id="state_cluster_csharp">
+<a href="#state_cluster_csharp" style="color: inherit; text-decoration: inherit;">Cluster</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -981,7 +1141,9 @@ be added to. This should not be set if `datacenter` is set.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Connected</span>
+        <span id="state_connected_csharp">
+<a href="#state_connected_csharp" style="color: inherit; text-decoration: inherit;">Connected</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -991,7 +1153,9 @@ Default is `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Datacenter</span>
+        <span id="state_datacenter_csharp">
+<a href="#state_datacenter_csharp" style="color: inherit; text-decoration: inherit;">Datacenter</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1001,7 +1165,9 @@ be added to. This should not be set if `cluster` is set.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Force</span>
+        <span id="state_force_csharp">
+<a href="#state_force_csharp" style="color: inherit; text-decoration: inherit;">Force</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1011,7 +1177,9 @@ if the host is already connected to a different vSphere instance. Default is `fa
 
     <dt class="property-optional"
             title="Optional">
-        <span>Hostname</span>
+        <span id="state_hostname_csharp">
+<a href="#state_hostname_csharp" style="color: inherit; text-decoration: inherit;">Hostname</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1020,7 +1188,9 @@ if the host is already connected to a different vSphere instance. Default is `fa
 
     <dt class="property-optional"
             title="Optional">
-        <span>License</span>
+        <span id="state_license_csharp">
+<a href="#state_license_csharp" style="color: inherit; text-decoration: inherit;">License</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1030,7 +1200,9 @@ The license key is expected to be present in vSphere.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Lockdown</span>
+        <span id="state_lockdown_csharp">
+<a href="#state_lockdown_csharp" style="color: inherit; text-decoration: inherit;">Lockdown</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1040,7 +1212,9 @@ The license key is expected to be present in vSphere.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Maintenance</span>
+        <span id="state_maintenance_csharp">
+<a href="#state_maintenance_csharp" style="color: inherit; text-decoration: inherit;">Maintenance</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1049,7 +1223,9 @@ The license key is expected to be present in vSphere.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Password</span>
+        <span id="state_password_csharp">
+<a href="#state_password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1059,7 +1235,9 @@ to the host.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Thumbprint</span>
+        <span id="state_thumbprint_csharp">
+<a href="#state_thumbprint_csharp" style="color: inherit; text-decoration: inherit;">Thumbprint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1070,7 +1248,9 @@ and no thumbprint is set then the operation will fail.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Username</span>
+        <span id="state_username_csharp">
+<a href="#state_username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1087,7 +1267,9 @@ to the host.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cluster</span>
+        <span id="state_cluster_go">
+<a href="#state_cluster_go" style="color: inherit; text-decoration: inherit;">Cluster</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1097,7 +1279,9 @@ be added to. This should not be set if `datacenter` is set.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Connected</span>
+        <span id="state_connected_go">
+<a href="#state_connected_go" style="color: inherit; text-decoration: inherit;">Connected</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1107,7 +1291,9 @@ Default is `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Datacenter</span>
+        <span id="state_datacenter_go">
+<a href="#state_datacenter_go" style="color: inherit; text-decoration: inherit;">Datacenter</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1117,7 +1303,9 @@ be added to. This should not be set if `cluster` is set.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Force</span>
+        <span id="state_force_go">
+<a href="#state_force_go" style="color: inherit; text-decoration: inherit;">Force</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1127,7 +1315,9 @@ if the host is already connected to a different vSphere instance. Default is `fa
 
     <dt class="property-optional"
             title="Optional">
-        <span>Hostname</span>
+        <span id="state_hostname_go">
+<a href="#state_hostname_go" style="color: inherit; text-decoration: inherit;">Hostname</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1136,7 +1326,9 @@ if the host is already connected to a different vSphere instance. Default is `fa
 
     <dt class="property-optional"
             title="Optional">
-        <span>License</span>
+        <span id="state_license_go">
+<a href="#state_license_go" style="color: inherit; text-decoration: inherit;">License</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1146,7 +1338,9 @@ The license key is expected to be present in vSphere.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Lockdown</span>
+        <span id="state_lockdown_go">
+<a href="#state_lockdown_go" style="color: inherit; text-decoration: inherit;">Lockdown</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1156,7 +1350,9 @@ The license key is expected to be present in vSphere.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Maintenance</span>
+        <span id="state_maintenance_go">
+<a href="#state_maintenance_go" style="color: inherit; text-decoration: inherit;">Maintenance</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1165,7 +1361,9 @@ The license key is expected to be present in vSphere.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Password</span>
+        <span id="state_password_go">
+<a href="#state_password_go" style="color: inherit; text-decoration: inherit;">Password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1175,7 +1373,9 @@ to the host.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Thumbprint</span>
+        <span id="state_thumbprint_go">
+<a href="#state_thumbprint_go" style="color: inherit; text-decoration: inherit;">Thumbprint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1186,7 +1386,9 @@ and no thumbprint is set then the operation will fail.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Username</span>
+        <span id="state_username_go">
+<a href="#state_username_go" style="color: inherit; text-decoration: inherit;">Username</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1203,7 +1405,9 @@ to the host.
 
     <dt class="property-optional"
             title="Optional">
-        <span>cluster</span>
+        <span id="state_cluster_nodejs">
+<a href="#state_cluster_nodejs" style="color: inherit; text-decoration: inherit;">cluster</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1213,7 +1417,9 @@ be added to. This should not be set if `datacenter` is set.
 
     <dt class="property-optional"
             title="Optional">
-        <span>connected</span>
+        <span id="state_connected_nodejs">
+<a href="#state_connected_nodejs" style="color: inherit; text-decoration: inherit;">connected</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1223,7 +1429,9 @@ Default is `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>datacenter</span>
+        <span id="state_datacenter_nodejs">
+<a href="#state_datacenter_nodejs" style="color: inherit; text-decoration: inherit;">datacenter</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1233,7 +1441,9 @@ be added to. This should not be set if `cluster` is set.
 
     <dt class="property-optional"
             title="Optional">
-        <span>force</span>
+        <span id="state_force_nodejs">
+<a href="#state_force_nodejs" style="color: inherit; text-decoration: inherit;">force</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1243,7 +1453,9 @@ if the host is already connected to a different vSphere instance. Default is `fa
 
     <dt class="property-optional"
             title="Optional">
-        <span>hostname</span>
+        <span id="state_hostname_nodejs">
+<a href="#state_hostname_nodejs" style="color: inherit; text-decoration: inherit;">hostname</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1252,7 +1464,9 @@ if the host is already connected to a different vSphere instance. Default is `fa
 
     <dt class="property-optional"
             title="Optional">
-        <span>license</span>
+        <span id="state_license_nodejs">
+<a href="#state_license_nodejs" style="color: inherit; text-decoration: inherit;">license</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1262,7 +1476,9 @@ The license key is expected to be present in vSphere.
 
     <dt class="property-optional"
             title="Optional">
-        <span>lockdown</span>
+        <span id="state_lockdown_nodejs">
+<a href="#state_lockdown_nodejs" style="color: inherit; text-decoration: inherit;">lockdown</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1272,7 +1488,9 @@ The license key is expected to be present in vSphere.
 
     <dt class="property-optional"
             title="Optional">
-        <span>maintenance</span>
+        <span id="state_maintenance_nodejs">
+<a href="#state_maintenance_nodejs" style="color: inherit; text-decoration: inherit;">maintenance</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1281,7 +1499,9 @@ The license key is expected to be present in vSphere.
 
     <dt class="property-optional"
             title="Optional">
-        <span>password</span>
+        <span id="state_password_nodejs">
+<a href="#state_password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1291,7 +1511,9 @@ to the host.
 
     <dt class="property-optional"
             title="Optional">
-        <span>thumbprint</span>
+        <span id="state_thumbprint_nodejs">
+<a href="#state_thumbprint_nodejs" style="color: inherit; text-decoration: inherit;">thumbprint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1302,7 +1524,9 @@ and no thumbprint is set then the operation will fail.
 
     <dt class="property-optional"
             title="Optional">
-        <span>username</span>
+        <span id="state_username_nodejs">
+<a href="#state_username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1319,7 +1543,9 @@ to the host.
 
     <dt class="property-optional"
             title="Optional">
-        <span>cluster</span>
+        <span id="state_cluster_python">
+<a href="#state_cluster_python" style="color: inherit; text-decoration: inherit;">cluster</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1329,7 +1555,9 @@ be added to. This should not be set if `datacenter` is set.
 
     <dt class="property-optional"
             title="Optional">
-        <span>connected</span>
+        <span id="state_connected_python">
+<a href="#state_connected_python" style="color: inherit; text-decoration: inherit;">connected</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1339,7 +1567,9 @@ Default is `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>datacenter</span>
+        <span id="state_datacenter_python">
+<a href="#state_datacenter_python" style="color: inherit; text-decoration: inherit;">datacenter</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1349,7 +1579,9 @@ be added to. This should not be set if `cluster` is set.
 
     <dt class="property-optional"
             title="Optional">
-        <span>force</span>
+        <span id="state_force_python">
+<a href="#state_force_python" style="color: inherit; text-decoration: inherit;">force</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1359,7 +1591,9 @@ if the host is already connected to a different vSphere instance. Default is `fa
 
     <dt class="property-optional"
             title="Optional">
-        <span>hostname</span>
+        <span id="state_hostname_python">
+<a href="#state_hostname_python" style="color: inherit; text-decoration: inherit;">hostname</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1368,7 +1602,9 @@ if the host is already connected to a different vSphere instance. Default is `fa
 
     <dt class="property-optional"
             title="Optional">
-        <span>license</span>
+        <span id="state_license_python">
+<a href="#state_license_python" style="color: inherit; text-decoration: inherit;">license</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1378,7 +1614,9 @@ The license key is expected to be present in vSphere.
 
     <dt class="property-optional"
             title="Optional">
-        <span>lockdown</span>
+        <span id="state_lockdown_python">
+<a href="#state_lockdown_python" style="color: inherit; text-decoration: inherit;">lockdown</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1388,7 +1626,9 @@ The license key is expected to be present in vSphere.
 
     <dt class="property-optional"
             title="Optional">
-        <span>maintenance</span>
+        <span id="state_maintenance_python">
+<a href="#state_maintenance_python" style="color: inherit; text-decoration: inherit;">maintenance</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1397,7 +1637,9 @@ The license key is expected to be present in vSphere.
 
     <dt class="property-optional"
             title="Optional">
-        <span>password</span>
+        <span id="state_password_python">
+<a href="#state_password_python" style="color: inherit; text-decoration: inherit;">password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1407,7 +1649,9 @@ to the host.
 
     <dt class="property-optional"
             title="Optional">
-        <span>thumbprint</span>
+        <span id="state_thumbprint_python">
+<a href="#state_thumbprint_python" style="color: inherit; text-decoration: inherit;">thumbprint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1418,7 +1662,9 @@ and no thumbprint is set then the operation will fail.
 
     <dt class="property-optional"
             title="Optional">
-        <span>username</span>
+        <span id="state_username_python">
+<a href="#state_username_python" style="color: inherit; text-decoration: inherit;">username</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

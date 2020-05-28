@@ -18,19 +18,19 @@ meta_desc: "Explore the HostVirtualSwitch resource of the vSphere package, inclu
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#HostVirtualSwitch">HostVirtualSwitch</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#HostVirtualSwitchArgs">HostVirtualSwitchArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#HostVirtualSwitch">HostVirtualSwitch</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#HostVirtualSwitchArgs">HostVirtualSwitchArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">HostVirtualSwitch</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>active_nics=None<span class="p">, </span>allow_forged_transmits=None<span class="p">, </span>allow_mac_changes=None<span class="p">, </span>allow_promiscuous=None<span class="p">, </span>beacon_interval=None<span class="p">, </span>check_beacon=None<span class="p">, </span>failback=None<span class="p">, </span>host_system_id=None<span class="p">, </span>link_discovery_operation=None<span class="p">, </span>link_discovery_protocol=None<span class="p">, </span>mtu=None<span class="p">, </span>name=None<span class="p">, </span>network_adapters=None<span class="p">, </span>notify_switches=None<span class="p">, </span>number_of_ports=None<span class="p">, </span>shaping_average_bandwidth=None<span class="p">, </span>shaping_burst_size=None<span class="p">, </span>shaping_enabled=None<span class="p">, </span>shaping_peak_bandwidth=None<span class="p">, </span>standby_nics=None<span class="p">, </span>teaming_policy=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/vsphere/#HostVirtualSwitch">HostVirtualSwitch</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>active_nics=None<span class="p">, </span>allow_forged_transmits=None<span class="p">, </span>allow_mac_changes=None<span class="p">, </span>allow_promiscuous=None<span class="p">, </span>beacon_interval=None<span class="p">, </span>check_beacon=None<span class="p">, </span>failback=None<span class="p">, </span>host_system_id=None<span class="p">, </span>link_discovery_operation=None<span class="p">, </span>link_discovery_protocol=None<span class="p">, </span>mtu=None<span class="p">, </span>name=None<span class="p">, </span>network_adapters=None<span class="p">, </span>notify_switches=None<span class="p">, </span>number_of_ports=None<span class="p">, </span>shaping_average_bandwidth=None<span class="p">, </span>shaping_burst_size=None<span class="p">, </span>shaping_enabled=None<span class="p">, </span>shaping_peak_bandwidth=None<span class="p">, </span>standby_nics=None<span class="p">, </span>teaming_policy=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewHostVirtualSwitch<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#HostVirtualSwitchArgs">HostVirtualSwitchArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#HostVirtualSwitch">HostVirtualSwitch</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#HostVirtualSwitch">NewHostVirtualSwitch</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#HostVirtualSwitchArgs">HostVirtualSwitchArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#HostVirtualSwitch">HostVirtualSwitch</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.HostVirtualSwitch.html">HostVirtualSwitch</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.HostVirtualSwitchArgs.html">HostVirtualSwitchArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.HostVirtualSwitch.html">HostVirtualSwitch</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.HostVirtualSwitchArgs.html">HostVirtualSwitchArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -196,7 +196,9 @@ The HostVirtualSwitch resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-required"
             title="Required">
-        <span>Active<wbr>Nics</span>
+        <span id="activenics_csharp">
+<a href="#activenics_csharp" style="color: inherit; text-decoration: inherit;">Active<wbr>Nics</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -206,7 +208,9 @@ balancing.
 
     <dt class="property-required"
             title="Required">
-        <span>Host<wbr>System<wbr>Id</span>
+        <span id="hostsystemid_csharp">
+<a href="#hostsystemid_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>System<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -216,7 +220,9 @@ the host to set the virtual switch up on. Forces a new resource if changed.
 
     <dt class="property-required"
             title="Required">
-        <span>Network<wbr>Adapters</span>
+        <span id="networkadapters_csharp">
+<a href="#networkadapters_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Adapters</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -225,7 +231,9 @@ the host to set the virtual switch up on. Forces a new resource if changed.
 
     <dt class="property-required"
             title="Required">
-        <span>Standby<wbr>Nics</span>
+        <span id="standbynics_csharp">
+<a href="#standbynics_csharp" style="color: inherit; text-decoration: inherit;">Standby<wbr>Nics</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -235,7 +243,9 @@ failover.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Allow<wbr>Forged<wbr>Transmits</span>
+        <span id="allowforgedtransmits_csharp">
+<a href="#allowforgedtransmits_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Forged<wbr>Transmits</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -246,7 +256,9 @@ address than that of its own. Default: `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Allow<wbr>Mac<wbr>Changes</span>
+        <span id="allowmacchanges_csharp">
+<a href="#allowmacchanges_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Mac<wbr>Changes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -256,7 +268,9 @@ Control (MAC) address can be changed. Default: `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Allow<wbr>Promiscuous</span>
+        <span id="allowpromiscuous_csharp">
+<a href="#allowpromiscuous_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Promiscuous</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -267,7 +281,9 @@ flag indicates whether or not all traffic is seen on a given port. Default:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Beacon<wbr>Interval</span>
+        <span id="beaconinterval_csharp">
+<a href="#beaconinterval_csharp" style="color: inherit; text-decoration: inherit;">Beacon<wbr>Interval</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -278,7 +294,9 @@ offer link failure capability beyond link status only. Default: `1`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Check<wbr>Beacon</span>
+        <span id="checkbeacon_csharp">
+<a href="#checkbeacon_csharp" style="color: inherit; text-decoration: inherit;">Check<wbr>Beacon</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -290,7 +308,9 @@ failed NICs.  Default: `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Failback</span>
+        <span id="failback_csharp">
+<a href="#failback_csharp" style="color: inherit; text-decoration: inherit;">Failback</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -301,7 +321,9 @@ failed interfaces higher in precedence when they come back up.  Default:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Link<wbr>Discovery<wbr>Operation</span>
+        <span id="linkdiscoveryoperation_csharp">
+<a href="#linkdiscoveryoperation_csharp" style="color: inherit; text-decoration: inherit;">Link<wbr>Discovery<wbr>Operation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -311,7 +333,9 @@ for link discovery traffic. Default: `listen`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Link<wbr>Discovery<wbr>Protocol</span>
+        <span id="linkdiscoveryprotocol_csharp">
+<a href="#linkdiscoveryprotocol_csharp" style="color: inherit; text-decoration: inherit;">Link<wbr>Discovery<wbr>Protocol</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -321,7 +345,9 @@ types are `cpd` and `lldp`. Default: `cdp`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Mtu</span>
+        <span id="mtu_csharp">
+<a href="#mtu_csharp" style="color: inherit; text-decoration: inherit;">Mtu</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -331,7 +357,9 @@ switch. Default: `1500`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -341,7 +369,9 @@ changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Notify<wbr>Switches</span>
+        <span id="notifyswitches_csharp">
+<a href="#notifyswitches_csharp" style="color: inherit; text-decoration: inherit;">Notify<wbr>Switches</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -352,7 +382,9 @@ Default: `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Number<wbr>Of<wbr>Ports</span>
+        <span id="numberofports_csharp">
+<a href="#numberofports_csharp" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Ports</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -362,7 +394,9 @@ virtual switch. Default: `128`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Shaping<wbr>Average<wbr>Bandwidth</span>
+        <span id="shapingaveragebandwidth_csharp">
+<a href="#shapingaveragebandwidth_csharp" style="color: inherit; text-decoration: inherit;">Shaping<wbr>Average<wbr>Bandwidth</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -372,7 +406,9 @@ second if traffic shaping is enabled. Default: `0`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Shaping<wbr>Burst<wbr>Size</span>
+        <span id="shapingburstsize_csharp">
+<a href="#shapingburstsize_csharp" style="color: inherit; text-decoration: inherit;">Shaping<wbr>Burst<wbr>Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -382,7 +418,9 @@ shaping is enabled. Default: `0`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Shaping<wbr>Enabled</span>
+        <span id="shapingenabled_csharp">
+<a href="#shapingenabled_csharp" style="color: inherit; text-decoration: inherit;">Shaping<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -392,7 +430,9 @@ ports managed by this virtual switch. Default: `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Shaping<wbr>Peak<wbr>Bandwidth</span>
+        <span id="shapingpeakbandwidth_csharp">
+<a href="#shapingpeakbandwidth_csharp" style="color: inherit; text-decoration: inherit;">Shaping<wbr>Peak<wbr>Bandwidth</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -402,7 +442,9 @@ bits per second if traffic shaping is enabled. Default: `0`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Teaming<wbr>Policy</span>
+        <span id="teamingpolicy_csharp">
+<a href="#teamingpolicy_csharp" style="color: inherit; text-decoration: inherit;">Teaming<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -420,7 +462,9 @@ of `loadbalance_ip`, `loadbalance_srcmac`, `loadbalance_srcid`, or
 
     <dt class="property-required"
             title="Required">
-        <span>Active<wbr>Nics</span>
+        <span id="activenics_go">
+<a href="#activenics_go" style="color: inherit; text-decoration: inherit;">Active<wbr>Nics</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -430,7 +474,9 @@ balancing.
 
     <dt class="property-required"
             title="Required">
-        <span>Host<wbr>System<wbr>Id</span>
+        <span id="hostsystemid_go">
+<a href="#hostsystemid_go" style="color: inherit; text-decoration: inherit;">Host<wbr>System<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -440,7 +486,9 @@ the host to set the virtual switch up on. Forces a new resource if changed.
 
     <dt class="property-required"
             title="Required">
-        <span>Network<wbr>Adapters</span>
+        <span id="networkadapters_go">
+<a href="#networkadapters_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Adapters</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -449,7 +497,9 @@ the host to set the virtual switch up on. Forces a new resource if changed.
 
     <dt class="property-required"
             title="Required">
-        <span>Standby<wbr>Nics</span>
+        <span id="standbynics_go">
+<a href="#standbynics_go" style="color: inherit; text-decoration: inherit;">Standby<wbr>Nics</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -459,7 +509,9 @@ failover.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Allow<wbr>Forged<wbr>Transmits</span>
+        <span id="allowforgedtransmits_go">
+<a href="#allowforgedtransmits_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Forged<wbr>Transmits</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -470,7 +522,9 @@ address than that of its own. Default: `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Allow<wbr>Mac<wbr>Changes</span>
+        <span id="allowmacchanges_go">
+<a href="#allowmacchanges_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Mac<wbr>Changes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -480,7 +534,9 @@ Control (MAC) address can be changed. Default: `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Allow<wbr>Promiscuous</span>
+        <span id="allowpromiscuous_go">
+<a href="#allowpromiscuous_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Promiscuous</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -491,7 +547,9 @@ flag indicates whether or not all traffic is seen on a given port. Default:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Beacon<wbr>Interval</span>
+        <span id="beaconinterval_go">
+<a href="#beaconinterval_go" style="color: inherit; text-decoration: inherit;">Beacon<wbr>Interval</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -502,7 +560,9 @@ offer link failure capability beyond link status only. Default: `1`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Check<wbr>Beacon</span>
+        <span id="checkbeacon_go">
+<a href="#checkbeacon_go" style="color: inherit; text-decoration: inherit;">Check<wbr>Beacon</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -514,7 +574,9 @@ failed NICs.  Default: `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Failback</span>
+        <span id="failback_go">
+<a href="#failback_go" style="color: inherit; text-decoration: inherit;">Failback</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -525,7 +587,9 @@ failed interfaces higher in precedence when they come back up.  Default:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Link<wbr>Discovery<wbr>Operation</span>
+        <span id="linkdiscoveryoperation_go">
+<a href="#linkdiscoveryoperation_go" style="color: inherit; text-decoration: inherit;">Link<wbr>Discovery<wbr>Operation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -535,7 +599,9 @@ for link discovery traffic. Default: `listen`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Link<wbr>Discovery<wbr>Protocol</span>
+        <span id="linkdiscoveryprotocol_go">
+<a href="#linkdiscoveryprotocol_go" style="color: inherit; text-decoration: inherit;">Link<wbr>Discovery<wbr>Protocol</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -545,7 +611,9 @@ types are `cpd` and `lldp`. Default: `cdp`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Mtu</span>
+        <span id="mtu_go">
+<a href="#mtu_go" style="color: inherit; text-decoration: inherit;">Mtu</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -555,7 +623,9 @@ switch. Default: `1500`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -565,7 +635,9 @@ changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Notify<wbr>Switches</span>
+        <span id="notifyswitches_go">
+<a href="#notifyswitches_go" style="color: inherit; text-decoration: inherit;">Notify<wbr>Switches</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -576,7 +648,9 @@ Default: `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Number<wbr>Of<wbr>Ports</span>
+        <span id="numberofports_go">
+<a href="#numberofports_go" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Ports</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -586,7 +660,9 @@ virtual switch. Default: `128`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Shaping<wbr>Average<wbr>Bandwidth</span>
+        <span id="shapingaveragebandwidth_go">
+<a href="#shapingaveragebandwidth_go" style="color: inherit; text-decoration: inherit;">Shaping<wbr>Average<wbr>Bandwidth</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -596,7 +672,9 @@ second if traffic shaping is enabled. Default: `0`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Shaping<wbr>Burst<wbr>Size</span>
+        <span id="shapingburstsize_go">
+<a href="#shapingburstsize_go" style="color: inherit; text-decoration: inherit;">Shaping<wbr>Burst<wbr>Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -606,7 +684,9 @@ shaping is enabled. Default: `0`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Shaping<wbr>Enabled</span>
+        <span id="shapingenabled_go">
+<a href="#shapingenabled_go" style="color: inherit; text-decoration: inherit;">Shaping<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -616,7 +696,9 @@ ports managed by this virtual switch. Default: `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Shaping<wbr>Peak<wbr>Bandwidth</span>
+        <span id="shapingpeakbandwidth_go">
+<a href="#shapingpeakbandwidth_go" style="color: inherit; text-decoration: inherit;">Shaping<wbr>Peak<wbr>Bandwidth</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -626,7 +708,9 @@ bits per second if traffic shaping is enabled. Default: `0`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Teaming<wbr>Policy</span>
+        <span id="teamingpolicy_go">
+<a href="#teamingpolicy_go" style="color: inherit; text-decoration: inherit;">Teaming<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -644,7 +728,9 @@ of `loadbalance_ip`, `loadbalance_srcmac`, `loadbalance_srcid`, or
 
     <dt class="property-required"
             title="Required">
-        <span>active<wbr>Nics</span>
+        <span id="activenics_nodejs">
+<a href="#activenics_nodejs" style="color: inherit; text-decoration: inherit;">active<wbr>Nics</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -654,7 +740,9 @@ balancing.
 
     <dt class="property-required"
             title="Required">
-        <span>host<wbr>System<wbr>Id</span>
+        <span id="hostsystemid_nodejs">
+<a href="#hostsystemid_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>System<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -664,7 +752,9 @@ the host to set the virtual switch up on. Forces a new resource if changed.
 
     <dt class="property-required"
             title="Required">
-        <span>network<wbr>Adapters</span>
+        <span id="networkadapters_nodejs">
+<a href="#networkadapters_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Adapters</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -673,7 +763,9 @@ the host to set the virtual switch up on. Forces a new resource if changed.
 
     <dt class="property-required"
             title="Required">
-        <span>standby<wbr>Nics</span>
+        <span id="standbynics_nodejs">
+<a href="#standbynics_nodejs" style="color: inherit; text-decoration: inherit;">standby<wbr>Nics</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -683,7 +775,9 @@ failover.
 
     <dt class="property-optional"
             title="Optional">
-        <span>allow<wbr>Forged<wbr>Transmits</span>
+        <span id="allowforgedtransmits_nodejs">
+<a href="#allowforgedtransmits_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Forged<wbr>Transmits</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -694,7 +788,9 @@ address than that of its own. Default: `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>allow<wbr>Mac<wbr>Changes</span>
+        <span id="allowmacchanges_nodejs">
+<a href="#allowmacchanges_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Mac<wbr>Changes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -704,7 +800,9 @@ Control (MAC) address can be changed. Default: `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>allow<wbr>Promiscuous</span>
+        <span id="allowpromiscuous_nodejs">
+<a href="#allowpromiscuous_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Promiscuous</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -715,7 +813,9 @@ flag indicates whether or not all traffic is seen on a given port. Default:
 
     <dt class="property-optional"
             title="Optional">
-        <span>beacon<wbr>Interval</span>
+        <span id="beaconinterval_nodejs">
+<a href="#beaconinterval_nodejs" style="color: inherit; text-decoration: inherit;">beacon<wbr>Interval</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -726,7 +826,9 @@ offer link failure capability beyond link status only. Default: `1`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>check<wbr>Beacon</span>
+        <span id="checkbeacon_nodejs">
+<a href="#checkbeacon_nodejs" style="color: inherit; text-decoration: inherit;">check<wbr>Beacon</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -738,7 +840,9 @@ failed NICs.  Default: `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>failback</span>
+        <span id="failback_nodejs">
+<a href="#failback_nodejs" style="color: inherit; text-decoration: inherit;">failback</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -749,7 +853,9 @@ failed interfaces higher in precedence when they come back up.  Default:
 
     <dt class="property-optional"
             title="Optional">
-        <span>link<wbr>Discovery<wbr>Operation</span>
+        <span id="linkdiscoveryoperation_nodejs">
+<a href="#linkdiscoveryoperation_nodejs" style="color: inherit; text-decoration: inherit;">link<wbr>Discovery<wbr>Operation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -759,7 +865,9 @@ for link discovery traffic. Default: `listen`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>link<wbr>Discovery<wbr>Protocol</span>
+        <span id="linkdiscoveryprotocol_nodejs">
+<a href="#linkdiscoveryprotocol_nodejs" style="color: inherit; text-decoration: inherit;">link<wbr>Discovery<wbr>Protocol</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -769,7 +877,9 @@ types are `cpd` and `lldp`. Default: `cdp`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>mtu</span>
+        <span id="mtu_nodejs">
+<a href="#mtu_nodejs" style="color: inherit; text-decoration: inherit;">mtu</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -779,7 +889,9 @@ switch. Default: `1500`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -789,7 +901,9 @@ changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>notify<wbr>Switches</span>
+        <span id="notifyswitches_nodejs">
+<a href="#notifyswitches_nodejs" style="color: inherit; text-decoration: inherit;">notify<wbr>Switches</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -800,7 +914,9 @@ Default: `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>number<wbr>Of<wbr>Ports</span>
+        <span id="numberofports_nodejs">
+<a href="#numberofports_nodejs" style="color: inherit; text-decoration: inherit;">number<wbr>Of<wbr>Ports</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -810,7 +926,9 @@ virtual switch. Default: `128`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>shaping<wbr>Average<wbr>Bandwidth</span>
+        <span id="shapingaveragebandwidth_nodejs">
+<a href="#shapingaveragebandwidth_nodejs" style="color: inherit; text-decoration: inherit;">shaping<wbr>Average<wbr>Bandwidth</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -820,7 +938,9 @@ second if traffic shaping is enabled. Default: `0`
 
     <dt class="property-optional"
             title="Optional">
-        <span>shaping<wbr>Burst<wbr>Size</span>
+        <span id="shapingburstsize_nodejs">
+<a href="#shapingburstsize_nodejs" style="color: inherit; text-decoration: inherit;">shaping<wbr>Burst<wbr>Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -830,7 +950,9 @@ shaping is enabled. Default: `0`
 
     <dt class="property-optional"
             title="Optional">
-        <span>shaping<wbr>Enabled</span>
+        <span id="shapingenabled_nodejs">
+<a href="#shapingenabled_nodejs" style="color: inherit; text-decoration: inherit;">shaping<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -840,7 +962,9 @@ ports managed by this virtual switch. Default: `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>shaping<wbr>Peak<wbr>Bandwidth</span>
+        <span id="shapingpeakbandwidth_nodejs">
+<a href="#shapingpeakbandwidth_nodejs" style="color: inherit; text-decoration: inherit;">shaping<wbr>Peak<wbr>Bandwidth</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -850,7 +974,9 @@ bits per second if traffic shaping is enabled. Default: `0`
 
     <dt class="property-optional"
             title="Optional">
-        <span>teaming<wbr>Policy</span>
+        <span id="teamingpolicy_nodejs">
+<a href="#teamingpolicy_nodejs" style="color: inherit; text-decoration: inherit;">teaming<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -868,7 +994,9 @@ of `loadbalance_ip`, `loadbalance_srcmac`, `loadbalance_srcid`, or
 
     <dt class="property-required"
             title="Required">
-        <span>active_<wbr>nics</span>
+        <span id="active_nics_python">
+<a href="#active_nics_python" style="color: inherit; text-decoration: inherit;">active_<wbr>nics</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -878,7 +1006,9 @@ balancing.
 
     <dt class="property-required"
             title="Required">
-        <span>host_<wbr>system_<wbr>id</span>
+        <span id="host_system_id_python">
+<a href="#host_system_id_python" style="color: inherit; text-decoration: inherit;">host_<wbr>system_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -888,7 +1018,9 @@ the host to set the virtual switch up on. Forces a new resource if changed.
 
     <dt class="property-required"
             title="Required">
-        <span>network_<wbr>adapters</span>
+        <span id="network_adapters_python">
+<a href="#network_adapters_python" style="color: inherit; text-decoration: inherit;">network_<wbr>adapters</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -897,7 +1029,9 @@ the host to set the virtual switch up on. Forces a new resource if changed.
 
     <dt class="property-required"
             title="Required">
-        <span>standby_<wbr>nics</span>
+        <span id="standby_nics_python">
+<a href="#standby_nics_python" style="color: inherit; text-decoration: inherit;">standby_<wbr>nics</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -907,7 +1041,9 @@ failover.
 
     <dt class="property-optional"
             title="Optional">
-        <span>allow_<wbr>forged_<wbr>transmits</span>
+        <span id="allow_forged_transmits_python">
+<a href="#allow_forged_transmits_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>forged_<wbr>transmits</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -918,7 +1054,9 @@ address than that of its own. Default: `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>allow_<wbr>mac_<wbr>changes</span>
+        <span id="allow_mac_changes_python">
+<a href="#allow_mac_changes_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>mac_<wbr>changes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -928,7 +1066,9 @@ Control (MAC) address can be changed. Default: `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>allow_<wbr>promiscuous</span>
+        <span id="allow_promiscuous_python">
+<a href="#allow_promiscuous_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>promiscuous</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -939,7 +1079,9 @@ flag indicates whether or not all traffic is seen on a given port. Default:
 
     <dt class="property-optional"
             title="Optional">
-        <span>beacon_<wbr>interval</span>
+        <span id="beacon_interval_python">
+<a href="#beacon_interval_python" style="color: inherit; text-decoration: inherit;">beacon_<wbr>interval</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -950,7 +1092,9 @@ offer link failure capability beyond link status only. Default: `1`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>check_<wbr>beacon</span>
+        <span id="check_beacon_python">
+<a href="#check_beacon_python" style="color: inherit; text-decoration: inherit;">check_<wbr>beacon</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -962,7 +1106,9 @@ failed NICs.  Default: `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>failback</span>
+        <span id="failback_python">
+<a href="#failback_python" style="color: inherit; text-decoration: inherit;">failback</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -973,7 +1119,9 @@ failed interfaces higher in precedence when they come back up.  Default:
 
     <dt class="property-optional"
             title="Optional">
-        <span>link_<wbr>discovery_<wbr>operation</span>
+        <span id="link_discovery_operation_python">
+<a href="#link_discovery_operation_python" style="color: inherit; text-decoration: inherit;">link_<wbr>discovery_<wbr>operation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -983,7 +1131,9 @@ for link discovery traffic. Default: `listen`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>link_<wbr>discovery_<wbr>protocol</span>
+        <span id="link_discovery_protocol_python">
+<a href="#link_discovery_protocol_python" style="color: inherit; text-decoration: inherit;">link_<wbr>discovery_<wbr>protocol</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -993,7 +1143,9 @@ types are `cpd` and `lldp`. Default: `cdp`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>mtu</span>
+        <span id="mtu_python">
+<a href="#mtu_python" style="color: inherit; text-decoration: inherit;">mtu</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1003,7 +1155,9 @@ switch. Default: `1500`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1013,7 +1167,9 @@ changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>notify_<wbr>switches</span>
+        <span id="notify_switches_python">
+<a href="#notify_switches_python" style="color: inherit; text-decoration: inherit;">notify_<wbr>switches</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1024,7 +1180,9 @@ Default: `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>number_<wbr>of_<wbr>ports</span>
+        <span id="number_of_ports_python">
+<a href="#number_of_ports_python" style="color: inherit; text-decoration: inherit;">number_<wbr>of_<wbr>ports</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1034,7 +1192,9 @@ virtual switch. Default: `128`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>shaping_<wbr>average_<wbr>bandwidth</span>
+        <span id="shaping_average_bandwidth_python">
+<a href="#shaping_average_bandwidth_python" style="color: inherit; text-decoration: inherit;">shaping_<wbr>average_<wbr>bandwidth</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1044,7 +1204,9 @@ second if traffic shaping is enabled. Default: `0`
 
     <dt class="property-optional"
             title="Optional">
-        <span>shaping_<wbr>burst_<wbr>size</span>
+        <span id="shaping_burst_size_python">
+<a href="#shaping_burst_size_python" style="color: inherit; text-decoration: inherit;">shaping_<wbr>burst_<wbr>size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1054,7 +1216,9 @@ shaping is enabled. Default: `0`
 
     <dt class="property-optional"
             title="Optional">
-        <span>shaping_<wbr>enabled</span>
+        <span id="shaping_enabled_python">
+<a href="#shaping_enabled_python" style="color: inherit; text-decoration: inherit;">shaping_<wbr>enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1064,7 +1228,9 @@ ports managed by this virtual switch. Default: `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>shaping_<wbr>peak_<wbr>bandwidth</span>
+        <span id="shaping_peak_bandwidth_python">
+<a href="#shaping_peak_bandwidth_python" style="color: inherit; text-decoration: inherit;">shaping_<wbr>peak_<wbr>bandwidth</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1074,7 +1240,9 @@ bits per second if traffic shaping is enabled. Default: `0`
 
     <dt class="property-optional"
             title="Optional">
-        <span>teaming_<wbr>policy</span>
+        <span id="teaming_policy_python">
+<a href="#teaming_policy_python" style="color: inherit; text-decoration: inherit;">teaming_<wbr>policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1103,7 +1271,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1118,7 +1288,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1133,7 +1305,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1148,7 +1322,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1169,7 +1345,7 @@ Get an existing HostVirtualSwitch resource's state with the given name, ID, and 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#HostVirtualSwitchState">HostVirtualSwitchState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#HostVirtualSwitch">HostVirtualSwitch</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#HostVirtualSwitchState">HostVirtualSwitchState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#HostVirtualSwitch">HostVirtualSwitch</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1177,11 +1353,11 @@ Get an existing HostVirtualSwitch resource's state with the given name, ID, and 
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetHostVirtualSwitch<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#HostVirtualSwitchState">HostVirtualSwitchState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#HostVirtualSwitch">HostVirtualSwitch</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetHostVirtualSwitch<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#HostVirtualSwitchState">HostVirtualSwitchState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#HostVirtualSwitch">HostVirtualSwitch</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.HostVirtualSwitch.html">HostVirtualSwitch</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere..HostVirtualSwitchState.html">HostVirtualSwitchState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.HostVirtualSwitch.html">HostVirtualSwitch</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere..HostVirtualSwitchState.html">HostVirtualSwitchState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1289,7 +1465,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Active<wbr>Nics</span>
+        <span id="state_activenics_csharp">
+<a href="#state_activenics_csharp" style="color: inherit; text-decoration: inherit;">Active<wbr>Nics</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1299,7 +1477,9 @@ balancing.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Allow<wbr>Forged<wbr>Transmits</span>
+        <span id="state_allowforgedtransmits_csharp">
+<a href="#state_allowforgedtransmits_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Forged<wbr>Transmits</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1310,7 +1490,9 @@ address than that of its own. Default: `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Allow<wbr>Mac<wbr>Changes</span>
+        <span id="state_allowmacchanges_csharp">
+<a href="#state_allowmacchanges_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Mac<wbr>Changes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1320,7 +1502,9 @@ Control (MAC) address can be changed. Default: `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Allow<wbr>Promiscuous</span>
+        <span id="state_allowpromiscuous_csharp">
+<a href="#state_allowpromiscuous_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Promiscuous</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1331,7 +1515,9 @@ flag indicates whether or not all traffic is seen on a given port. Default:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Beacon<wbr>Interval</span>
+        <span id="state_beaconinterval_csharp">
+<a href="#state_beaconinterval_csharp" style="color: inherit; text-decoration: inherit;">Beacon<wbr>Interval</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1342,7 +1528,9 @@ offer link failure capability beyond link status only. Default: `1`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Check<wbr>Beacon</span>
+        <span id="state_checkbeacon_csharp">
+<a href="#state_checkbeacon_csharp" style="color: inherit; text-decoration: inherit;">Check<wbr>Beacon</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1354,7 +1542,9 @@ failed NICs.  Default: `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Failback</span>
+        <span id="state_failback_csharp">
+<a href="#state_failback_csharp" style="color: inherit; text-decoration: inherit;">Failback</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1365,7 +1555,9 @@ failed interfaces higher in precedence when they come back up.  Default:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Host<wbr>System<wbr>Id</span>
+        <span id="state_hostsystemid_csharp">
+<a href="#state_hostsystemid_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>System<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1375,7 +1567,9 @@ the host to set the virtual switch up on. Forces a new resource if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Link<wbr>Discovery<wbr>Operation</span>
+        <span id="state_linkdiscoveryoperation_csharp">
+<a href="#state_linkdiscoveryoperation_csharp" style="color: inherit; text-decoration: inherit;">Link<wbr>Discovery<wbr>Operation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1385,7 +1579,9 @@ for link discovery traffic. Default: `listen`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Link<wbr>Discovery<wbr>Protocol</span>
+        <span id="state_linkdiscoveryprotocol_csharp">
+<a href="#state_linkdiscoveryprotocol_csharp" style="color: inherit; text-decoration: inherit;">Link<wbr>Discovery<wbr>Protocol</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1395,7 +1591,9 @@ types are `cpd` and `lldp`. Default: `cdp`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Mtu</span>
+        <span id="state_mtu_csharp">
+<a href="#state_mtu_csharp" style="color: inherit; text-decoration: inherit;">Mtu</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1405,7 +1603,9 @@ switch. Default: `1500`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1415,7 +1615,9 @@ changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Network<wbr>Adapters</span>
+        <span id="state_networkadapters_csharp">
+<a href="#state_networkadapters_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Adapters</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1424,7 +1626,9 @@ changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Notify<wbr>Switches</span>
+        <span id="state_notifyswitches_csharp">
+<a href="#state_notifyswitches_csharp" style="color: inherit; text-decoration: inherit;">Notify<wbr>Switches</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1435,7 +1639,9 @@ Default: `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Number<wbr>Of<wbr>Ports</span>
+        <span id="state_numberofports_csharp">
+<a href="#state_numberofports_csharp" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Ports</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1445,7 +1651,9 @@ virtual switch. Default: `128`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Shaping<wbr>Average<wbr>Bandwidth</span>
+        <span id="state_shapingaveragebandwidth_csharp">
+<a href="#state_shapingaveragebandwidth_csharp" style="color: inherit; text-decoration: inherit;">Shaping<wbr>Average<wbr>Bandwidth</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1455,7 +1663,9 @@ second if traffic shaping is enabled. Default: `0`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Shaping<wbr>Burst<wbr>Size</span>
+        <span id="state_shapingburstsize_csharp">
+<a href="#state_shapingburstsize_csharp" style="color: inherit; text-decoration: inherit;">Shaping<wbr>Burst<wbr>Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1465,7 +1675,9 @@ shaping is enabled. Default: `0`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Shaping<wbr>Enabled</span>
+        <span id="state_shapingenabled_csharp">
+<a href="#state_shapingenabled_csharp" style="color: inherit; text-decoration: inherit;">Shaping<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1475,7 +1687,9 @@ ports managed by this virtual switch. Default: `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Shaping<wbr>Peak<wbr>Bandwidth</span>
+        <span id="state_shapingpeakbandwidth_csharp">
+<a href="#state_shapingpeakbandwidth_csharp" style="color: inherit; text-decoration: inherit;">Shaping<wbr>Peak<wbr>Bandwidth</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1485,7 +1699,9 @@ bits per second if traffic shaping is enabled. Default: `0`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Standby<wbr>Nics</span>
+        <span id="state_standbynics_csharp">
+<a href="#state_standbynics_csharp" style="color: inherit; text-decoration: inherit;">Standby<wbr>Nics</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1495,7 +1711,9 @@ failover.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Teaming<wbr>Policy</span>
+        <span id="state_teamingpolicy_csharp">
+<a href="#state_teamingpolicy_csharp" style="color: inherit; text-decoration: inherit;">Teaming<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1513,7 +1731,9 @@ of `loadbalance_ip`, `loadbalance_srcmac`, `loadbalance_srcid`, or
 
     <dt class="property-optional"
             title="Optional">
-        <span>Active<wbr>Nics</span>
+        <span id="state_activenics_go">
+<a href="#state_activenics_go" style="color: inherit; text-decoration: inherit;">Active<wbr>Nics</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1523,7 +1743,9 @@ balancing.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Allow<wbr>Forged<wbr>Transmits</span>
+        <span id="state_allowforgedtransmits_go">
+<a href="#state_allowforgedtransmits_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Forged<wbr>Transmits</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1534,7 +1756,9 @@ address than that of its own. Default: `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Allow<wbr>Mac<wbr>Changes</span>
+        <span id="state_allowmacchanges_go">
+<a href="#state_allowmacchanges_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Mac<wbr>Changes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1544,7 +1768,9 @@ Control (MAC) address can be changed. Default: `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Allow<wbr>Promiscuous</span>
+        <span id="state_allowpromiscuous_go">
+<a href="#state_allowpromiscuous_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Promiscuous</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1555,7 +1781,9 @@ flag indicates whether or not all traffic is seen on a given port. Default:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Beacon<wbr>Interval</span>
+        <span id="state_beaconinterval_go">
+<a href="#state_beaconinterval_go" style="color: inherit; text-decoration: inherit;">Beacon<wbr>Interval</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1566,7 +1794,9 @@ offer link failure capability beyond link status only. Default: `1`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Check<wbr>Beacon</span>
+        <span id="state_checkbeacon_go">
+<a href="#state_checkbeacon_go" style="color: inherit; text-decoration: inherit;">Check<wbr>Beacon</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1578,7 +1808,9 @@ failed NICs.  Default: `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Failback</span>
+        <span id="state_failback_go">
+<a href="#state_failback_go" style="color: inherit; text-decoration: inherit;">Failback</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1589,7 +1821,9 @@ failed interfaces higher in precedence when they come back up.  Default:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Host<wbr>System<wbr>Id</span>
+        <span id="state_hostsystemid_go">
+<a href="#state_hostsystemid_go" style="color: inherit; text-decoration: inherit;">Host<wbr>System<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1599,7 +1833,9 @@ the host to set the virtual switch up on. Forces a new resource if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Link<wbr>Discovery<wbr>Operation</span>
+        <span id="state_linkdiscoveryoperation_go">
+<a href="#state_linkdiscoveryoperation_go" style="color: inherit; text-decoration: inherit;">Link<wbr>Discovery<wbr>Operation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1609,7 +1845,9 @@ for link discovery traffic. Default: `listen`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Link<wbr>Discovery<wbr>Protocol</span>
+        <span id="state_linkdiscoveryprotocol_go">
+<a href="#state_linkdiscoveryprotocol_go" style="color: inherit; text-decoration: inherit;">Link<wbr>Discovery<wbr>Protocol</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1619,7 +1857,9 @@ types are `cpd` and `lldp`. Default: `cdp`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Mtu</span>
+        <span id="state_mtu_go">
+<a href="#state_mtu_go" style="color: inherit; text-decoration: inherit;">Mtu</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1629,7 +1869,9 @@ switch. Default: `1500`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1639,7 +1881,9 @@ changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Network<wbr>Adapters</span>
+        <span id="state_networkadapters_go">
+<a href="#state_networkadapters_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Adapters</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1648,7 +1892,9 @@ changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Notify<wbr>Switches</span>
+        <span id="state_notifyswitches_go">
+<a href="#state_notifyswitches_go" style="color: inherit; text-decoration: inherit;">Notify<wbr>Switches</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1659,7 +1905,9 @@ Default: `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Number<wbr>Of<wbr>Ports</span>
+        <span id="state_numberofports_go">
+<a href="#state_numberofports_go" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Ports</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1669,7 +1917,9 @@ virtual switch. Default: `128`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Shaping<wbr>Average<wbr>Bandwidth</span>
+        <span id="state_shapingaveragebandwidth_go">
+<a href="#state_shapingaveragebandwidth_go" style="color: inherit; text-decoration: inherit;">Shaping<wbr>Average<wbr>Bandwidth</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1679,7 +1929,9 @@ second if traffic shaping is enabled. Default: `0`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Shaping<wbr>Burst<wbr>Size</span>
+        <span id="state_shapingburstsize_go">
+<a href="#state_shapingburstsize_go" style="color: inherit; text-decoration: inherit;">Shaping<wbr>Burst<wbr>Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1689,7 +1941,9 @@ shaping is enabled. Default: `0`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Shaping<wbr>Enabled</span>
+        <span id="state_shapingenabled_go">
+<a href="#state_shapingenabled_go" style="color: inherit; text-decoration: inherit;">Shaping<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1699,7 +1953,9 @@ ports managed by this virtual switch. Default: `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Shaping<wbr>Peak<wbr>Bandwidth</span>
+        <span id="state_shapingpeakbandwidth_go">
+<a href="#state_shapingpeakbandwidth_go" style="color: inherit; text-decoration: inherit;">Shaping<wbr>Peak<wbr>Bandwidth</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1709,7 +1965,9 @@ bits per second if traffic shaping is enabled. Default: `0`
 
     <dt class="property-optional"
             title="Optional">
-        <span>Standby<wbr>Nics</span>
+        <span id="state_standbynics_go">
+<a href="#state_standbynics_go" style="color: inherit; text-decoration: inherit;">Standby<wbr>Nics</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1719,7 +1977,9 @@ failover.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Teaming<wbr>Policy</span>
+        <span id="state_teamingpolicy_go">
+<a href="#state_teamingpolicy_go" style="color: inherit; text-decoration: inherit;">Teaming<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1737,7 +1997,9 @@ of `loadbalance_ip`, `loadbalance_srcmac`, `loadbalance_srcid`, or
 
     <dt class="property-optional"
             title="Optional">
-        <span>active<wbr>Nics</span>
+        <span id="state_activenics_nodejs">
+<a href="#state_activenics_nodejs" style="color: inherit; text-decoration: inherit;">active<wbr>Nics</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1747,7 +2009,9 @@ balancing.
 
     <dt class="property-optional"
             title="Optional">
-        <span>allow<wbr>Forged<wbr>Transmits</span>
+        <span id="state_allowforgedtransmits_nodejs">
+<a href="#state_allowforgedtransmits_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Forged<wbr>Transmits</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1758,7 +2022,9 @@ address than that of its own. Default: `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>allow<wbr>Mac<wbr>Changes</span>
+        <span id="state_allowmacchanges_nodejs">
+<a href="#state_allowmacchanges_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Mac<wbr>Changes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1768,7 +2034,9 @@ Control (MAC) address can be changed. Default: `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>allow<wbr>Promiscuous</span>
+        <span id="state_allowpromiscuous_nodejs">
+<a href="#state_allowpromiscuous_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Promiscuous</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1779,7 +2047,9 @@ flag indicates whether or not all traffic is seen on a given port. Default:
 
     <dt class="property-optional"
             title="Optional">
-        <span>beacon<wbr>Interval</span>
+        <span id="state_beaconinterval_nodejs">
+<a href="#state_beaconinterval_nodejs" style="color: inherit; text-decoration: inherit;">beacon<wbr>Interval</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1790,7 +2060,9 @@ offer link failure capability beyond link status only. Default: `1`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>check<wbr>Beacon</span>
+        <span id="state_checkbeacon_nodejs">
+<a href="#state_checkbeacon_nodejs" style="color: inherit; text-decoration: inherit;">check<wbr>Beacon</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1802,7 +2074,9 @@ failed NICs.  Default: `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>failback</span>
+        <span id="state_failback_nodejs">
+<a href="#state_failback_nodejs" style="color: inherit; text-decoration: inherit;">failback</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1813,7 +2087,9 @@ failed interfaces higher in precedence when they come back up.  Default:
 
     <dt class="property-optional"
             title="Optional">
-        <span>host<wbr>System<wbr>Id</span>
+        <span id="state_hostsystemid_nodejs">
+<a href="#state_hostsystemid_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>System<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1823,7 +2099,9 @@ the host to set the virtual switch up on. Forces a new resource if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>link<wbr>Discovery<wbr>Operation</span>
+        <span id="state_linkdiscoveryoperation_nodejs">
+<a href="#state_linkdiscoveryoperation_nodejs" style="color: inherit; text-decoration: inherit;">link<wbr>Discovery<wbr>Operation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1833,7 +2111,9 @@ for link discovery traffic. Default: `listen`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>link<wbr>Discovery<wbr>Protocol</span>
+        <span id="state_linkdiscoveryprotocol_nodejs">
+<a href="#state_linkdiscoveryprotocol_nodejs" style="color: inherit; text-decoration: inherit;">link<wbr>Discovery<wbr>Protocol</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1843,7 +2123,9 @@ types are `cpd` and `lldp`. Default: `cdp`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>mtu</span>
+        <span id="state_mtu_nodejs">
+<a href="#state_mtu_nodejs" style="color: inherit; text-decoration: inherit;">mtu</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1853,7 +2135,9 @@ switch. Default: `1500`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1863,7 +2147,9 @@ changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>network<wbr>Adapters</span>
+        <span id="state_networkadapters_nodejs">
+<a href="#state_networkadapters_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Adapters</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1872,7 +2158,9 @@ changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>notify<wbr>Switches</span>
+        <span id="state_notifyswitches_nodejs">
+<a href="#state_notifyswitches_nodejs" style="color: inherit; text-decoration: inherit;">notify<wbr>Switches</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1883,7 +2171,9 @@ Default: `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>number<wbr>Of<wbr>Ports</span>
+        <span id="state_numberofports_nodejs">
+<a href="#state_numberofports_nodejs" style="color: inherit; text-decoration: inherit;">number<wbr>Of<wbr>Ports</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1893,7 +2183,9 @@ virtual switch. Default: `128`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>shaping<wbr>Average<wbr>Bandwidth</span>
+        <span id="state_shapingaveragebandwidth_nodejs">
+<a href="#state_shapingaveragebandwidth_nodejs" style="color: inherit; text-decoration: inherit;">shaping<wbr>Average<wbr>Bandwidth</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1903,7 +2195,9 @@ second if traffic shaping is enabled. Default: `0`
 
     <dt class="property-optional"
             title="Optional">
-        <span>shaping<wbr>Burst<wbr>Size</span>
+        <span id="state_shapingburstsize_nodejs">
+<a href="#state_shapingburstsize_nodejs" style="color: inherit; text-decoration: inherit;">shaping<wbr>Burst<wbr>Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1913,7 +2207,9 @@ shaping is enabled. Default: `0`
 
     <dt class="property-optional"
             title="Optional">
-        <span>shaping<wbr>Enabled</span>
+        <span id="state_shapingenabled_nodejs">
+<a href="#state_shapingenabled_nodejs" style="color: inherit; text-decoration: inherit;">shaping<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1923,7 +2219,9 @@ ports managed by this virtual switch. Default: `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>shaping<wbr>Peak<wbr>Bandwidth</span>
+        <span id="state_shapingpeakbandwidth_nodejs">
+<a href="#state_shapingpeakbandwidth_nodejs" style="color: inherit; text-decoration: inherit;">shaping<wbr>Peak<wbr>Bandwidth</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1933,7 +2231,9 @@ bits per second if traffic shaping is enabled. Default: `0`
 
     <dt class="property-optional"
             title="Optional">
-        <span>standby<wbr>Nics</span>
+        <span id="state_standbynics_nodejs">
+<a href="#state_standbynics_nodejs" style="color: inherit; text-decoration: inherit;">standby<wbr>Nics</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1943,7 +2243,9 @@ failover.
 
     <dt class="property-optional"
             title="Optional">
-        <span>teaming<wbr>Policy</span>
+        <span id="state_teamingpolicy_nodejs">
+<a href="#state_teamingpolicy_nodejs" style="color: inherit; text-decoration: inherit;">teaming<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1961,7 +2263,9 @@ of `loadbalance_ip`, `loadbalance_srcmac`, `loadbalance_srcid`, or
 
     <dt class="property-optional"
             title="Optional">
-        <span>active_<wbr>nics</span>
+        <span id="state_active_nics_python">
+<a href="#state_active_nics_python" style="color: inherit; text-decoration: inherit;">active_<wbr>nics</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1971,7 +2275,9 @@ balancing.
 
     <dt class="property-optional"
             title="Optional">
-        <span>allow_<wbr>forged_<wbr>transmits</span>
+        <span id="state_allow_forged_transmits_python">
+<a href="#state_allow_forged_transmits_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>forged_<wbr>transmits</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1982,7 +2288,9 @@ address than that of its own. Default: `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>allow_<wbr>mac_<wbr>changes</span>
+        <span id="state_allow_mac_changes_python">
+<a href="#state_allow_mac_changes_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>mac_<wbr>changes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1992,7 +2300,9 @@ Control (MAC) address can be changed. Default: `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>allow_<wbr>promiscuous</span>
+        <span id="state_allow_promiscuous_python">
+<a href="#state_allow_promiscuous_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>promiscuous</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2003,7 +2313,9 @@ flag indicates whether or not all traffic is seen on a given port. Default:
 
     <dt class="property-optional"
             title="Optional">
-        <span>beacon_<wbr>interval</span>
+        <span id="state_beacon_interval_python">
+<a href="#state_beacon_interval_python" style="color: inherit; text-decoration: inherit;">beacon_<wbr>interval</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -2014,7 +2326,9 @@ offer link failure capability beyond link status only. Default: `1`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>check_<wbr>beacon</span>
+        <span id="state_check_beacon_python">
+<a href="#state_check_beacon_python" style="color: inherit; text-decoration: inherit;">check_<wbr>beacon</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2026,7 +2340,9 @@ failed NICs.  Default: `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>failback</span>
+        <span id="state_failback_python">
+<a href="#state_failback_python" style="color: inherit; text-decoration: inherit;">failback</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2037,7 +2353,9 @@ failed interfaces higher in precedence when they come back up.  Default:
 
     <dt class="property-optional"
             title="Optional">
-        <span>host_<wbr>system_<wbr>id</span>
+        <span id="state_host_system_id_python">
+<a href="#state_host_system_id_python" style="color: inherit; text-decoration: inherit;">host_<wbr>system_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2047,7 +2365,9 @@ the host to set the virtual switch up on. Forces a new resource if changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>link_<wbr>discovery_<wbr>operation</span>
+        <span id="state_link_discovery_operation_python">
+<a href="#state_link_discovery_operation_python" style="color: inherit; text-decoration: inherit;">link_<wbr>discovery_<wbr>operation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2057,7 +2377,9 @@ for link discovery traffic. Default: `listen`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>link_<wbr>discovery_<wbr>protocol</span>
+        <span id="state_link_discovery_protocol_python">
+<a href="#state_link_discovery_protocol_python" style="color: inherit; text-decoration: inherit;">link_<wbr>discovery_<wbr>protocol</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2067,7 +2389,9 @@ types are `cpd` and `lldp`. Default: `cdp`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>mtu</span>
+        <span id="state_mtu_python">
+<a href="#state_mtu_python" style="color: inherit; text-decoration: inherit;">mtu</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -2077,7 +2401,9 @@ switch. Default: `1500`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2087,7 +2413,9 @@ changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>network_<wbr>adapters</span>
+        <span id="state_network_adapters_python">
+<a href="#state_network_adapters_python" style="color: inherit; text-decoration: inherit;">network_<wbr>adapters</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -2096,7 +2424,9 @@ changed.
 
     <dt class="property-optional"
             title="Optional">
-        <span>notify_<wbr>switches</span>
+        <span id="state_notify_switches_python">
+<a href="#state_notify_switches_python" style="color: inherit; text-decoration: inherit;">notify_<wbr>switches</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2107,7 +2437,9 @@ Default: `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>number_<wbr>of_<wbr>ports</span>
+        <span id="state_number_of_ports_python">
+<a href="#state_number_of_ports_python" style="color: inherit; text-decoration: inherit;">number_<wbr>of_<wbr>ports</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -2117,7 +2449,9 @@ virtual switch. Default: `128`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>shaping_<wbr>average_<wbr>bandwidth</span>
+        <span id="state_shaping_average_bandwidth_python">
+<a href="#state_shaping_average_bandwidth_python" style="color: inherit; text-decoration: inherit;">shaping_<wbr>average_<wbr>bandwidth</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -2127,7 +2461,9 @@ second if traffic shaping is enabled. Default: `0`
 
     <dt class="property-optional"
             title="Optional">
-        <span>shaping_<wbr>burst_<wbr>size</span>
+        <span id="state_shaping_burst_size_python">
+<a href="#state_shaping_burst_size_python" style="color: inherit; text-decoration: inherit;">shaping_<wbr>burst_<wbr>size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -2137,7 +2473,9 @@ shaping is enabled. Default: `0`
 
     <dt class="property-optional"
             title="Optional">
-        <span>shaping_<wbr>enabled</span>
+        <span id="state_shaping_enabled_python">
+<a href="#state_shaping_enabled_python" style="color: inherit; text-decoration: inherit;">shaping_<wbr>enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2147,7 +2485,9 @@ ports managed by this virtual switch. Default: `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>shaping_<wbr>peak_<wbr>bandwidth</span>
+        <span id="state_shaping_peak_bandwidth_python">
+<a href="#state_shaping_peak_bandwidth_python" style="color: inherit; text-decoration: inherit;">shaping_<wbr>peak_<wbr>bandwidth</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -2157,7 +2497,9 @@ bits per second if traffic shaping is enabled. Default: `0`
 
     <dt class="property-optional"
             title="Optional">
-        <span>standby_<wbr>nics</span>
+        <span id="state_standby_nics_python">
+<a href="#state_standby_nics_python" style="color: inherit; text-decoration: inherit;">standby_<wbr>nics</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -2167,7 +2509,9 @@ failover.
 
     <dt class="property-optional"
             title="Optional">
-        <span>teaming_<wbr>policy</span>
+        <span id="state_teaming_policy_python">
+<a href="#state_teaming_policy_python" style="color: inherit; text-decoration: inherit;">teaming_<wbr>policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
