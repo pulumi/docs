@@ -24,7 +24,23 @@ data source to update the `pull_triggers` field.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Docker = Pulumi.Docker;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        // Find the latest Ubuntu precise image.
+        var ubuntu = new Docker.RemoteImage("ubuntu", new Docker.RemoteImageArgs
+        {
+            Name = "ubuntu:precise",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -55,7 +71,30 @@ const ubuntu = new docker.RemoteImage("ubuntu", {
 
 ### Dynamic image
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Docker = Pulumi.Docker;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var ubuntuRegistryImage = Output.Create(Docker.GetRegistryImage.InvokeAsync(new Docker.GetRegistryImageArgs
+        {
+            Name = "ubuntu:precise",
+        }));
+        var ubuntuRemoteImage = new Docker.RemoteImage("ubuntuRemoteImage", new Docker.RemoteImageArgs
+        {
+            Name = ubuntuRegistryImage.Apply(ubuntuRegistryImage => ubuntuRegistryImage.Name),
+            PullTriggers = 
+            {
+                ubuntuRegistryImage.Apply(ubuntuRegistryImage => ubuntuRegistryImage.Sha256Digest),
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -275,7 +314,9 @@ The RemoteImage resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -284,7 +325,9 @@ The RemoteImage resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Keep<wbr>Locally</span>
+        <span id="keeplocally_csharp">
+<a href="#keeplocally_csharp" style="color: inherit; text-decoration: inherit;">Keep<wbr>Locally</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -295,7 +338,9 @@ the docker local storage on destroy operation.
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>Pull<wbr>Trigger</span>
+        <span id="pulltrigger_csharp">
+<a href="#pulltrigger_csharp" style="color: inherit; text-decoration: inherit;">Pull<wbr>Trigger</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -304,7 +349,9 @@ the docker local storage on destroy operation.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Pull<wbr>Triggers</span>
+        <span id="pulltriggers_csharp">
+<a href="#pulltriggers_csharp" style="color: inherit; text-decoration: inherit;">Pull<wbr>Triggers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -323,7 +370,9 @@ to trigger an image update.
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -332,7 +381,9 @@ to trigger an image update.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Keep<wbr>Locally</span>
+        <span id="keeplocally_go">
+<a href="#keeplocally_go" style="color: inherit; text-decoration: inherit;">Keep<wbr>Locally</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -343,7 +394,9 @@ the docker local storage on destroy operation.
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>Pull<wbr>Trigger</span>
+        <span id="pulltrigger_go">
+<a href="#pulltrigger_go" style="color: inherit; text-decoration: inherit;">Pull<wbr>Trigger</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -352,7 +405,9 @@ the docker local storage on destroy operation.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Pull<wbr>Triggers</span>
+        <span id="pulltriggers_go">
+<a href="#pulltriggers_go" style="color: inherit; text-decoration: inherit;">Pull<wbr>Triggers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -371,7 +426,9 @@ to trigger an image update.
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -380,7 +437,9 @@ to trigger an image update.
 
     <dt class="property-optional"
             title="Optional">
-        <span>keep<wbr>Locally</span>
+        <span id="keeplocally_nodejs">
+<a href="#keeplocally_nodejs" style="color: inherit; text-decoration: inherit;">keep<wbr>Locally</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -391,7 +450,9 @@ the docker local storage on destroy operation.
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>pull<wbr>Trigger</span>
+        <span id="pulltrigger_nodejs">
+<a href="#pulltrigger_nodejs" style="color: inherit; text-decoration: inherit;">pull<wbr>Trigger</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -400,7 +461,9 @@ the docker local storage on destroy operation.
 
     <dt class="property-optional"
             title="Optional">
-        <span>pull<wbr>Triggers</span>
+        <span id="pulltriggers_nodejs">
+<a href="#pulltriggers_nodejs" style="color: inherit; text-decoration: inherit;">pull<wbr>Triggers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -419,7 +482,9 @@ to trigger an image update.
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -428,7 +493,9 @@ to trigger an image update.
 
     <dt class="property-optional"
             title="Optional">
-        <span>keep_<wbr>locally</span>
+        <span id="keep_locally_python">
+<a href="#keep_locally_python" style="color: inherit; text-decoration: inherit;">keep_<wbr>locally</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -439,7 +506,9 @@ the docker local storage on destroy operation.
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>pull_<wbr>trigger</span>
+        <span id="pull_trigger_python">
+<a href="#pull_trigger_python" style="color: inherit; text-decoration: inherit;">pull_<wbr>trigger</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -448,7 +517,9 @@ the docker local storage on destroy operation.
 
     <dt class="property-optional"
             title="Optional">
-        <span>pull_<wbr>triggers</span>
+        <span id="pull_triggers_python">
+<a href="#pull_triggers_python" style="color: inherit; text-decoration: inherit;">pull_<wbr>triggers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -478,7 +549,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -486,7 +559,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Latest</span>
+        <span id="latest_csharp">
+<a href="#latest_csharp" style="color: inherit; text-decoration: inherit;">Latest</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -501,7 +576,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -509,7 +586,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Latest</span>
+        <span id="latest_go">
+<a href="#latest_go" style="color: inherit; text-decoration: inherit;">Latest</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -524,7 +603,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -532,7 +613,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>latest</span>
+        <span id="latest_nodejs">
+<a href="#latest_nodejs" style="color: inherit; text-decoration: inherit;">latest</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -547,7 +630,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -555,7 +640,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>latest</span>
+        <span id="latest_python">
+<a href="#latest_python" style="color: inherit; text-decoration: inherit;">latest</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -696,7 +783,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Keep<wbr>Locally</span>
+        <span id="state_keeplocally_csharp">
+<a href="#state_keeplocally_csharp" style="color: inherit; text-decoration: inherit;">Keep<wbr>Locally</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -707,7 +796,9 @@ the docker local storage on destroy operation.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Latest</span>
+        <span id="state_latest_csharp">
+<a href="#state_latest_csharp" style="color: inherit; text-decoration: inherit;">Latest</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -715,7 +806,9 @@ the docker local storage on destroy operation.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -724,7 +817,9 @@ the docker local storage on destroy operation.
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>Pull<wbr>Trigger</span>
+        <span id="state_pulltrigger_csharp">
+<a href="#state_pulltrigger_csharp" style="color: inherit; text-decoration: inherit;">Pull<wbr>Trigger</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -733,7 +828,9 @@ the docker local storage on destroy operation.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Pull<wbr>Triggers</span>
+        <span id="state_pulltriggers_csharp">
+<a href="#state_pulltriggers_csharp" style="color: inherit; text-decoration: inherit;">Pull<wbr>Triggers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -752,7 +849,9 @@ to trigger an image update.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Keep<wbr>Locally</span>
+        <span id="state_keeplocally_go">
+<a href="#state_keeplocally_go" style="color: inherit; text-decoration: inherit;">Keep<wbr>Locally</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -763,7 +862,9 @@ the docker local storage on destroy operation.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Latest</span>
+        <span id="state_latest_go">
+<a href="#state_latest_go" style="color: inherit; text-decoration: inherit;">Latest</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -771,7 +872,9 @@ the docker local storage on destroy operation.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -780,7 +883,9 @@ the docker local storage on destroy operation.
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>Pull<wbr>Trigger</span>
+        <span id="state_pulltrigger_go">
+<a href="#state_pulltrigger_go" style="color: inherit; text-decoration: inherit;">Pull<wbr>Trigger</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -789,7 +894,9 @@ the docker local storage on destroy operation.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Pull<wbr>Triggers</span>
+        <span id="state_pulltriggers_go">
+<a href="#state_pulltriggers_go" style="color: inherit; text-decoration: inherit;">Pull<wbr>Triggers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -808,7 +915,9 @@ to trigger an image update.
 
     <dt class="property-optional"
             title="Optional">
-        <span>keep<wbr>Locally</span>
+        <span id="state_keeplocally_nodejs">
+<a href="#state_keeplocally_nodejs" style="color: inherit; text-decoration: inherit;">keep<wbr>Locally</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -819,7 +928,9 @@ the docker local storage on destroy operation.
 
     <dt class="property-optional"
             title="Optional">
-        <span>latest</span>
+        <span id="state_latest_nodejs">
+<a href="#state_latest_nodejs" style="color: inherit; text-decoration: inherit;">latest</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -827,7 +938,9 @@ the docker local storage on destroy operation.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -836,7 +949,9 @@ the docker local storage on destroy operation.
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>pull<wbr>Trigger</span>
+        <span id="state_pulltrigger_nodejs">
+<a href="#state_pulltrigger_nodejs" style="color: inherit; text-decoration: inherit;">pull<wbr>Trigger</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -845,7 +960,9 @@ the docker local storage on destroy operation.
 
     <dt class="property-optional"
             title="Optional">
-        <span>pull<wbr>Triggers</span>
+        <span id="state_pulltriggers_nodejs">
+<a href="#state_pulltriggers_nodejs" style="color: inherit; text-decoration: inherit;">pull<wbr>Triggers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -864,7 +981,9 @@ to trigger an image update.
 
     <dt class="property-optional"
             title="Optional">
-        <span>keep_<wbr>locally</span>
+        <span id="state_keep_locally_python">
+<a href="#state_keep_locally_python" style="color: inherit; text-decoration: inherit;">keep_<wbr>locally</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -875,7 +994,9 @@ the docker local storage on destroy operation.
 
     <dt class="property-optional"
             title="Optional">
-        <span>latest</span>
+        <span id="state_latest_python">
+<a href="#state_latest_python" style="color: inherit; text-decoration: inherit;">latest</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -883,7 +1004,9 @@ the docker local storage on destroy operation.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -892,7 +1015,9 @@ the docker local storage on destroy operation.
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>pull_<wbr>trigger</span>
+        <span id="state_pull_trigger_python">
+<a href="#state_pull_trigger_python" style="color: inherit; text-decoration: inherit;">pull_<wbr>trigger</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -901,7 +1026,9 @@ the docker local storage on destroy operation.
 
     <dt class="property-optional"
             title="Optional">
-        <span>pull_<wbr>triggers</span>
+        <span id="state_pull_triggers_python">
+<a href="#state_pull_triggers_python" style="color: inherit; text-decoration: inherit;">pull_<wbr>triggers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
