@@ -1,7 +1,7 @@
 ---
-title: Before you begin | GCP
-h1: Before you begin
-linktitle: Before you begin
+title: Before You Begin | GCP
+h1: Before You Begin
+linktitle: Before You Begin
 meta_desc: This page provides an overview on how to get started with Pulumi when starting an GCP project.
 weight: 2
 menu:
