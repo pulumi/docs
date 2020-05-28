@@ -20,7 +20,23 @@ Allows management of the Logpull Retention settings used to control whether or n
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Cloudflare = Pulumi.Cloudflare;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Cloudflare.LogpullRetention("example", new Cloudflare.LogpullRetentionArgs
+        {
+            Enabled = "true",
+            ZoneId = "fb54f084ca7f7b732d3d3ecbd8ef7bf2",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

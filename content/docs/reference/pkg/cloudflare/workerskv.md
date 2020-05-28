@@ -20,7 +20,28 @@ Provides a Workers KV Pair.  *NOTE:*  This resource uses the Cloudflare account 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Cloudflare = Pulumi.Cloudflare;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleNs = new Cloudflare.WorkersKvNamespace("exampleNs", new Cloudflare.WorkersKvNamespaceArgs
+        {
+            Title = "test-namespace",
+        });
+        var example = new Cloudflare.WorkersKv("example", new Cloudflare.WorkersKvArgs
+        {
+            NamespaceId = exampleNs.Id,
+            Key = "test-key",
+            Value = "test value",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

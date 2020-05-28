@@ -20,7 +20,22 @@ Provides a Cloudflare Zone resource. Zone is the basic resource for working with
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Cloudflare = Pulumi.Cloudflare;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Cloudflare.Zone("example", new Cloudflare.ZoneArgs
+        {
+            Zone = "example.com",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

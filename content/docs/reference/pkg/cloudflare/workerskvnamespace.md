@@ -20,7 +20,22 @@ Provides a Workers KV Namespace
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Cloudflare = Pulumi.Cloudflare;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Cloudflare.WorkersKvNamespace("example", new Cloudflare.WorkersKvNamespaceArgs
+        {
+            Title = "test-namespace",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

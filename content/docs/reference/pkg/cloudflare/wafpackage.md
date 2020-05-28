@@ -20,7 +20,25 @@ Provides a Cloudflare WAF rule package resource for a particular zone. This can 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Cloudflare = Pulumi.Cloudflare;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var owasp = new Cloudflare.WafPackage("owasp", new Cloudflare.WafPackageArgs
+        {
+            ActionMode = "simulate",
+            PackageId = "a25a9a7e9c00afc1fb2e0245519d725b",
+            Sensitivity = "medium",
+            ZoneId = "ae36f999674d196762efcc5abb06b345",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

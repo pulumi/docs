@@ -20,7 +20,24 @@ Provides a Cloudflare WAF rule resource for a particular zone. This can be used 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Cloudflare = Pulumi.Cloudflare;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var _00000 = new Cloudflare.WafRule("100000", new Cloudflare.WafRuleArgs
+        {
+            Mode = "simulate",
+            RuleId = "100000",
+            ZoneId = "ae36f999674d196762efcc5abb06b345",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

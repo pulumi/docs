@@ -12,69 +12,9 @@ meta_desc: "Explore the GetZones function of the Cloudflare package, including e
 
 Use this data source to look up [Zone](https://api.cloudflare.com/#zone-properties) records.
 
-
-
 {{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_cloudflare as cloudflare
-
-test = cloudflare.get_zones(filter={
-    "name": "example.*",
-    "paused": False,
-    "status": "active",
-})
-endpoint_lockdown = cloudflare.ZoneLockdown("endpointLockdown",
-    configurations=[{
-        "target": "ip",
-        "value": "198.51.100.4",
-    }],
-    description="Restrict access to these endpoints to requests from a known IP address",
-    paused="false",
-    urls=["api.mysite.com/some/endpoint*"],
-    zone=test.zones[0]["name"])
-```
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as cloudflare from "@pulumi/cloudflare";
-
-const test = pulumi.output(cloudflare.getZones({
-    filter: {
-        name: "example.*",
-        paused: false,
-        status: "active",
-    },
-}, { async: true }));
-const endpointLockdown = new cloudflare.ZoneLockdown("endpoint_lockdown", {
-    configurations: [{
-        target: "ip",
-        value: "198.51.100.4",
-    }],
-    description: "Restrict access to these endpoints to requests from a known IP address",
-    paused: false,
-    urls: ["api.mysite.com/some/endpoint*"],
-    zone: test.apply(test => (<any>test.zones[0])["name"]),
-});
-```
-{{% /example %}}
-
 {{% /examples %}}
+
 
 
 ## Using GetZones {#using}

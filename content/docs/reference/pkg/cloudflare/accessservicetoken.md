@@ -21,7 +21,23 @@ when an application is behind Cloudflare Access.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Cloudflare = Pulumi.Cloudflare;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var myApp = new Cloudflare.AccessServiceToken("myApp", new Cloudflare.AccessServiceTokenArgs
+        {
+            AccountId = "d41d8cd98f00b204e9800998ecf8427e",
+            Name = "CI/CD app",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

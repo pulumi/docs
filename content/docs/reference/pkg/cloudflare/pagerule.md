@@ -20,7 +20,39 @@ Provides a Cloudflare page rule resource.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Cloudflare = Pulumi.Cloudflare;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        // Add a page rule to the domain
+        var foobar = new Cloudflare.PageRule("foobar", new Cloudflare.PageRuleArgs
+        {
+            ZoneId = @var.Cloudflare_zone_id,
+            Target = $"sub.{@var.Cloudflare_zone}/page",
+            Priority = 1,
+            Actions = new Cloudflare.Inputs.PageRuleActionsArgs
+            {
+                Ssl = "flexible",
+                EmailObfuscation = "on",
+                Minify = 
+                {
+                    
+                    {
+                        { "html", "off" },
+                        { "css", "on" },
+                        { "js", "on" },
+                    },
+                },
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -56,8 +88,8 @@ import * as cloudflare from "@pulumi/cloudflare";
 
 // Add a page rule to the domain
 const foobar = new cloudflare.PageRule("foobar", {
-    zoneId: var.cloudflare_zone_id,
-    target: `sub.${var.cloudflare_zone}/page`,
+    zoneId: _var.cloudflare_zone_id,
+    target: `sub.${_var.cloudflare_zone}/page`,
     priority: 1,
     actions: {
         ssl: "flexible",

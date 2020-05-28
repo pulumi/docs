@@ -20,7 +20,32 @@ Use this data source to look up [WAF Rules](https://api.cloudflare.com/#waf-rule
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Cloudflare = Pulumi.Cloudflare;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var test = Output.Create(Cloudflare.GetWafRules.InvokeAsync(new Cloudflare.GetWafRulesArgs
+        {
+            ZoneId = "ae36f999674d196762efcc5abb06b345",
+            PackageId = "a25a9a7e9c00afc1fb2e0245519d725b",
+            Filter = new Cloudflare.Inputs.GetWafRulesFilterArgs
+            {
+                Description = ".*example.*",
+                Mode = "on",
+                GroupId = "de677e5818985db1285d0e80225f06e5",
+            },
+        }));
+        this.WafRules = test.Apply(test => test.Rules);
+    }
+
+    [Output("wafRules")]
+    public Output<string> WafRules { get; set; }
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -37,7 +62,7 @@ test = cloudflare.get_waf_rules(zone_id="ae36f999674d196762efcc5abb06b345",
     filter={
         "description": ".*example.*",
         "mode": "on",
-        "groupId": "de677e5818985db1285d0e80225f06e5",
+        "group_id": "de677e5818985db1285d0e80225f06e5",
     })
 pulumi.export("wafRules", test.rules)
 ```

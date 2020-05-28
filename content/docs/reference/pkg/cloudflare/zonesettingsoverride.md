@@ -20,7 +20,42 @@ Provides a resource which customizes Cloudflare zone settings. Note that after d
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Cloudflare = Pulumi.Cloudflare;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var test = new Cloudflare.ZoneSettingsOverride("test", new Cloudflare.ZoneSettingsOverrideArgs
+        {
+            ZoneId = @var.Cloudflare_zone_id,
+            Settings = new Cloudflare.Inputs.ZoneSettingsOverrideSettingsArgs
+            {
+                Brotli = "on",
+                ChallengeTtl = 2700,
+                SecurityLevel = "high",
+                OpportunisticEncryption = "on",
+                AutomaticHttpsRewrites = "on",
+                Mirage = "on",
+                Waf = "on",
+                Minify = new Cloudflare.Inputs.ZoneSettingsOverrideSettingsMinifyArgs
+                {
+                    Css = "on",
+                    Js = "off",
+                    Html = "off",
+                },
+                Security_header = 
+                {
+                    { "enabled", true },
+                },
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -60,7 +95,7 @@ import * as pulumi from "@pulumi/pulumi";
 import * as cloudflare from "@pulumi/cloudflare";
 
 const test = new cloudflare.ZoneSettingsOverride("test", {
-    zoneId: var.cloudflare_zone_id,
+    zoneId: _var.cloudflare_zone_id,
     settings: {
         brotli: "on",
         challengeTtl: 2700,

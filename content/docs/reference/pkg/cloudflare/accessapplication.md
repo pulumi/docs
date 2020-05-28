@@ -22,7 +22,25 @@ authorisation gateway managed by Cloudflare.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Cloudflare = Pulumi.Cloudflare;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var stagingApp = new Cloudflare.AccessApplication("stagingApp", new Cloudflare.AccessApplicationArgs
+        {
+            Domain = "staging.example.com",
+            Name = "staging application",
+            SessionDuration = "24h",
+            ZoneId = "1d5fdc9e88c8a8c4518b068cd94331fe",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

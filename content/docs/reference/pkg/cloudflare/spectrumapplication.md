@@ -20,7 +20,34 @@ Provides a Cloudflare Spectrum Application. You can extend the power of Cloudfla
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Cloudflare = Pulumi.Cloudflare;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        // Define a spectrum application proxies ssh traffic
+        var sshProxy = new Cloudflare.SpectrumApplication("sshProxy", new Cloudflare.SpectrumApplicationArgs
+        {
+            ZoneId = @var.Cloudflare_zone_id,
+            Protocol = "tcp/22",
+            TrafficType = "direct",
+            Dns = new Cloudflare.Inputs.SpectrumApplicationDnsArgs
+            {
+                Type = "CNAME",
+                Name = "ssh.example.com",
+            },
+            OriginDirects = 
+            {
+                "tcp://109.151.40.129:22",
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -52,7 +79,7 @@ import * as cloudflare from "@pulumi/cloudflare";
 
 // Define a spectrum application proxies ssh traffic
 const sshProxy = new cloudflare.SpectrumApplication("sshProxy", {
-    zoneId: var.cloudflare_zone_id,
+    zoneId: _var.cloudflare_zone_id,
     protocol: "tcp/22",
     trafficType: "direct",
     dns: {
