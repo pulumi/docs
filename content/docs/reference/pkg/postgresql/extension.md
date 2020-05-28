@@ -28,6 +28,21 @@ import pulumi_postgresql as postgresql
 
 my_extension = postgresql.Extension("myExtension")
 ```
+```csharp
+using Pulumi;
+using PostgreSql = Pulumi.PostgreSql;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var myExtension = new PostgreSql.Extension("myExtension", new PostgreSql.ExtensionArgs
+        {
+        });
+    }
+
+}
+```
 
 
 

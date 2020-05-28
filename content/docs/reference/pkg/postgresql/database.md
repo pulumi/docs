@@ -40,6 +40,26 @@ my_db = postgresql.Database("myDb",
     owner="my_role",
     template="template0")
 ```
+```csharp
+using Pulumi;
+using PostgreSql = Pulumi.PostgreSql;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var myDb = new PostgreSql.Database("myDb", new PostgreSql.DatabaseArgs
+        {
+            AllowConnections = true,
+            ConnectionLimit = -1,
+            LcCollate = "C",
+            Owner = "my_role",
+            Template = "template0",
+        });
+    }
+
+}
+```
 
 
 

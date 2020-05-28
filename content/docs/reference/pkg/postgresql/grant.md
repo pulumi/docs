@@ -39,6 +39,29 @@ readonly_tables = postgresql.Grant("readonlyTables",
     role="test_role",
     schema="public")
 ```
+```csharp
+using Pulumi;
+using PostgreSql = Pulumi.PostgreSql;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var readonlyTables = new PostgreSql.Grant("readonlyTables", new PostgreSql.GrantArgs
+        {
+            Database = "test_db",
+            ObjectType = "table",
+            Privileges = 
+            {
+                "SELECT",
+            },
+            Role = "test_role",
+            Schema = "public",
+        });
+    }
+
+}
+```
 
 
 
