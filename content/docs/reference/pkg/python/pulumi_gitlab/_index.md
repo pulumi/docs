@@ -37,6 +37,16 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_gitlab.BranchProtection">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gitlab.</code><code class="sig-name descname">BranchProtection</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">branch</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">merge_access_level</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">push_access_level</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gitlab.BranchProtection" title="Permalink to this definition">¶</a></dt>
 <dd><p>This resource allows you to protect a specific branch by an access level so that the user with less access level cannot Merge/Push to the branch. GitLab EE features to protect by group or user are not supported.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gitlab</span> <span class="k">as</span> <span class="nn">gitlab</span>
+
+<span class="n">branch_protect</span> <span class="o">=</span> <span class="n">gitlab</span><span class="o">.</span><span class="n">BranchProtection</span><span class="p">(</span><span class="s2">&quot;branchProtect&quot;</span><span class="p">,</span>
+    <span class="n">branch</span><span class="o">=</span><span class="s2">&quot;BranchProtected&quot;</span><span class="p">,</span>
+    <span class="n">merge_access_level</span><span class="o">=</span><span class="s2">&quot;developer&quot;</span><span class="p">,</span>
+    <span class="n">project</span><span class="o">=</span><span class="s2">&quot;12345&quot;</span><span class="p">,</span>
+    <span class="n">push_access_level</span><span class="o">=</span><span class="s2">&quot;developer&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -135,6 +145,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_gitlab.DeployKey">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gitlab.</code><code class="sig-name descname">DeployKey</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">can_push</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">title</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gitlab.DeployKey" title="Permalink to this definition">¶</a></dt>
 <dd><p>This resource allows you to create and manage deploy keys for your GitLab projects.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gitlab</span> <span class="k">as</span> <span class="nn">gitlab</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">gitlab</span><span class="o">.</span><span class="n">DeployKey</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">key</span><span class="o">=</span><span class="s2">&quot;ssh-rsa AAAA...&quot;</span><span class="p">,</span>
+    <span class="n">project</span><span class="o">=</span><span class="s2">&quot;example/deploying&quot;</span><span class="p">,</span>
+    <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Example deploy key&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -234,6 +253,24 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gitlab.</code><code class="sig-name descname">DeployKeyEnable</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">can_push</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">title</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gitlab.DeployKeyEnable" title="Permalink to this definition">¶</a></dt>
 <dd><p>This resource allows you to enable pre-existing deploy keys for your GitLab projects.</p>
 <p><strong>the GITLAB KEY_ID for the deploy key must be known</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gitlab</span> <span class="k">as</span> <span class="nn">gitlab</span>
+
+<span class="c1"># A repo to host the deployment key</span>
+<span class="n">parent_project</span> <span class="o">=</span> <span class="n">gitlab</span><span class="o">.</span><span class="n">Project</span><span class="p">(</span><span class="s2">&quot;parentProject&quot;</span><span class="p">)</span>
+<span class="c1"># A second repo to use the deployment key from the parent project</span>
+<span class="n">foo_project</span> <span class="o">=</span> <span class="n">gitlab</span><span class="o">.</span><span class="n">Project</span><span class="p">(</span><span class="s2">&quot;fooProject&quot;</span><span class="p">)</span>
+<span class="c1"># Upload a deployment key for the parent repo</span>
+<span class="n">parent_deploy_key</span> <span class="o">=</span> <span class="n">gitlab</span><span class="o">.</span><span class="n">DeployKey</span><span class="p">(</span><span class="s2">&quot;parentDeployKey&quot;</span><span class="p">,</span>
+    <span class="n">key</span><span class="o">=</span><span class="s2">&quot;ssh-rsa AAAA...&quot;</span><span class="p">,</span>
+    <span class="n">project</span><span class="o">=</span><span class="n">parent_project</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Example deploy key&quot;</span><span class="p">)</span>
+<span class="c1"># Enable the deployment key on the second repo</span>
+<span class="n">foo_deploy_key_enable</span> <span class="o">=</span> <span class="n">gitlab</span><span class="o">.</span><span class="n">DeployKeyEnable</span><span class="p">(</span><span class="s2">&quot;fooDeployKeyEnable&quot;</span><span class="p">,</span>
+    <span class="n">key_id</span><span class="o">=</span><span class="n">parent_deploy_key</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">project</span><span class="o">=</span><span class="n">foo_project</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -863,6 +900,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>This resource allows you to create and manage group clusters for your GitLab groups.
 For further information on clusters, consult the <a class="reference external" href="https://docs.gitlab.com/ce/user/group/clusters/index.html">gitlab
 documentation</a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gitlab</span> <span class="k">as</span> <span class="nn">gitlab</span>
+
+<span class="n">foo</span> <span class="o">=</span> <span class="n">gitlab</span><span class="o">.</span><span class="n">Group</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="s2">&quot;foo-path&quot;</span><span class="p">)</span>
+<span class="n">bar</span> <span class="o">=</span> <span class="n">gitlab</span><span class="o">.</span><span class="n">GroupCluster</span><span class="p">(</span><span class="s2">&quot;bar&quot;</span><span class="p">,</span>
+    <span class="n">domain</span><span class="o">=</span><span class="s2">&quot;example.com&quot;</span><span class="p">,</span>
+    <span class="n">enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">environment_scope</span><span class="o">=</span><span class="s2">&quot;*&quot;</span><span class="p">,</span>
+    <span class="n">group</span><span class="o">=</span><span class="n">foo</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">kubernetes_api_url</span><span class="o">=</span><span class="s2">&quot;https://124.124.124&quot;</span><span class="p">,</span>
+    <span class="n">kubernetes_authorization_type</span><span class="o">=</span><span class="s2">&quot;rbac&quot;</span><span class="p">,</span>
+    <span class="n">kubernetes_ca_cert</span><span class="o">=</span><span class="s2">&quot;some-cert&quot;</span><span class="p">,</span>
+    <span class="n">kubernetes_token</span><span class="o">=</span><span class="s2">&quot;some-token&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1011,6 +1063,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>This resource allows you to create and manage labels for your GitLab groups.
 For further information on labels, consult the <a class="reference external" href="https://docs.gitlab.com/ee/user/project/labels.html#group-labels">gitlab
 documentation</a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gitlab</span> <span class="k">as</span> <span class="nn">gitlab</span>
+
+<span class="n">fixme</span> <span class="o">=</span> <span class="n">gitlab</span><span class="o">.</span><span class="n">GroupLabel</span><span class="p">(</span><span class="s2">&quot;fixme&quot;</span><span class="p">,</span>
+    <span class="n">color</span><span class="o">=</span><span class="s2">&quot;#ffcc00&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;issue with failing tests&quot;</span><span class="p">,</span>
+    <span class="n">group</span><span class="o">=</span><span class="s2">&quot;example&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1107,9 +1168,127 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="py class">
+<dt id="pulumi_gitlab.GroupLdapLink">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gitlab.</code><code class="sig-name descname">GroupLdapLink</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">access_level</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">force</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">group_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ldap_provider</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gitlab.GroupLdapLink" title="Permalink to this definition">¶</a></dt>
+<dd><p>This resource allows you to add an LDAP link to an existing GitLab group.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gitlab</span> <span class="k">as</span> <span class="nn">gitlab</span>
+
+<span class="n">test</span> <span class="o">=</span> <span class="n">gitlab</span><span class="o">.</span><span class="n">GroupLdapLink</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">,</span>
+    <span class="n">access_level</span><span class="o">=</span><span class="s2">&quot;developer&quot;</span><span class="p">,</span>
+    <span class="n">cn</span><span class="o">=</span><span class="s2">&quot;testuser&quot;</span><span class="p">,</span>
+    <span class="n">group_id</span><span class="o">=</span><span class="s2">&quot;12345&quot;</span><span class="p">,</span>
+    <span class="n">ldap_provider</span><span class="o">=</span><span class="s2">&quot;ldapmain&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>access_level</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Acceptable values are: guest, reporter, developer, maintainer, owner.</p></li>
+<li><p><strong>cn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The CN of the LDAP group to link with.</p></li>
+<li><p><strong>group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The id of the GitLab group.</p></li>
+<li><p><strong>ldap_provider</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the LDAP provider as stored in the GitLab database.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt id="pulumi_gitlab.GroupLdapLink.access_level">
+<code class="sig-name descname">access_level</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gitlab.GroupLdapLink.access_level" title="Permalink to this definition">¶</a></dt>
+<dd><p>Acceptable values are: guest, reporter, developer, maintainer, owner.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_gitlab.GroupLdapLink.cn">
+<code class="sig-name descname">cn</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gitlab.GroupLdapLink.cn" title="Permalink to this definition">¶</a></dt>
+<dd><p>The CN of the LDAP group to link with.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_gitlab.GroupLdapLink.group_id">
+<code class="sig-name descname">group_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gitlab.GroupLdapLink.group_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The id of the GitLab group.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_gitlab.GroupLdapLink.ldap_provider">
+<code class="sig-name descname">ldap_provider</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gitlab.GroupLdapLink.ldap_provider" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the LDAP provider as stored in the GitLab database.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_gitlab.GroupLdapLink.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">access_level</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">force</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">group_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ldap_provider</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gitlab.GroupLdapLink.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing GroupLdapLink resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>access_level</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Acceptable values are: guest, reporter, developer, maintainer, owner.</p></li>
+<li><p><strong>cn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The CN of the LDAP group to link with.</p></li>
+<li><p><strong>group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The id of the GitLab group.</p></li>
+<li><p><strong>ldap_provider</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the LDAP provider as stored in the GitLab database.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_gitlab.GroupLdapLink.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gitlab.GroupLdapLink.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_gitlab.GroupLdapLink.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gitlab.GroupLdapLink.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt id="pulumi_gitlab.GroupMembership">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gitlab.</code><code class="sig-name descname">GroupMembership</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">access_level</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">expires_at</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">group_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gitlab.GroupMembership" title="Permalink to this definition">¶</a></dt>
 <dd><p>This resource allows you to add a user to an existing group.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gitlab</span> <span class="k">as</span> <span class="nn">gitlab</span>
+
+<span class="n">test</span> <span class="o">=</span> <span class="n">gitlab</span><span class="o">.</span><span class="n">GroupMembership</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">,</span>
+    <span class="n">access_level</span><span class="o">=</span><span class="s2">&quot;guest&quot;</span><span class="p">,</span>
+    <span class="n">expires_at</span><span class="o">=</span><span class="s2">&quot;2020-12-31&quot;</span><span class="p">,</span>
+    <span class="n">group_id</span><span class="o">=</span><span class="s2">&quot;12345&quot;</span><span class="p">,</span>
+    <span class="n">user_id</span><span class="o">=</span><span class="mi">1337</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1206,10 +1385,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py class">
 <dt id="pulumi_gitlab.GroupVariable">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gitlab.</code><code class="sig-name descname">GroupVariable</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">group</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">protected</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">value</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">variable_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gitlab.GroupVariable" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gitlab.</code><code class="sig-name descname">GroupVariable</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">group</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">masked</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">protected</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">value</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">variable_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gitlab.GroupVariable" title="Permalink to this definition">¶</a></dt>
 <dd><p>This resource allows you to create and manage CI/CD variables for your GitLab groups.
 For further information on variables, consult the <a class="reference external" href="https://docs.gitlab.com/ce/ci/variables/README.html#variables">gitlab
 documentation</a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gitlab</span> <span class="k">as</span> <span class="nn">gitlab</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">gitlab</span><span class="o">.</span><span class="n">GroupVariable</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">group</span><span class="o">=</span><span class="s2">&quot;12345&quot;</span><span class="p">,</span>
+    <span class="n">key</span><span class="o">=</span><span class="s2">&quot;group_variable_key&quot;</span><span class="p">,</span>
+    <span class="n">masked</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">protected</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">value</span><span class="o">=</span><span class="s2">&quot;group_variable_value&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1255,7 +1445,7 @@ documentation</a>.</p>
 
 <dl class="py method">
 <dt id="pulumi_gitlab.GroupVariable.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">group</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">protected</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">value</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">variable_type</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gitlab.GroupVariable.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">group</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">masked</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">protected</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">value</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">variable_type</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gitlab.GroupVariable.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing GroupVariable resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -1318,6 +1508,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>This resource allows you to create and manage labels for your GitLab projects.
 For further information on labels, consult the <a class="reference external" href="https://docs.gitlab.com/ee/user/project/labels.html#project-labels">gitlab
 documentation</a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gitlab</span> <span class="k">as</span> <span class="nn">gitlab</span>
+
+<span class="n">fixme</span> <span class="o">=</span> <span class="n">gitlab</span><span class="o">.</span><span class="n">Label</span><span class="p">(</span><span class="s2">&quot;fixme&quot;</span><span class="p">,</span>
+    <span class="n">color</span><span class="o">=</span><span class="s2">&quot;#ffcc00&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;issue with failing tests&quot;</span><span class="p">,</span>
+    <span class="n">project</span><span class="o">=</span><span class="s2">&quot;example&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1420,6 +1619,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>This resource allows you to create and manage pipeline schedules.
 For further information on clusters, consult the <a class="reference external" href="https://docs.gitlab.com/ce/user/project/pipelines/schedules.html">gitlab
 documentation</a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gitlab</span> <span class="k">as</span> <span class="nn">gitlab</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">gitlab</span><span class="o">.</span><span class="n">PipelineSchedule</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">cron</span><span class="o">=</span><span class="s2">&quot;0 1 * * *&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Used to schedule builds&quot;</span><span class="p">,</span>
+    <span class="n">project</span><span class="o">=</span><span class="s2">&quot;12345&quot;</span><span class="p">,</span>
+    <span class="n">ref</span><span class="o">=</span><span class="s2">&quot;master&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1534,6 +1743,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_gitlab.PipelineScheduleVariable">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gitlab.</code><code class="sig-name descname">PipelineScheduleVariable</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pipeline_schedule_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">value</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gitlab.PipelineScheduleVariable" title="Permalink to this definition">¶</a></dt>
 <dd><p>This resource allows you to create and manage variables for pipeline schedules.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gitlab</span> <span class="k">as</span> <span class="nn">gitlab</span>
+
+<span class="n">example_pipeline_schedule</span> <span class="o">=</span> <span class="n">gitlab</span><span class="o">.</span><span class="n">PipelineSchedule</span><span class="p">(</span><span class="s2">&quot;examplePipelineSchedule&quot;</span><span class="p">,</span>
+    <span class="n">project</span><span class="o">=</span><span class="s2">&quot;12345&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Used to schedule builds&quot;</span><span class="p">,</span>
+    <span class="n">ref</span><span class="o">=</span><span class="s2">&quot;master&quot;</span><span class="p">,</span>
+    <span class="n">cron</span><span class="o">=</span><span class="s2">&quot;0 1 * * *&quot;</span><span class="p">)</span>
+<span class="n">example_pipeline_schedule_variable</span> <span class="o">=</span> <span class="n">gitlab</span><span class="o">.</span><span class="n">PipelineScheduleVariable</span><span class="p">(</span><span class="s2">&quot;examplePipelineScheduleVariable&quot;</span><span class="p">,</span>
+    <span class="n">project</span><span class="o">=</span><span class="n">gitlab_pipeline_schedule</span><span class="p">[</span><span class="s2">&quot;project&quot;</span><span class="p">],</span>
+    <span class="n">pipeline_schedule_id</span><span class="o">=</span><span class="n">gitlab_pipeline_schedule</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">key</span><span class="o">=</span><span class="s2">&quot;EXAMPLE_KEY&quot;</span><span class="p">,</span>
+    <span class="n">value</span><span class="o">=</span><span class="s2">&quot;example&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1632,6 +1856,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_gitlab.PipelineTrigger">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gitlab.</code><code class="sig-name descname">PipelineTrigger</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gitlab.PipelineTrigger" title="Permalink to this definition">¶</a></dt>
 <dd><p>This resource allows you to create and manage pipeline triggers</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gitlab</span> <span class="k">as</span> <span class="nn">gitlab</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">gitlab</span><span class="o">.</span><span class="n">PipelineTrigger</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Used to trigger builds&quot;</span><span class="p">,</span>
+    <span class="n">project</span><span class="o">=</span><span class="s2">&quot;12345&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2035,6 +2267,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>This resource allows you to create and manage project clusters for your GitLab projects.
 For further information on clusters, consult the <a class="reference external" href="https://docs.gitlab.com/ce/user/project/clusters/index.html">gitlab
 documentation</a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gitlab</span> <span class="k">as</span> <span class="nn">gitlab</span>
+
+<span class="n">foo</span> <span class="o">=</span> <span class="n">gitlab</span><span class="o">.</span><span class="n">Project</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">)</span>
+<span class="n">bar</span> <span class="o">=</span> <span class="n">gitlab</span><span class="o">.</span><span class="n">ProjectCluster</span><span class="p">(</span><span class="s2">&quot;bar&quot;</span><span class="p">,</span>
+    <span class="n">domain</span><span class="o">=</span><span class="s2">&quot;example.com&quot;</span><span class="p">,</span>
+    <span class="n">enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">environment_scope</span><span class="o">=</span><span class="s2">&quot;*&quot;</span><span class="p">,</span>
+    <span class="n">kubernetes_api_url</span><span class="o">=</span><span class="s2">&quot;https://124.124.124&quot;</span><span class="p">,</span>
+    <span class="n">kubernetes_authorization_type</span><span class="o">=</span><span class="s2">&quot;rbac&quot;</span><span class="p">,</span>
+    <span class="n">kubernetes_ca_cert</span><span class="o">=</span><span class="s2">&quot;some-cert&quot;</span><span class="p">,</span>
+    <span class="n">kubernetes_namespace</span><span class="o">=</span><span class="s2">&quot;namespace&quot;</span><span class="p">,</span>
+    <span class="n">kubernetes_token</span><span class="o">=</span><span class="s2">&quot;some-token&quot;</span><span class="p">,</span>
+    <span class="n">project</span><span class="o">=</span><span class="n">foo</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2191,6 +2439,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>This resource allows you to create and manage hooks for your GitLab projects.
 For further information on hooks, consult the <a class="reference external" href="https://docs.gitlab.com/ce/user/project/integrations/webhooks.html">gitlab
 documentation</a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gitlab</span> <span class="k">as</span> <span class="nn">gitlab</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">gitlab</span><span class="o">.</span><span class="n">ProjectHook</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">merge_requests_events</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">project</span><span class="o">=</span><span class="s2">&quot;example/hooked&quot;</span><span class="p">,</span>
+    <span class="n">url</span><span class="o">=</span><span class="s2">&quot;https://example.com/hook/example&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2356,6 +2613,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_gitlab.ProjectMembership">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gitlab.</code><code class="sig-name descname">ProjectMembership</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">access_level</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gitlab.ProjectMembership" title="Permalink to this definition">¶</a></dt>
 <dd><p>This resource allows you to add a current user to an existing project with a set access level.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gitlab</span> <span class="k">as</span> <span class="nn">gitlab</span>
+
+<span class="n">test</span> <span class="o">=</span> <span class="n">gitlab</span><span class="o">.</span><span class="n">ProjectMembership</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">,</span>
+    <span class="n">access_level</span><span class="o">=</span><span class="s2">&quot;guest&quot;</span><span class="p">,</span>
+    <span class="n">project_id</span><span class="o">=</span><span class="s2">&quot;12345&quot;</span><span class="p">,</span>
+    <span class="n">user_id</span><span class="o">=</span><span class="mi">1337</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2586,6 +2852,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_gitlab.ProjectShareGroup">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gitlab.</code><code class="sig-name descname">ProjectShareGroup</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">access_level</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">group_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gitlab.ProjectShareGroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>This resource allows you to share a project with a group</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gitlab</span> <span class="k">as</span> <span class="nn">gitlab</span>
+
+<span class="n">test</span> <span class="o">=</span> <span class="n">gitlab</span><span class="o">.</span><span class="n">ProjectShareGroup</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">,</span>
+    <span class="n">access_level</span><span class="o">=</span><span class="s2">&quot;guest&quot;</span><span class="p">,</span>
+    <span class="n">group_id</span><span class="o">=</span><span class="mi">1337</span><span class="p">,</span>
+    <span class="n">project_id</span><span class="o">=</span><span class="s2">&quot;12345&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2678,6 +2953,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>This resource allows you to create and manage CI/CD variables for your GitLab projects.
 For further information on variables, consult the <a class="reference external" href="https://docs.gitlab.com/ce/ci/variables/README.html#variables">gitlab
 documentation</a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gitlab</span> <span class="k">as</span> <span class="nn">gitlab</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">gitlab</span><span class="o">.</span><span class="n">ProjectVariable</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+    <span class="n">key</span><span class="o">=</span><span class="s2">&quot;project_variable_key&quot;</span><span class="p">,</span>
+    <span class="n">project</span><span class="o">=</span><span class="s2">&quot;12345&quot;</span><span class="p">,</span>
+    <span class="n">protected</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">value</span><span class="o">=</span><span class="s2">&quot;project_variable_value&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2798,7 +3083,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py class">
 <dt id="pulumi_gitlab.Provider">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gitlab.</code><code class="sig-name descname">Provider</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">base_url</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cacert_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">insecure</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">token</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gitlab.Provider" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gitlab.</code><code class="sig-name descname">Provider</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">base_url</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cacert_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_cert</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">insecure</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">token</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gitlab.Provider" title="Permalink to this definition">¶</a></dt>
 <dd><p>The provider type for the gitlab package. By default, resources use package-wide configuration
 settings, however an explicit <code class="docutils literal notranslate"><span class="pre">Provider</span></code> instance may be created and passed during resource
 construction to achieve fine-grained programmatic control over provider settings. See the
@@ -2810,6 +3095,8 @@ construction to achieve fine-grained programmatic control over provider settings
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>base_url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The GitLab Base API URL</p></li>
 <li><p><strong>cacert_file</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A file containing the ca certificate to use in case ssl certificate is not from a standard chain</p></li>
+<li><p><strong>client_cert</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – File path to client certificate when GitLab instance is behind company proxy. File must contain PEM encoded data.</p></li>
+<li><p><strong>client_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – File path to client key when GitLab instance is behind company proxy. File must contain PEM encoded data.</p></li>
 <li><p><strong>insecure</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Disable SSL verification of API calls</p></li>
 <li><p><strong>token</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The OAuth token used to connect to GitLab.</p></li>
 </ul>
@@ -2857,6 +3144,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_gitlab.ServiceJira">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gitlab.</code><code class="sig-name descname">ServiceJira</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">comment_on_event_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">commit_events</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">jira_issue_transition_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">merge_requests_events</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">password</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">url</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">username</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gitlab.ServiceJira" title="Permalink to this definition">¶</a></dt>
 <dd><p>This resource allows you to manage Jira integration.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gitlab</span> <span class="k">as</span> <span class="nn">gitlab</span>
+
+<span class="n">awesome_project</span> <span class="o">=</span> <span class="n">gitlab</span><span class="o">.</span><span class="n">Project</span><span class="p">(</span><span class="s2">&quot;awesomeProject&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;My awesome project.&quot;</span><span class="p">,</span>
+    <span class="n">visibility_level</span><span class="o">=</span><span class="s2">&quot;public&quot;</span><span class="p">)</span>
+<span class="n">jira</span> <span class="o">=</span> <span class="n">gitlab</span><span class="o">.</span><span class="n">ServiceJira</span><span class="p">(</span><span class="s2">&quot;jira&quot;</span><span class="p">,</span>
+    <span class="n">password</span><span class="o">=</span><span class="s2">&quot;mypass&quot;</span><span class="p">,</span>
+    <span class="n">project</span><span class="o">=</span><span class="n">awesome_project</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">url</span><span class="o">=</span><span class="s2">&quot;https://jira.example.com&quot;</span><span class="p">,</span>
+    <span class="n">username</span><span class="o">=</span><span class="s2">&quot;user&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2995,6 +3295,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_gitlab.ServiceSlack">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gitlab.</code><code class="sig-name descname">ServiceSlack</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">branches_to_be_notified</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">confidential_issue_channel</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">confidential_issues_events</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">confidential_note_events</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">issue_channel</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">issues_events</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">merge_request_channel</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">merge_requests_events</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">note_channel</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">note_events</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">notify_only_broken_pipelines</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">notify_only_default_branch</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pipeline_channel</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pipeline_events</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">push_channel</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">push_events</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tag_push_channel</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tag_push_events</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">username</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">webhook</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">wiki_page_channel</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">wiki_page_events</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gitlab.ServiceSlack" title="Permalink to this definition">¶</a></dt>
 <dd><p>This resource allows you to manage Slack notifications integration.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gitlab</span> <span class="k">as</span> <span class="nn">gitlab</span>
+
+<span class="n">awesome_project</span> <span class="o">=</span> <span class="n">gitlab</span><span class="o">.</span><span class="n">Project</span><span class="p">(</span><span class="s2">&quot;awesomeProject&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;My awesome project.&quot;</span><span class="p">,</span>
+    <span class="n">visibility_level</span><span class="o">=</span><span class="s2">&quot;public&quot;</span><span class="p">)</span>
+<span class="n">slack</span> <span class="o">=</span> <span class="n">gitlab</span><span class="o">.</span><span class="n">ServiceSlack</span><span class="p">(</span><span class="s2">&quot;slack&quot;</span><span class="p">,</span>
+    <span class="n">project</span><span class="o">=</span><span class="n">awesome_project</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">push_channel</span><span class="o">=</span><span class="s2">&quot;push_chan&quot;</span><span class="p">,</span>
+    <span class="n">push_events</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">username</span><span class="o">=</span><span class="s2">&quot;myuser&quot;</span><span class="p">,</span>
+    <span class="n">webhook</span><span class="o">=</span><span class="s2">&quot;https://webhook.com&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3245,6 +3559,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_gitlab.TagProtection">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gitlab.</code><code class="sig-name descname">TagProtection</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">create_access_level</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tag</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gitlab.TagProtection" title="Permalink to this definition">¶</a></dt>
 <dd><p>This resource allows you to protect a specific tag or wildcard by an access level so that the user with less access level cannot Create the tags.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gitlab</span> <span class="k">as</span> <span class="nn">gitlab</span>
+
+<span class="n">tag_protect</span> <span class="o">=</span> <span class="n">gitlab</span><span class="o">.</span><span class="n">TagProtection</span><span class="p">(</span><span class="s2">&quot;tagProtect&quot;</span><span class="p">,</span>
+    <span class="n">create_access_level</span><span class="o">=</span><span class="s2">&quot;developer&quot;</span><span class="p">,</span>
+    <span class="n">project</span><span class="o">=</span><span class="s2">&quot;12345&quot;</span><span class="p">,</span>
+    <span class="n">tag</span><span class="o">=</span><span class="s2">&quot;TagProtected&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3486,6 +3809,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_gitlab.get_group">
 <code class="sig-prename descclassname">pulumi_gitlab.</code><code class="sig-name descname">get_group</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">full_path</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">group_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gitlab.get_group" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides details about a specific group in the gitlab provider.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gitlab</span> <span class="k">as</span> <span class="nn">gitlab</span>
+
+<span class="n">foo</span> <span class="o">=</span> <span class="n">gitlab</span><span class="o">.</span><span class="n">get_group</span><span class="p">(</span><span class="n">group_id</span><span class="o">=</span><span class="mi">123</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3500,6 +3829,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_gitlab.get_project">
 <code class="sig-prename descclassname">pulumi_gitlab.</code><code class="sig-name descname">get_project</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">archived</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_branch</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">http_url_to_repo</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">issues_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">lfs_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">merge_requests_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">namespace_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">path</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pipelines_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">request_access_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">runners_token</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">snippets_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ssh_url_to_repo</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">visibility_level</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">web_url</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">wiki_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gitlab.get_project" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides details about a specific project in the gitlab provider. The results include the name of the project, path, description, default branch, etc.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gitlab</span> <span class="k">as</span> <span class="nn">gitlab</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">gitlab</span><span class="o">.</span><span class="n">get_project</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3533,6 +3868,12 @@ repository via SSH.</p></li>
 <dt id="pulumi_gitlab.get_user">
 <code class="sig-prename descclassname">pulumi_gitlab.</code><code class="sig-name descname">get_user</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">email</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">username</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gitlab.get_user" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides details about a specific user in the gitlab provider. Especially the ability to lookup the id for linking to other resources.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gitlab</span> <span class="k">as</span> <span class="nn">gitlab</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">gitlab</span><span class="o">.</span><span class="n">get_user</span><span class="p">(</span><span class="n">username</span><span class="o">=</span><span class="s2">&quot;myuser&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3549,6 +3890,14 @@ repository via SSH.</p></li>
 <code class="sig-prename descclassname">pulumi_gitlab.</code><code class="sig-name descname">get_users</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">active</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">blocked</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">created_after</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">created_before</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">extern_provider</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">extern_uid</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">order_by</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">search</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sort</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gitlab.get_users" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides details about a list of users in the gitlab provider. The results include id, username, email, name and more about the requested users. Users can also be sorted and filtered using several options.</p>
 <p><strong>NOTE</strong>: Some of the available options require administrator privileges. Please visit [Gitlab API documentation][users_for_admins] for more information.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gitlab</span> <span class="k">as</span> <span class="nn">gitlab</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">gitlab</span><span class="o">.</span><span class="n">get_users</span><span class="p">(</span><span class="n">created_before</span><span class="o">=</span><span class="s2">&quot;2019-01-01&quot;</span><span class="p">,</span>
+    <span class="n">order_by</span><span class="o">=</span><span class="s2">&quot;name&quot;</span><span class="p">,</span>
+    <span class="n">sort</span><span class="o">=</span><span class="s2">&quot;desc&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

@@ -20,7 +20,22 @@ Provides details about a specific project in the gitlab provider. The results in
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using GitLab = Pulumi.GitLab;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = Output.Create(GitLab.GetProject.InvokeAsync(new GitLab.GetProjectArgs
+        {
+            Id = 30,
+        }));
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -90,7 +105,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -99,7 +116,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Archived</span>
+        <span id="archived_csharp">
+<a href="#archived_csharp" style="color: inherit; text-decoration: inherit;">Archived</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -108,7 +127,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Default<wbr>Branch</span>
+        <span id="defaultbranch_csharp">
+<a href="#defaultbranch_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Branch</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -117,7 +138,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -126,7 +149,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Http<wbr>Url<wbr>To<wbr>Repo</span>
+        <span id="httpurltorepo_csharp">
+<a href="#httpurltorepo_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Url<wbr>To<wbr>Repo</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -136,7 +161,9 @@ repository via HTTP.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Issues<wbr>Enabled</span>
+        <span id="issuesenabled_csharp">
+<a href="#issuesenabled_csharp" style="color: inherit; text-decoration: inherit;">Issues<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -145,7 +172,9 @@ repository via HTTP.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Lfs<wbr>Enabled</span>
+        <span id="lfsenabled_csharp">
+<a href="#lfsenabled_csharp" style="color: inherit; text-decoration: inherit;">Lfs<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -154,7 +183,9 @@ repository via HTTP.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Merge<wbr>Requests<wbr>Enabled</span>
+        <span id="mergerequestsenabled_csharp">
+<a href="#mergerequestsenabled_csharp" style="color: inherit; text-decoration: inherit;">Merge<wbr>Requests<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -163,7 +194,9 @@ repository via HTTP.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -171,7 +204,9 @@ repository via HTTP.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Namespace<wbr>Id</span>
+        <span id="namespaceid_csharp">
+<a href="#namespaceid_csharp" style="color: inherit; text-decoration: inherit;">Namespace<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -181,7 +216,9 @@ See `gitlab..Group` for an example.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Path</span>
+        <span id="path_csharp">
+<a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -190,7 +227,9 @@ See `gitlab..Group` for an example.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Pipelines<wbr>Enabled</span>
+        <span id="pipelinesenabled_csharp">
+<a href="#pipelinesenabled_csharp" style="color: inherit; text-decoration: inherit;">Pipelines<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -199,7 +238,9 @@ See `gitlab..Group` for an example.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Request<wbr>Access<wbr>Enabled</span>
+        <span id="requestaccessenabled_csharp">
+<a href="#requestaccessenabled_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Access<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -208,7 +249,9 @@ See `gitlab..Group` for an example.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Runners<wbr>Token</span>
+        <span id="runnerstoken_csharp">
+<a href="#runnerstoken_csharp" style="color: inherit; text-decoration: inherit;">Runners<wbr>Token</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -217,7 +260,9 @@ See `gitlab..Group` for an example.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Snippets<wbr>Enabled</span>
+        <span id="snippetsenabled_csharp">
+<a href="#snippetsenabled_csharp" style="color: inherit; text-decoration: inherit;">Snippets<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -226,7 +271,9 @@ See `gitlab..Group` for an example.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ssh<wbr>Url<wbr>To<wbr>Repo</span>
+        <span id="sshurltorepo_csharp">
+<a href="#sshurltorepo_csharp" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Url<wbr>To<wbr>Repo</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -236,7 +283,9 @@ repository via SSH.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Visibility<wbr>Level</span>
+        <span id="visibilitylevel_csharp">
+<a href="#visibilitylevel_csharp" style="color: inherit; text-decoration: inherit;">Visibility<wbr>Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -245,7 +294,9 @@ repository via SSH.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Web<wbr>Url</span>
+        <span id="weburl_csharp">
+<a href="#weburl_csharp" style="color: inherit; text-decoration: inherit;">Web<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -254,7 +305,9 @@ repository via SSH.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Wiki<wbr>Enabled</span>
+        <span id="wikienabled_csharp">
+<a href="#wikienabled_csharp" style="color: inherit; text-decoration: inherit;">Wiki<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -270,7 +323,9 @@ repository via SSH.
 
     <dt class="property-required"
             title="Required">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -279,7 +334,9 @@ repository via SSH.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Archived</span>
+        <span id="archived_go">
+<a href="#archived_go" style="color: inherit; text-decoration: inherit;">Archived</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -288,7 +345,9 @@ repository via SSH.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Default<wbr>Branch</span>
+        <span id="defaultbranch_go">
+<a href="#defaultbranch_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Branch</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -297,7 +356,9 @@ repository via SSH.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -306,7 +367,9 @@ repository via SSH.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Http<wbr>Url<wbr>To<wbr>Repo</span>
+        <span id="httpurltorepo_go">
+<a href="#httpurltorepo_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Url<wbr>To<wbr>Repo</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -316,7 +379,9 @@ repository via HTTP.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Issues<wbr>Enabled</span>
+        <span id="issuesenabled_go">
+<a href="#issuesenabled_go" style="color: inherit; text-decoration: inherit;">Issues<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -325,7 +390,9 @@ repository via HTTP.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Lfs<wbr>Enabled</span>
+        <span id="lfsenabled_go">
+<a href="#lfsenabled_go" style="color: inherit; text-decoration: inherit;">Lfs<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -334,7 +401,9 @@ repository via HTTP.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Merge<wbr>Requests<wbr>Enabled</span>
+        <span id="mergerequestsenabled_go">
+<a href="#mergerequestsenabled_go" style="color: inherit; text-decoration: inherit;">Merge<wbr>Requests<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -343,7 +412,9 @@ repository via HTTP.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -351,7 +422,9 @@ repository via HTTP.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Namespace<wbr>Id</span>
+        <span id="namespaceid_go">
+<a href="#namespaceid_go" style="color: inherit; text-decoration: inherit;">Namespace<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -361,7 +434,9 @@ See `gitlab..Group` for an example.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Path</span>
+        <span id="path_go">
+<a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -370,7 +445,9 @@ See `gitlab..Group` for an example.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Pipelines<wbr>Enabled</span>
+        <span id="pipelinesenabled_go">
+<a href="#pipelinesenabled_go" style="color: inherit; text-decoration: inherit;">Pipelines<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -379,7 +456,9 @@ See `gitlab..Group` for an example.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Request<wbr>Access<wbr>Enabled</span>
+        <span id="requestaccessenabled_go">
+<a href="#requestaccessenabled_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Access<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -388,7 +467,9 @@ See `gitlab..Group` for an example.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Runners<wbr>Token</span>
+        <span id="runnerstoken_go">
+<a href="#runnerstoken_go" style="color: inherit; text-decoration: inherit;">Runners<wbr>Token</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -397,7 +478,9 @@ See `gitlab..Group` for an example.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Snippets<wbr>Enabled</span>
+        <span id="snippetsenabled_go">
+<a href="#snippetsenabled_go" style="color: inherit; text-decoration: inherit;">Snippets<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -406,7 +489,9 @@ See `gitlab..Group` for an example.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ssh<wbr>Url<wbr>To<wbr>Repo</span>
+        <span id="sshurltorepo_go">
+<a href="#sshurltorepo_go" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Url<wbr>To<wbr>Repo</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -416,7 +501,9 @@ repository via SSH.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Visibility<wbr>Level</span>
+        <span id="visibilitylevel_go">
+<a href="#visibilitylevel_go" style="color: inherit; text-decoration: inherit;">Visibility<wbr>Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -425,7 +512,9 @@ repository via SSH.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Web<wbr>Url</span>
+        <span id="weburl_go">
+<a href="#weburl_go" style="color: inherit; text-decoration: inherit;">Web<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -434,7 +523,9 @@ repository via SSH.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Wiki<wbr>Enabled</span>
+        <span id="wikienabled_go">
+<a href="#wikienabled_go" style="color: inherit; text-decoration: inherit;">Wiki<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -450,7 +541,9 @@ repository via SSH.
 
     <dt class="property-required"
             title="Required">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -459,7 +552,9 @@ repository via SSH.
 
     <dt class="property-optional"
             title="Optional">
-        <span>archived</span>
+        <span id="archived_nodejs">
+<a href="#archived_nodejs" style="color: inherit; text-decoration: inherit;">archived</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -468,7 +563,9 @@ repository via SSH.
 
     <dt class="property-optional"
             title="Optional">
-        <span>default<wbr>Branch</span>
+        <span id="defaultbranch_nodejs">
+<a href="#defaultbranch_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Branch</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -477,7 +574,9 @@ repository via SSH.
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -486,7 +585,9 @@ repository via SSH.
 
     <dt class="property-optional"
             title="Optional">
-        <span>http<wbr>Url<wbr>To<wbr>Repo</span>
+        <span id="httpurltorepo_nodejs">
+<a href="#httpurltorepo_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Url<wbr>To<wbr>Repo</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -496,7 +597,9 @@ repository via HTTP.
 
     <dt class="property-optional"
             title="Optional">
-        <span>issues<wbr>Enabled</span>
+        <span id="issuesenabled_nodejs">
+<a href="#issuesenabled_nodejs" style="color: inherit; text-decoration: inherit;">issues<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -505,7 +608,9 @@ repository via HTTP.
 
     <dt class="property-optional"
             title="Optional">
-        <span>lfs<wbr>Enabled</span>
+        <span id="lfsenabled_nodejs">
+<a href="#lfsenabled_nodejs" style="color: inherit; text-decoration: inherit;">lfs<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -514,7 +619,9 @@ repository via HTTP.
 
     <dt class="property-optional"
             title="Optional">
-        <span>merge<wbr>Requests<wbr>Enabled</span>
+        <span id="mergerequestsenabled_nodejs">
+<a href="#mergerequestsenabled_nodejs" style="color: inherit; text-decoration: inherit;">merge<wbr>Requests<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -523,7 +630,9 @@ repository via HTTP.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -531,7 +640,9 @@ repository via HTTP.
 
     <dt class="property-optional"
             title="Optional">
-        <span>namespace<wbr>Id</span>
+        <span id="namespaceid_nodejs">
+<a href="#namespaceid_nodejs" style="color: inherit; text-decoration: inherit;">namespace<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -541,7 +652,9 @@ See `gitlab..Group` for an example.
 
     <dt class="property-optional"
             title="Optional">
-        <span>path</span>
+        <span id="path_nodejs">
+<a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -550,7 +663,9 @@ See `gitlab..Group` for an example.
 
     <dt class="property-optional"
             title="Optional">
-        <span>pipelines<wbr>Enabled</span>
+        <span id="pipelinesenabled_nodejs">
+<a href="#pipelinesenabled_nodejs" style="color: inherit; text-decoration: inherit;">pipelines<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -559,7 +674,9 @@ See `gitlab..Group` for an example.
 
     <dt class="property-optional"
             title="Optional">
-        <span>request<wbr>Access<wbr>Enabled</span>
+        <span id="requestaccessenabled_nodejs">
+<a href="#requestaccessenabled_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Access<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -568,7 +685,9 @@ See `gitlab..Group` for an example.
 
     <dt class="property-optional"
             title="Optional">
-        <span>runners<wbr>Token</span>
+        <span id="runnerstoken_nodejs">
+<a href="#runnerstoken_nodejs" style="color: inherit; text-decoration: inherit;">runners<wbr>Token</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -577,7 +696,9 @@ See `gitlab..Group` for an example.
 
     <dt class="property-optional"
             title="Optional">
-        <span>snippets<wbr>Enabled</span>
+        <span id="snippetsenabled_nodejs">
+<a href="#snippetsenabled_nodejs" style="color: inherit; text-decoration: inherit;">snippets<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -586,7 +707,9 @@ See `gitlab..Group` for an example.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ssh<wbr>Url<wbr>To<wbr>Repo</span>
+        <span id="sshurltorepo_nodejs">
+<a href="#sshurltorepo_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>Url<wbr>To<wbr>Repo</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -596,7 +719,9 @@ repository via SSH.
 
     <dt class="property-optional"
             title="Optional">
-        <span>visibility<wbr>Level</span>
+        <span id="visibilitylevel_nodejs">
+<a href="#visibilitylevel_nodejs" style="color: inherit; text-decoration: inherit;">visibility<wbr>Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -605,7 +730,9 @@ repository via SSH.
 
     <dt class="property-optional"
             title="Optional">
-        <span>web<wbr>Url</span>
+        <span id="weburl_nodejs">
+<a href="#weburl_nodejs" style="color: inherit; text-decoration: inherit;">web<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -614,7 +741,9 @@ repository via SSH.
 
     <dt class="property-optional"
             title="Optional">
-        <span>wiki<wbr>Enabled</span>
+        <span id="wikienabled_nodejs">
+<a href="#wikienabled_nodejs" style="color: inherit; text-decoration: inherit;">wiki<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -630,7 +759,9 @@ repository via SSH.
 
     <dt class="property-required"
             title="Required">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -639,7 +770,9 @@ repository via SSH.
 
     <dt class="property-optional"
             title="Optional">
-        <span>archived</span>
+        <span id="archived_python">
+<a href="#archived_python" style="color: inherit; text-decoration: inherit;">archived</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -648,7 +781,9 @@ repository via SSH.
 
     <dt class="property-optional"
             title="Optional">
-        <span>default_<wbr>branch</span>
+        <span id="default_branch_python">
+<a href="#default_branch_python" style="color: inherit; text-decoration: inherit;">default_<wbr>branch</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -657,7 +792,9 @@ repository via SSH.
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -666,7 +803,9 @@ repository via SSH.
 
     <dt class="property-optional"
             title="Optional">
-        <span>http_<wbr>url_<wbr>to_<wbr>repo</span>
+        <span id="http_url_to_repo_python">
+<a href="#http_url_to_repo_python" style="color: inherit; text-decoration: inherit;">http_<wbr>url_<wbr>to_<wbr>repo</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -676,7 +815,9 @@ repository via HTTP.
 
     <dt class="property-optional"
             title="Optional">
-        <span>issues_<wbr>enabled</span>
+        <span id="issues_enabled_python">
+<a href="#issues_enabled_python" style="color: inherit; text-decoration: inherit;">issues_<wbr>enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -685,7 +826,9 @@ repository via HTTP.
 
     <dt class="property-optional"
             title="Optional">
-        <span>lfs_<wbr>enabled</span>
+        <span id="lfs_enabled_python">
+<a href="#lfs_enabled_python" style="color: inherit; text-decoration: inherit;">lfs_<wbr>enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -694,7 +837,9 @@ repository via HTTP.
 
     <dt class="property-optional"
             title="Optional">
-        <span>merge_<wbr>requests_<wbr>enabled</span>
+        <span id="merge_requests_enabled_python">
+<a href="#merge_requests_enabled_python" style="color: inherit; text-decoration: inherit;">merge_<wbr>requests_<wbr>enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -703,7 +848,9 @@ repository via HTTP.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -711,7 +858,9 @@ repository via HTTP.
 
     <dt class="property-optional"
             title="Optional">
-        <span>namespace_<wbr>id</span>
+        <span id="namespace_id_python">
+<a href="#namespace_id_python" style="color: inherit; text-decoration: inherit;">namespace_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -721,7 +870,9 @@ See `gitlab..Group` for an example.
 
     <dt class="property-optional"
             title="Optional">
-        <span>path</span>
+        <span id="path_python">
+<a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -730,7 +881,9 @@ See `gitlab..Group` for an example.
 
     <dt class="property-optional"
             title="Optional">
-        <span>pipelines_<wbr>enabled</span>
+        <span id="pipelines_enabled_python">
+<a href="#pipelines_enabled_python" style="color: inherit; text-decoration: inherit;">pipelines_<wbr>enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -739,7 +892,9 @@ See `gitlab..Group` for an example.
 
     <dt class="property-optional"
             title="Optional">
-        <span>request_<wbr>access_<wbr>enabled</span>
+        <span id="request_access_enabled_python">
+<a href="#request_access_enabled_python" style="color: inherit; text-decoration: inherit;">request_<wbr>access_<wbr>enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -748,7 +903,9 @@ See `gitlab..Group` for an example.
 
     <dt class="property-optional"
             title="Optional">
-        <span>runners_<wbr>token</span>
+        <span id="runners_token_python">
+<a href="#runners_token_python" style="color: inherit; text-decoration: inherit;">runners_<wbr>token</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -757,7 +914,9 @@ See `gitlab..Group` for an example.
 
     <dt class="property-optional"
             title="Optional">
-        <span>snippets_<wbr>enabled</span>
+        <span id="snippets_enabled_python">
+<a href="#snippets_enabled_python" style="color: inherit; text-decoration: inherit;">snippets_<wbr>enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -766,7 +925,9 @@ See `gitlab..Group` for an example.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ssh_<wbr>url_<wbr>to_<wbr>repo</span>
+        <span id="ssh_url_to_repo_python">
+<a href="#ssh_url_to_repo_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>url_<wbr>to_<wbr>repo</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -776,7 +937,9 @@ repository via SSH.
 
     <dt class="property-optional"
             title="Optional">
-        <span>visibility_<wbr>level</span>
+        <span id="visibility_level_python">
+<a href="#visibility_level_python" style="color: inherit; text-decoration: inherit;">visibility_<wbr>level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -785,7 +948,9 @@ repository via SSH.
 
     <dt class="property-optional"
             title="Optional">
-        <span>web_<wbr>url</span>
+        <span id="web_url_python">
+<a href="#web_url_python" style="color: inherit; text-decoration: inherit;">web_<wbr>url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -794,7 +959,9 @@ repository via SSH.
 
     <dt class="property-optional"
             title="Optional">
-        <span>wiki_<wbr>enabled</span>
+        <span id="wiki_enabled_python">
+<a href="#wiki_enabled_python" style="color: inherit; text-decoration: inherit;">wiki_<wbr>enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -823,7 +990,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Archived</span>
+        <span id="archived_csharp">
+<a href="#archived_csharp" style="color: inherit; text-decoration: inherit;">Archived</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -832,7 +1001,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Default<wbr>Branch</span>
+        <span id="defaultbranch_csharp">
+<a href="#defaultbranch_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Branch</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -841,7 +1012,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Description</span>
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -850,7 +1023,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Http<wbr>Url<wbr>To<wbr>Repo</span>
+        <span id="httpurltorepo_csharp">
+<a href="#httpurltorepo_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Url<wbr>To<wbr>Repo</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -860,7 +1035,9 @@ repository via HTTP.
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -869,7 +1046,9 @@ repository via HTTP.
 
     <dt class="property-"
             title="">
-        <span>Issues<wbr>Enabled</span>
+        <span id="issuesenabled_csharp">
+<a href="#issuesenabled_csharp" style="color: inherit; text-decoration: inherit;">Issues<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -878,7 +1057,9 @@ repository via HTTP.
 
     <dt class="property-"
             title="">
-        <span>Lfs<wbr>Enabled</span>
+        <span id="lfsenabled_csharp">
+<a href="#lfsenabled_csharp" style="color: inherit; text-decoration: inherit;">Lfs<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -887,7 +1068,9 @@ repository via HTTP.
 
     <dt class="property-"
             title="">
-        <span>Merge<wbr>Requests<wbr>Enabled</span>
+        <span id="mergerequestsenabled_csharp">
+<a href="#mergerequestsenabled_csharp" style="color: inherit; text-decoration: inherit;">Merge<wbr>Requests<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -896,7 +1079,9 @@ repository via HTTP.
 
     <dt class="property-"
             title="">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -904,7 +1089,9 @@ repository via HTTP.
 
     <dt class="property-"
             title="">
-        <span>Namespace<wbr>Id</span>
+        <span id="namespaceid_csharp">
+<a href="#namespaceid_csharp" style="color: inherit; text-decoration: inherit;">Namespace<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -914,7 +1101,9 @@ See `gitlab..Group` for an example.
 
     <dt class="property-"
             title="">
-        <span>Path</span>
+        <span id="path_csharp">
+<a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -923,7 +1112,9 @@ See `gitlab..Group` for an example.
 
     <dt class="property-"
             title="">
-        <span>Pipelines<wbr>Enabled</span>
+        <span id="pipelinesenabled_csharp">
+<a href="#pipelinesenabled_csharp" style="color: inherit; text-decoration: inherit;">Pipelines<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -932,7 +1123,9 @@ See `gitlab..Group` for an example.
 
     <dt class="property-"
             title="">
-        <span>Request<wbr>Access<wbr>Enabled</span>
+        <span id="requestaccessenabled_csharp">
+<a href="#requestaccessenabled_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Access<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -941,7 +1134,9 @@ See `gitlab..Group` for an example.
 
     <dt class="property-"
             title="">
-        <span>Runners<wbr>Token</span>
+        <span id="runnerstoken_csharp">
+<a href="#runnerstoken_csharp" style="color: inherit; text-decoration: inherit;">Runners<wbr>Token</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -950,7 +1145,9 @@ See `gitlab..Group` for an example.
 
     <dt class="property-"
             title="">
-        <span>Snippets<wbr>Enabled</span>
+        <span id="snippetsenabled_csharp">
+<a href="#snippetsenabled_csharp" style="color: inherit; text-decoration: inherit;">Snippets<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -959,7 +1156,9 @@ See `gitlab..Group` for an example.
 
     <dt class="property-"
             title="">
-        <span>Ssh<wbr>Url<wbr>To<wbr>Repo</span>
+        <span id="sshurltorepo_csharp">
+<a href="#sshurltorepo_csharp" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Url<wbr>To<wbr>Repo</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -969,7 +1168,9 @@ repository via SSH.
 
     <dt class="property-"
             title="">
-        <span>Visibility<wbr>Level</span>
+        <span id="visibilitylevel_csharp">
+<a href="#visibilitylevel_csharp" style="color: inherit; text-decoration: inherit;">Visibility<wbr>Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -978,7 +1179,9 @@ repository via SSH.
 
     <dt class="property-"
             title="">
-        <span>Web<wbr>Url</span>
+        <span id="weburl_csharp">
+<a href="#weburl_csharp" style="color: inherit; text-decoration: inherit;">Web<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -987,7 +1190,9 @@ repository via SSH.
 
     <dt class="property-"
             title="">
-        <span>Wiki<wbr>Enabled</span>
+        <span id="wikienabled_csharp">
+<a href="#wikienabled_csharp" style="color: inherit; text-decoration: inherit;">Wiki<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1003,7 +1208,9 @@ repository via SSH.
 
     <dt class="property-"
             title="">
-        <span>Archived</span>
+        <span id="archived_go">
+<a href="#archived_go" style="color: inherit; text-decoration: inherit;">Archived</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1012,7 +1219,9 @@ repository via SSH.
 
     <dt class="property-"
             title="">
-        <span>Default<wbr>Branch</span>
+        <span id="defaultbranch_go">
+<a href="#defaultbranch_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Branch</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1021,7 +1230,9 @@ repository via SSH.
 
     <dt class="property-"
             title="">
-        <span>Description</span>
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1030,7 +1241,9 @@ repository via SSH.
 
     <dt class="property-"
             title="">
-        <span>Http<wbr>Url<wbr>To<wbr>Repo</span>
+        <span id="httpurltorepo_go">
+<a href="#httpurltorepo_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Url<wbr>To<wbr>Repo</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1040,7 +1253,9 @@ repository via HTTP.
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1049,7 +1264,9 @@ repository via HTTP.
 
     <dt class="property-"
             title="">
-        <span>Issues<wbr>Enabled</span>
+        <span id="issuesenabled_go">
+<a href="#issuesenabled_go" style="color: inherit; text-decoration: inherit;">Issues<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1058,7 +1275,9 @@ repository via HTTP.
 
     <dt class="property-"
             title="">
-        <span>Lfs<wbr>Enabled</span>
+        <span id="lfsenabled_go">
+<a href="#lfsenabled_go" style="color: inherit; text-decoration: inherit;">Lfs<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1067,7 +1286,9 @@ repository via HTTP.
 
     <dt class="property-"
             title="">
-        <span>Merge<wbr>Requests<wbr>Enabled</span>
+        <span id="mergerequestsenabled_go">
+<a href="#mergerequestsenabled_go" style="color: inherit; text-decoration: inherit;">Merge<wbr>Requests<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1076,7 +1297,9 @@ repository via HTTP.
 
     <dt class="property-"
             title="">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1084,7 +1307,9 @@ repository via HTTP.
 
     <dt class="property-"
             title="">
-        <span>Namespace<wbr>Id</span>
+        <span id="namespaceid_go">
+<a href="#namespaceid_go" style="color: inherit; text-decoration: inherit;">Namespace<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1094,7 +1319,9 @@ See `gitlab..Group` for an example.
 
     <dt class="property-"
             title="">
-        <span>Path</span>
+        <span id="path_go">
+<a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1103,7 +1330,9 @@ See `gitlab..Group` for an example.
 
     <dt class="property-"
             title="">
-        <span>Pipelines<wbr>Enabled</span>
+        <span id="pipelinesenabled_go">
+<a href="#pipelinesenabled_go" style="color: inherit; text-decoration: inherit;">Pipelines<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1112,7 +1341,9 @@ See `gitlab..Group` for an example.
 
     <dt class="property-"
             title="">
-        <span>Request<wbr>Access<wbr>Enabled</span>
+        <span id="requestaccessenabled_go">
+<a href="#requestaccessenabled_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Access<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1121,7 +1352,9 @@ See `gitlab..Group` for an example.
 
     <dt class="property-"
             title="">
-        <span>Runners<wbr>Token</span>
+        <span id="runnerstoken_go">
+<a href="#runnerstoken_go" style="color: inherit; text-decoration: inherit;">Runners<wbr>Token</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1130,7 +1363,9 @@ See `gitlab..Group` for an example.
 
     <dt class="property-"
             title="">
-        <span>Snippets<wbr>Enabled</span>
+        <span id="snippetsenabled_go">
+<a href="#snippetsenabled_go" style="color: inherit; text-decoration: inherit;">Snippets<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1139,7 +1374,9 @@ See `gitlab..Group` for an example.
 
     <dt class="property-"
             title="">
-        <span>Ssh<wbr>Url<wbr>To<wbr>Repo</span>
+        <span id="sshurltorepo_go">
+<a href="#sshurltorepo_go" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Url<wbr>To<wbr>Repo</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1149,7 +1386,9 @@ repository via SSH.
 
     <dt class="property-"
             title="">
-        <span>Visibility<wbr>Level</span>
+        <span id="visibilitylevel_go">
+<a href="#visibilitylevel_go" style="color: inherit; text-decoration: inherit;">Visibility<wbr>Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1158,7 +1397,9 @@ repository via SSH.
 
     <dt class="property-"
             title="">
-        <span>Web<wbr>Url</span>
+        <span id="weburl_go">
+<a href="#weburl_go" style="color: inherit; text-decoration: inherit;">Web<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1167,7 +1408,9 @@ repository via SSH.
 
     <dt class="property-"
             title="">
-        <span>Wiki<wbr>Enabled</span>
+        <span id="wikienabled_go">
+<a href="#wikienabled_go" style="color: inherit; text-decoration: inherit;">Wiki<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1183,7 +1426,9 @@ repository via SSH.
 
     <dt class="property-"
             title="">
-        <span>archived</span>
+        <span id="archived_nodejs">
+<a href="#archived_nodejs" style="color: inherit; text-decoration: inherit;">archived</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1192,7 +1437,9 @@ repository via SSH.
 
     <dt class="property-"
             title="">
-        <span>default<wbr>Branch</span>
+        <span id="defaultbranch_nodejs">
+<a href="#defaultbranch_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Branch</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1201,7 +1448,9 @@ repository via SSH.
 
     <dt class="property-"
             title="">
-        <span>description</span>
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1210,7 +1459,9 @@ repository via SSH.
 
     <dt class="property-"
             title="">
-        <span>http<wbr>Url<wbr>To<wbr>Repo</span>
+        <span id="httpurltorepo_nodejs">
+<a href="#httpurltorepo_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Url<wbr>To<wbr>Repo</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1220,7 +1471,9 @@ repository via HTTP.
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1229,7 +1482,9 @@ repository via HTTP.
 
     <dt class="property-"
             title="">
-        <span>issues<wbr>Enabled</span>
+        <span id="issuesenabled_nodejs">
+<a href="#issuesenabled_nodejs" style="color: inherit; text-decoration: inherit;">issues<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1238,7 +1493,9 @@ repository via HTTP.
 
     <dt class="property-"
             title="">
-        <span>lfs<wbr>Enabled</span>
+        <span id="lfsenabled_nodejs">
+<a href="#lfsenabled_nodejs" style="color: inherit; text-decoration: inherit;">lfs<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1247,7 +1504,9 @@ repository via HTTP.
 
     <dt class="property-"
             title="">
-        <span>merge<wbr>Requests<wbr>Enabled</span>
+        <span id="mergerequestsenabled_nodejs">
+<a href="#mergerequestsenabled_nodejs" style="color: inherit; text-decoration: inherit;">merge<wbr>Requests<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1256,7 +1515,9 @@ repository via HTTP.
 
     <dt class="property-"
             title="">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1264,7 +1525,9 @@ repository via HTTP.
 
     <dt class="property-"
             title="">
-        <span>namespace<wbr>Id</span>
+        <span id="namespaceid_nodejs">
+<a href="#namespaceid_nodejs" style="color: inherit; text-decoration: inherit;">namespace<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1274,7 +1537,9 @@ See `gitlab..Group` for an example.
 
     <dt class="property-"
             title="">
-        <span>path</span>
+        <span id="path_nodejs">
+<a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1283,7 +1548,9 @@ See `gitlab..Group` for an example.
 
     <dt class="property-"
             title="">
-        <span>pipelines<wbr>Enabled</span>
+        <span id="pipelinesenabled_nodejs">
+<a href="#pipelinesenabled_nodejs" style="color: inherit; text-decoration: inherit;">pipelines<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1292,7 +1559,9 @@ See `gitlab..Group` for an example.
 
     <dt class="property-"
             title="">
-        <span>request<wbr>Access<wbr>Enabled</span>
+        <span id="requestaccessenabled_nodejs">
+<a href="#requestaccessenabled_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Access<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1301,7 +1570,9 @@ See `gitlab..Group` for an example.
 
     <dt class="property-"
             title="">
-        <span>runners<wbr>Token</span>
+        <span id="runnerstoken_nodejs">
+<a href="#runnerstoken_nodejs" style="color: inherit; text-decoration: inherit;">runners<wbr>Token</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1310,7 +1581,9 @@ See `gitlab..Group` for an example.
 
     <dt class="property-"
             title="">
-        <span>snippets<wbr>Enabled</span>
+        <span id="snippetsenabled_nodejs">
+<a href="#snippetsenabled_nodejs" style="color: inherit; text-decoration: inherit;">snippets<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1319,7 +1592,9 @@ See `gitlab..Group` for an example.
 
     <dt class="property-"
             title="">
-        <span>ssh<wbr>Url<wbr>To<wbr>Repo</span>
+        <span id="sshurltorepo_nodejs">
+<a href="#sshurltorepo_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>Url<wbr>To<wbr>Repo</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1329,7 +1604,9 @@ repository via SSH.
 
     <dt class="property-"
             title="">
-        <span>visibility<wbr>Level</span>
+        <span id="visibilitylevel_nodejs">
+<a href="#visibilitylevel_nodejs" style="color: inherit; text-decoration: inherit;">visibility<wbr>Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1338,7 +1615,9 @@ repository via SSH.
 
     <dt class="property-"
             title="">
-        <span>web<wbr>Url</span>
+        <span id="weburl_nodejs">
+<a href="#weburl_nodejs" style="color: inherit; text-decoration: inherit;">web<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1347,7 +1626,9 @@ repository via SSH.
 
     <dt class="property-"
             title="">
-        <span>wiki<wbr>Enabled</span>
+        <span id="wikienabled_nodejs">
+<a href="#wikienabled_nodejs" style="color: inherit; text-decoration: inherit;">wiki<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1363,7 +1644,9 @@ repository via SSH.
 
     <dt class="property-"
             title="">
-        <span>archived</span>
+        <span id="archived_python">
+<a href="#archived_python" style="color: inherit; text-decoration: inherit;">archived</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1372,7 +1655,9 @@ repository via SSH.
 
     <dt class="property-"
             title="">
-        <span>default_<wbr>branch</span>
+        <span id="default_branch_python">
+<a href="#default_branch_python" style="color: inherit; text-decoration: inherit;">default_<wbr>branch</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1381,7 +1666,9 @@ repository via SSH.
 
     <dt class="property-"
             title="">
-        <span>description</span>
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1390,7 +1677,9 @@ repository via SSH.
 
     <dt class="property-"
             title="">
-        <span>http_<wbr>url_<wbr>to_<wbr>repo</span>
+        <span id="http_url_to_repo_python">
+<a href="#http_url_to_repo_python" style="color: inherit; text-decoration: inherit;">http_<wbr>url_<wbr>to_<wbr>repo</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1400,7 +1689,9 @@ repository via HTTP.
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1409,7 +1700,9 @@ repository via HTTP.
 
     <dt class="property-"
             title="">
-        <span>issues_<wbr>enabled</span>
+        <span id="issues_enabled_python">
+<a href="#issues_enabled_python" style="color: inherit; text-decoration: inherit;">issues_<wbr>enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1418,7 +1711,9 @@ repository via HTTP.
 
     <dt class="property-"
             title="">
-        <span>lfs_<wbr>enabled</span>
+        <span id="lfs_enabled_python">
+<a href="#lfs_enabled_python" style="color: inherit; text-decoration: inherit;">lfs_<wbr>enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1427,7 +1722,9 @@ repository via HTTP.
 
     <dt class="property-"
             title="">
-        <span>merge_<wbr>requests_<wbr>enabled</span>
+        <span id="merge_requests_enabled_python">
+<a href="#merge_requests_enabled_python" style="color: inherit; text-decoration: inherit;">merge_<wbr>requests_<wbr>enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1436,7 +1733,9 @@ repository via HTTP.
 
     <dt class="property-"
             title="">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1444,7 +1743,9 @@ repository via HTTP.
 
     <dt class="property-"
             title="">
-        <span>namespace_<wbr>id</span>
+        <span id="namespace_id_python">
+<a href="#namespace_id_python" style="color: inherit; text-decoration: inherit;">namespace_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1454,7 +1755,9 @@ See `gitlab..Group` for an example.
 
     <dt class="property-"
             title="">
-        <span>path</span>
+        <span id="path_python">
+<a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1463,7 +1766,9 @@ See `gitlab..Group` for an example.
 
     <dt class="property-"
             title="">
-        <span>pipelines_<wbr>enabled</span>
+        <span id="pipelines_enabled_python">
+<a href="#pipelines_enabled_python" style="color: inherit; text-decoration: inherit;">pipelines_<wbr>enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1472,7 +1777,9 @@ See `gitlab..Group` for an example.
 
     <dt class="property-"
             title="">
-        <span>request_<wbr>access_<wbr>enabled</span>
+        <span id="request_access_enabled_python">
+<a href="#request_access_enabled_python" style="color: inherit; text-decoration: inherit;">request_<wbr>access_<wbr>enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1481,7 +1788,9 @@ See `gitlab..Group` for an example.
 
     <dt class="property-"
             title="">
-        <span>runners_<wbr>token</span>
+        <span id="runners_token_python">
+<a href="#runners_token_python" style="color: inherit; text-decoration: inherit;">runners_<wbr>token</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1490,7 +1799,9 @@ See `gitlab..Group` for an example.
 
     <dt class="property-"
             title="">
-        <span>snippets_<wbr>enabled</span>
+        <span id="snippets_enabled_python">
+<a href="#snippets_enabled_python" style="color: inherit; text-decoration: inherit;">snippets_<wbr>enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1499,7 +1810,9 @@ See `gitlab..Group` for an example.
 
     <dt class="property-"
             title="">
-        <span>ssh_<wbr>url_<wbr>to_<wbr>repo</span>
+        <span id="ssh_url_to_repo_python">
+<a href="#ssh_url_to_repo_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>url_<wbr>to_<wbr>repo</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1509,7 +1822,9 @@ repository via SSH.
 
     <dt class="property-"
             title="">
-        <span>visibility_<wbr>level</span>
+        <span id="visibility_level_python">
+<a href="#visibility_level_python" style="color: inherit; text-decoration: inherit;">visibility_<wbr>level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1518,7 +1833,9 @@ repository via SSH.
 
     <dt class="property-"
             title="">
-        <span>web_<wbr>url</span>
+        <span id="web_url_python">
+<a href="#web_url_python" style="color: inherit; text-decoration: inherit;">web_<wbr>url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1527,7 +1844,9 @@ repository via SSH.
 
     <dt class="property-"
             title="">
-        <span>wiki_<wbr>enabled</span>
+        <span id="wiki_enabled_python">
+<a href="#wiki_enabled_python" style="color: inherit; text-decoration: inherit;">wiki_<wbr>enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>

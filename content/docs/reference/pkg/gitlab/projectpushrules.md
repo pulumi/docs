@@ -202,7 +202,9 @@ The ProjectPushRules resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-required"
             title="Required">
-        <span>Project</span>
+        <span id="project_csharp">
+<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -211,7 +213,9 @@ The ProjectPushRules resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>Author<wbr>Email<wbr>Regex</span>
+        <span id="authoremailregex_csharp">
+<a href="#authoremailregex_csharp" style="color: inherit; text-decoration: inherit;">Author<wbr>Email<wbr>Regex</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -220,7 +224,9 @@ The ProjectPushRules resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>Branch<wbr>Name<wbr>Regex</span>
+        <span id="branchnameregex_csharp">
+<a href="#branchnameregex_csharp" style="color: inherit; text-decoration: inherit;">Branch<wbr>Name<wbr>Regex</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -229,7 +235,9 @@ The ProjectPushRules resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>Commit<wbr>Message<wbr>Regex</span>
+        <span id="commitmessageregex_csharp">
+<a href="#commitmessageregex_csharp" style="color: inherit; text-decoration: inherit;">Commit<wbr>Message<wbr>Regex</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -238,7 +246,9 @@ The ProjectPushRules resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>Deny<wbr>Delete<wbr>Tag</span>
+        <span id="denydeletetag_csharp">
+<a href="#denydeletetag_csharp" style="color: inherit; text-decoration: inherit;">Deny<wbr>Delete<wbr>Tag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -247,7 +257,9 @@ The ProjectPushRules resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>File<wbr>Name<wbr>Regex</span>
+        <span id="filenameregex_csharp">
+<a href="#filenameregex_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>Name<wbr>Regex</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -256,7 +268,9 @@ The ProjectPushRules resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>File<wbr>Size</span>
+        <span id="maxfilesize_csharp">
+<a href="#maxfilesize_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>File<wbr>Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -265,7 +279,9 @@ The ProjectPushRules resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>Member<wbr>Check</span>
+        <span id="membercheck_csharp">
+<a href="#membercheck_csharp" style="color: inherit; text-decoration: inherit;">Member<wbr>Check</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -274,7 +290,9 @@ The ProjectPushRules resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>Prevent<wbr>Secrets</span>
+        <span id="preventsecrets_csharp">
+<a href="#preventsecrets_csharp" style="color: inherit; text-decoration: inherit;">Prevent<wbr>Secrets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -290,7 +308,9 @@ The ProjectPushRules resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-required"
             title="Required">
-        <span>Project</span>
+        <span id="project_go">
+<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -299,7 +319,9 @@ The ProjectPushRules resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>Author<wbr>Email<wbr>Regex</span>
+        <span id="authoremailregex_go">
+<a href="#authoremailregex_go" style="color: inherit; text-decoration: inherit;">Author<wbr>Email<wbr>Regex</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -308,7 +330,9 @@ The ProjectPushRules resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>Branch<wbr>Name<wbr>Regex</span>
+        <span id="branchnameregex_go">
+<a href="#branchnameregex_go" style="color: inherit; text-decoration: inherit;">Branch<wbr>Name<wbr>Regex</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -317,7 +341,9 @@ The ProjectPushRules resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>Commit<wbr>Message<wbr>Regex</span>
+        <span id="commitmessageregex_go">
+<a href="#commitmessageregex_go" style="color: inherit; text-decoration: inherit;">Commit<wbr>Message<wbr>Regex</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -326,7 +352,9 @@ The ProjectPushRules resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>Deny<wbr>Delete<wbr>Tag</span>
+        <span id="denydeletetag_go">
+<a href="#denydeletetag_go" style="color: inherit; text-decoration: inherit;">Deny<wbr>Delete<wbr>Tag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -335,7 +363,9 @@ The ProjectPushRules resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>File<wbr>Name<wbr>Regex</span>
+        <span id="filenameregex_go">
+<a href="#filenameregex_go" style="color: inherit; text-decoration: inherit;">File<wbr>Name<wbr>Regex</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -344,7 +374,9 @@ The ProjectPushRules resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>File<wbr>Size</span>
+        <span id="maxfilesize_go">
+<a href="#maxfilesize_go" style="color: inherit; text-decoration: inherit;">Max<wbr>File<wbr>Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -353,7 +385,9 @@ The ProjectPushRules resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>Member<wbr>Check</span>
+        <span id="membercheck_go">
+<a href="#membercheck_go" style="color: inherit; text-decoration: inherit;">Member<wbr>Check</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -362,7 +396,9 @@ The ProjectPushRules resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>Prevent<wbr>Secrets</span>
+        <span id="preventsecrets_go">
+<a href="#preventsecrets_go" style="color: inherit; text-decoration: inherit;">Prevent<wbr>Secrets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -378,7 +414,9 @@ The ProjectPushRules resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-required"
             title="Required">
-        <span>project</span>
+        <span id="project_nodejs">
+<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -387,7 +425,9 @@ The ProjectPushRules resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>author<wbr>Email<wbr>Regex</span>
+        <span id="authoremailregex_nodejs">
+<a href="#authoremailregex_nodejs" style="color: inherit; text-decoration: inherit;">author<wbr>Email<wbr>Regex</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -396,7 +436,9 @@ The ProjectPushRules resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>branch<wbr>Name<wbr>Regex</span>
+        <span id="branchnameregex_nodejs">
+<a href="#branchnameregex_nodejs" style="color: inherit; text-decoration: inherit;">branch<wbr>Name<wbr>Regex</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -405,7 +447,9 @@ The ProjectPushRules resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>commit<wbr>Message<wbr>Regex</span>
+        <span id="commitmessageregex_nodejs">
+<a href="#commitmessageregex_nodejs" style="color: inherit; text-decoration: inherit;">commit<wbr>Message<wbr>Regex</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -414,7 +458,9 @@ The ProjectPushRules resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>deny<wbr>Delete<wbr>Tag</span>
+        <span id="denydeletetag_nodejs">
+<a href="#denydeletetag_nodejs" style="color: inherit; text-decoration: inherit;">deny<wbr>Delete<wbr>Tag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -423,7 +469,9 @@ The ProjectPushRules resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>file<wbr>Name<wbr>Regex</span>
+        <span id="filenameregex_nodejs">
+<a href="#filenameregex_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Name<wbr>Regex</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -432,7 +480,9 @@ The ProjectPushRules resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>File<wbr>Size</span>
+        <span id="maxfilesize_nodejs">
+<a href="#maxfilesize_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>File<wbr>Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -441,7 +491,9 @@ The ProjectPushRules resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>member<wbr>Check</span>
+        <span id="membercheck_nodejs">
+<a href="#membercheck_nodejs" style="color: inherit; text-decoration: inherit;">member<wbr>Check</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -450,7 +502,9 @@ The ProjectPushRules resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>prevent<wbr>Secrets</span>
+        <span id="preventsecrets_nodejs">
+<a href="#preventsecrets_nodejs" style="color: inherit; text-decoration: inherit;">prevent<wbr>Secrets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -466,7 +520,9 @@ The ProjectPushRules resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-required"
             title="Required">
-        <span>project</span>
+        <span id="project_python">
+<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -475,7 +531,9 @@ The ProjectPushRules resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>author_<wbr>email_<wbr>regex</span>
+        <span id="author_email_regex_python">
+<a href="#author_email_regex_python" style="color: inherit; text-decoration: inherit;">author_<wbr>email_<wbr>regex</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -484,7 +542,9 @@ The ProjectPushRules resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>branch_<wbr>name_<wbr>regex</span>
+        <span id="branch_name_regex_python">
+<a href="#branch_name_regex_python" style="color: inherit; text-decoration: inherit;">branch_<wbr>name_<wbr>regex</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -493,7 +553,9 @@ The ProjectPushRules resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>commit_<wbr>message_<wbr>regex</span>
+        <span id="commit_message_regex_python">
+<a href="#commit_message_regex_python" style="color: inherit; text-decoration: inherit;">commit_<wbr>message_<wbr>regex</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -502,7 +564,9 @@ The ProjectPushRules resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>deny_<wbr>delete_<wbr>tag</span>
+        <span id="deny_delete_tag_python">
+<a href="#deny_delete_tag_python" style="color: inherit; text-decoration: inherit;">deny_<wbr>delete_<wbr>tag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -511,7 +575,9 @@ The ProjectPushRules resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>file_<wbr>name_<wbr>regex</span>
+        <span id="file_name_regex_python">
+<a href="#file_name_regex_python" style="color: inherit; text-decoration: inherit;">file_<wbr>name_<wbr>regex</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -520,7 +586,9 @@ The ProjectPushRules resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>max_<wbr>file_<wbr>size</span>
+        <span id="max_file_size_python">
+<a href="#max_file_size_python" style="color: inherit; text-decoration: inherit;">max_<wbr>file_<wbr>size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -529,7 +597,9 @@ The ProjectPushRules resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>member_<wbr>check</span>
+        <span id="member_check_python">
+<a href="#member_check_python" style="color: inherit; text-decoration: inherit;">member_<wbr>check</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -538,7 +608,9 @@ The ProjectPushRules resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-optional"
             title="Optional">
-        <span>prevent_<wbr>secrets</span>
+        <span id="prevent_secrets_python">
+<a href="#prevent_secrets_python" style="color: inherit; text-decoration: inherit;">prevent_<wbr>secrets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -565,7 +637,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -580,7 +654,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -595,7 +671,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -610,7 +688,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -751,7 +831,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Author<wbr>Email<wbr>Regex</span>
+        <span id="state_authoremailregex_csharp">
+<a href="#state_authoremailregex_csharp" style="color: inherit; text-decoration: inherit;">Author<wbr>Email<wbr>Regex</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -760,7 +842,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Branch<wbr>Name<wbr>Regex</span>
+        <span id="state_branchnameregex_csharp">
+<a href="#state_branchnameregex_csharp" style="color: inherit; text-decoration: inherit;">Branch<wbr>Name<wbr>Regex</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -769,7 +853,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Commit<wbr>Message<wbr>Regex</span>
+        <span id="state_commitmessageregex_csharp">
+<a href="#state_commitmessageregex_csharp" style="color: inherit; text-decoration: inherit;">Commit<wbr>Message<wbr>Regex</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -778,7 +864,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Deny<wbr>Delete<wbr>Tag</span>
+        <span id="state_denydeletetag_csharp">
+<a href="#state_denydeletetag_csharp" style="color: inherit; text-decoration: inherit;">Deny<wbr>Delete<wbr>Tag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -787,7 +875,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>File<wbr>Name<wbr>Regex</span>
+        <span id="state_filenameregex_csharp">
+<a href="#state_filenameregex_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>Name<wbr>Regex</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -796,7 +886,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>File<wbr>Size</span>
+        <span id="state_maxfilesize_csharp">
+<a href="#state_maxfilesize_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>File<wbr>Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -805,7 +897,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Member<wbr>Check</span>
+        <span id="state_membercheck_csharp">
+<a href="#state_membercheck_csharp" style="color: inherit; text-decoration: inherit;">Member<wbr>Check</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -814,7 +908,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Prevent<wbr>Secrets</span>
+        <span id="state_preventsecrets_csharp">
+<a href="#state_preventsecrets_csharp" style="color: inherit; text-decoration: inherit;">Prevent<wbr>Secrets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -823,7 +919,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project</span>
+        <span id="state_project_csharp">
+<a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -839,7 +937,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Author<wbr>Email<wbr>Regex</span>
+        <span id="state_authoremailregex_go">
+<a href="#state_authoremailregex_go" style="color: inherit; text-decoration: inherit;">Author<wbr>Email<wbr>Regex</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -848,7 +948,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Branch<wbr>Name<wbr>Regex</span>
+        <span id="state_branchnameregex_go">
+<a href="#state_branchnameregex_go" style="color: inherit; text-decoration: inherit;">Branch<wbr>Name<wbr>Regex</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -857,7 +959,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Commit<wbr>Message<wbr>Regex</span>
+        <span id="state_commitmessageregex_go">
+<a href="#state_commitmessageregex_go" style="color: inherit; text-decoration: inherit;">Commit<wbr>Message<wbr>Regex</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -866,7 +970,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Deny<wbr>Delete<wbr>Tag</span>
+        <span id="state_denydeletetag_go">
+<a href="#state_denydeletetag_go" style="color: inherit; text-decoration: inherit;">Deny<wbr>Delete<wbr>Tag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -875,7 +981,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>File<wbr>Name<wbr>Regex</span>
+        <span id="state_filenameregex_go">
+<a href="#state_filenameregex_go" style="color: inherit; text-decoration: inherit;">File<wbr>Name<wbr>Regex</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -884,7 +992,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>File<wbr>Size</span>
+        <span id="state_maxfilesize_go">
+<a href="#state_maxfilesize_go" style="color: inherit; text-decoration: inherit;">Max<wbr>File<wbr>Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -893,7 +1003,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Member<wbr>Check</span>
+        <span id="state_membercheck_go">
+<a href="#state_membercheck_go" style="color: inherit; text-decoration: inherit;">Member<wbr>Check</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -902,7 +1014,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Prevent<wbr>Secrets</span>
+        <span id="state_preventsecrets_go">
+<a href="#state_preventsecrets_go" style="color: inherit; text-decoration: inherit;">Prevent<wbr>Secrets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -911,7 +1025,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project</span>
+        <span id="state_project_go">
+<a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -927,7 +1043,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>author<wbr>Email<wbr>Regex</span>
+        <span id="state_authoremailregex_nodejs">
+<a href="#state_authoremailregex_nodejs" style="color: inherit; text-decoration: inherit;">author<wbr>Email<wbr>Regex</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -936,7 +1054,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>branch<wbr>Name<wbr>Regex</span>
+        <span id="state_branchnameregex_nodejs">
+<a href="#state_branchnameregex_nodejs" style="color: inherit; text-decoration: inherit;">branch<wbr>Name<wbr>Regex</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -945,7 +1065,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>commit<wbr>Message<wbr>Regex</span>
+        <span id="state_commitmessageregex_nodejs">
+<a href="#state_commitmessageregex_nodejs" style="color: inherit; text-decoration: inherit;">commit<wbr>Message<wbr>Regex</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -954,7 +1076,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>deny<wbr>Delete<wbr>Tag</span>
+        <span id="state_denydeletetag_nodejs">
+<a href="#state_denydeletetag_nodejs" style="color: inherit; text-decoration: inherit;">deny<wbr>Delete<wbr>Tag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -963,7 +1087,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>file<wbr>Name<wbr>Regex</span>
+        <span id="state_filenameregex_nodejs">
+<a href="#state_filenameregex_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Name<wbr>Regex</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -972,7 +1098,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>File<wbr>Size</span>
+        <span id="state_maxfilesize_nodejs">
+<a href="#state_maxfilesize_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>File<wbr>Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -981,7 +1109,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>member<wbr>Check</span>
+        <span id="state_membercheck_nodejs">
+<a href="#state_membercheck_nodejs" style="color: inherit; text-decoration: inherit;">member<wbr>Check</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -990,7 +1120,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>prevent<wbr>Secrets</span>
+        <span id="state_preventsecrets_nodejs">
+<a href="#state_preventsecrets_nodejs" style="color: inherit; text-decoration: inherit;">prevent<wbr>Secrets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -999,7 +1131,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>project</span>
+        <span id="state_project_nodejs">
+<a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1015,7 +1149,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>author_<wbr>email_<wbr>regex</span>
+        <span id="state_author_email_regex_python">
+<a href="#state_author_email_regex_python" style="color: inherit; text-decoration: inherit;">author_<wbr>email_<wbr>regex</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1024,7 +1160,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>branch_<wbr>name_<wbr>regex</span>
+        <span id="state_branch_name_regex_python">
+<a href="#state_branch_name_regex_python" style="color: inherit; text-decoration: inherit;">branch_<wbr>name_<wbr>regex</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1033,7 +1171,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>commit_<wbr>message_<wbr>regex</span>
+        <span id="state_commit_message_regex_python">
+<a href="#state_commit_message_regex_python" style="color: inherit; text-decoration: inherit;">commit_<wbr>message_<wbr>regex</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1042,7 +1182,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>deny_<wbr>delete_<wbr>tag</span>
+        <span id="state_deny_delete_tag_python">
+<a href="#state_deny_delete_tag_python" style="color: inherit; text-decoration: inherit;">deny_<wbr>delete_<wbr>tag</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1051,7 +1193,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>file_<wbr>name_<wbr>regex</span>
+        <span id="state_file_name_regex_python">
+<a href="#state_file_name_regex_python" style="color: inherit; text-decoration: inherit;">file_<wbr>name_<wbr>regex</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1060,7 +1204,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>max_<wbr>file_<wbr>size</span>
+        <span id="state_max_file_size_python">
+<a href="#state_max_file_size_python" style="color: inherit; text-decoration: inherit;">max_<wbr>file_<wbr>size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1069,7 +1215,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>member_<wbr>check</span>
+        <span id="state_member_check_python">
+<a href="#state_member_check_python" style="color: inherit; text-decoration: inherit;">member_<wbr>check</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1078,7 +1226,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>prevent_<wbr>secrets</span>
+        <span id="state_prevent_secrets_python">
+<a href="#state_prevent_secrets_python" style="color: inherit; text-decoration: inherit;">prevent_<wbr>secrets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1087,7 +1237,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>project</span>
+        <span id="state_project_python">
+<a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
