@@ -51,7 +51,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Instance<wbr>Id</span>
+        <span id="instanceid_csharp">
+<a href="#instanceid_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -59,7 +61,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Plugins</span>
+        <span id="plugins_csharp">
+<a href="#plugins_csharp" style="color: inherit; text-decoration: inherit;">Plugins</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getpluginscommunityplugin">List&lt;Pulumi.<wbr>Cloud<wbr>Amqp.<wbr>Inputs.<wbr>Get<wbr>Plugins<wbr>Community<wbr>Plugin<wbr>Args&gt;</a></span>
     </dt>
@@ -74,7 +78,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Instance<wbr>Id</span>
+        <span id="instanceid_go">
+<a href="#instanceid_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -82,7 +88,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Plugins</span>
+        <span id="plugins_go">
+<a href="#plugins_go" style="color: inherit; text-decoration: inherit;">Plugins</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getpluginscommunityplugin">[]Get<wbr>Plugins<wbr>Community<wbr>Plugin</a></span>
     </dt>
@@ -97,7 +105,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>instance<wbr>Id</span>
+        <span id="instanceid_nodejs">
+<a href="#instanceid_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -105,7 +115,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>plugins</span>
+        <span id="plugins_nodejs">
+<a href="#plugins_nodejs" style="color: inherit; text-decoration: inherit;">plugins</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getpluginscommunityplugin">Get<wbr>Plugins<wbr>Community<wbr>Plugin[]</a></span>
     </dt>
@@ -120,7 +132,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>instance_<wbr>id</span>
+        <span id="instance_id_python">
+<a href="#instance_id_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -128,7 +142,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>plugins</span>
+        <span id="plugins_python">
+<a href="#plugins_python" style="color: inherit; text-decoration: inherit;">plugins</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getpluginscommunityplugin">List[Get<wbr>Plugins<wbr>Community<wbr>Plugin]</a></span>
     </dt>
@@ -156,7 +172,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -165,7 +183,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Instance<wbr>Id</span>
+        <span id="instanceid_csharp">
+<a href="#instanceid_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -173,7 +193,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Plugins</span>
+        <span id="plugins_csharp">
+<a href="#plugins_csharp" style="color: inherit; text-decoration: inherit;">Plugins</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getpluginscommunityplugin">List&lt;Pulumi.<wbr>Cloud<wbr>Amqp.<wbr>Outputs.<wbr>Get<wbr>Plugins<wbr>Community<wbr>Plugin&gt;</a></span>
     </dt>
@@ -188,7 +210,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -197,7 +221,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Instance<wbr>Id</span>
+        <span id="instanceid_go">
+<a href="#instanceid_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -205,7 +231,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Plugins</span>
+        <span id="plugins_go">
+<a href="#plugins_go" style="color: inherit; text-decoration: inherit;">Plugins</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getpluginscommunityplugin">[]Get<wbr>Plugins<wbr>Community<wbr>Plugin</a></span>
     </dt>
@@ -220,7 +248,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -229,7 +259,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>instance<wbr>Id</span>
+        <span id="instanceid_nodejs">
+<a href="#instanceid_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -237,7 +269,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>plugins</span>
+        <span id="plugins_nodejs">
+<a href="#plugins_nodejs" style="color: inherit; text-decoration: inherit;">plugins</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getpluginscommunityplugin">Get<wbr>Plugins<wbr>Community<wbr>Plugin[]</a></span>
     </dt>
@@ -252,7 +286,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -261,7 +297,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>instance_<wbr>id</span>
+        <span id="instance_id_python">
+<a href="#instance_id_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -269,7 +307,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>plugins</span>
+        <span id="plugins_python">
+<a href="#plugins_python" style="color: inherit; text-decoration: inherit;">plugins</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getpluginscommunityplugin">List[Get<wbr>Plugins<wbr>Community<wbr>Plugin]</a></span>
     </dt>
@@ -308,7 +348,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -316,7 +358,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -324,7 +368,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Require</span>
+        <span id="require_csharp">
+<a href="#require_csharp" style="color: inherit; text-decoration: inherit;">Require</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -339,7 +385,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -347,7 +395,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -355,7 +405,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Require</span>
+        <span id="require_go">
+<a href="#require_go" style="color: inherit; text-decoration: inherit;">Require</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -370,7 +422,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -378,7 +432,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -386,7 +442,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>require</span>
+        <span id="require_nodejs">
+<a href="#require_nodejs" style="color: inherit; text-decoration: inherit;">require</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -401,7 +459,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -409,7 +469,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -417,7 +479,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>require</span>
+        <span id="require_python">
+<a href="#require_python" style="color: inherit; text-decoration: inherit;">require</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
