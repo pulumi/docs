@@ -86,6 +86,42 @@ regiondisk = gcp.compute.RegionDisk("regiondisk",
         "us-central1-f",
     ])
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var disk = new Gcp.Compute.Disk("disk", new Gcp.Compute.DiskArgs
+        {
+            Image = "debian-cloud/debian-9",
+            Size = 50,
+            Type = "pd-ssd",
+            Zone = "us-central1-a",
+        });
+        var snapdisk = new Gcp.Compute.Snapshot("snapdisk", new Gcp.Compute.SnapshotArgs
+        {
+            SourceDisk = disk.Name,
+            Zone = "us-central1-a",
+        });
+        var regiondisk = new Gcp.Compute.RegionDisk("regiondisk", new Gcp.Compute.RegionDiskArgs
+        {
+            Snapshot = snapdisk.Id,
+            Type = "pd-ssd",
+            Region = "us-central1",
+            PhysicalBlockSizeBytes = 4096,
+            ReplicaZones = 
+            {
+                "us-central1-a",
+                "us-central1-f",
+            },
+        });
+    }
+
+}
+```
 
 
 

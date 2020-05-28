@@ -55,6 +55,27 @@ tcp_health_check = gcp.compute.HealthCheck("tcp-health-check",
     },
     timeout_sec=1)
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var tcp_health_check = new Gcp.Compute.HealthCheck("tcp-health-check", new Gcp.Compute.HealthCheckArgs
+        {
+            CheckIntervalSec = 1,
+            TcpHealthCheck = new Gcp.Compute.Inputs.HealthCheckTcpHealthCheckArgs
+            {
+                Port = "80",
+            },
+            TimeoutSec = 1,
+        });
+    }
+
+}
+```
 ## Example Usage - Health Check Tcp Full
 
 
@@ -95,6 +116,34 @@ tcp_health_check = gcp.compute.HealthCheck("tcp-health-check",
     timeout_sec=1,
     unhealthy_threshold=5)
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var tcp_health_check = new Gcp.Compute.HealthCheck("tcp-health-check", new Gcp.Compute.HealthCheckArgs
+        {
+            CheckIntervalSec = 1,
+            Description = "Health check via tcp",
+            HealthyThreshold = 4,
+            TcpHealthCheck = new Gcp.Compute.Inputs.HealthCheckTcpHealthCheckArgs
+            {
+                PortName = "health-check-port",
+                PortSpecification = "USE_NAMED_PORT",
+                ProxyHeader = "NONE",
+                Request = "ARE YOU HEALTHY?",
+                Response = "I AM HEALTHY",
+            },
+            TimeoutSec = 1,
+            UnhealthyThreshold = 5,
+        });
+    }
+
+}
+```
 ## Example Usage - Health Check Ssl
 
 
@@ -120,6 +169,27 @@ ssl_health_check = gcp.compute.HealthCheck("ssl-health-check",
         "port": "443",
     },
     timeout_sec=1)
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var ssl_health_check = new Gcp.Compute.HealthCheck("ssl-health-check", new Gcp.Compute.HealthCheckArgs
+        {
+            CheckIntervalSec = 1,
+            SslHealthCheck = new Gcp.Compute.Inputs.HealthCheckSslHealthCheckArgs
+            {
+                Port = "443",
+            },
+            TimeoutSec = 1,
+        });
+    }
+
+}
 ```
 ## Example Usage - Health Check Ssl Full
 
@@ -161,6 +231,34 @@ ssl_health_check = gcp.compute.HealthCheck("ssl-health-check",
     timeout_sec=1,
     unhealthy_threshold=5)
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var ssl_health_check = new Gcp.Compute.HealthCheck("ssl-health-check", new Gcp.Compute.HealthCheckArgs
+        {
+            CheckIntervalSec = 1,
+            Description = "Health check via ssl",
+            HealthyThreshold = 4,
+            SslHealthCheck = new Gcp.Compute.Inputs.HealthCheckSslHealthCheckArgs
+            {
+                PortName = "health-check-port",
+                PortSpecification = "USE_NAMED_PORT",
+                ProxyHeader = "NONE",
+                Request = "ARE YOU HEALTHY?",
+                Response = "I AM HEALTHY",
+            },
+            TimeoutSec = 1,
+            UnhealthyThreshold = 5,
+        });
+    }
+
+}
+```
 ## Example Usage - Health Check Http
 
 
@@ -186,6 +284,27 @@ http_health_check = gcp.compute.HealthCheck("http-health-check",
         "port": 80,
     },
     timeout_sec=1)
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var http_health_check = new Gcp.Compute.HealthCheck("http-health-check", new Gcp.Compute.HealthCheckArgs
+        {
+            CheckIntervalSec = 1,
+            HttpHealthCheck = new Gcp.Compute.Inputs.HealthCheckHttpHealthCheckArgs
+            {
+                Port = 80,
+            },
+            TimeoutSec = 1,
+        });
+    }
+
+}
 ```
 ## Example Usage - Health Check Http Full
 
@@ -229,6 +348,35 @@ http_health_check = gcp.compute.HealthCheck("http-health-check",
     timeout_sec=1,
     unhealthy_threshold=5)
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var http_health_check = new Gcp.Compute.HealthCheck("http-health-check", new Gcp.Compute.HealthCheckArgs
+        {
+            CheckIntervalSec = 1,
+            Description = "Health check via http",
+            HealthyThreshold = 4,
+            HttpHealthCheck = new Gcp.Compute.Inputs.HealthCheckHttpHealthCheckArgs
+            {
+                Host = "1.2.3.4",
+                PortName = "health-check-port",
+                PortSpecification = "USE_NAMED_PORT",
+                ProxyHeader = "NONE",
+                RequestPath = "/mypath",
+                Response = "I AM HEALTHY",
+            },
+            TimeoutSec = 1,
+            UnhealthyThreshold = 5,
+        });
+    }
+
+}
+```
 ## Example Usage - Health Check Https
 
 
@@ -254,6 +402,27 @@ https_health_check = gcp.compute.HealthCheck("https-health-check",
         "port": "443",
     },
     timeout_sec=1)
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var https_health_check = new Gcp.Compute.HealthCheck("https-health-check", new Gcp.Compute.HealthCheckArgs
+        {
+            CheckIntervalSec = 1,
+            HttpsHealthCheck = new Gcp.Compute.Inputs.HealthCheckHttpsHealthCheckArgs
+            {
+                Port = "443",
+            },
+            TimeoutSec = 1,
+        });
+    }
+
+}
 ```
 ## Example Usage - Health Check Https Full
 
@@ -297,6 +466,35 @@ https_health_check = gcp.compute.HealthCheck("https-health-check",
     timeout_sec=1,
     unhealthy_threshold=5)
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var https_health_check = new Gcp.Compute.HealthCheck("https-health-check", new Gcp.Compute.HealthCheckArgs
+        {
+            CheckIntervalSec = 1,
+            Description = "Health check via https",
+            HealthyThreshold = 4,
+            HttpsHealthCheck = new Gcp.Compute.Inputs.HealthCheckHttpsHealthCheckArgs
+            {
+                Host = "1.2.3.4",
+                PortName = "health-check-port",
+                PortSpecification = "USE_NAMED_PORT",
+                ProxyHeader = "NONE",
+                RequestPath = "/mypath",
+                Response = "I AM HEALTHY",
+            },
+            TimeoutSec = 1,
+            UnhealthyThreshold = 5,
+        });
+    }
+
+}
+```
 ## Example Usage - Health Check Http2
 
 
@@ -322,6 +520,27 @@ http2_health_check = gcp.compute.HealthCheck("http2-health-check",
         "port": "443",
     },
     timeout_sec=1)
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var http2_health_check = new Gcp.Compute.HealthCheck("http2-health-check", new Gcp.Compute.HealthCheckArgs
+        {
+            CheckIntervalSec = 1,
+            Http2HealthCheck = new Gcp.Compute.Inputs.HealthCheckHttp2HealthCheckArgs
+            {
+                Port = "443",
+            },
+            TimeoutSec = 1,
+        });
+    }
+
+}
 ```
 ## Example Usage - Health Check Http2 Full
 
@@ -365,37 +584,34 @@ http2_health_check = gcp.compute.HealthCheck("http2-health-check",
     timeout_sec=1,
     unhealthy_threshold=5)
 ```
-## Example Usage - Health Check With Logging
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
 
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var http2_health_check = new Gcp.Compute.HealthCheck("http2-health-check", new Gcp.Compute.HealthCheckArgs
+        {
+            CheckIntervalSec = 1,
+            Description = "Health check via http2",
+            HealthyThreshold = 4,
+            Http2HealthCheck = new Gcp.Compute.Inputs.HealthCheckHttp2HealthCheckArgs
+            {
+                Host = "1.2.3.4",
+                PortName = "health-check-port",
+                PortSpecification = "USE_NAMED_PORT",
+                ProxyHeader = "NONE",
+                RequestPath = "/mypath",
+                Response = "I AM HEALTHY",
+            },
+            TimeoutSec = 1,
+            UnhealthyThreshold = 5,
+        });
+    }
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const health-check-with-logging = new gcp.compute.HealthCheck("health-check-with-logging", {
-    timeoutSec: 1,
-    checkIntervalSec: 1,
-    tcp_health_check: {
-        port: "22",
-    },
-    log_config: {
-        enable: true,
-    },
-});
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-health_check_with_logging = gcp.compute.HealthCheck("health-check-with-logging",
-    timeout_sec=1,
-    check_interval_sec=1,
-    tcp_health_check={
-        "port": "22",
-    },
-    log_config={
-        "enable": True,
-    })
+}
 ```
 
 

@@ -55,6 +55,39 @@ policy = gcp.compute.InstanceIAMPolicy("policy",
     instance_name=google_compute_instance["default"]["name"],
     policy_data=admin.policy_data)
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+        {
+            Binding = 
+            {
+                
+                {
+                    { "role", "roles/compute.osLogin" },
+                    { "members", 
+                    {
+                        "user:jane@example.com",
+                    } },
+                },
+            },
+        }));
+        var policy = new Gcp.Compute.InstanceIAMPolicy("policy", new Gcp.Compute.InstanceIAMPolicyArgs
+        {
+            Project = google_compute_instance.Default.Project,
+            Zone = google_compute_instance.Default.Zone,
+            InstanceName = google_compute_instance.Default.Name,
+            PolicyData = admin.Apply(admin => admin.PolicyData),
+        });
+    }
+
+}
+```
 
 With IAM Conditions:
 
@@ -99,6 +132,45 @@ policy = gcp.compute.InstanceIAMPolicy("policy",
     instance_name=google_compute_instance["default"]["name"],
     policy_data=admin.policy_data)
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+        {
+            Binding = 
+            {
+                
+                {
+                    { "role", "roles/compute.osLogin" },
+                    { "members", 
+                    {
+                        "user:jane@example.com",
+                    } },
+                    { "condition", 
+                    {
+                        { "title", "expires_after_2019_12_31" },
+                        { "description", "Expiring at midnight of 2019-12-31" },
+                        { "expression", "request.time < timestamp(\"2020-01-01T00:00:00Z\")" },
+                    } },
+                },
+            },
+        }));
+        var policy = new Gcp.Compute.InstanceIAMPolicy("policy", new Gcp.Compute.InstanceIAMPolicyArgs
+        {
+            Project = google_compute_instance.Default.Project,
+            Zone = google_compute_instance.Default.Zone,
+            InstanceName = google_compute_instance.Default.Name,
+            PolicyData = admin.Apply(admin => admin.PolicyData),
+        });
+    }
+
+}
+```
 ## google\_compute\_instance\_iam\_binding
 
 ```typescript
@@ -123,6 +195,29 @@ binding = gcp.compute.InstanceIAMBinding("binding",
     instance_name=google_compute_instance["default"]["name"],
     role="roles/compute.osLogin",
     members=["user:jane@example.com"])
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var binding = new Gcp.Compute.InstanceIAMBinding("binding", new Gcp.Compute.InstanceIAMBindingArgs
+        {
+            Project = google_compute_instance.Default.Project,
+            Zone = google_compute_instance.Default.Zone,
+            InstanceName = google_compute_instance.Default.Name,
+            Role = "roles/compute.osLogin",
+            Members = 
+            {
+                "user:jane@example.com",
+            },
+        });
+    }
+
+}
 ```
 
 With IAM Conditions:
@@ -160,6 +255,35 @@ binding = gcp.compute.InstanceIAMBinding("binding",
         "expression": "request.time < timestamp(\"2020-01-01T00:00:00Z\")",
     })
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var binding = new Gcp.Compute.InstanceIAMBinding("binding", new Gcp.Compute.InstanceIAMBindingArgs
+        {
+            Project = google_compute_instance.Default.Project,
+            Zone = google_compute_instance.Default.Zone,
+            InstanceName = google_compute_instance.Default.Name,
+            Role = "roles/compute.osLogin",
+            Members = 
+            {
+                "user:jane@example.com",
+            },
+            Condition = new Gcp.Compute.Inputs.InstanceIAMBindingConditionArgs
+            {
+                Title = "expires_after_2019_12_31",
+                Description = "Expiring at midnight of 2019-12-31",
+                Expression = "request.time < timestamp(\"2020-01-01T00:00:00Z\")",
+            },
+        });
+    }
+
+}
+```
 ## google\_compute\_instance\_iam\_member
 
 ```typescript
@@ -184,6 +308,26 @@ member = gcp.compute.InstanceIAMMember("member",
     instance_name=google_compute_instance["default"]["name"],
     role="roles/compute.osLogin",
     member="user:jane@example.com")
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var member = new Gcp.Compute.InstanceIAMMember("member", new Gcp.Compute.InstanceIAMMemberArgs
+        {
+            Project = google_compute_instance.Default.Project,
+            Zone = google_compute_instance.Default.Zone,
+            InstanceName = google_compute_instance.Default.Name,
+            Role = "roles/compute.osLogin",
+            Member = "user:jane@example.com",
+        });
+    }
+
+}
 ```
 
 With IAM Conditions:
@@ -220,6 +364,32 @@ member = gcp.compute.InstanceIAMMember("member",
         "description": "Expiring at midnight of 2019-12-31",
         "expression": "request.time < timestamp(\"2020-01-01T00:00:00Z\")",
     })
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var member = new Gcp.Compute.InstanceIAMMember("member", new Gcp.Compute.InstanceIAMMemberArgs
+        {
+            Project = google_compute_instance.Default.Project,
+            Zone = google_compute_instance.Default.Zone,
+            InstanceName = google_compute_instance.Default.Name,
+            Role = "roles/compute.osLogin",
+            Member = "user:jane@example.com",
+            Condition = new Gcp.Compute.Inputs.InstanceIAMMemberConditionArgs
+            {
+                Title = "expires_after_2019_12_31",
+                Description = "Expiring at midnight of 2019-12-31",
+                Expression = "request.time < timestamp(\"2020-01-01T00:00:00Z\")",
+            },
+        });
+    }
+
+}
 ```
 
 

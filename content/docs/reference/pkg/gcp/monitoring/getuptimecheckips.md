@@ -21,7 +21,22 @@ the [official documentation](https://cloud.google.com/monitoring/uptime-checks#g
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var ips = Output.Create(Gcp.Monitoring.GetUptimeCheckIPs.InvokeAsync());
+        this.IpList = ips.Apply(ips => ips.UptimeCheckIps);
+    }
+
+    [Output("ipList")]
+    public Output<string> IpList { get; set; }
+}
+```
 {{% /example %}}
 
 {{% example go %}}

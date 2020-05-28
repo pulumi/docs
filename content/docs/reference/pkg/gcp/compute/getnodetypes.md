@@ -21,7 +21,27 @@ for a given project. For more information, see [the official documentation](http
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var central1b = Output.Create(Gcp.Compute.GetNodeTypes.InvokeAsync(new Gcp.Compute.GetNodeTypesArgs
+        {
+            Zone = "us-central1-b",
+        }));
+        var tmpl = new Gcp.Compute.NodeTemplate("tmpl", new Gcp.Compute.NodeTemplateArgs
+        {
+            Region = "us-central1",
+            NodeType = data.Google_compute_node_types.Types.Names[0],
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

@@ -54,6 +54,38 @@ database = gcp.spanner.DatabaseIAMPolicy("database",
     database="your-database-name",
     policy_data=admin.policy_data)
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+        {
+            Binding = 
+            {
+                
+                {
+                    { "role", "roles/editor" },
+                    { "members", 
+                    {
+                        "user:jane@example.com",
+                    } },
+                },
+            },
+        }));
+        var database = new Gcp.Spanner.DatabaseIAMPolicy("database", new Gcp.Spanner.DatabaseIAMPolicyArgs
+        {
+            Instance = "your-instance-name",
+            Database = "your-database-name",
+            PolicyData = admin.Apply(admin => admin.PolicyData),
+        });
+    }
+
+}
+```
 
 ## google\_spanner\_database\_iam\_binding
 
@@ -78,6 +110,28 @@ database = gcp.spanner.DatabaseIAMBinding("database",
     members=["user:jane@example.com"],
     role="roles/compute.networkUser")
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var database = new Gcp.Spanner.DatabaseIAMBinding("database", new Gcp.Spanner.DatabaseIAMBindingArgs
+        {
+            Database = "your-database-name",
+            Instance = "your-instance-name",
+            Members = 
+            {
+                "user:jane@example.com",
+            },
+            Role = "roles/compute.networkUser",
+        });
+    }
+
+}
+```
 
 ## google\_spanner\_database\_iam\_member
 
@@ -101,6 +155,25 @@ database = gcp.spanner.DatabaseIAMMember("database",
     instance="your-instance-name",
     member="user:jane@example.com",
     role="roles/compute.networkUser")
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var database = new Gcp.Spanner.DatabaseIAMMember("database", new Gcp.Spanner.DatabaseIAMMemberArgs
+        {
+            Database = "your-database-name",
+            Instance = "your-instance-name",
+            Member = "user:jane@example.com",
+            Role = "roles/compute.networkUser",
+        });
+    }
+
+}
 ```
 
 

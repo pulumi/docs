@@ -51,6 +51,38 @@ policy = gcp.secretmanager.SecretIamPolicy("policy",
     secret_id=google_secret_manager_secret["secret-basic"]["secret_id"],
     policy_data=admin.policy_data)
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+        {
+            Binding = 
+            {
+                
+                {
+                    { "role", "roles/viewer" },
+                    { "members", 
+                    {
+                        "user:jane@example.com",
+                    } },
+                },
+            },
+        }));
+        var policy = new Gcp.SecretManager.SecretIamPolicy("policy", new Gcp.SecretManager.SecretIamPolicyArgs
+        {
+            Project = google_secret_manager_secret.Secret_basic.Project,
+            SecretId = google_secret_manager_secret.Secret_basic.Secret_id,
+            PolicyData = admin.Apply(admin => admin.PolicyData),
+        });
+    }
+
+}
+```
 
 ## google\_secret\_manager\_secret\_iam\_binding
 
@@ -75,6 +107,28 @@ binding = gcp.secretmanager.SecretIamBinding("binding",
     role="roles/viewer",
     members=["user:jane@example.com"])
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var binding = new Gcp.SecretManager.SecretIamBinding("binding", new Gcp.SecretManager.SecretIamBindingArgs
+        {
+            Project = google_secret_manager_secret.Secret_basic.Project,
+            SecretId = google_secret_manager_secret.Secret_basic.Secret_id,
+            Role = "roles/viewer",
+            Members = 
+            {
+                "user:jane@example.com",
+            },
+        });
+    }
+
+}
+```
 
 ## google\_secret\_manager\_secret\_iam\_member
 
@@ -98,6 +152,25 @@ member = gcp.secretmanager.SecretIamMember("member",
     secret_id=google_secret_manager_secret["secret-basic"]["secret_id"],
     role="roles/viewer",
     member="user:jane@example.com")
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var member = new Gcp.SecretManager.SecretIamMember("member", new Gcp.SecretManager.SecretIamMemberArgs
+        {
+            Project = google_secret_manager_secret.Secret_basic.Project,
+            SecretId = google_secret_manager_secret.Secret_basic.Secret_id,
+            Role = "roles/viewer",
+            Member = "user:jane@example.com",
+        });
+    }
+
+}
 ```
 
 

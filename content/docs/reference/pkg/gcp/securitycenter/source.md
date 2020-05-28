@@ -44,6 +44,24 @@ custom_source = gcp.securitycenter.Source("customSource",
     display_name="My Source",
     organization="123456789")
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var customSource = new Gcp.SecurityCenter.Source("customSource", new Gcp.SecurityCenter.SourceArgs
+        {
+            Description = "My custom Cloud Security Command Center Finding Source",
+            DisplayName = "My Source",
+            Organization = "123456789",
+        });
+    }
+
+}
+```
 
 
 

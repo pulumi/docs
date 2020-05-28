@@ -56,6 +56,46 @@ crypto_key = gcp.kms.CryptoKeyIAMPolicy("cryptoKey",
     crypto_key_id=key.id,
     policy_data=admin.policy_data)
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var keyring = new Gcp.Kms.KeyRing("keyring", new Gcp.Kms.KeyRingArgs
+        {
+            Location = "global",
+        });
+        var key = new Gcp.Kms.CryptoKey("key", new Gcp.Kms.CryptoKeyArgs
+        {
+            KeyRing = keyring.Id,
+            RotationPeriod = "100000s",
+        });
+        var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+        {
+            Binding = 
+            {
+                
+                {
+                    { "role", "roles/cloudkms.cryptoKeyEncrypter" },
+                    { "members", 
+                    {
+                        "user:jane@example.com",
+                    } },
+                },
+            },
+        }));
+        var cryptoKey = new Gcp.Kms.CryptoKeyIAMPolicy("cryptoKey", new Gcp.Kms.CryptoKeyIAMPolicyArgs
+        {
+            CryptoKeyId = key.Id,
+            PolicyData = admin.Apply(admin => admin.PolicyData),
+        });
+    }
+
+}
+```
 
 With IAM Conditions:
 
@@ -89,6 +129,38 @@ admin = gcp.organizations.get_iam_policy(bindings=[{
     "role": "roles/cloudkms.cryptoKeyEncrypter",
 }])
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+        {
+            Bindings = 
+            {
+                new Gcp.Organizations.Inputs.GetIAMPolicyBindingArgs
+                {
+                    Condition = new Gcp.Organizations.Inputs.GetIAMPolicyBindingConditionArgs
+                    {
+                        Description = "Expiring at midnight of 2019-12-31",
+                        Expression = "request.time < timestamp(\"2020-01-01T00:00:00Z\")",
+                        Title = "expires_after_2019_12_31",
+                    },
+                    Members = 
+                    {
+                        "user:jane@example.com",
+                    },
+                    Role = "roles/cloudkms.cryptoKeyEncrypter",
+                },
+            },
+        }));
+    }
+
+}
+```
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -108,6 +180,27 @@ crypto_key = gcp.kms.CryptoKeyIAMBinding("cryptoKey",
     crypto_key_id=google_kms_crypto_key["key"]["id"],
     role="roles/cloudkms.cryptoKeyEncrypter",
     members=["user:jane@example.com"])
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var cryptoKey = new Gcp.Kms.CryptoKeyIAMBinding("cryptoKey", new Gcp.Kms.CryptoKeyIAMBindingArgs
+        {
+            CryptoKeyId = google_kms_crypto_key.Key.Id,
+            Role = "roles/cloudkms.cryptoKeyEncrypter",
+            Members = 
+            {
+                "user:jane@example.com",
+            },
+        });
+    }
+
+}
 ```
 
 With IAM Conditions:
@@ -141,6 +234,33 @@ crypto_key = gcp.kms.CryptoKeyIAMBinding("cryptoKey",
         "expression": "request.time < timestamp(\"2020-01-01T00:00:00Z\")",
     })
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var cryptoKey = new Gcp.Kms.CryptoKeyIAMBinding("cryptoKey", new Gcp.Kms.CryptoKeyIAMBindingArgs
+        {
+            CryptoKeyId = google_kms_crypto_key.Key.Id,
+            Role = "roles/cloudkms.cryptoKeyEncrypter",
+            Members = 
+            {
+                "user:jane@example.com",
+            },
+            Condition = new Gcp.Kms.Inputs.CryptoKeyIAMBindingConditionArgs
+            {
+                Title = "expires_after_2019_12_31",
+                Description = "Expiring at midnight of 2019-12-31",
+                Expression = "request.time < timestamp(\"2020-01-01T00:00:00Z\")",
+            },
+        });
+    }
+
+}
+```
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -160,6 +280,24 @@ crypto_key = gcp.kms.CryptoKeyIAMMember("cryptoKey",
     crypto_key_id=google_kms_crypto_key["key"]["id"],
     role="roles/cloudkms.cryptoKeyEncrypter",
     member="user:jane@example.com")
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var cryptoKey = new Gcp.Kms.CryptoKeyIAMMember("cryptoKey", new Gcp.Kms.CryptoKeyIAMMemberArgs
+        {
+            CryptoKeyId = google_kms_crypto_key.Key.Id,
+            Role = "roles/cloudkms.cryptoKeyEncrypter",
+            Member = "user:jane@example.com",
+        });
+    }
+
+}
 ```
 
 With IAM Conditions:
@@ -192,6 +330,30 @@ crypto_key = gcp.kms.CryptoKeyIAMMember("cryptoKey",
         "description": "Expiring at midnight of 2019-12-31",
         "expression": "request.time < timestamp(\"2020-01-01T00:00:00Z\")",
     })
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var cryptoKey = new Gcp.Kms.CryptoKeyIAMMember("cryptoKey", new Gcp.Kms.CryptoKeyIAMMemberArgs
+        {
+            CryptoKeyId = google_kms_crypto_key.Key.Id,
+            Role = "roles/cloudkms.cryptoKeyEncrypter",
+            Member = "user:jane@example.com",
+            Condition = new Gcp.Kms.Inputs.CryptoKeyIAMMemberConditionArgs
+            {
+                Title = "expires_after_2019_12_31",
+                Description = "Expiring at midnight of 2019-12-31",
+                Expression = "request.time < timestamp(\"2020-01-01T00:00:00Z\")",
+            },
+        });
+    }
+
+}
 ```
 
 

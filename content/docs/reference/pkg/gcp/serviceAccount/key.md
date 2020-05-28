@@ -39,6 +39,28 @@ mykey = gcp.service_account.Key("mykey",
     service_account_id=myaccount.name,
     public_key_type="TYPE_X509_PEM_FILE")
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var myaccount = new Gcp.ServiceAccount.Account("myaccount", new Gcp.ServiceAccount.AccountArgs
+        {
+            AccountId = "myaccount",
+            DisplayName = "My Service Account",
+        });
+        var mykey = new Gcp.ServiceAccount.Key("mykey", new Gcp.ServiceAccount.KeyArgs
+        {
+            ServiceAccountId = myaccount.Name,
+            PublicKeyType = "TYPE_X509_PEM_FILE",
+        });
+    }
+
+}
+```
 
 
 

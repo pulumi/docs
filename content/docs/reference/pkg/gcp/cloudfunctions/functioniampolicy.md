@@ -55,6 +55,39 @@ policy = gcp.cloudfunctions.FunctionIamPolicy("policy",
     cloud_function=google_cloudfunctions_function["function"]["name"],
     policy_data=admin.policy_data)
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+        {
+            Binding = 
+            {
+                
+                {
+                    { "role", "roles/viewer" },
+                    { "members", 
+                    {
+                        "user:jane@example.com",
+                    } },
+                },
+            },
+        }));
+        var policy = new Gcp.CloudFunctions.FunctionIamPolicy("policy", new Gcp.CloudFunctions.FunctionIamPolicyArgs
+        {
+            Project = google_cloudfunctions_function.Function.Project,
+            Region = google_cloudfunctions_function.Function.Region,
+            CloudFunction = google_cloudfunctions_function.Function.Name,
+            PolicyData = admin.Apply(admin => admin.PolicyData),
+        });
+    }
+
+}
+```
 
 ## google\_cloudfunctions\_function\_iam\_binding
 
@@ -81,6 +114,29 @@ binding = gcp.cloudfunctions.FunctionIamBinding("binding",
     role="roles/viewer",
     members=["user:jane@example.com"])
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var binding = new Gcp.CloudFunctions.FunctionIamBinding("binding", new Gcp.CloudFunctions.FunctionIamBindingArgs
+        {
+            Project = google_cloudfunctions_function.Function.Project,
+            Region = google_cloudfunctions_function.Function.Region,
+            CloudFunction = google_cloudfunctions_function.Function.Name,
+            Role = "roles/viewer",
+            Members = 
+            {
+                "user:jane@example.com",
+            },
+        });
+    }
+
+}
+```
 
 ## google\_cloudfunctions\_function\_iam\_member
 
@@ -106,6 +162,26 @@ member = gcp.cloudfunctions.FunctionIamMember("member",
     cloud_function=google_cloudfunctions_function["function"]["name"],
     role="roles/viewer",
     member="user:jane@example.com")
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var member = new Gcp.CloudFunctions.FunctionIamMember("member", new Gcp.CloudFunctions.FunctionIamMemberArgs
+        {
+            Project = google_cloudfunctions_function.Function.Project,
+            Region = google_cloudfunctions_function.Function.Region,
+            CloudFunction = google_cloudfunctions_function.Function.Name,
+            Role = "roles/viewer",
+            Member = "user:jane@example.com",
+        });
+    }
+
+}
 ```
 
 

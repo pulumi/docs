@@ -30,7 +30,37 @@ role entity pairs.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var image_store = new Gcp.Storage.Bucket("image-store", new Gcp.Storage.BucketArgs
+        {
+            Location = "EU",
+        });
+        var image = new Gcp.Storage.BucketObject("image", new Gcp.Storage.BucketObjectArgs
+        {
+            Bucket = image_store.Name,
+            Source = new FileAsset("image1.jpg"),
+        });
+        var image_store_acl = new Gcp.Storage.ObjectACL("image-store-acl", new Gcp.Storage.ObjectACLArgs
+        {
+            Bucket = image_store.Name,
+            Object = image.OutputName,
+            RoleEntities = 
+            {
+                "OWNER:user-my.email@gmail.com",
+                "READER:group-mygroup",
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -61,13 +91,13 @@ image_store_acl = gcp.storage.ObjectACL("image-store-acl",
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const image-store = new gcp.storage.Bucket("image-store", {location: "EU"});
+const image_store = new gcp.storage.Bucket("image-store", {location: "EU"});
 const image = new gcp.storage.BucketObject("image", {
-    bucket: image-store.name,
+    bucket: image_store.name,
     source: new pulumi.asset.FileAsset("image1.jpg"),
 });
-const image-store-acl = new gcp.storage.ObjectACL("image-store-acl", {
-    bucket: image-store.name,
+const image_store_acl = new gcp.storage.ObjectACL("image-store-acl", {
+    bucket: image_store.name,
     object: image.outputName,
     roleEntities: [
         "OWNER:user-my.email@gmail.com",

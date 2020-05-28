@@ -53,6 +53,38 @@ policy = gcp.runtimeconfig.ConfigIamPolicy("policy",
     config=google_runtimeconfig_config["config"]["name"],
     policy_data=admin.policy_data)
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+        {
+            Binding = 
+            {
+                
+                {
+                    { "role", "roles/viewer" },
+                    { "members", 
+                    {
+                        "user:jane@example.com",
+                    } },
+                },
+            },
+        }));
+        var policy = new Gcp.RuntimeConfig.ConfigIamPolicy("policy", new Gcp.RuntimeConfig.ConfigIamPolicyArgs
+        {
+            Project = google_runtimeconfig_config.Config.Project,
+            Config = google_runtimeconfig_config.Config.Name,
+            PolicyData = admin.Apply(admin => admin.PolicyData),
+        });
+    }
+
+}
+```
 
 ## google\_runtimeconfig\_config\_iam\_binding
 
@@ -77,6 +109,28 @@ binding = gcp.runtimeconfig.ConfigIamBinding("binding",
     role="roles/viewer",
     members=["user:jane@example.com"])
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var binding = new Gcp.RuntimeConfig.ConfigIamBinding("binding", new Gcp.RuntimeConfig.ConfigIamBindingArgs
+        {
+            Project = google_runtimeconfig_config.Config.Project,
+            Config = google_runtimeconfig_config.Config.Name,
+            Role = "roles/viewer",
+            Members = 
+            {
+                "user:jane@example.com",
+            },
+        });
+    }
+
+}
+```
 
 ## google\_runtimeconfig\_config\_iam\_member
 
@@ -100,6 +154,25 @@ member = gcp.runtimeconfig.ConfigIamMember("member",
     config=google_runtimeconfig_config["config"]["name"],
     role="roles/viewer",
     member="user:jane@example.com")
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var member = new Gcp.RuntimeConfig.ConfigIamMember("member", new Gcp.RuntimeConfig.ConfigIamMemberArgs
+        {
+            Project = google_runtimeconfig_config.Config.Project,
+            Config = google_runtimeconfig_config.Config.Name,
+            Role = "roles/viewer",
+            Member = "user:jane@example.com",
+        });
+    }
+
+}
 ```
 
 

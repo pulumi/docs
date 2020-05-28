@@ -21,55 +21,6 @@ To get more information about TargetSslProxy, see:
 * How-to Guides
     * [Setting Up SSL proxy for Google Cloud Load Balancing](https://cloud.google.com/compute/docs/load-balancing/tcp-ssl/)
 
-## Example Usage - Target Ssl Proxy Basic
-
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-import * from "fs";
-
-const defaultSSLCertificate = new gcp.compute.SSLCertificate("defaultSSLCertificate", {
-    privateKey: fs.readFileSync("path/to/private.key"),
-    certificate: fs.readFileSync("path/to/certificate.crt"),
-});
-const defaultHealthCheck = new gcp.compute.HealthCheck("defaultHealthCheck", {
-    checkIntervalSec: 1,
-    timeoutSec: 1,
-    tcp_health_check: {
-        port: "443",
-    },
-});
-const defaultBackendService = new gcp.compute.BackendService("defaultBackendService", {
-    protocol: "SSL",
-    healthChecks: [defaultHealthCheck.id],
-});
-const defaultTargetSSLProxy = new gcp.compute.TargetSSLProxy("defaultTargetSSLProxy", {
-    backendService: defaultBackendService.id,
-    sslCertificates: [defaultSSLCertificate.id],
-});
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-default_ssl_certificate = gcp.compute.SSLCertificate("defaultSSLCertificate",
-    private_key=(lambda path: open(path).read())("path/to/private.key"),
-    certificate=(lambda path: open(path).read())("path/to/certificate.crt"))
-default_health_check = gcp.compute.HealthCheck("defaultHealthCheck",
-    check_interval_sec=1,
-    timeout_sec=1,
-    tcp_health_check={
-        "port": "443",
-    })
-default_backend_service = gcp.compute.BackendService("defaultBackendService",
-    protocol="SSL",
-    health_checks=[default_health_check.id])
-default_target_ssl_proxy = gcp.compute.TargetSSLProxy("defaultTargetSSLProxy",
-    backend_service=default_backend_service.id,
-    ssl_certificates=[default_ssl_certificate.id])
-```
-
 
 
 ## Create a TargetSSLProxy Resource {#create}

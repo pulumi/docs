@@ -70,6 +70,44 @@ http = gcp.monitoring.UptimeCheckConfig("http",
     },
     timeout="60s")
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var http = new Gcp.Monitoring.UptimeCheckConfig("http", new Gcp.Monitoring.UptimeCheckConfigArgs
+        {
+            ContentMatchers = 
+            {
+                new Gcp.Monitoring.Inputs.UptimeCheckConfigContentMatcherArgs
+                {
+                    Content = "example",
+                },
+            },
+            DisplayName = "http-uptime-check",
+            HttpCheck = new Gcp.Monitoring.Inputs.UptimeCheckConfigHttpCheckArgs
+            {
+                Path = "/some-path",
+                Port = "8010",
+            },
+            MonitoredResource = new Gcp.Monitoring.Inputs.UptimeCheckConfigMonitoredResourceArgs
+            {
+                Labels = 
+                {
+                    { "host", "192.168.1.1" },
+                    { "project_id", "my-project-name" },
+                },
+                Type = "uptime_url",
+            },
+            Timeout = "60s",
+        });
+    }
+
+}
+```
 ## Example Usage - Uptime Check Config Https
 
 
@@ -122,46 +160,45 @@ https = gcp.monitoring.UptimeCheckConfig("https",
     },
     timeout="60s")
 ```
-## Example Usage - Uptime Check Tcp
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
 
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var https = new Gcp.Monitoring.UptimeCheckConfig("https", new Gcp.Monitoring.UptimeCheckConfigArgs
+        {
+            ContentMatchers = 
+            {
+                new Gcp.Monitoring.Inputs.UptimeCheckConfigContentMatcherArgs
+                {
+                    Content = "example",
+                },
+            },
+            DisplayName = "https-uptime-check",
+            HttpCheck = new Gcp.Monitoring.Inputs.UptimeCheckConfigHttpCheckArgs
+            {
+                Path = "/some-path",
+                Port = "443",
+                UseSsl = true,
+                ValidateSsl = true,
+            },
+            MonitoredResource = new Gcp.Monitoring.Inputs.UptimeCheckConfigMonitoredResourceArgs
+            {
+                Labels = 
+                {
+                    { "host", "192.168.1.1" },
+                    { "project_id", "my-project-name" },
+                },
+                Type = "uptime_url",
+            },
+            Timeout = "60s",
+        });
+    }
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const check = new gcp.monitoring.Group("check", {
-    displayName: "uptime-check-group",
-    filter: "resource.metadata.name=has_substring(\"foo\")",
-});
-const tcpGroup = new gcp.monitoring.UptimeCheckConfig("tcpGroup", {
-    displayName: "tcp-uptime-check",
-    timeout: "60s",
-    tcp_check: {
-        port: 888,
-    },
-    resource_group: {
-        resourceType: "INSTANCE",
-        groupId: check.name,
-    },
-});
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-check = gcp.monitoring.Group("check",
-    display_name="uptime-check-group",
-    filter="resource.metadata.name=has_substring(\"foo\")")
-tcp_group = gcp.monitoring.UptimeCheckConfig("tcpGroup",
-    display_name="tcp-uptime-check",
-    timeout="60s",
-    tcp_check={
-        "port": 888,
-    },
-    resource_group={
-        "resourceType": "INSTANCE",
-        "groupId": check.name,
-    })
+}
 ```
 
 

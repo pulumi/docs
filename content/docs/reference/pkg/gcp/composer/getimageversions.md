@@ -20,7 +20,30 @@ Provides access to available Cloud Composer versions in a region for a given pro
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var all = Output.Create(Gcp.Composer.GetImageVersions.InvokeAsync());
+        var test = new Gcp.Composer.Environment("test", new Gcp.Composer.EnvironmentArgs
+        {
+            Region = "us-central1",
+            Config = new Gcp.Composer.Inputs.EnvironmentConfigArgs
+            {
+                Software_config = 
+                {
+                    { "imageVersion", all.Apply(all => all.ImageVersions[0].ImageVersionId) },
+                },
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

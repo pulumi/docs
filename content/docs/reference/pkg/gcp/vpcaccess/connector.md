@@ -41,6 +41,24 @@ connector = gcp.vpcaccess.Connector("connector",
     network="default",
     region="us-central1")
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var connector = new Gcp.VpcAccess.Connector("connector", new Gcp.VpcAccess.ConnectorArgs
+        {
+            IpCidrRange = "10.8.0.0/28",
+            Network = "default",
+            Region = "us-central1",
+        });
+    }
+
+}
+```
 
 
 

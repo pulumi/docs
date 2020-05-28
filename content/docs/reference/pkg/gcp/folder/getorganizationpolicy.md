@@ -22,7 +22,26 @@ documentation](https://cloud.google.com/resource-manager/docs/organization-polic
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var policy = Output.Create(Gcp.Folder.GetOrganizationPolicy.InvokeAsync(new Gcp.Folder.GetOrganizationPolicyArgs
+        {
+            Folder = "folders/folderid",
+            Constraint = "constraints/compute.trustedImageProjects",
+        }));
+        this.Version = policy.Apply(policy => policy.Version);
+    }
+
+    [Output("version")]
+    public Output<string> Version { get; set; }
+}
+```
 {{% /example %}}
 
 {{% example go %}}

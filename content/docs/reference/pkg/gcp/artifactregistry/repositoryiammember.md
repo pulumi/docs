@@ -54,6 +54,39 @@ policy = gcp.artifactregistry.RepositoryIamPolicy("policy",
     repository=google_artifact_registry_repository["my-repo"]["name"],
     policy_data=admin.policy_data)
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+        {
+            Binding = 
+            {
+                
+                {
+                    { "role", "roles/viewer" },
+                    { "members", 
+                    {
+                        "user:jane@example.com",
+                    } },
+                },
+            },
+        }));
+        var policy = new Gcp.ArtifactRegistry.RepositoryIamPolicy("policy", new Gcp.ArtifactRegistry.RepositoryIamPolicyArgs
+        {
+            Project = google_artifact_registry_repository.My_repo.Project,
+            Location = google_artifact_registry_repository.My_repo.Location,
+            Repository = google_artifact_registry_repository.My_repo.Name,
+            PolicyData = admin.Apply(admin => admin.PolicyData),
+        });
+    }
+
+}
+```
 
 ## google\_artifact\_registry\_repository\_iam\_binding
 
@@ -80,6 +113,29 @@ binding = gcp.artifactregistry.RepositoryIamBinding("binding",
     role="roles/viewer",
     members=["user:jane@example.com"])
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var binding = new Gcp.ArtifactRegistry.RepositoryIamBinding("binding", new Gcp.ArtifactRegistry.RepositoryIamBindingArgs
+        {
+            Project = google_artifact_registry_repository.My_repo.Project,
+            Location = google_artifact_registry_repository.My_repo.Location,
+            Repository = google_artifact_registry_repository.My_repo.Name,
+            Role = "roles/viewer",
+            Members = 
+            {
+                "user:jane@example.com",
+            },
+        });
+    }
+
+}
+```
 
 ## google\_artifact\_registry\_repository\_iam\_member
 
@@ -105,6 +161,26 @@ member = gcp.artifactregistry.RepositoryIamMember("member",
     repository=google_artifact_registry_repository["my-repo"]["name"],
     role="roles/viewer",
     member="user:jane@example.com")
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var member = new Gcp.ArtifactRegistry.RepositoryIamMember("member", new Gcp.ArtifactRegistry.RepositoryIamMemberArgs
+        {
+            Project = google_artifact_registry_repository.My_repo.Project,
+            Location = google_artifact_registry_repository.My_repo.Location,
+            Repository = google_artifact_registry_repository.My_repo.Name,
+            Role = "roles/viewer",
+            Member = "user:jane@example.com",
+        });
+    }
+
+}
 ```
 
 

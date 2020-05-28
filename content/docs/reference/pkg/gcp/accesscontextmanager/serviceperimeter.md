@@ -97,6 +97,66 @@ access_level = gcp.accesscontextmanager.AccessLevel("access-level",
     parent=access_policy.name.apply(lambda name: f"accessPolicies/{name}"),
     title="chromeos_no_lock")
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var access_policy = new Gcp.AccessContextManager.AccessPolicy("access-policy", new Gcp.AccessContextManager.AccessPolicyArgs
+        {
+            Parent = "organizations/123456789",
+            Title = "my policy",
+        });
+        var service_perimeter = new Gcp.AccessContextManager.ServicePerimeter("service-perimeter", new Gcp.AccessContextManager.ServicePerimeterArgs
+        {
+            Parent = access_policy.Name.Apply(name => $"accessPolicies/{name}"),
+            Status = new Gcp.AccessContextManager.Inputs.ServicePerimeterStatusArgs
+            {
+                RestrictedServices = 
+                {
+                    "storage.googleapis.com",
+                },
+            },
+            Title = "restrict_storage",
+        });
+        var access_level = new Gcp.AccessContextManager.AccessLevel("access-level", new Gcp.AccessContextManager.AccessLevelArgs
+        {
+            Basic = new Gcp.AccessContextManager.Inputs.AccessLevelBasicArgs
+            {
+                Conditions = 
+                {
+                    new Gcp.AccessContextManager.Inputs.AccessLevelBasicConditionArgs
+                    {
+                        DevicePolicy = new Gcp.AccessContextManager.Inputs.AccessLevelBasicConditionDevicePolicyArgs
+                        {
+                            OsConstraints = 
+                            {
+                                new Gcp.AccessContextManager.Inputs.AccessLevelBasicConditionDevicePolicyOsConstraintArgs
+                                {
+                                    OsType = "DESKTOP_CHROME_OS",
+                                },
+                            },
+                            RequireScreenLock = false,
+                        },
+                        Regions = 
+                        {
+                            "CH",
+                            "IT",
+                            "US",
+                        },
+                    },
+                },
+            },
+            Parent = access_policy.Name.Apply(name => $"accessPolicies/{name}"),
+            Title = "chromeos_no_lock",
+        });
+    }
+
+}
+```
 ## Example Usage - Access Context Manager Service Perimeter Dry Run
 
 
@@ -139,6 +199,43 @@ service_perimeter = gcp.accesscontextmanager.ServicePerimeter("service-perimeter
     },
     title="restrict_bigquery_dryrun_storage",
     use_explicit_dry_run_spec=True)
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var access_policy = new Gcp.AccessContextManager.AccessPolicy("access-policy", new Gcp.AccessContextManager.AccessPolicyArgs
+        {
+            Parent = "organizations/123456789",
+            Title = "my policy",
+        });
+        var service_perimeter = new Gcp.AccessContextManager.ServicePerimeter("service-perimeter", new Gcp.AccessContextManager.ServicePerimeterArgs
+        {
+            Parent = access_policy.Name.Apply(name => $"accessPolicies/{name}"),
+            Spec = new Gcp.AccessContextManager.Inputs.ServicePerimeterSpecArgs
+            {
+                RestrictedServices = 
+                {
+                    "storage.googleapis.com",
+                },
+            },
+            Status = new Gcp.AccessContextManager.Inputs.ServicePerimeterStatusArgs
+            {
+                RestrictedServices = 
+                {
+                    "bigquery.googleapis.com",
+                },
+            },
+            Title = "restrict_bigquery_dryrun_storage",
+            UseExplicitDryRunSpec = true,
+        });
+    }
+
+}
 ```
 
 

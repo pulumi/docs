@@ -14,65 +14,9 @@ Creates a Google Cloud Bigtable table inside an instance. For more information s
 [the official documentation](https://cloud.google.com/bigtable/) and
 [API](https://cloud.google.com/bigtable/docs/go/reference).
 
-
-
 {{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-instance = gcp.bigtable.Instance("instance", cluster=[{
-    "cluster_id": "tf-instance-cluster",
-    "zone": "us-central1-b",
-    "num_nodes": 3,
-    "storageType": "HDD",
-}])
-table = gcp.bigtable.Table("table",
-    instance_name=instance.name,
-    split_keys=[
-        "a",
-        "b",
-        "c",
-    ])
-```
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const instance = new gcp.bigtable.Instance("instance", {cluster: [{
-    clusterId: "tf-instance-cluster",
-    zone: "us-central1-b",
-    numNodes: 3,
-    storageType: "HDD",
-}]});
-const table = new gcp.bigtable.Table("table", {
-    instanceName: instance.name,
-    splitKeys: [
-        "a",
-        "b",
-        "c",
-    ],
-});
-```
-{{% /example %}}
-
 {{% /examples %}}
+
 
 
 ## Create a Table Resource {#create}

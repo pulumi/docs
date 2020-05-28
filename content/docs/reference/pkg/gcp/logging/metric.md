@@ -99,6 +99,59 @@ logging_metric = gcp.logging.Metric("loggingMetric",
     },
     value_extractor="EXTRACT(jsonPayload.request)")
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var loggingMetric = new Gcp.Logging.Metric("loggingMetric", new Gcp.Logging.MetricArgs
+        {
+            BucketOptions = new Gcp.Logging.Inputs.MetricBucketOptionsArgs
+            {
+                LinearBuckets = new Gcp.Logging.Inputs.MetricBucketOptionsLinearBucketsArgs
+                {
+                    NumFiniteBuckets = 3,
+                    Offset = 1,
+                    Width = 1,
+                },
+            },
+            Filter = "resource.type=gae_app AND severity>=ERROR",
+            LabelExtractors = 
+            {
+                { "mass", "EXTRACT(jsonPayload.request)" },
+                { "sku", "EXTRACT(jsonPayload.id)" },
+            },
+            MetricDescriptor = new Gcp.Logging.Inputs.MetricMetricDescriptorArgs
+            {
+                DisplayName = "My metric",
+                Labels = 
+                {
+                    new Gcp.Logging.Inputs.MetricMetricDescriptorLabelArgs
+                    {
+                        Description = "amount of matter",
+                        Key = "mass",
+                        ValueType = "STRING",
+                    },
+                    new Gcp.Logging.Inputs.MetricMetricDescriptorLabelArgs
+                    {
+                        Description = "Identifying number for item",
+                        Key = "sku",
+                        ValueType = "INT64",
+                    },
+                },
+                MetricKind = "DELTA",
+                Unit = "1",
+                ValueType = "DISTRIBUTION",
+            },
+            ValueExtractor = "EXTRACT(jsonPayload.request)",
+        });
+    }
+
+}
+```
 ## Example Usage - Logging Metric Counter Basic
 
 
@@ -124,6 +177,27 @@ logging_metric = gcp.logging.Metric("loggingMetric",
         "metricKind": "DELTA",
         "valueType": "INT64",
     })
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var loggingMetric = new Gcp.Logging.Metric("loggingMetric", new Gcp.Logging.MetricArgs
+        {
+            Filter = "resource.type=gae_app AND severity>=ERROR",
+            MetricDescriptor = new Gcp.Logging.Inputs.MetricMetricDescriptorArgs
+            {
+                MetricKind = "DELTA",
+                ValueType = "INT64",
+            },
+        });
+    }
+
+}
 ```
 ## Example Usage - Logging Metric Counter Labels
 
@@ -166,6 +240,40 @@ logging_metric = gcp.logging.Metric("loggingMetric",
         "metricKind": "DELTA",
         "valueType": "INT64",
     })
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var loggingMetric = new Gcp.Logging.Metric("loggingMetric", new Gcp.Logging.MetricArgs
+        {
+            Filter = "resource.type=gae_app AND severity>=ERROR",
+            LabelExtractors = 
+            {
+                { "mass", "EXTRACT(jsonPayload.request)" },
+            },
+            MetricDescriptor = new Gcp.Logging.Inputs.MetricMetricDescriptorArgs
+            {
+                Labels = 
+                {
+                    new Gcp.Logging.Inputs.MetricMetricDescriptorLabelArgs
+                    {
+                        Description = "amount of matter",
+                        Key = "mass",
+                        ValueType = "STRING",
+                    },
+                },
+                MetricKind = "DELTA",
+                ValueType = "INT64",
+            },
+        });
+    }
+
+}
 ```
 
 

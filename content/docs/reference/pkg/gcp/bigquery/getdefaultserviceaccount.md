@@ -28,7 +28,25 @@ For more information see
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var bqSa = Output.Create(Gcp.BigQuery.GetDefaultServiceAccount.InvokeAsync());
+        var keySaUser = new Gcp.Kms.CryptoKeyIAMMember("keySaUser", new Gcp.Kms.CryptoKeyIAMMemberArgs
+        {
+            CryptoKeyId = google_kms_crypto_key.Key.Id,
+            Role = "roles/cloudkms.cryptoKeyEncrypterDecrypter",
+            Member = bqSa.Apply(bqSa => $"serviceAccount:{bqSa.Email}"),
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

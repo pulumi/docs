@@ -53,6 +53,39 @@ editor = gcp.dataproc.JobIAMPolicy("editor",
     job_id="your-dataproc-job",
     policy_data=admin.policy_data)
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+        {
+            Binding = 
+            {
+                
+                {
+                    { "role", "roles/editor" },
+                    { "members", 
+                    {
+                        "user:jane@example.com",
+                    } },
+                },
+            },
+        }));
+        var editor = new Gcp.Dataproc.JobIAMPolicy("editor", new Gcp.Dataproc.JobIAMPolicyArgs
+        {
+            Project = "your-project",
+            Region = "your-region",
+            JobId = "your-dataproc-job",
+            PolicyData = admin.Apply(admin => admin.PolicyData),
+        });
+    }
+
+}
+```
 
 ## google\_pubsub\_subscription\_iam\_binding
 
@@ -75,6 +108,27 @@ editor = gcp.dataproc.JobIAMBinding("editor",
     members=["user:jane@example.com"],
     role="roles/editor")
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var editor = new Gcp.Dataproc.JobIAMBinding("editor", new Gcp.Dataproc.JobIAMBindingArgs
+        {
+            JobId = "your-dataproc-job",
+            Members = 
+            {
+                "user:jane@example.com",
+            },
+            Role = "roles/editor",
+        });
+    }
+
+}
+```
 
 ## google\_pubsub\_subscription\_iam\_member
 
@@ -96,6 +150,24 @@ editor = gcp.dataproc.JobIAMMember("editor",
     job_id="your-dataproc-job",
     member="user:jane@example.com",
     role="roles/editor")
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var editor = new Gcp.Dataproc.JobIAMMember("editor", new Gcp.Dataproc.JobIAMMemberArgs
+        {
+            JobId = "your-dataproc-job",
+            Member = "user:jane@example.com",
+            Role = "roles/editor",
+        });
+    }
+
+}
 ```
 
 

@@ -76,6 +76,45 @@ query_config = gcp.bigquery.DataTransferConfig("queryConfig",
         "query": "SELECT name FROM tabl WHERE x = 'y'",
     })
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var project = Output.Create(Gcp.Organizations.GetProject.InvokeAsync());
+        var permissions = new Gcp.Projects.IAMMember("permissions", new Gcp.Projects.IAMMemberArgs
+        {
+            Role = "roles/iam.serviceAccountShortTermTokenMinter",
+            Member = project.Apply(project => $"serviceAccount:service-{project.Number}@gcp-sa-bigquerydatatransfer.iam.gserviceaccount.com"),
+        });
+        var myDataset = new Gcp.BigQuery.Dataset("myDataset", new Gcp.BigQuery.DatasetArgs
+        {
+            DatasetId = "my_dataset",
+            FriendlyName = "foo",
+            Description = "bar",
+            Location = "asia-northeast1",
+        });
+        var queryConfig = new Gcp.BigQuery.DataTransferConfig("queryConfig", new Gcp.BigQuery.DataTransferConfigArgs
+        {
+            DisplayName = "my-query",
+            Location = "asia-northeast1",
+            DataSourceId = "scheduled_query",
+            Schedule = "first sunday of quarter 00:00",
+            DestinationDatasetId = myDataset.DatasetId,
+            Params = 
+            {
+                { "destination_table_name_template", "my-table" },
+                { "write_disposition", "WRITE_APPEND" },
+                { "query", "SELECT name FROM tabl WHERE x = 'y'" },
+            },
+        });
+    }
+
+}
+```
 
 
 

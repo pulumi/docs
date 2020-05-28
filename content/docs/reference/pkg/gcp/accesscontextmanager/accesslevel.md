@@ -77,6 +77,54 @@ access_level = gcp.accesscontextmanager.AccessLevel("access-level",
     parent=access_policy.name.apply(lambda name: f"accessPolicies/{name}"),
     title="chromeos_no_lock")
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var access_policy = new Gcp.AccessContextManager.AccessPolicy("access-policy", new Gcp.AccessContextManager.AccessPolicyArgs
+        {
+            Parent = "organizations/123456789",
+            Title = "my policy",
+        });
+        var access_level = new Gcp.AccessContextManager.AccessLevel("access-level", new Gcp.AccessContextManager.AccessLevelArgs
+        {
+            Basic = new Gcp.AccessContextManager.Inputs.AccessLevelBasicArgs
+            {
+                Conditions = 
+                {
+                    new Gcp.AccessContextManager.Inputs.AccessLevelBasicConditionArgs
+                    {
+                        DevicePolicy = new Gcp.AccessContextManager.Inputs.AccessLevelBasicConditionDevicePolicyArgs
+                        {
+                            OsConstraints = 
+                            {
+                                new Gcp.AccessContextManager.Inputs.AccessLevelBasicConditionDevicePolicyOsConstraintArgs
+                                {
+                                    OsType = "DESKTOP_CHROME_OS",
+                                },
+                            },
+                            RequireScreenLock = true,
+                        },
+                        Regions = 
+                        {
+                            "CH",
+                            "IT",
+                            "US",
+                        },
+                    },
+                },
+            },
+            Parent = access_policy.Name.Apply(name => $"accessPolicies/{name}"),
+            Title = "chromeos_no_lock",
+        });
+    }
+
+}
+```
 
 
 

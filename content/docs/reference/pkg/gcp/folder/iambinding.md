@@ -29,7 +29,32 @@ an existing Google Cloud Platform folder.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var department1 = new Gcp.Organizations.Folder("department1", new Gcp.Organizations.FolderArgs
+        {
+            DisplayName = "Department 1",
+            Parent = "organizations/1234567",
+        });
+        var admin = new Gcp.Folder.IAMBinding("admin", new Gcp.Folder.IAMBindingArgs
+        {
+            Folder = department1.Name,
+            Role = "roles/editor",
+            Members = 
+            {
+                "user:alice@gmail.com",
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

@@ -29,7 +29,27 @@ an existing Google Cloud Platform Billing Account.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var binding = new Gcp.Billing.AccountIamBinding("binding", new Gcp.Billing.AccountIamBindingArgs
+        {
+            BillingAccountId = "00AA00-000AAA-00AA0A",
+            Members = 
+            {
+                "user:alice@gmail.com",
+            },
+            Role = "roles/billing.viewer",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

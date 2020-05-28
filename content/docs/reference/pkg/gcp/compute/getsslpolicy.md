@@ -21,7 +21,22 @@ Gets an SSL Policy within GCE from its name, for use with Target HTTPS and Targe
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var my_ssl_policy = Output.Create(Gcp.Compute.GetSSLPolicy.InvokeAsync(new Gcp.Compute.GetSSLPolicyArgs
+        {
+            Name = "production-ssl-policy",
+        }));
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

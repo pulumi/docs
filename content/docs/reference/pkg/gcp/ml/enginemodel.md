@@ -37,6 +37,23 @@ default = gcp.ml.EngineModel("default",
     description="My model",
     regions="us-central1")
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var @default = new Gcp.ML.EngineModel("default", new Gcp.ML.EngineModelArgs
+        {
+            Description = "My model",
+            Regions = "us-central1",
+        });
+    }
+
+}
+```
 ## Example Usage - Ml Model Full
 
 
@@ -66,6 +83,29 @@ default = gcp.ml.EngineModel("default",
     online_prediction_console_logging=True,
     online_prediction_logging=True,
     regions="us-central1")
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var @default = new Gcp.ML.EngineModel("default", new Gcp.ML.EngineModelArgs
+        {
+            Description = "My model",
+            Labels = 
+            {
+                { "my_model", "foo" },
+            },
+            OnlinePredictionConsoleLogging = true,
+            OnlinePredictionLogging = true,
+            Regions = "us-central1",
+        });
+    }
+
+}
 ```
 
 

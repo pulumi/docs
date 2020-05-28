@@ -26,7 +26,7 @@ Explore the resources and functions of the artifactregistry module in the GCP pa
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
 	<dt>Version</dt>
-	<dd>3.7.0</dd>
+	<dd>3.7.1</dd>
 </dl>
 
 

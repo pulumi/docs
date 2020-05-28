@@ -55,6 +55,39 @@ policy = gcp.compute.SubnetworkIAMPolicy("policy",
     subnetwork=google_compute_subnetwork["network-with-private-secondary-ip-ranges"]["name"],
     policy_data=admin.policy_data)
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+        {
+            Binding = 
+            {
+                
+                {
+                    { "role", "roles/compute.networkUser" },
+                    { "members", 
+                    {
+                        "user:jane@example.com",
+                    } },
+                },
+            },
+        }));
+        var policy = new Gcp.Compute.SubnetworkIAMPolicy("policy", new Gcp.Compute.SubnetworkIAMPolicyArgs
+        {
+            Project = google_compute_subnetwork.Network_with_private_secondary_ip_ranges.Project,
+            Region = google_compute_subnetwork.Network_with_private_secondary_ip_ranges.Region,
+            Subnetwork = google_compute_subnetwork.Network_with_private_secondary_ip_ranges.Name,
+            PolicyData = admin.Apply(admin => admin.PolicyData),
+        });
+    }
+
+}
+```
 
 With IAM Conditions:
 
@@ -99,6 +132,45 @@ policy = gcp.compute.SubnetworkIAMPolicy("policy",
     subnetwork=google_compute_subnetwork["network-with-private-secondary-ip-ranges"]["name"],
     policy_data=admin.policy_data)
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+        {
+            Binding = 
+            {
+                
+                {
+                    { "role", "roles/compute.networkUser" },
+                    { "members", 
+                    {
+                        "user:jane@example.com",
+                    } },
+                    { "condition", 
+                    {
+                        { "title", "expires_after_2019_12_31" },
+                        { "description", "Expiring at midnight of 2019-12-31" },
+                        { "expression", "request.time < timestamp(\"2020-01-01T00:00:00Z\")" },
+                    } },
+                },
+            },
+        }));
+        var policy = new Gcp.Compute.SubnetworkIAMPolicy("policy", new Gcp.Compute.SubnetworkIAMPolicyArgs
+        {
+            Project = google_compute_subnetwork.Network_with_private_secondary_ip_ranges.Project,
+            Region = google_compute_subnetwork.Network_with_private_secondary_ip_ranges.Region,
+            Subnetwork = google_compute_subnetwork.Network_with_private_secondary_ip_ranges.Name,
+            PolicyData = admin.Apply(admin => admin.PolicyData),
+        });
+    }
+
+}
+```
 ## google\_compute\_subnetwork\_iam\_binding
 
 ```typescript
@@ -123,6 +195,29 @@ binding = gcp.compute.SubnetworkIAMBinding("binding",
     subnetwork=google_compute_subnetwork["network-with-private-secondary-ip-ranges"]["name"],
     role="roles/compute.networkUser",
     members=["user:jane@example.com"])
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var binding = new Gcp.Compute.SubnetworkIAMBinding("binding", new Gcp.Compute.SubnetworkIAMBindingArgs
+        {
+            Project = google_compute_subnetwork.Network_with_private_secondary_ip_ranges.Project,
+            Region = google_compute_subnetwork.Network_with_private_secondary_ip_ranges.Region,
+            Subnetwork = google_compute_subnetwork.Network_with_private_secondary_ip_ranges.Name,
+            Role = "roles/compute.networkUser",
+            Members = 
+            {
+                "user:jane@example.com",
+            },
+        });
+    }
+
+}
 ```
 
 With IAM Conditions:
@@ -160,6 +255,35 @@ binding = gcp.compute.SubnetworkIAMBinding("binding",
         "expression": "request.time < timestamp(\"2020-01-01T00:00:00Z\")",
     })
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var binding = new Gcp.Compute.SubnetworkIAMBinding("binding", new Gcp.Compute.SubnetworkIAMBindingArgs
+        {
+            Project = google_compute_subnetwork.Network_with_private_secondary_ip_ranges.Project,
+            Region = google_compute_subnetwork.Network_with_private_secondary_ip_ranges.Region,
+            Subnetwork = google_compute_subnetwork.Network_with_private_secondary_ip_ranges.Name,
+            Role = "roles/compute.networkUser",
+            Members = 
+            {
+                "user:jane@example.com",
+            },
+            Condition = new Gcp.Compute.Inputs.SubnetworkIAMBindingConditionArgs
+            {
+                Title = "expires_after_2019_12_31",
+                Description = "Expiring at midnight of 2019-12-31",
+                Expression = "request.time < timestamp(\"2020-01-01T00:00:00Z\")",
+            },
+        });
+    }
+
+}
+```
 ## google\_compute\_subnetwork\_iam\_member
 
 ```typescript
@@ -184,6 +308,26 @@ member = gcp.compute.SubnetworkIAMMember("member",
     subnetwork=google_compute_subnetwork["network-with-private-secondary-ip-ranges"]["name"],
     role="roles/compute.networkUser",
     member="user:jane@example.com")
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var member = new Gcp.Compute.SubnetworkIAMMember("member", new Gcp.Compute.SubnetworkIAMMemberArgs
+        {
+            Project = google_compute_subnetwork.Network_with_private_secondary_ip_ranges.Project,
+            Region = google_compute_subnetwork.Network_with_private_secondary_ip_ranges.Region,
+            Subnetwork = google_compute_subnetwork.Network_with_private_secondary_ip_ranges.Name,
+            Role = "roles/compute.networkUser",
+            Member = "user:jane@example.com",
+        });
+    }
+
+}
 ```
 
 With IAM Conditions:
@@ -220,6 +364,32 @@ member = gcp.compute.SubnetworkIAMMember("member",
         "description": "Expiring at midnight of 2019-12-31",
         "expression": "request.time < timestamp(\"2020-01-01T00:00:00Z\")",
     })
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var member = new Gcp.Compute.SubnetworkIAMMember("member", new Gcp.Compute.SubnetworkIAMMemberArgs
+        {
+            Project = google_compute_subnetwork.Network_with_private_secondary_ip_ranges.Project,
+            Region = google_compute_subnetwork.Network_with_private_secondary_ip_ranges.Region,
+            Subnetwork = google_compute_subnetwork.Network_with_private_secondary_ip_ranges.Name,
+            Role = "roles/compute.networkUser",
+            Member = "user:jane@example.com",
+            Condition = new Gcp.Compute.Inputs.SubnetworkIAMMemberConditionArgs
+            {
+                Title = "expires_after_2019_12_31",
+                Description = "Expiring at midnight of 2019-12-31",
+                Expression = "request.time < timestamp(\"2020-01-01T00:00:00Z\")",
+            },
+        });
+    }
+
+}
 ```
 
 

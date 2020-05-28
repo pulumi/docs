@@ -51,6 +51,38 @@ editor = gcp.bigtable.InstanceIamPolicy("editor",
     instance="your-bigtable-instance",
     policy_data=admin.policy_data)
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+        {
+            Binding = 
+            {
+                
+                {
+                    { "role", "roles/editor" },
+                    { "members", 
+                    {
+                        "user:jane@example.com",
+                    } },
+                },
+            },
+        }));
+        var editor = new Gcp.BigTable.InstanceIamPolicy("editor", new Gcp.BigTable.InstanceIamPolicyArgs
+        {
+            Project = "your-project",
+            Instance = "your-bigtable-instance",
+            PolicyData = admin.Apply(admin => admin.PolicyData),
+        });
+    }
+
+}
+```
 
 ## google\_bigtable\_instance\_iam\_binding
 
@@ -73,6 +105,27 @@ editor = gcp.bigtable.InstanceIamBinding("editor",
     members=["user:jane@example.com"],
     role="roles/editor")
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var editor = new Gcp.BigTable.InstanceIamBinding("editor", new Gcp.BigTable.InstanceIamBindingArgs
+        {
+            Instance = "your-bigtable-instance",
+            Members = 
+            {
+                "user:jane@example.com",
+            },
+            Role = "roles/editor",
+        });
+    }
+
+}
+```
 
 ## google\_bigtable\_instance\_iam\_member
 
@@ -94,6 +147,24 @@ editor = gcp.bigtable.InstanceIamMember("editor",
     instance="your-bigtable-instance",
     member="user:jane@example.com",
     role="roles/editor")
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var editor = new Gcp.BigTable.InstanceIamMember("editor", new Gcp.BigTable.InstanceIamMemberArgs
+        {
+            Instance = "your-bigtable-instance",
+            Member = "user:jane@example.com",
+            Role = "roles/editor",
+        });
+    }
+
+}
 ```
 
 

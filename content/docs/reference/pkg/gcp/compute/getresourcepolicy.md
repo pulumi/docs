@@ -28,6 +28,23 @@ import pulumi_gcp as gcp
 daily = gcp.compute.get_resource_policy(name="daily",
     region="us-central1")
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var daily = Output.Create(Gcp.Compute.GetResourcePolicy.InvokeAsync(new Gcp.Compute.GetResourcePolicyArgs
+        {
+            Name = "daily",
+            Region = "us-central1",
+        }));
+    }
+
+}
+```
 
 
 

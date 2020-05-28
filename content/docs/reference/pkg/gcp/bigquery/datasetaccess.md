@@ -51,6 +51,32 @@ access = gcp.bigquery.DatasetAccess("access",
     role="OWNER",
     user_by_email=bqowner.email)
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var dataset = new Gcp.BigQuery.Dataset("dataset", new Gcp.BigQuery.DatasetArgs
+        {
+            DatasetId = "example_dataset",
+        });
+        var bqowner = new Gcp.ServiceAccount.Account("bqowner", new Gcp.ServiceAccount.AccountArgs
+        {
+            AccountId = "bqowner",
+        });
+        var access = new Gcp.BigQuery.DatasetAccess("access", new Gcp.BigQuery.DatasetAccessArgs
+        {
+            DatasetId = dataset.DatasetId,
+            Role = "OWNER",
+            UserByEmail = bqowner.Email,
+        });
+    }
+
+}
+```
 ## Example Usage - Bigquery Dataset Access View
 
 
@@ -58,7 +84,7 @@ access = gcp.bigquery.DatasetAccess("access",
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const private = new gcp.bigquery.Dataset("private", {datasetId: "example_dataset"});
+const _private = new gcp.bigquery.Dataset("private", {datasetId: "example_dataset"});
 const publicDataset = new gcp.bigquery.Dataset("publicDataset", {datasetId: "example_dataset2"});
 const publicTable = new gcp.bigquery.Table("publicTable", {
     datasetId: publicDataset.datasetId,
@@ -69,7 +95,7 @@ const publicTable = new gcp.bigquery.Table("publicTable", {
     },
 });
 const access = new gcp.bigquery.DatasetAccess("access", {
-    datasetId: private.datasetId,
+    datasetId: _private.datasetId,
     view: {
         projectId: publicTable.project,
         datasetId: publicDataset.datasetId,
@@ -97,6 +123,46 @@ access = gcp.bigquery.DatasetAccess("access",
         "dataset_id": public_dataset.dataset_id,
         "table_id": public_table.table_id,
     })
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var @private = new Gcp.BigQuery.Dataset("private", new Gcp.BigQuery.DatasetArgs
+        {
+            DatasetId = "example_dataset",
+        });
+        var publicDataset = new Gcp.BigQuery.Dataset("publicDataset", new Gcp.BigQuery.DatasetArgs
+        {
+            DatasetId = "example_dataset2",
+        });
+        var publicTable = new Gcp.BigQuery.Table("publicTable", new Gcp.BigQuery.TableArgs
+        {
+            DatasetId = publicDataset.DatasetId,
+            TableId = "example_table",
+            View = new Gcp.BigQuery.Inputs.TableViewArgs
+            {
+                Query = "SELECT state FROM [lookerdata:cdc.project_tycho_reports]",
+                UseLegacySql = false,
+            },
+        });
+        var access = new Gcp.BigQuery.DatasetAccess("access", new Gcp.BigQuery.DatasetAccessArgs
+        {
+            DatasetId = @private.DatasetId,
+            View = new Gcp.BigQuery.Inputs.DatasetAccessViewArgs
+            {
+                ProjectId = publicTable.Project,
+                DatasetId = publicDataset.DatasetId,
+                TableId = publicTable.TableId,
+            },
+        });
+    }
+
+}
 ```
 
 

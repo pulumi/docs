@@ -26,7 +26,23 @@ and resides in a specific location.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var myKeyRing = Output.Create(Gcp.Kms.GetKMSKeyRing.InvokeAsync(new Gcp.Kms.GetKMSKeyRingArgs
+        {
+            Location = "us-central1",
+            Name = "my-key-ring",
+        }));
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

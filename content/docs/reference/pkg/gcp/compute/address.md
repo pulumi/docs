@@ -47,6 +47,21 @@ import pulumi_gcp as gcp
 
 ip_address = gcp.compute.Address("ipAddress")
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var ipAddress = new Gcp.Compute.Address("ipAddress", new Gcp.Compute.AddressArgs
+        {
+        });
+    }
+
+}
+```
 ## Example Usage - Address With Subnetwork
 
 
@@ -82,6 +97,34 @@ internal_with_subnet_and_address = gcp.compute.Address("internalWithSubnetAndAdd
     address="10.0.42.42",
     region="us-central1")
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var defaultNetwork = new Gcp.Compute.Network("defaultNetwork", new Gcp.Compute.NetworkArgs
+        {
+        });
+        var defaultSubnetwork = new Gcp.Compute.Subnetwork("defaultSubnetwork", new Gcp.Compute.SubnetworkArgs
+        {
+            IpCidrRange = "10.0.0.0/16",
+            Region = "us-central1",
+            Network = defaultNetwork.Id,
+        });
+        var internalWithSubnetAndAddress = new Gcp.Compute.Address("internalWithSubnetAndAddress", new Gcp.Compute.AddressArgs
+        {
+            Subnetwork = defaultSubnetwork.Id,
+            AddressType = "INTERNAL",
+            Address = "10.0.42.42",
+            Region = "us-central1",
+        });
+    }
+
+}
+```
 ## Example Usage - Address With Gce Endpoint
 
 
@@ -102,55 +145,22 @@ internal_with_gce_endpoint = gcp.compute.Address("internalWithGceEndpoint",
     address_type="INTERNAL",
     purpose="GCE_ENDPOINT")
 ```
-## Example Usage - Instance With Ip
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
 
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var internalWithGceEndpoint = new Gcp.Compute.Address("internalWithGceEndpoint", new Gcp.Compute.AddressArgs
+        {
+            AddressType = "INTERNAL",
+            Purpose = "GCE_ENDPOINT",
+        });
+    }
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const static = new gcp.compute.Address("static", {});
-const debianImage = gcp.compute.getImage({
-    family: "debian-9",
-    project: "debian-cloud",
-});
-const instanceWithIp = new gcp.compute.Instance("instanceWithIp", {
-    machineType: "f1-micro",
-    zone: "us-central1-a",
-    boot_disk: {
-        initialize_params: {
-            image: debianImage.then(debianImage => debianImage.selfLink),
-        },
-    },
-    network_interface: [{
-        network: "default",
-        access_config: [{
-            natIp: static.address,
-        }],
-    }],
-});
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-static = gcp.compute.Address("static")
-debian_image = gcp.compute.get_image(family="debian-9",
-    project="debian-cloud")
-instance_with_ip = gcp.compute.Instance("instanceWithIp",
-    machine_type="f1-micro",
-    zone="us-central1-a",
-    boot_disk={
-        "initialize_params": {
-            "image": debian_image.self_link,
-        },
-    },
-    network_interface=[{
-        "network": "default",
-        "access_config": [{
-            "natIp": static.address,
-        }],
-    }])
+}
 ```
 
 

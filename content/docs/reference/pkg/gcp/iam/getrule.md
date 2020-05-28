@@ -28,6 +28,25 @@ import pulumi_gcp as gcp
 roleinfo = gcp.iam.get_rule(name="roles/compute.viewer")
 pulumi.export("theRolePermissions", roleinfo.included_permissions)
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var roleinfo = Output.Create(Gcp.Iam.GetRule.InvokeAsync(new Gcp.Iam.GetRuleArgs
+        {
+            Name = "roles/compute.viewer",
+        }));
+        this.TheRolePermissions = roleinfo.Apply(roleinfo => roleinfo.IncludedPermissions);
+    }
+
+    [Output("theRolePermissions")]
+    public Output<string> TheRolePermissions { get; set; }
+}
+```
 
 
 

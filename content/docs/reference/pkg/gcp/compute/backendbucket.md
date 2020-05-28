@@ -49,6 +49,28 @@ image_backend = gcp.compute.BackendBucket("imageBackend",
     bucket_name=image_bucket.name,
     enable_cdn=True)
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var imageBucket = new Gcp.Storage.Bucket("imageBucket", new Gcp.Storage.BucketArgs
+        {
+            Location = "EU",
+        });
+        var imageBackend = new Gcp.Compute.BackendBucket("imageBackend", new Gcp.Compute.BackendBucketArgs
+        {
+            Description = "Contains beautiful images",
+            BucketName = imageBucket.Name,
+            EnableCdn = true,
+        });
+    }
+
+}
+```
 
 
 

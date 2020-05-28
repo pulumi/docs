@@ -38,6 +38,23 @@ default = gcp.healthcare.Dataset("default",
     location="us-central1",
     time_zone="UTC")
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var @default = new Gcp.Healthcare.Dataset("default", new Gcp.Healthcare.DatasetArgs
+        {
+            Location = "us-central1",
+            TimeZone = "UTC",
+        });
+    }
+
+}
+```
 
 
 

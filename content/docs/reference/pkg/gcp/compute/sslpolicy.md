@@ -59,6 +59,37 @@ custom_ssl_policy = gcp.compute.SSLPolicy("custom-ssl-policy",
     min_tls_version="TLS_1_2",
     profile="CUSTOM")
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var prod_ssl_policy = new Gcp.Compute.SSLPolicy("prod-ssl-policy", new Gcp.Compute.SSLPolicyArgs
+        {
+            Profile = "MODERN",
+        });
+        var nonprod_ssl_policy = new Gcp.Compute.SSLPolicy("nonprod-ssl-policy", new Gcp.Compute.SSLPolicyArgs
+        {
+            MinTlsVersion = "TLS_1_2",
+            Profile = "MODERN",
+        });
+        var custom_ssl_policy = new Gcp.Compute.SSLPolicy("custom-ssl-policy", new Gcp.Compute.SSLPolicyArgs
+        {
+            CustomFeatures = 
+            {
+                "TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384",
+                "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384",
+            },
+            MinTlsVersion = "TLS_1_2",
+            Profile = "CUSTOM",
+        });
+    }
+
+}
+```
 
 
 

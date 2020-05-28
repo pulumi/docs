@@ -32,7 +32,30 @@ doc for more information.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        // Top-level folder under an organization.
+        var department1 = new Gcp.Organizations.Folder("department1", new Gcp.Organizations.FolderArgs
+        {
+            DisplayName = "Department 1",
+            Parent = "organizations/1234567",
+        });
+        // Folder nested under another folder.
+        var team_abc = new Gcp.Organizations.Folder("team-abc", new Gcp.Organizations.FolderArgs
+        {
+            DisplayName = "Team ABC",
+            Parent = department1.Name,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -66,7 +89,7 @@ const department1 = new gcp.organizations.Folder("department1", {
     parent: "organizations/1234567",
 });
 // Folder nested under another folder.
-const team-abc = new gcp.organizations.Folder("team-abc", {
+const team_abc = new gcp.organizations.Folder("team-abc", {
     displayName: "Team ABC",
     parent: department1.name,
 });

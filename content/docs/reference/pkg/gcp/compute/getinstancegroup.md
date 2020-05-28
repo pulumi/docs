@@ -30,6 +30,23 @@ import pulumi_gcp as gcp
 all = gcp.compute.get_instance_group(name="instance-group-name",
     zone="us-central1-a")
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var all = Output.Create(Gcp.Compute.GetInstanceGroup.InvokeAsync(new Gcp.Compute.GetInstanceGroupArgs
+        {
+            Name = "instance-group-name",
+            Zone = "us-central1-a",
+        }));
+    }
+
+}
+```
 
 
 

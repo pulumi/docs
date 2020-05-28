@@ -48,6 +48,28 @@ example = gcp.spanner.Instance("example",
     },
     num_nodes=2)
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Gcp.Spanner.Instance("example", new Gcp.Spanner.InstanceArgs
+        {
+            Config = "regional-us-central1",
+            DisplayName = "Test Spanner Instance",
+            Labels = 
+            {
+                { "foo", "bar" },
+            },
+            NumNodes = 2,
+        });
+    }
+
+}
+```
 
 
 

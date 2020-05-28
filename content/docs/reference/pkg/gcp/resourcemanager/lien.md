@@ -42,6 +42,32 @@ lien = gcp.resourcemanager.Lien("lien",
     reason="This project is an important environment",
     restrictions=["resourcemanager.projects.delete"])
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var project = new Gcp.Organizations.Project("project", new Gcp.Organizations.ProjectArgs
+        {
+            ProjectId = "staging-project",
+        });
+        var lien = new Gcp.ResourceManager.Lien("lien", new Gcp.ResourceManager.LienArgs
+        {
+            Origin = "machine-readable-explanation",
+            Parent = project.Number.Apply(number => $"projects/{number}"),
+            Reason = "This project is an important environment",
+            Restrictions = 
+            {
+                "resourcemanager.projects.delete",
+            },
+        });
+    }
+
+}
+```
 
 
 

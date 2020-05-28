@@ -43,6 +43,26 @@ domain_mapping = gcp.appengine.DomainMapping("domainMapping",
         "sslManagementType": "AUTOMATIC",
     })
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var domainMapping = new Gcp.AppEngine.DomainMapping("domainMapping", new Gcp.AppEngine.DomainMappingArgs
+        {
+            DomainName = "verified-domain.com",
+            SslSettings = new Gcp.AppEngine.Inputs.DomainMappingSslSettingsArgs
+            {
+                SslManagementType = "AUTOMATIC",
+            },
+        });
+    }
+
+}
+```
 
 
 

@@ -76,6 +76,39 @@ snapshot = gcp.compute.Snapshot("snapshot",
         "my_label": "value",
     })
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var debian = Output.Create(Gcp.Compute.GetImage.InvokeAsync(new Gcp.Compute.GetImageArgs
+        {
+            Family = "debian-9",
+            Project = "debian-cloud",
+        }));
+        var persistent = new Gcp.Compute.Disk("persistent", new Gcp.Compute.DiskArgs
+        {
+            Image = debian.Apply(debian => debian.SelfLink),
+            Size = 10,
+            Type = "pd-ssd",
+            Zone = "us-central1-a",
+        });
+        var snapshot = new Gcp.Compute.Snapshot("snapshot", new Gcp.Compute.SnapshotArgs
+        {
+            SourceDisk = persistent.Name,
+            Zone = "us-central1-a",
+            Labels = 
+            {
+                { "my_label", "value" },
+            },
+        });
+    }
+
+}
+```
 
 
 

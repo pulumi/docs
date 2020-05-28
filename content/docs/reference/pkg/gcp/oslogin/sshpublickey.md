@@ -42,6 +42,25 @@ cache = gcp.oslogin.SshPublicKey("cache",
     user=me.email,
     key=(lambda path: open(path).read())("path/to/id_rsa.pub"))
 ```
+```csharp
+using System.IO;
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var me = Output.Create(Gcp.Organizations.GetClientOpenIdUserInfo.InvokeAsync());
+        var cache = new Gcp.OsLogin.SshPublicKey("cache", new Gcp.OsLogin.SshPublicKeyArgs
+        {
+            User = me.Apply(me => me.Email),
+            Key = File.ReadAllText("path/to/id_rsa.pub"),
+        });
+    }
+
+}
+```
 
 
 

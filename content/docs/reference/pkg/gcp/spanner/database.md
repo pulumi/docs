@@ -52,6 +52,32 @@ database = gcp.spanner.Database("database",
         "CREATE TABLE t2 (t2 INT64 NOT NULL,) PRIMARY KEY(t2)",
     ])
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var main = new Gcp.Spanner.Instance("main", new Gcp.Spanner.InstanceArgs
+        {
+            Config = "regional-europe-west1",
+            DisplayName = "main-instance",
+        });
+        var database = new Gcp.Spanner.Database("database", new Gcp.Spanner.DatabaseArgs
+        {
+            Instance = main.Name,
+            Ddls = 
+            {
+                "CREATE TABLE t1 (t1 INT64 NOT NULL,) PRIMARY KEY(t1)",
+                "CREATE TABLE t2 (t2 INT64 NOT NULL,) PRIMARY KEY(t2)",
+            },
+        });
+    }
+
+}
+```
 
 
 

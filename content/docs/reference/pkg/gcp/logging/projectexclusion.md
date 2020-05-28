@@ -25,7 +25,23 @@ granted to the credentials used with this provider.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var my_exclusion = new Gcp.Logging.ProjectExclusion("my-exclusion", new Gcp.Logging.ProjectExclusionArgs
+        {
+            Description = "Exclude GCE instance debug logs",
+            Filter = "resource.type = gce_instance AND severity <= DEBUG",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

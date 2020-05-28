@@ -66,75 +66,27 @@ default_route = gcp.compute.Route("defaultRoute",
     next_hop_ip="10.132.1.5",
     priority=100)
 ```
-## Example Usage - Route Ilb
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
 
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var defaultNetwork = new Gcp.Compute.Network("defaultNetwork", new Gcp.Compute.NetworkArgs
+        {
+        });
+        var defaultRoute = new Gcp.Compute.Route("defaultRoute", new Gcp.Compute.RouteArgs
+        {
+            DestRange = "15.0.0.0/24",
+            Network = defaultNetwork.Name,
+            NextHopIp = "10.132.1.5",
+            Priority = 100,
+        });
+    }
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const defaultNetwork = new gcp.compute.Network("defaultNetwork", {autoCreateSubnetworks: false});
-const defaultSubnetwork = new gcp.compute.Subnetwork("defaultSubnetwork", {
-    ipCidrRange: "10.0.1.0/24",
-    region: "us-central1",
-    network: defaultNetwork.id,
-});
-const hc = new gcp.compute.HealthCheck("hc", {
-    checkIntervalSec: 1,
-    timeoutSec: 1,
-    tcp_health_check: {
-        port: "80",
-    },
-});
-const backend = new gcp.compute.RegionBackendService("backend", {
-    region: "us-central1",
-    healthChecks: [hc.id],
-});
-const defaultForwardingRule = new gcp.compute.ForwardingRule("defaultForwardingRule", {
-    region: "us-central1",
-    loadBalancingScheme: "INTERNAL",
-    backendService: backend.id,
-    allPorts: true,
-    network: defaultNetwork.name,
-    subnetwork: defaultSubnetwork.name,
-});
-const route-ilb = new gcp.compute.Route("route-ilb", {
-    destRange: "0.0.0.0/0",
-    network: defaultNetwork.name,
-    nextHopIlb: defaultForwardingRule.id,
-    priority: 2000,
-});
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-default_network = gcp.compute.Network("defaultNetwork", auto_create_subnetworks=False)
-default_subnetwork = gcp.compute.Subnetwork("defaultSubnetwork",
-    ip_cidr_range="10.0.1.0/24",
-    region="us-central1",
-    network=default_network.id)
-hc = gcp.compute.HealthCheck("hc",
-    check_interval_sec=1,
-    timeout_sec=1,
-    tcp_health_check={
-        "port": "80",
-    })
-backend = gcp.compute.RegionBackendService("backend",
-    region="us-central1",
-    health_checks=[hc.id])
-default_forwarding_rule = gcp.compute.ForwardingRule("defaultForwardingRule",
-    region="us-central1",
-    load_balancing_scheme="INTERNAL",
-    backend_service=backend.id,
-    all_ports=True,
-    network=default_network.name,
-    subnetwork=default_subnetwork.name)
-route_ilb = gcp.compute.Route("route-ilb",
-    dest_range="0.0.0.0/0",
-    network=default_network.name,
-    next_hop_ilb=default_forwarding_rule.id,
-    priority=2000)
+}
 ```
 
 

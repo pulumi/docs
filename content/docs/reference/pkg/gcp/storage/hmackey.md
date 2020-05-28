@@ -45,6 +45,26 @@ import pulumi_gcp as gcp
 service_account = gcp.service_account.Account("serviceAccount", account_id="my-svc-acc")
 key = gcp.storage.HmacKey("key", service_account_email=service_account.email)
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var serviceAccount = new Gcp.ServiceAccount.Account("serviceAccount", new Gcp.ServiceAccount.AccountArgs
+        {
+            AccountId = "my-svc-acc",
+        });
+        var key = new Gcp.Storage.HmacKey("key", new Gcp.Storage.HmacKeyArgs
+        {
+            ServiceAccountEmail = serviceAccount.Email,
+        });
+    }
+
+}
+```
 
 
 

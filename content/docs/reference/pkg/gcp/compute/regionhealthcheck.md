@@ -55,6 +55,27 @@ tcp_region_health_check = gcp.compute.RegionHealthCheck("tcp-region-health-check
     },
     timeout_sec=1)
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var tcp_region_health_check = new Gcp.Compute.RegionHealthCheck("tcp-region-health-check", new Gcp.Compute.RegionHealthCheckArgs
+        {
+            CheckIntervalSec = 1,
+            TcpHealthCheck = new Gcp.Compute.Inputs.RegionHealthCheckTcpHealthCheckArgs
+            {
+                Port = "80",
+            },
+            TimeoutSec = 1,
+        });
+    }
+
+}
+```
 ## Example Usage - Region Health Check Tcp Full
 
 
@@ -95,6 +116,34 @@ tcp_region_health_check = gcp.compute.RegionHealthCheck("tcp-region-health-check
     timeout_sec=1,
     unhealthy_threshold=5)
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var tcp_region_health_check = new Gcp.Compute.RegionHealthCheck("tcp-region-health-check", new Gcp.Compute.RegionHealthCheckArgs
+        {
+            CheckIntervalSec = 1,
+            Description = "Health check via tcp",
+            HealthyThreshold = 4,
+            TcpHealthCheck = new Gcp.Compute.Inputs.RegionHealthCheckTcpHealthCheckArgs
+            {
+                PortName = "health-check-port",
+                PortSpecification = "USE_NAMED_PORT",
+                ProxyHeader = "NONE",
+                Request = "ARE YOU HEALTHY?",
+                Response = "I AM HEALTHY",
+            },
+            TimeoutSec = 1,
+            UnhealthyThreshold = 5,
+        });
+    }
+
+}
+```
 ## Example Usage - Region Health Check Ssl
 
 
@@ -120,6 +169,27 @@ ssl_region_health_check = gcp.compute.RegionHealthCheck("ssl-region-health-check
         "port": "443",
     },
     timeout_sec=1)
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var ssl_region_health_check = new Gcp.Compute.RegionHealthCheck("ssl-region-health-check", new Gcp.Compute.RegionHealthCheckArgs
+        {
+            CheckIntervalSec = 1,
+            SslHealthCheck = new Gcp.Compute.Inputs.RegionHealthCheckSslHealthCheckArgs
+            {
+                Port = "443",
+            },
+            TimeoutSec = 1,
+        });
+    }
+
+}
 ```
 ## Example Usage - Region Health Check Ssl Full
 
@@ -161,6 +231,34 @@ ssl_region_health_check = gcp.compute.RegionHealthCheck("ssl-region-health-check
     timeout_sec=1,
     unhealthy_threshold=5)
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var ssl_region_health_check = new Gcp.Compute.RegionHealthCheck("ssl-region-health-check", new Gcp.Compute.RegionHealthCheckArgs
+        {
+            CheckIntervalSec = 1,
+            Description = "Health check via ssl",
+            HealthyThreshold = 4,
+            SslHealthCheck = new Gcp.Compute.Inputs.RegionHealthCheckSslHealthCheckArgs
+            {
+                PortName = "health-check-port",
+                PortSpecification = "USE_NAMED_PORT",
+                ProxyHeader = "NONE",
+                Request = "ARE YOU HEALTHY?",
+                Response = "I AM HEALTHY",
+            },
+            TimeoutSec = 1,
+            UnhealthyThreshold = 5,
+        });
+    }
+
+}
+```
 ## Example Usage - Region Health Check Http
 
 
@@ -187,37 +285,26 @@ http_region_health_check = gcp.compute.RegionHealthCheck("http-region-health-che
     },
     timeout_sec=1)
 ```
-## Example Usage - Region Health Check Http Logs
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
 
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var http_region_health_check = new Gcp.Compute.RegionHealthCheck("http-region-health-check", new Gcp.Compute.RegionHealthCheckArgs
+        {
+            CheckIntervalSec = 1,
+            HttpHealthCheck = new Gcp.Compute.Inputs.RegionHealthCheckHttpHealthCheckArgs
+            {
+                Port = "80",
+            },
+            TimeoutSec = 1,
+        });
+    }
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const http-region-health-check = new gcp.compute.RegionHealthCheck("http-region-health-check", {
-    timeoutSec: 1,
-    checkIntervalSec: 1,
-    http_health_check: {
-        port: "80",
-    },
-    log_config: {
-        enable: true,
-    },
-});
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-http_region_health_check = gcp.compute.RegionHealthCheck("http-region-health-check",
-    timeout_sec=1,
-    check_interval_sec=1,
-    http_health_check={
-        "port": "80",
-    },
-    log_config={
-        "enable": True,
-    })
+}
 ```
 ## Example Usage - Region Health Check Http Full
 
@@ -261,6 +348,35 @@ http_region_health_check = gcp.compute.RegionHealthCheck("http-region-health-che
     timeout_sec=1,
     unhealthy_threshold=5)
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var http_region_health_check = new Gcp.Compute.RegionHealthCheck("http-region-health-check", new Gcp.Compute.RegionHealthCheckArgs
+        {
+            CheckIntervalSec = 1,
+            Description = "Health check via http",
+            HealthyThreshold = 4,
+            HttpHealthCheck = new Gcp.Compute.Inputs.RegionHealthCheckHttpHealthCheckArgs
+            {
+                Host = "1.2.3.4",
+                PortName = "health-check-port",
+                PortSpecification = "USE_NAMED_PORT",
+                ProxyHeader = "NONE",
+                RequestPath = "/mypath",
+                Response = "I AM HEALTHY",
+            },
+            TimeoutSec = 1,
+            UnhealthyThreshold = 5,
+        });
+    }
+
+}
+```
 ## Example Usage - Region Health Check Https
 
 
@@ -286,6 +402,27 @@ https_region_health_check = gcp.compute.RegionHealthCheck("https-region-health-c
         "port": "443",
     },
     timeout_sec=1)
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var https_region_health_check = new Gcp.Compute.RegionHealthCheck("https-region-health-check", new Gcp.Compute.RegionHealthCheckArgs
+        {
+            CheckIntervalSec = 1,
+            HttpsHealthCheck = new Gcp.Compute.Inputs.RegionHealthCheckHttpsHealthCheckArgs
+            {
+                Port = "443",
+            },
+            TimeoutSec = 1,
+        });
+    }
+
+}
 ```
 ## Example Usage - Region Health Check Https Full
 
@@ -329,6 +466,35 @@ https_region_health_check = gcp.compute.RegionHealthCheck("https-region-health-c
     timeout_sec=1,
     unhealthy_threshold=5)
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var https_region_health_check = new Gcp.Compute.RegionHealthCheck("https-region-health-check", new Gcp.Compute.RegionHealthCheckArgs
+        {
+            CheckIntervalSec = 1,
+            Description = "Health check via https",
+            HealthyThreshold = 4,
+            HttpsHealthCheck = new Gcp.Compute.Inputs.RegionHealthCheckHttpsHealthCheckArgs
+            {
+                Host = "1.2.3.4",
+                PortName = "health-check-port",
+                PortSpecification = "USE_NAMED_PORT",
+                ProxyHeader = "NONE",
+                RequestPath = "/mypath",
+                Response = "I AM HEALTHY",
+            },
+            TimeoutSec = 1,
+            UnhealthyThreshold = 5,
+        });
+    }
+
+}
+```
 ## Example Usage - Region Health Check Http2
 
 
@@ -354,6 +520,27 @@ http2_region_health_check = gcp.compute.RegionHealthCheck("http2-region-health-c
         "port": "443",
     },
     timeout_sec=1)
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var http2_region_health_check = new Gcp.Compute.RegionHealthCheck("http2-region-health-check", new Gcp.Compute.RegionHealthCheckArgs
+        {
+            CheckIntervalSec = 1,
+            Http2HealthCheck = new Gcp.Compute.Inputs.RegionHealthCheckHttp2HealthCheckArgs
+            {
+                Port = "443",
+            },
+            TimeoutSec = 1,
+        });
+    }
+
+}
 ```
 ## Example Usage - Region Health Check Http2 Full
 
@@ -396,6 +583,35 @@ http2_region_health_check = gcp.compute.RegionHealthCheck("http2-region-health-c
     },
     timeout_sec=1,
     unhealthy_threshold=5)
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var http2_region_health_check = new Gcp.Compute.RegionHealthCheck("http2-region-health-check", new Gcp.Compute.RegionHealthCheckArgs
+        {
+            CheckIntervalSec = 1,
+            Description = "Health check via http2",
+            HealthyThreshold = 4,
+            Http2HealthCheck = new Gcp.Compute.Inputs.RegionHealthCheckHttp2HealthCheckArgs
+            {
+                Host = "1.2.3.4",
+                PortName = "health-check-port",
+                PortSpecification = "USE_NAMED_PORT",
+                ProxyHeader = "NONE",
+                RequestPath = "/mypath",
+                Response = "I AM HEALTHY",
+            },
+            TimeoutSec = 1,
+            UnhealthyThreshold = 5,
+        });
+    }
+
+}
 ```
 
 

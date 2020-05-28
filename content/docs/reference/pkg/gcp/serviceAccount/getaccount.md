@@ -21,7 +21,22 @@ the official [API](https://cloud.google.com/compute/docs/access/service-accounts
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var objectViewer = Output.Create(Gcp.ServiceAccount.GetAccount.InvokeAsync(new Gcp.ServiceAccount.GetAccountArgs
+        {
+            AccountId = "object-viewer",
+        }));
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

@@ -58,6 +58,27 @@ public_rule = gcp.storage.BucketAccessControl("publicRule",
     role="READER",
     entity="allUsers")
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var bucket = new Gcp.Storage.Bucket("bucket", new Gcp.Storage.BucketArgs
+        {
+        });
+        var publicRule = new Gcp.Storage.BucketAccessControl("publicRule", new Gcp.Storage.BucketAccessControlArgs
+        {
+            Bucket = bucket.Name,
+            Role = "READER",
+            Entity = "allUsers",
+        });
+    }
+
+}
+```
 
 
 

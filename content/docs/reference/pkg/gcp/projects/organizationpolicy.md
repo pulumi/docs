@@ -23,7 +23,27 @@ documentation](https://cloud.google.com/resource-manager/docs/organization-polic
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var serialPortPolicy = new Gcp.Projects.OrganizationPolicy("serialPortPolicy", new Gcp.Projects.OrganizationPolicyArgs
+        {
+            BooleanPolicy = new Gcp.Projects.Inputs.OrganizationPolicyBooleanPolicyArgs
+            {
+                Enforced = true,
+            },
+            Constraint = "compute.disableSerialPortAccess",
+            Project = "your-project-id",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

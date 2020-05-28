@@ -83,6 +83,54 @@ job = gcp.bigquery.Job("job",
         },
     })
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var bar = new Gcp.BigQuery.Dataset("bar", new Gcp.BigQuery.DatasetArgs
+        {
+            DatasetId = "job_query_dataset",
+            FriendlyName = "test",
+            Description = "This is a test description",
+            Location = "US",
+        });
+        var foo = new Gcp.BigQuery.Table("foo", new Gcp.BigQuery.TableArgs
+        {
+            DatasetId = bar.DatasetId,
+            TableId = "job_query_table",
+        });
+        var job = new Gcp.BigQuery.Job("job", new Gcp.BigQuery.JobArgs
+        {
+            JobId = "job_query",
+            Labels = 
+            {
+                { "example-label", "example-value" },
+            },
+            Query = new Gcp.BigQuery.Inputs.JobQueryArgs
+            {
+                Query = "SELECT state FROM [lookerdata:cdc.project_tycho_reports]",
+                Destination_table = 
+                {
+                    { "projectId", foo.Project },
+                    { "datasetId", foo.DatasetId },
+                    { "tableId", foo.TableId },
+                },
+                AllowLargeResults = true,
+                FlattenResults = true,
+                Script_options = 
+                {
+                    { "keyResultStatement", "LAST" },
+                },
+            },
+        });
+    }
+
+}
+```
 ## Example Usage - Bigquery Job Query Table Reference
 
 
@@ -152,6 +200,56 @@ job = gcp.bigquery.Job("job",
             "keyResultStatement": "LAST",
         },
     })
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var bar = new Gcp.BigQuery.Dataset("bar", new Gcp.BigQuery.DatasetArgs
+        {
+            DatasetId = "job_query_dataset",
+            FriendlyName = "test",
+            Description = "This is a test description",
+            Location = "US",
+        });
+        var foo = new Gcp.BigQuery.Table("foo", new Gcp.BigQuery.TableArgs
+        {
+            DatasetId = bar.DatasetId,
+            TableId = "job_query_table",
+        });
+        var job = new Gcp.BigQuery.Job("job", new Gcp.BigQuery.JobArgs
+        {
+            JobId = "job_query",
+            Labels = 
+            {
+                { "example-label", "example-value" },
+            },
+            Query = new Gcp.BigQuery.Inputs.JobQueryArgs
+            {
+                Query = "SELECT state FROM [lookerdata:cdc.project_tycho_reports]",
+                Destination_table = 
+                {
+                    { "tableId", foo.Id },
+                },
+                Default_dataset = 
+                {
+                    { "datasetId", bar.Id },
+                },
+                AllowLargeResults = true,
+                FlattenResults = true,
+                Script_options = 
+                {
+                    { "keyResultStatement", "LAST" },
+                },
+            },
+        });
+    }
+
+}
 ```
 ## Example Usage - Bigquery Job Load
 
@@ -225,6 +323,59 @@ job = gcp.bigquery.Job("job",
         "autodetect": True,
     })
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var bar = new Gcp.BigQuery.Dataset("bar", new Gcp.BigQuery.DatasetArgs
+        {
+            DatasetId = "job_load_dataset",
+            FriendlyName = "test",
+            Description = "This is a test description",
+            Location = "US",
+        });
+        var foo = new Gcp.BigQuery.Table("foo", new Gcp.BigQuery.TableArgs
+        {
+            DatasetId = bar.DatasetId,
+            TableId = "job_load_table",
+        });
+        var job = new Gcp.BigQuery.Job("job", new Gcp.BigQuery.JobArgs
+        {
+            JobId = "job_load",
+            Labels = 
+            {
+                { "my_job", "load" },
+            },
+            Load = new Gcp.BigQuery.Inputs.JobLoadArgs
+            {
+                SourceUris = 
+                {
+                    "gs://cloud-samples-data/bigquery/us-states/us-states-by-date.csv",
+                },
+                Destination_table = 
+                {
+                    { "projectId", foo.Project },
+                    { "datasetId", foo.DatasetId },
+                    { "tableId", foo.TableId },
+                },
+                SkipLeadingRows = 1,
+                SchemaUpdateOptions = 
+                {
+                    "ALLOW_FIELD_RELAXATION",
+                    "ALLOW_FIELD_ADDITION",
+                },
+                WriteDisposition = "WRITE_APPEND",
+                Autodetect = true,
+            },
+        });
+    }
+
+}
+```
 ## Example Usage - Bigquery Job Extract
 
 
@@ -232,14 +383,14 @@ job = gcp.bigquery.Job("job",
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const source-oneDataset = new gcp.bigquery.Dataset("source-oneDataset", {
+const source_oneDataset = new gcp.bigquery.Dataset("source-oneDataset", {
     datasetId: "job_extract_dataset",
     friendlyName: "test",
     description: "This is a test description",
     location: "US",
 });
-const source-oneTable = new gcp.bigquery.Table("source-oneTable", {
-    datasetId: source-oneDataset.datasetId,
+const source_oneTable = new gcp.bigquery.Table("source-oneTable", {
+    datasetId: source_oneDataset.datasetId,
     tableId: "job_extract_table",
     schema: `[
   {
@@ -266,9 +417,9 @@ const job = new gcp.bigquery.Job("job", {
     extract: {
         destinationUris: [pulumi.interpolate`${dest.url}/extract`],
         source_table: {
-            projectId: source-oneTable.project,
-            datasetId: source-oneTable.datasetId,
-            tableId: source-oneTable.tableId,
+            projectId: source_oneTable.project,
+            datasetId: source_oneTable.datasetId,
+            tableId: source_oneTable.tableId,
         },
         destinationFormat: "NEWLINE_DELIMITED_JSON",
         compression: "GZIP",
@@ -318,6 +469,71 @@ job = gcp.bigquery.Job("job",
         "destinationFormat": "NEWLINE_DELIMITED_JSON",
         "compression": "GZIP",
     })
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var source_oneDataset = new Gcp.BigQuery.Dataset("source-oneDataset", new Gcp.BigQuery.DatasetArgs
+        {
+            DatasetId = "job_extract_dataset",
+            FriendlyName = "test",
+            Description = "This is a test description",
+            Location = "US",
+        });
+        var source_oneTable = new Gcp.BigQuery.Table("source-oneTable", new Gcp.BigQuery.TableArgs
+        {
+            DatasetId = source_oneDataset.DatasetId,
+            TableId = "job_extract_table",
+            Schema = @"[
+  {
+    ""name"": ""name"",
+    ""type"": ""STRING"",
+    ""mode"": ""NULLABLE""
+  },
+  {
+    ""name"": ""post_abbr"",
+    ""type"": ""STRING"",
+    ""mode"": ""NULLABLE""
+  },
+  {
+    ""name"": ""date"",
+    ""type"": ""DATE"",
+    ""mode"": ""NULLABLE""
+  }
+]
+",
+        });
+        var dest = new Gcp.Storage.Bucket("dest", new Gcp.Storage.BucketArgs
+        {
+            ForceDestroy = true,
+        });
+        var job = new Gcp.BigQuery.Job("job", new Gcp.BigQuery.JobArgs
+        {
+            JobId = "job_extract",
+            Extract = new Gcp.BigQuery.Inputs.JobExtractArgs
+            {
+                DestinationUris = 
+                {
+                    dest.Url.Apply(url => $"{url}/extract"),
+                },
+                Source_table = 
+                {
+                    { "projectId", source_oneTable.Project },
+                    { "datasetId", source_oneTable.DatasetId },
+                    { "tableId", source_oneTable.TableId },
+                },
+                DestinationFormat = "NEWLINE_DELIMITED_JSON",
+                Compression = "GZIP",
+            },
+        });
+    }
+
+}
 ```
 
 

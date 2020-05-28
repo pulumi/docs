@@ -38,47 +38,22 @@ basic_instance = gcp.datafusion.Instance("basicInstance",
     region="us-central1",
     type="BASIC")
 ```
-## Example Usage - Data Fusion Instance Full
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
 
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var basicInstance = new Gcp.DataFusion.Instance("basicInstance", new Gcp.DataFusion.InstanceArgs
+        {
+            Region = "us-central1",
+            Type = "BASIC",
+        });
+    }
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const extendedInstance = new gcp.datafusion.Instance("extendedInstance", {
-    description: "My Data Fusion instance",
-    region: "us-central1",
-    type: "BASIC",
-    enableStackdriverLogging: true,
-    enableStackdriverMonitoring: true,
-    labels: {
-        example_key: "example_value",
-    },
-    privateInstance: true,
-    network_config: {
-        network: "default",
-        ipAllocation: "10.89.48.0/22",
-    },
-});
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-extended_instance = gcp.datafusion.Instance("extendedInstance",
-    description="My Data Fusion instance",
-    region="us-central1",
-    type="BASIC",
-    enable_stackdriver_logging=True,
-    enable_stackdriver_monitoring=True,
-    labels={
-        "example_key": "example_value",
-    },
-    private_instance=True,
-    network_config={
-        "network": "default",
-        "ipAllocation": "10.89.48.0/22",
-    })
+}
 ```
 
 

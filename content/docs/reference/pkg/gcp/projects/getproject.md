@@ -23,7 +23,7 @@ import * as gcp from "@pulumi/gcp";
 const my-org-projects = gcp.projects.getProject({
     filter: "parent.id:012345678910 lifecycleState:DELETE_REQUESTED",
 });
-const deletion-candidate = my-org-projects.then(my_org_projects => gcp.organizations.getProject({
+const deletion-candidate = my_org_projects.then(my_org_projects => gcp.organizations.getProject({
     projectId: my_org_projects.projects[0].projectId,
 }));
 ```
@@ -33,6 +33,26 @@ import pulumi_gcp as gcp
 
 my_org_projects = gcp.projects.get_project(filter="parent.id:012345678910 lifecycleState:DELETE_REQUESTED")
 deletion_candidate = gcp.organizations.get_project(project_id=my_org_projects.projects[0]["project_id"])
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var my_org_projects = Output.Create(Gcp.Projects.GetProject.InvokeAsync(new Gcp.Projects.GetProjectArgs
+        {
+            Filter = "parent.id:012345678910 lifecycleState:DELETE_REQUESTED",
+        }));
+        var deletion_candidate = my_org_projects.Apply(my_org_projects => Output.Create(Gcp.Organizations.GetProject.InvokeAsync(new Gcp.Organizations.GetProjectArgs
+        {
+            ProjectId = my_org_projects.Projects[0].ProjectId,
+        })));
+    }
+
+}
 ```
 
 

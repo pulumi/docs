@@ -29,7 +29,28 @@ A Dataflow job which is 'destroyed' may be "cancelled" or "drained".  If "cancel
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var bigDataJob = new Gcp.Dataflow.Job("bigDataJob", new Gcp.Dataflow.JobArgs
+        {
+            Parameters = 
+            {
+                { "baz", "qux" },
+                { "foo", "bar" },
+            },
+            TempGcsLocation = "gs://my-bucket/tmp_dir",
+            TemplateGcsPath = "gs://my-bucket/templates/template_file",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

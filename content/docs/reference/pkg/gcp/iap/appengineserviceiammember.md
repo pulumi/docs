@@ -55,6 +55,39 @@ policy = gcp.iap.AppEngineServiceIamPolicy("policy",
     service=google_app_engine_standard_app_version["version"]["service"],
     policy_data=admin.policy_data)
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+        {
+            Binding = 
+            {
+                
+                {
+                    { "role", "roles/iap.httpsResourceAccessor" },
+                    { "members", 
+                    {
+                        "user:jane@example.com",
+                    } },
+                },
+            },
+        }));
+        var policy = new Gcp.Iap.AppEngineServiceIamPolicy("policy", new Gcp.Iap.AppEngineServiceIamPolicyArgs
+        {
+            Project = google_app_engine_standard_app_version.Version.Project,
+            AppId = google_app_engine_standard_app_version.Version.Project,
+            Service = google_app_engine_standard_app_version.Version.Service,
+            PolicyData = admin.Apply(admin => admin.PolicyData),
+        });
+    }
+
+}
+```
 
 With IAM Conditions:
 
@@ -99,6 +132,45 @@ policy = gcp.iap.AppEngineServiceIamPolicy("policy",
     service=google_app_engine_standard_app_version["version"]["service"],
     policy_data=admin.policy_data)
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+        {
+            Binding = 
+            {
+                
+                {
+                    { "role", "roles/iap.httpsResourceAccessor" },
+                    { "members", 
+                    {
+                        "user:jane@example.com",
+                    } },
+                    { "condition", 
+                    {
+                        { "title", "expires_after_2019_12_31" },
+                        { "description", "Expiring at midnight of 2019-12-31" },
+                        { "expression", "request.time < timestamp(\"2020-01-01T00:00:00Z\")" },
+                    } },
+                },
+            },
+        }));
+        var policy = new Gcp.Iap.AppEngineServiceIamPolicy("policy", new Gcp.Iap.AppEngineServiceIamPolicyArgs
+        {
+            Project = google_app_engine_standard_app_version.Version.Project,
+            AppId = google_app_engine_standard_app_version.Version.Project,
+            Service = google_app_engine_standard_app_version.Version.Service,
+            PolicyData = admin.Apply(admin => admin.PolicyData),
+        });
+    }
+
+}
+```
 ## google\_iap\_app\_engine\_service\_iam\_binding
 
 ```typescript
@@ -123,6 +195,29 @@ binding = gcp.iap.AppEngineServiceIamBinding("binding",
     project=google_app_engine_standard_app_version["version"]["project"],
     role="roles/iap.httpsResourceAccessor",
     service=google_app_engine_standard_app_version["version"]["service"])
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var binding = new Gcp.Iap.AppEngineServiceIamBinding("binding", new Gcp.Iap.AppEngineServiceIamBindingArgs
+        {
+            AppId = google_app_engine_standard_app_version.Version.Project,
+            Members = 
+            {
+                "user:jane@example.com",
+            },
+            Project = google_app_engine_standard_app_version.Version.Project,
+            Role = "roles/iap.httpsResourceAccessor",
+            Service = google_app_engine_standard_app_version.Version.Service,
+        });
+    }
+
+}
 ```
 
 With IAM Conditions:
@@ -159,6 +254,35 @@ binding = gcp.iap.AppEngineServiceIamBinding("binding",
     project=google_app_engine_standard_app_version["version"]["project"],
     role="roles/iap.httpsResourceAccessor",
     service=google_app_engine_standard_app_version["version"]["service"])
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var binding = new Gcp.Iap.AppEngineServiceIamBinding("binding", new Gcp.Iap.AppEngineServiceIamBindingArgs
+        {
+            AppId = google_app_engine_standard_app_version.Version.Project,
+            Condition = new Gcp.Iap.Inputs.AppEngineServiceIamBindingConditionArgs
+            {
+                Description = "Expiring at midnight of 2019-12-31",
+                Expression = "request.time < timestamp(\"2020-01-01T00:00:00Z\")",
+                Title = "expires_after_2019_12_31",
+            },
+            Members = 
+            {
+                "user:jane@example.com",
+            },
+            Project = google_app_engine_standard_app_version.Version.Project,
+            Role = "roles/iap.httpsResourceAccessor",
+            Service = google_app_engine_standard_app_version.Version.Service,
+        });
+    }
+
+}
 ```
 ## google\_iap\_app\_engine\_service\_iam\_member
 
@@ -185,6 +309,26 @@ member = gcp.iap.AppEngineServiceIamMember("member",
     role="roles/iap.httpsResourceAccessor",
     service=google_app_engine_standard_app_version["version"]["service"])
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var member = new Gcp.Iap.AppEngineServiceIamMember("member", new Gcp.Iap.AppEngineServiceIamMemberArgs
+        {
+            AppId = google_app_engine_standard_app_version.Version.Project,
+            Member = "user:jane@example.com",
+            Project = google_app_engine_standard_app_version.Version.Project,
+            Role = "roles/iap.httpsResourceAccessor",
+            Service = google_app_engine_standard_app_version.Version.Service,
+        });
+    }
+
+}
+```
 
 With IAM Conditions:
 
@@ -220,6 +364,32 @@ member = gcp.iap.AppEngineServiceIamMember("member",
     project=google_app_engine_standard_app_version["version"]["project"],
     role="roles/iap.httpsResourceAccessor",
     service=google_app_engine_standard_app_version["version"]["service"])
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var member = new Gcp.Iap.AppEngineServiceIamMember("member", new Gcp.Iap.AppEngineServiceIamMemberArgs
+        {
+            AppId = google_app_engine_standard_app_version.Version.Project,
+            Condition = new Gcp.Iap.Inputs.AppEngineServiceIamMemberConditionArgs
+            {
+                Description = "Expiring at midnight of 2019-12-31",
+                Expression = "request.time < timestamp(\"2020-01-01T00:00:00Z\")",
+                Title = "expires_after_2019_12_31",
+            },
+            Member = "user:jane@example.com",
+            Project = google_app_engine_standard_app_version.Version.Project,
+            Role = "roles/iap.httpsResourceAccessor",
+            Service = google_app_engine_standard_app_version.Version.Service,
+        });
+    }
+
+}
 ```
 
 

@@ -24,7 +24,23 @@ creation.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var serviceAccount = new Gcp.ServiceAccount.Account("serviceAccount", new Gcp.ServiceAccount.AccountArgs
+        {
+            AccountId = "service_account_id",
+            DisplayName = "Service Account",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

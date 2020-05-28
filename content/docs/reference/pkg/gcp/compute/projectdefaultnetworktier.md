@@ -25,7 +25,22 @@ For more information, see,
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var @default = new Gcp.Compute.ProjectDefaultNetworkTier("default", new Gcp.Compute.ProjectDefaultNetworkTierArgs
+        {
+            NetworkTier = "PREMIUM",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

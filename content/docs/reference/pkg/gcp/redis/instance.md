@@ -36,6 +36,22 @@ import pulumi_gcp as gcp
 
 cache = gcp.redis.Instance("cache", memory_size_gb=1)
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var cache = new Gcp.Redis.Instance("cache", new Gcp.Redis.InstanceArgs
+        {
+            MemorySizeGb = 1,
+        });
+    }
+
+}
+```
 ## Example Usage - Redis Instance Full
 
 
@@ -51,7 +67,7 @@ const cache = new gcp.redis.Instance("cache", {
     memorySizeGb: 1,
     locationId: "us-central1-a",
     alternativeLocationId: "us-central1-f",
-    authorizedNetwork: redis-network.then(redis_network => redis_network.id),
+    authorizedNetwork: redis_network.then(redis_network => redis_network.id),
     redisVersion: "REDIS_3_2",
     displayName: "Test Instance",
     reservedIpRange: "192.168.0.0/29",
@@ -79,6 +95,38 @@ cache = gcp.redis.Instance("cache",
         "my_key": "my_val",
         "other_key": "other_val",
     })
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var redis_network = Output.Create(Gcp.Compute.GetNetwork.InvokeAsync(new Gcp.Compute.GetNetworkArgs
+        {
+            Name = "redis-test-network",
+        }));
+        var cache = new Gcp.Redis.Instance("cache", new Gcp.Redis.InstanceArgs
+        {
+            Tier = "STANDARD_HA",
+            MemorySizeGb = 1,
+            LocationId = "us-central1-a",
+            AlternativeLocationId = "us-central1-f",
+            AuthorizedNetwork = redis_network.Apply(redis_network => redis_network.Id),
+            RedisVersion = "REDIS_3_2",
+            DisplayName = "Test Instance",
+            ReservedIpRange = "192.168.0.0/29",
+            Labels = 
+            {
+                { "my_key", "my_val" },
+                { "other_key", "other_val" },
+            },
+        });
+    }
+
+}
 ```
 
 

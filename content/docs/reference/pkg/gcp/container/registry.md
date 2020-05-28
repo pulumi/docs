@@ -23,7 +23,23 @@ This resource can be used to ensure that the GCS bucket exists prior to assignin
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var registry = new Gcp.Container.Registry("registry", new Gcp.Container.RegistryArgs
+        {
+            Location = "EU",
+            Project = "my-project",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

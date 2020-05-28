@@ -20,50 +20,9 @@ and
 
 > **Note** You must [enable the Cloud Resource Manager API](https://console.cloud.google.com/apis/library/cloudresourcemanager.googleapis.com)
 
-
-
 {{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-my_sink = gcp.logging.ProjectSink("my-sink",
-    destination="pubsub.googleapis.com/projects/my-project/topics/instance-activity",
-    filter="resource.type = gce_instance AND severity >= WARN",
-    unique_writer_identity=True)
-```
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const my_sink = new gcp.logging.ProjectSink("my-sink", {
-    // Can export to pubsub, cloud storage, or bigquery
-    destination: "pubsub.googleapis.com/projects/my-project/topics/instance-activity",
-    // Log all WARN or higher severity messages relating to instances
-    filter: "resource.type = gce_instance AND severity >= WARN",
-    // Use a unique writer (creates a unique service account used for writing)
-    uniqueWriterIdentity: true,
-});
-```
-{{% /example %}}
-
 {{% /examples %}}
+
 
 
 ## Create a ProjectSink Resource {#create}
@@ -263,7 +222,8 @@ import * as pulumi from "@pulumi/pulumi";
 ```python
 import pulumi
 ```
-The writer associated with the sink must have access to write to the above resource.
+```csharp
+using Pulumi;
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -350,7 +310,8 @@ import * as pulumi from "@pulumi/pulumi";
 ```python
 import pulumi
 ```
-The writer associated with the sink must have access to write to the above resource.
+```csharp
+using Pulumi;
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -437,7 +398,8 @@ import * as pulumi from "@pulumi/pulumi";
 ```python
 import pulumi
 ```
-The writer associated with the sink must have access to write to the above resource.
+```csharp
+using Pulumi;
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -524,7 +486,8 @@ import * as pulumi from "@pulumi/pulumi";
 ```python
 import pulumi
 ```
-The writer associated with the sink must have access to write to the above resource.
+```csharp
+using Pulumi;
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -875,7 +838,8 @@ import * as pulumi from "@pulumi/pulumi";
 ```python
 import pulumi
 ```
-The writer associated with the sink must have access to write to the above resource.
+```csharp
+using Pulumi;
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -974,7 +938,8 @@ import * as pulumi from "@pulumi/pulumi";
 ```python
 import pulumi
 ```
-The writer associated with the sink must have access to write to the above resource.
+```csharp
+using Pulumi;
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1073,7 +1038,8 @@ import * as pulumi from "@pulumi/pulumi";
 ```python
 import pulumi
 ```
-The writer associated with the sink must have access to write to the above resource.
+```csharp
+using Pulumi;
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1172,7 +1138,8 @@ import * as pulumi from "@pulumi/pulumi";
 ```python
 import pulumi
 ```
-The writer associated with the sink must have access to write to the above resource.
+```csharp
+using Pulumi;
 {{% /md %}}</dd>
 
     <dt class="property-optional"

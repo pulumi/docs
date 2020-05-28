@@ -44,6 +44,28 @@ basic_agent = gcp.diagflow.Agent("basicAgent",
     time_zone="America/New_York")
 basic_intent = gcp.diagflow.Intent("basicIntent", display_name="basic-intent")
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var basicAgent = new Gcp.Diagflow.Agent("basicAgent", new Gcp.Diagflow.AgentArgs
+        {
+            DisplayName = "example_agent",
+            DefaultLanguageCode = "en",
+            TimeZone = "America/New_York",
+        });
+        var basicIntent = new Gcp.Diagflow.Intent("basicIntent", new Gcp.Diagflow.IntentArgs
+        {
+            DisplayName = "basic-intent",
+        });
+    }
+
+}
+```
 
 
 

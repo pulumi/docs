@@ -41,7 +41,22 @@ To get more information about Environments, see:
 {{< chooser language "typescript,python,go,csharp" / >}}
 ### Basic Usage
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var test = new Gcp.Composer.Environment("test", new Gcp.Composer.EnvironmentArgs
+        {
+            Region = "us-central1",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -70,7 +85,54 @@ const test = new gcp.composer.Environment("test", {
 
 ### With GKE and Compute Resource Dependencies
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var testNetwork = new Gcp.Compute.Network("testNetwork", new Gcp.Compute.NetworkArgs
+        {
+            AutoCreateSubnetworks = false,
+        });
+        var testSubnetwork = new Gcp.Compute.Subnetwork("testSubnetwork", new Gcp.Compute.SubnetworkArgs
+        {
+            IpCidrRange = "10.2.0.0/16",
+            Region = "us-central1",
+            Network = testNetwork.Id,
+        });
+        var testAccount = new Gcp.ServiceAccount.Account("testAccount", new Gcp.ServiceAccount.AccountArgs
+        {
+            AccountId = "composer-env-account",
+            DisplayName = "Test Service Account for Composer Environment",
+        });
+        var composer_worker = new Gcp.Projects.IAMMember("composer-worker", new Gcp.Projects.IAMMemberArgs
+        {
+            Role = "roles/composer.worker",
+            Member = testAccount.Email.Apply(email => $"serviceAccount:{email}"),
+        });
+        var testEnvironment = new Gcp.Composer.Environment("testEnvironment", new Gcp.Composer.EnvironmentArgs
+        {
+            Region = "us-central1",
+            Config = new Gcp.Composer.Inputs.EnvironmentConfigArgs
+            {
+                NodeCount = 4,
+                Node_config = 
+                {
+                    { "zone", "us-central1-a" },
+                    { "machineType", "n1-standard-1" },
+                    { "network", testNetwork.Id },
+                    { "subnetwork", testSubnetwork.Id },
+                    { "serviceAccount", testAccount.Name },
+                },
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -123,7 +185,7 @@ const testAccount = new gcp.serviceAccount.Account("testAccount", {
     accountId: "composer-env-account",
     displayName: "Test Service Account for Composer Environment",
 });
-const composer-worker = new gcp.projects.IAMMember("composer-worker", {
+const composer_worker = new gcp.projects.IAMMember("composer-worker", {
     role: "roles/composer.worker",
     member: pulumi.interpolate`serviceAccount:${testAccount.email}`,
 });
@@ -145,7 +207,41 @@ const testEnvironment = new gcp.composer.Environment("testEnvironment", {
 
 ### With Software (Airflow) Config
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var test = new Gcp.Composer.Environment("test", new Gcp.Composer.EnvironmentArgs
+        {
+            Config = new Gcp.Composer.Inputs.EnvironmentConfigArgs
+            {
+                SoftwareConfig = new Gcp.Composer.Inputs.EnvironmentConfigSoftwareConfigArgs
+                {
+                    AirflowConfigOverrides = 
+                    {
+                        { "core-loadExample", "True" },
+                    },
+                    EnvVariables = 
+                    {
+                        { "FOO", "bar" },
+                    },
+                    PypiPackages = 
+                    {
+                        { "numpy", "" },
+                        { "scipy", "==1.1.0" },
+                    },
+                },
+            },
+            Region = "us-central1",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

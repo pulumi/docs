@@ -42,6 +42,25 @@ idp_config = gcp.identityplatform.DefaultSupportedIdpConfig("idpConfig",
     enabled=True,
     idp_id="playgames.google.com")
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var idpConfig = new Gcp.IdentityPlatform.DefaultSupportedIdpConfig("idpConfig", new Gcp.IdentityPlatform.DefaultSupportedIdpConfigArgs
+        {
+            ClientId = "client-id",
+            ClientSecret = "secret",
+            Enabled = true,
+            IdpId = "playgames.google.com",
+        });
+    }
+
+}
+```
 
 
 

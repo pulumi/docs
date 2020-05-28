@@ -49,6 +49,37 @@ dicom_store = gcp.healthcare.DicomStoreIamPolicy("dicomStore",
     dicom_store_id="your-dicom-store-id",
     policy_data=admin.policy_data)
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+        {
+            Binding = 
+            {
+                
+                {
+                    { "role", "roles/editor" },
+                    { "members", 
+                    {
+                        "user:jane@example.com",
+                    } },
+                },
+            },
+        }));
+        var dicomStore = new Gcp.Healthcare.DicomStoreIamPolicy("dicomStore", new Gcp.Healthcare.DicomStoreIamPolicyArgs
+        {
+            DicomStoreId = "your-dicom-store-id",
+            PolicyData = admin.Apply(admin => admin.PolicyData),
+        });
+    }
+
+}
+```
 
 ## google\_healthcare\_dicom\_store\_iam\_binding
 
@@ -71,6 +102,27 @@ dicom_store = gcp.healthcare.DicomStoreIamBinding("dicomStore",
     members=["user:jane@example.com"],
     role="roles/editor")
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var dicomStore = new Gcp.Healthcare.DicomStoreIamBinding("dicomStore", new Gcp.Healthcare.DicomStoreIamBindingArgs
+        {
+            DicomStoreId = "your-dicom-store-id",
+            Members = 
+            {
+                "user:jane@example.com",
+            },
+            Role = "roles/editor",
+        });
+    }
+
+}
+```
 
 ## google\_healthcare\_dicom\_store\_iam\_member
 
@@ -92,6 +144,24 @@ dicom_store = gcp.healthcare.DicomStoreIamMember("dicomStore",
     dicom_store_id="your-dicom-store-id",
     member="user:jane@example.com",
     role="roles/editor")
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var dicomStore = new Gcp.Healthcare.DicomStoreIamMember("dicomStore", new Gcp.Healthcare.DicomStoreIamMemberArgs
+        {
+            DicomStoreId = "your-dicom-store-id",
+            Member = "user:jane@example.com",
+            Role = "roles/editor",
+        });
+    }
+
+}
 ```
 
 

@@ -41,6 +41,22 @@ import pulumi_gcp as gcp
 
 example_keyring = gcp.kms.KeyRing("example-keyring", location="global")
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example_keyring = new Gcp.Kms.KeyRing("example-keyring", new Gcp.Kms.KeyRingArgs
+        {
+            Location = "global",
+        });
+    }
+
+}
+```
 
 
 

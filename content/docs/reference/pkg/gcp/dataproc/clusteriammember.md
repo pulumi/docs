@@ -53,6 +53,39 @@ editor = gcp.dataproc.ClusterIAMPolicy("editor",
     cluster="your-dataproc-cluster",
     policy_data=admin.policy_data)
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+        {
+            Binding = 
+            {
+                
+                {
+                    { "role", "roles/editor" },
+                    { "members", 
+                    {
+                        "user:jane@example.com",
+                    } },
+                },
+            },
+        }));
+        var editor = new Gcp.Dataproc.ClusterIAMPolicy("editor", new Gcp.Dataproc.ClusterIAMPolicyArgs
+        {
+            Project = "your-project",
+            Region = "your-region",
+            Cluster = "your-dataproc-cluster",
+            PolicyData = admin.Apply(admin => admin.PolicyData),
+        });
+    }
+
+}
+```
 
 ## google\_pubsub\_subscription\_iam\_binding
 
@@ -75,6 +108,27 @@ editor = gcp.dataproc.ClusterIAMBinding("editor",
     members=["user:jane@example.com"],
     role="roles/editor")
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var editor = new Gcp.Dataproc.ClusterIAMBinding("editor", new Gcp.Dataproc.ClusterIAMBindingArgs
+        {
+            Cluster = "your-dataproc-cluster",
+            Members = 
+            {
+                "user:jane@example.com",
+            },
+            Role = "roles/editor",
+        });
+    }
+
+}
+```
 
 ## google\_pubsub\_subscription\_iam\_member
 
@@ -96,6 +150,24 @@ editor = gcp.dataproc.ClusterIAMMember("editor",
     cluster="your-dataproc-cluster",
     member="user:jane@example.com",
     role="roles/editor")
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var editor = new Gcp.Dataproc.ClusterIAMMember("editor", new Gcp.Dataproc.ClusterIAMMemberArgs
+        {
+            Cluster = "your-dataproc-cluster",
+            Member = "user:jane@example.com",
+            Role = "roles/editor",
+        });
+    }
+
+}
 ```
 
 

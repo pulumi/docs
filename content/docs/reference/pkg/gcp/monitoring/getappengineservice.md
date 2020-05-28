@@ -84,6 +84,57 @@ myapp = gcp.appengine.StandardAppVersion("myapp",
     delete_service_on_destroy=False)
 srv = myapp.service.apply(lambda service: gcp.monitoring.get_app_engine_service(module_id=service))
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var bucket = new Gcp.Storage.Bucket("bucket", new Gcp.Storage.BucketArgs
+        {
+        });
+        var @object = new Gcp.Storage.BucketObject("object", new Gcp.Storage.BucketObjectArgs
+        {
+            Bucket = bucket.Name,
+            Source = new FileAsset("./test-fixtures/appengine/hello-world.zip"),
+        });
+        var myapp = new Gcp.AppEngine.StandardAppVersion("myapp", new Gcp.AppEngine.StandardAppVersionArgs
+        {
+            VersionId = "v1",
+            Service = "myapp",
+            Runtime = "nodejs10",
+            Entrypoint = new Gcp.AppEngine.Inputs.StandardAppVersionEntrypointArgs
+            {
+                Shell = "node ./app.js",
+            },
+            Deployment = new Gcp.AppEngine.Inputs.StandardAppVersionDeploymentArgs
+            {
+                Zip = new Gcp.AppEngine.Inputs.StandardAppVersionDeploymentZipArgs
+                {
+                    SourceUrl = Output.Tuple(bucket.Name, @object.Name).Apply(values =>
+                    {
+                        var bucketName = values.Item1;
+                        var objectName = values.Item2;
+                        return $"https://storage.googleapis.com/{bucketName}/{objectName}";
+                    }),
+                },
+            },
+            EnvVariables = 
+            {
+                { "port", "8080" },
+            },
+            DeleteServiceOnDestroy = false,
+        });
+        var srv = myapp.Service.Apply(service => Gcp.Monitoring.GetAppEngineService.InvokeAsync(new Gcp.Monitoring.GetAppEngineServiceArgs
+        {
+            ModuleId = service,
+        }));
+    }
+
+}
+```
 
 
 

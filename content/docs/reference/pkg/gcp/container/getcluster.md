@@ -20,7 +20,41 @@ Get info about a GKE cluster from its name and location.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var myCluster = Output.Create(Gcp.Container.GetCluster.InvokeAsync(new Gcp.Container.GetClusterArgs
+        {
+            Name = "my-cluster",
+            Location = "us-east1-a",
+        }));
+        this.ClusterUsername = myCluster.Apply(myCluster => myCluster.MasterAuths[0].Username);
+        this.ClusterPassword = myCluster.Apply(myCluster => myCluster.MasterAuths[0].Password);
+        this.Endpoint = myCluster.Apply(myCluster => myCluster.Endpoint);
+        this.InstanceGroupUrls = myCluster.Apply(myCluster => myCluster.InstanceGroupUrls);
+        this.NodeConfig = myCluster.Apply(myCluster => myCluster.NodeConfigs);
+        this.NodePools = myCluster.Apply(myCluster => myCluster.NodePools);
+    }
+
+    [Output("clusterUsername")]
+    public Output<string> ClusterUsername { get; set; }
+    [Output("clusterPassword")]
+    public Output<string> ClusterPassword { get; set; }
+    [Output("endpoint")]
+    public Output<string> Endpoint { get; set; }
+    [Output("instanceGroupUrls")]
+    public Output<string> InstanceGroupUrls { get; set; }
+    [Output("nodeConfig")]
+    public Output<string> NodeConfig { get; set; }
+    [Output("nodePools")]
+    public Output<string> NodePools { get; set; }
+}
+```
 {{% /example %}}
 
 {{% example go %}}

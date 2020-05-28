@@ -28,7 +28,27 @@ google_compute_project_metadata_item.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var @default = new Gcp.Compute.ProjectMetadata("default", new Gcp.Compute.ProjectMetadataArgs
+        {
+            Metadata = 
+            {
+                { "13", "42" },
+                { "fizz", "buzz" },
+                { "foo", "bar" },
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

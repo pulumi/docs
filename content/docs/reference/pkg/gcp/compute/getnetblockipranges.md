@@ -32,39 +32,27 @@ pulumi.export("cidrBlocks", netblock.cidr_blocks)
 pulumi.export("cidrBlocksIpv4", netblock.cidr_blocks_ipv4s)
 pulumi.export("cidrBlocksIpv6", netblock.cidr_blocks_ipv6s)
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
 
-## Example Usage - Allow Health Checks
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var netblock = Output.Create(Gcp.Compute.GetNetblockIPRanges.InvokeAsync());
+        this.CidrBlocks = netblock.Apply(netblock => netblock.CidrBlocks);
+        this.CidrBlocksIpv4 = netblock.Apply(netblock => netblock.CidrBlocksIpv4s);
+        this.CidrBlocksIpv6 = netblock.Apply(netblock => netblock.CidrBlocksIpv6s);
+    }
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const legacy-hcs = gcp.compute.getNetblockIPRanges({
-    rangeType: "legacy-health-checkers",
-});
-const default = new gcp.compute.Network("default", {});
-const allow-hcs = new gcp.compute.Firewall("allow-hcs", {
-    network: default.name,
-    allow: [{
-        protocol: "tcp",
-        ports: ["80"],
-    }],
-    sourceRanges: legacy-hcs.then(legacy_hcs => legacy_hcs.cidrBlocksIpv4s),
-});
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-legacy_hcs = gcp.compute.get_netblock_ip_ranges(range_type="legacy-health-checkers")
-default = gcp.compute.Network("default")
-allow_hcs = gcp.compute.Firewall("allow-hcs",
-    network=default.name,
-    allow=[{
-        "protocol": "tcp",
-        "ports": ["80"],
-    }],
-    source_ranges=legacy_hcs.cidr_blocks_ipv4s)
+    [Output("cidrBlocks")]
+    public Output<string> CidrBlocks { get; set; }
+    [Output("cidrBlocksIpv4")]
+    public Output<string> CidrBlocksIpv4 { get; set; }
+    [Output("cidrBlocksIpv6")]
+    public Output<string> CidrBlocksIpv6 { get; set; }
+}
 ```
 
 

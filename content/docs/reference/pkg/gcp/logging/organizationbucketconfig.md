@@ -24,7 +24,29 @@ Manages a organization-level logging bucket config. For more information see
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var @default = Output.Create(Gcp.Organizations.GetOrganization.InvokeAsync(new Gcp.Organizations.GetOrganizationArgs
+        {
+            Organization = "123456789",
+        }));
+        var basic = new Gcp.Logging.OrganizationBucketConfig("basic", new Gcp.Logging.OrganizationBucketConfigArgs
+        {
+            Organization = @default.Apply(@default => @default.Organization),
+            Location = "global",
+            RetentionDays = 30,
+            BucketId = "_Default",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -54,7 +76,7 @@ const default = gcp.organizations.getOrganization({
     organization: "123456789",
 });
 const basic = new gcp.logging.OrganizationBucketConfig("basic", {
-    organization: default.then(_default => _default.organization),
+    organization: _default.then(_default => _default.organization),
     location: "global",
     retentionDays: 30,
     bucketId: "_Default",

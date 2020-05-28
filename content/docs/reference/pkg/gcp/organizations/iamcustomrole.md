@@ -30,7 +30,31 @@ and
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var my_custom_role = new Gcp.Organizations.IAMCustomRole("my-custom-role", new Gcp.Organizations.IAMCustomRoleArgs
+        {
+            Description = "A description",
+            OrgId = "123456789",
+            Permissions = 
+            {
+                "iam.roles.list",
+                "iam.roles.create",
+                "iam.roles.delete",
+            },
+            RoleId = "myCustomRole",
+            Title = "My Custom Role",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

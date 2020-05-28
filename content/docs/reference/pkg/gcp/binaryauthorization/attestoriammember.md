@@ -53,6 +53,38 @@ policy = gcp.binaryauthorization.AttestorIamPolicy("policy",
     attestor=google_binary_authorization_attestor["attestor"]["name"],
     policy_data=admin.policy_data)
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+        {
+            Binding = 
+            {
+                
+                {
+                    { "role", "roles/viewer" },
+                    { "members", 
+                    {
+                        "user:jane@example.com",
+                    } },
+                },
+            },
+        }));
+        var policy = new Gcp.BinaryAuthorization.AttestorIamPolicy("policy", new Gcp.BinaryAuthorization.AttestorIamPolicyArgs
+        {
+            Project = google_binary_authorization_attestor.Attestor.Project,
+            Attestor = google_binary_authorization_attestor.Attestor.Name,
+            PolicyData = admin.Apply(admin => admin.PolicyData),
+        });
+    }
+
+}
+```
 
 ## google\_binary\_authorization\_attestor\_iam\_binding
 
@@ -77,6 +109,28 @@ binding = gcp.binaryauthorization.AttestorIamBinding("binding",
     role="roles/viewer",
     members=["user:jane@example.com"])
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var binding = new Gcp.BinaryAuthorization.AttestorIamBinding("binding", new Gcp.BinaryAuthorization.AttestorIamBindingArgs
+        {
+            Project = google_binary_authorization_attestor.Attestor.Project,
+            Attestor = google_binary_authorization_attestor.Attestor.Name,
+            Role = "roles/viewer",
+            Members = 
+            {
+                "user:jane@example.com",
+            },
+        });
+    }
+
+}
+```
 
 ## google\_binary\_authorization\_attestor\_iam\_member
 
@@ -100,6 +154,25 @@ member = gcp.binaryauthorization.AttestorIamMember("member",
     attestor=google_binary_authorization_attestor["attestor"]["name"],
     role="roles/viewer",
     member="user:jane@example.com")
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var member = new Gcp.BinaryAuthorization.AttestorIamMember("member", new Gcp.BinaryAuthorization.AttestorIamMemberArgs
+        {
+            Project = google_binary_authorization_attestor.Attestor.Project,
+            Attestor = google_binary_authorization_attestor.Attestor.Name,
+            Role = "roles/viewer",
+            Member = "user:jane@example.com",
+        });
+    }
+
+}
 ```
 
 

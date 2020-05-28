@@ -92,6 +92,52 @@ default = gcp.cloudrun.Service("default",
         },
     ])
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var @default = new Gcp.CloudRun.Service("default", new Gcp.CloudRun.ServiceArgs
+        {
+            Location = "us-central1",
+            Template = new Gcp.CloudRun.Inputs.ServiceTemplateArgs
+            {
+                Metadata = new Gcp.CloudRun.Inputs.ServiceTemplateMetadataArgs
+                {
+                    Name = "cloudrun-srv-green",
+                },
+                Spec = new Gcp.CloudRun.Inputs.ServiceTemplateSpecArgs
+                {
+                    Containers = 
+                    {
+                        new Gcp.CloudRun.Inputs.ServiceTemplateSpecContainerArgs
+                        {
+                            Image = "gcr.io/cloudrun/hello",
+                        },
+                    },
+                },
+            },
+            Traffics = 
+            {
+                new Gcp.CloudRun.Inputs.ServiceTrafficArgs
+                {
+                    Percent = 25,
+                    RevisionName = "cloudrun-srv-green",
+                },
+                new Gcp.CloudRun.Inputs.ServiceTrafficArgs
+                {
+                    Percent = 75,
+                    RevisionName = "cloudrun-srv-blue",
+                },
+            },
+        });
+    }
+
+}
+```
 
 {{% examples %}}
 ## Example Usage
@@ -99,7 +145,43 @@ default = gcp.cloudrun.Service("default",
 {{< chooser language "typescript,python,go,csharp" / >}}
 ### Cloud Run Service Basic
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var @default = new Gcp.CloudRun.Service("default", new Gcp.CloudRun.ServiceArgs
+        {
+            Location = "us-central1",
+            Template = new Gcp.CloudRun.Inputs.ServiceTemplateArgs
+            {
+                Spec = new Gcp.CloudRun.Inputs.ServiceTemplateSpecArgs
+                {
+                    Containers = 
+                    {
+                        new Gcp.CloudRun.Inputs.ServiceTemplateSpecContainerArgs
+                        {
+                            Image = "gcr.io/cloudrun/hello",
+                        },
+                    },
+                },
+            },
+            Traffics = 
+            {
+                new Gcp.CloudRun.Inputs.ServiceTrafficArgs
+                {
+                    LatestRevision = true,
+                    Percent = 100,
+                },
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -151,7 +233,53 @@ const defaultService = new gcp.cloudrun.Service("default", {
 
 ### Cloud Run Service Sql
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var instance = new Gcp.Sql.DatabaseInstance("instance", new Gcp.Sql.DatabaseInstanceArgs
+        {
+            Region = "us-east1",
+            Settings = new Gcp.Sql.Inputs.DatabaseInstanceSettingsArgs
+            {
+                Tier = "db-f1-micro",
+            },
+        });
+        var @default = new Gcp.CloudRun.Service("default", new Gcp.CloudRun.ServiceArgs
+        {
+            AutogenerateRevisionName = true,
+            Location = "us-central1",
+            Template = new Gcp.CloudRun.Inputs.ServiceTemplateArgs
+            {
+                Metadata = new Gcp.CloudRun.Inputs.ServiceTemplateMetadataArgs
+                {
+                    Annotations = 
+                    {
+                        { "autoscaling.knative.dev/maxScale", "1000" },
+                        { "run.googleapis.com/client-name", "demo" },
+                        { "run.googleapis.com/cloudsql-instances", instance.Name.Apply(name => $"my-project-name:us-central1:{name}") },
+                    },
+                },
+                Spec = new Gcp.CloudRun.Inputs.ServiceTemplateSpecArgs
+                {
+                    Containers = 
+                    {
+                        new Gcp.CloudRun.Inputs.ServiceTemplateSpecContainerArgs
+                        {
+                            Image = "gcr.io/cloudrun/hello",
+                        },
+                    },
+                },
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -222,7 +350,57 @@ const defaultService = new gcp.cloudrun.Service("default", {
 
 ### Cloud Run Service Multiple Environment Variables
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var @default = new Gcp.CloudRun.Service("default", new Gcp.CloudRun.ServiceArgs
+        {
+            AutogenerateRevisionName = true,
+            Location = "us-central1",
+            Template = new Gcp.CloudRun.Inputs.ServiceTemplateArgs
+            {
+                Spec = new Gcp.CloudRun.Inputs.ServiceTemplateSpecArgs
+                {
+                    Containers = 
+                    {
+                        new Gcp.CloudRun.Inputs.ServiceTemplateSpecContainerArgs
+                        {
+                            Env = 
+                            {
+                                
+                                {
+                                    { "name", "SOURCE" },
+                                    { "value", "remote" },
+                                },
+                                
+                                {
+                                    { "name", "TARGET" },
+                                    { "value", "home" },
+                                },
+                            },
+                            Image = "gcr.io/cloudrun/hello",
+                        },
+                    },
+                },
+            },
+            Traffics = 
+            {
+                new Gcp.CloudRun.Inputs.ServiceTrafficArgs
+                {
+                    LatestRevision = true,
+                    Percent = 100,
+                },
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

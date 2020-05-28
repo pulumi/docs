@@ -53,6 +53,38 @@ policy = gcp.iap.WebBackendServiceIamPolicy("policy",
     web_backend_service=google_compute_backend_service["default"]["name"],
     policy_data=admin.policy_data)
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+        {
+            Binding = 
+            {
+                
+                {
+                    { "role", "roles/iap.httpsResourceAccessor" },
+                    { "members", 
+                    {
+                        "user:jane@example.com",
+                    } },
+                },
+            },
+        }));
+        var policy = new Gcp.Iap.WebBackendServiceIamPolicy("policy", new Gcp.Iap.WebBackendServiceIamPolicyArgs
+        {
+            Project = google_compute_backend_service.Default.Project,
+            WebBackendService = google_compute_backend_service.Default.Name,
+            PolicyData = admin.Apply(admin => admin.PolicyData),
+        });
+    }
+
+}
+```
 
 With IAM Conditions:
 
@@ -95,6 +127,44 @@ policy = gcp.iap.WebBackendServiceIamPolicy("policy",
     web_backend_service=google_compute_backend_service["default"]["name"],
     policy_data=admin.policy_data)
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+        {
+            Binding = 
+            {
+                
+                {
+                    { "role", "roles/iap.httpsResourceAccessor" },
+                    { "members", 
+                    {
+                        "user:jane@example.com",
+                    } },
+                    { "condition", 
+                    {
+                        { "title", "expires_after_2019_12_31" },
+                        { "description", "Expiring at midnight of 2019-12-31" },
+                        { "expression", "request.time < timestamp(\"2020-01-01T00:00:00Z\")" },
+                    } },
+                },
+            },
+        }));
+        var policy = new Gcp.Iap.WebBackendServiceIamPolicy("policy", new Gcp.Iap.WebBackendServiceIamPolicyArgs
+        {
+            Project = google_compute_backend_service.Default.Project,
+            WebBackendService = google_compute_backend_service.Default.Name,
+            PolicyData = admin.Apply(admin => admin.PolicyData),
+        });
+    }
+
+}
+```
 ## google\_iap\_web\_backend\_service\_iam\_binding
 
 ```typescript
@@ -117,6 +187,28 @@ binding = gcp.iap.WebBackendServiceIamBinding("binding",
     web_backend_service=google_compute_backend_service["default"]["name"],
     role="roles/iap.httpsResourceAccessor",
     members=["user:jane@example.com"])
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var binding = new Gcp.Iap.WebBackendServiceIamBinding("binding", new Gcp.Iap.WebBackendServiceIamBindingArgs
+        {
+            Project = google_compute_backend_service.Default.Project,
+            WebBackendService = google_compute_backend_service.Default.Name,
+            Role = "roles/iap.httpsResourceAccessor",
+            Members = 
+            {
+                "user:jane@example.com",
+            },
+        });
+    }
+
+}
 ```
 
 With IAM Conditions:
@@ -152,6 +244,34 @@ binding = gcp.iap.WebBackendServiceIamBinding("binding",
         "expression": "request.time < timestamp(\"2020-01-01T00:00:00Z\")",
     })
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var binding = new Gcp.Iap.WebBackendServiceIamBinding("binding", new Gcp.Iap.WebBackendServiceIamBindingArgs
+        {
+            Project = google_compute_backend_service.Default.Project,
+            WebBackendService = google_compute_backend_service.Default.Name,
+            Role = "roles/iap.httpsResourceAccessor",
+            Members = 
+            {
+                "user:jane@example.com",
+            },
+            Condition = new Gcp.Iap.Inputs.WebBackendServiceIamBindingConditionArgs
+            {
+                Title = "expires_after_2019_12_31",
+                Description = "Expiring at midnight of 2019-12-31",
+                Expression = "request.time < timestamp(\"2020-01-01T00:00:00Z\")",
+            },
+        });
+    }
+
+}
+```
 ## google\_iap\_web\_backend\_service\_iam\_member
 
 ```typescript
@@ -174,6 +294,25 @@ member = gcp.iap.WebBackendServiceIamMember("member",
     web_backend_service=google_compute_backend_service["default"]["name"],
     role="roles/iap.httpsResourceAccessor",
     member="user:jane@example.com")
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var member = new Gcp.Iap.WebBackendServiceIamMember("member", new Gcp.Iap.WebBackendServiceIamMemberArgs
+        {
+            Project = google_compute_backend_service.Default.Project,
+            WebBackendService = google_compute_backend_service.Default.Name,
+            Role = "roles/iap.httpsResourceAccessor",
+            Member = "user:jane@example.com",
+        });
+    }
+
+}
 ```
 
 With IAM Conditions:
@@ -208,6 +347,31 @@ member = gcp.iap.WebBackendServiceIamMember("member",
         "description": "Expiring at midnight of 2019-12-31",
         "expression": "request.time < timestamp(\"2020-01-01T00:00:00Z\")",
     })
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var member = new Gcp.Iap.WebBackendServiceIamMember("member", new Gcp.Iap.WebBackendServiceIamMemberArgs
+        {
+            Project = google_compute_backend_service.Default.Project,
+            WebBackendService = google_compute_backend_service.Default.Name,
+            Role = "roles/iap.httpsResourceAccessor",
+            Member = "user:jane@example.com",
+            Condition = new Gcp.Iap.Inputs.WebBackendServiceIamMemberConditionArgs
+            {
+                Title = "expires_after_2019_12_31",
+                Description = "Expiring at midnight of 2019-12-31",
+                Expression = "request.time < timestamp(\"2020-01-01T00:00:00Z\")",
+            },
+        });
+    }
+
+}
 ```
 
 

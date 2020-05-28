@@ -24,7 +24,29 @@ Manages a billing account level logging bucket config. For more information see
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var @default = Output.Create(Gcp.Organizations.GetBillingAccount.InvokeAsync(new Gcp.Organizations.GetBillingAccountArgs
+        {
+            BillingAccount = "00AA00-000AAA-00AA0A",
+        }));
+        var basic = new Gcp.Logging.BillingAccountBucketConfig("basic", new Gcp.Logging.BillingAccountBucketConfigArgs
+        {
+            BillingAccount = @default.Apply(@default => @default.BillingAccount),
+            Location = "global",
+            RetentionDays = 30,
+            BucketId = "_Default",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -54,7 +76,7 @@ const default = gcp.organizations.getBillingAccount({
     billingAccount: "00AA00-000AAA-00AA0A",
 });
 const basic = new gcp.logging.BillingAccountBucketConfig("basic", {
-    billingAccount: default.then(_default => _default.billingAccount),
+    billingAccount: _default.then(_default => _default.billingAccount),
     location: "global",
     retentionDays: 30,
     bucketId: "_Default",

@@ -20,7 +20,23 @@ Get a router within GCE from its name and VPC.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var my_router = Output.Create(Gcp.Compute.GetRouter.InvokeAsync(new Gcp.Compute.GetRouterArgs
+        {
+            Name = "myrouter-us-east1",
+            Network = "my-network",
+        }));
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

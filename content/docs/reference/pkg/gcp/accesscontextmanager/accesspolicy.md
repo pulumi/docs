@@ -43,6 +43,23 @@ access_policy = gcp.accesscontextmanager.AccessPolicy("access-policy",
     parent="organizations/123456789",
     title="my policy")
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var access_policy = new Gcp.AccessContextManager.AccessPolicy("access-policy", new Gcp.AccessContextManager.AccessPolicyArgs
+        {
+            Parent = "organizations/123456789",
+            Title = "my policy",
+        });
+    }
+
+}
+```
 
 
 

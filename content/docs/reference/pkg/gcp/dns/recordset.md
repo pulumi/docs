@@ -24,72 +24,34 @@ will not actually remove NS records during destroy but will report that it did.
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
-### Binding a DNS name to the ephemeral IP of a new instance:
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-frontend_instance = gcp.compute.Instance("frontendInstance",
-    machine_type="g1-small",
-    zone="us-central1-b",
-    boot_disk={
-        "initialize_params": {
-            "image": "debian-cloud/debian-9",
-        },
-    },
-    network_interface=[{
-        "network": "default",
-        "access_config": [{}],
-    }])
-prod = gcp.dns.ManagedZone("prod", dns_name="prod.mydomain.com.")
-frontend_record_set = gcp.dns.RecordSet("frontendRecordSet",
-    type="A",
-    ttl=300,
-    managed_zone=prod.name,
-    rrdatas=[frontend_instance.network_interfaces[0]["accessConfigs"][0]["natIp"]])
-```
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const frontendInstance = new gcp.compute.Instance("frontendInstance", {
-    machineType: "g1-small",
-    zone: "us-central1-b",
-    boot_disk: {
-        initialize_params: {
-            image: "debian-cloud/debian-9",
-        },
-    },
-    network_interface: [{
-        network: "default",
-        access_config: [{}],
-    }],
-});
-const prod = new gcp.dns.ManagedZone("prod", {dnsName: "prod.mydomain.com."});
-const frontendRecordSet = new gcp.dns.RecordSet("frontendRecordSet", {
-    type: "A",
-    ttl: 300,
-    managedZone: prod.name,
-    rrdatas: [frontendInstance.networkInterfaces.apply(networkInterfaces => networkInterfaces[0].accessConfigs?[0]?.natIp)],
-});
-```
-{{% /example %}}
-
 ### Adding an A record
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var prod = new Gcp.Dns.ManagedZone("prod", new Gcp.Dns.ManagedZoneArgs
+        {
+            DnsName = "prod.mydomain.com.",
+        });
+        var recordSet = new Gcp.Dns.RecordSet("recordSet", new Gcp.Dns.RecordSetArgs
+        {
+            ManagedZone = prod.Name,
+            Type = "A",
+            Ttl = 300,
+            Rrdatas = 
+            {
+                "8.8.8.8",
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -127,7 +89,36 @@ const recordSet = new gcp.dns.RecordSet("recordSet", {
 
 ### Adding an MX record
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var prod = new Gcp.Dns.ManagedZone("prod", new Gcp.Dns.ManagedZoneArgs
+        {
+            DnsName = "prod.mydomain.com.",
+        });
+        var mx = new Gcp.Dns.RecordSet("mx", new Gcp.Dns.RecordSetArgs
+        {
+            ManagedZone = prod.Name,
+            Type = "MX",
+            Ttl = 3600,
+            Rrdatas = 
+            {
+                "1 aspmx.l.google.com.",
+                "5 alt1.aspmx.l.google.com.",
+                "5 alt2.aspmx.l.google.com.",
+                "10 alt3.aspmx.l.google.com.",
+                "10 alt4.aspmx.l.google.com.",
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -177,7 +168,32 @@ const mx = new gcp.dns.RecordSet("mx", {
 
 ### Adding an SPF record
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var prod = new Gcp.Dns.ManagedZone("prod", new Gcp.Dns.ManagedZoneArgs
+        {
+            DnsName = "prod.mydomain.com.",
+        });
+        var spf = new Gcp.Dns.RecordSet("spf", new Gcp.Dns.RecordSetArgs
+        {
+            ManagedZone = prod.Name,
+            Type = "TXT",
+            Ttl = 300,
+            Rrdatas = 
+            {
+                "\"v=spf1 ip4:111.111.111.111 include:backoff.email-example.com -all\"",
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -215,7 +231,32 @@ const spf = new gcp.dns.RecordSet("spf", {
 
 ### Adding a CNAME record
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var prod = new Gcp.Dns.ManagedZone("prod", new Gcp.Dns.ManagedZoneArgs
+        {
+            DnsName = "prod.mydomain.com.",
+        });
+        var cname = new Gcp.Dns.RecordSet("cname", new Gcp.Dns.RecordSetArgs
+        {
+            ManagedZone = prod.Name,
+            Type = "CNAME",
+            Ttl = 300,
+            Rrdatas = 
+            {
+                "frontend.mydomain.com.",
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

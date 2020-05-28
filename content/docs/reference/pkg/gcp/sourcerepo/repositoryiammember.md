@@ -53,6 +53,38 @@ policy = gcp.pubsub.TopicIAMPolicy("policy",
     topic=google_pubsub_topic["example"]["name"],
     policy_data=admin.policy_data)
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+        {
+            Binding = 
+            {
+                
+                {
+                    { "role", "roles/viewer" },
+                    { "members", 
+                    {
+                        "user:jane@example.com",
+                    } },
+                },
+            },
+        }));
+        var policy = new Gcp.PubSub.TopicIAMPolicy("policy", new Gcp.PubSub.TopicIAMPolicyArgs
+        {
+            Project = google_pubsub_topic.Example.Project,
+            Topic = google_pubsub_topic.Example.Name,
+            PolicyData = admin.Apply(admin => admin.PolicyData),
+        });
+    }
+
+}
+```
 
 ## google\_pubsub\_topic\_iam\_binding
 
@@ -77,6 +109,28 @@ binding = gcp.pubsub.TopicIAMBinding("binding",
     role="roles/viewer",
     members=["user:jane@example.com"])
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var binding = new Gcp.PubSub.TopicIAMBinding("binding", new Gcp.PubSub.TopicIAMBindingArgs
+        {
+            Project = google_pubsub_topic.Example.Project,
+            Topic = google_pubsub_topic.Example.Name,
+            Role = "roles/viewer",
+            Members = 
+            {
+                "user:jane@example.com",
+            },
+        });
+    }
+
+}
+```
 
 ## google\_pubsub\_topic\_iam\_member
 
@@ -100,6 +154,25 @@ member = gcp.pubsub.TopicIAMMember("member",
     topic=google_pubsub_topic["example"]["name"],
     role="roles/viewer",
     member="user:jane@example.com")
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var member = new Gcp.PubSub.TopicIAMMember("member", new Gcp.PubSub.TopicIAMMemberArgs
+        {
+            Project = google_pubsub_topic.Example.Project,
+            Topic = google_pubsub_topic.Example.Name,
+            Role = "roles/viewer",
+            Member = "user:jane@example.com",
+        });
+    }
+
+}
 ```
 
 

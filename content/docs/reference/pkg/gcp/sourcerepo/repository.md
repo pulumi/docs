@@ -34,37 +34,20 @@ import pulumi_gcp as gcp
 
 my_repo = gcp.sourcerepo.Repository("my-repo")
 ```
-## Example Usage - Sourcerepo Repository Full
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
 
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var my_repo = new Gcp.SourceRepo.Repository("my-repo", new Gcp.SourceRepo.RepositoryArgs
+        {
+        });
+    }
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const test-account = new gcp.serviceAccount.Account("test-account", {
-    accountId: "my-account",
-    displayName: "Test Service Account",
-});
-const topic = new gcp.pubsub.Topic("topic", {});
-const my-repo = new gcp.sourcerepo.Repository("my-repo", {pubsub_configs: [{
-    topic: topic.id,
-    messageFormat: "JSON",
-    serviceAccountEmail: test-account.email,
-}]});
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-test_account = gcp.service_account.Account("test-account",
-    account_id="my-account",
-    display_name="Test Service Account")
-topic = gcp.pubsub.Topic("topic")
-my_repo = gcp.sourcerepo.Repository("my-repo", pubsub_configs=[{
-    "topic": topic.id,
-    "messageFormat": "JSON",
-    "service_account_email": test_account.email,
-}])
+}
 ```
 
 

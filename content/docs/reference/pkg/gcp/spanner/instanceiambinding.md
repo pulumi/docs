@@ -52,6 +52,37 @@ instance = gcp.spanner.InstanceIAMPolicy("instance",
     instance="your-instance-name",
     policy_data=admin.policy_data)
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+        {
+            Binding = 
+            {
+                
+                {
+                    { "role", "roles/editor" },
+                    { "members", 
+                    {
+                        "user:jane@example.com",
+                    } },
+                },
+            },
+        }));
+        var instance = new Gcp.Spanner.InstanceIAMPolicy("instance", new Gcp.Spanner.InstanceIAMPolicyArgs
+        {
+            Instance = "your-instance-name",
+            PolicyData = admin.Apply(admin => admin.PolicyData),
+        });
+    }
+
+}
+```
 
 ## google\_spanner\_instance\_iam\_binding
 
@@ -74,6 +105,27 @@ instance = gcp.spanner.InstanceIAMBinding("instance",
     members=["user:jane@example.com"],
     role="roles/compute.networkUser")
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var instance = new Gcp.Spanner.InstanceIAMBinding("instance", new Gcp.Spanner.InstanceIAMBindingArgs
+        {
+            Instance = "your-instance-name",
+            Members = 
+            {
+                "user:jane@example.com",
+            },
+            Role = "roles/compute.networkUser",
+        });
+    }
+
+}
+```
 
 ## google\_spanner\_instance\_iam\_member
 
@@ -95,6 +147,24 @@ instance = gcp.spanner.InstanceIAMMember("instance",
     instance="your-instance-name",
     member="user:jane@example.com",
     role="roles/compute.networkUser")
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var instance = new Gcp.Spanner.InstanceIAMMember("instance", new Gcp.Spanner.InstanceIAMMemberArgs
+        {
+            Instance = "your-instance-name",
+            Member = "user:jane@example.com",
+            Role = "roles/compute.networkUser",
+        });
+    }
+
+}
 ```
 
 

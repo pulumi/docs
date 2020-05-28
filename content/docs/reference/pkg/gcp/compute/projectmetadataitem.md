@@ -23,7 +23,23 @@ project metadata map.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var @default = new Gcp.Compute.ProjectMetadataItem("default", new Gcp.Compute.ProjectMetadataItemArgs
+        {
+            Key = "my_metadata",
+            Value = "my_value",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

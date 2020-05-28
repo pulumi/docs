@@ -21,44 +21,6 @@ To get more information about TargetTcpProxy, see:
 * How-to Guides
     * [Setting Up TCP proxy for Google Cloud Load Balancing](https://cloud.google.com/compute/docs/load-balancing/tcp-ssl/tcp-proxy)
 
-## Example Usage - Target Tcp Proxy Basic
-
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const defaultHealthCheck = new gcp.compute.HealthCheck("defaultHealthCheck", {
-    timeoutSec: 1,
-    checkIntervalSec: 1,
-    tcp_health_check: {
-        port: "443",
-    },
-});
-const defaultBackendService = new gcp.compute.BackendService("defaultBackendService", {
-    protocol: "TCP",
-    timeoutSec: 10,
-    healthChecks: [defaultHealthCheck.id],
-});
-const defaultTargetTCPProxy = new gcp.compute.TargetTCPProxy("defaultTargetTCPProxy", {backendService: defaultBackendService.id});
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-default_health_check = gcp.compute.HealthCheck("defaultHealthCheck",
-    timeout_sec=1,
-    check_interval_sec=1,
-    tcp_health_check={
-        "port": "443",
-    })
-default_backend_service = gcp.compute.BackendService("defaultBackendService",
-    protocol="TCP",
-    timeout_sec=10,
-    health_checks=[default_health_check.id])
-default_target_tcp_proxy = gcp.compute.TargetTCPProxy("defaultTargetTCPProxy", backend_service=default_backend_service.id)
-```
-
 
 
 ## Create a TargetTCPProxy Resource {#create}

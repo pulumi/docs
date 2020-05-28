@@ -48,6 +48,31 @@ tenant_oauth_idp_config = gcp.identityplatform.TenantOauthIdpConfig("tenantOauth
     enabled=True,
     client_secret="secret")
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var tenant = new Gcp.IdentityPlatform.Tenant("tenant", new Gcp.IdentityPlatform.TenantArgs
+        {
+            DisplayName = "tenant",
+        });
+        var tenantOauthIdpConfig = new Gcp.IdentityPlatform.TenantOauthIdpConfig("tenantOauthIdpConfig", new Gcp.IdentityPlatform.TenantOauthIdpConfigArgs
+        {
+            Tenant = tenant.Name,
+            DisplayName = "Display Name",
+            ClientId = "client-id",
+            Issuer = "issuer",
+            Enabled = true,
+            ClientSecret = "secret",
+        });
+    }
+
+}
+```
 
 
 

@@ -24,7 +24,30 @@ Manages a folder-level logging bucket config. For more information see
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var @default = new Gcp.Organizations.Folder("default", new Gcp.Organizations.FolderArgs
+        {
+            DisplayName = "some-folder-name",
+            Parent = "organizations/123456789",
+        });
+        var basic = new Gcp.Logging.FolderBucketConfig("basic", new Gcp.Logging.FolderBucketConfigArgs
+        {
+            Folder = @default.Name,
+            Location = "global",
+            RetentionDays = 30,
+            BucketId = "_Default",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -52,12 +75,12 @@ basic = gcp.logging.FolderBucketConfig("basic",
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const default = new gcp.organizations.Folder("default", {
+const _default = new gcp.organizations.Folder("default", {
     displayName: "some-folder-name",
     parent: "organizations/123456789",
 });
 const basic = new gcp.logging.FolderBucketConfig("basic", {
-    folder: default.name,
+    folder: _default.name,
     location: "global",
     retentionDays: 30,
     bucketId: "_Default",

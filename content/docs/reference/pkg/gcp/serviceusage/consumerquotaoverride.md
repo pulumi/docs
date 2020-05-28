@@ -55,6 +55,32 @@ override = gcp.serviceusage.ConsumerQuotaOverride("override",
     override_value="95",
     force=True)
 ```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var myProject = new Gcp.Organizations.Project("myProject", new Gcp.Organizations.ProjectArgs
+        {
+            ProjectId = "quota",
+            OrgId = "123456789",
+        });
+        var @override = new Gcp.ServiceUsage.ConsumerQuotaOverride("override", new Gcp.ServiceUsage.ConsumerQuotaOverrideArgs
+        {
+            Project = myProject.ProjectId,
+            Service = "servicemanagement.googleapis.com",
+            Metric = "servicemanagement.googleapis.com%2Fdefault_requests",
+            Limit = "%2Fmin%2Fproject",
+            OverrideValue = "95",
+            Force = true,
+        });
+    }
+
+}
+```
 
 
 

@@ -25,7 +25,7 @@ To get more information about Realm, see:
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const default = new gcp.gameservices.Realm("default", {
+const _default = new gcp.gameservices.Realm("default", {
     realmId: "tf-test-realm",
     timeZone: "EST",
     location: "global",
@@ -41,6 +41,25 @@ default = gcp.gameservices.Realm("default",
     time_zone="EST",
     location="global",
     description="one of the nine")
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var @default = new Gcp.GameServices.Realm("default", new Gcp.GameServices.RealmArgs
+        {
+            RealmId = "tf-test-realm",
+            TimeZone = "EST",
+            Location = "global",
+            Description = "one of the nine",
+        });
+    }
+
+}
 ```
 
 

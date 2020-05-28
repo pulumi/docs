@@ -22,7 +22,22 @@ and [API](https://cloud.google.com/functions/docs/apis).
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var my_function = Output.Create(Gcp.CloudFunctions.GetFunction.InvokeAsync(new Gcp.CloudFunctions.GetFunctionArgs
+        {
+            Name = "function",
+        }));
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}

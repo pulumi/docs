@@ -33,19 +33,19 @@ To get more information about ServicePerimeterResource, see:
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const access-policy = new gcp.accesscontextmanager.AccessPolicy("access-policy", {
+const access_policy = new gcp.accesscontextmanager.AccessPolicy("access-policy", {
     parent: "organizations/123456789",
     title: "my policy",
 });
-const service-perimeter-resourceServicePerimeter = new gcp.accesscontextmanager.ServicePerimeter("service-perimeter-resourceServicePerimeter", {
-    parent: pulumi.interpolate`accessPolicies/${access-policy.name}`,
+const service_perimeter_resourceServicePerimeter = new gcp.accesscontextmanager.ServicePerimeter("service-perimeter-resourceServicePerimeter", {
+    parent: pulumi.interpolate`accessPolicies/${access_policy.name}`,
     title: "restrict_all",
     status: {
         restrictedServices: ["storage.googleapis.com"],
     },
 });
-const service-perimeter-resourceServicePerimeterResource = new gcp.accesscontextmanager.ServicePerimeterResource("service-perimeter-resourceServicePerimeterResource", {
-    perimeterName: service-perimeter-resourceServicePerimeter.name,
+const service_perimeter_resourceServicePerimeterResource = new gcp.accesscontextmanager.ServicePerimeterResource("service-perimeter-resourceServicePerimeterResource", {
+    perimeterName: service_perimeter_resourceServicePerimeter.name,
     resource: "projects/987654321",
 });
 ```
@@ -65,6 +65,40 @@ service_perimeter_resource_service_perimeter = gcp.accesscontextmanager.ServiceP
 service_perimeter_resource_service_perimeter_resource = gcp.accesscontextmanager.ServicePerimeterResource("service-perimeter-resourceServicePerimeterResource",
     perimeter_name=service_perimeter_resource_service_perimeter.name,
     resource="projects/987654321")
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var access_policy = new Gcp.AccessContextManager.AccessPolicy("access-policy", new Gcp.AccessContextManager.AccessPolicyArgs
+        {
+            Parent = "organizations/123456789",
+            Title = "my policy",
+        });
+        var service_perimeter_resourceServicePerimeter = new Gcp.AccessContextManager.ServicePerimeter("service-perimeter-resourceServicePerimeter", new Gcp.AccessContextManager.ServicePerimeterArgs
+        {
+            Parent = access_policy.Name.Apply(name => $"accessPolicies/{name}"),
+            Title = "restrict_all",
+            Status = new Gcp.AccessContextManager.Inputs.ServicePerimeterStatusArgs
+            {
+                RestrictedServices = 
+                {
+                    "storage.googleapis.com",
+                },
+            },
+        });
+        var service_perimeter_resourceServicePerimeterResource = new Gcp.AccessContextManager.ServicePerimeterResource("service-perimeter-resourceServicePerimeterResource", new Gcp.AccessContextManager.ServicePerimeterResourceArgs
+        {
+            PerimeterName = service_perimeter_resourceServicePerimeter.Name,
+            Resource = "projects/987654321",
+        });
+    }
+
+}
 ```
 
 
