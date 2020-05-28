@@ -196,7 +196,9 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>Approvals<wbr>Before<wbr>Merge</span>
+        <span id="approvalsbeforemerge_csharp">
+<a href="#approvalsbeforemerge_csharp" style="color: inherit; text-decoration: inherit;">Approvals<wbr>Before<wbr>Merge</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -205,7 +207,9 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>Archived</span>
+        <span id="archived_csharp">
+<a href="#archived_csharp" style="color: inherit; text-decoration: inherit;">Archived</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -214,7 +218,9 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>Container<wbr>Registry<wbr>Enabled</span>
+        <span id="containerregistryenabled_csharp">
+<a href="#containerregistryenabled_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Registry<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -223,7 +229,9 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>Default<wbr>Branch</span>
+        <span id="defaultbranch_csharp">
+<a href="#defaultbranch_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Branch</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -232,7 +240,9 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -241,7 +251,9 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>Initialize<wbr>With<wbr>Readme</span>
+        <span id="initializewithreadme_csharp">
+<a href="#initializewithreadme_csharp" style="color: inherit; text-decoration: inherit;">Initialize<wbr>With<wbr>Readme</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -250,7 +262,9 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>Issues<wbr>Enabled</span>
+        <span id="issuesenabled_csharp">
+<a href="#issuesenabled_csharp" style="color: inherit; text-decoration: inherit;">Issues<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -259,7 +273,9 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>Lfs<wbr>Enabled</span>
+        <span id="lfsenabled_csharp">
+<a href="#lfsenabled_csharp" style="color: inherit; text-decoration: inherit;">Lfs<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -268,7 +284,9 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>Merge<wbr>Method</span>
+        <span id="mergemethod_csharp">
+<a href="#mergemethod_csharp" style="color: inherit; text-decoration: inherit;">Merge<wbr>Method</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -279,7 +297,9 @@ Repositories are created with `merge` by default
 
     <dt class="property-optional"
             title="Optional">
-        <span>Merge<wbr>Requests<wbr>Enabled</span>
+        <span id="mergerequestsenabled_csharp">
+<a href="#mergerequestsenabled_csharp" style="color: inherit; text-decoration: inherit;">Merge<wbr>Requests<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -288,7 +308,9 @@ Repositories are created with `merge` by default
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -297,7 +319,9 @@ Repositories are created with `merge` by default
 
     <dt class="property-optional"
             title="Optional">
-        <span>Namespace<wbr>Id</span>
+        <span id="namespaceid_csharp">
+<a href="#namespaceid_csharp" style="color: inherit; text-decoration: inherit;">Namespace<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -307,7 +331,9 @@ See `gitlab..Group` for an example.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Only<wbr>Allow<wbr>Merge<wbr>If<wbr>All<wbr>Discussions<wbr>Are<wbr>Resolved</span>
+        <span id="onlyallowmergeifalldiscussionsareresolved_csharp">
+<a href="#onlyallowmergeifalldiscussionsareresolved_csharp" style="color: inherit; text-decoration: inherit;">Only<wbr>Allow<wbr>Merge<wbr>If<wbr>All<wbr>Discussions<wbr>Are<wbr>Resolved</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -316,7 +342,9 @@ See `gitlab..Group` for an example.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Only<wbr>Allow<wbr>Merge<wbr>If<wbr>Pipeline<wbr>Succeeds</span>
+        <span id="onlyallowmergeifpipelinesucceeds_csharp">
+<a href="#onlyallowmergeifpipelinesucceeds_csharp" style="color: inherit; text-decoration: inherit;">Only<wbr>Allow<wbr>Merge<wbr>If<wbr>Pipeline<wbr>Succeeds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -325,7 +353,9 @@ See `gitlab..Group` for an example.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Path</span>
+        <span id="path_csharp">
+<a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -334,7 +364,9 @@ See `gitlab..Group` for an example.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Pipelines<wbr>Enabled</span>
+        <span id="pipelinesenabled_csharp">
+<a href="#pipelinesenabled_csharp" style="color: inherit; text-decoration: inherit;">Pipelines<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -343,7 +375,9 @@ See `gitlab..Group` for an example.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Request<wbr>Access<wbr>Enabled</span>
+        <span id="requestaccessenabled_csharp">
+<a href="#requestaccessenabled_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Access<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -352,7 +386,9 @@ See `gitlab..Group` for an example.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Shared<wbr>Runners<wbr>Enabled</span>
+        <span id="sharedrunnersenabled_csharp">
+<a href="#sharedrunnersenabled_csharp" style="color: inherit; text-decoration: inherit;">Shared<wbr>Runners<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -361,7 +397,9 @@ See `gitlab..Group` for an example.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Shared<wbr>With<wbr>Groups</span>
+        <span id="sharedwithgroups_csharp">
+<a href="#sharedwithgroups_csharp" style="color: inherit; text-decoration: inherit;">Shared<wbr>With<wbr>Groups</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectsharedwithgroup">List&lt;Pulumi.<wbr>Git<wbr>Lab.<wbr>Inputs.<wbr>Project<wbr>Shared<wbr>With<wbr>Group<wbr>Args&gt;</a></span>
     </dt>
@@ -370,7 +408,9 @@ See `gitlab..Group` for an example.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Snippets<wbr>Enabled</span>
+        <span id="snippetsenabled_csharp">
+<a href="#snippetsenabled_csharp" style="color: inherit; text-decoration: inherit;">Snippets<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -379,7 +419,9 @@ See `gitlab..Group` for an example.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -388,7 +430,9 @@ See `gitlab..Group` for an example.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Visibility<wbr>Level</span>
+        <span id="visibilitylevel_csharp">
+<a href="#visibilitylevel_csharp" style="color: inherit; text-decoration: inherit;">Visibility<wbr>Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -399,7 +443,9 @@ Repositories are created as private by default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Wiki<wbr>Enabled</span>
+        <span id="wikienabled_csharp">
+<a href="#wikienabled_csharp" style="color: inherit; text-decoration: inherit;">Wiki<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -415,7 +461,9 @@ Repositories are created as private by default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Approvals<wbr>Before<wbr>Merge</span>
+        <span id="approvalsbeforemerge_go">
+<a href="#approvalsbeforemerge_go" style="color: inherit; text-decoration: inherit;">Approvals<wbr>Before<wbr>Merge</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -424,7 +472,9 @@ Repositories are created as private by default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Archived</span>
+        <span id="archived_go">
+<a href="#archived_go" style="color: inherit; text-decoration: inherit;">Archived</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -433,7 +483,9 @@ Repositories are created as private by default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Container<wbr>Registry<wbr>Enabled</span>
+        <span id="containerregistryenabled_go">
+<a href="#containerregistryenabled_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Registry<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -442,7 +494,9 @@ Repositories are created as private by default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Default<wbr>Branch</span>
+        <span id="defaultbranch_go">
+<a href="#defaultbranch_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Branch</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -451,7 +505,9 @@ Repositories are created as private by default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -460,7 +516,9 @@ Repositories are created as private by default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Initialize<wbr>With<wbr>Readme</span>
+        <span id="initializewithreadme_go">
+<a href="#initializewithreadme_go" style="color: inherit; text-decoration: inherit;">Initialize<wbr>With<wbr>Readme</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -469,7 +527,9 @@ Repositories are created as private by default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Issues<wbr>Enabled</span>
+        <span id="issuesenabled_go">
+<a href="#issuesenabled_go" style="color: inherit; text-decoration: inherit;">Issues<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -478,7 +538,9 @@ Repositories are created as private by default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Lfs<wbr>Enabled</span>
+        <span id="lfsenabled_go">
+<a href="#lfsenabled_go" style="color: inherit; text-decoration: inherit;">Lfs<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -487,7 +549,9 @@ Repositories are created as private by default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Merge<wbr>Method</span>
+        <span id="mergemethod_go">
+<a href="#mergemethod_go" style="color: inherit; text-decoration: inherit;">Merge<wbr>Method</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -498,7 +562,9 @@ Repositories are created with `merge` by default
 
     <dt class="property-optional"
             title="Optional">
-        <span>Merge<wbr>Requests<wbr>Enabled</span>
+        <span id="mergerequestsenabled_go">
+<a href="#mergerequestsenabled_go" style="color: inherit; text-decoration: inherit;">Merge<wbr>Requests<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -507,7 +573,9 @@ Repositories are created with `merge` by default
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -516,7 +584,9 @@ Repositories are created with `merge` by default
 
     <dt class="property-optional"
             title="Optional">
-        <span>Namespace<wbr>Id</span>
+        <span id="namespaceid_go">
+<a href="#namespaceid_go" style="color: inherit; text-decoration: inherit;">Namespace<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -526,7 +596,9 @@ See `gitlab..Group` for an example.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Only<wbr>Allow<wbr>Merge<wbr>If<wbr>All<wbr>Discussions<wbr>Are<wbr>Resolved</span>
+        <span id="onlyallowmergeifalldiscussionsareresolved_go">
+<a href="#onlyallowmergeifalldiscussionsareresolved_go" style="color: inherit; text-decoration: inherit;">Only<wbr>Allow<wbr>Merge<wbr>If<wbr>All<wbr>Discussions<wbr>Are<wbr>Resolved</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -535,7 +607,9 @@ See `gitlab..Group` for an example.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Only<wbr>Allow<wbr>Merge<wbr>If<wbr>Pipeline<wbr>Succeeds</span>
+        <span id="onlyallowmergeifpipelinesucceeds_go">
+<a href="#onlyallowmergeifpipelinesucceeds_go" style="color: inherit; text-decoration: inherit;">Only<wbr>Allow<wbr>Merge<wbr>If<wbr>Pipeline<wbr>Succeeds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -544,7 +618,9 @@ See `gitlab..Group` for an example.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Path</span>
+        <span id="path_go">
+<a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -553,7 +629,9 @@ See `gitlab..Group` for an example.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Pipelines<wbr>Enabled</span>
+        <span id="pipelinesenabled_go">
+<a href="#pipelinesenabled_go" style="color: inherit; text-decoration: inherit;">Pipelines<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -562,7 +640,9 @@ See `gitlab..Group` for an example.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Request<wbr>Access<wbr>Enabled</span>
+        <span id="requestaccessenabled_go">
+<a href="#requestaccessenabled_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Access<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -571,7 +651,9 @@ See `gitlab..Group` for an example.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Shared<wbr>Runners<wbr>Enabled</span>
+        <span id="sharedrunnersenabled_go">
+<a href="#sharedrunnersenabled_go" style="color: inherit; text-decoration: inherit;">Shared<wbr>Runners<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -580,7 +662,9 @@ See `gitlab..Group` for an example.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Shared<wbr>With<wbr>Groups</span>
+        <span id="sharedwithgroups_go">
+<a href="#sharedwithgroups_go" style="color: inherit; text-decoration: inherit;">Shared<wbr>With<wbr>Groups</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectsharedwithgroup">[]Project<wbr>Shared<wbr>With<wbr>Group</a></span>
     </dt>
@@ -589,7 +673,9 @@ See `gitlab..Group` for an example.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Snippets<wbr>Enabled</span>
+        <span id="snippetsenabled_go">
+<a href="#snippetsenabled_go" style="color: inherit; text-decoration: inherit;">Snippets<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -598,7 +684,9 @@ See `gitlab..Group` for an example.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -607,7 +695,9 @@ See `gitlab..Group` for an example.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Visibility<wbr>Level</span>
+        <span id="visibilitylevel_go">
+<a href="#visibilitylevel_go" style="color: inherit; text-decoration: inherit;">Visibility<wbr>Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -618,7 +708,9 @@ Repositories are created as private by default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Wiki<wbr>Enabled</span>
+        <span id="wikienabled_go">
+<a href="#wikienabled_go" style="color: inherit; text-decoration: inherit;">Wiki<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -634,7 +726,9 @@ Repositories are created as private by default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>approvals<wbr>Before<wbr>Merge</span>
+        <span id="approvalsbeforemerge_nodejs">
+<a href="#approvalsbeforemerge_nodejs" style="color: inherit; text-decoration: inherit;">approvals<wbr>Before<wbr>Merge</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -643,7 +737,9 @@ Repositories are created as private by default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>archived</span>
+        <span id="archived_nodejs">
+<a href="#archived_nodejs" style="color: inherit; text-decoration: inherit;">archived</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -652,7 +748,9 @@ Repositories are created as private by default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>container<wbr>Registry<wbr>Enabled</span>
+        <span id="containerregistryenabled_nodejs">
+<a href="#containerregistryenabled_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Registry<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -661,7 +759,9 @@ Repositories are created as private by default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>default<wbr>Branch</span>
+        <span id="defaultbranch_nodejs">
+<a href="#defaultbranch_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Branch</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -670,7 +770,9 @@ Repositories are created as private by default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -679,7 +781,9 @@ Repositories are created as private by default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>initialize<wbr>With<wbr>Readme</span>
+        <span id="initializewithreadme_nodejs">
+<a href="#initializewithreadme_nodejs" style="color: inherit; text-decoration: inherit;">initialize<wbr>With<wbr>Readme</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -688,7 +792,9 @@ Repositories are created as private by default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>issues<wbr>Enabled</span>
+        <span id="issuesenabled_nodejs">
+<a href="#issuesenabled_nodejs" style="color: inherit; text-decoration: inherit;">issues<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -697,7 +803,9 @@ Repositories are created as private by default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>lfs<wbr>Enabled</span>
+        <span id="lfsenabled_nodejs">
+<a href="#lfsenabled_nodejs" style="color: inherit; text-decoration: inherit;">lfs<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -706,7 +814,9 @@ Repositories are created as private by default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>merge<wbr>Method</span>
+        <span id="mergemethod_nodejs">
+<a href="#mergemethod_nodejs" style="color: inherit; text-decoration: inherit;">merge<wbr>Method</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -717,7 +827,9 @@ Repositories are created with `merge` by default
 
     <dt class="property-optional"
             title="Optional">
-        <span>merge<wbr>Requests<wbr>Enabled</span>
+        <span id="mergerequestsenabled_nodejs">
+<a href="#mergerequestsenabled_nodejs" style="color: inherit; text-decoration: inherit;">merge<wbr>Requests<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -726,7 +838,9 @@ Repositories are created with `merge` by default
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -735,7 +849,9 @@ Repositories are created with `merge` by default
 
     <dt class="property-optional"
             title="Optional">
-        <span>namespace<wbr>Id</span>
+        <span id="namespaceid_nodejs">
+<a href="#namespaceid_nodejs" style="color: inherit; text-decoration: inherit;">namespace<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -745,7 +861,9 @@ See `gitlab..Group` for an example.
 
     <dt class="property-optional"
             title="Optional">
-        <span>only<wbr>Allow<wbr>Merge<wbr>If<wbr>All<wbr>Discussions<wbr>Are<wbr>Resolved</span>
+        <span id="onlyallowmergeifalldiscussionsareresolved_nodejs">
+<a href="#onlyallowmergeifalldiscussionsareresolved_nodejs" style="color: inherit; text-decoration: inherit;">only<wbr>Allow<wbr>Merge<wbr>If<wbr>All<wbr>Discussions<wbr>Are<wbr>Resolved</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -754,7 +872,9 @@ See `gitlab..Group` for an example.
 
     <dt class="property-optional"
             title="Optional">
-        <span>only<wbr>Allow<wbr>Merge<wbr>If<wbr>Pipeline<wbr>Succeeds</span>
+        <span id="onlyallowmergeifpipelinesucceeds_nodejs">
+<a href="#onlyallowmergeifpipelinesucceeds_nodejs" style="color: inherit; text-decoration: inherit;">only<wbr>Allow<wbr>Merge<wbr>If<wbr>Pipeline<wbr>Succeeds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -763,7 +883,9 @@ See `gitlab..Group` for an example.
 
     <dt class="property-optional"
             title="Optional">
-        <span>path</span>
+        <span id="path_nodejs">
+<a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -772,7 +894,9 @@ See `gitlab..Group` for an example.
 
     <dt class="property-optional"
             title="Optional">
-        <span>pipelines<wbr>Enabled</span>
+        <span id="pipelinesenabled_nodejs">
+<a href="#pipelinesenabled_nodejs" style="color: inherit; text-decoration: inherit;">pipelines<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -781,7 +905,9 @@ See `gitlab..Group` for an example.
 
     <dt class="property-optional"
             title="Optional">
-        <span>request<wbr>Access<wbr>Enabled</span>
+        <span id="requestaccessenabled_nodejs">
+<a href="#requestaccessenabled_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Access<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -790,7 +916,9 @@ See `gitlab..Group` for an example.
 
     <dt class="property-optional"
             title="Optional">
-        <span>shared<wbr>Runners<wbr>Enabled</span>
+        <span id="sharedrunnersenabled_nodejs">
+<a href="#sharedrunnersenabled_nodejs" style="color: inherit; text-decoration: inherit;">shared<wbr>Runners<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -799,7 +927,9 @@ See `gitlab..Group` for an example.
 
     <dt class="property-optional"
             title="Optional">
-        <span>shared<wbr>With<wbr>Groups</span>
+        <span id="sharedwithgroups_nodejs">
+<a href="#sharedwithgroups_nodejs" style="color: inherit; text-decoration: inherit;">shared<wbr>With<wbr>Groups</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectsharedwithgroup">Project<wbr>Shared<wbr>With<wbr>Group[]</a></span>
     </dt>
@@ -808,7 +938,9 @@ See `gitlab..Group` for an example.
 
     <dt class="property-optional"
             title="Optional">
-        <span>snippets<wbr>Enabled</span>
+        <span id="snippetsenabled_nodejs">
+<a href="#snippetsenabled_nodejs" style="color: inherit; text-decoration: inherit;">snippets<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -817,7 +949,9 @@ See `gitlab..Group` for an example.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -826,7 +960,9 @@ See `gitlab..Group` for an example.
 
     <dt class="property-optional"
             title="Optional">
-        <span>visibility<wbr>Level</span>
+        <span id="visibilitylevel_nodejs">
+<a href="#visibilitylevel_nodejs" style="color: inherit; text-decoration: inherit;">visibility<wbr>Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -837,7 +973,9 @@ Repositories are created as private by default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>wiki<wbr>Enabled</span>
+        <span id="wikienabled_nodejs">
+<a href="#wikienabled_nodejs" style="color: inherit; text-decoration: inherit;">wiki<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -853,7 +991,9 @@ Repositories are created as private by default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>approvals_<wbr>before_<wbr>merge</span>
+        <span id="approvals_before_merge_python">
+<a href="#approvals_before_merge_python" style="color: inherit; text-decoration: inherit;">approvals_<wbr>before_<wbr>merge</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -862,7 +1002,9 @@ Repositories are created as private by default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>archived</span>
+        <span id="archived_python">
+<a href="#archived_python" style="color: inherit; text-decoration: inherit;">archived</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -871,7 +1013,9 @@ Repositories are created as private by default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>container_<wbr>registry_<wbr>enabled</span>
+        <span id="container_registry_enabled_python">
+<a href="#container_registry_enabled_python" style="color: inherit; text-decoration: inherit;">container_<wbr>registry_<wbr>enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -880,7 +1024,9 @@ Repositories are created as private by default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>default_<wbr>branch</span>
+        <span id="default_branch_python">
+<a href="#default_branch_python" style="color: inherit; text-decoration: inherit;">default_<wbr>branch</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -889,7 +1035,9 @@ Repositories are created as private by default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -898,7 +1046,9 @@ Repositories are created as private by default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>initialize_<wbr>with_<wbr>readme</span>
+        <span id="initialize_with_readme_python">
+<a href="#initialize_with_readme_python" style="color: inherit; text-decoration: inherit;">initialize_<wbr>with_<wbr>readme</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -907,7 +1057,9 @@ Repositories are created as private by default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>issues_<wbr>enabled</span>
+        <span id="issues_enabled_python">
+<a href="#issues_enabled_python" style="color: inherit; text-decoration: inherit;">issues_<wbr>enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -916,7 +1068,9 @@ Repositories are created as private by default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>lfs_<wbr>enabled</span>
+        <span id="lfs_enabled_python">
+<a href="#lfs_enabled_python" style="color: inherit; text-decoration: inherit;">lfs_<wbr>enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -925,7 +1079,9 @@ Repositories are created as private by default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>merge_<wbr>method</span>
+        <span id="merge_method_python">
+<a href="#merge_method_python" style="color: inherit; text-decoration: inherit;">merge_<wbr>method</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -936,7 +1092,9 @@ Repositories are created with `merge` by default
 
     <dt class="property-optional"
             title="Optional">
-        <span>merge_<wbr>requests_<wbr>enabled</span>
+        <span id="merge_requests_enabled_python">
+<a href="#merge_requests_enabled_python" style="color: inherit; text-decoration: inherit;">merge_<wbr>requests_<wbr>enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -945,7 +1103,9 @@ Repositories are created with `merge` by default
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -954,7 +1114,9 @@ Repositories are created with `merge` by default
 
     <dt class="property-optional"
             title="Optional">
-        <span>namespace_<wbr>id</span>
+        <span id="namespace_id_python">
+<a href="#namespace_id_python" style="color: inherit; text-decoration: inherit;">namespace_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -964,7 +1126,9 @@ See `gitlab..Group` for an example.
 
     <dt class="property-optional"
             title="Optional">
-        <span>only_<wbr>allow_<wbr>merge_<wbr>if_<wbr>all_<wbr>discussions_<wbr>are_<wbr>resolved</span>
+        <span id="only_allow_merge_if_all_discussions_are_resolved_python">
+<a href="#only_allow_merge_if_all_discussions_are_resolved_python" style="color: inherit; text-decoration: inherit;">only_<wbr>allow_<wbr>merge_<wbr>if_<wbr>all_<wbr>discussions_<wbr>are_<wbr>resolved</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -973,7 +1137,9 @@ See `gitlab..Group` for an example.
 
     <dt class="property-optional"
             title="Optional">
-        <span>only_<wbr>allow_<wbr>merge_<wbr>if_<wbr>pipeline_<wbr>succeeds</span>
+        <span id="only_allow_merge_if_pipeline_succeeds_python">
+<a href="#only_allow_merge_if_pipeline_succeeds_python" style="color: inherit; text-decoration: inherit;">only_<wbr>allow_<wbr>merge_<wbr>if_<wbr>pipeline_<wbr>succeeds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -982,7 +1148,9 @@ See `gitlab..Group` for an example.
 
     <dt class="property-optional"
             title="Optional">
-        <span>path</span>
+        <span id="path_python">
+<a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -991,7 +1159,9 @@ See `gitlab..Group` for an example.
 
     <dt class="property-optional"
             title="Optional">
-        <span>pipelines_<wbr>enabled</span>
+        <span id="pipelines_enabled_python">
+<a href="#pipelines_enabled_python" style="color: inherit; text-decoration: inherit;">pipelines_<wbr>enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1000,7 +1170,9 @@ See `gitlab..Group` for an example.
 
     <dt class="property-optional"
             title="Optional">
-        <span>request_<wbr>access_<wbr>enabled</span>
+        <span id="request_access_enabled_python">
+<a href="#request_access_enabled_python" style="color: inherit; text-decoration: inherit;">request_<wbr>access_<wbr>enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1009,7 +1181,9 @@ See `gitlab..Group` for an example.
 
     <dt class="property-optional"
             title="Optional">
-        <span>shared_<wbr>runners_<wbr>enabled</span>
+        <span id="shared_runners_enabled_python">
+<a href="#shared_runners_enabled_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>runners_<wbr>enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1018,7 +1192,9 @@ See `gitlab..Group` for an example.
 
     <dt class="property-optional"
             title="Optional">
-        <span>shared_<wbr>with_<wbr>groups</span>
+        <span id="shared_with_groups_python">
+<a href="#shared_with_groups_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>with_<wbr>groups</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectsharedwithgroup">List[Project<wbr>Shared<wbr>With<wbr>Group]</a></span>
     </dt>
@@ -1027,7 +1203,9 @@ See `gitlab..Group` for an example.
 
     <dt class="property-optional"
             title="Optional">
-        <span>snippets_<wbr>enabled</span>
+        <span id="snippets_enabled_python">
+<a href="#snippets_enabled_python" style="color: inherit; text-decoration: inherit;">snippets_<wbr>enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1036,7 +1214,9 @@ See `gitlab..Group` for an example.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1045,7 +1225,9 @@ See `gitlab..Group` for an example.
 
     <dt class="property-optional"
             title="Optional">
-        <span>visibility_<wbr>level</span>
+        <span id="visibility_level_python">
+<a href="#visibility_level_python" style="color: inherit; text-decoration: inherit;">visibility_<wbr>level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1056,7 +1238,9 @@ Repositories are created as private by default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>wiki_<wbr>enabled</span>
+        <span id="wiki_enabled_python">
+<a href="#wiki_enabled_python" style="color: inherit; text-decoration: inherit;">wiki_<wbr>enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1083,7 +1267,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Http<wbr>Url<wbr>To<wbr>Repo</span>
+        <span id="httpurltorepo_csharp">
+<a href="#httpurltorepo_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Url<wbr>To<wbr>Repo</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1093,7 +1279,9 @@ repository via HTTP.
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1101,7 +1289,9 @@ repository via HTTP.
 
     <dt class="property-"
             title="">
-        <span>Runners<wbr>Token</span>
+        <span id="runnerstoken_csharp">
+<a href="#runnerstoken_csharp" style="color: inherit; text-decoration: inherit;">Runners<wbr>Token</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1110,7 +1300,9 @@ repository via HTTP.
 
     <dt class="property-"
             title="">
-        <span>Ssh<wbr>Url<wbr>To<wbr>Repo</span>
+        <span id="sshurltorepo_csharp">
+<a href="#sshurltorepo_csharp" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Url<wbr>To<wbr>Repo</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1120,7 +1312,9 @@ repository via SSH.
 
     <dt class="property-"
             title="">
-        <span>Web<wbr>Url</span>
+        <span id="weburl_csharp">
+<a href="#weburl_csharp" style="color: inherit; text-decoration: inherit;">Web<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1136,7 +1330,9 @@ repository via SSH.
 
     <dt class="property-"
             title="">
-        <span>Http<wbr>Url<wbr>To<wbr>Repo</span>
+        <span id="httpurltorepo_go">
+<a href="#httpurltorepo_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Url<wbr>To<wbr>Repo</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1146,7 +1342,9 @@ repository via HTTP.
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1154,7 +1352,9 @@ repository via HTTP.
 
     <dt class="property-"
             title="">
-        <span>Runners<wbr>Token</span>
+        <span id="runnerstoken_go">
+<a href="#runnerstoken_go" style="color: inherit; text-decoration: inherit;">Runners<wbr>Token</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1163,7 +1363,9 @@ repository via HTTP.
 
     <dt class="property-"
             title="">
-        <span>Ssh<wbr>Url<wbr>To<wbr>Repo</span>
+        <span id="sshurltorepo_go">
+<a href="#sshurltorepo_go" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Url<wbr>To<wbr>Repo</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1173,7 +1375,9 @@ repository via SSH.
 
     <dt class="property-"
             title="">
-        <span>Web<wbr>Url</span>
+        <span id="weburl_go">
+<a href="#weburl_go" style="color: inherit; text-decoration: inherit;">Web<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1189,7 +1393,9 @@ repository via SSH.
 
     <dt class="property-"
             title="">
-        <span>http<wbr>Url<wbr>To<wbr>Repo</span>
+        <span id="httpurltorepo_nodejs">
+<a href="#httpurltorepo_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Url<wbr>To<wbr>Repo</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1199,7 +1405,9 @@ repository via HTTP.
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1207,7 +1415,9 @@ repository via HTTP.
 
     <dt class="property-"
             title="">
-        <span>runners<wbr>Token</span>
+        <span id="runnerstoken_nodejs">
+<a href="#runnerstoken_nodejs" style="color: inherit; text-decoration: inherit;">runners<wbr>Token</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1216,7 +1426,9 @@ repository via HTTP.
 
     <dt class="property-"
             title="">
-        <span>ssh<wbr>Url<wbr>To<wbr>Repo</span>
+        <span id="sshurltorepo_nodejs">
+<a href="#sshurltorepo_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>Url<wbr>To<wbr>Repo</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1226,7 +1438,9 @@ repository via SSH.
 
     <dt class="property-"
             title="">
-        <span>web<wbr>Url</span>
+        <span id="weburl_nodejs">
+<a href="#weburl_nodejs" style="color: inherit; text-decoration: inherit;">web<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1242,7 +1456,9 @@ repository via SSH.
 
     <dt class="property-"
             title="">
-        <span>http_<wbr>url_<wbr>to_<wbr>repo</span>
+        <span id="http_url_to_repo_python">
+<a href="#http_url_to_repo_python" style="color: inherit; text-decoration: inherit;">http_<wbr>url_<wbr>to_<wbr>repo</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1252,7 +1468,9 @@ repository via HTTP.
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1260,7 +1478,9 @@ repository via HTTP.
 
     <dt class="property-"
             title="">
-        <span>runners_<wbr>token</span>
+        <span id="runners_token_python">
+<a href="#runners_token_python" style="color: inherit; text-decoration: inherit;">runners_<wbr>token</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1269,7 +1489,9 @@ repository via HTTP.
 
     <dt class="property-"
             title="">
-        <span>ssh_<wbr>url_<wbr>to_<wbr>repo</span>
+        <span id="ssh_url_to_repo_python">
+<a href="#ssh_url_to_repo_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>url_<wbr>to_<wbr>repo</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1279,7 +1501,9 @@ repository via SSH.
 
     <dt class="property-"
             title="">
-        <span>web_<wbr>url</span>
+        <span id="web_url_python">
+<a href="#web_url_python" style="color: inherit; text-decoration: inherit;">web_<wbr>url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1421,7 +1645,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Approvals<wbr>Before<wbr>Merge</span>
+        <span id="state_approvalsbeforemerge_csharp">
+<a href="#state_approvalsbeforemerge_csharp" style="color: inherit; text-decoration: inherit;">Approvals<wbr>Before<wbr>Merge</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1430,7 +1656,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Archived</span>
+        <span id="state_archived_csharp">
+<a href="#state_archived_csharp" style="color: inherit; text-decoration: inherit;">Archived</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1439,7 +1667,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Container<wbr>Registry<wbr>Enabled</span>
+        <span id="state_containerregistryenabled_csharp">
+<a href="#state_containerregistryenabled_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Registry<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1448,7 +1678,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Default<wbr>Branch</span>
+        <span id="state_defaultbranch_csharp">
+<a href="#state_defaultbranch_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Branch</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1457,7 +1689,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="state_description_csharp">
+<a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1466,7 +1700,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Http<wbr>Url<wbr>To<wbr>Repo</span>
+        <span id="state_httpurltorepo_csharp">
+<a href="#state_httpurltorepo_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Url<wbr>To<wbr>Repo</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1476,7 +1712,9 @@ repository via HTTP.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Initialize<wbr>With<wbr>Readme</span>
+        <span id="state_initializewithreadme_csharp">
+<a href="#state_initializewithreadme_csharp" style="color: inherit; text-decoration: inherit;">Initialize<wbr>With<wbr>Readme</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1485,7 +1723,9 @@ repository via HTTP.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Issues<wbr>Enabled</span>
+        <span id="state_issuesenabled_csharp">
+<a href="#state_issuesenabled_csharp" style="color: inherit; text-decoration: inherit;">Issues<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1494,7 +1734,9 @@ repository via HTTP.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Lfs<wbr>Enabled</span>
+        <span id="state_lfsenabled_csharp">
+<a href="#state_lfsenabled_csharp" style="color: inherit; text-decoration: inherit;">Lfs<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1503,7 +1745,9 @@ repository via HTTP.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Merge<wbr>Method</span>
+        <span id="state_mergemethod_csharp">
+<a href="#state_mergemethod_csharp" style="color: inherit; text-decoration: inherit;">Merge<wbr>Method</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1514,7 +1758,9 @@ Repositories are created with `merge` by default
 
     <dt class="property-optional"
             title="Optional">
-        <span>Merge<wbr>Requests<wbr>Enabled</span>
+        <span id="state_mergerequestsenabled_csharp">
+<a href="#state_mergerequestsenabled_csharp" style="color: inherit; text-decoration: inherit;">Merge<wbr>Requests<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1523,7 +1769,9 @@ Repositories are created with `merge` by default
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1532,7 +1780,9 @@ Repositories are created with `merge` by default
 
     <dt class="property-optional"
             title="Optional">
-        <span>Namespace<wbr>Id</span>
+        <span id="state_namespaceid_csharp">
+<a href="#state_namespaceid_csharp" style="color: inherit; text-decoration: inherit;">Namespace<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1542,7 +1792,9 @@ See `gitlab..Group` for an example.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Only<wbr>Allow<wbr>Merge<wbr>If<wbr>All<wbr>Discussions<wbr>Are<wbr>Resolved</span>
+        <span id="state_onlyallowmergeifalldiscussionsareresolved_csharp">
+<a href="#state_onlyallowmergeifalldiscussionsareresolved_csharp" style="color: inherit; text-decoration: inherit;">Only<wbr>Allow<wbr>Merge<wbr>If<wbr>All<wbr>Discussions<wbr>Are<wbr>Resolved</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1551,7 +1803,9 @@ See `gitlab..Group` for an example.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Only<wbr>Allow<wbr>Merge<wbr>If<wbr>Pipeline<wbr>Succeeds</span>
+        <span id="state_onlyallowmergeifpipelinesucceeds_csharp">
+<a href="#state_onlyallowmergeifpipelinesucceeds_csharp" style="color: inherit; text-decoration: inherit;">Only<wbr>Allow<wbr>Merge<wbr>If<wbr>Pipeline<wbr>Succeeds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1560,7 +1814,9 @@ See `gitlab..Group` for an example.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Path</span>
+        <span id="state_path_csharp">
+<a href="#state_path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1569,7 +1825,9 @@ See `gitlab..Group` for an example.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Pipelines<wbr>Enabled</span>
+        <span id="state_pipelinesenabled_csharp">
+<a href="#state_pipelinesenabled_csharp" style="color: inherit; text-decoration: inherit;">Pipelines<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1578,7 +1836,9 @@ See `gitlab..Group` for an example.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Request<wbr>Access<wbr>Enabled</span>
+        <span id="state_requestaccessenabled_csharp">
+<a href="#state_requestaccessenabled_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Access<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1587,7 +1847,9 @@ See `gitlab..Group` for an example.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Runners<wbr>Token</span>
+        <span id="state_runnerstoken_csharp">
+<a href="#state_runnerstoken_csharp" style="color: inherit; text-decoration: inherit;">Runners<wbr>Token</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1596,7 +1858,9 @@ See `gitlab..Group` for an example.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Shared<wbr>Runners<wbr>Enabled</span>
+        <span id="state_sharedrunnersenabled_csharp">
+<a href="#state_sharedrunnersenabled_csharp" style="color: inherit; text-decoration: inherit;">Shared<wbr>Runners<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1605,7 +1869,9 @@ See `gitlab..Group` for an example.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Shared<wbr>With<wbr>Groups</span>
+        <span id="state_sharedwithgroups_csharp">
+<a href="#state_sharedwithgroups_csharp" style="color: inherit; text-decoration: inherit;">Shared<wbr>With<wbr>Groups</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectsharedwithgroup">List&lt;Pulumi.<wbr>Git<wbr>Lab.<wbr>Inputs.<wbr>Project<wbr>Shared<wbr>With<wbr>Group<wbr>Args&gt;</a></span>
     </dt>
@@ -1614,7 +1880,9 @@ See `gitlab..Group` for an example.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Snippets<wbr>Enabled</span>
+        <span id="state_snippetsenabled_csharp">
+<a href="#state_snippetsenabled_csharp" style="color: inherit; text-decoration: inherit;">Snippets<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1623,7 +1891,9 @@ See `gitlab..Group` for an example.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ssh<wbr>Url<wbr>To<wbr>Repo</span>
+        <span id="state_sshurltorepo_csharp">
+<a href="#state_sshurltorepo_csharp" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Url<wbr>To<wbr>Repo</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1633,7 +1903,9 @@ repository via SSH.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="state_tags_csharp">
+<a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1642,7 +1914,9 @@ repository via SSH.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Visibility<wbr>Level</span>
+        <span id="state_visibilitylevel_csharp">
+<a href="#state_visibilitylevel_csharp" style="color: inherit; text-decoration: inherit;">Visibility<wbr>Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1653,7 +1927,9 @@ Repositories are created as private by default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Web<wbr>Url</span>
+        <span id="state_weburl_csharp">
+<a href="#state_weburl_csharp" style="color: inherit; text-decoration: inherit;">Web<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1662,7 +1938,9 @@ Repositories are created as private by default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Wiki<wbr>Enabled</span>
+        <span id="state_wikienabled_csharp">
+<a href="#state_wikienabled_csharp" style="color: inherit; text-decoration: inherit;">Wiki<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1678,7 +1956,9 @@ Repositories are created as private by default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Approvals<wbr>Before<wbr>Merge</span>
+        <span id="state_approvalsbeforemerge_go">
+<a href="#state_approvalsbeforemerge_go" style="color: inherit; text-decoration: inherit;">Approvals<wbr>Before<wbr>Merge</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1687,7 +1967,9 @@ Repositories are created as private by default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Archived</span>
+        <span id="state_archived_go">
+<a href="#state_archived_go" style="color: inherit; text-decoration: inherit;">Archived</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1696,7 +1978,9 @@ Repositories are created as private by default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Container<wbr>Registry<wbr>Enabled</span>
+        <span id="state_containerregistryenabled_go">
+<a href="#state_containerregistryenabled_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Registry<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1705,7 +1989,9 @@ Repositories are created as private by default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Default<wbr>Branch</span>
+        <span id="state_defaultbranch_go">
+<a href="#state_defaultbranch_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Branch</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1714,7 +2000,9 @@ Repositories are created as private by default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="state_description_go">
+<a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1723,7 +2011,9 @@ Repositories are created as private by default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Http<wbr>Url<wbr>To<wbr>Repo</span>
+        <span id="state_httpurltorepo_go">
+<a href="#state_httpurltorepo_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Url<wbr>To<wbr>Repo</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1733,7 +2023,9 @@ repository via HTTP.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Initialize<wbr>With<wbr>Readme</span>
+        <span id="state_initializewithreadme_go">
+<a href="#state_initializewithreadme_go" style="color: inherit; text-decoration: inherit;">Initialize<wbr>With<wbr>Readme</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1742,7 +2034,9 @@ repository via HTTP.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Issues<wbr>Enabled</span>
+        <span id="state_issuesenabled_go">
+<a href="#state_issuesenabled_go" style="color: inherit; text-decoration: inherit;">Issues<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1751,7 +2045,9 @@ repository via HTTP.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Lfs<wbr>Enabled</span>
+        <span id="state_lfsenabled_go">
+<a href="#state_lfsenabled_go" style="color: inherit; text-decoration: inherit;">Lfs<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1760,7 +2056,9 @@ repository via HTTP.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Merge<wbr>Method</span>
+        <span id="state_mergemethod_go">
+<a href="#state_mergemethod_go" style="color: inherit; text-decoration: inherit;">Merge<wbr>Method</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1771,7 +2069,9 @@ Repositories are created with `merge` by default
 
     <dt class="property-optional"
             title="Optional">
-        <span>Merge<wbr>Requests<wbr>Enabled</span>
+        <span id="state_mergerequestsenabled_go">
+<a href="#state_mergerequestsenabled_go" style="color: inherit; text-decoration: inherit;">Merge<wbr>Requests<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1780,7 +2080,9 @@ Repositories are created with `merge` by default
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1789,7 +2091,9 @@ Repositories are created with `merge` by default
 
     <dt class="property-optional"
             title="Optional">
-        <span>Namespace<wbr>Id</span>
+        <span id="state_namespaceid_go">
+<a href="#state_namespaceid_go" style="color: inherit; text-decoration: inherit;">Namespace<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1799,7 +2103,9 @@ See `gitlab..Group` for an example.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Only<wbr>Allow<wbr>Merge<wbr>If<wbr>All<wbr>Discussions<wbr>Are<wbr>Resolved</span>
+        <span id="state_onlyallowmergeifalldiscussionsareresolved_go">
+<a href="#state_onlyallowmergeifalldiscussionsareresolved_go" style="color: inherit; text-decoration: inherit;">Only<wbr>Allow<wbr>Merge<wbr>If<wbr>All<wbr>Discussions<wbr>Are<wbr>Resolved</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1808,7 +2114,9 @@ See `gitlab..Group` for an example.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Only<wbr>Allow<wbr>Merge<wbr>If<wbr>Pipeline<wbr>Succeeds</span>
+        <span id="state_onlyallowmergeifpipelinesucceeds_go">
+<a href="#state_onlyallowmergeifpipelinesucceeds_go" style="color: inherit; text-decoration: inherit;">Only<wbr>Allow<wbr>Merge<wbr>If<wbr>Pipeline<wbr>Succeeds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1817,7 +2125,9 @@ See `gitlab..Group` for an example.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Path</span>
+        <span id="state_path_go">
+<a href="#state_path_go" style="color: inherit; text-decoration: inherit;">Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1826,7 +2136,9 @@ See `gitlab..Group` for an example.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Pipelines<wbr>Enabled</span>
+        <span id="state_pipelinesenabled_go">
+<a href="#state_pipelinesenabled_go" style="color: inherit; text-decoration: inherit;">Pipelines<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1835,7 +2147,9 @@ See `gitlab..Group` for an example.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Request<wbr>Access<wbr>Enabled</span>
+        <span id="state_requestaccessenabled_go">
+<a href="#state_requestaccessenabled_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Access<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1844,7 +2158,9 @@ See `gitlab..Group` for an example.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Runners<wbr>Token</span>
+        <span id="state_runnerstoken_go">
+<a href="#state_runnerstoken_go" style="color: inherit; text-decoration: inherit;">Runners<wbr>Token</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1853,7 +2169,9 @@ See `gitlab..Group` for an example.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Shared<wbr>Runners<wbr>Enabled</span>
+        <span id="state_sharedrunnersenabled_go">
+<a href="#state_sharedrunnersenabled_go" style="color: inherit; text-decoration: inherit;">Shared<wbr>Runners<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1862,7 +2180,9 @@ See `gitlab..Group` for an example.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Shared<wbr>With<wbr>Groups</span>
+        <span id="state_sharedwithgroups_go">
+<a href="#state_sharedwithgroups_go" style="color: inherit; text-decoration: inherit;">Shared<wbr>With<wbr>Groups</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectsharedwithgroup">[]Project<wbr>Shared<wbr>With<wbr>Group</a></span>
     </dt>
@@ -1871,7 +2191,9 @@ See `gitlab..Group` for an example.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Snippets<wbr>Enabled</span>
+        <span id="state_snippetsenabled_go">
+<a href="#state_snippetsenabled_go" style="color: inherit; text-decoration: inherit;">Snippets<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1880,7 +2202,9 @@ See `gitlab..Group` for an example.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ssh<wbr>Url<wbr>To<wbr>Repo</span>
+        <span id="state_sshurltorepo_go">
+<a href="#state_sshurltorepo_go" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Url<wbr>To<wbr>Repo</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1890,7 +2214,9 @@ repository via SSH.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="state_tags_go">
+<a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1899,7 +2225,9 @@ repository via SSH.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Visibility<wbr>Level</span>
+        <span id="state_visibilitylevel_go">
+<a href="#state_visibilitylevel_go" style="color: inherit; text-decoration: inherit;">Visibility<wbr>Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1910,7 +2238,9 @@ Repositories are created as private by default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Web<wbr>Url</span>
+        <span id="state_weburl_go">
+<a href="#state_weburl_go" style="color: inherit; text-decoration: inherit;">Web<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1919,7 +2249,9 @@ Repositories are created as private by default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Wiki<wbr>Enabled</span>
+        <span id="state_wikienabled_go">
+<a href="#state_wikienabled_go" style="color: inherit; text-decoration: inherit;">Wiki<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1935,7 +2267,9 @@ Repositories are created as private by default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>approvals<wbr>Before<wbr>Merge</span>
+        <span id="state_approvalsbeforemerge_nodejs">
+<a href="#state_approvalsbeforemerge_nodejs" style="color: inherit; text-decoration: inherit;">approvals<wbr>Before<wbr>Merge</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1944,7 +2278,9 @@ Repositories are created as private by default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>archived</span>
+        <span id="state_archived_nodejs">
+<a href="#state_archived_nodejs" style="color: inherit; text-decoration: inherit;">archived</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1953,7 +2289,9 @@ Repositories are created as private by default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>container<wbr>Registry<wbr>Enabled</span>
+        <span id="state_containerregistryenabled_nodejs">
+<a href="#state_containerregistryenabled_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Registry<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1962,7 +2300,9 @@ Repositories are created as private by default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>default<wbr>Branch</span>
+        <span id="state_defaultbranch_nodejs">
+<a href="#state_defaultbranch_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Branch</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1971,7 +2311,9 @@ Repositories are created as private by default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="state_description_nodejs">
+<a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1980,7 +2322,9 @@ Repositories are created as private by default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>http<wbr>Url<wbr>To<wbr>Repo</span>
+        <span id="state_httpurltorepo_nodejs">
+<a href="#state_httpurltorepo_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Url<wbr>To<wbr>Repo</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1990,7 +2334,9 @@ repository via HTTP.
 
     <dt class="property-optional"
             title="Optional">
-        <span>initialize<wbr>With<wbr>Readme</span>
+        <span id="state_initializewithreadme_nodejs">
+<a href="#state_initializewithreadme_nodejs" style="color: inherit; text-decoration: inherit;">initialize<wbr>With<wbr>Readme</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1999,7 +2345,9 @@ repository via HTTP.
 
     <dt class="property-optional"
             title="Optional">
-        <span>issues<wbr>Enabled</span>
+        <span id="state_issuesenabled_nodejs">
+<a href="#state_issuesenabled_nodejs" style="color: inherit; text-decoration: inherit;">issues<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -2008,7 +2356,9 @@ repository via HTTP.
 
     <dt class="property-optional"
             title="Optional">
-        <span>lfs<wbr>Enabled</span>
+        <span id="state_lfsenabled_nodejs">
+<a href="#state_lfsenabled_nodejs" style="color: inherit; text-decoration: inherit;">lfs<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -2017,7 +2367,9 @@ repository via HTTP.
 
     <dt class="property-optional"
             title="Optional">
-        <span>merge<wbr>Method</span>
+        <span id="state_mergemethod_nodejs">
+<a href="#state_mergemethod_nodejs" style="color: inherit; text-decoration: inherit;">merge<wbr>Method</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2028,7 +2380,9 @@ Repositories are created with `merge` by default
 
     <dt class="property-optional"
             title="Optional">
-        <span>merge<wbr>Requests<wbr>Enabled</span>
+        <span id="state_mergerequestsenabled_nodejs">
+<a href="#state_mergerequestsenabled_nodejs" style="color: inherit; text-decoration: inherit;">merge<wbr>Requests<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -2037,7 +2391,9 @@ Repositories are created with `merge` by default
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2046,7 +2402,9 @@ Repositories are created with `merge` by default
 
     <dt class="property-optional"
             title="Optional">
-        <span>namespace<wbr>Id</span>
+        <span id="state_namespaceid_nodejs">
+<a href="#state_namespaceid_nodejs" style="color: inherit; text-decoration: inherit;">namespace<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -2056,7 +2414,9 @@ See `gitlab..Group` for an example.
 
     <dt class="property-optional"
             title="Optional">
-        <span>only<wbr>Allow<wbr>Merge<wbr>If<wbr>All<wbr>Discussions<wbr>Are<wbr>Resolved</span>
+        <span id="state_onlyallowmergeifalldiscussionsareresolved_nodejs">
+<a href="#state_onlyallowmergeifalldiscussionsareresolved_nodejs" style="color: inherit; text-decoration: inherit;">only<wbr>Allow<wbr>Merge<wbr>If<wbr>All<wbr>Discussions<wbr>Are<wbr>Resolved</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -2065,7 +2425,9 @@ See `gitlab..Group` for an example.
 
     <dt class="property-optional"
             title="Optional">
-        <span>only<wbr>Allow<wbr>Merge<wbr>If<wbr>Pipeline<wbr>Succeeds</span>
+        <span id="state_onlyallowmergeifpipelinesucceeds_nodejs">
+<a href="#state_onlyallowmergeifpipelinesucceeds_nodejs" style="color: inherit; text-decoration: inherit;">only<wbr>Allow<wbr>Merge<wbr>If<wbr>Pipeline<wbr>Succeeds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -2074,7 +2436,9 @@ See `gitlab..Group` for an example.
 
     <dt class="property-optional"
             title="Optional">
-        <span>path</span>
+        <span id="state_path_nodejs">
+<a href="#state_path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2083,7 +2447,9 @@ See `gitlab..Group` for an example.
 
     <dt class="property-optional"
             title="Optional">
-        <span>pipelines<wbr>Enabled</span>
+        <span id="state_pipelinesenabled_nodejs">
+<a href="#state_pipelinesenabled_nodejs" style="color: inherit; text-decoration: inherit;">pipelines<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -2092,7 +2458,9 @@ See `gitlab..Group` for an example.
 
     <dt class="property-optional"
             title="Optional">
-        <span>request<wbr>Access<wbr>Enabled</span>
+        <span id="state_requestaccessenabled_nodejs">
+<a href="#state_requestaccessenabled_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Access<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -2101,7 +2469,9 @@ See `gitlab..Group` for an example.
 
     <dt class="property-optional"
             title="Optional">
-        <span>runners<wbr>Token</span>
+        <span id="state_runnerstoken_nodejs">
+<a href="#state_runnerstoken_nodejs" style="color: inherit; text-decoration: inherit;">runners<wbr>Token</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2110,7 +2480,9 @@ See `gitlab..Group` for an example.
 
     <dt class="property-optional"
             title="Optional">
-        <span>shared<wbr>Runners<wbr>Enabled</span>
+        <span id="state_sharedrunnersenabled_nodejs">
+<a href="#state_sharedrunnersenabled_nodejs" style="color: inherit; text-decoration: inherit;">shared<wbr>Runners<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -2119,7 +2491,9 @@ See `gitlab..Group` for an example.
 
     <dt class="property-optional"
             title="Optional">
-        <span>shared<wbr>With<wbr>Groups</span>
+        <span id="state_sharedwithgroups_nodejs">
+<a href="#state_sharedwithgroups_nodejs" style="color: inherit; text-decoration: inherit;">shared<wbr>With<wbr>Groups</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectsharedwithgroup">Project<wbr>Shared<wbr>With<wbr>Group[]</a></span>
     </dt>
@@ -2128,7 +2502,9 @@ See `gitlab..Group` for an example.
 
     <dt class="property-optional"
             title="Optional">
-        <span>snippets<wbr>Enabled</span>
+        <span id="state_snippetsenabled_nodejs">
+<a href="#state_snippetsenabled_nodejs" style="color: inherit; text-decoration: inherit;">snippets<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -2137,7 +2513,9 @@ See `gitlab..Group` for an example.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ssh<wbr>Url<wbr>To<wbr>Repo</span>
+        <span id="state_sshurltorepo_nodejs">
+<a href="#state_sshurltorepo_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>Url<wbr>To<wbr>Repo</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2147,7 +2525,9 @@ repository via SSH.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="state_tags_nodejs">
+<a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -2156,7 +2536,9 @@ repository via SSH.
 
     <dt class="property-optional"
             title="Optional">
-        <span>visibility<wbr>Level</span>
+        <span id="state_visibilitylevel_nodejs">
+<a href="#state_visibilitylevel_nodejs" style="color: inherit; text-decoration: inherit;">visibility<wbr>Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2167,7 +2549,9 @@ Repositories are created as private by default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>web<wbr>Url</span>
+        <span id="state_weburl_nodejs">
+<a href="#state_weburl_nodejs" style="color: inherit; text-decoration: inherit;">web<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2176,7 +2560,9 @@ Repositories are created as private by default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>wiki<wbr>Enabled</span>
+        <span id="state_wikienabled_nodejs">
+<a href="#state_wikienabled_nodejs" style="color: inherit; text-decoration: inherit;">wiki<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -2192,7 +2578,9 @@ Repositories are created as private by default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>approvals_<wbr>before_<wbr>merge</span>
+        <span id="state_approvals_before_merge_python">
+<a href="#state_approvals_before_merge_python" style="color: inherit; text-decoration: inherit;">approvals_<wbr>before_<wbr>merge</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -2201,7 +2589,9 @@ Repositories are created as private by default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>archived</span>
+        <span id="state_archived_python">
+<a href="#state_archived_python" style="color: inherit; text-decoration: inherit;">archived</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2210,7 +2600,9 @@ Repositories are created as private by default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>container_<wbr>registry_<wbr>enabled</span>
+        <span id="state_container_registry_enabled_python">
+<a href="#state_container_registry_enabled_python" style="color: inherit; text-decoration: inherit;">container_<wbr>registry_<wbr>enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2219,7 +2611,9 @@ Repositories are created as private by default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>default_<wbr>branch</span>
+        <span id="state_default_branch_python">
+<a href="#state_default_branch_python" style="color: inherit; text-decoration: inherit;">default_<wbr>branch</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2228,7 +2622,9 @@ Repositories are created as private by default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="state_description_python">
+<a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2237,7 +2633,9 @@ Repositories are created as private by default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>http_<wbr>url_<wbr>to_<wbr>repo</span>
+        <span id="state_http_url_to_repo_python">
+<a href="#state_http_url_to_repo_python" style="color: inherit; text-decoration: inherit;">http_<wbr>url_<wbr>to_<wbr>repo</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2247,7 +2645,9 @@ repository via HTTP.
 
     <dt class="property-optional"
             title="Optional">
-        <span>initialize_<wbr>with_<wbr>readme</span>
+        <span id="state_initialize_with_readme_python">
+<a href="#state_initialize_with_readme_python" style="color: inherit; text-decoration: inherit;">initialize_<wbr>with_<wbr>readme</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2256,7 +2656,9 @@ repository via HTTP.
 
     <dt class="property-optional"
             title="Optional">
-        <span>issues_<wbr>enabled</span>
+        <span id="state_issues_enabled_python">
+<a href="#state_issues_enabled_python" style="color: inherit; text-decoration: inherit;">issues_<wbr>enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2265,7 +2667,9 @@ repository via HTTP.
 
     <dt class="property-optional"
             title="Optional">
-        <span>lfs_<wbr>enabled</span>
+        <span id="state_lfs_enabled_python">
+<a href="#state_lfs_enabled_python" style="color: inherit; text-decoration: inherit;">lfs_<wbr>enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2274,7 +2678,9 @@ repository via HTTP.
 
     <dt class="property-optional"
             title="Optional">
-        <span>merge_<wbr>method</span>
+        <span id="state_merge_method_python">
+<a href="#state_merge_method_python" style="color: inherit; text-decoration: inherit;">merge_<wbr>method</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2285,7 +2691,9 @@ Repositories are created with `merge` by default
 
     <dt class="property-optional"
             title="Optional">
-        <span>merge_<wbr>requests_<wbr>enabled</span>
+        <span id="state_merge_requests_enabled_python">
+<a href="#state_merge_requests_enabled_python" style="color: inherit; text-decoration: inherit;">merge_<wbr>requests_<wbr>enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2294,7 +2702,9 @@ Repositories are created with `merge` by default
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2303,7 +2713,9 @@ Repositories are created with `merge` by default
 
     <dt class="property-optional"
             title="Optional">
-        <span>namespace_<wbr>id</span>
+        <span id="state_namespace_id_python">
+<a href="#state_namespace_id_python" style="color: inherit; text-decoration: inherit;">namespace_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -2313,7 +2725,9 @@ See `gitlab..Group` for an example.
 
     <dt class="property-optional"
             title="Optional">
-        <span>only_<wbr>allow_<wbr>merge_<wbr>if_<wbr>all_<wbr>discussions_<wbr>are_<wbr>resolved</span>
+        <span id="state_only_allow_merge_if_all_discussions_are_resolved_python">
+<a href="#state_only_allow_merge_if_all_discussions_are_resolved_python" style="color: inherit; text-decoration: inherit;">only_<wbr>allow_<wbr>merge_<wbr>if_<wbr>all_<wbr>discussions_<wbr>are_<wbr>resolved</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2322,7 +2736,9 @@ See `gitlab..Group` for an example.
 
     <dt class="property-optional"
             title="Optional">
-        <span>only_<wbr>allow_<wbr>merge_<wbr>if_<wbr>pipeline_<wbr>succeeds</span>
+        <span id="state_only_allow_merge_if_pipeline_succeeds_python">
+<a href="#state_only_allow_merge_if_pipeline_succeeds_python" style="color: inherit; text-decoration: inherit;">only_<wbr>allow_<wbr>merge_<wbr>if_<wbr>pipeline_<wbr>succeeds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2331,7 +2747,9 @@ See `gitlab..Group` for an example.
 
     <dt class="property-optional"
             title="Optional">
-        <span>path</span>
+        <span id="state_path_python">
+<a href="#state_path_python" style="color: inherit; text-decoration: inherit;">path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2340,7 +2758,9 @@ See `gitlab..Group` for an example.
 
     <dt class="property-optional"
             title="Optional">
-        <span>pipelines_<wbr>enabled</span>
+        <span id="state_pipelines_enabled_python">
+<a href="#state_pipelines_enabled_python" style="color: inherit; text-decoration: inherit;">pipelines_<wbr>enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2349,7 +2769,9 @@ See `gitlab..Group` for an example.
 
     <dt class="property-optional"
             title="Optional">
-        <span>request_<wbr>access_<wbr>enabled</span>
+        <span id="state_request_access_enabled_python">
+<a href="#state_request_access_enabled_python" style="color: inherit; text-decoration: inherit;">request_<wbr>access_<wbr>enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2358,7 +2780,9 @@ See `gitlab..Group` for an example.
 
     <dt class="property-optional"
             title="Optional">
-        <span>runners_<wbr>token</span>
+        <span id="state_runners_token_python">
+<a href="#state_runners_token_python" style="color: inherit; text-decoration: inherit;">runners_<wbr>token</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2367,7 +2791,9 @@ See `gitlab..Group` for an example.
 
     <dt class="property-optional"
             title="Optional">
-        <span>shared_<wbr>runners_<wbr>enabled</span>
+        <span id="state_shared_runners_enabled_python">
+<a href="#state_shared_runners_enabled_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>runners_<wbr>enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2376,7 +2802,9 @@ See `gitlab..Group` for an example.
 
     <dt class="property-optional"
             title="Optional">
-        <span>shared_<wbr>with_<wbr>groups</span>
+        <span id="state_shared_with_groups_python">
+<a href="#state_shared_with_groups_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>with_<wbr>groups</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectsharedwithgroup">List[Project<wbr>Shared<wbr>With<wbr>Group]</a></span>
     </dt>
@@ -2385,7 +2813,9 @@ See `gitlab..Group` for an example.
 
     <dt class="property-optional"
             title="Optional">
-        <span>snippets_<wbr>enabled</span>
+        <span id="state_snippets_enabled_python">
+<a href="#state_snippets_enabled_python" style="color: inherit; text-decoration: inherit;">snippets_<wbr>enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2394,7 +2824,9 @@ See `gitlab..Group` for an example.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ssh_<wbr>url_<wbr>to_<wbr>repo</span>
+        <span id="state_ssh_url_to_repo_python">
+<a href="#state_ssh_url_to_repo_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>url_<wbr>to_<wbr>repo</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2404,7 +2836,9 @@ repository via SSH.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="state_tags_python">
+<a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -2413,7 +2847,9 @@ repository via SSH.
 
     <dt class="property-optional"
             title="Optional">
-        <span>visibility_<wbr>level</span>
+        <span id="state_visibility_level_python">
+<a href="#state_visibility_level_python" style="color: inherit; text-decoration: inherit;">visibility_<wbr>level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2424,7 +2860,9 @@ Repositories are created as private by default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>web_<wbr>url</span>
+        <span id="state_web_url_python">
+<a href="#state_web_url_python" style="color: inherit; text-decoration: inherit;">web_<wbr>url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2433,7 +2871,9 @@ Repositories are created as private by default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>wiki_<wbr>enabled</span>
+        <span id="state_wiki_enabled_python">
+<a href="#state_wiki_enabled_python" style="color: inherit; text-decoration: inherit;">wiki_<wbr>enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2475,7 +2915,9 @@ Repositories are created as private by default.
 
     <dt class="property-required"
             title="Required">
-        <span>Group<wbr>Access<wbr>Level</span>
+        <span id="groupaccesslevel_csharp">
+<a href="#groupaccesslevel_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Access<wbr>Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2485,7 +2927,9 @@ Valid values are `guest`, `reporter`, `developer`, `master`.
 
     <dt class="property-required"
             title="Required">
-        <span>Group<wbr>Id</span>
+        <span id="groupid_csharp">
+<a href="#groupid_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -2494,7 +2938,9 @@ Valid values are `guest`, `reporter`, `developer`, `master`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Group<wbr>Name</span>
+        <span id="groupname_csharp">
+<a href="#groupname_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2510,7 +2956,9 @@ Valid values are `guest`, `reporter`, `developer`, `master`.
 
     <dt class="property-required"
             title="Required">
-        <span>Group<wbr>Access<wbr>Level</span>
+        <span id="groupaccesslevel_go">
+<a href="#groupaccesslevel_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Access<wbr>Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2520,7 +2968,9 @@ Valid values are `guest`, `reporter`, `developer`, `master`.
 
     <dt class="property-required"
             title="Required">
-        <span>Group<wbr>Id</span>
+        <span id="groupid_go">
+<a href="#groupid_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -2529,7 +2979,9 @@ Valid values are `guest`, `reporter`, `developer`, `master`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Group<wbr>Name</span>
+        <span id="groupname_go">
+<a href="#groupname_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2545,7 +2997,9 @@ Valid values are `guest`, `reporter`, `developer`, `master`.
 
     <dt class="property-required"
             title="Required">
-        <span>group<wbr>Access<wbr>Level</span>
+        <span id="groupaccesslevel_nodejs">
+<a href="#groupaccesslevel_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Access<wbr>Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2555,7 +3009,9 @@ Valid values are `guest`, `reporter`, `developer`, `master`.
 
     <dt class="property-required"
             title="Required">
-        <span>group<wbr>Id</span>
+        <span id="groupid_nodejs">
+<a href="#groupid_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -2564,7 +3020,9 @@ Valid values are `guest`, `reporter`, `developer`, `master`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>group<wbr>Name</span>
+        <span id="groupname_nodejs">
+<a href="#groupname_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2580,7 +3038,9 @@ Valid values are `guest`, `reporter`, `developer`, `master`.
 
     <dt class="property-required"
             title="Required">
-        <span>group<wbr>Access<wbr>Level</span>
+        <span id="groupaccesslevel_python">
+<a href="#groupaccesslevel_python" style="color: inherit; text-decoration: inherit;">group<wbr>Access<wbr>Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2590,7 +3050,9 @@ Valid values are `guest`, `reporter`, `developer`, `master`.
 
     <dt class="property-required"
             title="Required">
-        <span>group_<wbr>id</span>
+        <span id="group_id_python">
+<a href="#group_id_python" style="color: inherit; text-decoration: inherit;">group_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -2599,7 +3061,9 @@ Valid values are `guest`, `reporter`, `developer`, `master`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>group<wbr>Name</span>
+        <span id="groupname_python">
+<a href="#groupname_python" style="color: inherit; text-decoration: inherit;">group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
