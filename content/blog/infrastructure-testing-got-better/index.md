@@ -118,7 +118,7 @@ The key part is that we never actually talk to the cloud provider. Instead, we a
 
 ## Testing with Policies
 
-In addition to resource testing with mocks, we can test the entire stack with policies. This example ensures that the EKs cluster uses version 1.13 deployed on a custom VPC.
+In addition to resource testing with mocks, we can test the entire stack with policies. This example ensures that the EKS cluster uses version 1.13 deployed on a custom VPC.
 
 infrastructure:
 
