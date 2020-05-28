@@ -196,7 +196,9 @@ The ClusterSync resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-required"
             title="Required">
-        <span>Cluster<wbr>Id</span>
+        <span id="clusterid_csharp">
+<a href="#clusterid_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -205,7 +207,9 @@ The ClusterSync resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Node<wbr>Pool<wbr>Ids</span>
+        <span id="nodepoolids_csharp">
+<a href="#nodepoolids_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Pool<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -214,7 +218,9 @@ The ClusterSync resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Synced</span>
+        <span id="synced_csharp">
+<a href="#synced_csharp" style="color: inherit; text-decoration: inherit;">Synced</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -222,7 +228,9 @@ The ClusterSync resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Wait<wbr>Monitoring</span>
+        <span id="waitmonitoring_csharp">
+<a href="#waitmonitoring_csharp" style="color: inherit; text-decoration: inherit;">Wait<wbr>Monitoring</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -238,7 +246,9 @@ The ClusterSync resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-required"
             title="Required">
-        <span>Cluster<wbr>Id</span>
+        <span id="clusterid_go">
+<a href="#clusterid_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -247,7 +257,9 @@ The ClusterSync resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Node<wbr>Pool<wbr>Ids</span>
+        <span id="nodepoolids_go">
+<a href="#nodepoolids_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Pool<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -256,7 +268,9 @@ The ClusterSync resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Synced</span>
+        <span id="synced_go">
+<a href="#synced_go" style="color: inherit; text-decoration: inherit;">Synced</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -264,7 +278,9 @@ The ClusterSync resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Wait<wbr>Monitoring</span>
+        <span id="waitmonitoring_go">
+<a href="#waitmonitoring_go" style="color: inherit; text-decoration: inherit;">Wait<wbr>Monitoring</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -280,7 +296,9 @@ The ClusterSync resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-required"
             title="Required">
-        <span>cluster<wbr>Id</span>
+        <span id="clusterid_nodejs">
+<a href="#clusterid_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -289,7 +307,9 @@ The ClusterSync resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>node<wbr>Pool<wbr>Ids</span>
+        <span id="nodepoolids_nodejs">
+<a href="#nodepoolids_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Pool<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -298,7 +318,9 @@ The ClusterSync resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>synced</span>
+        <span id="synced_nodejs">
+<a href="#synced_nodejs" style="color: inherit; text-decoration: inherit;">synced</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -306,7 +328,9 @@ The ClusterSync resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>wait<wbr>Monitoring</span>
+        <span id="waitmonitoring_nodejs">
+<a href="#waitmonitoring_nodejs" style="color: inherit; text-decoration: inherit;">wait<wbr>Monitoring</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -322,7 +346,9 @@ The ClusterSync resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-required"
             title="Required">
-        <span>cluster_<wbr>id</span>
+        <span id="cluster_id_python">
+<a href="#cluster_id_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -331,7 +357,9 @@ The ClusterSync resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>node_<wbr>pool_<wbr>ids</span>
+        <span id="node_pool_ids_python">
+<a href="#node_pool_ids_python" style="color: inherit; text-decoration: inherit;">node_<wbr>pool_<wbr>ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -340,7 +368,9 @@ The ClusterSync resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>synced</span>
+        <span id="synced_python">
+<a href="#synced_python" style="color: inherit; text-decoration: inherit;">synced</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -348,7 +378,9 @@ The ClusterSync resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>wait_<wbr>monitoring</span>
+        <span id="wait_monitoring_python">
+<a href="#wait_monitoring_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>monitoring</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -375,7 +407,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Default<wbr>Project<wbr>Id</span>
+        <span id="defaultprojectid_csharp">
+<a href="#defaultprojectid_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Project<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -384,7 +418,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -392,7 +428,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Kube<wbr>Config</span>
+        <span id="kubeconfig_csharp">
+<a href="#kubeconfig_csharp" style="color: inherit; text-decoration: inherit;">Kube<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -401,7 +439,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>System<wbr>Project<wbr>Id</span>
+        <span id="systemprojectid_csharp">
+<a href="#systemprojectid_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Project<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -417,7 +457,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Default<wbr>Project<wbr>Id</span>
+        <span id="defaultprojectid_go">
+<a href="#defaultprojectid_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Project<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -426,7 +468,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -434,7 +478,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Kube<wbr>Config</span>
+        <span id="kubeconfig_go">
+<a href="#kubeconfig_go" style="color: inherit; text-decoration: inherit;">Kube<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -443,7 +489,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>System<wbr>Project<wbr>Id</span>
+        <span id="systemprojectid_go">
+<a href="#systemprojectid_go" style="color: inherit; text-decoration: inherit;">System<wbr>Project<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -459,7 +507,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>default<wbr>Project<wbr>Id</span>
+        <span id="defaultprojectid_nodejs">
+<a href="#defaultprojectid_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Project<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -468,7 +518,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -476,7 +528,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>kube<wbr>Config</span>
+        <span id="kubeconfig_nodejs">
+<a href="#kubeconfig_nodejs" style="color: inherit; text-decoration: inherit;">kube<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -485,7 +539,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>system<wbr>Project<wbr>Id</span>
+        <span id="systemprojectid_nodejs">
+<a href="#systemprojectid_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Project<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -501,7 +557,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>default_<wbr>project_<wbr>id</span>
+        <span id="default_project_id_python">
+<a href="#default_project_id_python" style="color: inherit; text-decoration: inherit;">default_<wbr>project_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -510,7 +568,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -518,7 +578,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>kube_<wbr>config</span>
+        <span id="kube_config_python">
+<a href="#kube_config_python" style="color: inherit; text-decoration: inherit;">kube_<wbr>config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -527,7 +589,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>system_<wbr>project_<wbr>id</span>
+        <span id="system_project_id_python">
+<a href="#system_project_id_python" style="color: inherit; text-decoration: inherit;">system_<wbr>project_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -669,7 +733,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cluster<wbr>Id</span>
+        <span id="state_clusterid_csharp">
+<a href="#state_clusterid_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -678,7 +744,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Default<wbr>Project<wbr>Id</span>
+        <span id="state_defaultprojectid_csharp">
+<a href="#state_defaultprojectid_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Project<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -687,7 +755,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Kube<wbr>Config</span>
+        <span id="state_kubeconfig_csharp">
+<a href="#state_kubeconfig_csharp" style="color: inherit; text-decoration: inherit;">Kube<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -696,7 +766,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Node<wbr>Pool<wbr>Ids</span>
+        <span id="state_nodepoolids_csharp">
+<a href="#state_nodepoolids_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Pool<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -705,7 +777,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Synced</span>
+        <span id="state_synced_csharp">
+<a href="#state_synced_csharp" style="color: inherit; text-decoration: inherit;">Synced</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -713,7 +787,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>System<wbr>Project<wbr>Id</span>
+        <span id="state_systemprojectid_csharp">
+<a href="#state_systemprojectid_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Project<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -722,7 +798,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Wait<wbr>Monitoring</span>
+        <span id="state_waitmonitoring_csharp">
+<a href="#state_waitmonitoring_csharp" style="color: inherit; text-decoration: inherit;">Wait<wbr>Monitoring</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -738,7 +816,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cluster<wbr>Id</span>
+        <span id="state_clusterid_go">
+<a href="#state_clusterid_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -747,7 +827,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Default<wbr>Project<wbr>Id</span>
+        <span id="state_defaultprojectid_go">
+<a href="#state_defaultprojectid_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Project<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -756,7 +838,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Kube<wbr>Config</span>
+        <span id="state_kubeconfig_go">
+<a href="#state_kubeconfig_go" style="color: inherit; text-decoration: inherit;">Kube<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -765,7 +849,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Node<wbr>Pool<wbr>Ids</span>
+        <span id="state_nodepoolids_go">
+<a href="#state_nodepoolids_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Pool<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -774,7 +860,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Synced</span>
+        <span id="state_synced_go">
+<a href="#state_synced_go" style="color: inherit; text-decoration: inherit;">Synced</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -782,7 +870,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>System<wbr>Project<wbr>Id</span>
+        <span id="state_systemprojectid_go">
+<a href="#state_systemprojectid_go" style="color: inherit; text-decoration: inherit;">System<wbr>Project<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -791,7 +881,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Wait<wbr>Monitoring</span>
+        <span id="state_waitmonitoring_go">
+<a href="#state_waitmonitoring_go" style="color: inherit; text-decoration: inherit;">Wait<wbr>Monitoring</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -807,7 +899,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>cluster<wbr>Id</span>
+        <span id="state_clusterid_nodejs">
+<a href="#state_clusterid_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -816,7 +910,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>default<wbr>Project<wbr>Id</span>
+        <span id="state_defaultprojectid_nodejs">
+<a href="#state_defaultprojectid_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Project<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -825,7 +921,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>kube<wbr>Config</span>
+        <span id="state_kubeconfig_nodejs">
+<a href="#state_kubeconfig_nodejs" style="color: inherit; text-decoration: inherit;">kube<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -834,7 +932,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>node<wbr>Pool<wbr>Ids</span>
+        <span id="state_nodepoolids_nodejs">
+<a href="#state_nodepoolids_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Pool<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -843,7 +943,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>synced</span>
+        <span id="state_synced_nodejs">
+<a href="#state_synced_nodejs" style="color: inherit; text-decoration: inherit;">synced</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -851,7 +953,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>system<wbr>Project<wbr>Id</span>
+        <span id="state_systemprojectid_nodejs">
+<a href="#state_systemprojectid_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Project<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -860,7 +964,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>wait<wbr>Monitoring</span>
+        <span id="state_waitmonitoring_nodejs">
+<a href="#state_waitmonitoring_nodejs" style="color: inherit; text-decoration: inherit;">wait<wbr>Monitoring</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -876,7 +982,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>cluster_<wbr>id</span>
+        <span id="state_cluster_id_python">
+<a href="#state_cluster_id_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -885,7 +993,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>default_<wbr>project_<wbr>id</span>
+        <span id="state_default_project_id_python">
+<a href="#state_default_project_id_python" style="color: inherit; text-decoration: inherit;">default_<wbr>project_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -894,7 +1004,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>kube_<wbr>config</span>
+        <span id="state_kube_config_python">
+<a href="#state_kube_config_python" style="color: inherit; text-decoration: inherit;">kube_<wbr>config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -903,7 +1015,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>node_<wbr>pool_<wbr>ids</span>
+        <span id="state_node_pool_ids_python">
+<a href="#state_node_pool_ids_python" style="color: inherit; text-decoration: inherit;">node_<wbr>pool_<wbr>ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -912,7 +1026,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>synced</span>
+        <span id="state_synced_python">
+<a href="#state_synced_python" style="color: inherit; text-decoration: inherit;">synced</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -920,7 +1036,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>system_<wbr>project_<wbr>id</span>
+        <span id="state_system_project_id_python">
+<a href="#state_system_project_id_python" style="color: inherit; text-decoration: inherit;">system_<wbr>project_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -929,7 +1047,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>wait_<wbr>monitoring</span>
+        <span id="state_wait_monitoring_python">
+<a href="#state_wait_monitoring_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>monitoring</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>

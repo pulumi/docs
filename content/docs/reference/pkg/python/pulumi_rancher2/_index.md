@@ -2941,8 +2941,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <span class="c1"># Create a new rancher2 Cloud Credential</span>
 <span class="n">foo</span> <span class="o">=</span> <span class="n">rancher2</span><span class="o">.</span><span class="n">CloudCredential</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span>
     <span class="n">amazonec2_credential_config</span><span class="o">=</span><span class="p">{</span>
-        <span class="s2">&quot;accessKey&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;AWS_ACCESS_KEY&gt;&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;secretKey&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;AWS_SECRET_KEY&gt;&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;access_key&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;AWS_ACCESS_KEY&gt;&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;secret_key&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;AWS_SECRET_KEY&gt;&quot;</span><span class="p">,</span>
     <span class="p">},</span>
     <span class="n">description</span><span class="o">=</span><span class="s2">&quot;foo test&quot;</span><span class="p">)</span>
 </pre></div>
@@ -10754,10 +10754,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <span class="c1"># Create a new rancher2 Node Template up to Rancher 2.1.x</span>
 <span class="n">foo</span> <span class="o">=</span> <span class="n">rancher2</span><span class="o">.</span><span class="n">NodeTemplate</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span>
     <span class="n">amazonec2_config</span><span class="o">=</span><span class="p">{</span>
-        <span class="s2">&quot;accessKey&quot;</span><span class="p">:</span> <span class="s2">&quot;AWS_ACCESS_KEY&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;access_key&quot;</span><span class="p">:</span> <span class="s2">&quot;AWS_ACCESS_KEY&quot;</span><span class="p">,</span>
         <span class="s2">&quot;ami&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;AMI_ID&gt;&quot;</span><span class="p">,</span>
         <span class="s2">&quot;region&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;REGION&gt;&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;secretKey&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;AWS_SECRET_KEY&gt;&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;secret_key&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;AWS_SECRET_KEY&gt;&quot;</span><span class="p">,</span>
         <span class="s2">&quot;securityGroup&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;&lt;AWS_SECURITY_GROUP&gt;&quot;</span><span class="p">],</span>
         <span class="s2">&quot;subnetId&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;SUBNET_ID&gt;&quot;</span><span class="p">,</span>
         <span class="s2">&quot;vpcId&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;VPC_ID&gt;&quot;</span><span class="p">,</span>
@@ -15153,7 +15153,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <span class="n">foo</span> <span class="o">=</span> <span class="n">rancher2</span><span class="o">.</span><span class="n">get_role_template</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;foo&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Deprecated: rancher2.index.getRoleTempalte has been deprecated in favour of rancher2.index.getRoleTemplate</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

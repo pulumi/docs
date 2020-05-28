@@ -20,7 +20,45 @@ Provides a Rancher v2 Project resource. This can be used to create projects for 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Rancher2 = Pulumi.Rancher2;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        // Create a new rancher2 Project
+        var foo = new Rancher2.Project("foo", new Rancher2.ProjectArgs
+        {
+            ClusterId = "<CLUSTER_ID>",
+            ContainerResourceLimit = new Rancher2.Inputs.ProjectContainerResourceLimitArgs
+            {
+                LimitsCpu = "20m",
+                LimitsMemory = "20Mi",
+                RequestsCpu = "1m",
+                RequestsMemory = "1Mi",
+            },
+            ResourceQuota = new Rancher2.Inputs.ProjectResourceQuotaArgs
+            {
+                NamespaceDefaultLimit = new Rancher2.Inputs.ProjectResourceQuotaNamespaceDefaultLimitArgs
+                {
+                    LimitsCpu = "2000m",
+                    LimitsMemory = "500Mi",
+                    RequestsStorage = "1Gi",
+                },
+                ProjectLimit = new Rancher2.Inputs.ProjectResourceQuotaProjectLimitArgs
+                {
+                    LimitsCpu = "2000m",
+                    LimitsMemory = "2000Mi",
+                    RequestsStorage = "2Gi",
+                },
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -272,7 +310,9 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-required"
             title="Required">
-        <span>Cluster<wbr>Id</span>
+        <span id="clusterid_csharp">
+<a href="#clusterid_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -281,7 +321,9 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>Annotations</span>
+        <span id="annotations_csharp">
+<a href="#annotations_csharp" style="color: inherit; text-decoration: inherit;">Annotations</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -290,7 +332,9 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>Container<wbr>Resource<wbr>Limit</span>
+        <span id="containerresourcelimit_csharp">
+<a href="#containerresourcelimit_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Resource<wbr>Limit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectcontainerresourcelimit">Project<wbr>Container<wbr>Resource<wbr>Limit<wbr>Args</a></span>
     </dt>
@@ -299,7 +343,9 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -308,7 +354,9 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enable<wbr>Project<wbr>Monitoring</span>
+        <span id="enableprojectmonitoring_csharp">
+<a href="#enableprojectmonitoring_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Project<wbr>Monitoring</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -317,7 +365,9 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>Labels</span>
+        <span id="labels_csharp">
+<a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -326,7 +376,9 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -335,7 +387,9 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Id</span>
+        <span id="podsecuritypolicytemplateid_csharp">
+<a href="#podsecuritypolicytemplateid_csharp" style="color: inherit; text-decoration: inherit;">Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -344,7 +398,9 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project<wbr>Monitoring<wbr>Input</span>
+        <span id="projectmonitoringinput_csharp">
+<a href="#projectmonitoringinput_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Monitoring<wbr>Input</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectprojectmonitoringinput">Project<wbr>Project<wbr>Monitoring<wbr>Input<wbr>Args</a></span>
     </dt>
@@ -353,7 +409,9 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resource<wbr>Quota</span>
+        <span id="resourcequota_csharp">
+<a href="#resourcequota_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Quota</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectresourcequota">Project<wbr>Resource<wbr>Quota<wbr>Args</a></span>
     </dt>
@@ -362,7 +420,9 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>Wait<wbr>For<wbr>Cluster</span>
+        <span id="waitforcluster_csharp">
+<a href="#waitforcluster_csharp" style="color: inherit; text-decoration: inherit;">Wait<wbr>For<wbr>Cluster</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -378,7 +438,9 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-required"
             title="Required">
-        <span>Cluster<wbr>Id</span>
+        <span id="clusterid_go">
+<a href="#clusterid_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -387,7 +449,9 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>Annotations</span>
+        <span id="annotations_go">
+<a href="#annotations_go" style="color: inherit; text-decoration: inherit;">Annotations</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -396,7 +460,9 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>Container<wbr>Resource<wbr>Limit</span>
+        <span id="containerresourcelimit_go">
+<a href="#containerresourcelimit_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Resource<wbr>Limit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectcontainerresourcelimit">Project<wbr>Container<wbr>Resource<wbr>Limit</a></span>
     </dt>
@@ -405,7 +471,9 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -414,7 +482,9 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enable<wbr>Project<wbr>Monitoring</span>
+        <span id="enableprojectmonitoring_go">
+<a href="#enableprojectmonitoring_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Project<wbr>Monitoring</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -423,7 +493,9 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>Labels</span>
+        <span id="labels_go">
+<a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -432,7 +504,9 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -441,7 +515,9 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Id</span>
+        <span id="podsecuritypolicytemplateid_go">
+<a href="#podsecuritypolicytemplateid_go" style="color: inherit; text-decoration: inherit;">Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -450,7 +526,9 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project<wbr>Monitoring<wbr>Input</span>
+        <span id="projectmonitoringinput_go">
+<a href="#projectmonitoringinput_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Monitoring<wbr>Input</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectprojectmonitoringinput">Project<wbr>Project<wbr>Monitoring<wbr>Input</a></span>
     </dt>
@@ -459,7 +537,9 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resource<wbr>Quota</span>
+        <span id="resourcequota_go">
+<a href="#resourcequota_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Quota</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectresourcequota">Project<wbr>Resource<wbr>Quota</a></span>
     </dt>
@@ -468,7 +548,9 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>Wait<wbr>For<wbr>Cluster</span>
+        <span id="waitforcluster_go">
+<a href="#waitforcluster_go" style="color: inherit; text-decoration: inherit;">Wait<wbr>For<wbr>Cluster</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -484,7 +566,9 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-required"
             title="Required">
-        <span>cluster<wbr>Id</span>
+        <span id="clusterid_nodejs">
+<a href="#clusterid_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -493,7 +577,9 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>annotations</span>
+        <span id="annotations_nodejs">
+<a href="#annotations_nodejs" style="color: inherit; text-decoration: inherit;">annotations</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -502,7 +588,9 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>container<wbr>Resource<wbr>Limit</span>
+        <span id="containerresourcelimit_nodejs">
+<a href="#containerresourcelimit_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Resource<wbr>Limit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectcontainerresourcelimit">Project<wbr>Container<wbr>Resource<wbr>Limit</a></span>
     </dt>
@@ -511,7 +599,9 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -520,7 +610,9 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>enable<wbr>Project<wbr>Monitoring</span>
+        <span id="enableprojectmonitoring_nodejs">
+<a href="#enableprojectmonitoring_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Project<wbr>Monitoring</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -529,7 +621,9 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>labels</span>
+        <span id="labels_nodejs">
+<a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -538,7 +632,9 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -547,7 +643,9 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Id</span>
+        <span id="podsecuritypolicytemplateid_nodejs">
+<a href="#podsecuritypolicytemplateid_nodejs" style="color: inherit; text-decoration: inherit;">pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -556,7 +654,9 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>project<wbr>Monitoring<wbr>Input</span>
+        <span id="projectmonitoringinput_nodejs">
+<a href="#projectmonitoringinput_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Monitoring<wbr>Input</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectprojectmonitoringinput">Project<wbr>Project<wbr>Monitoring<wbr>Input</a></span>
     </dt>
@@ -565,7 +665,9 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource<wbr>Quota</span>
+        <span id="resourcequota_nodejs">
+<a href="#resourcequota_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Quota</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectresourcequota">Project<wbr>Resource<wbr>Quota</a></span>
     </dt>
@@ -574,7 +676,9 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>wait<wbr>For<wbr>Cluster</span>
+        <span id="waitforcluster_nodejs">
+<a href="#waitforcluster_nodejs" style="color: inherit; text-decoration: inherit;">wait<wbr>For<wbr>Cluster</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -590,7 +694,9 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-required"
             title="Required">
-        <span>cluster_<wbr>id</span>
+        <span id="cluster_id_python">
+<a href="#cluster_id_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -599,7 +705,9 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>annotations</span>
+        <span id="annotations_python">
+<a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -608,7 +716,9 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>container_<wbr>resource_<wbr>limit</span>
+        <span id="container_resource_limit_python">
+<a href="#container_resource_limit_python" style="color: inherit; text-decoration: inherit;">container_<wbr>resource_<wbr>limit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectcontainerresourcelimit">Dict[Project<wbr>Container<wbr>Resource<wbr>Limit]</a></span>
     </dt>
@@ -617,7 +727,9 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -626,7 +738,9 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>enable_<wbr>project_<wbr>monitoring</span>
+        <span id="enable_project_monitoring_python">
+<a href="#enable_project_monitoring_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>project_<wbr>monitoring</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -635,7 +749,9 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>labels</span>
+        <span id="labels_python">
+<a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -644,7 +760,9 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -653,7 +771,9 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>pod_<wbr>security_<wbr>policy_<wbr>template_<wbr>id</span>
+        <span id="pod_security_policy_template_id_python">
+<a href="#pod_security_policy_template_id_python" style="color: inherit; text-decoration: inherit;">pod_<wbr>security_<wbr>policy_<wbr>template_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -662,7 +782,9 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>project_<wbr>monitoring_<wbr>input</span>
+        <span id="project_monitoring_input_python">
+<a href="#project_monitoring_input_python" style="color: inherit; text-decoration: inherit;">project_<wbr>monitoring_<wbr>input</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectprojectmonitoringinput">Dict[Project<wbr>Project<wbr>Monitoring<wbr>Input]</a></span>
     </dt>
@@ -671,7 +793,9 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource_<wbr>quota</span>
+        <span id="resource_quota_python">
+<a href="#resource_quota_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>quota</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectresourcequota">Dict[Project<wbr>Resource<wbr>Quota]</a></span>
     </dt>
@@ -680,7 +804,9 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>wait_<wbr>for_<wbr>cluster</span>
+        <span id="wait_for_cluster_python">
+<a href="#wait_for_cluster_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>for_<wbr>cluster</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -707,7 +833,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -722,7 +850,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -737,7 +867,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -752,7 +884,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -893,7 +1027,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Annotations</span>
+        <span id="state_annotations_csharp">
+<a href="#state_annotations_csharp" style="color: inherit; text-decoration: inherit;">Annotations</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -902,7 +1038,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cluster<wbr>Id</span>
+        <span id="state_clusterid_csharp">
+<a href="#state_clusterid_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -911,7 +1049,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Container<wbr>Resource<wbr>Limit</span>
+        <span id="state_containerresourcelimit_csharp">
+<a href="#state_containerresourcelimit_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Resource<wbr>Limit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectcontainerresourcelimit">Project<wbr>Container<wbr>Resource<wbr>Limit<wbr>Args</a></span>
     </dt>
@@ -920,7 +1060,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="state_description_csharp">
+<a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -929,7 +1071,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enable<wbr>Project<wbr>Monitoring</span>
+        <span id="state_enableprojectmonitoring_csharp">
+<a href="#state_enableprojectmonitoring_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Project<wbr>Monitoring</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -938,7 +1082,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Labels</span>
+        <span id="state_labels_csharp">
+<a href="#state_labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -947,7 +1093,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -956,7 +1104,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Id</span>
+        <span id="state_podsecuritypolicytemplateid_csharp">
+<a href="#state_podsecuritypolicytemplateid_csharp" style="color: inherit; text-decoration: inherit;">Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -965,7 +1115,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project<wbr>Monitoring<wbr>Input</span>
+        <span id="state_projectmonitoringinput_csharp">
+<a href="#state_projectmonitoringinput_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Monitoring<wbr>Input</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectprojectmonitoringinput">Project<wbr>Project<wbr>Monitoring<wbr>Input<wbr>Args</a></span>
     </dt>
@@ -974,7 +1126,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resource<wbr>Quota</span>
+        <span id="state_resourcequota_csharp">
+<a href="#state_resourcequota_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Quota</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectresourcequota">Project<wbr>Resource<wbr>Quota<wbr>Args</a></span>
     </dt>
@@ -983,7 +1137,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Wait<wbr>For<wbr>Cluster</span>
+        <span id="state_waitforcluster_csharp">
+<a href="#state_waitforcluster_csharp" style="color: inherit; text-decoration: inherit;">Wait<wbr>For<wbr>Cluster</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -999,7 +1155,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Annotations</span>
+        <span id="state_annotations_go">
+<a href="#state_annotations_go" style="color: inherit; text-decoration: inherit;">Annotations</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -1008,7 +1166,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cluster<wbr>Id</span>
+        <span id="state_clusterid_go">
+<a href="#state_clusterid_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1017,7 +1177,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Container<wbr>Resource<wbr>Limit</span>
+        <span id="state_containerresourcelimit_go">
+<a href="#state_containerresourcelimit_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Resource<wbr>Limit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectcontainerresourcelimit">Project<wbr>Container<wbr>Resource<wbr>Limit</a></span>
     </dt>
@@ -1026,7 +1188,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="state_description_go">
+<a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1035,7 +1199,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enable<wbr>Project<wbr>Monitoring</span>
+        <span id="state_enableprojectmonitoring_go">
+<a href="#state_enableprojectmonitoring_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Project<wbr>Monitoring</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1044,7 +1210,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Labels</span>
+        <span id="state_labels_go">
+<a href="#state_labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -1053,7 +1221,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1062,7 +1232,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Id</span>
+        <span id="state_podsecuritypolicytemplateid_go">
+<a href="#state_podsecuritypolicytemplateid_go" style="color: inherit; text-decoration: inherit;">Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1071,7 +1243,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project<wbr>Monitoring<wbr>Input</span>
+        <span id="state_projectmonitoringinput_go">
+<a href="#state_projectmonitoringinput_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Monitoring<wbr>Input</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectprojectmonitoringinput">Project<wbr>Project<wbr>Monitoring<wbr>Input</a></span>
     </dt>
@@ -1080,7 +1254,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resource<wbr>Quota</span>
+        <span id="state_resourcequota_go">
+<a href="#state_resourcequota_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Quota</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectresourcequota">Project<wbr>Resource<wbr>Quota</a></span>
     </dt>
@@ -1089,7 +1265,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Wait<wbr>For<wbr>Cluster</span>
+        <span id="state_waitforcluster_go">
+<a href="#state_waitforcluster_go" style="color: inherit; text-decoration: inherit;">Wait<wbr>For<wbr>Cluster</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1105,7 +1283,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>annotations</span>
+        <span id="state_annotations_nodejs">
+<a href="#state_annotations_nodejs" style="color: inherit; text-decoration: inherit;">annotations</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -1114,7 +1294,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>cluster<wbr>Id</span>
+        <span id="state_clusterid_nodejs">
+<a href="#state_clusterid_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1123,7 +1305,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>container<wbr>Resource<wbr>Limit</span>
+        <span id="state_containerresourcelimit_nodejs">
+<a href="#state_containerresourcelimit_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Resource<wbr>Limit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectcontainerresourcelimit">Project<wbr>Container<wbr>Resource<wbr>Limit</a></span>
     </dt>
@@ -1132,7 +1316,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="state_description_nodejs">
+<a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1141,7 +1327,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>enable<wbr>Project<wbr>Monitoring</span>
+        <span id="state_enableprojectmonitoring_nodejs">
+<a href="#state_enableprojectmonitoring_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Project<wbr>Monitoring</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1150,7 +1338,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>labels</span>
+        <span id="state_labels_nodejs">
+<a href="#state_labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -1159,7 +1349,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1168,7 +1360,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Id</span>
+        <span id="state_podsecuritypolicytemplateid_nodejs">
+<a href="#state_podsecuritypolicytemplateid_nodejs" style="color: inherit; text-decoration: inherit;">pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1177,7 +1371,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>project<wbr>Monitoring<wbr>Input</span>
+        <span id="state_projectmonitoringinput_nodejs">
+<a href="#state_projectmonitoringinput_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Monitoring<wbr>Input</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectprojectmonitoringinput">Project<wbr>Project<wbr>Monitoring<wbr>Input</a></span>
     </dt>
@@ -1186,7 +1382,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource<wbr>Quota</span>
+        <span id="state_resourcequota_nodejs">
+<a href="#state_resourcequota_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Quota</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectresourcequota">Project<wbr>Resource<wbr>Quota</a></span>
     </dt>
@@ -1195,7 +1393,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>wait<wbr>For<wbr>Cluster</span>
+        <span id="state_waitforcluster_nodejs">
+<a href="#state_waitforcluster_nodejs" style="color: inherit; text-decoration: inherit;">wait<wbr>For<wbr>Cluster</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1211,7 +1411,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>annotations</span>
+        <span id="state_annotations_python">
+<a href="#state_annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -1220,7 +1422,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>cluster_<wbr>id</span>
+        <span id="state_cluster_id_python">
+<a href="#state_cluster_id_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1229,7 +1433,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>container_<wbr>resource_<wbr>limit</span>
+        <span id="state_container_resource_limit_python">
+<a href="#state_container_resource_limit_python" style="color: inherit; text-decoration: inherit;">container_<wbr>resource_<wbr>limit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectcontainerresourcelimit">Dict[Project<wbr>Container<wbr>Resource<wbr>Limit]</a></span>
     </dt>
@@ -1238,7 +1444,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="state_description_python">
+<a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1247,7 +1455,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>enable_<wbr>project_<wbr>monitoring</span>
+        <span id="state_enable_project_monitoring_python">
+<a href="#state_enable_project_monitoring_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>project_<wbr>monitoring</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1256,7 +1466,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>labels</span>
+        <span id="state_labels_python">
+<a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -1265,7 +1477,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1274,7 +1488,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>pod_<wbr>security_<wbr>policy_<wbr>template_<wbr>id</span>
+        <span id="state_pod_security_policy_template_id_python">
+<a href="#state_pod_security_policy_template_id_python" style="color: inherit; text-decoration: inherit;">pod_<wbr>security_<wbr>policy_<wbr>template_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1283,7 +1499,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>project_<wbr>monitoring_<wbr>input</span>
+        <span id="state_project_monitoring_input_python">
+<a href="#state_project_monitoring_input_python" style="color: inherit; text-decoration: inherit;">project_<wbr>monitoring_<wbr>input</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectprojectmonitoringinput">Dict[Project<wbr>Project<wbr>Monitoring<wbr>Input]</a></span>
     </dt>
@@ -1292,7 +1510,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource_<wbr>quota</span>
+        <span id="state_resource_quota_python">
+<a href="#state_resource_quota_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>quota</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectresourcequota">Dict[Project<wbr>Resource<wbr>Quota]</a></span>
     </dt>
@@ -1301,7 +1521,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>wait_<wbr>for_<wbr>cluster</span>
+        <span id="state_wait_for_cluster_python">
+<a href="#state_wait_for_cluster_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>for_<wbr>cluster</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1343,7 +1565,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Limits<wbr>Cpu</span>
+        <span id="limitscpu_csharp">
+<a href="#limitscpu_csharp" style="color: inherit; text-decoration: inherit;">Limits<wbr>Cpu</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1352,7 +1576,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Limits<wbr>Memory</span>
+        <span id="limitsmemory_csharp">
+<a href="#limitsmemory_csharp" style="color: inherit; text-decoration: inherit;">Limits<wbr>Memory</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1361,7 +1587,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Requests<wbr>Cpu</span>
+        <span id="requestscpu_csharp">
+<a href="#requestscpu_csharp" style="color: inherit; text-decoration: inherit;">Requests<wbr>Cpu</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1370,7 +1598,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Requests<wbr>Memory</span>
+        <span id="requestsmemory_csharp">
+<a href="#requestsmemory_csharp" style="color: inherit; text-decoration: inherit;">Requests<wbr>Memory</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1386,7 +1616,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Limits<wbr>Cpu</span>
+        <span id="limitscpu_go">
+<a href="#limitscpu_go" style="color: inherit; text-decoration: inherit;">Limits<wbr>Cpu</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1395,7 +1627,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Limits<wbr>Memory</span>
+        <span id="limitsmemory_go">
+<a href="#limitsmemory_go" style="color: inherit; text-decoration: inherit;">Limits<wbr>Memory</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1404,7 +1638,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Requests<wbr>Cpu</span>
+        <span id="requestscpu_go">
+<a href="#requestscpu_go" style="color: inherit; text-decoration: inherit;">Requests<wbr>Cpu</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1413,7 +1649,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Requests<wbr>Memory</span>
+        <span id="requestsmemory_go">
+<a href="#requestsmemory_go" style="color: inherit; text-decoration: inherit;">Requests<wbr>Memory</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1429,7 +1667,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>limits<wbr>Cpu</span>
+        <span id="limitscpu_nodejs">
+<a href="#limitscpu_nodejs" style="color: inherit; text-decoration: inherit;">limits<wbr>Cpu</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1438,7 +1678,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>limits<wbr>Memory</span>
+        <span id="limitsmemory_nodejs">
+<a href="#limitsmemory_nodejs" style="color: inherit; text-decoration: inherit;">limits<wbr>Memory</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1447,7 +1689,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>requests<wbr>Cpu</span>
+        <span id="requestscpu_nodejs">
+<a href="#requestscpu_nodejs" style="color: inherit; text-decoration: inherit;">requests<wbr>Cpu</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1456,7 +1700,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>requests<wbr>Memory</span>
+        <span id="requestsmemory_nodejs">
+<a href="#requestsmemory_nodejs" style="color: inherit; text-decoration: inherit;">requests<wbr>Memory</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1472,7 +1718,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>limits<wbr>Cpu</span>
+        <span id="limitscpu_python">
+<a href="#limitscpu_python" style="color: inherit; text-decoration: inherit;">limits<wbr>Cpu</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1481,7 +1729,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>limits<wbr>Memory</span>
+        <span id="limitsmemory_python">
+<a href="#limitsmemory_python" style="color: inherit; text-decoration: inherit;">limits<wbr>Memory</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1490,7 +1740,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>requests<wbr>Cpu</span>
+        <span id="requestscpu_python">
+<a href="#requestscpu_python" style="color: inherit; text-decoration: inherit;">requests<wbr>Cpu</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1499,7 +1751,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>requests<wbr>Memory</span>
+        <span id="requestsmemory_python">
+<a href="#requestsmemory_python" style="color: inherit; text-decoration: inherit;">requests<wbr>Memory</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1533,7 +1787,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Answers</span>
+        <span id="answers_csharp">
+<a href="#answers_csharp" style="color: inherit; text-decoration: inherit;">Answers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -1542,7 +1798,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Version</span>
+        <span id="version_csharp">
+<a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1558,7 +1816,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Answers</span>
+        <span id="answers_go">
+<a href="#answers_go" style="color: inherit; text-decoration: inherit;">Answers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -1567,7 +1827,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Version</span>
+        <span id="version_go">
+<a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1583,7 +1845,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>answers</span>
+        <span id="answers_nodejs">
+<a href="#answers_nodejs" style="color: inherit; text-decoration: inherit;">answers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -1592,7 +1856,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>version</span>
+        <span id="version_nodejs">
+<a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1608,7 +1874,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>answers</span>
+        <span id="answers_python">
+<a href="#answers_python" style="color: inherit; text-decoration: inherit;">answers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -1617,7 +1885,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>version</span>
+        <span id="version_python">
+<a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1651,7 +1921,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Namespace<wbr>Default<wbr>Limit</span>
+        <span id="namespacedefaultlimit_csharp">
+<a href="#namespacedefaultlimit_csharp" style="color: inherit; text-decoration: inherit;">Namespace<wbr>Default<wbr>Limit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectresourcequotanamespacedefaultlimit">Project<wbr>Resource<wbr>Quota<wbr>Namespace<wbr>Default<wbr>Limit<wbr>Args</a></span>
     </dt>
@@ -1660,7 +1932,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Project<wbr>Limit</span>
+        <span id="projectlimit_csharp">
+<a href="#projectlimit_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Limit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectresourcequotaprojectlimit">Project<wbr>Resource<wbr>Quota<wbr>Project<wbr>Limit<wbr>Args</a></span>
     </dt>
@@ -1676,7 +1950,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Namespace<wbr>Default<wbr>Limit</span>
+        <span id="namespacedefaultlimit_go">
+<a href="#namespacedefaultlimit_go" style="color: inherit; text-decoration: inherit;">Namespace<wbr>Default<wbr>Limit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectresourcequotanamespacedefaultlimit">Project<wbr>Resource<wbr>Quota<wbr>Namespace<wbr>Default<wbr>Limit</a></span>
     </dt>
@@ -1685,7 +1961,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Project<wbr>Limit</span>
+        <span id="projectlimit_go">
+<a href="#projectlimit_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Limit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectresourcequotaprojectlimit">Project<wbr>Resource<wbr>Quota<wbr>Project<wbr>Limit</a></span>
     </dt>
@@ -1701,7 +1979,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>namespace<wbr>Default<wbr>Limit</span>
+        <span id="namespacedefaultlimit_nodejs">
+<a href="#namespacedefaultlimit_nodejs" style="color: inherit; text-decoration: inherit;">namespace<wbr>Default<wbr>Limit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectresourcequotanamespacedefaultlimit">Project<wbr>Resource<wbr>Quota<wbr>Namespace<wbr>Default<wbr>Limit</a></span>
     </dt>
@@ -1710,7 +1990,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>project<wbr>Limit</span>
+        <span id="projectlimit_nodejs">
+<a href="#projectlimit_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Limit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectresourcequotaprojectlimit">Project<wbr>Resource<wbr>Quota<wbr>Project<wbr>Limit</a></span>
     </dt>
@@ -1726,7 +2008,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>namespace<wbr>Default<wbr>Limit</span>
+        <span id="namespacedefaultlimit_python">
+<a href="#namespacedefaultlimit_python" style="color: inherit; text-decoration: inherit;">namespace<wbr>Default<wbr>Limit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectresourcequotanamespacedefaultlimit">Dict[Project<wbr>Resource<wbr>Quota<wbr>Namespace<wbr>Default<wbr>Limit]</a></span>
     </dt>
@@ -1735,7 +2019,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>project<wbr>Limit</span>
+        <span id="projectlimit_python">
+<a href="#projectlimit_python" style="color: inherit; text-decoration: inherit;">project<wbr>Limit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectresourcequotaprojectlimit">Dict[Project<wbr>Resource<wbr>Quota<wbr>Project<wbr>Limit]</a></span>
     </dt>
@@ -1769,7 +2055,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Config<wbr>Maps</span>
+        <span id="configmaps_csharp">
+<a href="#configmaps_csharp" style="color: inherit; text-decoration: inherit;">Config<wbr>Maps</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1778,7 +2066,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Limits<wbr>Cpu</span>
+        <span id="limitscpu_csharp">
+<a href="#limitscpu_csharp" style="color: inherit; text-decoration: inherit;">Limits<wbr>Cpu</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1787,7 +2077,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Limits<wbr>Memory</span>
+        <span id="limitsmemory_csharp">
+<a href="#limitsmemory_csharp" style="color: inherit; text-decoration: inherit;">Limits<wbr>Memory</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1796,7 +2088,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Persistent<wbr>Volume<wbr>Claims</span>
+        <span id="persistentvolumeclaims_csharp">
+<a href="#persistentvolumeclaims_csharp" style="color: inherit; text-decoration: inherit;">Persistent<wbr>Volume<wbr>Claims</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1805,7 +2099,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Pods</span>
+        <span id="pods_csharp">
+<a href="#pods_csharp" style="color: inherit; text-decoration: inherit;">Pods</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1814,7 +2110,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Replication<wbr>Controllers</span>
+        <span id="replicationcontrollers_csharp">
+<a href="#replicationcontrollers_csharp" style="color: inherit; text-decoration: inherit;">Replication<wbr>Controllers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1823,7 +2121,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Requests<wbr>Cpu</span>
+        <span id="requestscpu_csharp">
+<a href="#requestscpu_csharp" style="color: inherit; text-decoration: inherit;">Requests<wbr>Cpu</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1832,7 +2132,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Requests<wbr>Memory</span>
+        <span id="requestsmemory_csharp">
+<a href="#requestsmemory_csharp" style="color: inherit; text-decoration: inherit;">Requests<wbr>Memory</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1841,7 +2143,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Requests<wbr>Storage</span>
+        <span id="requestsstorage_csharp">
+<a href="#requestsstorage_csharp" style="color: inherit; text-decoration: inherit;">Requests<wbr>Storage</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1850,7 +2154,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Secrets</span>
+        <span id="secrets_csharp">
+<a href="#secrets_csharp" style="color: inherit; text-decoration: inherit;">Secrets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1859,7 +2165,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Services</span>
+        <span id="services_csharp">
+<a href="#services_csharp" style="color: inherit; text-decoration: inherit;">Services</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1867,7 +2175,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Services<wbr>Load<wbr>Balancers</span>
+        <span id="servicesloadbalancers_csharp">
+<a href="#servicesloadbalancers_csharp" style="color: inherit; text-decoration: inherit;">Services<wbr>Load<wbr>Balancers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1876,7 +2186,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Services<wbr>Node<wbr>Ports</span>
+        <span id="servicesnodeports_csharp">
+<a href="#servicesnodeports_csharp" style="color: inherit; text-decoration: inherit;">Services<wbr>Node<wbr>Ports</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1892,7 +2204,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Config<wbr>Maps</span>
+        <span id="configmaps_go">
+<a href="#configmaps_go" style="color: inherit; text-decoration: inherit;">Config<wbr>Maps</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1901,7 +2215,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Limits<wbr>Cpu</span>
+        <span id="limitscpu_go">
+<a href="#limitscpu_go" style="color: inherit; text-decoration: inherit;">Limits<wbr>Cpu</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1910,7 +2226,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Limits<wbr>Memory</span>
+        <span id="limitsmemory_go">
+<a href="#limitsmemory_go" style="color: inherit; text-decoration: inherit;">Limits<wbr>Memory</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1919,7 +2237,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Persistent<wbr>Volume<wbr>Claims</span>
+        <span id="persistentvolumeclaims_go">
+<a href="#persistentvolumeclaims_go" style="color: inherit; text-decoration: inherit;">Persistent<wbr>Volume<wbr>Claims</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1928,7 +2248,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Pods</span>
+        <span id="pods_go">
+<a href="#pods_go" style="color: inherit; text-decoration: inherit;">Pods</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1937,7 +2259,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Replication<wbr>Controllers</span>
+        <span id="replicationcontrollers_go">
+<a href="#replicationcontrollers_go" style="color: inherit; text-decoration: inherit;">Replication<wbr>Controllers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1946,7 +2270,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Requests<wbr>Cpu</span>
+        <span id="requestscpu_go">
+<a href="#requestscpu_go" style="color: inherit; text-decoration: inherit;">Requests<wbr>Cpu</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1955,7 +2281,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Requests<wbr>Memory</span>
+        <span id="requestsmemory_go">
+<a href="#requestsmemory_go" style="color: inherit; text-decoration: inherit;">Requests<wbr>Memory</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1964,7 +2292,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Requests<wbr>Storage</span>
+        <span id="requestsstorage_go">
+<a href="#requestsstorage_go" style="color: inherit; text-decoration: inherit;">Requests<wbr>Storage</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1973,7 +2303,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Secrets</span>
+        <span id="secrets_go">
+<a href="#secrets_go" style="color: inherit; text-decoration: inherit;">Secrets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1982,7 +2314,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Services</span>
+        <span id="services_go">
+<a href="#services_go" style="color: inherit; text-decoration: inherit;">Services</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1990,7 +2324,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Services<wbr>Load<wbr>Balancers</span>
+        <span id="servicesloadbalancers_go">
+<a href="#servicesloadbalancers_go" style="color: inherit; text-decoration: inherit;">Services<wbr>Load<wbr>Balancers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1999,7 +2335,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Services<wbr>Node<wbr>Ports</span>
+        <span id="servicesnodeports_go">
+<a href="#servicesnodeports_go" style="color: inherit; text-decoration: inherit;">Services<wbr>Node<wbr>Ports</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2015,7 +2353,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>config<wbr>Maps</span>
+        <span id="configmaps_nodejs">
+<a href="#configmaps_nodejs" style="color: inherit; text-decoration: inherit;">config<wbr>Maps</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2024,7 +2364,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>limits<wbr>Cpu</span>
+        <span id="limitscpu_nodejs">
+<a href="#limitscpu_nodejs" style="color: inherit; text-decoration: inherit;">limits<wbr>Cpu</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2033,7 +2375,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>limits<wbr>Memory</span>
+        <span id="limitsmemory_nodejs">
+<a href="#limitsmemory_nodejs" style="color: inherit; text-decoration: inherit;">limits<wbr>Memory</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2042,7 +2386,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>persistent<wbr>Volume<wbr>Claims</span>
+        <span id="persistentvolumeclaims_nodejs">
+<a href="#persistentvolumeclaims_nodejs" style="color: inherit; text-decoration: inherit;">persistent<wbr>Volume<wbr>Claims</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2051,7 +2397,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>pods</span>
+        <span id="pods_nodejs">
+<a href="#pods_nodejs" style="color: inherit; text-decoration: inherit;">pods</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2060,7 +2408,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>replication<wbr>Controllers</span>
+        <span id="replicationcontrollers_nodejs">
+<a href="#replicationcontrollers_nodejs" style="color: inherit; text-decoration: inherit;">replication<wbr>Controllers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2069,7 +2419,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>requests<wbr>Cpu</span>
+        <span id="requestscpu_nodejs">
+<a href="#requestscpu_nodejs" style="color: inherit; text-decoration: inherit;">requests<wbr>Cpu</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2078,7 +2430,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>requests<wbr>Memory</span>
+        <span id="requestsmemory_nodejs">
+<a href="#requestsmemory_nodejs" style="color: inherit; text-decoration: inherit;">requests<wbr>Memory</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2087,7 +2441,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>requests<wbr>Storage</span>
+        <span id="requestsstorage_nodejs">
+<a href="#requestsstorage_nodejs" style="color: inherit; text-decoration: inherit;">requests<wbr>Storage</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2096,7 +2452,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>secrets</span>
+        <span id="secrets_nodejs">
+<a href="#secrets_nodejs" style="color: inherit; text-decoration: inherit;">secrets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2105,7 +2463,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>services</span>
+        <span id="services_nodejs">
+<a href="#services_nodejs" style="color: inherit; text-decoration: inherit;">services</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2113,7 +2473,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>services<wbr>Load<wbr>Balancers</span>
+        <span id="servicesloadbalancers_nodejs">
+<a href="#servicesloadbalancers_nodejs" style="color: inherit; text-decoration: inherit;">services<wbr>Load<wbr>Balancers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2122,7 +2484,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>services<wbr>Node<wbr>Ports</span>
+        <span id="servicesnodeports_nodejs">
+<a href="#servicesnodeports_nodejs" style="color: inherit; text-decoration: inherit;">services<wbr>Node<wbr>Ports</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2138,7 +2502,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>config<wbr>Maps</span>
+        <span id="configmaps_python">
+<a href="#configmaps_python" style="color: inherit; text-decoration: inherit;">config<wbr>Maps</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2147,7 +2513,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>limits<wbr>Cpu</span>
+        <span id="limitscpu_python">
+<a href="#limitscpu_python" style="color: inherit; text-decoration: inherit;">limits<wbr>Cpu</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2156,7 +2524,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>limits<wbr>Memory</span>
+        <span id="limitsmemory_python">
+<a href="#limitsmemory_python" style="color: inherit; text-decoration: inherit;">limits<wbr>Memory</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2165,7 +2535,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>persistent<wbr>Volume<wbr>Claims</span>
+        <span id="persistentvolumeclaims_python">
+<a href="#persistentvolumeclaims_python" style="color: inherit; text-decoration: inherit;">persistent<wbr>Volume<wbr>Claims</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2174,7 +2546,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>pods</span>
+        <span id="pods_python">
+<a href="#pods_python" style="color: inherit; text-decoration: inherit;">pods</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2183,7 +2557,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>replication<wbr>Controllers</span>
+        <span id="replicationcontrollers_python">
+<a href="#replicationcontrollers_python" style="color: inherit; text-decoration: inherit;">replication<wbr>Controllers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2192,7 +2568,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>requests<wbr>Cpu</span>
+        <span id="requestscpu_python">
+<a href="#requestscpu_python" style="color: inherit; text-decoration: inherit;">requests<wbr>Cpu</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2201,7 +2579,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>requests<wbr>Memory</span>
+        <span id="requestsmemory_python">
+<a href="#requestsmemory_python" style="color: inherit; text-decoration: inherit;">requests<wbr>Memory</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2210,7 +2590,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>requests<wbr>Storage</span>
+        <span id="requestsstorage_python">
+<a href="#requestsstorage_python" style="color: inherit; text-decoration: inherit;">requests<wbr>Storage</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2219,7 +2601,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>secrets</span>
+        <span id="secrets_python">
+<a href="#secrets_python" style="color: inherit; text-decoration: inherit;">secrets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2228,7 +2612,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>services</span>
+        <span id="services_python">
+<a href="#services_python" style="color: inherit; text-decoration: inherit;">services</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2236,7 +2622,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>services<wbr>Load<wbr>Balancers</span>
+        <span id="servicesloadbalancers_python">
+<a href="#servicesloadbalancers_python" style="color: inherit; text-decoration: inherit;">services<wbr>Load<wbr>Balancers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2245,7 +2633,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>services<wbr>Node<wbr>Ports</span>
+        <span id="servicesnodeports_python">
+<a href="#servicesnodeports_python" style="color: inherit; text-decoration: inherit;">services<wbr>Node<wbr>Ports</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2279,7 +2669,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Config<wbr>Maps</span>
+        <span id="configmaps_csharp">
+<a href="#configmaps_csharp" style="color: inherit; text-decoration: inherit;">Config<wbr>Maps</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2288,7 +2680,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Limits<wbr>Cpu</span>
+        <span id="limitscpu_csharp">
+<a href="#limitscpu_csharp" style="color: inherit; text-decoration: inherit;">Limits<wbr>Cpu</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2297,7 +2691,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Limits<wbr>Memory</span>
+        <span id="limitsmemory_csharp">
+<a href="#limitsmemory_csharp" style="color: inherit; text-decoration: inherit;">Limits<wbr>Memory</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2306,7 +2702,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Persistent<wbr>Volume<wbr>Claims</span>
+        <span id="persistentvolumeclaims_csharp">
+<a href="#persistentvolumeclaims_csharp" style="color: inherit; text-decoration: inherit;">Persistent<wbr>Volume<wbr>Claims</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2315,7 +2713,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Pods</span>
+        <span id="pods_csharp">
+<a href="#pods_csharp" style="color: inherit; text-decoration: inherit;">Pods</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2324,7 +2724,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Replication<wbr>Controllers</span>
+        <span id="replicationcontrollers_csharp">
+<a href="#replicationcontrollers_csharp" style="color: inherit; text-decoration: inherit;">Replication<wbr>Controllers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2333,7 +2735,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Requests<wbr>Cpu</span>
+        <span id="requestscpu_csharp">
+<a href="#requestscpu_csharp" style="color: inherit; text-decoration: inherit;">Requests<wbr>Cpu</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2342,7 +2746,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Requests<wbr>Memory</span>
+        <span id="requestsmemory_csharp">
+<a href="#requestsmemory_csharp" style="color: inherit; text-decoration: inherit;">Requests<wbr>Memory</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2351,7 +2757,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Requests<wbr>Storage</span>
+        <span id="requestsstorage_csharp">
+<a href="#requestsstorage_csharp" style="color: inherit; text-decoration: inherit;">Requests<wbr>Storage</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2360,7 +2768,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Secrets</span>
+        <span id="secrets_csharp">
+<a href="#secrets_csharp" style="color: inherit; text-decoration: inherit;">Secrets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2369,7 +2779,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Services</span>
+        <span id="services_csharp">
+<a href="#services_csharp" style="color: inherit; text-decoration: inherit;">Services</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2377,7 +2789,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Services<wbr>Load<wbr>Balancers</span>
+        <span id="servicesloadbalancers_csharp">
+<a href="#servicesloadbalancers_csharp" style="color: inherit; text-decoration: inherit;">Services<wbr>Load<wbr>Balancers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2386,7 +2800,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Services<wbr>Node<wbr>Ports</span>
+        <span id="servicesnodeports_csharp">
+<a href="#servicesnodeports_csharp" style="color: inherit; text-decoration: inherit;">Services<wbr>Node<wbr>Ports</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2402,7 +2818,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Config<wbr>Maps</span>
+        <span id="configmaps_go">
+<a href="#configmaps_go" style="color: inherit; text-decoration: inherit;">Config<wbr>Maps</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2411,7 +2829,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Limits<wbr>Cpu</span>
+        <span id="limitscpu_go">
+<a href="#limitscpu_go" style="color: inherit; text-decoration: inherit;">Limits<wbr>Cpu</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2420,7 +2840,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Limits<wbr>Memory</span>
+        <span id="limitsmemory_go">
+<a href="#limitsmemory_go" style="color: inherit; text-decoration: inherit;">Limits<wbr>Memory</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2429,7 +2851,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Persistent<wbr>Volume<wbr>Claims</span>
+        <span id="persistentvolumeclaims_go">
+<a href="#persistentvolumeclaims_go" style="color: inherit; text-decoration: inherit;">Persistent<wbr>Volume<wbr>Claims</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2438,7 +2862,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Pods</span>
+        <span id="pods_go">
+<a href="#pods_go" style="color: inherit; text-decoration: inherit;">Pods</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2447,7 +2873,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Replication<wbr>Controllers</span>
+        <span id="replicationcontrollers_go">
+<a href="#replicationcontrollers_go" style="color: inherit; text-decoration: inherit;">Replication<wbr>Controllers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2456,7 +2884,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Requests<wbr>Cpu</span>
+        <span id="requestscpu_go">
+<a href="#requestscpu_go" style="color: inherit; text-decoration: inherit;">Requests<wbr>Cpu</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2465,7 +2895,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Requests<wbr>Memory</span>
+        <span id="requestsmemory_go">
+<a href="#requestsmemory_go" style="color: inherit; text-decoration: inherit;">Requests<wbr>Memory</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2474,7 +2906,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Requests<wbr>Storage</span>
+        <span id="requestsstorage_go">
+<a href="#requestsstorage_go" style="color: inherit; text-decoration: inherit;">Requests<wbr>Storage</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2483,7 +2917,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Secrets</span>
+        <span id="secrets_go">
+<a href="#secrets_go" style="color: inherit; text-decoration: inherit;">Secrets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2492,7 +2928,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Services</span>
+        <span id="services_go">
+<a href="#services_go" style="color: inherit; text-decoration: inherit;">Services</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2500,7 +2938,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Services<wbr>Load<wbr>Balancers</span>
+        <span id="servicesloadbalancers_go">
+<a href="#servicesloadbalancers_go" style="color: inherit; text-decoration: inherit;">Services<wbr>Load<wbr>Balancers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2509,7 +2949,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Services<wbr>Node<wbr>Ports</span>
+        <span id="servicesnodeports_go">
+<a href="#servicesnodeports_go" style="color: inherit; text-decoration: inherit;">Services<wbr>Node<wbr>Ports</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2525,7 +2967,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>config<wbr>Maps</span>
+        <span id="configmaps_nodejs">
+<a href="#configmaps_nodejs" style="color: inherit; text-decoration: inherit;">config<wbr>Maps</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2534,7 +2978,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>limits<wbr>Cpu</span>
+        <span id="limitscpu_nodejs">
+<a href="#limitscpu_nodejs" style="color: inherit; text-decoration: inherit;">limits<wbr>Cpu</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2543,7 +2989,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>limits<wbr>Memory</span>
+        <span id="limitsmemory_nodejs">
+<a href="#limitsmemory_nodejs" style="color: inherit; text-decoration: inherit;">limits<wbr>Memory</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2552,7 +3000,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>persistent<wbr>Volume<wbr>Claims</span>
+        <span id="persistentvolumeclaims_nodejs">
+<a href="#persistentvolumeclaims_nodejs" style="color: inherit; text-decoration: inherit;">persistent<wbr>Volume<wbr>Claims</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2561,7 +3011,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>pods</span>
+        <span id="pods_nodejs">
+<a href="#pods_nodejs" style="color: inherit; text-decoration: inherit;">pods</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2570,7 +3022,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>replication<wbr>Controllers</span>
+        <span id="replicationcontrollers_nodejs">
+<a href="#replicationcontrollers_nodejs" style="color: inherit; text-decoration: inherit;">replication<wbr>Controllers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2579,7 +3033,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>requests<wbr>Cpu</span>
+        <span id="requestscpu_nodejs">
+<a href="#requestscpu_nodejs" style="color: inherit; text-decoration: inherit;">requests<wbr>Cpu</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2588,7 +3044,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>requests<wbr>Memory</span>
+        <span id="requestsmemory_nodejs">
+<a href="#requestsmemory_nodejs" style="color: inherit; text-decoration: inherit;">requests<wbr>Memory</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2597,7 +3055,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>requests<wbr>Storage</span>
+        <span id="requestsstorage_nodejs">
+<a href="#requestsstorage_nodejs" style="color: inherit; text-decoration: inherit;">requests<wbr>Storage</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2606,7 +3066,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>secrets</span>
+        <span id="secrets_nodejs">
+<a href="#secrets_nodejs" style="color: inherit; text-decoration: inherit;">secrets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2615,7 +3077,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>services</span>
+        <span id="services_nodejs">
+<a href="#services_nodejs" style="color: inherit; text-decoration: inherit;">services</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2623,7 +3087,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>services<wbr>Load<wbr>Balancers</span>
+        <span id="servicesloadbalancers_nodejs">
+<a href="#servicesloadbalancers_nodejs" style="color: inherit; text-decoration: inherit;">services<wbr>Load<wbr>Balancers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2632,7 +3098,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>services<wbr>Node<wbr>Ports</span>
+        <span id="servicesnodeports_nodejs">
+<a href="#servicesnodeports_nodejs" style="color: inherit; text-decoration: inherit;">services<wbr>Node<wbr>Ports</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2648,7 +3116,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>config<wbr>Maps</span>
+        <span id="configmaps_python">
+<a href="#configmaps_python" style="color: inherit; text-decoration: inherit;">config<wbr>Maps</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2657,7 +3127,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>limits<wbr>Cpu</span>
+        <span id="limitscpu_python">
+<a href="#limitscpu_python" style="color: inherit; text-decoration: inherit;">limits<wbr>Cpu</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2666,7 +3138,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>limits<wbr>Memory</span>
+        <span id="limitsmemory_python">
+<a href="#limitsmemory_python" style="color: inherit; text-decoration: inherit;">limits<wbr>Memory</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2675,7 +3149,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>persistent<wbr>Volume<wbr>Claims</span>
+        <span id="persistentvolumeclaims_python">
+<a href="#persistentvolumeclaims_python" style="color: inherit; text-decoration: inherit;">persistent<wbr>Volume<wbr>Claims</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2684,7 +3160,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>pods</span>
+        <span id="pods_python">
+<a href="#pods_python" style="color: inherit; text-decoration: inherit;">pods</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2693,7 +3171,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>replication<wbr>Controllers</span>
+        <span id="replicationcontrollers_python">
+<a href="#replicationcontrollers_python" style="color: inherit; text-decoration: inherit;">replication<wbr>Controllers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2702,7 +3182,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>requests<wbr>Cpu</span>
+        <span id="requestscpu_python">
+<a href="#requestscpu_python" style="color: inherit; text-decoration: inherit;">requests<wbr>Cpu</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2711,7 +3193,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>requests<wbr>Memory</span>
+        <span id="requestsmemory_python">
+<a href="#requestsmemory_python" style="color: inherit; text-decoration: inherit;">requests<wbr>Memory</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2720,7 +3204,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>requests<wbr>Storage</span>
+        <span id="requestsstorage_python">
+<a href="#requestsstorage_python" style="color: inherit; text-decoration: inherit;">requests<wbr>Storage</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2729,7 +3215,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>secrets</span>
+        <span id="secrets_python">
+<a href="#secrets_python" style="color: inherit; text-decoration: inherit;">secrets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2738,7 +3226,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>services</span>
+        <span id="services_python">
+<a href="#services_python" style="color: inherit; text-decoration: inherit;">services</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2746,7 +3236,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>services<wbr>Load<wbr>Balancers</span>
+        <span id="servicesloadbalancers_python">
+<a href="#servicesloadbalancers_python" style="color: inherit; text-decoration: inherit;">services<wbr>Load<wbr>Balancers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2755,7 +3247,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>services<wbr>Node<wbr>Ports</span>
+        <span id="servicesnodeports_python">
+<a href="#servicesnodeports_python" style="color: inherit; text-decoration: inherit;">services<wbr>Node<wbr>Ports</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

@@ -20,7 +20,23 @@ Use this data source to retrieve information about a Rancher v2 project role tem
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Rancher2 = Pulumi.Rancher2;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var foo = Output.Create(Rancher2.GetProjectRoleTemplateBinding.InvokeAsync(new Rancher2.GetProjectRoleTemplateBindingArgs
+        {
+            Name = "foo",
+            ProjectId = "foo_id",
+        }));
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -92,7 +108,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -101,7 +119,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Project<wbr>Id</span>
+        <span id="projectid_csharp">
+<a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -110,7 +130,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Role<wbr>Template<wbr>Id</span>
+        <span id="roletemplateid_csharp">
+<a href="#roletemplateid_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Template<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -126,7 +148,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -135,7 +159,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Project<wbr>Id</span>
+        <span id="projectid_go">
+<a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -144,7 +170,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Role<wbr>Template<wbr>Id</span>
+        <span id="roletemplateid_go">
+<a href="#roletemplateid_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Template<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -160,7 +188,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -169,7 +199,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>project<wbr>Id</span>
+        <span id="projectid_nodejs">
+<a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -178,7 +210,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>role<wbr>Template<wbr>Id</span>
+        <span id="roletemplateid_nodejs">
+<a href="#roletemplateid_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Template<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -194,7 +228,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -203,7 +239,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>project_<wbr>id</span>
+        <span id="project_id_python">
+<a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -212,7 +250,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>role_<wbr>template_<wbr>id</span>
+        <span id="role_template_id_python">
+<a href="#role_template_id_python" style="color: inherit; text-decoration: inherit;">role_<wbr>template_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -241,7 +281,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Annotations</span>
+        <span id="annotations_csharp">
+<a href="#annotations_csharp" style="color: inherit; text-decoration: inherit;">Annotations</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -250,7 +292,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Group<wbr>Id</span>
+        <span id="groupid_csharp">
+<a href="#groupid_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -259,7 +303,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Group<wbr>Principal<wbr>Id</span>
+        <span id="groupprincipalid_csharp">
+<a href="#groupprincipalid_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Principal<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -268,7 +314,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -277,7 +325,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Labels</span>
+        <span id="labels_csharp">
+<a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -286,7 +336,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -294,7 +346,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Project<wbr>Id</span>
+        <span id="projectid_csharp">
+<a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -302,7 +356,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Role<wbr>Template<wbr>Id</span>
+        <span id="roletemplateid_csharp">
+<a href="#roletemplateid_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Template<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -310,7 +366,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>User<wbr>Id</span>
+        <span id="userid_csharp">
+<a href="#userid_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -319,7 +377,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>User<wbr>Principal<wbr>Id</span>
+        <span id="userprincipalid_csharp">
+<a href="#userprincipalid_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Principal<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -335,7 +395,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Annotations</span>
+        <span id="annotations_go">
+<a href="#annotations_go" style="color: inherit; text-decoration: inherit;">Annotations</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -344,7 +406,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Group<wbr>Id</span>
+        <span id="groupid_go">
+<a href="#groupid_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -353,7 +417,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Group<wbr>Principal<wbr>Id</span>
+        <span id="groupprincipalid_go">
+<a href="#groupprincipalid_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Principal<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -362,7 +428,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -371,7 +439,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Labels</span>
+        <span id="labels_go">
+<a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -380,7 +450,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -388,7 +460,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Project<wbr>Id</span>
+        <span id="projectid_go">
+<a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -396,7 +470,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Role<wbr>Template<wbr>Id</span>
+        <span id="roletemplateid_go">
+<a href="#roletemplateid_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Template<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -404,7 +480,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>User<wbr>Id</span>
+        <span id="userid_go">
+<a href="#userid_go" style="color: inherit; text-decoration: inherit;">User<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -413,7 +491,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>User<wbr>Principal<wbr>Id</span>
+        <span id="userprincipalid_go">
+<a href="#userprincipalid_go" style="color: inherit; text-decoration: inherit;">User<wbr>Principal<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -429,7 +509,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>annotations</span>
+        <span id="annotations_nodejs">
+<a href="#annotations_nodejs" style="color: inherit; text-decoration: inherit;">annotations</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -438,7 +520,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>group<wbr>Id</span>
+        <span id="groupid_nodejs">
+<a href="#groupid_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -447,7 +531,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>group<wbr>Principal<wbr>Id</span>
+        <span id="groupprincipalid_nodejs">
+<a href="#groupprincipalid_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Principal<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -456,7 +542,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -465,7 +553,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>labels</span>
+        <span id="labels_nodejs">
+<a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -474,7 +564,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -482,7 +574,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>project<wbr>Id</span>
+        <span id="projectid_nodejs">
+<a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -490,7 +584,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>role<wbr>Template<wbr>Id</span>
+        <span id="roletemplateid_nodejs">
+<a href="#roletemplateid_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Template<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -498,7 +594,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>user<wbr>Id</span>
+        <span id="userid_nodejs">
+<a href="#userid_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -507,7 +605,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>user<wbr>Principal<wbr>Id</span>
+        <span id="userprincipalid_nodejs">
+<a href="#userprincipalid_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Principal<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -523,7 +623,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>annotations</span>
+        <span id="annotations_python">
+<a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -532,7 +634,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>group_<wbr>id</span>
+        <span id="group_id_python">
+<a href="#group_id_python" style="color: inherit; text-decoration: inherit;">group_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -541,7 +645,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>group_<wbr>principal_<wbr>id</span>
+        <span id="group_principal_id_python">
+<a href="#group_principal_id_python" style="color: inherit; text-decoration: inherit;">group_<wbr>principal_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -550,7 +656,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -559,7 +667,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>labels</span>
+        <span id="labels_python">
+<a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -568,7 +678,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -576,7 +688,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>project_<wbr>id</span>
+        <span id="project_id_python">
+<a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -584,7 +698,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>role_<wbr>template_<wbr>id</span>
+        <span id="role_template_id_python">
+<a href="#role_template_id_python" style="color: inherit; text-decoration: inherit;">role_<wbr>template_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -592,7 +708,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>user_<wbr>id</span>
+        <span id="user_id_python">
+<a href="#user_id_python" style="color: inherit; text-decoration: inherit;">user_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -601,7 +719,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>user_<wbr>principal_<wbr>id</span>
+        <span id="user_principal_id_python">
+<a href="#user_principal_id_python" style="color: inherit; text-decoration: inherit;">user_<wbr>principal_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

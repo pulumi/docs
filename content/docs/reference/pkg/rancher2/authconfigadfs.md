@@ -22,7 +22,30 @@ In addition to the built-in local auth, only one external auth config provider c
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Rancher2 = Pulumi.Rancher2;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        // Create a new rancher2 Auth Config ADFS
+        var adfs = new Rancher2.AuthConfigAdfs("adfs", new Rancher2.AuthConfigAdfsArgs
+        {
+            DisplayNameField = "<DISPLAY_NAME_FIELD>",
+            GroupsField = "<GROUPS_FIELD>",
+            IdpMetadataContent = "<IDP_METADATA_CONTENT>",
+            RancherApiHost = "https://<RANCHER_API_HOST>",
+            SpCert = "<SP_CERT>",
+            SpKey = "<SP_KEY>",
+            UidField = "<UID_FIELD>",
+            UserNameField = "<USER_NAME_FIELD>",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -252,7 +275,9 @@ The AuthConfigAdfs resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-required"
             title="Required">
-        <span>Display<wbr>Name<wbr>Field</span>
+        <span id="displaynamefield_csharp">
+<a href="#displaynamefield_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name<wbr>Field</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -261,7 +286,9 @@ The AuthConfigAdfs resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-required"
             title="Required">
-        <span>Groups<wbr>Field</span>
+        <span id="groupsfield_csharp">
+<a href="#groupsfield_csharp" style="color: inherit; text-decoration: inherit;">Groups<wbr>Field</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -270,7 +297,9 @@ The AuthConfigAdfs resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-required"
             title="Required">
-        <span>Idp<wbr>Metadata<wbr>Content</span>
+        <span id="idpmetadatacontent_csharp">
+<a href="#idpmetadatacontent_csharp" style="color: inherit; text-decoration: inherit;">Idp<wbr>Metadata<wbr>Content</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -279,7 +308,9 @@ The AuthConfigAdfs resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-required"
             title="Required">
-        <span>Rancher<wbr>Api<wbr>Host</span>
+        <span id="rancherapihost_csharp">
+<a href="#rancherapihost_csharp" style="color: inherit; text-decoration: inherit;">Rancher<wbr>Api<wbr>Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -288,7 +319,9 @@ The AuthConfigAdfs resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-required"
             title="Required">
-        <span>Sp<wbr>Cert</span>
+        <span id="spcert_csharp">
+<a href="#spcert_csharp" style="color: inherit; text-decoration: inherit;">Sp<wbr>Cert</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -297,7 +330,9 @@ The AuthConfigAdfs resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-required"
             title="Required">
-        <span>Sp<wbr>Key</span>
+        <span id="spkey_csharp">
+<a href="#spkey_csharp" style="color: inherit; text-decoration: inherit;">Sp<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -306,7 +341,9 @@ The AuthConfigAdfs resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-required"
             title="Required">
-        <span>Uid<wbr>Field</span>
+        <span id="uidfield_csharp">
+<a href="#uidfield_csharp" style="color: inherit; text-decoration: inherit;">Uid<wbr>Field</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -315,7 +352,9 @@ The AuthConfigAdfs resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-required"
             title="Required">
-        <span>User<wbr>Name<wbr>Field</span>
+        <span id="usernamefield_csharp">
+<a href="#usernamefield_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Name<wbr>Field</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -324,7 +363,9 @@ The AuthConfigAdfs resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>Access<wbr>Mode</span>
+        <span id="accessmode_csharp">
+<a href="#accessmode_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -333,7 +374,9 @@ The AuthConfigAdfs resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>Allowed<wbr>Principal<wbr>Ids</span>
+        <span id="allowedprincipalids_csharp">
+<a href="#allowedprincipalids_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Principal<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -342,7 +385,9 @@ The AuthConfigAdfs resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>Annotations</span>
+        <span id="annotations_csharp">
+<a href="#annotations_csharp" style="color: inherit; text-decoration: inherit;">Annotations</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -351,7 +396,9 @@ The AuthConfigAdfs resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enabled</span>
+        <span id="enabled_csharp">
+<a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -360,7 +407,9 @@ The AuthConfigAdfs resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>Labels</span>
+        <span id="labels_csharp">
+<a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -376,7 +425,9 @@ The AuthConfigAdfs resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-required"
             title="Required">
-        <span>Display<wbr>Name<wbr>Field</span>
+        <span id="displaynamefield_go">
+<a href="#displaynamefield_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name<wbr>Field</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -385,7 +436,9 @@ The AuthConfigAdfs resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-required"
             title="Required">
-        <span>Groups<wbr>Field</span>
+        <span id="groupsfield_go">
+<a href="#groupsfield_go" style="color: inherit; text-decoration: inherit;">Groups<wbr>Field</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -394,7 +447,9 @@ The AuthConfigAdfs resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-required"
             title="Required">
-        <span>Idp<wbr>Metadata<wbr>Content</span>
+        <span id="idpmetadatacontent_go">
+<a href="#idpmetadatacontent_go" style="color: inherit; text-decoration: inherit;">Idp<wbr>Metadata<wbr>Content</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -403,7 +458,9 @@ The AuthConfigAdfs resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-required"
             title="Required">
-        <span>Rancher<wbr>Api<wbr>Host</span>
+        <span id="rancherapihost_go">
+<a href="#rancherapihost_go" style="color: inherit; text-decoration: inherit;">Rancher<wbr>Api<wbr>Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -412,7 +469,9 @@ The AuthConfigAdfs resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-required"
             title="Required">
-        <span>Sp<wbr>Cert</span>
+        <span id="spcert_go">
+<a href="#spcert_go" style="color: inherit; text-decoration: inherit;">Sp<wbr>Cert</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -421,7 +480,9 @@ The AuthConfigAdfs resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-required"
             title="Required">
-        <span>Sp<wbr>Key</span>
+        <span id="spkey_go">
+<a href="#spkey_go" style="color: inherit; text-decoration: inherit;">Sp<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -430,7 +491,9 @@ The AuthConfigAdfs resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-required"
             title="Required">
-        <span>Uid<wbr>Field</span>
+        <span id="uidfield_go">
+<a href="#uidfield_go" style="color: inherit; text-decoration: inherit;">Uid<wbr>Field</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -439,7 +502,9 @@ The AuthConfigAdfs resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-required"
             title="Required">
-        <span>User<wbr>Name<wbr>Field</span>
+        <span id="usernamefield_go">
+<a href="#usernamefield_go" style="color: inherit; text-decoration: inherit;">User<wbr>Name<wbr>Field</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -448,7 +513,9 @@ The AuthConfigAdfs resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>Access<wbr>Mode</span>
+        <span id="accessmode_go">
+<a href="#accessmode_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -457,7 +524,9 @@ The AuthConfigAdfs resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>Allowed<wbr>Principal<wbr>Ids</span>
+        <span id="allowedprincipalids_go">
+<a href="#allowedprincipalids_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Principal<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -466,7 +535,9 @@ The AuthConfigAdfs resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>Annotations</span>
+        <span id="annotations_go">
+<a href="#annotations_go" style="color: inherit; text-decoration: inherit;">Annotations</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -475,7 +546,9 @@ The AuthConfigAdfs resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enabled</span>
+        <span id="enabled_go">
+<a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -484,7 +557,9 @@ The AuthConfigAdfs resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>Labels</span>
+        <span id="labels_go">
+<a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -500,7 +575,9 @@ The AuthConfigAdfs resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-required"
             title="Required">
-        <span>display<wbr>Name<wbr>Field</span>
+        <span id="displaynamefield_nodejs">
+<a href="#displaynamefield_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name<wbr>Field</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -509,7 +586,9 @@ The AuthConfigAdfs resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-required"
             title="Required">
-        <span>groups<wbr>Field</span>
+        <span id="groupsfield_nodejs">
+<a href="#groupsfield_nodejs" style="color: inherit; text-decoration: inherit;">groups<wbr>Field</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -518,7 +597,9 @@ The AuthConfigAdfs resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-required"
             title="Required">
-        <span>idp<wbr>Metadata<wbr>Content</span>
+        <span id="idpmetadatacontent_nodejs">
+<a href="#idpmetadatacontent_nodejs" style="color: inherit; text-decoration: inherit;">idp<wbr>Metadata<wbr>Content</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -527,7 +608,9 @@ The AuthConfigAdfs resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-required"
             title="Required">
-        <span>rancher<wbr>Api<wbr>Host</span>
+        <span id="rancherapihost_nodejs">
+<a href="#rancherapihost_nodejs" style="color: inherit; text-decoration: inherit;">rancher<wbr>Api<wbr>Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -536,7 +619,9 @@ The AuthConfigAdfs resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-required"
             title="Required">
-        <span>sp<wbr>Cert</span>
+        <span id="spcert_nodejs">
+<a href="#spcert_nodejs" style="color: inherit; text-decoration: inherit;">sp<wbr>Cert</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -545,7 +630,9 @@ The AuthConfigAdfs resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-required"
             title="Required">
-        <span>sp<wbr>Key</span>
+        <span id="spkey_nodejs">
+<a href="#spkey_nodejs" style="color: inherit; text-decoration: inherit;">sp<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -554,7 +641,9 @@ The AuthConfigAdfs resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-required"
             title="Required">
-        <span>uid<wbr>Field</span>
+        <span id="uidfield_nodejs">
+<a href="#uidfield_nodejs" style="color: inherit; text-decoration: inherit;">uid<wbr>Field</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -563,7 +652,9 @@ The AuthConfigAdfs resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-required"
             title="Required">
-        <span>user<wbr>Name<wbr>Field</span>
+        <span id="usernamefield_nodejs">
+<a href="#usernamefield_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Name<wbr>Field</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -572,7 +663,9 @@ The AuthConfigAdfs resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>access<wbr>Mode</span>
+        <span id="accessmode_nodejs">
+<a href="#accessmode_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -581,7 +674,9 @@ The AuthConfigAdfs resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>allowed<wbr>Principal<wbr>Ids</span>
+        <span id="allowedprincipalids_nodejs">
+<a href="#allowedprincipalids_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Principal<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -590,7 +685,9 @@ The AuthConfigAdfs resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>annotations</span>
+        <span id="annotations_nodejs">
+<a href="#annotations_nodejs" style="color: inherit; text-decoration: inherit;">annotations</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -599,7 +696,9 @@ The AuthConfigAdfs resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>enabled</span>
+        <span id="enabled_nodejs">
+<a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -608,7 +707,9 @@ The AuthConfigAdfs resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>labels</span>
+        <span id="labels_nodejs">
+<a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -624,7 +725,9 @@ The AuthConfigAdfs resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-required"
             title="Required">
-        <span>display_<wbr>name_<wbr>field</span>
+        <span id="display_name_field_python">
+<a href="#display_name_field_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name_<wbr>field</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -633,7 +736,9 @@ The AuthConfigAdfs resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-required"
             title="Required">
-        <span>groups_<wbr>field</span>
+        <span id="groups_field_python">
+<a href="#groups_field_python" style="color: inherit; text-decoration: inherit;">groups_<wbr>field</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -642,7 +747,9 @@ The AuthConfigAdfs resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-required"
             title="Required">
-        <span>idp_<wbr>metadata_<wbr>content</span>
+        <span id="idp_metadata_content_python">
+<a href="#idp_metadata_content_python" style="color: inherit; text-decoration: inherit;">idp_<wbr>metadata_<wbr>content</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -651,7 +758,9 @@ The AuthConfigAdfs resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-required"
             title="Required">
-        <span>rancher_<wbr>api_<wbr>host</span>
+        <span id="rancher_api_host_python">
+<a href="#rancher_api_host_python" style="color: inherit; text-decoration: inherit;">rancher_<wbr>api_<wbr>host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -660,7 +769,9 @@ The AuthConfigAdfs resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-required"
             title="Required">
-        <span>sp_<wbr>cert</span>
+        <span id="sp_cert_python">
+<a href="#sp_cert_python" style="color: inherit; text-decoration: inherit;">sp_<wbr>cert</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -669,7 +780,9 @@ The AuthConfigAdfs resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-required"
             title="Required">
-        <span>sp_<wbr>key</span>
+        <span id="sp_key_python">
+<a href="#sp_key_python" style="color: inherit; text-decoration: inherit;">sp_<wbr>key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -678,7 +791,9 @@ The AuthConfigAdfs resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-required"
             title="Required">
-        <span>uid_<wbr>field</span>
+        <span id="uid_field_python">
+<a href="#uid_field_python" style="color: inherit; text-decoration: inherit;">uid_<wbr>field</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -687,7 +802,9 @@ The AuthConfigAdfs resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-required"
             title="Required">
-        <span>user_<wbr>name_<wbr>field</span>
+        <span id="user_name_field_python">
+<a href="#user_name_field_python" style="color: inherit; text-decoration: inherit;">user_<wbr>name_<wbr>field</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -696,7 +813,9 @@ The AuthConfigAdfs resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>access_<wbr>mode</span>
+        <span id="access_mode_python">
+<a href="#access_mode_python" style="color: inherit; text-decoration: inherit;">access_<wbr>mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -705,7 +824,9 @@ The AuthConfigAdfs resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>allowed_<wbr>principal_<wbr>ids</span>
+        <span id="allowed_principal_ids_python">
+<a href="#allowed_principal_ids_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>principal_<wbr>ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -714,7 +835,9 @@ The AuthConfigAdfs resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>annotations</span>
+        <span id="annotations_python">
+<a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -723,7 +846,9 @@ The AuthConfigAdfs resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>enabled</span>
+        <span id="enabled_python">
+<a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -732,7 +857,9 @@ The AuthConfigAdfs resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>labels</span>
+        <span id="labels_python">
+<a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -759,7 +886,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -767,7 +896,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -776,7 +907,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Type</span>
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -792,7 +925,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -800,7 +935,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -809,7 +946,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Type</span>
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -825,7 +964,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -833,7 +974,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -842,7 +985,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>type</span>
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -858,7 +1003,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -866,7 +1013,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -875,7 +1024,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>type</span>
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1017,7 +1168,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Access<wbr>Mode</span>
+        <span id="state_accessmode_csharp">
+<a href="#state_accessmode_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1026,7 +1179,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Allowed<wbr>Principal<wbr>Ids</span>
+        <span id="state_allowedprincipalids_csharp">
+<a href="#state_allowedprincipalids_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Principal<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1035,7 +1190,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Annotations</span>
+        <span id="state_annotations_csharp">
+<a href="#state_annotations_csharp" style="color: inherit; text-decoration: inherit;">Annotations</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -1044,7 +1201,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Display<wbr>Name<wbr>Field</span>
+        <span id="state_displaynamefield_csharp">
+<a href="#state_displaynamefield_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name<wbr>Field</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1053,7 +1212,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enabled</span>
+        <span id="state_enabled_csharp">
+<a href="#state_enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1062,7 +1223,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Groups<wbr>Field</span>
+        <span id="state_groupsfield_csharp">
+<a href="#state_groupsfield_csharp" style="color: inherit; text-decoration: inherit;">Groups<wbr>Field</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1071,7 +1234,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Idp<wbr>Metadata<wbr>Content</span>
+        <span id="state_idpmetadatacontent_csharp">
+<a href="#state_idpmetadatacontent_csharp" style="color: inherit; text-decoration: inherit;">Idp<wbr>Metadata<wbr>Content</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1080,7 +1245,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Labels</span>
+        <span id="state_labels_csharp">
+<a href="#state_labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -1089,7 +1256,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1098,7 +1267,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Rancher<wbr>Api<wbr>Host</span>
+        <span id="state_rancherapihost_csharp">
+<a href="#state_rancherapihost_csharp" style="color: inherit; text-decoration: inherit;">Rancher<wbr>Api<wbr>Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1107,7 +1278,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Sp<wbr>Cert</span>
+        <span id="state_spcert_csharp">
+<a href="#state_spcert_csharp" style="color: inherit; text-decoration: inherit;">Sp<wbr>Cert</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1116,7 +1289,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Sp<wbr>Key</span>
+        <span id="state_spkey_csharp">
+<a href="#state_spkey_csharp" style="color: inherit; text-decoration: inherit;">Sp<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1125,7 +1300,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Type</span>
+        <span id="state_type_csharp">
+<a href="#state_type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1134,7 +1311,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Uid<wbr>Field</span>
+        <span id="state_uidfield_csharp">
+<a href="#state_uidfield_csharp" style="color: inherit; text-decoration: inherit;">Uid<wbr>Field</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1143,7 +1322,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>User<wbr>Name<wbr>Field</span>
+        <span id="state_usernamefield_csharp">
+<a href="#state_usernamefield_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Name<wbr>Field</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1159,7 +1340,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Access<wbr>Mode</span>
+        <span id="state_accessmode_go">
+<a href="#state_accessmode_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1168,7 +1351,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Allowed<wbr>Principal<wbr>Ids</span>
+        <span id="state_allowedprincipalids_go">
+<a href="#state_allowedprincipalids_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Principal<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1177,7 +1362,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Annotations</span>
+        <span id="state_annotations_go">
+<a href="#state_annotations_go" style="color: inherit; text-decoration: inherit;">Annotations</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -1186,7 +1373,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Display<wbr>Name<wbr>Field</span>
+        <span id="state_displaynamefield_go">
+<a href="#state_displaynamefield_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name<wbr>Field</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1195,7 +1384,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enabled</span>
+        <span id="state_enabled_go">
+<a href="#state_enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1204,7 +1395,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Groups<wbr>Field</span>
+        <span id="state_groupsfield_go">
+<a href="#state_groupsfield_go" style="color: inherit; text-decoration: inherit;">Groups<wbr>Field</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1213,7 +1406,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Idp<wbr>Metadata<wbr>Content</span>
+        <span id="state_idpmetadatacontent_go">
+<a href="#state_idpmetadatacontent_go" style="color: inherit; text-decoration: inherit;">Idp<wbr>Metadata<wbr>Content</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1222,7 +1417,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Labels</span>
+        <span id="state_labels_go">
+<a href="#state_labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -1231,7 +1428,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1240,7 +1439,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Rancher<wbr>Api<wbr>Host</span>
+        <span id="state_rancherapihost_go">
+<a href="#state_rancherapihost_go" style="color: inherit; text-decoration: inherit;">Rancher<wbr>Api<wbr>Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1249,7 +1450,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Sp<wbr>Cert</span>
+        <span id="state_spcert_go">
+<a href="#state_spcert_go" style="color: inherit; text-decoration: inherit;">Sp<wbr>Cert</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1258,7 +1461,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Sp<wbr>Key</span>
+        <span id="state_spkey_go">
+<a href="#state_spkey_go" style="color: inherit; text-decoration: inherit;">Sp<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1267,7 +1472,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Type</span>
+        <span id="state_type_go">
+<a href="#state_type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1276,7 +1483,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Uid<wbr>Field</span>
+        <span id="state_uidfield_go">
+<a href="#state_uidfield_go" style="color: inherit; text-decoration: inherit;">Uid<wbr>Field</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1285,7 +1494,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>User<wbr>Name<wbr>Field</span>
+        <span id="state_usernamefield_go">
+<a href="#state_usernamefield_go" style="color: inherit; text-decoration: inherit;">User<wbr>Name<wbr>Field</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1301,7 +1512,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>access<wbr>Mode</span>
+        <span id="state_accessmode_nodejs">
+<a href="#state_accessmode_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1310,7 +1523,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>allowed<wbr>Principal<wbr>Ids</span>
+        <span id="state_allowedprincipalids_nodejs">
+<a href="#state_allowedprincipalids_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Principal<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1319,7 +1534,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>annotations</span>
+        <span id="state_annotations_nodejs">
+<a href="#state_annotations_nodejs" style="color: inherit; text-decoration: inherit;">annotations</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -1328,7 +1545,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>display<wbr>Name<wbr>Field</span>
+        <span id="state_displaynamefield_nodejs">
+<a href="#state_displaynamefield_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name<wbr>Field</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1337,7 +1556,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>enabled</span>
+        <span id="state_enabled_nodejs">
+<a href="#state_enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1346,7 +1567,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>groups<wbr>Field</span>
+        <span id="state_groupsfield_nodejs">
+<a href="#state_groupsfield_nodejs" style="color: inherit; text-decoration: inherit;">groups<wbr>Field</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1355,7 +1578,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>idp<wbr>Metadata<wbr>Content</span>
+        <span id="state_idpmetadatacontent_nodejs">
+<a href="#state_idpmetadatacontent_nodejs" style="color: inherit; text-decoration: inherit;">idp<wbr>Metadata<wbr>Content</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1364,7 +1589,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>labels</span>
+        <span id="state_labels_nodejs">
+<a href="#state_labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -1373,7 +1600,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1382,7 +1611,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>rancher<wbr>Api<wbr>Host</span>
+        <span id="state_rancherapihost_nodejs">
+<a href="#state_rancherapihost_nodejs" style="color: inherit; text-decoration: inherit;">rancher<wbr>Api<wbr>Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1391,7 +1622,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>sp<wbr>Cert</span>
+        <span id="state_spcert_nodejs">
+<a href="#state_spcert_nodejs" style="color: inherit; text-decoration: inherit;">sp<wbr>Cert</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1400,7 +1633,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>sp<wbr>Key</span>
+        <span id="state_spkey_nodejs">
+<a href="#state_spkey_nodejs" style="color: inherit; text-decoration: inherit;">sp<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1409,7 +1644,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>type</span>
+        <span id="state_type_nodejs">
+<a href="#state_type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1418,7 +1655,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>uid<wbr>Field</span>
+        <span id="state_uidfield_nodejs">
+<a href="#state_uidfield_nodejs" style="color: inherit; text-decoration: inherit;">uid<wbr>Field</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1427,7 +1666,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>user<wbr>Name<wbr>Field</span>
+        <span id="state_usernamefield_nodejs">
+<a href="#state_usernamefield_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Name<wbr>Field</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1443,7 +1684,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>access_<wbr>mode</span>
+        <span id="state_access_mode_python">
+<a href="#state_access_mode_python" style="color: inherit; text-decoration: inherit;">access_<wbr>mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1452,7 +1695,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>allowed_<wbr>principal_<wbr>ids</span>
+        <span id="state_allowed_principal_ids_python">
+<a href="#state_allowed_principal_ids_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>principal_<wbr>ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1461,7 +1706,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>annotations</span>
+        <span id="state_annotations_python">
+<a href="#state_annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -1470,7 +1717,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>display_<wbr>name_<wbr>field</span>
+        <span id="state_display_name_field_python">
+<a href="#state_display_name_field_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name_<wbr>field</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1479,7 +1728,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>enabled</span>
+        <span id="state_enabled_python">
+<a href="#state_enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1488,7 +1739,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>groups_<wbr>field</span>
+        <span id="state_groups_field_python">
+<a href="#state_groups_field_python" style="color: inherit; text-decoration: inherit;">groups_<wbr>field</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1497,7 +1750,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>idp_<wbr>metadata_<wbr>content</span>
+        <span id="state_idp_metadata_content_python">
+<a href="#state_idp_metadata_content_python" style="color: inherit; text-decoration: inherit;">idp_<wbr>metadata_<wbr>content</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1506,7 +1761,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>labels</span>
+        <span id="state_labels_python">
+<a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -1515,7 +1772,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1524,7 +1783,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>rancher_<wbr>api_<wbr>host</span>
+        <span id="state_rancher_api_host_python">
+<a href="#state_rancher_api_host_python" style="color: inherit; text-decoration: inherit;">rancher_<wbr>api_<wbr>host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1533,7 +1794,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>sp_<wbr>cert</span>
+        <span id="state_sp_cert_python">
+<a href="#state_sp_cert_python" style="color: inherit; text-decoration: inherit;">sp_<wbr>cert</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1542,7 +1805,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>sp_<wbr>key</span>
+        <span id="state_sp_key_python">
+<a href="#state_sp_key_python" style="color: inherit; text-decoration: inherit;">sp_<wbr>key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1551,7 +1816,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>type</span>
+        <span id="state_type_python">
+<a href="#state_type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1560,7 +1827,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>uid_<wbr>field</span>
+        <span id="state_uid_field_python">
+<a href="#state_uid_field_python" style="color: inherit; text-decoration: inherit;">uid_<wbr>field</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1569,7 +1838,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>user_<wbr>name_<wbr>field</span>
+        <span id="state_user_name_field_python">
+<a href="#state_user_name_field_python" style="color: inherit; text-decoration: inherit;">user_<wbr>name_<wbr>field</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
