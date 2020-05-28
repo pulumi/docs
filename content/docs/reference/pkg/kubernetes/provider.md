@@ -196,7 +196,9 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cluster</span>
+        <span id="cluster_csharp">
+<a href="#cluster_csharp" style="color: inherit; text-decoration: inherit;">Cluster</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -204,7 +206,9 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Context</span>
+        <span id="context_csharp">
+<a href="#context_csharp" style="color: inherit; text-decoration: inherit;">Context</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -212,7 +216,9 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enable<wbr>Dry<wbr>Run</span>
+        <span id="enabledryrun_csharp">
+<a href="#enabledryrun_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Dry<wbr>Run</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -225,7 +231,9 @@ This config can be specified in the following ways, using this precedence:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Kube<wbr>Config</span>
+        <span id="kubeconfig_csharp">
+<a href="#kubeconfig_csharp" style="color: inherit; text-decoration: inherit;">Kube<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -233,7 +241,9 @@ This config can be specified in the following ways, using this precedence:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Namespace</span>
+        <span id="namespace_csharp">
+<a href="#namespace_csharp" style="color: inherit; text-decoration: inherit;">Namespace</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -246,7 +256,9 @@ A namespace can be specified in multiple places, and the precedence is as follow
 
     <dt class="property-optional"
             title="Optional">
-        <span>Render<wbr>Yaml<wbr>To<wbr>Directory</span>
+        <span id="renderyamltodirectory_csharp">
+<a href="#renderyamltodirectory_csharp" style="color: inherit; text-decoration: inherit;">Render<wbr>Yaml<wbr>To<wbr>Directory</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -261,7 +273,9 @@ used in these resources will be rendered in plaintext to the resulting YAML.{{% 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Suppress<wbr>Deprecation<wbr>Warnings</span>
+        <span id="suppressdeprecationwarnings_csharp">
+<a href="#suppressdeprecationwarnings_csharp" style="color: inherit; text-decoration: inherit;">Suppress<wbr>Deprecation<wbr>Warnings</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -280,7 +294,9 @@ This config can be specified in the following ways, using this precedence:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cluster</span>
+        <span id="cluster_go">
+<a href="#cluster_go" style="color: inherit; text-decoration: inherit;">Cluster</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -288,7 +304,9 @@ This config can be specified in the following ways, using this precedence:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Context</span>
+        <span id="context_go">
+<a href="#context_go" style="color: inherit; text-decoration: inherit;">Context</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -296,7 +314,9 @@ This config can be specified in the following ways, using this precedence:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enable<wbr>Dry<wbr>Run</span>
+        <span id="enabledryrun_go">
+<a href="#enabledryrun_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Dry<wbr>Run</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -309,7 +329,9 @@ This config can be specified in the following ways, using this precedence:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Kubeconfig</span>
+        <span id="kubeconfig_go">
+<a href="#kubeconfig_go" style="color: inherit; text-decoration: inherit;">Kubeconfig</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -317,7 +339,9 @@ This config can be specified in the following ways, using this precedence:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Namespace</span>
+        <span id="namespace_go">
+<a href="#namespace_go" style="color: inherit; text-decoration: inherit;">Namespace</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -330,7 +354,9 @@ A namespace can be specified in multiple places, and the precedence is as follow
 
     <dt class="property-optional"
             title="Optional">
-        <span>Render<wbr>Yaml<wbr>To<wbr>Directory</span>
+        <span id="renderyamltodirectory_go">
+<a href="#renderyamltodirectory_go" style="color: inherit; text-decoration: inherit;">Render<wbr>Yaml<wbr>To<wbr>Directory</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -345,7 +371,9 @@ used in these resources will be rendered in plaintext to the resulting YAML.{{% 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Suppress<wbr>Deprecation<wbr>Warnings</span>
+        <span id="suppressdeprecationwarnings_go">
+<a href="#suppressdeprecationwarnings_go" style="color: inherit; text-decoration: inherit;">Suppress<wbr>Deprecation<wbr>Warnings</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -364,7 +392,9 @@ This config can be specified in the following ways, using this precedence:
 
     <dt class="property-optional"
             title="Optional">
-        <span>cluster</span>
+        <span id="cluster_nodejs">
+<a href="#cluster_nodejs" style="color: inherit; text-decoration: inherit;">cluster</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -372,7 +402,9 @@ This config can be specified in the following ways, using this precedence:
 
     <dt class="property-optional"
             title="Optional">
-        <span>context</span>
+        <span id="context_nodejs">
+<a href="#context_nodejs" style="color: inherit; text-decoration: inherit;">context</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -380,7 +412,9 @@ This config can be specified in the following ways, using this precedence:
 
     <dt class="property-optional"
             title="Optional">
-        <span>enable<wbr>Dry<wbr>Run</span>
+        <span id="enabledryrun_nodejs">
+<a href="#enabledryrun_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Dry<wbr>Run</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -393,7 +427,9 @@ This config can be specified in the following ways, using this precedence:
 
     <dt class="property-optional"
             title="Optional">
-        <span>kubeconfig</span>
+        <span id="kubeconfig_nodejs">
+<a href="#kubeconfig_nodejs" style="color: inherit; text-decoration: inherit;">kubeconfig</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -401,7 +437,9 @@ This config can be specified in the following ways, using this precedence:
 
     <dt class="property-optional"
             title="Optional">
-        <span>namespace</span>
+        <span id="namespace_nodejs">
+<a href="#namespace_nodejs" style="color: inherit; text-decoration: inherit;">namespace</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -414,7 +452,9 @@ A namespace can be specified in multiple places, and the precedence is as follow
 
     <dt class="property-optional"
             title="Optional">
-        <span>render<wbr>Yaml<wbr>To<wbr>Directory</span>
+        <span id="renderyamltodirectory_nodejs">
+<a href="#renderyamltodirectory_nodejs" style="color: inherit; text-decoration: inherit;">render<wbr>Yaml<wbr>To<wbr>Directory</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -429,7 +469,9 @@ used in these resources will be rendered in plaintext to the resulting YAML.{{% 
 
     <dt class="property-optional"
             title="Optional">
-        <span>suppress<wbr>Deprecation<wbr>Warnings</span>
+        <span id="suppressdeprecationwarnings_nodejs">
+<a href="#suppressdeprecationwarnings_nodejs" style="color: inherit; text-decoration: inherit;">suppress<wbr>Deprecation<wbr>Warnings</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -448,7 +490,9 @@ This config can be specified in the following ways, using this precedence:
 
     <dt class="property-optional"
             title="Optional">
-        <span>cluster</span>
+        <span id="cluster_python">
+<a href="#cluster_python" style="color: inherit; text-decoration: inherit;">cluster</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -456,7 +500,9 @@ This config can be specified in the following ways, using this precedence:
 
     <dt class="property-optional"
             title="Optional">
-        <span>context</span>
+        <span id="context_python">
+<a href="#context_python" style="color: inherit; text-decoration: inherit;">context</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -464,7 +510,9 @@ This config can be specified in the following ways, using this precedence:
 
     <dt class="property-optional"
             title="Optional">
-        <span>enable_<wbr>dry_<wbr>run</span>
+        <span id="enable_dry_run_python">
+<a href="#enable_dry_run_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>dry_<wbr>run</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -477,7 +525,9 @@ This config can be specified in the following ways, using this precedence:
 
     <dt class="property-optional"
             title="Optional">
-        <span>kubeconfig</span>
+        <span id="kubeconfig_python">
+<a href="#kubeconfig_python" style="color: inherit; text-decoration: inherit;">kubeconfig</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -485,7 +535,9 @@ This config can be specified in the following ways, using this precedence:
 
     <dt class="property-optional"
             title="Optional">
-        <span>namespace</span>
+        <span id="namespace_python">
+<a href="#namespace_python" style="color: inherit; text-decoration: inherit;">namespace</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -498,7 +550,9 @@ A namespace can be specified in multiple places, and the precedence is as follow
 
     <dt class="property-optional"
             title="Optional">
-        <span>render_<wbr>yaml_<wbr>to_<wbr>directory</span>
+        <span id="render_yaml_to_directory_python">
+<a href="#render_yaml_to_directory_python" style="color: inherit; text-decoration: inherit;">render_<wbr>yaml_<wbr>to_<wbr>directory</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -513,7 +567,9 @@ used in these resources will be rendered in plaintext to the resulting YAML.{{% 
 
     <dt class="property-optional"
             title="Optional">
-        <span>suppress_<wbr>deprecation_<wbr>warnings</span>
+        <span id="suppress_deprecation_warnings_python">
+<a href="#suppress_deprecation_warnings_python" style="color: inherit; text-decoration: inherit;">suppress_<wbr>deprecation_<wbr>warnings</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -543,7 +599,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -558,7 +616,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -573,7 +633,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -588,7 +650,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
