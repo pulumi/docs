@@ -41,6 +41,17 @@ import * as pulumi from "@pulumi/pulumi";
 ```python
 import pulumi
 ```
+```csharp
+using Pulumi;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+    }
+
+}
+```
 
 {{% examples %}}
 ## Example Usage
@@ -48,7 +59,57 @@ import pulumi
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using SpotInst = Pulumi.SpotInst;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var elastigoup_aws_beanstalk = new SpotInst.Aws.Beanstalk("elastigoup-aws-beanstalk", new SpotInst.Aws.BeanstalkArgs
+        {
+            BeanstalkEnvironmentId = "e-example",
+            BeanstalkEnvironmentName = "example-env",
+            DeploymentPreferences = new SpotInst.Aws.Inputs.BeanstalkDeploymentPreferencesArgs
+            {
+                AutomaticRoll = true,
+                BatchSizePercentage = 100,
+                GracePeriod = 90,
+                Strategy = 
+                {
+                    
+                    {
+                        { "action", "REPLACE_SERVER" },
+                        { "shouldDrainInstances", true },
+                    },
+                },
+            },
+            DesiredCapacity = 0,
+            InstanceTypesSpots = 
+            {
+                "t2.micro",
+                "t2.medium",
+                "t2.large",
+            },
+            ManagedActions = new SpotInst.Aws.Inputs.BeanstalkManagedActionsArgs
+            {
+                PlatformUpdate = new SpotInst.Aws.Inputs.BeanstalkManagedActionsPlatformUpdateArgs
+                {
+                    PerformAt = "timeWindow",
+                    TimeWindow = "Mon:23:50-Tue:00:20",
+                    UpdateLevel = "minorAndPatch",
+                },
+            },
+            MaxSize = 1,
+            MinSize = 0,
+            Product = "Linux/UNIX",
+            Region = "us-west-2",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -66,7 +127,7 @@ elastigoup_aws_beanstalk = spotinst.aws.Beanstalk("elastigoup-aws-beanstalk",
     deployment_preferences={
         "automaticRoll": True,
         "batchSizePercentage": 100,
-        "gracePeriod": 90,
+        "grace_period": 90,
         "strategy": [{
             "action": "REPLACE_SERVER",
             "shouldDrainInstances": True,
@@ -316,7 +377,9 @@ The Beanstalk resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-required"
             title="Required">
-        <span>Desired<wbr>Capacity</span>
+        <span id="desiredcapacity_csharp">
+<a href="#desiredcapacity_csharp" style="color: inherit; text-decoration: inherit;">Desired<wbr>Capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -325,7 +388,9 @@ The Beanstalk resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-required"
             title="Required">
-        <span>Instance<wbr>Types<wbr>Spots</span>
+        <span id="instancetypesspots_csharp">
+<a href="#instancetypesspots_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Types<wbr>Spots</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -334,7 +399,9 @@ The Beanstalk resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-required"
             title="Required">
-        <span>Max<wbr>Size</span>
+        <span id="maxsize_csharp">
+<a href="#maxsize_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -343,7 +410,9 @@ The Beanstalk resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-required"
             title="Required">
-        <span>Min<wbr>Size</span>
+        <span id="minsize_csharp">
+<a href="#minsize_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -352,7 +421,9 @@ The Beanstalk resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-required"
             title="Required">
-        <span>Product</span>
+        <span id="product_csharp">
+<a href="#product_csharp" style="color: inherit; text-decoration: inherit;">Product</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -362,7 +433,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-required"
             title="Required">
-        <span>Region</span>
+        <span id="region_csharp">
+<a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -371,7 +444,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>Beanstalk<wbr>Environment<wbr>Id</span>
+        <span id="beanstalkenvironmentid_csharp">
+<a href="#beanstalkenvironmentid_csharp" style="color: inherit; text-decoration: inherit;">Beanstalk<wbr>Environment<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -380,7 +455,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>Beanstalk<wbr>Environment<wbr>Name</span>
+        <span id="beanstalkenvironmentname_csharp">
+<a href="#beanstalkenvironmentname_csharp" style="color: inherit; text-decoration: inherit;">Beanstalk<wbr>Environment<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -389,7 +466,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>Deployment<wbr>Preferences</span>
+        <span id="deploymentpreferences_csharp">
+<a href="#deploymentpreferences_csharp" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Preferences</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#beanstalkdeploymentpreferences">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Beanstalk<wbr>Deployment<wbr>Preferences<wbr>Args</a></span>
     </dt>
@@ -398,7 +477,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>Maintenance</span>
+        <span id="maintenance_csharp">
+<a href="#maintenance_csharp" style="color: inherit; text-decoration: inherit;">Maintenance</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -406,7 +487,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>Managed<wbr>Actions</span>
+        <span id="managedactions_csharp">
+<a href="#managedactions_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Actions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#beanstalkmanagedactions">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Beanstalk<wbr>Managed<wbr>Actions<wbr>Args</a></span>
     </dt>
@@ -415,7 +498,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -424,7 +509,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>Scheduled<wbr>Tasks</span>
+        <span id="scheduledtasks_csharp">
+<a href="#scheduledtasks_csharp" style="color: inherit; text-decoration: inherit;">Scheduled<wbr>Tasks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#beanstalkscheduledtask">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Beanstalk<wbr>Scheduled<wbr>Task<wbr>Args&gt;</a></span>
     </dt>
@@ -439,7 +526,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-required"
             title="Required">
-        <span>Desired<wbr>Capacity</span>
+        <span id="desiredcapacity_go">
+<a href="#desiredcapacity_go" style="color: inherit; text-decoration: inherit;">Desired<wbr>Capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -448,7 +537,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-required"
             title="Required">
-        <span>Instance<wbr>Types<wbr>Spots</span>
+        <span id="instancetypesspots_go">
+<a href="#instancetypesspots_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Types<wbr>Spots</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -457,7 +548,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-required"
             title="Required">
-        <span>Max<wbr>Size</span>
+        <span id="maxsize_go">
+<a href="#maxsize_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -466,7 +559,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-required"
             title="Required">
-        <span>Min<wbr>Size</span>
+        <span id="minsize_go">
+<a href="#minsize_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -475,7 +570,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-required"
             title="Required">
-        <span>Product</span>
+        <span id="product_go">
+<a href="#product_go" style="color: inherit; text-decoration: inherit;">Product</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -485,7 +582,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-required"
             title="Required">
-        <span>Region</span>
+        <span id="region_go">
+<a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -494,7 +593,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>Beanstalk<wbr>Environment<wbr>Id</span>
+        <span id="beanstalkenvironmentid_go">
+<a href="#beanstalkenvironmentid_go" style="color: inherit; text-decoration: inherit;">Beanstalk<wbr>Environment<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -503,7 +604,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>Beanstalk<wbr>Environment<wbr>Name</span>
+        <span id="beanstalkenvironmentname_go">
+<a href="#beanstalkenvironmentname_go" style="color: inherit; text-decoration: inherit;">Beanstalk<wbr>Environment<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -512,7 +615,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>Deployment<wbr>Preferences</span>
+        <span id="deploymentpreferences_go">
+<a href="#deploymentpreferences_go" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Preferences</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#beanstalkdeploymentpreferences">Beanstalk<wbr>Deployment<wbr>Preferences</a></span>
     </dt>
@@ -521,7 +626,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>Maintenance</span>
+        <span id="maintenance_go">
+<a href="#maintenance_go" style="color: inherit; text-decoration: inherit;">Maintenance</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -529,7 +636,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>Managed<wbr>Actions</span>
+        <span id="managedactions_go">
+<a href="#managedactions_go" style="color: inherit; text-decoration: inherit;">Managed<wbr>Actions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#beanstalkmanagedactions">Beanstalk<wbr>Managed<wbr>Actions</a></span>
     </dt>
@@ -538,7 +647,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -547,7 +658,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>Scheduled<wbr>Tasks</span>
+        <span id="scheduledtasks_go">
+<a href="#scheduledtasks_go" style="color: inherit; text-decoration: inherit;">Scheduled<wbr>Tasks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#beanstalkscheduledtask">[]Beanstalk<wbr>Scheduled<wbr>Task</a></span>
     </dt>
@@ -562,7 +675,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-required"
             title="Required">
-        <span>desired<wbr>Capacity</span>
+        <span id="desiredcapacity_nodejs">
+<a href="#desiredcapacity_nodejs" style="color: inherit; text-decoration: inherit;">desired<wbr>Capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -571,7 +686,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-required"
             title="Required">
-        <span>instance<wbr>Types<wbr>Spots</span>
+        <span id="instancetypesspots_nodejs">
+<a href="#instancetypesspots_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Types<wbr>Spots</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -580,7 +697,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-required"
             title="Required">
-        <span>max<wbr>Size</span>
+        <span id="maxsize_nodejs">
+<a href="#maxsize_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -589,7 +708,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-required"
             title="Required">
-        <span>min<wbr>Size</span>
+        <span id="minsize_nodejs">
+<a href="#minsize_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -598,7 +719,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-required"
             title="Required">
-        <span>product</span>
+        <span id="product_nodejs">
+<a href="#product_nodejs" style="color: inherit; text-decoration: inherit;">product</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -608,7 +731,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-required"
             title="Required">
-        <span>region</span>
+        <span id="region_nodejs">
+<a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -617,7 +742,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>beanstalk<wbr>Environment<wbr>Id</span>
+        <span id="beanstalkenvironmentid_nodejs">
+<a href="#beanstalkenvironmentid_nodejs" style="color: inherit; text-decoration: inherit;">beanstalk<wbr>Environment<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -626,7 +753,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>beanstalk<wbr>Environment<wbr>Name</span>
+        <span id="beanstalkenvironmentname_nodejs">
+<a href="#beanstalkenvironmentname_nodejs" style="color: inherit; text-decoration: inherit;">beanstalk<wbr>Environment<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -635,7 +764,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>deployment<wbr>Preferences</span>
+        <span id="deploymentpreferences_nodejs">
+<a href="#deploymentpreferences_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Preferences</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#beanstalkdeploymentpreferences">Beanstalk<wbr>Deployment<wbr>Preferences</a></span>
     </dt>
@@ -644,7 +775,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>maintenance</span>
+        <span id="maintenance_nodejs">
+<a href="#maintenance_nodejs" style="color: inherit; text-decoration: inherit;">maintenance</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -652,7 +785,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>managed<wbr>Actions</span>
+        <span id="managedactions_nodejs">
+<a href="#managedactions_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Actions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#beanstalkmanagedactions">Beanstalk<wbr>Managed<wbr>Actions</a></span>
     </dt>
@@ -661,7 +796,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -670,7 +807,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>scheduled<wbr>Tasks</span>
+        <span id="scheduledtasks_nodejs">
+<a href="#scheduledtasks_nodejs" style="color: inherit; text-decoration: inherit;">scheduled<wbr>Tasks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#beanstalkscheduledtask">Beanstalk<wbr>Scheduled<wbr>Task[]</a></span>
     </dt>
@@ -685,7 +824,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-required"
             title="Required">
-        <span>desired_<wbr>capacity</span>
+        <span id="desired_capacity_python">
+<a href="#desired_capacity_python" style="color: inherit; text-decoration: inherit;">desired_<wbr>capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -694,7 +835,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-required"
             title="Required">
-        <span>instance_<wbr>types_<wbr>spots</span>
+        <span id="instance_types_spots_python">
+<a href="#instance_types_spots_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>types_<wbr>spots</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -703,7 +846,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-required"
             title="Required">
-        <span>max_<wbr>size</span>
+        <span id="max_size_python">
+<a href="#max_size_python" style="color: inherit; text-decoration: inherit;">max_<wbr>size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -712,7 +857,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-required"
             title="Required">
-        <span>min_<wbr>size</span>
+        <span id="min_size_python">
+<a href="#min_size_python" style="color: inherit; text-decoration: inherit;">min_<wbr>size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -721,7 +868,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-required"
             title="Required">
-        <span>product</span>
+        <span id="product_python">
+<a href="#product_python" style="color: inherit; text-decoration: inherit;">product</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -731,7 +880,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-required"
             title="Required">
-        <span>region</span>
+        <span id="region_python">
+<a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -740,7 +891,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>beanstalk_<wbr>environment_<wbr>id</span>
+        <span id="beanstalk_environment_id_python">
+<a href="#beanstalk_environment_id_python" style="color: inherit; text-decoration: inherit;">beanstalk_<wbr>environment_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -749,7 +902,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>beanstalk_<wbr>environment_<wbr>name</span>
+        <span id="beanstalk_environment_name_python">
+<a href="#beanstalk_environment_name_python" style="color: inherit; text-decoration: inherit;">beanstalk_<wbr>environment_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -758,7 +913,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>deployment_<wbr>preferences</span>
+        <span id="deployment_preferences_python">
+<a href="#deployment_preferences_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>preferences</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#beanstalkdeploymentpreferences">Dict[Beanstalk<wbr>Deployment<wbr>Preferences]</a></span>
     </dt>
@@ -767,7 +924,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>maintenance</span>
+        <span id="maintenance_python">
+<a href="#maintenance_python" style="color: inherit; text-decoration: inherit;">maintenance</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -775,7 +934,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>managed_<wbr>actions</span>
+        <span id="managed_actions_python">
+<a href="#managed_actions_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>actions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#beanstalkmanagedactions">Dict[Beanstalk<wbr>Managed<wbr>Actions]</a></span>
     </dt>
@@ -784,7 +945,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -793,7 +956,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>scheduled_<wbr>tasks</span>
+        <span id="scheduled_tasks_python">
+<a href="#scheduled_tasks_python" style="color: inherit; text-decoration: inherit;">scheduled_<wbr>tasks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#beanstalkscheduledtask">List[Beanstalk<wbr>Scheduled<wbr>Task]</a></span>
     </dt>
@@ -819,7 +984,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -834,7 +1001,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -849,7 +1018,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -864,7 +1035,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1005,7 +1178,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Beanstalk<wbr>Environment<wbr>Id</span>
+        <span id="state_beanstalkenvironmentid_csharp">
+<a href="#state_beanstalkenvironmentid_csharp" style="color: inherit; text-decoration: inherit;">Beanstalk<wbr>Environment<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1014,7 +1189,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Beanstalk<wbr>Environment<wbr>Name</span>
+        <span id="state_beanstalkenvironmentname_csharp">
+<a href="#state_beanstalkenvironmentname_csharp" style="color: inherit; text-decoration: inherit;">Beanstalk<wbr>Environment<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1023,7 +1200,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Deployment<wbr>Preferences</span>
+        <span id="state_deploymentpreferences_csharp">
+<a href="#state_deploymentpreferences_csharp" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Preferences</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#beanstalkdeploymentpreferences">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Beanstalk<wbr>Deployment<wbr>Preferences<wbr>Args</a></span>
     </dt>
@@ -1032,7 +1211,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Desired<wbr>Capacity</span>
+        <span id="state_desiredcapacity_csharp">
+<a href="#state_desiredcapacity_csharp" style="color: inherit; text-decoration: inherit;">Desired<wbr>Capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1041,7 +1222,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Instance<wbr>Types<wbr>Spots</span>
+        <span id="state_instancetypesspots_csharp">
+<a href="#state_instancetypesspots_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Types<wbr>Spots</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1050,7 +1233,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Maintenance</span>
+        <span id="state_maintenance_csharp">
+<a href="#state_maintenance_csharp" style="color: inherit; text-decoration: inherit;">Maintenance</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1058,7 +1243,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Managed<wbr>Actions</span>
+        <span id="state_managedactions_csharp">
+<a href="#state_managedactions_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Actions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#beanstalkmanagedactions">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Beanstalk<wbr>Managed<wbr>Actions<wbr>Args</a></span>
     </dt>
@@ -1067,7 +1254,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Size</span>
+        <span id="state_maxsize_csharp">
+<a href="#state_maxsize_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1076,7 +1265,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Min<wbr>Size</span>
+        <span id="state_minsize_csharp">
+<a href="#state_minsize_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1085,7 +1276,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1094,7 +1287,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Product</span>
+        <span id="state_product_csharp">
+<a href="#state_product_csharp" style="color: inherit; text-decoration: inherit;">Product</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1104,7 +1299,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="state_region_csharp">
+<a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1113,7 +1310,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>Scheduled<wbr>Tasks</span>
+        <span id="state_scheduledtasks_csharp">
+<a href="#state_scheduledtasks_csharp" style="color: inherit; text-decoration: inherit;">Scheduled<wbr>Tasks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#beanstalkscheduledtask">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Beanstalk<wbr>Scheduled<wbr>Task<wbr>Args&gt;</a></span>
     </dt>
@@ -1128,7 +1327,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>Beanstalk<wbr>Environment<wbr>Id</span>
+        <span id="state_beanstalkenvironmentid_go">
+<a href="#state_beanstalkenvironmentid_go" style="color: inherit; text-decoration: inherit;">Beanstalk<wbr>Environment<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1137,7 +1338,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>Beanstalk<wbr>Environment<wbr>Name</span>
+        <span id="state_beanstalkenvironmentname_go">
+<a href="#state_beanstalkenvironmentname_go" style="color: inherit; text-decoration: inherit;">Beanstalk<wbr>Environment<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1146,7 +1349,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>Deployment<wbr>Preferences</span>
+        <span id="state_deploymentpreferences_go">
+<a href="#state_deploymentpreferences_go" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Preferences</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#beanstalkdeploymentpreferences">Beanstalk<wbr>Deployment<wbr>Preferences</a></span>
     </dt>
@@ -1155,7 +1360,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>Desired<wbr>Capacity</span>
+        <span id="state_desiredcapacity_go">
+<a href="#state_desiredcapacity_go" style="color: inherit; text-decoration: inherit;">Desired<wbr>Capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1164,7 +1371,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>Instance<wbr>Types<wbr>Spots</span>
+        <span id="state_instancetypesspots_go">
+<a href="#state_instancetypesspots_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Types<wbr>Spots</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1173,7 +1382,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>Maintenance</span>
+        <span id="state_maintenance_go">
+<a href="#state_maintenance_go" style="color: inherit; text-decoration: inherit;">Maintenance</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1181,7 +1392,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>Managed<wbr>Actions</span>
+        <span id="state_managedactions_go">
+<a href="#state_managedactions_go" style="color: inherit; text-decoration: inherit;">Managed<wbr>Actions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#beanstalkmanagedactions">Beanstalk<wbr>Managed<wbr>Actions</a></span>
     </dt>
@@ -1190,7 +1403,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Size</span>
+        <span id="state_maxsize_go">
+<a href="#state_maxsize_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1199,7 +1414,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>Min<wbr>Size</span>
+        <span id="state_minsize_go">
+<a href="#state_minsize_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1208,7 +1425,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1217,7 +1436,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>Product</span>
+        <span id="state_product_go">
+<a href="#state_product_go" style="color: inherit; text-decoration: inherit;">Product</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1227,7 +1448,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="state_region_go">
+<a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1236,7 +1459,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>Scheduled<wbr>Tasks</span>
+        <span id="state_scheduledtasks_go">
+<a href="#state_scheduledtasks_go" style="color: inherit; text-decoration: inherit;">Scheduled<wbr>Tasks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#beanstalkscheduledtask">[]Beanstalk<wbr>Scheduled<wbr>Task</a></span>
     </dt>
@@ -1251,7 +1476,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>beanstalk<wbr>Environment<wbr>Id</span>
+        <span id="state_beanstalkenvironmentid_nodejs">
+<a href="#state_beanstalkenvironmentid_nodejs" style="color: inherit; text-decoration: inherit;">beanstalk<wbr>Environment<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1260,7 +1487,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>beanstalk<wbr>Environment<wbr>Name</span>
+        <span id="state_beanstalkenvironmentname_nodejs">
+<a href="#state_beanstalkenvironmentname_nodejs" style="color: inherit; text-decoration: inherit;">beanstalk<wbr>Environment<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1269,7 +1498,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>deployment<wbr>Preferences</span>
+        <span id="state_deploymentpreferences_nodejs">
+<a href="#state_deploymentpreferences_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Preferences</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#beanstalkdeploymentpreferences">Beanstalk<wbr>Deployment<wbr>Preferences</a></span>
     </dt>
@@ -1278,7 +1509,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>desired<wbr>Capacity</span>
+        <span id="state_desiredcapacity_nodejs">
+<a href="#state_desiredcapacity_nodejs" style="color: inherit; text-decoration: inherit;">desired<wbr>Capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1287,7 +1520,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>instance<wbr>Types<wbr>Spots</span>
+        <span id="state_instancetypesspots_nodejs">
+<a href="#state_instancetypesspots_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Types<wbr>Spots</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1296,7 +1531,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>maintenance</span>
+        <span id="state_maintenance_nodejs">
+<a href="#state_maintenance_nodejs" style="color: inherit; text-decoration: inherit;">maintenance</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1304,7 +1541,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>managed<wbr>Actions</span>
+        <span id="state_managedactions_nodejs">
+<a href="#state_managedactions_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Actions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#beanstalkmanagedactions">Beanstalk<wbr>Managed<wbr>Actions</a></span>
     </dt>
@@ -1313,7 +1552,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Size</span>
+        <span id="state_maxsize_nodejs">
+<a href="#state_maxsize_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1322,7 +1563,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>min<wbr>Size</span>
+        <span id="state_minsize_nodejs">
+<a href="#state_minsize_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1331,7 +1574,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1340,7 +1585,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>product</span>
+        <span id="state_product_nodejs">
+<a href="#state_product_nodejs" style="color: inherit; text-decoration: inherit;">product</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1350,7 +1597,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="state_region_nodejs">
+<a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1359,7 +1608,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>scheduled<wbr>Tasks</span>
+        <span id="state_scheduledtasks_nodejs">
+<a href="#state_scheduledtasks_nodejs" style="color: inherit; text-decoration: inherit;">scheduled<wbr>Tasks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#beanstalkscheduledtask">Beanstalk<wbr>Scheduled<wbr>Task[]</a></span>
     </dt>
@@ -1374,7 +1625,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>beanstalk_<wbr>environment_<wbr>id</span>
+        <span id="state_beanstalk_environment_id_python">
+<a href="#state_beanstalk_environment_id_python" style="color: inherit; text-decoration: inherit;">beanstalk_<wbr>environment_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1383,7 +1636,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>beanstalk_<wbr>environment_<wbr>name</span>
+        <span id="state_beanstalk_environment_name_python">
+<a href="#state_beanstalk_environment_name_python" style="color: inherit; text-decoration: inherit;">beanstalk_<wbr>environment_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1392,7 +1647,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>deployment_<wbr>preferences</span>
+        <span id="state_deployment_preferences_python">
+<a href="#state_deployment_preferences_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>preferences</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#beanstalkdeploymentpreferences">Dict[Beanstalk<wbr>Deployment<wbr>Preferences]</a></span>
     </dt>
@@ -1401,7 +1658,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>desired_<wbr>capacity</span>
+        <span id="state_desired_capacity_python">
+<a href="#state_desired_capacity_python" style="color: inherit; text-decoration: inherit;">desired_<wbr>capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1410,7 +1669,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>instance_<wbr>types_<wbr>spots</span>
+        <span id="state_instance_types_spots_python">
+<a href="#state_instance_types_spots_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>types_<wbr>spots</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1419,7 +1680,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>maintenance</span>
+        <span id="state_maintenance_python">
+<a href="#state_maintenance_python" style="color: inherit; text-decoration: inherit;">maintenance</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1427,7 +1690,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>managed_<wbr>actions</span>
+        <span id="state_managed_actions_python">
+<a href="#state_managed_actions_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>actions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#beanstalkmanagedactions">Dict[Beanstalk<wbr>Managed<wbr>Actions]</a></span>
     </dt>
@@ -1436,7 +1701,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>max_<wbr>size</span>
+        <span id="state_max_size_python">
+<a href="#state_max_size_python" style="color: inherit; text-decoration: inherit;">max_<wbr>size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1445,7 +1712,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>min_<wbr>size</span>
+        <span id="state_min_size_python">
+<a href="#state_min_size_python" style="color: inherit; text-decoration: inherit;">min_<wbr>size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1454,7 +1723,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1463,7 +1734,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>product</span>
+        <span id="state_product_python">
+<a href="#state_product_python" style="color: inherit; text-decoration: inherit;">product</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1473,7 +1746,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="state_region_python">
+<a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1482,7 +1757,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>scheduled_<wbr>tasks</span>
+        <span id="state_scheduled_tasks_python">
+<a href="#state_scheduled_tasks_python" style="color: inherit; text-decoration: inherit;">scheduled_<wbr>tasks</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#beanstalkscheduledtask">List[Beanstalk<wbr>Scheduled<wbr>Task]</a></span>
     </dt>
@@ -1523,7 +1800,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>Automatic<wbr>Roll</span>
+        <span id="automaticroll_csharp">
+<a href="#automaticroll_csharp" style="color: inherit; text-decoration: inherit;">Automatic<wbr>Roll</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1532,7 +1811,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>Batch<wbr>Size<wbr>Percentage</span>
+        <span id="batchsizepercentage_csharp">
+<a href="#batchsizepercentage_csharp" style="color: inherit; text-decoration: inherit;">Batch<wbr>Size<wbr>Percentage</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1541,7 +1822,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>Grace<wbr>Period</span>
+        <span id="graceperiod_csharp">
+<a href="#graceperiod_csharp" style="color: inherit; text-decoration: inherit;">Grace<wbr>Period</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1550,7 +1833,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>Strategies</span>
+        <span id="strategies_csharp">
+<a href="#strategies_csharp" style="color: inherit; text-decoration: inherit;">Strategies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#beanstalkdeploymentpreferencesstrategy">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Beanstalk<wbr>Deployment<wbr>Preferences<wbr>Strategy<wbr>Args&gt;</a></span>
     </dt>
@@ -1566,7 +1851,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>Automatic<wbr>Roll</span>
+        <span id="automaticroll_go">
+<a href="#automaticroll_go" style="color: inherit; text-decoration: inherit;">Automatic<wbr>Roll</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1575,7 +1862,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>Batch<wbr>Size<wbr>Percentage</span>
+        <span id="batchsizepercentage_go">
+<a href="#batchsizepercentage_go" style="color: inherit; text-decoration: inherit;">Batch<wbr>Size<wbr>Percentage</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1584,7 +1873,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>Grace<wbr>Period</span>
+        <span id="graceperiod_go">
+<a href="#graceperiod_go" style="color: inherit; text-decoration: inherit;">Grace<wbr>Period</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1593,7 +1884,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>Strategies</span>
+        <span id="strategies_go">
+<a href="#strategies_go" style="color: inherit; text-decoration: inherit;">Strategies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#beanstalkdeploymentpreferencesstrategy">[]Beanstalk<wbr>Deployment<wbr>Preferences<wbr>Strategy</a></span>
     </dt>
@@ -1609,7 +1902,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>automatic<wbr>Roll</span>
+        <span id="automaticroll_nodejs">
+<a href="#automaticroll_nodejs" style="color: inherit; text-decoration: inherit;">automatic<wbr>Roll</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1618,7 +1913,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>batch<wbr>Size<wbr>Percentage</span>
+        <span id="batchsizepercentage_nodejs">
+<a href="#batchsizepercentage_nodejs" style="color: inherit; text-decoration: inherit;">batch<wbr>Size<wbr>Percentage</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1627,7 +1924,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>grace<wbr>Period</span>
+        <span id="graceperiod_nodejs">
+<a href="#graceperiod_nodejs" style="color: inherit; text-decoration: inherit;">grace<wbr>Period</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1636,7 +1935,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>strategies</span>
+        <span id="strategies_nodejs">
+<a href="#strategies_nodejs" style="color: inherit; text-decoration: inherit;">strategies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#beanstalkdeploymentpreferencesstrategy">Beanstalk<wbr>Deployment<wbr>Preferences<wbr>Strategy[]</a></span>
     </dt>
@@ -1652,7 +1953,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>automatic<wbr>Roll</span>
+        <span id="automaticroll_python">
+<a href="#automaticroll_python" style="color: inherit; text-decoration: inherit;">automatic<wbr>Roll</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1661,7 +1964,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>batch<wbr>Size<wbr>Percentage</span>
+        <span id="batchsizepercentage_python">
+<a href="#batchsizepercentage_python" style="color: inherit; text-decoration: inherit;">batch<wbr>Size<wbr>Percentage</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1670,7 +1975,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>grace_<wbr>period</span>
+        <span id="grace_period_python">
+<a href="#grace_period_python" style="color: inherit; text-decoration: inherit;">grace_<wbr>period</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1679,7 +1986,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>strategies</span>
+        <span id="strategies_python">
+<a href="#strategies_python" style="color: inherit; text-decoration: inherit;">strategies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#beanstalkdeploymentpreferencesstrategy">List[Beanstalk<wbr>Deployment<wbr>Preferences<wbr>Strategy]</a></span>
     </dt>
@@ -1713,7 +2022,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>Action</span>
+        <span id="action_csharp">
+<a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1722,7 +2033,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>Should<wbr>Drain<wbr>Instances</span>
+        <span id="shoulddraininstances_csharp">
+<a href="#shoulddraininstances_csharp" style="color: inherit; text-decoration: inherit;">Should<wbr>Drain<wbr>Instances</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1738,7 +2051,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>Action</span>
+        <span id="action_go">
+<a href="#action_go" style="color: inherit; text-decoration: inherit;">Action</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1747,7 +2062,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>Should<wbr>Drain<wbr>Instances</span>
+        <span id="shoulddraininstances_go">
+<a href="#shoulddraininstances_go" style="color: inherit; text-decoration: inherit;">Should<wbr>Drain<wbr>Instances</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1763,7 +2080,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>action</span>
+        <span id="action_nodejs">
+<a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1772,7 +2091,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>should<wbr>Drain<wbr>Instances</span>
+        <span id="shoulddraininstances_nodejs">
+<a href="#shoulddraininstances_nodejs" style="color: inherit; text-decoration: inherit;">should<wbr>Drain<wbr>Instances</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1788,7 +2109,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>action</span>
+        <span id="action_python">
+<a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1797,7 +2120,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>should<wbr>Drain<wbr>Instances</span>
+        <span id="shoulddraininstances_python">
+<a href="#shoulddraininstances_python" style="color: inherit; text-decoration: inherit;">should<wbr>Drain<wbr>Instances</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1831,7 +2156,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>Platform<wbr>Update</span>
+        <span id="platformupdate_csharp">
+<a href="#platformupdate_csharp" style="color: inherit; text-decoration: inherit;">Platform<wbr>Update</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#beanstalkmanagedactionsplatformupdate">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Beanstalk<wbr>Managed<wbr>Actions<wbr>Platform<wbr>Update<wbr>Args</a></span>
     </dt>
@@ -1847,7 +2174,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>Platform<wbr>Update</span>
+        <span id="platformupdate_go">
+<a href="#platformupdate_go" style="color: inherit; text-decoration: inherit;">Platform<wbr>Update</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#beanstalkmanagedactionsplatformupdate">Beanstalk<wbr>Managed<wbr>Actions<wbr>Platform<wbr>Update</a></span>
     </dt>
@@ -1863,7 +2192,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>platform<wbr>Update</span>
+        <span id="platformupdate_nodejs">
+<a href="#platformupdate_nodejs" style="color: inherit; text-decoration: inherit;">platform<wbr>Update</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#beanstalkmanagedactionsplatformupdate">Beanstalk<wbr>Managed<wbr>Actions<wbr>Platform<wbr>Update</a></span>
     </dt>
@@ -1879,7 +2210,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>platform<wbr>Update</span>
+        <span id="platformupdate_python">
+<a href="#platformupdate_python" style="color: inherit; text-decoration: inherit;">platform<wbr>Update</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#beanstalkmanagedactionsplatformupdate">Dict[Beanstalk<wbr>Managed<wbr>Actions<wbr>Platform<wbr>Update]</a></span>
     </dt>
@@ -1913,7 +2246,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>Perform<wbr>At</span>
+        <span id="performat_csharp">
+<a href="#performat_csharp" style="color: inherit; text-decoration: inherit;">Perform<wbr>At</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1922,7 +2257,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>Time<wbr>Window</span>
+        <span id="timewindow_csharp">
+<a href="#timewindow_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Window</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1931,7 +2268,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>Update<wbr>Level</span>
+        <span id="updatelevel_csharp">
+<a href="#updatelevel_csharp" style="color: inherit; text-decoration: inherit;">Update<wbr>Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1947,7 +2286,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>Perform<wbr>At</span>
+        <span id="performat_go">
+<a href="#performat_go" style="color: inherit; text-decoration: inherit;">Perform<wbr>At</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1956,7 +2297,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>Time<wbr>Window</span>
+        <span id="timewindow_go">
+<a href="#timewindow_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Window</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1965,7 +2308,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>Update<wbr>Level</span>
+        <span id="updatelevel_go">
+<a href="#updatelevel_go" style="color: inherit; text-decoration: inherit;">Update<wbr>Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1981,7 +2326,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>perform<wbr>At</span>
+        <span id="performat_nodejs">
+<a href="#performat_nodejs" style="color: inherit; text-decoration: inherit;">perform<wbr>At</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1990,7 +2337,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>time<wbr>Window</span>
+        <span id="timewindow_nodejs">
+<a href="#timewindow_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Window</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1999,7 +2348,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>update<wbr>Level</span>
+        <span id="updatelevel_nodejs">
+<a href="#updatelevel_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2015,7 +2366,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>perform<wbr>At</span>
+        <span id="performat_python">
+<a href="#performat_python" style="color: inherit; text-decoration: inherit;">perform<wbr>At</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2024,7 +2377,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>time<wbr>Window</span>
+        <span id="timewindow_python">
+<a href="#timewindow_python" style="color: inherit; text-decoration: inherit;">time<wbr>Window</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2033,7 +2388,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>update<wbr>Level</span>
+        <span id="updatelevel_python">
+<a href="#updatelevel_python" style="color: inherit; text-decoration: inherit;">update<wbr>Level</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2067,7 +2424,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-required"
             title="Required">
-        <span>Task<wbr>Type</span>
+        <span id="tasktype_csharp">
+<a href="#tasktype_csharp" style="color: inherit; text-decoration: inherit;">Task<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2075,7 +2434,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>Adjustment</span>
+        <span id="adjustment_csharp">
+<a href="#adjustment_csharp" style="color: inherit; text-decoration: inherit;">Adjustment</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2083,7 +2444,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>Adjustment<wbr>Percentage</span>
+        <span id="adjustmentpercentage_csharp">
+<a href="#adjustmentpercentage_csharp" style="color: inherit; text-decoration: inherit;">Adjustment<wbr>Percentage</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2091,7 +2454,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>Batch<wbr>Size<wbr>Percentage</span>
+        <span id="batchsizepercentage_csharp">
+<a href="#batchsizepercentage_csharp" style="color: inherit; text-decoration: inherit;">Batch<wbr>Size<wbr>Percentage</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2100,7 +2465,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cron<wbr>Expression</span>
+        <span id="cronexpression_csharp">
+<a href="#cronexpression_csharp" style="color: inherit; text-decoration: inherit;">Cron<wbr>Expression</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2108,7 +2475,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>Frequency</span>
+        <span id="frequency_csharp">
+<a href="#frequency_csharp" style="color: inherit; text-decoration: inherit;">Frequency</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2116,7 +2485,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>Grace<wbr>Period</span>
+        <span id="graceperiod_csharp">
+<a href="#graceperiod_csharp" style="color: inherit; text-decoration: inherit;">Grace<wbr>Period</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2125,7 +2496,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>Is<wbr>Enabled</span>
+        <span id="isenabled_csharp">
+<a href="#isenabled_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -2133,7 +2506,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Capacity</span>
+        <span id="maxcapacity_csharp">
+<a href="#maxcapacity_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2141,7 +2516,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>Min<wbr>Capacity</span>
+        <span id="mincapacity_csharp">
+<a href="#mincapacity_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2149,7 +2526,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>Scale<wbr>Max<wbr>Capacity</span>
+        <span id="scalemaxcapacity_csharp">
+<a href="#scalemaxcapacity_csharp" style="color: inherit; text-decoration: inherit;">Scale<wbr>Max<wbr>Capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2157,7 +2536,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>Scale<wbr>Min<wbr>Capacity</span>
+        <span id="scalemincapacity_csharp">
+<a href="#scalemincapacity_csharp" style="color: inherit; text-decoration: inherit;">Scale<wbr>Min<wbr>Capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2165,7 +2546,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>Scale<wbr>Target<wbr>Capacity</span>
+        <span id="scaletargetcapacity_csharp">
+<a href="#scaletargetcapacity_csharp" style="color: inherit; text-decoration: inherit;">Scale<wbr>Target<wbr>Capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2173,7 +2556,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>Start<wbr>Time</span>
+        <span id="starttime_csharp">
+<a href="#starttime_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2181,7 +2566,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>Target<wbr>Capacity</span>
+        <span id="targetcapacity_csharp">
+<a href="#targetcapacity_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2196,7 +2583,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-required"
             title="Required">
-        <span>Task<wbr>Type</span>
+        <span id="tasktype_go">
+<a href="#tasktype_go" style="color: inherit; text-decoration: inherit;">Task<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2204,7 +2593,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>Adjustment</span>
+        <span id="adjustment_go">
+<a href="#adjustment_go" style="color: inherit; text-decoration: inherit;">Adjustment</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2212,7 +2603,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>Adjustment<wbr>Percentage</span>
+        <span id="adjustmentpercentage_go">
+<a href="#adjustmentpercentage_go" style="color: inherit; text-decoration: inherit;">Adjustment<wbr>Percentage</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2220,7 +2613,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>Batch<wbr>Size<wbr>Percentage</span>
+        <span id="batchsizepercentage_go">
+<a href="#batchsizepercentage_go" style="color: inherit; text-decoration: inherit;">Batch<wbr>Size<wbr>Percentage</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2229,7 +2624,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cron<wbr>Expression</span>
+        <span id="cronexpression_go">
+<a href="#cronexpression_go" style="color: inherit; text-decoration: inherit;">Cron<wbr>Expression</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2237,7 +2634,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>Frequency</span>
+        <span id="frequency_go">
+<a href="#frequency_go" style="color: inherit; text-decoration: inherit;">Frequency</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2245,7 +2644,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>Grace<wbr>Period</span>
+        <span id="graceperiod_go">
+<a href="#graceperiod_go" style="color: inherit; text-decoration: inherit;">Grace<wbr>Period</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2254,7 +2655,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>Is<wbr>Enabled</span>
+        <span id="isenabled_go">
+<a href="#isenabled_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -2262,7 +2665,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Capacity</span>
+        <span id="maxcapacity_go">
+<a href="#maxcapacity_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2270,7 +2675,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>Min<wbr>Capacity</span>
+        <span id="mincapacity_go">
+<a href="#mincapacity_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2278,7 +2685,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>Scale<wbr>Max<wbr>Capacity</span>
+        <span id="scalemaxcapacity_go">
+<a href="#scalemaxcapacity_go" style="color: inherit; text-decoration: inherit;">Scale<wbr>Max<wbr>Capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2286,7 +2695,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>Scale<wbr>Min<wbr>Capacity</span>
+        <span id="scalemincapacity_go">
+<a href="#scalemincapacity_go" style="color: inherit; text-decoration: inherit;">Scale<wbr>Min<wbr>Capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2294,7 +2705,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>Scale<wbr>Target<wbr>Capacity</span>
+        <span id="scaletargetcapacity_go">
+<a href="#scaletargetcapacity_go" style="color: inherit; text-decoration: inherit;">Scale<wbr>Target<wbr>Capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2302,7 +2715,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>Start<wbr>Time</span>
+        <span id="starttime_go">
+<a href="#starttime_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2310,7 +2725,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>Target<wbr>Capacity</span>
+        <span id="targetcapacity_go">
+<a href="#targetcapacity_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2325,7 +2742,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-required"
             title="Required">
-        <span>task<wbr>Type</span>
+        <span id="tasktype_nodejs">
+<a href="#tasktype_nodejs" style="color: inherit; text-decoration: inherit;">task<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2333,7 +2752,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>adjustment</span>
+        <span id="adjustment_nodejs">
+<a href="#adjustment_nodejs" style="color: inherit; text-decoration: inherit;">adjustment</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2341,7 +2762,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>adjustment<wbr>Percentage</span>
+        <span id="adjustmentpercentage_nodejs">
+<a href="#adjustmentpercentage_nodejs" style="color: inherit; text-decoration: inherit;">adjustment<wbr>Percentage</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2349,7 +2772,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>batch<wbr>Size<wbr>Percentage</span>
+        <span id="batchsizepercentage_nodejs">
+<a href="#batchsizepercentage_nodejs" style="color: inherit; text-decoration: inherit;">batch<wbr>Size<wbr>Percentage</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2358,7 +2783,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>cron<wbr>Expression</span>
+        <span id="cronexpression_nodejs">
+<a href="#cronexpression_nodejs" style="color: inherit; text-decoration: inherit;">cron<wbr>Expression</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2366,7 +2793,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>frequency</span>
+        <span id="frequency_nodejs">
+<a href="#frequency_nodejs" style="color: inherit; text-decoration: inherit;">frequency</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2374,7 +2803,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>grace<wbr>Period</span>
+        <span id="graceperiod_nodejs">
+<a href="#graceperiod_nodejs" style="color: inherit; text-decoration: inherit;">grace<wbr>Period</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2383,7 +2814,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>is<wbr>Enabled</span>
+        <span id="isenabled_nodejs">
+<a href="#isenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -2391,7 +2824,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Capacity</span>
+        <span id="maxcapacity_nodejs">
+<a href="#maxcapacity_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2399,7 +2834,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>min<wbr>Capacity</span>
+        <span id="mincapacity_nodejs">
+<a href="#mincapacity_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2407,7 +2844,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>scale<wbr>Max<wbr>Capacity</span>
+        <span id="scalemaxcapacity_nodejs">
+<a href="#scalemaxcapacity_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>Max<wbr>Capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2415,7 +2854,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>scale<wbr>Min<wbr>Capacity</span>
+        <span id="scalemincapacity_nodejs">
+<a href="#scalemincapacity_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>Min<wbr>Capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2423,7 +2864,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>scale<wbr>Target<wbr>Capacity</span>
+        <span id="scaletargetcapacity_nodejs">
+<a href="#scaletargetcapacity_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>Target<wbr>Capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2431,7 +2874,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>start<wbr>Time</span>
+        <span id="starttime_nodejs">
+<a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2439,7 +2884,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>target<wbr>Capacity</span>
+        <span id="targetcapacity_nodejs">
+<a href="#targetcapacity_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2454,7 +2901,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-required"
             title="Required">
-        <span>task<wbr>Type</span>
+        <span id="tasktype_python">
+<a href="#tasktype_python" style="color: inherit; text-decoration: inherit;">task<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2462,7 +2911,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>adjustment</span>
+        <span id="adjustment_python">
+<a href="#adjustment_python" style="color: inherit; text-decoration: inherit;">adjustment</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2470,7 +2921,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>adjustment<wbr>Percentage</span>
+        <span id="adjustmentpercentage_python">
+<a href="#adjustmentpercentage_python" style="color: inherit; text-decoration: inherit;">adjustment<wbr>Percentage</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2478,7 +2931,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>batch<wbr>Size<wbr>Percentage</span>
+        <span id="batchsizepercentage_python">
+<a href="#batchsizepercentage_python" style="color: inherit; text-decoration: inherit;">batch<wbr>Size<wbr>Percentage</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2487,7 +2942,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>cron<wbr>Expression</span>
+        <span id="cronexpression_python">
+<a href="#cronexpression_python" style="color: inherit; text-decoration: inherit;">cron<wbr>Expression</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2495,7 +2952,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>frequency</span>
+        <span id="frequency_python">
+<a href="#frequency_python" style="color: inherit; text-decoration: inherit;">frequency</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2503,7 +2962,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>grace_<wbr>period</span>
+        <span id="grace_period_python">
+<a href="#grace_period_python" style="color: inherit; text-decoration: inherit;">grace_<wbr>period</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2512,7 +2973,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>is<wbr>Enabled</span>
+        <span id="isenabled_python">
+<a href="#isenabled_python" style="color: inherit; text-decoration: inherit;">is<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2520,7 +2983,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Capacity</span>
+        <span id="maxcapacity_python">
+<a href="#maxcapacity_python" style="color: inherit; text-decoration: inherit;">max<wbr>Capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2528,7 +2993,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>min<wbr>Capacity</span>
+        <span id="mincapacity_python">
+<a href="#mincapacity_python" style="color: inherit; text-decoration: inherit;">min<wbr>Capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2536,7 +3003,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>scale<wbr>Max<wbr>Capacity</span>
+        <span id="scalemaxcapacity_python">
+<a href="#scalemaxcapacity_python" style="color: inherit; text-decoration: inherit;">scale<wbr>Max<wbr>Capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2544,7 +3013,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>scale<wbr>Min<wbr>Capacity</span>
+        <span id="scalemincapacity_python">
+<a href="#scalemincapacity_python" style="color: inherit; text-decoration: inherit;">scale<wbr>Min<wbr>Capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2552,7 +3023,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>scale<wbr>Target<wbr>Capacity</span>
+        <span id="scaletargetcapacity_python">
+<a href="#scaletargetcapacity_python" style="color: inherit; text-decoration: inherit;">scale<wbr>Target<wbr>Capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2560,7 +3033,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>start<wbr>Time</span>
+        <span id="starttime_python">
+<a href="#starttime_python" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2568,7 +3043,9 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
     <dt class="property-optional"
             title="Optional">
-        <span>target<wbr>Capacity</span>
+        <span id="targetcapacity_python">
+<a href="#targetcapacity_python" style="color: inherit; text-decoration: inherit;">target<wbr>Capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

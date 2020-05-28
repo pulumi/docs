@@ -20,7 +20,54 @@ Provides a custom Spotinst Ocean ECS Launch Spec resource.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using SpotInst = Pulumi.SpotInst;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new SpotInst.Ecs.OceanLaunchSpec("example", new SpotInst.Ecs.OceanLaunchSpecArgs
+        {
+            Attributes = 
+            {
+                new SpotInst.Ecs.Inputs.OceanLaunchSpecAttributeArgs
+                {
+                    Key = "fakeKey",
+                    Value = "fakeValue",
+                },
+            },
+            AutoscaleHeadrooms = 
+            {
+                new SpotInst.Ecs.Inputs.OceanLaunchSpecAutoscaleHeadroomArgs
+                {
+                    CpuPerUnit = 1000,
+                    MemoryPerUnit = 2048,
+                    NumOfUnits = 5,
+                },
+            },
+            IamInstanceProfile = "iam-profile",
+            ImageId = "ami-123456",
+            OceanId = "o-123456",
+            SecurityGroupIds = 
+            {
+                "awseb-12345",
+            },
+            Tags = 
+            {
+                new SpotInst.Ecs.Inputs.OceanLaunchSpecTagArgs
+                {
+                    Key = "Env",
+                    Value = "production",
+                },
+            },
+            UserData = "echo hello world",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -268,7 +315,9 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-required"
             title="Required">
-        <span>Ocean<wbr>Id</span>
+        <span id="oceanid_csharp">
+<a href="#oceanid_csharp" style="color: inherit; text-decoration: inherit;">Ocean<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -277,7 +326,9 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-optional"
             title="Optional">
-        <span>Attributes</span>
+        <span id="attributes_csharp">
+<a href="#attributes_csharp" style="color: inherit; text-decoration: inherit;">Attributes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanlaunchspecattribute">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Ecs.<wbr>Inputs.<wbr>Ocean<wbr>Launch<wbr>Spec<wbr>Attribute<wbr>Args&gt;</a></span>
     </dt>
@@ -286,7 +337,9 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-optional"
             title="Optional">
-        <span>Autoscale<wbr>Headrooms</span>
+        <span id="autoscaleheadrooms_csharp">
+<a href="#autoscaleheadrooms_csharp" style="color: inherit; text-decoration: inherit;">Autoscale<wbr>Headrooms</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanlaunchspecautoscaleheadroom">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Ecs.<wbr>Inputs.<wbr>Ocean<wbr>Launch<wbr>Spec<wbr>Autoscale<wbr>Headroom<wbr>Args&gt;</a></span>
     </dt>
@@ -295,7 +348,9 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-optional"
             title="Optional">
-        <span>Iam<wbr>Instance<wbr>Profile</span>
+        <span id="iaminstanceprofile_csharp">
+<a href="#iaminstanceprofile_csharp" style="color: inherit; text-decoration: inherit;">Iam<wbr>Instance<wbr>Profile</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -304,7 +359,9 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-optional"
             title="Optional">
-        <span>Image<wbr>Id</span>
+        <span id="imageid_csharp">
+<a href="#imageid_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -313,7 +370,9 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -322,7 +381,9 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-optional"
             title="Optional">
-        <span>Security<wbr>Group<wbr>Ids</span>
+        <span id="securitygroupids_csharp">
+<a href="#securitygroupids_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -331,7 +392,9 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanlaunchspectag">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Ecs.<wbr>Inputs.<wbr>Ocean<wbr>Launch<wbr>Spec<wbr>Tag<wbr>Args&gt;</a></span>
     </dt>
@@ -340,7 +403,9 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-optional"
             title="Optional">
-        <span>User<wbr>Data</span>
+        <span id="userdata_csharp">
+<a href="#userdata_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -356,7 +421,9 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-required"
             title="Required">
-        <span>Ocean<wbr>Id</span>
+        <span id="oceanid_go">
+<a href="#oceanid_go" style="color: inherit; text-decoration: inherit;">Ocean<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -365,7 +432,9 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-optional"
             title="Optional">
-        <span>Attributes</span>
+        <span id="attributes_go">
+<a href="#attributes_go" style="color: inherit; text-decoration: inherit;">Attributes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanlaunchspecattribute">[]Ocean<wbr>Launch<wbr>Spec<wbr>Attribute</a></span>
     </dt>
@@ -374,7 +443,9 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-optional"
             title="Optional">
-        <span>Autoscale<wbr>Headrooms</span>
+        <span id="autoscaleheadrooms_go">
+<a href="#autoscaleheadrooms_go" style="color: inherit; text-decoration: inherit;">Autoscale<wbr>Headrooms</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanlaunchspecautoscaleheadroom">[]Ocean<wbr>Launch<wbr>Spec<wbr>Autoscale<wbr>Headroom</a></span>
     </dt>
@@ -383,7 +454,9 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-optional"
             title="Optional">
-        <span>Iam<wbr>Instance<wbr>Profile</span>
+        <span id="iaminstanceprofile_go">
+<a href="#iaminstanceprofile_go" style="color: inherit; text-decoration: inherit;">Iam<wbr>Instance<wbr>Profile</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -392,7 +465,9 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-optional"
             title="Optional">
-        <span>Image<wbr>Id</span>
+        <span id="imageid_go">
+<a href="#imageid_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -401,7 +476,9 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -410,7 +487,9 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-optional"
             title="Optional">
-        <span>Security<wbr>Group<wbr>Ids</span>
+        <span id="securitygroupids_go">
+<a href="#securitygroupids_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -419,7 +498,9 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanlaunchspectag">[]Ocean<wbr>Launch<wbr>Spec<wbr>Tag</a></span>
     </dt>
@@ -428,7 +509,9 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-optional"
             title="Optional">
-        <span>User<wbr>Data</span>
+        <span id="userdata_go">
+<a href="#userdata_go" style="color: inherit; text-decoration: inherit;">User<wbr>Data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -444,7 +527,9 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-required"
             title="Required">
-        <span>ocean<wbr>Id</span>
+        <span id="oceanid_nodejs">
+<a href="#oceanid_nodejs" style="color: inherit; text-decoration: inherit;">ocean<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -453,7 +538,9 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-optional"
             title="Optional">
-        <span>attributes</span>
+        <span id="attributes_nodejs">
+<a href="#attributes_nodejs" style="color: inherit; text-decoration: inherit;">attributes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanlaunchspecattribute">Ocean<wbr>Launch<wbr>Spec<wbr>Attribute[]</a></span>
     </dt>
@@ -462,7 +549,9 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-optional"
             title="Optional">
-        <span>autoscale<wbr>Headrooms</span>
+        <span id="autoscaleheadrooms_nodejs">
+<a href="#autoscaleheadrooms_nodejs" style="color: inherit; text-decoration: inherit;">autoscale<wbr>Headrooms</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanlaunchspecautoscaleheadroom">Ocean<wbr>Launch<wbr>Spec<wbr>Autoscale<wbr>Headroom[]</a></span>
     </dt>
@@ -471,7 +560,9 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-optional"
             title="Optional">
-        <span>iam<wbr>Instance<wbr>Profile</span>
+        <span id="iaminstanceprofile_nodejs">
+<a href="#iaminstanceprofile_nodejs" style="color: inherit; text-decoration: inherit;">iam<wbr>Instance<wbr>Profile</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -480,7 +571,9 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-optional"
             title="Optional">
-        <span>image<wbr>Id</span>
+        <span id="imageid_nodejs">
+<a href="#imageid_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -489,7 +582,9 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -498,7 +593,9 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-optional"
             title="Optional">
-        <span>security<wbr>Group<wbr>Ids</span>
+        <span id="securitygroupids_nodejs">
+<a href="#securitygroupids_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Group<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -507,7 +604,9 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanlaunchspectag">Ocean<wbr>Launch<wbr>Spec<wbr>Tag[]</a></span>
     </dt>
@@ -516,7 +615,9 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-optional"
             title="Optional">
-        <span>user<wbr>Data</span>
+        <span id="userdata_nodejs">
+<a href="#userdata_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -532,7 +633,9 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-required"
             title="Required">
-        <span>ocean_<wbr>id</span>
+        <span id="ocean_id_python">
+<a href="#ocean_id_python" style="color: inherit; text-decoration: inherit;">ocean_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -541,7 +644,9 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-optional"
             title="Optional">
-        <span>attributes</span>
+        <span id="attributes_python">
+<a href="#attributes_python" style="color: inherit; text-decoration: inherit;">attributes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanlaunchspecattribute">List[Ocean<wbr>Launch<wbr>Spec<wbr>Attribute]</a></span>
     </dt>
@@ -550,7 +655,9 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-optional"
             title="Optional">
-        <span>autoscale_<wbr>headrooms</span>
+        <span id="autoscale_headrooms_python">
+<a href="#autoscale_headrooms_python" style="color: inherit; text-decoration: inherit;">autoscale_<wbr>headrooms</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanlaunchspecautoscaleheadroom">List[Ocean<wbr>Launch<wbr>Spec<wbr>Autoscale<wbr>Headroom]</a></span>
     </dt>
@@ -559,7 +666,9 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-optional"
             title="Optional">
-        <span>iam_<wbr>instance_<wbr>profile</span>
+        <span id="iam_instance_profile_python">
+<a href="#iam_instance_profile_python" style="color: inherit; text-decoration: inherit;">iam_<wbr>instance_<wbr>profile</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -568,7 +677,9 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-optional"
             title="Optional">
-        <span>image_<wbr>id</span>
+        <span id="image_id_python">
+<a href="#image_id_python" style="color: inherit; text-decoration: inherit;">image_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -577,7 +688,9 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -586,7 +699,9 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-optional"
             title="Optional">
-        <span>security_<wbr>group_<wbr>ids</span>
+        <span id="security_group_ids_python">
+<a href="#security_group_ids_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group_<wbr>ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -595,7 +710,9 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanlaunchspectag">List[Ocean<wbr>Launch<wbr>Spec<wbr>Tag]</a></span>
     </dt>
@@ -604,7 +721,9 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-optional"
             title="Optional">
-        <span>user_<wbr>data</span>
+        <span id="user_data_python">
+<a href="#user_data_python" style="color: inherit; text-decoration: inherit;">user_<wbr>data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -631,7 +750,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -646,7 +767,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -661,7 +784,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -676,7 +801,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -817,7 +944,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Attributes</span>
+        <span id="state_attributes_csharp">
+<a href="#state_attributes_csharp" style="color: inherit; text-decoration: inherit;">Attributes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanlaunchspecattribute">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Ecs.<wbr>Inputs.<wbr>Ocean<wbr>Launch<wbr>Spec<wbr>Attribute<wbr>Args&gt;</a></span>
     </dt>
@@ -826,7 +955,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Autoscale<wbr>Headrooms</span>
+        <span id="state_autoscaleheadrooms_csharp">
+<a href="#state_autoscaleheadrooms_csharp" style="color: inherit; text-decoration: inherit;">Autoscale<wbr>Headrooms</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanlaunchspecautoscaleheadroom">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Ecs.<wbr>Inputs.<wbr>Ocean<wbr>Launch<wbr>Spec<wbr>Autoscale<wbr>Headroom<wbr>Args&gt;</a></span>
     </dt>
@@ -835,7 +966,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Iam<wbr>Instance<wbr>Profile</span>
+        <span id="state_iaminstanceprofile_csharp">
+<a href="#state_iaminstanceprofile_csharp" style="color: inherit; text-decoration: inherit;">Iam<wbr>Instance<wbr>Profile</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -844,7 +977,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Image<wbr>Id</span>
+        <span id="state_imageid_csharp">
+<a href="#state_imageid_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -853,7 +988,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -862,7 +999,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ocean<wbr>Id</span>
+        <span id="state_oceanid_csharp">
+<a href="#state_oceanid_csharp" style="color: inherit; text-decoration: inherit;">Ocean<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -871,7 +1010,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Security<wbr>Group<wbr>Ids</span>
+        <span id="state_securitygroupids_csharp">
+<a href="#state_securitygroupids_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -880,7 +1021,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="state_tags_csharp">
+<a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanlaunchspectag">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Ecs.<wbr>Inputs.<wbr>Ocean<wbr>Launch<wbr>Spec<wbr>Tag<wbr>Args&gt;</a></span>
     </dt>
@@ -889,7 +1032,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>User<wbr>Data</span>
+        <span id="state_userdata_csharp">
+<a href="#state_userdata_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -905,7 +1050,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Attributes</span>
+        <span id="state_attributes_go">
+<a href="#state_attributes_go" style="color: inherit; text-decoration: inherit;">Attributes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanlaunchspecattribute">[]Ocean<wbr>Launch<wbr>Spec<wbr>Attribute</a></span>
     </dt>
@@ -914,7 +1061,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Autoscale<wbr>Headrooms</span>
+        <span id="state_autoscaleheadrooms_go">
+<a href="#state_autoscaleheadrooms_go" style="color: inherit; text-decoration: inherit;">Autoscale<wbr>Headrooms</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanlaunchspecautoscaleheadroom">[]Ocean<wbr>Launch<wbr>Spec<wbr>Autoscale<wbr>Headroom</a></span>
     </dt>
@@ -923,7 +1072,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Iam<wbr>Instance<wbr>Profile</span>
+        <span id="state_iaminstanceprofile_go">
+<a href="#state_iaminstanceprofile_go" style="color: inherit; text-decoration: inherit;">Iam<wbr>Instance<wbr>Profile</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -932,7 +1083,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Image<wbr>Id</span>
+        <span id="state_imageid_go">
+<a href="#state_imageid_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -941,7 +1094,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -950,7 +1105,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ocean<wbr>Id</span>
+        <span id="state_oceanid_go">
+<a href="#state_oceanid_go" style="color: inherit; text-decoration: inherit;">Ocean<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -959,7 +1116,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Security<wbr>Group<wbr>Ids</span>
+        <span id="state_securitygroupids_go">
+<a href="#state_securitygroupids_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -968,7 +1127,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="state_tags_go">
+<a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanlaunchspectag">[]Ocean<wbr>Launch<wbr>Spec<wbr>Tag</a></span>
     </dt>
@@ -977,7 +1138,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>User<wbr>Data</span>
+        <span id="state_userdata_go">
+<a href="#state_userdata_go" style="color: inherit; text-decoration: inherit;">User<wbr>Data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -993,7 +1156,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>attributes</span>
+        <span id="state_attributes_nodejs">
+<a href="#state_attributes_nodejs" style="color: inherit; text-decoration: inherit;">attributes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanlaunchspecattribute">Ocean<wbr>Launch<wbr>Spec<wbr>Attribute[]</a></span>
     </dt>
@@ -1002,7 +1167,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>autoscale<wbr>Headrooms</span>
+        <span id="state_autoscaleheadrooms_nodejs">
+<a href="#state_autoscaleheadrooms_nodejs" style="color: inherit; text-decoration: inherit;">autoscale<wbr>Headrooms</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanlaunchspecautoscaleheadroom">Ocean<wbr>Launch<wbr>Spec<wbr>Autoscale<wbr>Headroom[]</a></span>
     </dt>
@@ -1011,7 +1178,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>iam<wbr>Instance<wbr>Profile</span>
+        <span id="state_iaminstanceprofile_nodejs">
+<a href="#state_iaminstanceprofile_nodejs" style="color: inherit; text-decoration: inherit;">iam<wbr>Instance<wbr>Profile</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1020,7 +1189,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>image<wbr>Id</span>
+        <span id="state_imageid_nodejs">
+<a href="#state_imageid_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1029,7 +1200,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1038,7 +1211,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>ocean<wbr>Id</span>
+        <span id="state_oceanid_nodejs">
+<a href="#state_oceanid_nodejs" style="color: inherit; text-decoration: inherit;">ocean<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1047,7 +1222,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>security<wbr>Group<wbr>Ids</span>
+        <span id="state_securitygroupids_nodejs">
+<a href="#state_securitygroupids_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Group<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1056,7 +1233,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="state_tags_nodejs">
+<a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanlaunchspectag">Ocean<wbr>Launch<wbr>Spec<wbr>Tag[]</a></span>
     </dt>
@@ -1065,7 +1244,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>user<wbr>Data</span>
+        <span id="state_userdata_nodejs">
+<a href="#state_userdata_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1081,7 +1262,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>attributes</span>
+        <span id="state_attributes_python">
+<a href="#state_attributes_python" style="color: inherit; text-decoration: inherit;">attributes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanlaunchspecattribute">List[Ocean<wbr>Launch<wbr>Spec<wbr>Attribute]</a></span>
     </dt>
@@ -1090,7 +1273,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>autoscale_<wbr>headrooms</span>
+        <span id="state_autoscale_headrooms_python">
+<a href="#state_autoscale_headrooms_python" style="color: inherit; text-decoration: inherit;">autoscale_<wbr>headrooms</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanlaunchspecautoscaleheadroom">List[Ocean<wbr>Launch<wbr>Spec<wbr>Autoscale<wbr>Headroom]</a></span>
     </dt>
@@ -1099,7 +1284,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>iam_<wbr>instance_<wbr>profile</span>
+        <span id="state_iam_instance_profile_python">
+<a href="#state_iam_instance_profile_python" style="color: inherit; text-decoration: inherit;">iam_<wbr>instance_<wbr>profile</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1108,7 +1295,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>image_<wbr>id</span>
+        <span id="state_image_id_python">
+<a href="#state_image_id_python" style="color: inherit; text-decoration: inherit;">image_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1117,7 +1306,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1126,7 +1317,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>ocean_<wbr>id</span>
+        <span id="state_ocean_id_python">
+<a href="#state_ocean_id_python" style="color: inherit; text-decoration: inherit;">ocean_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1135,7 +1328,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>security_<wbr>group_<wbr>ids</span>
+        <span id="state_security_group_ids_python">
+<a href="#state_security_group_ids_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group_<wbr>ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1144,7 +1339,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="state_tags_python">
+<a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanlaunchspectag">List[Ocean<wbr>Launch<wbr>Spec<wbr>Tag]</a></span>
     </dt>
@@ -1153,7 +1350,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>user_<wbr>data</span>
+        <span id="state_user_data_python">
+<a href="#state_user_data_python" style="color: inherit; text-decoration: inherit;">user_<wbr>data</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1195,7 +1394,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Key</span>
+        <span id="key_csharp">
+<a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1204,7 +1405,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Value</span>
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1220,7 +1423,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Key</span>
+        <span id="key_go">
+<a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1229,7 +1434,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Value</span>
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1245,7 +1452,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>key</span>
+        <span id="key_nodejs">
+<a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1254,7 +1463,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>value</span>
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1270,7 +1481,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>key</span>
+        <span id="key_python">
+<a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1279,7 +1492,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>value</span>
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1313,7 +1528,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Num<wbr>Of<wbr>Units</span>
+        <span id="numofunits_csharp">
+<a href="#numofunits_csharp" style="color: inherit; text-decoration: inherit;">Num<wbr>Of<wbr>Units</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1322,7 +1539,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cpu<wbr>Per<wbr>Unit</span>
+        <span id="cpuperunit_csharp">
+<a href="#cpuperunit_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Per<wbr>Unit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1331,7 +1550,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Memory<wbr>Per<wbr>Unit</span>
+        <span id="memoryperunit_csharp">
+<a href="#memoryperunit_csharp" style="color: inherit; text-decoration: inherit;">Memory<wbr>Per<wbr>Unit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1347,7 +1568,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Num<wbr>Of<wbr>Units</span>
+        <span id="numofunits_go">
+<a href="#numofunits_go" style="color: inherit; text-decoration: inherit;">Num<wbr>Of<wbr>Units</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1356,7 +1579,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cpu<wbr>Per<wbr>Unit</span>
+        <span id="cpuperunit_go">
+<a href="#cpuperunit_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Per<wbr>Unit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1365,7 +1590,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Memory<wbr>Per<wbr>Unit</span>
+        <span id="memoryperunit_go">
+<a href="#memoryperunit_go" style="color: inherit; text-decoration: inherit;">Memory<wbr>Per<wbr>Unit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1381,7 +1608,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>num<wbr>Of<wbr>Units</span>
+        <span id="numofunits_nodejs">
+<a href="#numofunits_nodejs" style="color: inherit; text-decoration: inherit;">num<wbr>Of<wbr>Units</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1390,7 +1619,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>cpu<wbr>Per<wbr>Unit</span>
+        <span id="cpuperunit_nodejs">
+<a href="#cpuperunit_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Per<wbr>Unit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1399,7 +1630,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>memory<wbr>Per<wbr>Unit</span>
+        <span id="memoryperunit_nodejs">
+<a href="#memoryperunit_nodejs" style="color: inherit; text-decoration: inherit;">memory<wbr>Per<wbr>Unit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1415,7 +1648,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>num<wbr>Of<wbr>Units</span>
+        <span id="numofunits_python">
+<a href="#numofunits_python" style="color: inherit; text-decoration: inherit;">num<wbr>Of<wbr>Units</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1424,7 +1659,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>cpu<wbr>Per<wbr>Unit</span>
+        <span id="cpuperunit_python">
+<a href="#cpuperunit_python" style="color: inherit; text-decoration: inherit;">cpu<wbr>Per<wbr>Unit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1433,7 +1670,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>memory<wbr>Per<wbr>Unit</span>
+        <span id="memoryperunit_python">
+<a href="#memoryperunit_python" style="color: inherit; text-decoration: inherit;">memory<wbr>Per<wbr>Unit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1467,7 +1706,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Key</span>
+        <span id="key_csharp">
+<a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1476,7 +1717,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Value</span>
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1492,7 +1735,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Key</span>
+        <span id="key_go">
+<a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1501,7 +1746,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Value</span>
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1517,7 +1764,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>key</span>
+        <span id="key_nodejs">
+<a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1526,7 +1775,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>value</span>
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1542,7 +1793,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>key</span>
+        <span id="key_python">
+<a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1551,7 +1804,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>value</span>
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

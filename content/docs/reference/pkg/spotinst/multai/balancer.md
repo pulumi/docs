@@ -20,7 +20,35 @@ Provides a Spotinst Multai Balancer.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using SpotInst = Pulumi.SpotInst;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var myBalancer = new SpotInst.Multai.Balancer("myBalancer", new SpotInst.Multai.BalancerArgs
+        {
+            ConnectionTimeouts = new SpotInst.Multai.Inputs.BalancerConnectionTimeoutsArgs
+            {
+                Draining = 10,
+                Idle = 10,
+            },
+            Scheme = "internal",
+            Tags = 
+            {
+                new SpotInst.Multai.Inputs.BalancerTagArgs
+                {
+                    Key = "env",
+                    Value = "prod",
+                },
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -250,7 +278,9 @@ The Balancer resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Connection<wbr>Timeouts</span>
+        <span id="connectiontimeouts_csharp">
+<a href="#connectiontimeouts_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Timeouts</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#balancerconnectiontimeouts">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Multai.<wbr>Inputs.<wbr>Balancer<wbr>Connection<wbr>Timeouts<wbr>Args</a></span>
     </dt>
@@ -258,7 +288,9 @@ The Balancer resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Dns<wbr>Cname<wbr>Aliases</span>
+        <span id="dnscnamealiases_csharp">
+<a href="#dnscnamealiases_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Cname<wbr>Aliases</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -266,7 +298,9 @@ The Balancer resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -275,7 +309,9 @@ The Balancer resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Scheme</span>
+        <span id="scheme_csharp">
+<a href="#scheme_csharp" style="color: inherit; text-decoration: inherit;">Scheme</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -283,7 +319,9 @@ The Balancer resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#balancertag">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Multai.<wbr>Inputs.<wbr>Balancer<wbr>Tag<wbr>Args&gt;</a></span>
     </dt>
@@ -299,7 +337,9 @@ The Balancer resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Connection<wbr>Timeouts</span>
+        <span id="connectiontimeouts_go">
+<a href="#connectiontimeouts_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Timeouts</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#balancerconnectiontimeouts">Balancer<wbr>Connection<wbr>Timeouts</a></span>
     </dt>
@@ -307,7 +347,9 @@ The Balancer resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Dns<wbr>Cname<wbr>Aliases</span>
+        <span id="dnscnamealiases_go">
+<a href="#dnscnamealiases_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Cname<wbr>Aliases</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -315,7 +357,9 @@ The Balancer resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -324,7 +368,9 @@ The Balancer resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Scheme</span>
+        <span id="scheme_go">
+<a href="#scheme_go" style="color: inherit; text-decoration: inherit;">Scheme</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -332,7 +378,9 @@ The Balancer resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#balancertag">[]Balancer<wbr>Tag</a></span>
     </dt>
@@ -348,7 +396,9 @@ The Balancer resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>connection<wbr>Timeouts</span>
+        <span id="connectiontimeouts_nodejs">
+<a href="#connectiontimeouts_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Timeouts</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#balancerconnectiontimeouts">Balancer<wbr>Connection<wbr>Timeouts</a></span>
     </dt>
@@ -356,7 +406,9 @@ The Balancer resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>dns<wbr>Cname<wbr>Aliases</span>
+        <span id="dnscnamealiases_nodejs">
+<a href="#dnscnamealiases_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Cname<wbr>Aliases</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -364,7 +416,9 @@ The Balancer resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -373,7 +427,9 @@ The Balancer resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>scheme</span>
+        <span id="scheme_nodejs">
+<a href="#scheme_nodejs" style="color: inherit; text-decoration: inherit;">scheme</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -381,7 +437,9 @@ The Balancer resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#balancertag">Balancer<wbr>Tag[]</a></span>
     </dt>
@@ -397,7 +455,9 @@ The Balancer resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>connection_<wbr>timeouts</span>
+        <span id="connection_timeouts_python">
+<a href="#connection_timeouts_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>timeouts</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#balancerconnectiontimeouts">Dict[Balancer<wbr>Connection<wbr>Timeouts]</a></span>
     </dt>
@@ -405,7 +465,9 @@ The Balancer resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>dns_<wbr>cname_<wbr>aliases</span>
+        <span id="dns_cname_aliases_python">
+<a href="#dns_cname_aliases_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>cname_<wbr>aliases</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -413,7 +475,9 @@ The Balancer resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -422,7 +486,9 @@ The Balancer resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>scheme</span>
+        <span id="scheme_python">
+<a href="#scheme_python" style="color: inherit; text-decoration: inherit;">scheme</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -430,7 +496,9 @@ The Balancer resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#balancertag">List[Balancer<wbr>Tag]</a></span>
     </dt>
@@ -457,7 +525,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -472,7 +542,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -487,7 +559,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -502,7 +576,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -643,7 +719,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Connection<wbr>Timeouts</span>
+        <span id="state_connectiontimeouts_csharp">
+<a href="#state_connectiontimeouts_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Timeouts</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#balancerconnectiontimeouts">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Multai.<wbr>Inputs.<wbr>Balancer<wbr>Connection<wbr>Timeouts<wbr>Args</a></span>
     </dt>
@@ -651,7 +729,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Dns<wbr>Cname<wbr>Aliases</span>
+        <span id="state_dnscnamealiases_csharp">
+<a href="#state_dnscnamealiases_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Cname<wbr>Aliases</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -659,7 +739,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -668,7 +750,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Scheme</span>
+        <span id="state_scheme_csharp">
+<a href="#state_scheme_csharp" style="color: inherit; text-decoration: inherit;">Scheme</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -676,7 +760,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="state_tags_csharp">
+<a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#balancertag">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Multai.<wbr>Inputs.<wbr>Balancer<wbr>Tag<wbr>Args&gt;</a></span>
     </dt>
@@ -692,7 +778,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Connection<wbr>Timeouts</span>
+        <span id="state_connectiontimeouts_go">
+<a href="#state_connectiontimeouts_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Timeouts</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#balancerconnectiontimeouts">Balancer<wbr>Connection<wbr>Timeouts</a></span>
     </dt>
@@ -700,7 +788,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Dns<wbr>Cname<wbr>Aliases</span>
+        <span id="state_dnscnamealiases_go">
+<a href="#state_dnscnamealiases_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Cname<wbr>Aliases</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -708,7 +798,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -717,7 +809,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Scheme</span>
+        <span id="state_scheme_go">
+<a href="#state_scheme_go" style="color: inherit; text-decoration: inherit;">Scheme</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -725,7 +819,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="state_tags_go">
+<a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#balancertag">[]Balancer<wbr>Tag</a></span>
     </dt>
@@ -741,7 +837,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>connection<wbr>Timeouts</span>
+        <span id="state_connectiontimeouts_nodejs">
+<a href="#state_connectiontimeouts_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Timeouts</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#balancerconnectiontimeouts">Balancer<wbr>Connection<wbr>Timeouts</a></span>
     </dt>
@@ -749,7 +847,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>dns<wbr>Cname<wbr>Aliases</span>
+        <span id="state_dnscnamealiases_nodejs">
+<a href="#state_dnscnamealiases_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Cname<wbr>Aliases</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -757,7 +857,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -766,7 +868,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>scheme</span>
+        <span id="state_scheme_nodejs">
+<a href="#state_scheme_nodejs" style="color: inherit; text-decoration: inherit;">scheme</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -774,7 +878,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="state_tags_nodejs">
+<a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#balancertag">Balancer<wbr>Tag[]</a></span>
     </dt>
@@ -790,7 +896,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>connection_<wbr>timeouts</span>
+        <span id="state_connection_timeouts_python">
+<a href="#state_connection_timeouts_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>timeouts</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#balancerconnectiontimeouts">Dict[Balancer<wbr>Connection<wbr>Timeouts]</a></span>
     </dt>
@@ -798,7 +906,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>dns_<wbr>cname_<wbr>aliases</span>
+        <span id="state_dns_cname_aliases_python">
+<a href="#state_dns_cname_aliases_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>cname_<wbr>aliases</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -806,7 +916,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -815,7 +927,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>scheme</span>
+        <span id="state_scheme_python">
+<a href="#state_scheme_python" style="color: inherit; text-decoration: inherit;">scheme</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -823,7 +937,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="state_tags_python">
+<a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#balancertag">List[Balancer<wbr>Tag]</a></span>
     </dt>
@@ -865,7 +981,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Draining</span>
+        <span id="draining_csharp">
+<a href="#draining_csharp" style="color: inherit; text-decoration: inherit;">Draining</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -874,7 +992,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Idle</span>
+        <span id="idle_csharp">
+<a href="#idle_csharp" style="color: inherit; text-decoration: inherit;">Idle</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -890,7 +1010,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Draining</span>
+        <span id="draining_go">
+<a href="#draining_go" style="color: inherit; text-decoration: inherit;">Draining</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -899,7 +1021,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Idle</span>
+        <span id="idle_go">
+<a href="#idle_go" style="color: inherit; text-decoration: inherit;">Idle</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -915,7 +1039,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>draining</span>
+        <span id="draining_nodejs">
+<a href="#draining_nodejs" style="color: inherit; text-decoration: inherit;">draining</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -924,7 +1050,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>idle</span>
+        <span id="idle_nodejs">
+<a href="#idle_nodejs" style="color: inherit; text-decoration: inherit;">idle</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -940,7 +1068,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>draining</span>
+        <span id="draining_python">
+<a href="#draining_python" style="color: inherit; text-decoration: inherit;">draining</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -949,7 +1079,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>idle</span>
+        <span id="idle_python">
+<a href="#idle_python" style="color: inherit; text-decoration: inherit;">idle</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -983,7 +1115,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Key</span>
+        <span id="key_csharp">
+<a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -992,7 +1126,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Value</span>
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1008,7 +1144,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Key</span>
+        <span id="key_go">
+<a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1017,7 +1155,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Value</span>
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1033,7 +1173,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>key</span>
+        <span id="key_nodejs">
+<a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1042,7 +1184,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>value</span>
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1058,7 +1202,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>key</span>
+        <span id="key_python">
+<a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1067,7 +1213,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>value</span>
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

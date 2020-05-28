@@ -20,7 +20,34 @@ Provides a Spotinst Health Check resource.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using SpotInst = Pulumi.SpotInst;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var httpCheck = new SpotInst.HealthCheck("httpCheck", new SpotInst.HealthCheckArgs
+        {
+            Check = new SpotInst.Inputs.HealthCheckCheckArgs
+            {
+                Endpoint = "http://endpoint.com",
+                Healthy = 1,
+                Interval = 10,
+                Port = 1337,
+                Protocol = "http",
+                Timeout = 10,
+                Unhealthy = 1,
+            },
+            ProxyAddress = "http://proxy.com",
+            ProxyPort = 80,
+            ResourceId = "sig-123",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -256,7 +283,9 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-required"
             title="Required">
-        <span>Proxy<wbr>Address</span>
+        <span id="proxyaddress_csharp">
+<a href="#proxyaddress_csharp" style="color: inherit; text-decoration: inherit;">Proxy<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -264,7 +293,9 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-required"
             title="Required">
-        <span>Resource<wbr>Id</span>
+        <span id="resourceid_csharp">
+<a href="#resourceid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -273,7 +304,9 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Check</span>
+        <span id="check_csharp">
+<a href="#check_csharp" style="color: inherit; text-decoration: inherit;">Check</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healthcheckcheck">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Inputs.<wbr>Health<wbr>Check<wbr>Check<wbr>Args</a></span>
     </dt>
@@ -282,7 +315,9 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -291,7 +326,9 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Proxy<wbr>Port</span>
+        <span id="proxyport_csharp">
+<a href="#proxyport_csharp" style="color: inherit; text-decoration: inherit;">Proxy<wbr>Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -306,7 +343,9 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-required"
             title="Required">
-        <span>Proxy<wbr>Address</span>
+        <span id="proxyaddress_go">
+<a href="#proxyaddress_go" style="color: inherit; text-decoration: inherit;">Proxy<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -314,7 +353,9 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-required"
             title="Required">
-        <span>Resource<wbr>Id</span>
+        <span id="resourceid_go">
+<a href="#resourceid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -323,7 +364,9 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Check</span>
+        <span id="check_go">
+<a href="#check_go" style="color: inherit; text-decoration: inherit;">Check</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healthcheckcheck">Health<wbr>Check<wbr>Check</a></span>
     </dt>
@@ -332,7 +375,9 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -341,7 +386,9 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Proxy<wbr>Port</span>
+        <span id="proxyport_go">
+<a href="#proxyport_go" style="color: inherit; text-decoration: inherit;">Proxy<wbr>Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -356,7 +403,9 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-required"
             title="Required">
-        <span>proxy<wbr>Address</span>
+        <span id="proxyaddress_nodejs">
+<a href="#proxyaddress_nodejs" style="color: inherit; text-decoration: inherit;">proxy<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -364,7 +413,9 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-required"
             title="Required">
-        <span>resource<wbr>Id</span>
+        <span id="resourceid_nodejs">
+<a href="#resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -373,7 +424,9 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>check</span>
+        <span id="check_nodejs">
+<a href="#check_nodejs" style="color: inherit; text-decoration: inherit;">check</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healthcheckcheck">Health<wbr>Check<wbr>Check</a></span>
     </dt>
@@ -382,7 +435,9 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -391,7 +446,9 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>proxy<wbr>Port</span>
+        <span id="proxyport_nodejs">
+<a href="#proxyport_nodejs" style="color: inherit; text-decoration: inherit;">proxy<wbr>Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -406,7 +463,9 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-required"
             title="Required">
-        <span>proxy_<wbr>address</span>
+        <span id="proxy_address_python">
+<a href="#proxy_address_python" style="color: inherit; text-decoration: inherit;">proxy_<wbr>address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -414,7 +473,9 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-required"
             title="Required">
-        <span>resource_<wbr>id</span>
+        <span id="resource_id_python">
+<a href="#resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -423,7 +484,9 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>check</span>
+        <span id="check_python">
+<a href="#check_python" style="color: inherit; text-decoration: inherit;">check</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healthcheckcheck">Dict[Health<wbr>Check<wbr>Check]</a></span>
     </dt>
@@ -432,7 +495,9 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -441,7 +506,9 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>proxy_<wbr>port</span>
+        <span id="proxy_port_python">
+<a href="#proxy_port_python" style="color: inherit; text-decoration: inherit;">proxy_<wbr>port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -467,7 +534,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -482,7 +551,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -497,7 +568,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -512,7 +585,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -653,7 +728,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Check</span>
+        <span id="state_check_csharp">
+<a href="#state_check_csharp" style="color: inherit; text-decoration: inherit;">Check</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healthcheckcheck">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Inputs.<wbr>Health<wbr>Check<wbr>Check<wbr>Args</a></span>
     </dt>
@@ -662,7 +739,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -671,7 +750,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Proxy<wbr>Address</span>
+        <span id="state_proxyaddress_csharp">
+<a href="#state_proxyaddress_csharp" style="color: inherit; text-decoration: inherit;">Proxy<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -679,7 +760,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Proxy<wbr>Port</span>
+        <span id="state_proxyport_csharp">
+<a href="#state_proxyport_csharp" style="color: inherit; text-decoration: inherit;">Proxy<wbr>Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -687,7 +770,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resource<wbr>Id</span>
+        <span id="state_resourceid_csharp">
+<a href="#state_resourceid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -703,7 +788,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Check</span>
+        <span id="state_check_go">
+<a href="#state_check_go" style="color: inherit; text-decoration: inherit;">Check</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healthcheckcheck">Health<wbr>Check<wbr>Check</a></span>
     </dt>
@@ -712,7 +799,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -721,7 +810,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Proxy<wbr>Address</span>
+        <span id="state_proxyaddress_go">
+<a href="#state_proxyaddress_go" style="color: inherit; text-decoration: inherit;">Proxy<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -729,7 +820,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Proxy<wbr>Port</span>
+        <span id="state_proxyport_go">
+<a href="#state_proxyport_go" style="color: inherit; text-decoration: inherit;">Proxy<wbr>Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -737,7 +830,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resource<wbr>Id</span>
+        <span id="state_resourceid_go">
+<a href="#state_resourceid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -753,7 +848,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>check</span>
+        <span id="state_check_nodejs">
+<a href="#state_check_nodejs" style="color: inherit; text-decoration: inherit;">check</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healthcheckcheck">Health<wbr>Check<wbr>Check</a></span>
     </dt>
@@ -762,7 +859,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -771,7 +870,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>proxy<wbr>Address</span>
+        <span id="state_proxyaddress_nodejs">
+<a href="#state_proxyaddress_nodejs" style="color: inherit; text-decoration: inherit;">proxy<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -779,7 +880,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>proxy<wbr>Port</span>
+        <span id="state_proxyport_nodejs">
+<a href="#state_proxyport_nodejs" style="color: inherit; text-decoration: inherit;">proxy<wbr>Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -787,7 +890,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource<wbr>Id</span>
+        <span id="state_resourceid_nodejs">
+<a href="#state_resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -803,7 +908,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>check</span>
+        <span id="state_check_python">
+<a href="#state_check_python" style="color: inherit; text-decoration: inherit;">check</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healthcheckcheck">Dict[Health<wbr>Check<wbr>Check]</a></span>
     </dt>
@@ -812,7 +919,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -821,7 +930,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>proxy_<wbr>address</span>
+        <span id="state_proxy_address_python">
+<a href="#state_proxy_address_python" style="color: inherit; text-decoration: inherit;">proxy_<wbr>address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -829,7 +940,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>proxy_<wbr>port</span>
+        <span id="state_proxy_port_python">
+<a href="#state_proxy_port_python" style="color: inherit; text-decoration: inherit;">proxy_<wbr>port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -837,7 +950,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource_<wbr>id</span>
+        <span id="state_resource_id_python">
+<a href="#state_resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -879,7 +994,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Endpoint</span>
+        <span id="endpoint_csharp">
+<a href="#endpoint_csharp" style="color: inherit; text-decoration: inherit;">Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -888,7 +1005,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Healthy</span>
+        <span id="healthy_csharp">
+<a href="#healthy_csharp" style="color: inherit; text-decoration: inherit;">Healthy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -897,7 +1016,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Interval</span>
+        <span id="interval_csharp">
+<a href="#interval_csharp" style="color: inherit; text-decoration: inherit;">Interval</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -906,7 +1027,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Port</span>
+        <span id="port_csharp">
+<a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -915,7 +1038,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Protocol</span>
+        <span id="protocol_csharp">
+<a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -924,7 +1049,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Timeout</span>
+        <span id="timeout_csharp">
+<a href="#timeout_csharp" style="color: inherit; text-decoration: inherit;">Timeout</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -933,7 +1060,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Unhealthy</span>
+        <span id="unhealthy_csharp">
+<a href="#unhealthy_csharp" style="color: inherit; text-decoration: inherit;">Unhealthy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -949,7 +1078,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Endpoint</span>
+        <span id="endpoint_go">
+<a href="#endpoint_go" style="color: inherit; text-decoration: inherit;">Endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -958,7 +1089,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Healthy</span>
+        <span id="healthy_go">
+<a href="#healthy_go" style="color: inherit; text-decoration: inherit;">Healthy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -967,7 +1100,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Interval</span>
+        <span id="interval_go">
+<a href="#interval_go" style="color: inherit; text-decoration: inherit;">Interval</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -976,7 +1111,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Port</span>
+        <span id="port_go">
+<a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -985,7 +1122,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Protocol</span>
+        <span id="protocol_go">
+<a href="#protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -994,7 +1133,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Timeout</span>
+        <span id="timeout_go">
+<a href="#timeout_go" style="color: inherit; text-decoration: inherit;">Timeout</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1003,7 +1144,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Unhealthy</span>
+        <span id="unhealthy_go">
+<a href="#unhealthy_go" style="color: inherit; text-decoration: inherit;">Unhealthy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1019,7 +1162,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>endpoint</span>
+        <span id="endpoint_nodejs">
+<a href="#endpoint_nodejs" style="color: inherit; text-decoration: inherit;">endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1028,7 +1173,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>healthy</span>
+        <span id="healthy_nodejs">
+<a href="#healthy_nodejs" style="color: inherit; text-decoration: inherit;">healthy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1037,7 +1184,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>interval</span>
+        <span id="interval_nodejs">
+<a href="#interval_nodejs" style="color: inherit; text-decoration: inherit;">interval</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1046,7 +1195,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>port</span>
+        <span id="port_nodejs">
+<a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1055,7 +1206,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>protocol</span>
+        <span id="protocol_nodejs">
+<a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1064,7 +1217,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>timeout</span>
+        <span id="timeout_nodejs">
+<a href="#timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1073,7 +1228,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>unhealthy</span>
+        <span id="unhealthy_nodejs">
+<a href="#unhealthy_nodejs" style="color: inherit; text-decoration: inherit;">unhealthy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1089,7 +1246,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>endpoint</span>
+        <span id="endpoint_python">
+<a href="#endpoint_python" style="color: inherit; text-decoration: inherit;">endpoint</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1098,7 +1257,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>healthy</span>
+        <span id="healthy_python">
+<a href="#healthy_python" style="color: inherit; text-decoration: inherit;">healthy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1107,7 +1268,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>interval</span>
+        <span id="interval_python">
+<a href="#interval_python" style="color: inherit; text-decoration: inherit;">interval</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1116,7 +1279,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>port</span>
+        <span id="port_python">
+<a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1125,7 +1290,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>protocol</span>
+        <span id="protocol_python">
+<a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1134,7 +1301,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>timeout</span>
+        <span id="timeout_python">
+<a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1143,7 +1312,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>unhealthy</span>
+        <span id="unhealthy_python">
+<a href="#unhealthy_python" style="color: inherit; text-decoration: inherit;">unhealthy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>

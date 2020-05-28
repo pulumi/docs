@@ -26,7 +26,7 @@ anything, please consult the source <a class="reference external" href="https://
     <span class="n">deployment_preferences</span><span class="o">=</span><span class="p">{</span>
         <span class="s2">&quot;automaticRoll&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
         <span class="s2">&quot;batchSizePercentage&quot;</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
-        <span class="s2">&quot;gracePeriod&quot;</span><span class="p">:</span> <span class="mi">90</span><span class="p">,</span>
+        <span class="s2">&quot;grace_period&quot;</span><span class="p">:</span> <span class="mi">90</span><span class="p">,</span>
         <span class="s2">&quot;strategy&quot;</span><span class="p">:</span> <span class="p">[{</span>
             <span class="s2">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;REPLACE_SERVER&quot;</span><span class="p">,</span>
             <span class="s2">&quot;shouldDrainInstances&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>

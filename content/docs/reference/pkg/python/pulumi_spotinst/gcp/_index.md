@@ -44,7 +44,7 @@ anything, please consult the source <a class="reference external" href="https://
         <span class="s2">&quot;initializeParams&quot;</span><span class="p">:</span> <span class="p">[{</span>
             <span class="s2">&quot;diskSizeGb&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
             <span class="s2">&quot;diskType&quot;</span><span class="p">:</span> <span class="s2">&quot;pd-standard&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;sourceImage&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;source_image&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
         <span class="p">}],</span>
         <span class="s2">&quot;interface&quot;</span><span class="p">:</span> <span class="s2">&quot;SCSI&quot;</span><span class="p">,</span>
         <span class="s2">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;READ_WRITE&quot;</span><span class="p">,</span>
