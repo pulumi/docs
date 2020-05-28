@@ -22,7 +22,32 @@ This data source provides the PolarDB node classes resource available info of Al
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var resourcesZones = Output.Create(AliCloud.GetZones.InvokeAsync(new AliCloud.GetZonesArgs
+        {
+            AvailableResourceCreation = "PolarDB",
+        }));
+        var resourcesNodeClasses = resourcesZones.Apply(resourcesZones => Output.Create(AliCloud.PolarDB.GetNodeClasses.InvokeAsync(new AliCloud.PolarDB.GetNodeClassesArgs
+        {
+            DbType = "MySQL",
+            DbVersion = "5.6",
+            PayType = "Postpaid",
+            ZoneId = resourcesZones.Zones[0].Id,
+        })));
+        this.FirstPolardbNodeClass = resourcesNodeClasses.Apply(resourcesNodeClasses => resourcesNodeClasses.Classes);
+    }
+
+    [Output("firstPolardbNodeClass")]
+    public Output<string> FirstPolardbNodeClass { get; set; }
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -103,7 +128,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Pay<wbr>Type</span>
+        <span id="paytype_csharp">
+<a href="#paytype_csharp" style="color: inherit; text-decoration: inherit;">Pay<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -112,7 +139,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Db<wbr>Node<wbr>Class</span>
+        <span id="dbnodeclass_csharp">
+<a href="#dbnodeclass_csharp" style="color: inherit; text-decoration: inherit;">Db<wbr>Node<wbr>Class</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -121,7 +150,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Db<wbr>Type</span>
+        <span id="dbtype_csharp">
+<a href="#dbtype_csharp" style="color: inherit; text-decoration: inherit;">Db<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -130,7 +161,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Db<wbr>Version</span>
+        <span id="dbversion_csharp">
+<a href="#dbversion_csharp" style="color: inherit; text-decoration: inherit;">Db<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -139,7 +172,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Output<wbr>File</span>
+        <span id="outputfile_csharp">
+<a href="#outputfile_csharp" style="color: inherit; text-decoration: inherit;">Output<wbr>File</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -147,7 +182,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region<wbr>Id</span>
+        <span id="regionid_csharp">
+<a href="#regionid_csharp" style="color: inherit; text-decoration: inherit;">Region<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -156,7 +193,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Zone<wbr>Id</span>
+        <span id="zoneid_csharp">
+<a href="#zoneid_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -172,7 +211,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Pay<wbr>Type</span>
+        <span id="paytype_go">
+<a href="#paytype_go" style="color: inherit; text-decoration: inherit;">Pay<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -181,7 +222,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Db<wbr>Node<wbr>Class</span>
+        <span id="dbnodeclass_go">
+<a href="#dbnodeclass_go" style="color: inherit; text-decoration: inherit;">Db<wbr>Node<wbr>Class</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -190,7 +233,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Db<wbr>Type</span>
+        <span id="dbtype_go">
+<a href="#dbtype_go" style="color: inherit; text-decoration: inherit;">Db<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -199,7 +244,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Db<wbr>Version</span>
+        <span id="dbversion_go">
+<a href="#dbversion_go" style="color: inherit; text-decoration: inherit;">Db<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -208,7 +255,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Output<wbr>File</span>
+        <span id="outputfile_go">
+<a href="#outputfile_go" style="color: inherit; text-decoration: inherit;">Output<wbr>File</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -216,7 +265,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region<wbr>Id</span>
+        <span id="regionid_go">
+<a href="#regionid_go" style="color: inherit; text-decoration: inherit;">Region<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -225,7 +276,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Zone<wbr>Id</span>
+        <span id="zoneid_go">
+<a href="#zoneid_go" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -241,7 +294,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>pay<wbr>Type</span>
+        <span id="paytype_nodejs">
+<a href="#paytype_nodejs" style="color: inherit; text-decoration: inherit;">pay<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -250,7 +305,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>db<wbr>Node<wbr>Class</span>
+        <span id="dbnodeclass_nodejs">
+<a href="#dbnodeclass_nodejs" style="color: inherit; text-decoration: inherit;">db<wbr>Node<wbr>Class</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -259,7 +316,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>db<wbr>Type</span>
+        <span id="dbtype_nodejs">
+<a href="#dbtype_nodejs" style="color: inherit; text-decoration: inherit;">db<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -268,7 +327,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>db<wbr>Version</span>
+        <span id="dbversion_nodejs">
+<a href="#dbversion_nodejs" style="color: inherit; text-decoration: inherit;">db<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -277,7 +338,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>output<wbr>File</span>
+        <span id="outputfile_nodejs">
+<a href="#outputfile_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>File</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -285,7 +348,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>region<wbr>Id</span>
+        <span id="regionid_nodejs">
+<a href="#regionid_nodejs" style="color: inherit; text-decoration: inherit;">region<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -294,7 +359,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>zone<wbr>Id</span>
+        <span id="zoneid_nodejs">
+<a href="#zoneid_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -310,7 +377,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>pay_<wbr>type</span>
+        <span id="pay_type_python">
+<a href="#pay_type_python" style="color: inherit; text-decoration: inherit;">pay_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -319,7 +388,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>db_<wbr>node_<wbr>class</span>
+        <span id="db_node_class_python">
+<a href="#db_node_class_python" style="color: inherit; text-decoration: inherit;">db_<wbr>node_<wbr>class</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -328,7 +399,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>db_<wbr>type</span>
+        <span id="db_type_python">
+<a href="#db_type_python" style="color: inherit; text-decoration: inherit;">db_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -337,7 +410,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>db_<wbr>version</span>
+        <span id="db_version_python">
+<a href="#db_version_python" style="color: inherit; text-decoration: inherit;">db_<wbr>version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -346,7 +421,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>output_<wbr>file</span>
+        <span id="output_file_python">
+<a href="#output_file_python" style="color: inherit; text-decoration: inherit;">output_<wbr>file</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -354,7 +431,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>region_<wbr>id</span>
+        <span id="region_id_python">
+<a href="#region_id_python" style="color: inherit; text-decoration: inherit;">region_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -363,7 +442,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>zone_<wbr>id</span>
+        <span id="zone_id_python">
+<a href="#zone_id_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -392,7 +473,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Classes</span>
+        <span id="classes_csharp">
+<a href="#classes_csharp" style="color: inherit; text-decoration: inherit;">Classes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getnodeclassesclass">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Polar<wbr>DB.<wbr>Outputs.<wbr>Get<wbr>Node<wbr>Classes<wbr>Class&gt;</a></span>
     </dt>
@@ -401,7 +484,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -410,7 +495,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Pay<wbr>Type</span>
+        <span id="paytype_csharp">
+<a href="#paytype_csharp" style="color: inherit; text-decoration: inherit;">Pay<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -418,7 +505,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Db<wbr>Node<wbr>Class</span>
+        <span id="dbnodeclass_csharp">
+<a href="#dbnodeclass_csharp" style="color: inherit; text-decoration: inherit;">Db<wbr>Node<wbr>Class</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -427,7 +516,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Db<wbr>Type</span>
+        <span id="dbtype_csharp">
+<a href="#dbtype_csharp" style="color: inherit; text-decoration: inherit;">Db<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -435,7 +526,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Db<wbr>Version</span>
+        <span id="dbversion_csharp">
+<a href="#dbversion_csharp" style="color: inherit; text-decoration: inherit;">Db<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -443,7 +536,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Output<wbr>File</span>
+        <span id="outputfile_csharp">
+<a href="#outputfile_csharp" style="color: inherit; text-decoration: inherit;">Output<wbr>File</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -451,7 +546,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Region<wbr>Id</span>
+        <span id="regionid_csharp">
+<a href="#regionid_csharp" style="color: inherit; text-decoration: inherit;">Region<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -459,7 +556,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Zone<wbr>Id</span>
+        <span id="zoneid_csharp">
+<a href="#zoneid_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -475,7 +574,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Classes</span>
+        <span id="classes_go">
+<a href="#classes_go" style="color: inherit; text-decoration: inherit;">Classes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getnodeclassesclass">[]Get<wbr>Node<wbr>Classes<wbr>Class</a></span>
     </dt>
@@ -484,7 +585,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -493,7 +596,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Pay<wbr>Type</span>
+        <span id="paytype_go">
+<a href="#paytype_go" style="color: inherit; text-decoration: inherit;">Pay<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -501,7 +606,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Db<wbr>Node<wbr>Class</span>
+        <span id="dbnodeclass_go">
+<a href="#dbnodeclass_go" style="color: inherit; text-decoration: inherit;">Db<wbr>Node<wbr>Class</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -510,7 +617,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Db<wbr>Type</span>
+        <span id="dbtype_go">
+<a href="#dbtype_go" style="color: inherit; text-decoration: inherit;">Db<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -518,7 +627,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Db<wbr>Version</span>
+        <span id="dbversion_go">
+<a href="#dbversion_go" style="color: inherit; text-decoration: inherit;">Db<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -526,7 +637,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Output<wbr>File</span>
+        <span id="outputfile_go">
+<a href="#outputfile_go" style="color: inherit; text-decoration: inherit;">Output<wbr>File</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -534,7 +647,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Region<wbr>Id</span>
+        <span id="regionid_go">
+<a href="#regionid_go" style="color: inherit; text-decoration: inherit;">Region<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -542,7 +657,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Zone<wbr>Id</span>
+        <span id="zoneid_go">
+<a href="#zoneid_go" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -558,7 +675,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>classes</span>
+        <span id="classes_nodejs">
+<a href="#classes_nodejs" style="color: inherit; text-decoration: inherit;">classes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getnodeclassesclass">Get<wbr>Node<wbr>Classes<wbr>Class[]</a></span>
     </dt>
@@ -567,7 +686,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -576,7 +697,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>pay<wbr>Type</span>
+        <span id="paytype_nodejs">
+<a href="#paytype_nodejs" style="color: inherit; text-decoration: inherit;">pay<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -584,7 +707,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>db<wbr>Node<wbr>Class</span>
+        <span id="dbnodeclass_nodejs">
+<a href="#dbnodeclass_nodejs" style="color: inherit; text-decoration: inherit;">db<wbr>Node<wbr>Class</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -593,7 +718,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>db<wbr>Type</span>
+        <span id="dbtype_nodejs">
+<a href="#dbtype_nodejs" style="color: inherit; text-decoration: inherit;">db<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -601,7 +728,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>db<wbr>Version</span>
+        <span id="dbversion_nodejs">
+<a href="#dbversion_nodejs" style="color: inherit; text-decoration: inherit;">db<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -609,7 +738,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>output<wbr>File</span>
+        <span id="outputfile_nodejs">
+<a href="#outputfile_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>File</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -617,7 +748,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>region<wbr>Id</span>
+        <span id="regionid_nodejs">
+<a href="#regionid_nodejs" style="color: inherit; text-decoration: inherit;">region<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -625,7 +758,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>zone<wbr>Id</span>
+        <span id="zoneid_nodejs">
+<a href="#zoneid_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -641,7 +776,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>classes</span>
+        <span id="classes_python">
+<a href="#classes_python" style="color: inherit; text-decoration: inherit;">classes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getnodeclassesclass">List[Get<wbr>Node<wbr>Classes<wbr>Class]</a></span>
     </dt>
@@ -650,7 +787,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -659,7 +798,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>pay_<wbr>type</span>
+        <span id="pay_type_python">
+<a href="#pay_type_python" style="color: inherit; text-decoration: inherit;">pay_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -667,7 +808,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>db_<wbr>node_<wbr>class</span>
+        <span id="db_node_class_python">
+<a href="#db_node_class_python" style="color: inherit; text-decoration: inherit;">db_<wbr>node_<wbr>class</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -676,7 +819,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>db_<wbr>type</span>
+        <span id="db_type_python">
+<a href="#db_type_python" style="color: inherit; text-decoration: inherit;">db_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -684,7 +829,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>db_<wbr>version</span>
+        <span id="db_version_python">
+<a href="#db_version_python" style="color: inherit; text-decoration: inherit;">db_<wbr>version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -692,7 +839,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>output_<wbr>file</span>
+        <span id="output_file_python">
+<a href="#output_file_python" style="color: inherit; text-decoration: inherit;">output_<wbr>file</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -700,7 +849,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>region_<wbr>id</span>
+        <span id="region_id_python">
+<a href="#region_id_python" style="color: inherit; text-decoration: inherit;">region_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -708,7 +859,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>zone_<wbr>id</span>
+        <span id="zone_id_python">
+<a href="#zone_id_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -748,7 +901,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Supported<wbr>Engines</span>
+        <span id="supportedengines_csharp">
+<a href="#supportedengines_csharp" style="color: inherit; text-decoration: inherit;">Supported<wbr>Engines</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getnodeclassesclasssupportedengine">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Polar<wbr>DB.<wbr>Inputs.<wbr>Get<wbr>Node<wbr>Classes<wbr>Class<wbr>Supported<wbr>Engine<wbr>Args&gt;</a></span>
     </dt>
@@ -757,7 +912,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Zone<wbr>Id</span>
+        <span id="zoneid_csharp">
+<a href="#zoneid_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -773,7 +930,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Supported<wbr>Engines</span>
+        <span id="supportedengines_go">
+<a href="#supportedengines_go" style="color: inherit; text-decoration: inherit;">Supported<wbr>Engines</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getnodeclassesclasssupportedengine">[]Get<wbr>Node<wbr>Classes<wbr>Class<wbr>Supported<wbr>Engine</a></span>
     </dt>
@@ -782,7 +941,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Zone<wbr>Id</span>
+        <span id="zoneid_go">
+<a href="#zoneid_go" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -798,7 +959,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>supported<wbr>Engines</span>
+        <span id="supportedengines_nodejs">
+<a href="#supportedengines_nodejs" style="color: inherit; text-decoration: inherit;">supported<wbr>Engines</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getnodeclassesclasssupportedengine">Get<wbr>Node<wbr>Classes<wbr>Class<wbr>Supported<wbr>Engine[]</a></span>
     </dt>
@@ -807,7 +970,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>zone<wbr>Id</span>
+        <span id="zoneid_nodejs">
+<a href="#zoneid_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -823,7 +988,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>supported<wbr>Engines</span>
+        <span id="supportedengines_python">
+<a href="#supportedengines_python" style="color: inherit; text-decoration: inherit;">supported<wbr>Engines</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getnodeclassesclasssupportedengine">List[Get<wbr>Node<wbr>Classes<wbr>Class<wbr>Supported<wbr>Engine]</a></span>
     </dt>
@@ -832,7 +999,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>zone_<wbr>id</span>
+        <span id="zone_id_python">
+<a href="#zone_id_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -866,7 +1035,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Available<wbr>Resources</span>
+        <span id="availableresources_csharp">
+<a href="#availableresources_csharp" style="color: inherit; text-decoration: inherit;">Available<wbr>Resources</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getnodeclassesclasssupportedengineavailableresource">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Polar<wbr>DB.<wbr>Inputs.<wbr>Get<wbr>Node<wbr>Classes<wbr>Class<wbr>Supported<wbr>Engine<wbr>Available<wbr>Resource<wbr>Args&gt;</a></span>
     </dt>
@@ -875,7 +1046,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Engine</span>
+        <span id="engine_csharp">
+<a href="#engine_csharp" style="color: inherit; text-decoration: inherit;">Engine</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -891,7 +1064,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Available<wbr>Resources</span>
+        <span id="availableresources_go">
+<a href="#availableresources_go" style="color: inherit; text-decoration: inherit;">Available<wbr>Resources</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getnodeclassesclasssupportedengineavailableresource">[]Get<wbr>Node<wbr>Classes<wbr>Class<wbr>Supported<wbr>Engine<wbr>Available<wbr>Resource</a></span>
     </dt>
@@ -900,7 +1075,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Engine</span>
+        <span id="engine_go">
+<a href="#engine_go" style="color: inherit; text-decoration: inherit;">Engine</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -916,7 +1093,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>available<wbr>Resources</span>
+        <span id="availableresources_nodejs">
+<a href="#availableresources_nodejs" style="color: inherit; text-decoration: inherit;">available<wbr>Resources</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getnodeclassesclasssupportedengineavailableresource">Get<wbr>Node<wbr>Classes<wbr>Class<wbr>Supported<wbr>Engine<wbr>Available<wbr>Resource[]</a></span>
     </dt>
@@ -925,7 +1104,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>engine</span>
+        <span id="engine_nodejs">
+<a href="#engine_nodejs" style="color: inherit; text-decoration: inherit;">engine</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -941,7 +1122,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>available<wbr>Resources</span>
+        <span id="availableresources_python">
+<a href="#availableresources_python" style="color: inherit; text-decoration: inherit;">available<wbr>Resources</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getnodeclassesclasssupportedengineavailableresource">List[Get<wbr>Node<wbr>Classes<wbr>Class<wbr>Supported<wbr>Engine<wbr>Available<wbr>Resource]</a></span>
     </dt>
@@ -950,7 +1133,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>engine</span>
+        <span id="engine_python">
+<a href="#engine_python" style="color: inherit; text-decoration: inherit;">engine</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -984,7 +1169,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Db<wbr>Node<wbr>Class</span>
+        <span id="dbnodeclass_csharp">
+<a href="#dbnodeclass_csharp" style="color: inherit; text-decoration: inherit;">Db<wbr>Node<wbr>Class</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1000,7 +1187,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Db<wbr>Node<wbr>Class</span>
+        <span id="dbnodeclass_go">
+<a href="#dbnodeclass_go" style="color: inherit; text-decoration: inherit;">Db<wbr>Node<wbr>Class</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1016,7 +1205,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>db<wbr>Node<wbr>Class</span>
+        <span id="dbnodeclass_nodejs">
+<a href="#dbnodeclass_nodejs" style="color: inherit; text-decoration: inherit;">db<wbr>Node<wbr>Class</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1032,7 +1223,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>db_<wbr>node_<wbr>class</span>
+        <span id="db_node_class_python">
+<a href="#db_node_class_python" style="color: inherit; text-decoration: inherit;">db_<wbr>node_<wbr>class</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

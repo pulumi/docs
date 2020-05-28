@@ -21,7 +21,26 @@ that connect VPCs together.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var routerInterfacesDs = Output.Create(AliCloud.Vpc.GetRouterInterfaces.InvokeAsync(new AliCloud.Vpc.GetRouterInterfacesArgs
+        {
+            NameRegex = "^testenv",
+            Status = "Active",
+        }));
+        this.FirstRouterInterfaceId = routerInterfacesDs.Apply(routerInterfacesDs => routerInterfacesDs.Interfaces[0].Id);
+    }
+
+    [Output("firstRouterInterfaceId")]
+    public Output<string> FirstRouterInterfaceId { get; set; }
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -94,7 +113,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ids</span>
+        <span id="ids_csharp">
+<a href="#ids_csharp" style="color: inherit; text-decoration: inherit;">Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -103,7 +124,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name<wbr>Regex</span>
+        <span id="nameregex_csharp">
+<a href="#nameregex_csharp" style="color: inherit; text-decoration: inherit;">Name<wbr>Regex</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -112,7 +135,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Opposite<wbr>Interface<wbr>Id</span>
+        <span id="oppositeinterfaceid_csharp">
+<a href="#oppositeinterfaceid_csharp" style="color: inherit; text-decoration: inherit;">Opposite<wbr>Interface<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -121,7 +146,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Opposite<wbr>Interface<wbr>Owner<wbr>Id</span>
+        <span id="oppositeinterfaceownerid_csharp">
+<a href="#oppositeinterfaceownerid_csharp" style="color: inherit; text-decoration: inherit;">Opposite<wbr>Interface<wbr>Owner<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -130,7 +157,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Output<wbr>File</span>
+        <span id="outputfile_csharp">
+<a href="#outputfile_csharp" style="color: inherit; text-decoration: inherit;">Output<wbr>File</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -138,7 +167,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Role</span>
+        <span id="role_csharp">
+<a href="#role_csharp" style="color: inherit; text-decoration: inherit;">Role</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -148,7 +179,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Router<wbr>Id</span>
+        <span id="routerid_csharp">
+<a href="#routerid_csharp" style="color: inherit; text-decoration: inherit;">Router<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -157,7 +190,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Router<wbr>Type</span>
+        <span id="routertype_csharp">
+<a href="#routertype_csharp" style="color: inherit; text-decoration: inherit;">Router<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -166,7 +201,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Specification</span>
+        <span id="specification_csharp">
+<a href="#specification_csharp" style="color: inherit; text-decoration: inherit;">Specification</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -175,7 +212,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Status</span>
+        <span id="status_csharp">
+<a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -191,7 +230,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ids</span>
+        <span id="ids_go">
+<a href="#ids_go" style="color: inherit; text-decoration: inherit;">Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -200,7 +241,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name<wbr>Regex</span>
+        <span id="nameregex_go">
+<a href="#nameregex_go" style="color: inherit; text-decoration: inherit;">Name<wbr>Regex</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -209,7 +252,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Opposite<wbr>Interface<wbr>Id</span>
+        <span id="oppositeinterfaceid_go">
+<a href="#oppositeinterfaceid_go" style="color: inherit; text-decoration: inherit;">Opposite<wbr>Interface<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -218,7 +263,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Opposite<wbr>Interface<wbr>Owner<wbr>Id</span>
+        <span id="oppositeinterfaceownerid_go">
+<a href="#oppositeinterfaceownerid_go" style="color: inherit; text-decoration: inherit;">Opposite<wbr>Interface<wbr>Owner<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -227,7 +274,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Output<wbr>File</span>
+        <span id="outputfile_go">
+<a href="#outputfile_go" style="color: inherit; text-decoration: inherit;">Output<wbr>File</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -235,7 +284,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Role</span>
+        <span id="role_go">
+<a href="#role_go" style="color: inherit; text-decoration: inherit;">Role</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -245,7 +296,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Router<wbr>Id</span>
+        <span id="routerid_go">
+<a href="#routerid_go" style="color: inherit; text-decoration: inherit;">Router<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -254,7 +307,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Router<wbr>Type</span>
+        <span id="routertype_go">
+<a href="#routertype_go" style="color: inherit; text-decoration: inherit;">Router<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -263,7 +318,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Specification</span>
+        <span id="specification_go">
+<a href="#specification_go" style="color: inherit; text-decoration: inherit;">Specification</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -272,7 +329,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Status</span>
+        <span id="status_go">
+<a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -288,7 +347,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>ids</span>
+        <span id="ids_nodejs">
+<a href="#ids_nodejs" style="color: inherit; text-decoration: inherit;">ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -297,7 +358,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name<wbr>Regex</span>
+        <span id="nameregex_nodejs">
+<a href="#nameregex_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Regex</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -306,7 +369,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>opposite<wbr>Interface<wbr>Id</span>
+        <span id="oppositeinterfaceid_nodejs">
+<a href="#oppositeinterfaceid_nodejs" style="color: inherit; text-decoration: inherit;">opposite<wbr>Interface<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -315,7 +380,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>opposite<wbr>Interface<wbr>Owner<wbr>Id</span>
+        <span id="oppositeinterfaceownerid_nodejs">
+<a href="#oppositeinterfaceownerid_nodejs" style="color: inherit; text-decoration: inherit;">opposite<wbr>Interface<wbr>Owner<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -324,7 +391,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>output<wbr>File</span>
+        <span id="outputfile_nodejs">
+<a href="#outputfile_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>File</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -332,7 +401,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>role</span>
+        <span id="role_nodejs">
+<a href="#role_nodejs" style="color: inherit; text-decoration: inherit;">role</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -342,7 +413,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>router<wbr>Id</span>
+        <span id="routerid_nodejs">
+<a href="#routerid_nodejs" style="color: inherit; text-decoration: inherit;">router<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -351,7 +424,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>router<wbr>Type</span>
+        <span id="routertype_nodejs">
+<a href="#routertype_nodejs" style="color: inherit; text-decoration: inherit;">router<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -360,7 +435,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>specification</span>
+        <span id="specification_nodejs">
+<a href="#specification_nodejs" style="color: inherit; text-decoration: inherit;">specification</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -369,7 +446,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>status</span>
+        <span id="status_nodejs">
+<a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -385,7 +464,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>ids</span>
+        <span id="ids_python">
+<a href="#ids_python" style="color: inherit; text-decoration: inherit;">ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -394,7 +475,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name_<wbr>regex</span>
+        <span id="name_regex_python">
+<a href="#name_regex_python" style="color: inherit; text-decoration: inherit;">name_<wbr>regex</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -403,7 +486,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>opposite_<wbr>interface_<wbr>id</span>
+        <span id="opposite_interface_id_python">
+<a href="#opposite_interface_id_python" style="color: inherit; text-decoration: inherit;">opposite_<wbr>interface_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -412,7 +497,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>opposite_<wbr>interface_<wbr>owner_<wbr>id</span>
+        <span id="opposite_interface_owner_id_python">
+<a href="#opposite_interface_owner_id_python" style="color: inherit; text-decoration: inherit;">opposite_<wbr>interface_<wbr>owner_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -421,7 +508,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>output_<wbr>file</span>
+        <span id="output_file_python">
+<a href="#output_file_python" style="color: inherit; text-decoration: inherit;">output_<wbr>file</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -429,7 +518,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>role</span>
+        <span id="role_python">
+<a href="#role_python" style="color: inherit; text-decoration: inherit;">role</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -439,7 +530,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>router_<wbr>id</span>
+        <span id="router_id_python">
+<a href="#router_id_python" style="color: inherit; text-decoration: inherit;">router_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -448,7 +541,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>router_<wbr>type</span>
+        <span id="router_type_python">
+<a href="#router_type_python" style="color: inherit; text-decoration: inherit;">router_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -457,7 +552,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>specification</span>
+        <span id="specification_python">
+<a href="#specification_python" style="color: inherit; text-decoration: inherit;">specification</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -466,7 +563,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>status</span>
+        <span id="status_python">
+<a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -495,7 +594,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -504,7 +605,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Ids</span>
+        <span id="ids_csharp">
+<a href="#ids_csharp" style="color: inherit; text-decoration: inherit;">Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -513,7 +616,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Interfaces</span>
+        <span id="interfaces_csharp">
+<a href="#interfaces_csharp" style="color: inherit; text-decoration: inherit;">Interfaces</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getrouterinterfacesinterface">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Vpc.<wbr>Outputs.<wbr>Get<wbr>Router<wbr>Interfaces<wbr>Interface&gt;</a></span>
     </dt>
@@ -522,7 +627,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Names</span>
+        <span id="names_csharp">
+<a href="#names_csharp" style="color: inherit; text-decoration: inherit;">Names</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -531,7 +638,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Name<wbr>Regex</span>
+        <span id="nameregex_csharp">
+<a href="#nameregex_csharp" style="color: inherit; text-decoration: inherit;">Name<wbr>Regex</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -539,7 +648,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Opposite<wbr>Interface<wbr>Id</span>
+        <span id="oppositeinterfaceid_csharp">
+<a href="#oppositeinterfaceid_csharp" style="color: inherit; text-decoration: inherit;">Opposite<wbr>Interface<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -548,7 +659,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Opposite<wbr>Interface<wbr>Owner<wbr>Id</span>
+        <span id="oppositeinterfaceownerid_csharp">
+<a href="#oppositeinterfaceownerid_csharp" style="color: inherit; text-decoration: inherit;">Opposite<wbr>Interface<wbr>Owner<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -557,7 +670,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Output<wbr>File</span>
+        <span id="outputfile_csharp">
+<a href="#outputfile_csharp" style="color: inherit; text-decoration: inherit;">Output<wbr>File</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -565,7 +680,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Role</span>
+        <span id="role_csharp">
+<a href="#role_csharp" style="color: inherit; text-decoration: inherit;">Role</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -574,7 +691,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Router<wbr>Id</span>
+        <span id="routerid_csharp">
+<a href="#routerid_csharp" style="color: inherit; text-decoration: inherit;">Router<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -583,7 +702,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Router<wbr>Type</span>
+        <span id="routertype_csharp">
+<a href="#routertype_csharp" style="color: inherit; text-decoration: inherit;">Router<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -592,7 +713,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Specification</span>
+        <span id="specification_csharp">
+<a href="#specification_csharp" style="color: inherit; text-decoration: inherit;">Specification</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -601,7 +724,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Status</span>
+        <span id="status_csharp">
+<a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -617,7 +742,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -626,7 +753,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Ids</span>
+        <span id="ids_go">
+<a href="#ids_go" style="color: inherit; text-decoration: inherit;">Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -635,7 +764,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Interfaces</span>
+        <span id="interfaces_go">
+<a href="#interfaces_go" style="color: inherit; text-decoration: inherit;">Interfaces</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getrouterinterfacesinterface">[]Get<wbr>Router<wbr>Interfaces<wbr>Interface</a></span>
     </dt>
@@ -644,7 +775,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Names</span>
+        <span id="names_go">
+<a href="#names_go" style="color: inherit; text-decoration: inherit;">Names</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -653,7 +786,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Name<wbr>Regex</span>
+        <span id="nameregex_go">
+<a href="#nameregex_go" style="color: inherit; text-decoration: inherit;">Name<wbr>Regex</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -661,7 +796,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Opposite<wbr>Interface<wbr>Id</span>
+        <span id="oppositeinterfaceid_go">
+<a href="#oppositeinterfaceid_go" style="color: inherit; text-decoration: inherit;">Opposite<wbr>Interface<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -670,7 +807,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Opposite<wbr>Interface<wbr>Owner<wbr>Id</span>
+        <span id="oppositeinterfaceownerid_go">
+<a href="#oppositeinterfaceownerid_go" style="color: inherit; text-decoration: inherit;">Opposite<wbr>Interface<wbr>Owner<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -679,7 +818,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Output<wbr>File</span>
+        <span id="outputfile_go">
+<a href="#outputfile_go" style="color: inherit; text-decoration: inherit;">Output<wbr>File</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -687,7 +828,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Role</span>
+        <span id="role_go">
+<a href="#role_go" style="color: inherit; text-decoration: inherit;">Role</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -696,7 +839,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Router<wbr>Id</span>
+        <span id="routerid_go">
+<a href="#routerid_go" style="color: inherit; text-decoration: inherit;">Router<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -705,7 +850,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Router<wbr>Type</span>
+        <span id="routertype_go">
+<a href="#routertype_go" style="color: inherit; text-decoration: inherit;">Router<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -714,7 +861,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Specification</span>
+        <span id="specification_go">
+<a href="#specification_go" style="color: inherit; text-decoration: inherit;">Specification</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -723,7 +872,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Status</span>
+        <span id="status_go">
+<a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -739,7 +890,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -748,7 +901,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>ids</span>
+        <span id="ids_nodejs">
+<a href="#ids_nodejs" style="color: inherit; text-decoration: inherit;">ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -757,7 +912,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>interfaces</span>
+        <span id="interfaces_nodejs">
+<a href="#interfaces_nodejs" style="color: inherit; text-decoration: inherit;">interfaces</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getrouterinterfacesinterface">Get<wbr>Router<wbr>Interfaces<wbr>Interface[]</a></span>
     </dt>
@@ -766,7 +923,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>names</span>
+        <span id="names_nodejs">
+<a href="#names_nodejs" style="color: inherit; text-decoration: inherit;">names</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -775,7 +934,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>name<wbr>Regex</span>
+        <span id="nameregex_nodejs">
+<a href="#nameregex_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Regex</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -783,7 +944,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>opposite<wbr>Interface<wbr>Id</span>
+        <span id="oppositeinterfaceid_nodejs">
+<a href="#oppositeinterfaceid_nodejs" style="color: inherit; text-decoration: inherit;">opposite<wbr>Interface<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -792,7 +955,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>opposite<wbr>Interface<wbr>Owner<wbr>Id</span>
+        <span id="oppositeinterfaceownerid_nodejs">
+<a href="#oppositeinterfaceownerid_nodejs" style="color: inherit; text-decoration: inherit;">opposite<wbr>Interface<wbr>Owner<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -801,7 +966,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>output<wbr>File</span>
+        <span id="outputfile_nodejs">
+<a href="#outputfile_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>File</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -809,7 +976,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>role</span>
+        <span id="role_nodejs">
+<a href="#role_nodejs" style="color: inherit; text-decoration: inherit;">role</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -818,7 +987,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>router<wbr>Id</span>
+        <span id="routerid_nodejs">
+<a href="#routerid_nodejs" style="color: inherit; text-decoration: inherit;">router<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -827,7 +998,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>router<wbr>Type</span>
+        <span id="routertype_nodejs">
+<a href="#routertype_nodejs" style="color: inherit; text-decoration: inherit;">router<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -836,7 +1009,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>specification</span>
+        <span id="specification_nodejs">
+<a href="#specification_nodejs" style="color: inherit; text-decoration: inherit;">specification</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -845,7 +1020,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>status</span>
+        <span id="status_nodejs">
+<a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -861,7 +1038,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -870,7 +1049,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>ids</span>
+        <span id="ids_python">
+<a href="#ids_python" style="color: inherit; text-decoration: inherit;">ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -879,7 +1060,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>interfaces</span>
+        <span id="interfaces_python">
+<a href="#interfaces_python" style="color: inherit; text-decoration: inherit;">interfaces</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getrouterinterfacesinterface">List[Get<wbr>Router<wbr>Interfaces<wbr>Interface]</a></span>
     </dt>
@@ -888,7 +1071,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>names</span>
+        <span id="names_python">
+<a href="#names_python" style="color: inherit; text-decoration: inherit;">names</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -897,7 +1082,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>name_<wbr>regex</span>
+        <span id="name_regex_python">
+<a href="#name_regex_python" style="color: inherit; text-decoration: inherit;">name_<wbr>regex</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -905,7 +1092,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>opposite_<wbr>interface_<wbr>id</span>
+        <span id="opposite_interface_id_python">
+<a href="#opposite_interface_id_python" style="color: inherit; text-decoration: inherit;">opposite_<wbr>interface_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -914,7 +1103,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>opposite_<wbr>interface_<wbr>owner_<wbr>id</span>
+        <span id="opposite_interface_owner_id_python">
+<a href="#opposite_interface_owner_id_python" style="color: inherit; text-decoration: inherit;">opposite_<wbr>interface_<wbr>owner_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -923,7 +1114,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>output_<wbr>file</span>
+        <span id="output_file_python">
+<a href="#output_file_python" style="color: inherit; text-decoration: inherit;">output_<wbr>file</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -931,7 +1124,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>role</span>
+        <span id="role_python">
+<a href="#role_python" style="color: inherit; text-decoration: inherit;">role</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -940,7 +1135,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>router_<wbr>id</span>
+        <span id="router_id_python">
+<a href="#router_id_python" style="color: inherit; text-decoration: inherit;">router_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -949,7 +1146,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>router_<wbr>type</span>
+        <span id="router_type_python">
+<a href="#router_type_python" style="color: inherit; text-decoration: inherit;">router_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -958,7 +1157,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>specification</span>
+        <span id="specification_python">
+<a href="#specification_python" style="color: inherit; text-decoration: inherit;">specification</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -967,7 +1168,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>status</span>
+        <span id="status_python">
+<a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1007,7 +1210,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Access<wbr>Point<wbr>Id</span>
+        <span id="accesspointid_csharp">
+<a href="#accesspointid_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Point<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1016,7 +1221,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Creation<wbr>Time</span>
+        <span id="creationtime_csharp">
+<a href="#creationtime_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1025,7 +1232,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Description</span>
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1034,7 +1243,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Health<wbr>Check<wbr>Source<wbr>Ip</span>
+        <span id="healthchecksourceip_csharp">
+<a href="#healthchecksourceip_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Source<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1043,7 +1254,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Health<wbr>Check<wbr>Target<wbr>Ip</span>
+        <span id="healthchecktargetip_csharp">
+<a href="#healthchecktargetip_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Target<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1052,7 +1265,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1061,7 +1276,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1070,7 +1287,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Opposite<wbr>Interface<wbr>Id</span>
+        <span id="oppositeinterfaceid_csharp">
+<a href="#oppositeinterfaceid_csharp" style="color: inherit; text-decoration: inherit;">Opposite<wbr>Interface<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1079,7 +1298,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Opposite<wbr>Interface<wbr>Owner<wbr>Id</span>
+        <span id="oppositeinterfaceownerid_csharp">
+<a href="#oppositeinterfaceownerid_csharp" style="color: inherit; text-decoration: inherit;">Opposite<wbr>Interface<wbr>Owner<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1088,7 +1309,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Opposite<wbr>Region<wbr>Id</span>
+        <span id="oppositeregionid_csharp">
+<a href="#oppositeregionid_csharp" style="color: inherit; text-decoration: inherit;">Opposite<wbr>Region<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1097,7 +1320,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Opposite<wbr>Router<wbr>Id</span>
+        <span id="oppositerouterid_csharp">
+<a href="#oppositerouterid_csharp" style="color: inherit; text-decoration: inherit;">Opposite<wbr>Router<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1106,7 +1331,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Opposite<wbr>Router<wbr>Type</span>
+        <span id="oppositeroutertype_csharp">
+<a href="#oppositeroutertype_csharp" style="color: inherit; text-decoration: inherit;">Opposite<wbr>Router<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1115,7 +1342,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Role</span>
+        <span id="role_csharp">
+<a href="#role_csharp" style="color: inherit; text-decoration: inherit;">Role</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1125,7 +1354,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Router<wbr>Id</span>
+        <span id="routerid_csharp">
+<a href="#routerid_csharp" style="color: inherit; text-decoration: inherit;">Router<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1134,7 +1365,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Router<wbr>Type</span>
+        <span id="routertype_csharp">
+<a href="#routertype_csharp" style="color: inherit; text-decoration: inherit;">Router<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1143,7 +1376,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Specification</span>
+        <span id="specification_csharp">
+<a href="#specification_csharp" style="color: inherit; text-decoration: inherit;">Specification</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1152,7 +1387,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Status</span>
+        <span id="status_csharp">
+<a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1161,7 +1398,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Vpc<wbr>Id</span>
+        <span id="vpcid_csharp">
+<a href="#vpcid_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1177,7 +1416,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Access<wbr>Point<wbr>Id</span>
+        <span id="accesspointid_go">
+<a href="#accesspointid_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Point<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1186,7 +1427,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Creation<wbr>Time</span>
+        <span id="creationtime_go">
+<a href="#creationtime_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1195,7 +1438,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Description</span>
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1204,7 +1449,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Health<wbr>Check<wbr>Source<wbr>Ip</span>
+        <span id="healthchecksourceip_go">
+<a href="#healthchecksourceip_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Source<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1213,7 +1460,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Health<wbr>Check<wbr>Target<wbr>Ip</span>
+        <span id="healthchecktargetip_go">
+<a href="#healthchecktargetip_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Target<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1222,7 +1471,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1231,7 +1482,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1240,7 +1493,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Opposite<wbr>Interface<wbr>Id</span>
+        <span id="oppositeinterfaceid_go">
+<a href="#oppositeinterfaceid_go" style="color: inherit; text-decoration: inherit;">Opposite<wbr>Interface<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1249,7 +1504,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Opposite<wbr>Interface<wbr>Owner<wbr>Id</span>
+        <span id="oppositeinterfaceownerid_go">
+<a href="#oppositeinterfaceownerid_go" style="color: inherit; text-decoration: inherit;">Opposite<wbr>Interface<wbr>Owner<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1258,7 +1515,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Opposite<wbr>Region<wbr>Id</span>
+        <span id="oppositeregionid_go">
+<a href="#oppositeregionid_go" style="color: inherit; text-decoration: inherit;">Opposite<wbr>Region<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1267,7 +1526,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Opposite<wbr>Router<wbr>Id</span>
+        <span id="oppositerouterid_go">
+<a href="#oppositerouterid_go" style="color: inherit; text-decoration: inherit;">Opposite<wbr>Router<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1276,7 +1537,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Opposite<wbr>Router<wbr>Type</span>
+        <span id="oppositeroutertype_go">
+<a href="#oppositeroutertype_go" style="color: inherit; text-decoration: inherit;">Opposite<wbr>Router<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1285,7 +1548,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Role</span>
+        <span id="role_go">
+<a href="#role_go" style="color: inherit; text-decoration: inherit;">Role</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1295,7 +1560,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Router<wbr>Id</span>
+        <span id="routerid_go">
+<a href="#routerid_go" style="color: inherit; text-decoration: inherit;">Router<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1304,7 +1571,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Router<wbr>Type</span>
+        <span id="routertype_go">
+<a href="#routertype_go" style="color: inherit; text-decoration: inherit;">Router<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1313,7 +1582,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Specification</span>
+        <span id="specification_go">
+<a href="#specification_go" style="color: inherit; text-decoration: inherit;">Specification</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1322,7 +1593,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Status</span>
+        <span id="status_go">
+<a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1331,7 +1604,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Vpc<wbr>Id</span>
+        <span id="vpcid_go">
+<a href="#vpcid_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1347,7 +1622,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>access<wbr>Point<wbr>Id</span>
+        <span id="accesspointid_nodejs">
+<a href="#accesspointid_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Point<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1356,7 +1633,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>creation<wbr>Time</span>
+        <span id="creationtime_nodejs">
+<a href="#creationtime_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1365,7 +1644,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>description</span>
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1374,7 +1655,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>health<wbr>Check<wbr>Source<wbr>Ip</span>
+        <span id="healthchecksourceip_nodejs">
+<a href="#healthchecksourceip_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Check<wbr>Source<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1383,7 +1666,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>health<wbr>Check<wbr>Target<wbr>Ip</span>
+        <span id="healthchecktargetip_nodejs">
+<a href="#healthchecktargetip_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Check<wbr>Target<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1392,7 +1677,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1401,7 +1688,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1410,7 +1699,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>opposite<wbr>Interface<wbr>Id</span>
+        <span id="oppositeinterfaceid_nodejs">
+<a href="#oppositeinterfaceid_nodejs" style="color: inherit; text-decoration: inherit;">opposite<wbr>Interface<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1419,7 +1710,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>opposite<wbr>Interface<wbr>Owner<wbr>Id</span>
+        <span id="oppositeinterfaceownerid_nodejs">
+<a href="#oppositeinterfaceownerid_nodejs" style="color: inherit; text-decoration: inherit;">opposite<wbr>Interface<wbr>Owner<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1428,7 +1721,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>opposite<wbr>Region<wbr>Id</span>
+        <span id="oppositeregionid_nodejs">
+<a href="#oppositeregionid_nodejs" style="color: inherit; text-decoration: inherit;">opposite<wbr>Region<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1437,7 +1732,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>opposite<wbr>Router<wbr>Id</span>
+        <span id="oppositerouterid_nodejs">
+<a href="#oppositerouterid_nodejs" style="color: inherit; text-decoration: inherit;">opposite<wbr>Router<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1446,7 +1743,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>opposite<wbr>Router<wbr>Type</span>
+        <span id="oppositeroutertype_nodejs">
+<a href="#oppositeroutertype_nodejs" style="color: inherit; text-decoration: inherit;">opposite<wbr>Router<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1455,7 +1754,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>role</span>
+        <span id="role_nodejs">
+<a href="#role_nodejs" style="color: inherit; text-decoration: inherit;">role</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1465,7 +1766,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>router<wbr>Id</span>
+        <span id="routerid_nodejs">
+<a href="#routerid_nodejs" style="color: inherit; text-decoration: inherit;">router<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1474,7 +1777,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>router<wbr>Type</span>
+        <span id="routertype_nodejs">
+<a href="#routertype_nodejs" style="color: inherit; text-decoration: inherit;">router<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1483,7 +1788,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>specification</span>
+        <span id="specification_nodejs">
+<a href="#specification_nodejs" style="color: inherit; text-decoration: inherit;">specification</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1492,7 +1799,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>status</span>
+        <span id="status_nodejs">
+<a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1501,7 +1810,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>vpc<wbr>Id</span>
+        <span id="vpcid_nodejs">
+<a href="#vpcid_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1517,7 +1828,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>access_<wbr>point_<wbr>id</span>
+        <span id="access_point_id_python">
+<a href="#access_point_id_python" style="color: inherit; text-decoration: inherit;">access_<wbr>point_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1526,7 +1839,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>creation_<wbr>time</span>
+        <span id="creation_time_python">
+<a href="#creation_time_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1535,7 +1850,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>description</span>
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1544,7 +1861,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>health_<wbr>check_<wbr>source_<wbr>ip</span>
+        <span id="health_check_source_ip_python">
+<a href="#health_check_source_ip_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check_<wbr>source_<wbr>ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1553,7 +1872,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>health_<wbr>check_<wbr>target_<wbr>ip</span>
+        <span id="health_check_target_ip_python">
+<a href="#health_check_target_ip_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check_<wbr>target_<wbr>ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1562,7 +1883,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1571,7 +1894,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1580,7 +1905,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>opposite<wbr>Region<wbr>Id</span>
+        <span id="oppositeregionid_python">
+<a href="#oppositeregionid_python" style="color: inherit; text-decoration: inherit;">opposite<wbr>Region<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1589,7 +1916,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>opposite_<wbr>interface_<wbr>id</span>
+        <span id="opposite_interface_id_python">
+<a href="#opposite_interface_id_python" style="color: inherit; text-decoration: inherit;">opposite_<wbr>interface_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1598,7 +1927,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>opposite_<wbr>interface_<wbr>owner_<wbr>id</span>
+        <span id="opposite_interface_owner_id_python">
+<a href="#opposite_interface_owner_id_python" style="color: inherit; text-decoration: inherit;">opposite_<wbr>interface_<wbr>owner_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1607,7 +1938,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>opposite_<wbr>router_<wbr>id</span>
+        <span id="opposite_router_id_python">
+<a href="#opposite_router_id_python" style="color: inherit; text-decoration: inherit;">opposite_<wbr>router_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1616,7 +1949,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>opposite_<wbr>router_<wbr>type</span>
+        <span id="opposite_router_type_python">
+<a href="#opposite_router_type_python" style="color: inherit; text-decoration: inherit;">opposite_<wbr>router_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1625,7 +1960,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>role</span>
+        <span id="role_python">
+<a href="#role_python" style="color: inherit; text-decoration: inherit;">role</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1635,7 +1972,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>router_<wbr>id</span>
+        <span id="router_id_python">
+<a href="#router_id_python" style="color: inherit; text-decoration: inherit;">router_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1644,7 +1983,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>router_<wbr>type</span>
+        <span id="router_type_python">
+<a href="#router_type_python" style="color: inherit; text-decoration: inherit;">router_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1653,7 +1994,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>specification</span>
+        <span id="specification_python">
+<a href="#specification_python" style="color: inherit; text-decoration: inherit;">specification</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1662,7 +2005,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>status</span>
+        <span id="status_python">
+<a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1671,7 +2016,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>vpc_<wbr>id</span>
+        <span id="vpc_id_python">
+<a href="#vpc_id_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

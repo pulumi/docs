@@ -57,7 +57,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Load<wbr>Balancer<wbr>Id</span>
+        <span id="loadbalancerid_csharp">
+<a href="#loadbalancerid_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -66,7 +68,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ids</span>
+        <span id="ids_csharp">
+<a href="#ids_csharp" style="color: inherit; text-decoration: inherit;">Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -75,7 +79,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Output<wbr>File</span>
+        <span id="outputfile_csharp">
+<a href="#outputfile_csharp" style="color: inherit; text-decoration: inherit;">Output<wbr>File</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -90,7 +96,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Load<wbr>Balancer<wbr>Id</span>
+        <span id="loadbalancerid_go">
+<a href="#loadbalancerid_go" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -99,7 +107,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ids</span>
+        <span id="ids_go">
+<a href="#ids_go" style="color: inherit; text-decoration: inherit;">Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -108,7 +118,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Output<wbr>File</span>
+        <span id="outputfile_go">
+<a href="#outputfile_go" style="color: inherit; text-decoration: inherit;">Output<wbr>File</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -123,7 +135,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>load<wbr>Balancer<wbr>Id</span>
+        <span id="loadbalancerid_nodejs">
+<a href="#loadbalancerid_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -132,7 +146,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>ids</span>
+        <span id="ids_nodejs">
+<a href="#ids_nodejs" style="color: inherit; text-decoration: inherit;">ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -141,7 +157,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>output<wbr>File</span>
+        <span id="outputfile_nodejs">
+<a href="#outputfile_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>File</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -156,7 +174,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>load_<wbr>balancer_<wbr>id</span>
+        <span id="load_balancer_id_python">
+<a href="#load_balancer_id_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -165,7 +185,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>ids</span>
+        <span id="ids_python">
+<a href="#ids_python" style="color: inherit; text-decoration: inherit;">ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -174,7 +196,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>output_<wbr>file</span>
+        <span id="output_file_python">
+<a href="#output_file_python" style="color: inherit; text-decoration: inherit;">output_<wbr>file</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -202,7 +226,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Backend<wbr>Servers</span>
+        <span id="backendservers_csharp">
+<a href="#backendservers_csharp" style="color: inherit; text-decoration: inherit;">Backend<wbr>Servers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getbackendserversbackendserver">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Slb.<wbr>Outputs.<wbr>Get<wbr>Backend<wbr>Servers<wbr>Backend<wbr>Server&gt;</a></span>
     </dt>
@@ -210,7 +236,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -219,7 +247,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Ids</span>
+        <span id="ids_csharp">
+<a href="#ids_csharp" style="color: inherit; text-decoration: inherit;">Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -227,7 +257,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Load<wbr>Balancer<wbr>Id</span>
+        <span id="loadbalancerid_csharp">
+<a href="#loadbalancerid_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -235,7 +267,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Output<wbr>File</span>
+        <span id="outputfile_csharp">
+<a href="#outputfile_csharp" style="color: inherit; text-decoration: inherit;">Output<wbr>File</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -250,7 +284,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Backend<wbr>Servers</span>
+        <span id="backendservers_go">
+<a href="#backendservers_go" style="color: inherit; text-decoration: inherit;">Backend<wbr>Servers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getbackendserversbackendserver">[]Get<wbr>Backend<wbr>Servers<wbr>Backend<wbr>Server</a></span>
     </dt>
@@ -258,7 +294,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -267,7 +305,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Ids</span>
+        <span id="ids_go">
+<a href="#ids_go" style="color: inherit; text-decoration: inherit;">Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -275,7 +315,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Load<wbr>Balancer<wbr>Id</span>
+        <span id="loadbalancerid_go">
+<a href="#loadbalancerid_go" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -283,7 +325,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Output<wbr>File</span>
+        <span id="outputfile_go">
+<a href="#outputfile_go" style="color: inherit; text-decoration: inherit;">Output<wbr>File</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -298,7 +342,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>backend<wbr>Servers</span>
+        <span id="backendservers_nodejs">
+<a href="#backendservers_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Servers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getbackendserversbackendserver">Get<wbr>Backend<wbr>Servers<wbr>Backend<wbr>Server[]</a></span>
     </dt>
@@ -306,7 +352,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -315,7 +363,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>ids</span>
+        <span id="ids_nodejs">
+<a href="#ids_nodejs" style="color: inherit; text-decoration: inherit;">ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -323,7 +373,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>load<wbr>Balancer<wbr>Id</span>
+        <span id="loadbalancerid_nodejs">
+<a href="#loadbalancerid_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -331,7 +383,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>output<wbr>File</span>
+        <span id="outputfile_nodejs">
+<a href="#outputfile_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>File</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -346,7 +400,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>backend_<wbr>servers</span>
+        <span id="backend_servers_python">
+<a href="#backend_servers_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>servers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getbackendserversbackendserver">List[Get<wbr>Backend<wbr>Servers<wbr>Backend<wbr>Server]</a></span>
     </dt>
@@ -354,7 +410,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -363,7 +421,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>ids</span>
+        <span id="ids_python">
+<a href="#ids_python" style="color: inherit; text-decoration: inherit;">ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -371,7 +431,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>load_<wbr>balancer_<wbr>id</span>
+        <span id="load_balancer_id_python">
+<a href="#load_balancer_id_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -379,7 +441,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>output_<wbr>file</span>
+        <span id="output_file_python">
+<a href="#output_file_python" style="color: inherit; text-decoration: inherit;">output_<wbr>file</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -418,7 +482,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -427,7 +493,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Server<wbr>Type</span>
+        <span id="servertype_csharp">
+<a href="#servertype_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -436,7 +504,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Weight</span>
+        <span id="weight_csharp">
+<a href="#weight_csharp" style="color: inherit; text-decoration: inherit;">Weight</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -452,7 +522,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -461,7 +533,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Server<wbr>Type</span>
+        <span id="servertype_go">
+<a href="#servertype_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -470,7 +544,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Weight</span>
+        <span id="weight_go">
+<a href="#weight_go" style="color: inherit; text-decoration: inherit;">Weight</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -486,7 +562,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -495,7 +573,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>server<wbr>Type</span>
+        <span id="servertype_nodejs">
+<a href="#servertype_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -504,7 +584,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>weight</span>
+        <span id="weight_nodejs">
+<a href="#weight_nodejs" style="color: inherit; text-decoration: inherit;">weight</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -520,7 +602,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -529,7 +613,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>server_<wbr>type</span>
+        <span id="server_type_python">
+<a href="#server_type_python" style="color: inherit; text-decoration: inherit;">server_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -538,7 +624,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>weight</span>
+        <span id="weight_python">
+<a href="#weight_python" style="color: inherit; text-decoration: inherit;">weight</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>

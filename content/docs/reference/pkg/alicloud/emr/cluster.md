@@ -14,724 +14,9 @@ Provides a EMR Cluster resource. With this you can create, read, and release  EM
 
 > **NOTE:** Available in 1.57.0+.
 
-
-
 {{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### 1. Create A Cluster
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_alicloud as alicloud
-
-default_main_versions = alicloud.emr.get_main_versions()
-default_instance_types = alicloud.emr.get_instance_types(destination_resource="InstanceType",
-    cluster_type=default_main_versions.main_versions[0]["clusterTypes"],
-    support_local_storage=False,
-    instance_charge_type="PostPaid",
-    support_node_types=[
-        "MASTER",
-        "CORE",
-        "TASK",
-    ])
-data_disk = alicloud.emr.get_disk_types(destination_resource="DataDisk",
-    cluster_type=default_main_versions.main_versions[0]["clusterTypes"],
-    instance_charge_type="PostPaid",
-    instance_type=default_instance_types.types[0]["id"],
-    zone_id=default_instance_types.types[0]["zone_id"])
-system_disk = alicloud.emr.get_disk_types(destination_resource="SystemDisk",
-    cluster_type=default_main_versions.main_versions[0]["clusterTypes"],
-    instance_charge_type="PostPaid",
-    instance_type=default_instance_types.types[0]["id"],
-    zone_id=default_instance_types.types[0]["zone_id"])
-vpc = []
-for range in [{"value": i} for i in range(0, 1 if var.vpc_id ==  else 0 == True)]:
-    vpc.append(alicloud.vpc.Network(f"vpc-{range['value']}", cidr_block=var["vpc_cidr"]))
-default_security_group = []
-for range in [{"value": i} for i in range(0, 1 if var.security_group_id ==  else 0 == True)]:
-    default_security_group.append(alicloud.ecs.SecurityGroup(f"defaultSecurityGroup-{range['value']}", vpc_id=vpc["id"] if var["vpc_id"] == "" else var["vpc_id"]))
-# VSwitch Resource for Module
-vswitch = []
-for range in [{"value": i} for i in range(0, 1 if var.vswitch_id ==  else 0 == True)]:
-    vswitch.append(alicloud.vpc.Switch(f"vswitch-{range['value']}",
-        availability_zone=default_instance_types.types[0]["zone_id"] if var["availability_zone"] == "" else var["availability_zone"],
-        cidr_block=var["vswitch_cidr"],
-        vpc_id=vpc["id"] if var["vpc_id"] == "" else var["vpc_id"]))
-# Ram role Resource for Module
-default_role = alicloud.ram.Role("defaultRole",
-    document="""    {
-        "Statement": [
-        {
-            "Action": "sts:AssumeRole",
-            "Effect": "Allow",
-            "Principal": {
-            "Service": [
-                "emr.aliyuncs.com", 
-                "ecs.aliyuncs.com"
-            ]
-            }
-        }
-        ],
-        "Version": "1"
-    }
-""",
-    description="this is a role test.",
-    force=True)
-default_cluster = alicloud.emr.Cluster("defaultCluster",
-    emr_ver=default_main_versions.main_versions[0]["emrVersion"],
-    cluster_type=default_main_versions.main_versions[0]["clusterTypes"],
-    host_group=[
-        {
-            "hostGroupName": "master_group",
-            "hostGroupType": "MASTER",
-            "nodeCount": "2",
-            "instanceType": default_instance_types.types[0]["id"],
-            "diskType": data_disk.types[0]["value"],
-            "diskCapacity": data_disk.types[0]["min"] if data_disk.types[0]["min"] > 160 else 160,
-            "diskCount": "1",
-            "sysDiskType": system_disk.types[0]["value"],
-            "sysDiskCapacity": system_disk.types[0]["min"] if system_disk.types[0]["min"] > 160 else 160,
-        },
-        {
-            "hostGroupName": "core_group",
-            "hostGroupType": "CORE",
-            "nodeCount": "3",
-            "instanceType": default_instance_types.types[0]["id"],
-            "diskType": data_disk.types[0]["value"],
-            "diskCapacity": data_disk.types[0]["min"] if data_disk.types[0]["min"] > 160 else 160,
-            "diskCount": "4",
-            "sysDiskType": system_disk.types[0]["value"],
-            "sysDiskCapacity": system_disk.types[0]["min"] if system_disk.types[0]["min"] > 160 else 160,
-        },
-        {
-            "hostGroupName": "task_group",
-            "hostGroupType": "TASK",
-            "nodeCount": "2",
-            "instanceType": default_instance_types.types[0]["id"],
-            "diskType": data_disk.types[0]["value"],
-            "diskCapacity": data_disk.types[0]["min"] if data_disk.types[0]["min"] > 160 else 160,
-            "diskCount": "4",
-            "sysDiskType": system_disk.types[0]["value"],
-            "sysDiskCapacity": system_disk.types[0]["min"] if system_disk.types[0]["min"] > 160 else 160,
-        },
-    ],
-    high_availability_enable=True,
-    zone_id=default_instance_types.types[0]["zone_id"],
-    security_group_id=default_security_group["id"] if var["security_group_id"] == "" else var["security_group_id"],
-    is_open_public_ip=True,
-    charge_type="PostPaid",
-    vswitch_id=vswitch["id"] if var["vswitch_id"] == "" else var["vswitch_id"],
-    user_defined_emr_ecs_role=default_role.name,
-    ssh_enable=True,
-    master_pwd="ABCtest1234!")
-```
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as alicloud from "@pulumi/alicloud";
-
-const defaultMainVersions = alicloud.emr.getMainVersions({});
-const defaultInstanceTypes = defaultMainVersions.then(defaultMainVersions => alicloud.emr.getInstanceTypes({
-    destinationResource: "InstanceType",
-    clusterType: defaultMainVersions.mainVersions[0].clusterTypes[0],
-    supportLocalStorage: false,
-    instanceChargeType: "PostPaid",
-    supportNodeTypes: [
-        "MASTER",
-        "CORE",
-        "TASK",
-    ],
-}));
-const dataDisk = Promise.all([defaultMainVersions, defaultInstanceTypes, defaultInstanceTypes]).then(([defaultMainVersions, defaultInstanceTypes, defaultInstanceTypes1]) => alicloud.emr.getDiskTypes({
-    destinationResource: "DataDisk",
-    clusterType: defaultMainVersions.mainVersions[0].clusterTypes[0],
-    instanceChargeType: "PostPaid",
-    instanceType: defaultInstanceTypes.types[0].id,
-    zoneId: defaultInstanceTypes1.types[0].zoneId,
-}));
-const systemDisk = Promise.all([defaultMainVersions, defaultInstanceTypes, defaultInstanceTypes]).then(([defaultMainVersions, defaultInstanceTypes, defaultInstanceTypes1]) => alicloud.emr.getDiskTypes({
-    destinationResource: "SystemDisk",
-    clusterType: defaultMainVersions.mainVersions[0].clusterTypes[0],
-    instanceChargeType: "PostPaid",
-    instanceType: defaultInstanceTypes.types[0].id,
-    zoneId: defaultInstanceTypes1.types[0].zoneId,
-}));
-const vpc: alicloud.vpc.Network[];
-for (const range = {value: 0}; range.value < (var.vpc_id == "" ? 1 : 0 == true); range.value++) {
-    vpc.push(new alicloud.vpc.Network(`vpc-${range.value}`, {cidrBlock: var.vpc_cidr}));
-}
-const defaultSecurityGroup: alicloud.ecs.SecurityGroup[];
-for (const range = {value: 0}; range.value < (var.security_group_id == "" ? 1 : 0 == true); range.value++) {
-    defaultSecurityGroup.push(new alicloud.ecs.SecurityGroup(`defaultSecurityGroup-${range.value}`, {vpcId: var.vpc_id == "" ? vpc.id : var.vpc_id}));
-}
-// VSwitch Resource for Module
-const vswitch: alicloud.vpc.Switch[];
-for (const range = {value: 0}; range.value < (var.vswitch_id == "" ? 1 : 0 == true); range.value++) {
-    vswitch.push(new alicloud.vpc.Switch(`vswitch-${range.value}`, {
-        availabilityZone: var.availability_zone == "" ? defaultInstanceTypes.then(defaultInstanceTypes => defaultInstanceTypes.types[0].zoneId) : var.availability_zone,
-        cidrBlock: var.vswitch_cidr,
-        vpcId: var.vpc_id == "" ? vpc.id : var.vpc_id,
-    }));
-}
-// Ram role Resource for Module
-const defaultRole = new alicloud.ram.Role("defaultRole", {
-    document: `    {
-        "Statement": [
-        {
-            "Action": "sts:AssumeRole",
-            "Effect": "Allow",
-            "Principal": {
-            "Service": [
-                "emr.aliyuncs.com", 
-                "ecs.aliyuncs.com"
-            ]
-            }
-        }
-        ],
-        "Version": "1"
-    }
-`,
-    description: "this is a role test.",
-    force: true,
-});
-const defaultCluster = new alicloud.emr.Cluster("defaultCluster", {
-    emrVer: defaultMainVersions.then(defaultMainVersions => defaultMainVersions.mainVersions[0].emrVersion),
-    clusterType: defaultMainVersions.then(defaultMainVersions => defaultMainVersions.mainVersions[0].clusterTypes[0]),
-    host_group: [
-        {
-            hostGroupName: "master_group",
-            hostGroupType: "MASTER",
-            nodeCount: "2",
-            instanceType: defaultInstanceTypes.then(defaultInstanceTypes => defaultInstanceTypes.types[0].id),
-            diskType: dataDisk.then(dataDisk => dataDisk.types[0].value),
-            diskCapacity: Promise.all([dataDisk, dataDisk]).then(([dataDisk, dataDisk1]) => dataDisk.types[0].min > 160 ? dataDisk1.types[0].min : 160),
-            diskCount: "1",
-            sysDiskType: systemDisk.then(systemDisk => systemDisk.types[0].value),
-            sysDiskCapacity: Promise.all([systemDisk, systemDisk]).then(([systemDisk, systemDisk1]) => systemDisk.types[0].min > 160 ? systemDisk1.types[0].min : 160),
-        },
-        {
-            hostGroupName: "core_group",
-            hostGroupType: "CORE",
-            nodeCount: "3",
-            instanceType: defaultInstanceTypes.then(defaultInstanceTypes => defaultInstanceTypes.types[0].id),
-            diskType: dataDisk.then(dataDisk => dataDisk.types[0].value),
-            diskCapacity: Promise.all([dataDisk, dataDisk]).then(([dataDisk, dataDisk1]) => dataDisk.types[0].min > 160 ? dataDisk1.types[0].min : 160),
-            diskCount: "4",
-            sysDiskType: systemDisk.then(systemDisk => systemDisk.types[0].value),
-            sysDiskCapacity: Promise.all([systemDisk, systemDisk]).then(([systemDisk, systemDisk1]) => systemDisk.types[0].min > 160 ? systemDisk1.types[0].min : 160),
-        },
-        {
-            hostGroupName: "task_group",
-            hostGroupType: "TASK",
-            nodeCount: "2",
-            instanceType: defaultInstanceTypes.then(defaultInstanceTypes => defaultInstanceTypes.types[0].id),
-            diskType: dataDisk.then(dataDisk => dataDisk.types[0].value),
-            diskCapacity: Promise.all([dataDisk, dataDisk]).then(([dataDisk, dataDisk1]) => dataDisk.types[0].min > 160 ? dataDisk1.types[0].min : 160),
-            diskCount: "4",
-            sysDiskType: systemDisk.then(systemDisk => systemDisk.types[0].value),
-            sysDiskCapacity: Promise.all([systemDisk, systemDisk]).then(([systemDisk, systemDisk1]) => systemDisk.types[0].min > 160 ? systemDisk1.types[0].min : 160),
-        },
-    ],
-    highAvailabilityEnable: true,
-    zoneId: defaultInstanceTypes.then(defaultInstanceTypes => defaultInstanceTypes.types[0].zoneId),
-    securityGroupId: var.security_group_id == "" ? defaultSecurityGroup.id : var.security_group_id,
-    isOpenPublicIp: true,
-    chargeType: "PostPaid",
-    vswitchId: var.vswitch_id == "" ? vswitch.id : var.vswitch_id,
-    userDefinedEmrEcsRole: defaultRole.name,
-    sshEnable: true,
-    masterPwd: "ABCtest1234!",
-});
-```
-{{% /example %}}
-
-### 2. Scale Up
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_alicloud as alicloud
-
-default_main_versions = alicloud.emr.get_main_versions()
-default_instance_types = alicloud.emr.get_instance_types(destination_resource="InstanceType",
-    cluster_type=default_main_versions.main_versions[0]["clusterTypes"],
-    support_local_storage=False,
-    instance_charge_type="PostPaid",
-    support_node_types=[
-        "MASTER",
-        "CORE",
-        "TASK",
-    ])
-data_disk = alicloud.emr.get_disk_types(destination_resource="DataDisk",
-    cluster_type=default_main_versions.main_versions[0]["clusterTypes"],
-    instance_charge_type="PostPaid",
-    instance_type=default_instance_types.types[0]["id"],
-    zone_id=default_instance_types.types[0]["zone_id"])
-system_disk = alicloud.emr.get_disk_types(destination_resource="SystemDisk",
-    cluster_type=default_main_versions.main_versions[0]["clusterTypes"],
-    instance_charge_type="PostPaid",
-    instance_type=default_instance_types.types[0]["id"],
-    zone_id=default_instance_types.types[0]["zone_id"])
-vpc = []
-for range in [{"value": i} for i in range(0, 1 if var.vpc_id ==  else 0 == True)]:
-    vpc.append(alicloud.vpc.Network(f"vpc-{range['value']}", cidr_block=var["vpc_cidr"]))
-default_security_group = []
-for range in [{"value": i} for i in range(0, 1 if var.security_group_id ==  else 0 == True)]:
-    default_security_group.append(alicloud.ecs.SecurityGroup(f"defaultSecurityGroup-{range['value']}", vpc_id=vpc["id"] if var["vpc_id"] == "" else var["vpc_id"]))
-# VSwitch Resource for Module
-vswitch = []
-for range in [{"value": i} for i in range(0, 1 if var.vswitch_id ==  else 0 == True)]:
-    vswitch.append(alicloud.vpc.Switch(f"vswitch-{range['value']}",
-        availability_zone=default_instance_types.types[0]["zone_id"] if var["availability_zone"] == "" else var["availability_zone"],
-        cidr_block=var["vswitch_cidr"],
-        vpc_id=vpc["id"] if var["vpc_id"] == "" else var["vpc_id"]))
-# Ram role Resource for Module
-default_role = alicloud.ram.Role("defaultRole",
-    document="""    {
-        "Statement": [
-        {
-            "Action": "sts:AssumeRole",
-            "Effect": "Allow",
-            "Principal": {
-            "Service": [
-                "emr.aliyuncs.com", 
-                "ecs.aliyuncs.com"
-            ]
-            }
-        }
-        ],
-        "Version": "1"
-    }
-""",
-    description="this is a role test.",
-    force=True)
-default_cluster = alicloud.emr.Cluster("defaultCluster",
-    emr_ver=default_main_versions.main_versions[0]["emrVersion"],
-    cluster_type=default_main_versions.main_versions[0]["clusterTypes"],
-    host_group=[
-        {
-            "hostGroupName": "master_group",
-            "hostGroupType": "MASTER",
-            "nodeCount": "2",
-            "instanceType": default_instance_types.types[0]["id"],
-            "diskType": data_disk.types[0]["value"],
-            "diskCapacity": data_disk.types[0]["min"] if data_disk.types[0]["min"] > 160 else 160,
-            "diskCount": "1",
-            "sysDiskType": system_disk.types[0]["value"],
-            "sysDiskCapacity": system_disk.types[0]["min"] if system_disk.types[0]["min"] > 160 else 160,
-        },
-        {
-            "hostGroupName": "core_group",
-            "hostGroupType": "CORE",
-            "nodeCount": "2",
-            "instanceType": default_instance_types.types[0]["id"],
-            "diskType": data_disk.types[0]["value"],
-            "diskCapacity": data_disk.types[0]["min"] if data_disk.types[0]["min"] > 160 else 160,
-            "diskCount": "4",
-            "sysDiskType": system_disk.types[0]["value"],
-            "sysDiskCapacity": system_disk.types[0]["min"] if system_disk.types[0]["min"] > 160 else 160,
-        },
-        {
-            "hostGroupName": "task_group",
-            "hostGroupType": "TASK",
-            "nodeCount": "4",
-            "instanceType": default_instance_types.types[0]["id"],
-            "diskType": data_disk.types[0]["value"],
-            "diskCapacity": data_disk.types[0]["min"] if data_disk.types[0]["min"] > 160 else 160,
-            "diskCount": "4",
-            "sysDiskType": system_disk.types[0]["value"],
-            "sysDiskCapacity": system_disk.types[0]["min"] if system_disk.types[0]["min"] > 160 else 160,
-        },
-    ],
-    high_availability_enable=True,
-    zone_id=default_instance_types.types[0]["zone_id"],
-    security_group_id=default_security_group["id"] if var["security_group_id"] == "" else var["security_group_id"],
-    is_open_public_ip=True,
-    charge_type="PostPaid",
-    vswitch_id=vswitch["id"] if var["vswitch_id"] == "" else var["vswitch_id"],
-    user_defined_emr_ecs_role=default_role.name,
-    ssh_enable=True,
-    master_pwd="ABCtest1234!")
-```
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as alicloud from "@pulumi/alicloud";
-
-const defaultMainVersions = alicloud.emr.getMainVersions({});
-const defaultInstanceTypes = defaultMainVersions.then(defaultMainVersions => alicloud.emr.getInstanceTypes({
-    destinationResource: "InstanceType",
-    clusterType: defaultMainVersions.mainVersions[0].clusterTypes[0],
-    supportLocalStorage: false,
-    instanceChargeType: "PostPaid",
-    supportNodeTypes: [
-        "MASTER",
-        "CORE",
-        "TASK",
-    ],
-}));
-const dataDisk = Promise.all([defaultMainVersions, defaultInstanceTypes, defaultInstanceTypes]).then(([defaultMainVersions, defaultInstanceTypes, defaultInstanceTypes1]) => alicloud.emr.getDiskTypes({
-    destinationResource: "DataDisk",
-    clusterType: defaultMainVersions.mainVersions[0].clusterTypes[0],
-    instanceChargeType: "PostPaid",
-    instanceType: defaultInstanceTypes.types[0].id,
-    zoneId: defaultInstanceTypes1.types[0].zoneId,
-}));
-const systemDisk = Promise.all([defaultMainVersions, defaultInstanceTypes, defaultInstanceTypes]).then(([defaultMainVersions, defaultInstanceTypes, defaultInstanceTypes1]) => alicloud.emr.getDiskTypes({
-    destinationResource: "SystemDisk",
-    clusterType: defaultMainVersions.mainVersions[0].clusterTypes[0],
-    instanceChargeType: "PostPaid",
-    instanceType: defaultInstanceTypes.types[0].id,
-    zoneId: defaultInstanceTypes1.types[0].zoneId,
-}));
-const vpc: alicloud.vpc.Network[];
-for (const range = {value: 0}; range.value < (var.vpc_id == "" ? 1 : 0 == true); range.value++) {
-    vpc.push(new alicloud.vpc.Network(`vpc-${range.value}`, {cidrBlock: var.vpc_cidr}));
-}
-const defaultSecurityGroup: alicloud.ecs.SecurityGroup[];
-for (const range = {value: 0}; range.value < (var.security_group_id == "" ? 1 : 0 == true); range.value++) {
-    defaultSecurityGroup.push(new alicloud.ecs.SecurityGroup(`defaultSecurityGroup-${range.value}`, {vpcId: var.vpc_id == "" ? vpc.id : var.vpc_id}));
-}
-// VSwitch Resource for Module
-const vswitch: alicloud.vpc.Switch[];
-for (const range = {value: 0}; range.value < (var.vswitch_id == "" ? 1 : 0 == true); range.value++) {
-    vswitch.push(new alicloud.vpc.Switch(`vswitch-${range.value}`, {
-        availabilityZone: var.availability_zone == "" ? defaultInstanceTypes.then(defaultInstanceTypes => defaultInstanceTypes.types[0].zoneId) : var.availability_zone,
-        cidrBlock: var.vswitch_cidr,
-        vpcId: var.vpc_id == "" ? vpc.id : var.vpc_id,
-    }));
-}
-// Ram role Resource for Module
-const defaultRole = new alicloud.ram.Role("defaultRole", {
-    document: `    {
-        "Statement": [
-        {
-            "Action": "sts:AssumeRole",
-            "Effect": "Allow",
-            "Principal": {
-            "Service": [
-                "emr.aliyuncs.com", 
-                "ecs.aliyuncs.com"
-            ]
-            }
-        }
-        ],
-        "Version": "1"
-    }
-`,
-    description: "this is a role test.",
-    force: true,
-});
-const defaultCluster = new alicloud.emr.Cluster("defaultCluster", {
-    emrVer: defaultMainVersions.then(defaultMainVersions => defaultMainVersions.mainVersions[0].emrVersion),
-    clusterType: defaultMainVersions.then(defaultMainVersions => defaultMainVersions.mainVersions[0].clusterTypes[0]),
-    host_group: [
-        {
-            hostGroupName: "master_group",
-            hostGroupType: "MASTER",
-            nodeCount: "2",
-            instanceType: defaultInstanceTypes.then(defaultInstanceTypes => defaultInstanceTypes.types[0].id),
-            diskType: dataDisk.then(dataDisk => dataDisk.types[0].value),
-            diskCapacity: Promise.all([dataDisk, dataDisk]).then(([dataDisk, dataDisk1]) => dataDisk.types[0].min > 160 ? dataDisk1.types[0].min : 160),
-            diskCount: "1",
-            sysDiskType: systemDisk.then(systemDisk => systemDisk.types[0].value),
-            sysDiskCapacity: Promise.all([systemDisk, systemDisk]).then(([systemDisk, systemDisk1]) => systemDisk.types[0].min > 160 ? systemDisk1.types[0].min : 160),
-        },
-        {
-            hostGroupName: "core_group",
-            hostGroupType: "CORE",
-            nodeCount: "2",
-            instanceType: defaultInstanceTypes.then(defaultInstanceTypes => defaultInstanceTypes.types[0].id),
-            diskType: dataDisk.then(dataDisk => dataDisk.types[0].value),
-            diskCapacity: Promise.all([dataDisk, dataDisk]).then(([dataDisk, dataDisk1]) => dataDisk.types[0].min > 160 ? dataDisk1.types[0].min : 160),
-            diskCount: "4",
-            sysDiskType: systemDisk.then(systemDisk => systemDisk.types[0].value),
-            sysDiskCapacity: Promise.all([systemDisk, systemDisk]).then(([systemDisk, systemDisk1]) => systemDisk.types[0].min > 160 ? systemDisk1.types[0].min : 160),
-        },
-        {
-            hostGroupName: "task_group",
-            hostGroupType: "TASK",
-            nodeCount: "4",
-            instanceType: defaultInstanceTypes.then(defaultInstanceTypes => defaultInstanceTypes.types[0].id),
-            diskType: dataDisk.then(dataDisk => dataDisk.types[0].value),
-            diskCapacity: Promise.all([dataDisk, dataDisk]).then(([dataDisk, dataDisk1]) => dataDisk.types[0].min > 160 ? dataDisk1.types[0].min : 160),
-            diskCount: "4",
-            sysDiskType: systemDisk.then(systemDisk => systemDisk.types[0].value),
-            sysDiskCapacity: Promise.all([systemDisk, systemDisk]).then(([systemDisk, systemDisk1]) => systemDisk.types[0].min > 160 ? systemDisk1.types[0].min : 160),
-        },
-    ],
-    highAvailabilityEnable: true,
-    zoneId: defaultInstanceTypes.then(defaultInstanceTypes => defaultInstanceTypes.types[0].zoneId),
-    securityGroupId: var.security_group_id == "" ? defaultSecurityGroup.id : var.security_group_id,
-    isOpenPublicIp: true,
-    chargeType: "PostPaid",
-    vswitchId: var.vswitch_id == "" ? vswitch.id : var.vswitch_id,
-    userDefinedEmrEcsRole: defaultRole.name,
-    sshEnable: true,
-    masterPwd: "ABCtest1234!",
-});
-```
-{{% /example %}}
-
-### 3. Scale Down
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_alicloud as alicloud
-
-default_main_versions = alicloud.emr.get_main_versions()
-default_instance_types = alicloud.emr.get_instance_types(destination_resource="InstanceType",
-    cluster_type=default_main_versions.main_versions[0]["clusterTypes"],
-    support_local_storage=False,
-    instance_charge_type="PostPaid",
-    support_node_types=[
-        "MASTER",
-        "CORE",
-        "TASK",
-    ])
-data_disk = alicloud.emr.get_disk_types(destination_resource="DataDisk",
-    cluster_type=default_main_versions.main_versions[0]["clusterTypes"],
-    instance_charge_type="PostPaid",
-    instance_type=default_instance_types.types[0]["id"],
-    zone_id=default_instance_types.types[0]["zone_id"])
-system_disk = alicloud.emr.get_disk_types(destination_resource="SystemDisk",
-    cluster_type=default_main_versions.main_versions[0]["clusterTypes"],
-    instance_charge_type="PostPaid",
-    instance_type=default_instance_types.types[0]["id"],
-    zone_id=default_instance_types.types[0]["zone_id"])
-vpc = []
-for range in [{"value": i} for i in range(0, 1 if var.vpc_id ==  else 0 == True)]:
-    vpc.append(alicloud.vpc.Network(f"vpc-{range['value']}", cidr_block=var["vpc_cidr"]))
-default_security_group = []
-for range in [{"value": i} for i in range(0, 1 if var.security_group_id ==  else 0 == True)]:
-    default_security_group.append(alicloud.ecs.SecurityGroup(f"defaultSecurityGroup-{range['value']}", vpc_id=vpc["id"] if var["vpc_id"] == "" else var["vpc_id"]))
-# VSwitch Resource for Module
-vswitch = []
-for range in [{"value": i} for i in range(0, 1 if var.vswitch_id ==  else 0 == True)]:
-    vswitch.append(alicloud.vpc.Switch(f"vswitch-{range['value']}",
-        availability_zone=default_instance_types.types[0]["zone_id"] if var["availability_zone"] == "" else var["availability_zone"],
-        cidr_block=var["vswitch_cidr"],
-        vpc_id=vpc["id"] if var["vpc_id"] == "" else var["vpc_id"]))
-# Ram role Resource for Module
-default_role = alicloud.ram.Role("defaultRole",
-    document="""    {
-        "Statement": [
-        {
-            "Action": "sts:AssumeRole",
-            "Effect": "Allow",
-            "Principal": {
-            "Service": [
-                "emr.aliyuncs.com", 
-                "ecs.aliyuncs.com"
-            ]
-            }
-        }
-        ],
-        "Version": "1"
-    }
-""",
-    description="this is a role test.",
-    force=True)
-default_cluster = alicloud.emr.Cluster("defaultCluster",
-    emr_ver=default_main_versions.main_versions[0]["emrVersion"],
-    cluster_type=default_main_versions.main_versions[0]["clusterTypes"],
-    host_group=[
-        {
-            "hostGroupName": "master_group",
-            "hostGroupType": "MASTER",
-            "nodeCount": "2",
-            "instanceType": default_instance_types.types[0]["id"],
-            "diskType": data_disk.types[0]["value"],
-            "diskCapacity": data_disk.types[0]["min"] if data_disk.types[0]["min"] > 160 else 160,
-            "diskCount": "1",
-            "sysDiskType": system_disk.types[0]["value"],
-            "sysDiskCapacity": system_disk.types[0]["min"] if system_disk.types[0]["min"] > 160 else 160,
-        },
-        {
-            "hostGroupName": "core_group",
-            "hostGroupType": "CORE",
-            "nodeCount": "2",
-            "instanceType": default_instance_types.types[0]["id"],
-            "diskType": data_disk.types[0]["value"],
-            "diskCapacity": data_disk.types[0]["min"] if data_disk.types[0]["min"] > 160 else 160,
-            "diskCount": "4",
-            "sysDiskType": system_disk.types[0]["value"],
-            "sysDiskCapacity": system_disk.types[0]["min"] if system_disk.types[0]["min"] > 160 else 160,
-        },
-        {
-            "hostGroupName": "task_group",
-            "hostGroupType": "TASK",
-            "nodeCount": "2",
-            "instanceType": default_instance_types.types[0]["id"],
-            "diskType": data_disk.types[0]["value"],
-            "diskCapacity": data_disk.types[0]["min"] if data_disk.types[0]["min"] > 160 else 160,
-            "diskCount": "4",
-            "sysDiskType": system_disk.types[0]["value"],
-            "sysDiskCapacity": system_disk.types[0]["min"] if system_disk.types[0]["min"] > 160 else 160,
-        },
-    ],
-    high_availability_enable=True,
-    zone_id=default_instance_types.types[0]["zone_id"],
-    security_group_id=default_security_group["id"] if var["security_group_id"] == "" else var["security_group_id"],
-    is_open_public_ip=True,
-    charge_type="PostPaid",
-    vswitch_id=vswitch["id"] if var["vswitch_id"] == "" else var["vswitch_id"],
-    user_defined_emr_ecs_role=default_role.name,
-    ssh_enable=True,
-    master_pwd="ABCtest1234!")
-```
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as alicloud from "@pulumi/alicloud";
-
-const defaultMainVersions = alicloud.emr.getMainVersions({});
-const defaultInstanceTypes = defaultMainVersions.then(defaultMainVersions => alicloud.emr.getInstanceTypes({
-    destinationResource: "InstanceType",
-    clusterType: defaultMainVersions.mainVersions[0].clusterTypes[0],
-    supportLocalStorage: false,
-    instanceChargeType: "PostPaid",
-    supportNodeTypes: [
-        "MASTER",
-        "CORE",
-        "TASK",
-    ],
-}));
-const dataDisk = Promise.all([defaultMainVersions, defaultInstanceTypes, defaultInstanceTypes]).then(([defaultMainVersions, defaultInstanceTypes, defaultInstanceTypes1]) => alicloud.emr.getDiskTypes({
-    destinationResource: "DataDisk",
-    clusterType: defaultMainVersions.mainVersions[0].clusterTypes[0],
-    instanceChargeType: "PostPaid",
-    instanceType: defaultInstanceTypes.types[0].id,
-    zoneId: defaultInstanceTypes1.types[0].zoneId,
-}));
-const systemDisk = Promise.all([defaultMainVersions, defaultInstanceTypes, defaultInstanceTypes]).then(([defaultMainVersions, defaultInstanceTypes, defaultInstanceTypes1]) => alicloud.emr.getDiskTypes({
-    destinationResource: "SystemDisk",
-    clusterType: defaultMainVersions.mainVersions[0].clusterTypes[0],
-    instanceChargeType: "PostPaid",
-    instanceType: defaultInstanceTypes.types[0].id,
-    zoneId: defaultInstanceTypes1.types[0].zoneId,
-}));
-const vpc: alicloud.vpc.Network[];
-for (const range = {value: 0}; range.value < (var.vpc_id == "" ? 1 : 0 == true); range.value++) {
-    vpc.push(new alicloud.vpc.Network(`vpc-${range.value}`, {cidrBlock: var.vpc_cidr}));
-}
-const defaultSecurityGroup: alicloud.ecs.SecurityGroup[];
-for (const range = {value: 0}; range.value < (var.security_group_id == "" ? 1 : 0 == true); range.value++) {
-    defaultSecurityGroup.push(new alicloud.ecs.SecurityGroup(`defaultSecurityGroup-${range.value}`, {vpcId: var.vpc_id == "" ? vpc.id : var.vpc_id}));
-}
-// VSwitch Resource for Module
-const vswitch: alicloud.vpc.Switch[];
-for (const range = {value: 0}; range.value < (var.vswitch_id == "" ? 1 : 0 == true); range.value++) {
-    vswitch.push(new alicloud.vpc.Switch(`vswitch-${range.value}`, {
-        availabilityZone: var.availability_zone == "" ? defaultInstanceTypes.then(defaultInstanceTypes => defaultInstanceTypes.types[0].zoneId) : var.availability_zone,
-        cidrBlock: var.vswitch_cidr,
-        vpcId: var.vpc_id == "" ? vpc.id : var.vpc_id,
-    }));
-}
-// Ram role Resource for Module
-const defaultRole = new alicloud.ram.Role("defaultRole", {
-    document: `    {
-        "Statement": [
-        {
-            "Action": "sts:AssumeRole",
-            "Effect": "Allow",
-            "Principal": {
-            "Service": [
-                "emr.aliyuncs.com", 
-                "ecs.aliyuncs.com"
-            ]
-            }
-        }
-        ],
-        "Version": "1"
-    }
-`,
-    description: "this is a role test.",
-    force: true,
-});
-const defaultCluster = new alicloud.emr.Cluster("defaultCluster", {
-    emrVer: defaultMainVersions.then(defaultMainVersions => defaultMainVersions.mainVersions[0].emrVersion),
-    clusterType: defaultMainVersions.then(defaultMainVersions => defaultMainVersions.mainVersions[0].clusterTypes[0]),
-    host_group: [
-        {
-            hostGroupName: "master_group",
-            hostGroupType: "MASTER",
-            nodeCount: "2",
-            instanceType: defaultInstanceTypes.then(defaultInstanceTypes => defaultInstanceTypes.types[0].id),
-            diskType: dataDisk.then(dataDisk => dataDisk.types[0].value),
-            diskCapacity: Promise.all([dataDisk, dataDisk]).then(([dataDisk, dataDisk1]) => dataDisk.types[0].min > 160 ? dataDisk1.types[0].min : 160),
-            diskCount: "1",
-            sysDiskType: systemDisk.then(systemDisk => systemDisk.types[0].value),
-            sysDiskCapacity: Promise.all([systemDisk, systemDisk]).then(([systemDisk, systemDisk1]) => systemDisk.types[0].min > 160 ? systemDisk1.types[0].min : 160),
-        },
-        {
-            hostGroupName: "core_group",
-            hostGroupType: "CORE",
-            nodeCount: "2",
-            instanceType: defaultInstanceTypes.then(defaultInstanceTypes => defaultInstanceTypes.types[0].id),
-            diskType: dataDisk.then(dataDisk => dataDisk.types[0].value),
-            diskCapacity: Promise.all([dataDisk, dataDisk]).then(([dataDisk, dataDisk1]) => dataDisk.types[0].min > 160 ? dataDisk1.types[0].min : 160),
-            diskCount: "4",
-            sysDiskType: systemDisk.then(systemDisk => systemDisk.types[0].value),
-            sysDiskCapacity: Promise.all([systemDisk, systemDisk]).then(([systemDisk, systemDisk1]) => systemDisk.types[0].min > 160 ? systemDisk1.types[0].min : 160),
-        },
-        {
-            hostGroupName: "task_group",
-            hostGroupType: "TASK",
-            nodeCount: "2",
-            instanceType: defaultInstanceTypes.then(defaultInstanceTypes => defaultInstanceTypes.types[0].id),
-            diskType: dataDisk.then(dataDisk => dataDisk.types[0].value),
-            diskCapacity: Promise.all([dataDisk, dataDisk]).then(([dataDisk, dataDisk1]) => dataDisk.types[0].min > 160 ? dataDisk1.types[0].min : 160),
-            diskCount: "4",
-            sysDiskType: systemDisk.then(systemDisk => systemDisk.types[0].value),
-            sysDiskCapacity: Promise.all([systemDisk, systemDisk]).then(([systemDisk, systemDisk1]) => systemDisk.types[0].min > 160 ? systemDisk1.types[0].min : 160),
-        },
-    ],
-    highAvailabilityEnable: true,
-    zoneId: defaultInstanceTypes.then(defaultInstanceTypes => defaultInstanceTypes.types[0].zoneId),
-    securityGroupId: var.security_group_id == "" ? defaultSecurityGroup.id : var.security_group_id,
-    isOpenPublicIp: true,
-    chargeType: "PostPaid",
-    vswitchId: var.vswitch_id == "" ? vswitch.id : var.vswitch_id,
-    userDefinedEmrEcsRole: defaultRole.name,
-    sshEnable: true,
-    masterPwd: "ABCtest1234!",
-});
-```
-{{% /example %}}
-
 {{% /examples %}}
+
 
 
 ## Create a Cluster Resource {#create}
@@ -917,7 +202,9 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-required"
             title="Required">
-        <span>Cluster<wbr>Type</span>
+        <span id="clustertype_csharp">
+<a href="#clustertype_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -926,7 +213,9 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-required"
             title="Required">
-        <span>Emr<wbr>Ver</span>
+        <span id="emrver_csharp">
+<a href="#emrver_csharp" style="color: inherit; text-decoration: inherit;">Emr<wbr>Ver</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -935,7 +224,9 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-required"
             title="Required">
-        <span>Zone<wbr>Id</span>
+        <span id="zoneid_csharp">
+<a href="#zoneid_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -944,7 +235,9 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>Bootstrap<wbr>Actions</span>
+        <span id="bootstrapactions_csharp">
+<a href="#bootstrapactions_csharp" style="color: inherit; text-decoration: inherit;">Bootstrap<wbr>Actions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterbootstrapaction">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Emr.<wbr>Inputs.<wbr>Cluster<wbr>Bootstrap<wbr>Action<wbr>Args&gt;</a></span>
     </dt>
@@ -952,7 +245,9 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>Charge<wbr>Type</span>
+        <span id="chargetype_csharp">
+<a href="#chargetype_csharp" style="color: inherit; text-decoration: inherit;">Charge<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -961,7 +256,9 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>Deposit<wbr>Type</span>
+        <span id="deposittype_csharp">
+<a href="#deposittype_csharp" style="color: inherit; text-decoration: inherit;">Deposit<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -970,7 +267,9 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>Eas<wbr>Enable</span>
+        <span id="easenable_csharp">
+<a href="#easenable_csharp" style="color: inherit; text-decoration: inherit;">Eas<wbr>Enable</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -979,7 +278,9 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>High<wbr>Availability<wbr>Enable</span>
+        <span id="highavailabilityenable_csharp">
+<a href="#highavailabilityenable_csharp" style="color: inherit; text-decoration: inherit;">High<wbr>Availability<wbr>Enable</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -988,7 +289,9 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>Host<wbr>Groups</span>
+        <span id="hostgroups_csharp">
+<a href="#hostgroups_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Groups</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterhostgroup">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Emr.<wbr>Inputs.<wbr>Cluster<wbr>Host<wbr>Group<wbr>Args&gt;</a></span>
     </dt>
@@ -997,7 +300,9 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>Is<wbr>Open<wbr>Public<wbr>Ip</span>
+        <span id="isopenpublicip_csharp">
+<a href="#isopenpublicip_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Open<wbr>Public<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1005,7 +310,9 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>Key<wbr>Pair<wbr>Name</span>
+        <span id="keypairname_csharp">
+<a href="#keypairname_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Pair<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1014,7 +321,9 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>Master<wbr>Pwd</span>
+        <span id="masterpwd_csharp">
+<a href="#masterpwd_csharp" style="color: inherit; text-decoration: inherit;">Master<wbr>Pwd</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1023,7 +332,9 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1032,7 +343,9 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>Option<wbr>Software<wbr>Lists</span>
+        <span id="optionsoftwarelists_csharp">
+<a href="#optionsoftwarelists_csharp" style="color: inherit; text-decoration: inherit;">Option<wbr>Software<wbr>Lists</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1041,7 +354,9 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>Related<wbr>Cluster<wbr>Id</span>
+        <span id="relatedclusterid_csharp">
+<a href="#relatedclusterid_csharp" style="color: inherit; text-decoration: inherit;">Related<wbr>Cluster<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1050,7 +365,9 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>Security<wbr>Group<wbr>Id</span>
+        <span id="securitygroupid_csharp">
+<a href="#securitygroupid_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1059,7 +376,9 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ssh<wbr>Enable</span>
+        <span id="sshenable_csharp">
+<a href="#sshenable_csharp" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Enable</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1068,7 +387,9 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -1077,7 +398,9 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>Use<wbr>Local<wbr>Metadb</span>
+        <span id="uselocalmetadb_csharp">
+<a href="#uselocalmetadb_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Local<wbr>Metadb</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1086,7 +409,9 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>User<wbr>Defined<wbr>Emr<wbr>Ecs<wbr>Role</span>
+        <span id="userdefinedemrecsrole_csharp">
+<a href="#userdefinedemrecsrole_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Defined<wbr>Emr<wbr>Ecs<wbr>Role</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1095,7 +420,9 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vswitch<wbr>Id</span>
+        <span id="vswitchid_csharp">
+<a href="#vswitchid_csharp" style="color: inherit; text-decoration: inherit;">Vswitch<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1111,7 +438,9 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-required"
             title="Required">
-        <span>Cluster<wbr>Type</span>
+        <span id="clustertype_go">
+<a href="#clustertype_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1120,7 +449,9 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-required"
             title="Required">
-        <span>Emr<wbr>Ver</span>
+        <span id="emrver_go">
+<a href="#emrver_go" style="color: inherit; text-decoration: inherit;">Emr<wbr>Ver</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1129,7 +460,9 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-required"
             title="Required">
-        <span>Zone<wbr>Id</span>
+        <span id="zoneid_go">
+<a href="#zoneid_go" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1138,7 +471,9 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>Bootstrap<wbr>Actions</span>
+        <span id="bootstrapactions_go">
+<a href="#bootstrapactions_go" style="color: inherit; text-decoration: inherit;">Bootstrap<wbr>Actions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterbootstrapaction">[]Cluster<wbr>Bootstrap<wbr>Action</a></span>
     </dt>
@@ -1146,7 +481,9 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>Charge<wbr>Type</span>
+        <span id="chargetype_go">
+<a href="#chargetype_go" style="color: inherit; text-decoration: inherit;">Charge<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1155,7 +492,9 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>Deposit<wbr>Type</span>
+        <span id="deposittype_go">
+<a href="#deposittype_go" style="color: inherit; text-decoration: inherit;">Deposit<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1164,7 +503,9 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>Eas<wbr>Enable</span>
+        <span id="easenable_go">
+<a href="#easenable_go" style="color: inherit; text-decoration: inherit;">Eas<wbr>Enable</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1173,7 +514,9 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>High<wbr>Availability<wbr>Enable</span>
+        <span id="highavailabilityenable_go">
+<a href="#highavailabilityenable_go" style="color: inherit; text-decoration: inherit;">High<wbr>Availability<wbr>Enable</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1182,7 +525,9 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>Host<wbr>Groups</span>
+        <span id="hostgroups_go">
+<a href="#hostgroups_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Groups</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterhostgroup">[]Cluster<wbr>Host<wbr>Group</a></span>
     </dt>
@@ -1191,7 +536,9 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>Is<wbr>Open<wbr>Public<wbr>Ip</span>
+        <span id="isopenpublicip_go">
+<a href="#isopenpublicip_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Open<wbr>Public<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1199,7 +546,9 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>Key<wbr>Pair<wbr>Name</span>
+        <span id="keypairname_go">
+<a href="#keypairname_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Pair<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1208,7 +557,9 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>Master<wbr>Pwd</span>
+        <span id="masterpwd_go">
+<a href="#masterpwd_go" style="color: inherit; text-decoration: inherit;">Master<wbr>Pwd</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1217,7 +568,9 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1226,7 +579,9 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>Option<wbr>Software<wbr>Lists</span>
+        <span id="optionsoftwarelists_go">
+<a href="#optionsoftwarelists_go" style="color: inherit; text-decoration: inherit;">Option<wbr>Software<wbr>Lists</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1235,7 +590,9 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>Related<wbr>Cluster<wbr>Id</span>
+        <span id="relatedclusterid_go">
+<a href="#relatedclusterid_go" style="color: inherit; text-decoration: inherit;">Related<wbr>Cluster<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1244,7 +601,9 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>Security<wbr>Group<wbr>Id</span>
+        <span id="securitygroupid_go">
+<a href="#securitygroupid_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1253,7 +612,9 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ssh<wbr>Enable</span>
+        <span id="sshenable_go">
+<a href="#sshenable_go" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Enable</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1262,7 +623,9 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -1271,7 +634,9 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>Use<wbr>Local<wbr>Metadb</span>
+        <span id="uselocalmetadb_go">
+<a href="#uselocalmetadb_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Local<wbr>Metadb</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1280,7 +645,9 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>User<wbr>Defined<wbr>Emr<wbr>Ecs<wbr>Role</span>
+        <span id="userdefinedemrecsrole_go">
+<a href="#userdefinedemrecsrole_go" style="color: inherit; text-decoration: inherit;">User<wbr>Defined<wbr>Emr<wbr>Ecs<wbr>Role</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1289,7 +656,9 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vswitch<wbr>Id</span>
+        <span id="vswitchid_go">
+<a href="#vswitchid_go" style="color: inherit; text-decoration: inherit;">Vswitch<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1305,7 +674,9 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-required"
             title="Required">
-        <span>cluster<wbr>Type</span>
+        <span id="clustertype_nodejs">
+<a href="#clustertype_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1314,7 +685,9 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-required"
             title="Required">
-        <span>emr<wbr>Ver</span>
+        <span id="emrver_nodejs">
+<a href="#emrver_nodejs" style="color: inherit; text-decoration: inherit;">emr<wbr>Ver</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1323,7 +696,9 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-required"
             title="Required">
-        <span>zone<wbr>Id</span>
+        <span id="zoneid_nodejs">
+<a href="#zoneid_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1332,7 +707,9 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>bootstrap<wbr>Actions</span>
+        <span id="bootstrapactions_nodejs">
+<a href="#bootstrapactions_nodejs" style="color: inherit; text-decoration: inherit;">bootstrap<wbr>Actions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterbootstrapaction">Cluster<wbr>Bootstrap<wbr>Action[]</a></span>
     </dt>
@@ -1340,7 +717,9 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>charge<wbr>Type</span>
+        <span id="chargetype_nodejs">
+<a href="#chargetype_nodejs" style="color: inherit; text-decoration: inherit;">charge<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1349,7 +728,9 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>deposit<wbr>Type</span>
+        <span id="deposittype_nodejs">
+<a href="#deposittype_nodejs" style="color: inherit; text-decoration: inherit;">deposit<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1358,7 +739,9 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>eas<wbr>Enable</span>
+        <span id="easenable_nodejs">
+<a href="#easenable_nodejs" style="color: inherit; text-decoration: inherit;">eas<wbr>Enable</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1367,7 +750,9 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>high<wbr>Availability<wbr>Enable</span>
+        <span id="highavailabilityenable_nodejs">
+<a href="#highavailabilityenable_nodejs" style="color: inherit; text-decoration: inherit;">high<wbr>Availability<wbr>Enable</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1376,7 +761,9 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>host<wbr>Groups</span>
+        <span id="hostgroups_nodejs">
+<a href="#hostgroups_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Groups</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterhostgroup">Cluster<wbr>Host<wbr>Group[]</a></span>
     </dt>
@@ -1385,7 +772,9 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>is<wbr>Open<wbr>Public<wbr>Ip</span>
+        <span id="isopenpublicip_nodejs">
+<a href="#isopenpublicip_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Open<wbr>Public<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1393,7 +782,9 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>key<wbr>Pair<wbr>Name</span>
+        <span id="keypairname_nodejs">
+<a href="#keypairname_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Pair<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1402,7 +793,9 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>master<wbr>Pwd</span>
+        <span id="masterpwd_nodejs">
+<a href="#masterpwd_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Pwd</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1411,7 +804,9 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1420,7 +815,9 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>option<wbr>Software<wbr>Lists</span>
+        <span id="optionsoftwarelists_nodejs">
+<a href="#optionsoftwarelists_nodejs" style="color: inherit; text-decoration: inherit;">option<wbr>Software<wbr>Lists</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1429,7 +826,9 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>related<wbr>Cluster<wbr>Id</span>
+        <span id="relatedclusterid_nodejs">
+<a href="#relatedclusterid_nodejs" style="color: inherit; text-decoration: inherit;">related<wbr>Cluster<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1438,7 +837,9 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>security<wbr>Group<wbr>Id</span>
+        <span id="securitygroupid_nodejs">
+<a href="#securitygroupid_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Group<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1447,7 +848,9 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>ssh<wbr>Enable</span>
+        <span id="sshenable_nodejs">
+<a href="#sshenable_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>Enable</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1456,7 +859,9 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -1465,7 +870,9 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>use<wbr>Local<wbr>Metadb</span>
+        <span id="uselocalmetadb_nodejs">
+<a href="#uselocalmetadb_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Local<wbr>Metadb</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1474,7 +881,9 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>user<wbr>Defined<wbr>Emr<wbr>Ecs<wbr>Role</span>
+        <span id="userdefinedemrecsrole_nodejs">
+<a href="#userdefinedemrecsrole_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Defined<wbr>Emr<wbr>Ecs<wbr>Role</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1483,7 +892,9 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>vswitch<wbr>Id</span>
+        <span id="vswitchid_nodejs">
+<a href="#vswitchid_nodejs" style="color: inherit; text-decoration: inherit;">vswitch<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1499,7 +910,9 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-required"
             title="Required">
-        <span>cluster_<wbr>type</span>
+        <span id="cluster_type_python">
+<a href="#cluster_type_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1508,7 +921,9 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-required"
             title="Required">
-        <span>emr_<wbr>ver</span>
+        <span id="emr_ver_python">
+<a href="#emr_ver_python" style="color: inherit; text-decoration: inherit;">emr_<wbr>ver</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1517,7 +932,9 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-required"
             title="Required">
-        <span>zone_<wbr>id</span>
+        <span id="zone_id_python">
+<a href="#zone_id_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1526,7 +943,9 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>bootstrap_<wbr>actions</span>
+        <span id="bootstrap_actions_python">
+<a href="#bootstrap_actions_python" style="color: inherit; text-decoration: inherit;">bootstrap_<wbr>actions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterbootstrapaction">List[Cluster<wbr>Bootstrap<wbr>Action]</a></span>
     </dt>
@@ -1534,7 +953,9 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>charge_<wbr>type</span>
+        <span id="charge_type_python">
+<a href="#charge_type_python" style="color: inherit; text-decoration: inherit;">charge_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1543,7 +964,9 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>deposit_<wbr>type</span>
+        <span id="deposit_type_python">
+<a href="#deposit_type_python" style="color: inherit; text-decoration: inherit;">deposit_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1552,7 +975,9 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>eas_<wbr>enable</span>
+        <span id="eas_enable_python">
+<a href="#eas_enable_python" style="color: inherit; text-decoration: inherit;">eas_<wbr>enable</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1561,7 +986,9 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>high_<wbr>availability_<wbr>enable</span>
+        <span id="high_availability_enable_python">
+<a href="#high_availability_enable_python" style="color: inherit; text-decoration: inherit;">high_<wbr>availability_<wbr>enable</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1570,7 +997,9 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>host_<wbr>groups</span>
+        <span id="host_groups_python">
+<a href="#host_groups_python" style="color: inherit; text-decoration: inherit;">host_<wbr>groups</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterhostgroup">List[Cluster<wbr>Host<wbr>Group]</a></span>
     </dt>
@@ -1579,7 +1008,9 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>is_<wbr>open_<wbr>public_<wbr>ip</span>
+        <span id="is_open_public_ip_python">
+<a href="#is_open_public_ip_python" style="color: inherit; text-decoration: inherit;">is_<wbr>open_<wbr>public_<wbr>ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1587,7 +1018,9 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>key_<wbr>pair_<wbr>name</span>
+        <span id="key_pair_name_python">
+<a href="#key_pair_name_python" style="color: inherit; text-decoration: inherit;">key_<wbr>pair_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1596,7 +1029,9 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>master_<wbr>pwd</span>
+        <span id="master_pwd_python">
+<a href="#master_pwd_python" style="color: inherit; text-decoration: inherit;">master_<wbr>pwd</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1605,7 +1040,9 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1614,7 +1051,9 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>option_<wbr>software_<wbr>lists</span>
+        <span id="option_software_lists_python">
+<a href="#option_software_lists_python" style="color: inherit; text-decoration: inherit;">option_<wbr>software_<wbr>lists</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1623,7 +1062,9 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>related_<wbr>cluster_<wbr>id</span>
+        <span id="related_cluster_id_python">
+<a href="#related_cluster_id_python" style="color: inherit; text-decoration: inherit;">related_<wbr>cluster_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1632,7 +1073,9 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>security_<wbr>group_<wbr>id</span>
+        <span id="security_group_id_python">
+<a href="#security_group_id_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1641,7 +1084,9 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>ssh_<wbr>enable</span>
+        <span id="ssh_enable_python">
+<a href="#ssh_enable_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>enable</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1650,7 +1095,9 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -1659,7 +1106,9 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>use_<wbr>local_<wbr>metadb</span>
+        <span id="use_local_metadb_python">
+<a href="#use_local_metadb_python" style="color: inherit; text-decoration: inherit;">use_<wbr>local_<wbr>metadb</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1668,7 +1117,9 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>user_<wbr>defined_<wbr>emr_<wbr>ecs_<wbr>role</span>
+        <span id="user_defined_emr_ecs_role_python">
+<a href="#user_defined_emr_ecs_role_python" style="color: inherit; text-decoration: inherit;">user_<wbr>defined_<wbr>emr_<wbr>ecs_<wbr>role</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1677,7 +1128,9 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>vswitch_<wbr>id</span>
+        <span id="vswitch_id_python">
+<a href="#vswitch_id_python" style="color: inherit; text-decoration: inherit;">vswitch_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1704,7 +1157,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1719,7 +1174,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1734,7 +1191,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1749,7 +1208,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1890,7 +1351,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Bootstrap<wbr>Actions</span>
+        <span id="state_bootstrapactions_csharp">
+<a href="#state_bootstrapactions_csharp" style="color: inherit; text-decoration: inherit;">Bootstrap<wbr>Actions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterbootstrapaction">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Emr.<wbr>Inputs.<wbr>Cluster<wbr>Bootstrap<wbr>Action<wbr>Args&gt;</a></span>
     </dt>
@@ -1898,7 +1361,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Charge<wbr>Type</span>
+        <span id="state_chargetype_csharp">
+<a href="#state_chargetype_csharp" style="color: inherit; text-decoration: inherit;">Charge<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1907,7 +1372,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cluster<wbr>Type</span>
+        <span id="state_clustertype_csharp">
+<a href="#state_clustertype_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1916,7 +1383,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Deposit<wbr>Type</span>
+        <span id="state_deposittype_csharp">
+<a href="#state_deposittype_csharp" style="color: inherit; text-decoration: inherit;">Deposit<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1925,7 +1394,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Eas<wbr>Enable</span>
+        <span id="state_easenable_csharp">
+<a href="#state_easenable_csharp" style="color: inherit; text-decoration: inherit;">Eas<wbr>Enable</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1934,7 +1405,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Emr<wbr>Ver</span>
+        <span id="state_emrver_csharp">
+<a href="#state_emrver_csharp" style="color: inherit; text-decoration: inherit;">Emr<wbr>Ver</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1943,7 +1416,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>High<wbr>Availability<wbr>Enable</span>
+        <span id="state_highavailabilityenable_csharp">
+<a href="#state_highavailabilityenable_csharp" style="color: inherit; text-decoration: inherit;">High<wbr>Availability<wbr>Enable</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1952,7 +1427,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Host<wbr>Groups</span>
+        <span id="state_hostgroups_csharp">
+<a href="#state_hostgroups_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Groups</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterhostgroup">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Emr.<wbr>Inputs.<wbr>Cluster<wbr>Host<wbr>Group<wbr>Args&gt;</a></span>
     </dt>
@@ -1961,7 +1438,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Is<wbr>Open<wbr>Public<wbr>Ip</span>
+        <span id="state_isopenpublicip_csharp">
+<a href="#state_isopenpublicip_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Open<wbr>Public<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1969,7 +1448,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Key<wbr>Pair<wbr>Name</span>
+        <span id="state_keypairname_csharp">
+<a href="#state_keypairname_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Pair<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1978,7 +1459,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Master<wbr>Pwd</span>
+        <span id="state_masterpwd_csharp">
+<a href="#state_masterpwd_csharp" style="color: inherit; text-decoration: inherit;">Master<wbr>Pwd</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1987,7 +1470,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1996,7 +1481,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Option<wbr>Software<wbr>Lists</span>
+        <span id="state_optionsoftwarelists_csharp">
+<a href="#state_optionsoftwarelists_csharp" style="color: inherit; text-decoration: inherit;">Option<wbr>Software<wbr>Lists</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -2005,7 +1492,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Related<wbr>Cluster<wbr>Id</span>
+        <span id="state_relatedclusterid_csharp">
+<a href="#state_relatedclusterid_csharp" style="color: inherit; text-decoration: inherit;">Related<wbr>Cluster<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2014,7 +1503,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Security<wbr>Group<wbr>Id</span>
+        <span id="state_securitygroupid_csharp">
+<a href="#state_securitygroupid_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2023,7 +1514,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ssh<wbr>Enable</span>
+        <span id="state_sshenable_csharp">
+<a href="#state_sshenable_csharp" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Enable</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -2032,7 +1525,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="state_tags_csharp">
+<a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -2041,7 +1536,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Use<wbr>Local<wbr>Metadb</span>
+        <span id="state_uselocalmetadb_csharp">
+<a href="#state_uselocalmetadb_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Local<wbr>Metadb</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -2050,7 +1547,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>User<wbr>Defined<wbr>Emr<wbr>Ecs<wbr>Role</span>
+        <span id="state_userdefinedemrecsrole_csharp">
+<a href="#state_userdefinedemrecsrole_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Defined<wbr>Emr<wbr>Ecs<wbr>Role</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2059,7 +1558,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vswitch<wbr>Id</span>
+        <span id="state_vswitchid_csharp">
+<a href="#state_vswitchid_csharp" style="color: inherit; text-decoration: inherit;">Vswitch<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2068,7 +1569,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Zone<wbr>Id</span>
+        <span id="state_zoneid_csharp">
+<a href="#state_zoneid_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2084,7 +1587,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Bootstrap<wbr>Actions</span>
+        <span id="state_bootstrapactions_go">
+<a href="#state_bootstrapactions_go" style="color: inherit; text-decoration: inherit;">Bootstrap<wbr>Actions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterbootstrapaction">[]Cluster<wbr>Bootstrap<wbr>Action</a></span>
     </dt>
@@ -2092,7 +1597,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Charge<wbr>Type</span>
+        <span id="state_chargetype_go">
+<a href="#state_chargetype_go" style="color: inherit; text-decoration: inherit;">Charge<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2101,7 +1608,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cluster<wbr>Type</span>
+        <span id="state_clustertype_go">
+<a href="#state_clustertype_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2110,7 +1619,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Deposit<wbr>Type</span>
+        <span id="state_deposittype_go">
+<a href="#state_deposittype_go" style="color: inherit; text-decoration: inherit;">Deposit<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2119,7 +1630,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Eas<wbr>Enable</span>
+        <span id="state_easenable_go">
+<a href="#state_easenable_go" style="color: inherit; text-decoration: inherit;">Eas<wbr>Enable</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -2128,7 +1641,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Emr<wbr>Ver</span>
+        <span id="state_emrver_go">
+<a href="#state_emrver_go" style="color: inherit; text-decoration: inherit;">Emr<wbr>Ver</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2137,7 +1652,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>High<wbr>Availability<wbr>Enable</span>
+        <span id="state_highavailabilityenable_go">
+<a href="#state_highavailabilityenable_go" style="color: inherit; text-decoration: inherit;">High<wbr>Availability<wbr>Enable</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -2146,7 +1663,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Host<wbr>Groups</span>
+        <span id="state_hostgroups_go">
+<a href="#state_hostgroups_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Groups</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterhostgroup">[]Cluster<wbr>Host<wbr>Group</a></span>
     </dt>
@@ -2155,7 +1674,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Is<wbr>Open<wbr>Public<wbr>Ip</span>
+        <span id="state_isopenpublicip_go">
+<a href="#state_isopenpublicip_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Open<wbr>Public<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -2163,7 +1684,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Key<wbr>Pair<wbr>Name</span>
+        <span id="state_keypairname_go">
+<a href="#state_keypairname_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Pair<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2172,7 +1695,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Master<wbr>Pwd</span>
+        <span id="state_masterpwd_go">
+<a href="#state_masterpwd_go" style="color: inherit; text-decoration: inherit;">Master<wbr>Pwd</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2181,7 +1706,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2190,7 +1717,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Option<wbr>Software<wbr>Lists</span>
+        <span id="state_optionsoftwarelists_go">
+<a href="#state_optionsoftwarelists_go" style="color: inherit; text-decoration: inherit;">Option<wbr>Software<wbr>Lists</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -2199,7 +1728,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Related<wbr>Cluster<wbr>Id</span>
+        <span id="state_relatedclusterid_go">
+<a href="#state_relatedclusterid_go" style="color: inherit; text-decoration: inherit;">Related<wbr>Cluster<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2208,7 +1739,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Security<wbr>Group<wbr>Id</span>
+        <span id="state_securitygroupid_go">
+<a href="#state_securitygroupid_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2217,7 +1750,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ssh<wbr>Enable</span>
+        <span id="state_sshenable_go">
+<a href="#state_sshenable_go" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Enable</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -2226,7 +1761,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="state_tags_go">
+<a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -2235,7 +1772,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Use<wbr>Local<wbr>Metadb</span>
+        <span id="state_uselocalmetadb_go">
+<a href="#state_uselocalmetadb_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Local<wbr>Metadb</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -2244,7 +1783,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>User<wbr>Defined<wbr>Emr<wbr>Ecs<wbr>Role</span>
+        <span id="state_userdefinedemrecsrole_go">
+<a href="#state_userdefinedemrecsrole_go" style="color: inherit; text-decoration: inherit;">User<wbr>Defined<wbr>Emr<wbr>Ecs<wbr>Role</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2253,7 +1794,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vswitch<wbr>Id</span>
+        <span id="state_vswitchid_go">
+<a href="#state_vswitchid_go" style="color: inherit; text-decoration: inherit;">Vswitch<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2262,7 +1805,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Zone<wbr>Id</span>
+        <span id="state_zoneid_go">
+<a href="#state_zoneid_go" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2278,7 +1823,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>bootstrap<wbr>Actions</span>
+        <span id="state_bootstrapactions_nodejs">
+<a href="#state_bootstrapactions_nodejs" style="color: inherit; text-decoration: inherit;">bootstrap<wbr>Actions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterbootstrapaction">Cluster<wbr>Bootstrap<wbr>Action[]</a></span>
     </dt>
@@ -2286,7 +1833,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>charge<wbr>Type</span>
+        <span id="state_chargetype_nodejs">
+<a href="#state_chargetype_nodejs" style="color: inherit; text-decoration: inherit;">charge<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2295,7 +1844,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>cluster<wbr>Type</span>
+        <span id="state_clustertype_nodejs">
+<a href="#state_clustertype_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2304,7 +1855,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>deposit<wbr>Type</span>
+        <span id="state_deposittype_nodejs">
+<a href="#state_deposittype_nodejs" style="color: inherit; text-decoration: inherit;">deposit<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2313,7 +1866,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>eas<wbr>Enable</span>
+        <span id="state_easenable_nodejs">
+<a href="#state_easenable_nodejs" style="color: inherit; text-decoration: inherit;">eas<wbr>Enable</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -2322,7 +1877,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>emr<wbr>Ver</span>
+        <span id="state_emrver_nodejs">
+<a href="#state_emrver_nodejs" style="color: inherit; text-decoration: inherit;">emr<wbr>Ver</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2331,7 +1888,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>high<wbr>Availability<wbr>Enable</span>
+        <span id="state_highavailabilityenable_nodejs">
+<a href="#state_highavailabilityenable_nodejs" style="color: inherit; text-decoration: inherit;">high<wbr>Availability<wbr>Enable</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -2340,7 +1899,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>host<wbr>Groups</span>
+        <span id="state_hostgroups_nodejs">
+<a href="#state_hostgroups_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Groups</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterhostgroup">Cluster<wbr>Host<wbr>Group[]</a></span>
     </dt>
@@ -2349,7 +1910,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>is<wbr>Open<wbr>Public<wbr>Ip</span>
+        <span id="state_isopenpublicip_nodejs">
+<a href="#state_isopenpublicip_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Open<wbr>Public<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -2357,7 +1920,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>key<wbr>Pair<wbr>Name</span>
+        <span id="state_keypairname_nodejs">
+<a href="#state_keypairname_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Pair<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2366,7 +1931,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>master<wbr>Pwd</span>
+        <span id="state_masterpwd_nodejs">
+<a href="#state_masterpwd_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Pwd</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2375,7 +1942,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2384,7 +1953,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>option<wbr>Software<wbr>Lists</span>
+        <span id="state_optionsoftwarelists_nodejs">
+<a href="#state_optionsoftwarelists_nodejs" style="color: inherit; text-decoration: inherit;">option<wbr>Software<wbr>Lists</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -2393,7 +1964,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>related<wbr>Cluster<wbr>Id</span>
+        <span id="state_relatedclusterid_nodejs">
+<a href="#state_relatedclusterid_nodejs" style="color: inherit; text-decoration: inherit;">related<wbr>Cluster<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2402,7 +1975,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>security<wbr>Group<wbr>Id</span>
+        <span id="state_securitygroupid_nodejs">
+<a href="#state_securitygroupid_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Group<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2411,7 +1986,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>ssh<wbr>Enable</span>
+        <span id="state_sshenable_nodejs">
+<a href="#state_sshenable_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>Enable</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -2420,7 +1997,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="state_tags_nodejs">
+<a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -2429,7 +2008,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>use<wbr>Local<wbr>Metadb</span>
+        <span id="state_uselocalmetadb_nodejs">
+<a href="#state_uselocalmetadb_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Local<wbr>Metadb</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -2438,7 +2019,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>user<wbr>Defined<wbr>Emr<wbr>Ecs<wbr>Role</span>
+        <span id="state_userdefinedemrecsrole_nodejs">
+<a href="#state_userdefinedemrecsrole_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Defined<wbr>Emr<wbr>Ecs<wbr>Role</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2447,7 +2030,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>vswitch<wbr>Id</span>
+        <span id="state_vswitchid_nodejs">
+<a href="#state_vswitchid_nodejs" style="color: inherit; text-decoration: inherit;">vswitch<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2456,7 +2041,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>zone<wbr>Id</span>
+        <span id="state_zoneid_nodejs">
+<a href="#state_zoneid_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2472,7 +2059,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>bootstrap_<wbr>actions</span>
+        <span id="state_bootstrap_actions_python">
+<a href="#state_bootstrap_actions_python" style="color: inherit; text-decoration: inherit;">bootstrap_<wbr>actions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterbootstrapaction">List[Cluster<wbr>Bootstrap<wbr>Action]</a></span>
     </dt>
@@ -2480,7 +2069,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>charge_<wbr>type</span>
+        <span id="state_charge_type_python">
+<a href="#state_charge_type_python" style="color: inherit; text-decoration: inherit;">charge_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2489,7 +2080,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>cluster_<wbr>type</span>
+        <span id="state_cluster_type_python">
+<a href="#state_cluster_type_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2498,7 +2091,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>deposit_<wbr>type</span>
+        <span id="state_deposit_type_python">
+<a href="#state_deposit_type_python" style="color: inherit; text-decoration: inherit;">deposit_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2507,7 +2102,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>eas_<wbr>enable</span>
+        <span id="state_eas_enable_python">
+<a href="#state_eas_enable_python" style="color: inherit; text-decoration: inherit;">eas_<wbr>enable</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2516,7 +2113,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>emr_<wbr>ver</span>
+        <span id="state_emr_ver_python">
+<a href="#state_emr_ver_python" style="color: inherit; text-decoration: inherit;">emr_<wbr>ver</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2525,7 +2124,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>high_<wbr>availability_<wbr>enable</span>
+        <span id="state_high_availability_enable_python">
+<a href="#state_high_availability_enable_python" style="color: inherit; text-decoration: inherit;">high_<wbr>availability_<wbr>enable</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2534,7 +2135,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>host_<wbr>groups</span>
+        <span id="state_host_groups_python">
+<a href="#state_host_groups_python" style="color: inherit; text-decoration: inherit;">host_<wbr>groups</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterhostgroup">List[Cluster<wbr>Host<wbr>Group]</a></span>
     </dt>
@@ -2543,7 +2146,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>is_<wbr>open_<wbr>public_<wbr>ip</span>
+        <span id="state_is_open_public_ip_python">
+<a href="#state_is_open_public_ip_python" style="color: inherit; text-decoration: inherit;">is_<wbr>open_<wbr>public_<wbr>ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2551,7 +2156,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>key_<wbr>pair_<wbr>name</span>
+        <span id="state_key_pair_name_python">
+<a href="#state_key_pair_name_python" style="color: inherit; text-decoration: inherit;">key_<wbr>pair_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2560,7 +2167,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>master_<wbr>pwd</span>
+        <span id="state_master_pwd_python">
+<a href="#state_master_pwd_python" style="color: inherit; text-decoration: inherit;">master_<wbr>pwd</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2569,7 +2178,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2578,7 +2189,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>option_<wbr>software_<wbr>lists</span>
+        <span id="state_option_software_lists_python">
+<a href="#state_option_software_lists_python" style="color: inherit; text-decoration: inherit;">option_<wbr>software_<wbr>lists</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -2587,7 +2200,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>related_<wbr>cluster_<wbr>id</span>
+        <span id="state_related_cluster_id_python">
+<a href="#state_related_cluster_id_python" style="color: inherit; text-decoration: inherit;">related_<wbr>cluster_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2596,7 +2211,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>security_<wbr>group_<wbr>id</span>
+        <span id="state_security_group_id_python">
+<a href="#state_security_group_id_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2605,7 +2222,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>ssh_<wbr>enable</span>
+        <span id="state_ssh_enable_python">
+<a href="#state_ssh_enable_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>enable</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2614,7 +2233,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="state_tags_python">
+<a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -2623,7 +2244,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>use_<wbr>local_<wbr>metadb</span>
+        <span id="state_use_local_metadb_python">
+<a href="#state_use_local_metadb_python" style="color: inherit; text-decoration: inherit;">use_<wbr>local_<wbr>metadb</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2632,7 +2255,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>user_<wbr>defined_<wbr>emr_<wbr>ecs_<wbr>role</span>
+        <span id="state_user_defined_emr_ecs_role_python">
+<a href="#state_user_defined_emr_ecs_role_python" style="color: inherit; text-decoration: inherit;">user_<wbr>defined_<wbr>emr_<wbr>ecs_<wbr>role</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2641,7 +2266,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>vswitch_<wbr>id</span>
+        <span id="state_vswitch_id_python">
+<a href="#state_vswitch_id_python" style="color: inherit; text-decoration: inherit;">vswitch_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2650,7 +2277,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>zone_<wbr>id</span>
+        <span id="state_zone_id_python">
+<a href="#state_zone_id_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2692,7 +2321,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Arg</span>
+        <span id="arg_csharp">
+<a href="#arg_csharp" style="color: inherit; text-decoration: inherit;">Arg</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2701,7 +2332,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2710,7 +2343,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Path</span>
+        <span id="path_csharp">
+<a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2726,7 +2361,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Arg</span>
+        <span id="arg_go">
+<a href="#arg_go" style="color: inherit; text-decoration: inherit;">Arg</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2735,7 +2372,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2744,7 +2383,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Path</span>
+        <span id="path_go">
+<a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2760,7 +2401,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>arg</span>
+        <span id="arg_nodejs">
+<a href="#arg_nodejs" style="color: inherit; text-decoration: inherit;">arg</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2769,7 +2412,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2778,7 +2423,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>path</span>
+        <span id="path_nodejs">
+<a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2794,7 +2441,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>arg</span>
+        <span id="arg_python">
+<a href="#arg_python" style="color: inherit; text-decoration: inherit;">arg</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2803,7 +2452,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2812,7 +2463,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>path</span>
+        <span id="path_python">
+<a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2846,7 +2499,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Auto<wbr>Renew</span>
+        <span id="autorenew_csharp">
+<a href="#autorenew_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Renew</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -2855,7 +2510,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Charge<wbr>Type</span>
+        <span id="chargetype_csharp">
+<a href="#chargetype_csharp" style="color: inherit; text-decoration: inherit;">Charge<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2864,7 +2521,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Disk<wbr>Capacity</span>
+        <span id="diskcapacity_csharp">
+<a href="#diskcapacity_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2873,7 +2532,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Disk<wbr>Count</span>
+        <span id="diskcount_csharp">
+<a href="#diskcount_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2882,7 +2543,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Disk<wbr>Type</span>
+        <span id="disktype_csharp">
+<a href="#disktype_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2891,7 +2554,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Gpu<wbr>Driver</span>
+        <span id="gpudriver_csharp">
+<a href="#gpudriver_csharp" style="color: inherit; text-decoration: inherit;">Gpu<wbr>Driver</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2899,7 +2564,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Host<wbr>Group<wbr>Name</span>
+        <span id="hostgroupname_csharp">
+<a href="#hostgroupname_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2908,7 +2575,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Host<wbr>Group<wbr>Type</span>
+        <span id="hostgrouptype_csharp">
+<a href="#hostgrouptype_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Group<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2917,7 +2586,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Instance<wbr>List</span>
+        <span id="instancelist_csharp">
+<a href="#instancelist_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>List</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2926,7 +2597,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Instance<wbr>Type</span>
+        <span id="instancetype_csharp">
+<a href="#instancetype_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2935,7 +2608,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Node<wbr>Count</span>
+        <span id="nodecount_csharp">
+<a href="#nodecount_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2944,7 +2619,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Period</span>
+        <span id="period_csharp">
+<a href="#period_csharp" style="color: inherit; text-decoration: inherit;">Period</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -2953,7 +2630,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Sys<wbr>Disk<wbr>Capacity</span>
+        <span id="sysdiskcapacity_csharp">
+<a href="#sysdiskcapacity_csharp" style="color: inherit; text-decoration: inherit;">Sys<wbr>Disk<wbr>Capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2962,7 +2641,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Sys<wbr>Disk<wbr>Type</span>
+        <span id="sysdisktype_csharp">
+<a href="#sysdisktype_csharp" style="color: inherit; text-decoration: inherit;">Sys<wbr>Disk<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2978,7 +2659,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Auto<wbr>Renew</span>
+        <span id="autorenew_go">
+<a href="#autorenew_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Renew</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -2987,7 +2670,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Charge<wbr>Type</span>
+        <span id="chargetype_go">
+<a href="#chargetype_go" style="color: inherit; text-decoration: inherit;">Charge<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2996,7 +2681,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Disk<wbr>Capacity</span>
+        <span id="diskcapacity_go">
+<a href="#diskcapacity_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3005,7 +2692,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Disk<wbr>Count</span>
+        <span id="diskcount_go">
+<a href="#diskcount_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3014,7 +2703,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Disk<wbr>Type</span>
+        <span id="disktype_go">
+<a href="#disktype_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3023,7 +2714,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Gpu<wbr>Driver</span>
+        <span id="gpudriver_go">
+<a href="#gpudriver_go" style="color: inherit; text-decoration: inherit;">Gpu<wbr>Driver</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3031,7 +2724,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Host<wbr>Group<wbr>Name</span>
+        <span id="hostgroupname_go">
+<a href="#hostgroupname_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3040,7 +2735,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Host<wbr>Group<wbr>Type</span>
+        <span id="hostgrouptype_go">
+<a href="#hostgrouptype_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Group<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3049,7 +2746,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Instance<wbr>List</span>
+        <span id="instancelist_go">
+<a href="#instancelist_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>List</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3058,7 +2757,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Instance<wbr>Type</span>
+        <span id="instancetype_go">
+<a href="#instancetype_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3067,7 +2768,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Node<wbr>Count</span>
+        <span id="nodecount_go">
+<a href="#nodecount_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3076,7 +2779,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Period</span>
+        <span id="period_go">
+<a href="#period_go" style="color: inherit; text-decoration: inherit;">Period</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -3085,7 +2790,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Sys<wbr>Disk<wbr>Capacity</span>
+        <span id="sysdiskcapacity_go">
+<a href="#sysdiskcapacity_go" style="color: inherit; text-decoration: inherit;">Sys<wbr>Disk<wbr>Capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3094,7 +2801,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Sys<wbr>Disk<wbr>Type</span>
+        <span id="sysdisktype_go">
+<a href="#sysdisktype_go" style="color: inherit; text-decoration: inherit;">Sys<wbr>Disk<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3110,7 +2819,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>auto<wbr>Renew</span>
+        <span id="autorenew_nodejs">
+<a href="#autorenew_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Renew</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -3119,7 +2830,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>charge<wbr>Type</span>
+        <span id="chargetype_nodejs">
+<a href="#chargetype_nodejs" style="color: inherit; text-decoration: inherit;">charge<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3128,7 +2841,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>disk<wbr>Capacity</span>
+        <span id="diskcapacity_nodejs">
+<a href="#diskcapacity_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3137,7 +2852,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>disk<wbr>Count</span>
+        <span id="diskcount_nodejs">
+<a href="#diskcount_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3146,7 +2863,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>disk<wbr>Type</span>
+        <span id="disktype_nodejs">
+<a href="#disktype_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3155,7 +2874,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>gpu<wbr>Driver</span>
+        <span id="gpudriver_nodejs">
+<a href="#gpudriver_nodejs" style="color: inherit; text-decoration: inherit;">gpu<wbr>Driver</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3163,7 +2884,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>host<wbr>Group<wbr>Name</span>
+        <span id="hostgroupname_nodejs">
+<a href="#hostgroupname_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3172,7 +2895,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>host<wbr>Group<wbr>Type</span>
+        <span id="hostgrouptype_nodejs">
+<a href="#hostgrouptype_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Group<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3181,7 +2906,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>instance<wbr>List</span>
+        <span id="instancelist_nodejs">
+<a href="#instancelist_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>List</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3190,7 +2917,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>instance<wbr>Type</span>
+        <span id="instancetype_nodejs">
+<a href="#instancetype_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3199,7 +2928,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>node<wbr>Count</span>
+        <span id="nodecount_nodejs">
+<a href="#nodecount_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3208,7 +2939,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>period</span>
+        <span id="period_nodejs">
+<a href="#period_nodejs" style="color: inherit; text-decoration: inherit;">period</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -3217,7 +2950,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>sys<wbr>Disk<wbr>Capacity</span>
+        <span id="sysdiskcapacity_nodejs">
+<a href="#sysdiskcapacity_nodejs" style="color: inherit; text-decoration: inherit;">sys<wbr>Disk<wbr>Capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3226,7 +2961,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>sys<wbr>Disk<wbr>Type</span>
+        <span id="sysdisktype_nodejs">
+<a href="#sysdisktype_nodejs" style="color: inherit; text-decoration: inherit;">sys<wbr>Disk<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3242,7 +2979,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>auto_<wbr>renew</span>
+        <span id="auto_renew_python">
+<a href="#auto_renew_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>renew</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -3251,7 +2990,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>charge_<wbr>type</span>
+        <span id="charge_type_python">
+<a href="#charge_type_python" style="color: inherit; text-decoration: inherit;">charge_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3260,7 +3001,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>disk<wbr>Capacity</span>
+        <span id="diskcapacity_python">
+<a href="#diskcapacity_python" style="color: inherit; text-decoration: inherit;">disk<wbr>Capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3269,7 +3012,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>disk<wbr>Count</span>
+        <span id="diskcount_python">
+<a href="#diskcount_python" style="color: inherit; text-decoration: inherit;">disk<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3278,7 +3023,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>disk_<wbr>type</span>
+        <span id="disk_type_python">
+<a href="#disk_type_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3287,7 +3034,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>gpu<wbr>Driver</span>
+        <span id="gpudriver_python">
+<a href="#gpudriver_python" style="color: inherit; text-decoration: inherit;">gpu<wbr>Driver</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3295,7 +3044,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>host<wbr>Group<wbr>Name</span>
+        <span id="hostgroupname_python">
+<a href="#hostgroupname_python" style="color: inherit; text-decoration: inherit;">host<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3304,7 +3055,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>host<wbr>Group<wbr>Type</span>
+        <span id="hostgrouptype_python">
+<a href="#hostgrouptype_python" style="color: inherit; text-decoration: inherit;">host<wbr>Group<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3313,7 +3066,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>instance<wbr>List</span>
+        <span id="instancelist_python">
+<a href="#instancelist_python" style="color: inherit; text-decoration: inherit;">instance<wbr>List</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3322,7 +3077,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>instance_<wbr>type</span>
+        <span id="instance_type_python">
+<a href="#instance_type_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3331,7 +3088,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>node<wbr>Count</span>
+        <span id="nodecount_python">
+<a href="#nodecount_python" style="color: inherit; text-decoration: inherit;">node<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3340,7 +3099,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>period</span>
+        <span id="period_python">
+<a href="#period_python" style="color: inherit; text-decoration: inherit;">period</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -3349,7 +3110,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>sys<wbr>Disk<wbr>Capacity</span>
+        <span id="sysdiskcapacity_python">
+<a href="#sysdiskcapacity_python" style="color: inherit; text-decoration: inherit;">sys<wbr>Disk<wbr>Capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3358,7 +3121,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>sys<wbr>Disk<wbr>Type</span>
+        <span id="sysdisktype_python">
+<a href="#sysdisktype_python" style="color: inherit; text-decoration: inherit;">sys<wbr>Disk<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

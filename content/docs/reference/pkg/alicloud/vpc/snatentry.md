@@ -200,7 +200,9 @@ The SnatEntry resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-required"
             title="Required">
-        <span>Snat<wbr>Ip</span>
+        <span id="snatip_csharp">
+<a href="#snatip_csharp" style="color: inherit; text-decoration: inherit;">Snat<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -209,7 +211,9 @@ The SnatEntry resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-required"
             title="Required">
-        <span>Snat<wbr>Table<wbr>Id</span>
+        <span id="snattableid_csharp">
+<a href="#snattableid_csharp" style="color: inherit; text-decoration: inherit;">Snat<wbr>Table<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -218,7 +222,9 @@ The SnatEntry resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
-        <span>Snat<wbr>Entry<wbr>Name</span>
+        <span id="snatentryname_csharp">
+<a href="#snatentryname_csharp" style="color: inherit; text-decoration: inherit;">Snat<wbr>Entry<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -227,7 +233,9 @@ The SnatEntry resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
-        <span>Source<wbr>Cidr</span>
+        <span id="sourcecidr_csharp">
+<a href="#sourcecidr_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Cidr</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -236,7 +244,9 @@ The SnatEntry resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
-        <span>Source<wbr>Vswitch<wbr>Id</span>
+        <span id="sourcevswitchid_csharp">
+<a href="#sourcevswitchid_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Vswitch<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -252,7 +262,9 @@ The SnatEntry resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-required"
             title="Required">
-        <span>Snat<wbr>Ip</span>
+        <span id="snatip_go">
+<a href="#snatip_go" style="color: inherit; text-decoration: inherit;">Snat<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -261,7 +273,9 @@ The SnatEntry resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-required"
             title="Required">
-        <span>Snat<wbr>Table<wbr>Id</span>
+        <span id="snattableid_go">
+<a href="#snattableid_go" style="color: inherit; text-decoration: inherit;">Snat<wbr>Table<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -270,7 +284,9 @@ The SnatEntry resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
-        <span>Snat<wbr>Entry<wbr>Name</span>
+        <span id="snatentryname_go">
+<a href="#snatentryname_go" style="color: inherit; text-decoration: inherit;">Snat<wbr>Entry<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -279,7 +295,9 @@ The SnatEntry resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
-        <span>Source<wbr>Cidr</span>
+        <span id="sourcecidr_go">
+<a href="#sourcecidr_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Cidr</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -288,7 +306,9 @@ The SnatEntry resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
-        <span>Source<wbr>Vswitch<wbr>Id</span>
+        <span id="sourcevswitchid_go">
+<a href="#sourcevswitchid_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Vswitch<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -304,7 +324,9 @@ The SnatEntry resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-required"
             title="Required">
-        <span>snat<wbr>Ip</span>
+        <span id="snatip_nodejs">
+<a href="#snatip_nodejs" style="color: inherit; text-decoration: inherit;">snat<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -313,7 +335,9 @@ The SnatEntry resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-required"
             title="Required">
-        <span>snat<wbr>Table<wbr>Id</span>
+        <span id="snattableid_nodejs">
+<a href="#snattableid_nodejs" style="color: inherit; text-decoration: inherit;">snat<wbr>Table<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -322,7 +346,9 @@ The SnatEntry resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
-        <span>snat<wbr>Entry<wbr>Name</span>
+        <span id="snatentryname_nodejs">
+<a href="#snatentryname_nodejs" style="color: inherit; text-decoration: inherit;">snat<wbr>Entry<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -331,7 +357,9 @@ The SnatEntry resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
-        <span>source<wbr>Cidr</span>
+        <span id="sourcecidr_nodejs">
+<a href="#sourcecidr_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Cidr</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -340,7 +368,9 @@ The SnatEntry resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
-        <span>source<wbr>Vswitch<wbr>Id</span>
+        <span id="sourcevswitchid_nodejs">
+<a href="#sourcevswitchid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Vswitch<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -356,7 +386,9 @@ The SnatEntry resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-required"
             title="Required">
-        <span>snat_<wbr>ip</span>
+        <span id="snat_ip_python">
+<a href="#snat_ip_python" style="color: inherit; text-decoration: inherit;">snat_<wbr>ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -365,7 +397,9 @@ The SnatEntry resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-required"
             title="Required">
-        <span>snat_<wbr>table_<wbr>id</span>
+        <span id="snat_table_id_python">
+<a href="#snat_table_id_python" style="color: inherit; text-decoration: inherit;">snat_<wbr>table_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -374,7 +408,9 @@ The SnatEntry resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
-        <span>snat_<wbr>entry_<wbr>name</span>
+        <span id="snat_entry_name_python">
+<a href="#snat_entry_name_python" style="color: inherit; text-decoration: inherit;">snat_<wbr>entry_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -383,7 +419,9 @@ The SnatEntry resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
-        <span>source_<wbr>cidr</span>
+        <span id="source_cidr_python">
+<a href="#source_cidr_python" style="color: inherit; text-decoration: inherit;">source_<wbr>cidr</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -392,7 +430,9 @@ The SnatEntry resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
-        <span>source_<wbr>vswitch_<wbr>id</span>
+        <span id="source_vswitch_id_python">
+<a href="#source_vswitch_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>vswitch_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -419,7 +459,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -427,7 +469,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Snat<wbr>Entry<wbr>Id</span>
+        <span id="snatentryid_csharp">
+<a href="#snatentryid_csharp" style="color: inherit; text-decoration: inherit;">Snat<wbr>Entry<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -443,7 +487,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -451,7 +497,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Snat<wbr>Entry<wbr>Id</span>
+        <span id="snatentryid_go">
+<a href="#snatentryid_go" style="color: inherit; text-decoration: inherit;">Snat<wbr>Entry<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -467,7 +515,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -475,7 +525,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>snat<wbr>Entry<wbr>Id</span>
+        <span id="snatentryid_nodejs">
+<a href="#snatentryid_nodejs" style="color: inherit; text-decoration: inherit;">snat<wbr>Entry<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -491,7 +543,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -499,7 +553,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>snat_<wbr>entry_<wbr>id</span>
+        <span id="snat_entry_id_python">
+<a href="#snat_entry_id_python" style="color: inherit; text-decoration: inherit;">snat_<wbr>entry_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -641,7 +697,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Snat<wbr>Entry<wbr>Id</span>
+        <span id="state_snatentryid_csharp">
+<a href="#state_snatentryid_csharp" style="color: inherit; text-decoration: inherit;">Snat<wbr>Entry<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -650,7 +708,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Snat<wbr>Entry<wbr>Name</span>
+        <span id="state_snatentryname_csharp">
+<a href="#state_snatentryname_csharp" style="color: inherit; text-decoration: inherit;">Snat<wbr>Entry<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -659,7 +719,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Snat<wbr>Ip</span>
+        <span id="state_snatip_csharp">
+<a href="#state_snatip_csharp" style="color: inherit; text-decoration: inherit;">Snat<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -668,7 +730,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Snat<wbr>Table<wbr>Id</span>
+        <span id="state_snattableid_csharp">
+<a href="#state_snattableid_csharp" style="color: inherit; text-decoration: inherit;">Snat<wbr>Table<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -677,7 +741,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Source<wbr>Cidr</span>
+        <span id="state_sourcecidr_csharp">
+<a href="#state_sourcecidr_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Cidr</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -686,7 +752,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Source<wbr>Vswitch<wbr>Id</span>
+        <span id="state_sourcevswitchid_csharp">
+<a href="#state_sourcevswitchid_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Vswitch<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -702,7 +770,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Snat<wbr>Entry<wbr>Id</span>
+        <span id="state_snatentryid_go">
+<a href="#state_snatentryid_go" style="color: inherit; text-decoration: inherit;">Snat<wbr>Entry<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -711,7 +781,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Snat<wbr>Entry<wbr>Name</span>
+        <span id="state_snatentryname_go">
+<a href="#state_snatentryname_go" style="color: inherit; text-decoration: inherit;">Snat<wbr>Entry<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -720,7 +792,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Snat<wbr>Ip</span>
+        <span id="state_snatip_go">
+<a href="#state_snatip_go" style="color: inherit; text-decoration: inherit;">Snat<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -729,7 +803,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Snat<wbr>Table<wbr>Id</span>
+        <span id="state_snattableid_go">
+<a href="#state_snattableid_go" style="color: inherit; text-decoration: inherit;">Snat<wbr>Table<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -738,7 +814,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Source<wbr>Cidr</span>
+        <span id="state_sourcecidr_go">
+<a href="#state_sourcecidr_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Cidr</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -747,7 +825,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Source<wbr>Vswitch<wbr>Id</span>
+        <span id="state_sourcevswitchid_go">
+<a href="#state_sourcevswitchid_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Vswitch<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -763,7 +843,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>snat<wbr>Entry<wbr>Id</span>
+        <span id="state_snatentryid_nodejs">
+<a href="#state_snatentryid_nodejs" style="color: inherit; text-decoration: inherit;">snat<wbr>Entry<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -772,7 +854,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>snat<wbr>Entry<wbr>Name</span>
+        <span id="state_snatentryname_nodejs">
+<a href="#state_snatentryname_nodejs" style="color: inherit; text-decoration: inherit;">snat<wbr>Entry<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -781,7 +865,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>snat<wbr>Ip</span>
+        <span id="state_snatip_nodejs">
+<a href="#state_snatip_nodejs" style="color: inherit; text-decoration: inherit;">snat<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -790,7 +876,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>snat<wbr>Table<wbr>Id</span>
+        <span id="state_snattableid_nodejs">
+<a href="#state_snattableid_nodejs" style="color: inherit; text-decoration: inherit;">snat<wbr>Table<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -799,7 +887,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>source<wbr>Cidr</span>
+        <span id="state_sourcecidr_nodejs">
+<a href="#state_sourcecidr_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Cidr</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -808,7 +898,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>source<wbr>Vswitch<wbr>Id</span>
+        <span id="state_sourcevswitchid_nodejs">
+<a href="#state_sourcevswitchid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Vswitch<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -824,7 +916,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>snat_<wbr>entry_<wbr>id</span>
+        <span id="state_snat_entry_id_python">
+<a href="#state_snat_entry_id_python" style="color: inherit; text-decoration: inherit;">snat_<wbr>entry_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -833,7 +927,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>snat_<wbr>entry_<wbr>name</span>
+        <span id="state_snat_entry_name_python">
+<a href="#state_snat_entry_name_python" style="color: inherit; text-decoration: inherit;">snat_<wbr>entry_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -842,7 +938,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>snat_<wbr>ip</span>
+        <span id="state_snat_ip_python">
+<a href="#state_snat_ip_python" style="color: inherit; text-decoration: inherit;">snat_<wbr>ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -851,7 +949,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>snat_<wbr>table_<wbr>id</span>
+        <span id="state_snat_table_id_python">
+<a href="#state_snat_table_id_python" style="color: inherit; text-decoration: inherit;">snat_<wbr>table_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -860,7 +960,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>source_<wbr>cidr</span>
+        <span id="state_source_cidr_python">
+<a href="#state_source_cidr_python" style="color: inherit; text-decoration: inherit;">source_<wbr>cidr</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -869,7 +971,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>source_<wbr>vswitch_<wbr>id</span>
+        <span id="state_source_vswitch_id_python">
+<a href="#state_source_vswitch_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>vswitch_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

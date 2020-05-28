@@ -22,7 +22,19 @@ This data source provides availability zones for SLB that can be accessed by an 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var zonesIds = Output.Create(AliCloud.Slb.GetZones.InvokeAsync());
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -89,7 +101,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Available<wbr>Slb<wbr>Address<wbr>Ip<wbr>Version</span>
+        <span id="availableslbaddressipversion_csharp">
+<a href="#availableslbaddressipversion_csharp" style="color: inherit; text-decoration: inherit;">Available<wbr>Slb<wbr>Address<wbr>Ip<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -98,7 +112,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Available<wbr>Slb<wbr>Address<wbr>Type</span>
+        <span id="availableslbaddresstype_csharp">
+<a href="#availableslbaddresstype_csharp" style="color: inherit; text-decoration: inherit;">Available<wbr>Slb<wbr>Address<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -107,7 +123,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enable<wbr>Details</span>
+        <span id="enabledetails_csharp">
+<a href="#enabledetails_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Details</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -116,7 +134,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Output<wbr>File</span>
+        <span id="outputfile_csharp">
+<a href="#outputfile_csharp" style="color: inherit; text-decoration: inherit;">Output<wbr>File</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -131,7 +151,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Available<wbr>Slb<wbr>Address<wbr>Ip<wbr>Version</span>
+        <span id="availableslbaddressipversion_go">
+<a href="#availableslbaddressipversion_go" style="color: inherit; text-decoration: inherit;">Available<wbr>Slb<wbr>Address<wbr>Ip<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -140,7 +162,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Available<wbr>Slb<wbr>Address<wbr>Type</span>
+        <span id="availableslbaddresstype_go">
+<a href="#availableslbaddresstype_go" style="color: inherit; text-decoration: inherit;">Available<wbr>Slb<wbr>Address<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -149,7 +173,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enable<wbr>Details</span>
+        <span id="enabledetails_go">
+<a href="#enabledetails_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Details</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -158,7 +184,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Output<wbr>File</span>
+        <span id="outputfile_go">
+<a href="#outputfile_go" style="color: inherit; text-decoration: inherit;">Output<wbr>File</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -173,7 +201,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>available<wbr>Slb<wbr>Address<wbr>Ip<wbr>Version</span>
+        <span id="availableslbaddressipversion_nodejs">
+<a href="#availableslbaddressipversion_nodejs" style="color: inherit; text-decoration: inherit;">available<wbr>Slb<wbr>Address<wbr>Ip<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -182,7 +212,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>available<wbr>Slb<wbr>Address<wbr>Type</span>
+        <span id="availableslbaddresstype_nodejs">
+<a href="#availableslbaddresstype_nodejs" style="color: inherit; text-decoration: inherit;">available<wbr>Slb<wbr>Address<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -191,7 +223,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>enable<wbr>Details</span>
+        <span id="enabledetails_nodejs">
+<a href="#enabledetails_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Details</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -200,7 +234,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>output<wbr>File</span>
+        <span id="outputfile_nodejs">
+<a href="#outputfile_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>File</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -215,7 +251,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>available_<wbr>slb_<wbr>address_<wbr>ip_<wbr>version</span>
+        <span id="available_slb_address_ip_version_python">
+<a href="#available_slb_address_ip_version_python" style="color: inherit; text-decoration: inherit;">available_<wbr>slb_<wbr>address_<wbr>ip_<wbr>version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -224,7 +262,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>available_<wbr>slb_<wbr>address_<wbr>type</span>
+        <span id="available_slb_address_type_python">
+<a href="#available_slb_address_type_python" style="color: inherit; text-decoration: inherit;">available_<wbr>slb_<wbr>address_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -233,7 +273,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>enable_<wbr>details</span>
+        <span id="enable_details_python">
+<a href="#enable_details_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>details</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -242,7 +284,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>output_<wbr>file</span>
+        <span id="output_file_python">
+<a href="#output_file_python" style="color: inherit; text-decoration: inherit;">output_<wbr>file</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -270,7 +314,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -279,7 +325,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Ids</span>
+        <span id="ids_csharp">
+<a href="#ids_csharp" style="color: inherit; text-decoration: inherit;">Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -288,7 +336,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Zones</span>
+        <span id="zones_csharp">
+<a href="#zones_csharp" style="color: inherit; text-decoration: inherit;">Zones</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getzoneszone">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Slb.<wbr>Outputs.<wbr>Get<wbr>Zones<wbr>Zone&gt;</a></span>
     </dt>
@@ -297,7 +347,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Available<wbr>Slb<wbr>Address<wbr>Ip<wbr>Version</span>
+        <span id="availableslbaddressipversion_csharp">
+<a href="#availableslbaddressipversion_csharp" style="color: inherit; text-decoration: inherit;">Available<wbr>Slb<wbr>Address<wbr>Ip<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -305,7 +357,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Available<wbr>Slb<wbr>Address<wbr>Type</span>
+        <span id="availableslbaddresstype_csharp">
+<a href="#availableslbaddresstype_csharp" style="color: inherit; text-decoration: inherit;">Available<wbr>Slb<wbr>Address<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -313,7 +367,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Enable<wbr>Details</span>
+        <span id="enabledetails_csharp">
+<a href="#enabledetails_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Details</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -321,7 +377,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Output<wbr>File</span>
+        <span id="outputfile_csharp">
+<a href="#outputfile_csharp" style="color: inherit; text-decoration: inherit;">Output<wbr>File</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -336,7 +394,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -345,7 +405,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Ids</span>
+        <span id="ids_go">
+<a href="#ids_go" style="color: inherit; text-decoration: inherit;">Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -354,7 +416,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Zones</span>
+        <span id="zones_go">
+<a href="#zones_go" style="color: inherit; text-decoration: inherit;">Zones</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getzoneszone">[]Get<wbr>Zones<wbr>Zone</a></span>
     </dt>
@@ -363,7 +427,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Available<wbr>Slb<wbr>Address<wbr>Ip<wbr>Version</span>
+        <span id="availableslbaddressipversion_go">
+<a href="#availableslbaddressipversion_go" style="color: inherit; text-decoration: inherit;">Available<wbr>Slb<wbr>Address<wbr>Ip<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -371,7 +437,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Available<wbr>Slb<wbr>Address<wbr>Type</span>
+        <span id="availableslbaddresstype_go">
+<a href="#availableslbaddresstype_go" style="color: inherit; text-decoration: inherit;">Available<wbr>Slb<wbr>Address<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -379,7 +447,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Enable<wbr>Details</span>
+        <span id="enabledetails_go">
+<a href="#enabledetails_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Details</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -387,7 +457,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Output<wbr>File</span>
+        <span id="outputfile_go">
+<a href="#outputfile_go" style="color: inherit; text-decoration: inherit;">Output<wbr>File</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -402,7 +474,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -411,7 +485,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>ids</span>
+        <span id="ids_nodejs">
+<a href="#ids_nodejs" style="color: inherit; text-decoration: inherit;">ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -420,7 +496,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>zones</span>
+        <span id="zones_nodejs">
+<a href="#zones_nodejs" style="color: inherit; text-decoration: inherit;">zones</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getzoneszone">Get<wbr>Zones<wbr>Zone[]</a></span>
     </dt>
@@ -429,7 +507,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>available<wbr>Slb<wbr>Address<wbr>Ip<wbr>Version</span>
+        <span id="availableslbaddressipversion_nodejs">
+<a href="#availableslbaddressipversion_nodejs" style="color: inherit; text-decoration: inherit;">available<wbr>Slb<wbr>Address<wbr>Ip<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -437,7 +517,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>available<wbr>Slb<wbr>Address<wbr>Type</span>
+        <span id="availableslbaddresstype_nodejs">
+<a href="#availableslbaddresstype_nodejs" style="color: inherit; text-decoration: inherit;">available<wbr>Slb<wbr>Address<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -445,7 +527,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>enable<wbr>Details</span>
+        <span id="enabledetails_nodejs">
+<a href="#enabledetails_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Details</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -453,7 +537,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>output<wbr>File</span>
+        <span id="outputfile_nodejs">
+<a href="#outputfile_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>File</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -468,7 +554,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -477,7 +565,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>ids</span>
+        <span id="ids_python">
+<a href="#ids_python" style="color: inherit; text-decoration: inherit;">ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -486,7 +576,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>zones</span>
+        <span id="zones_python">
+<a href="#zones_python" style="color: inherit; text-decoration: inherit;">zones</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getzoneszone">List[Get<wbr>Zones<wbr>Zone]</a></span>
     </dt>
@@ -495,7 +587,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>available_<wbr>slb_<wbr>address_<wbr>ip_<wbr>version</span>
+        <span id="available_slb_address_ip_version_python">
+<a href="#available_slb_address_ip_version_python" style="color: inherit; text-decoration: inherit;">available_<wbr>slb_<wbr>address_<wbr>ip_<wbr>version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -503,7 +597,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>available_<wbr>slb_<wbr>address_<wbr>type</span>
+        <span id="available_slb_address_type_python">
+<a href="#available_slb_address_type_python" style="color: inherit; text-decoration: inherit;">available_<wbr>slb_<wbr>address_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -511,7 +607,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>enable_<wbr>details</span>
+        <span id="enable_details_python">
+<a href="#enable_details_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>details</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -519,7 +617,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>output_<wbr>file</span>
+        <span id="output_file_python">
+<a href="#output_file_python" style="color: inherit; text-decoration: inherit;">output_<wbr>file</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -558,7 +658,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -567,7 +669,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Slb<wbr>Slave<wbr>Zone<wbr>Ids</span>
+        <span id="slbslavezoneids_csharp">
+<a href="#slbslavezoneids_csharp" style="color: inherit; text-decoration: inherit;">Slb<wbr>Slave<wbr>Zone<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -583,7 +687,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -592,7 +698,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Slb<wbr>Slave<wbr>Zone<wbr>Ids</span>
+        <span id="slbslavezoneids_go">
+<a href="#slbslavezoneids_go" style="color: inherit; text-decoration: inherit;">Slb<wbr>Slave<wbr>Zone<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -608,7 +716,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -617,7 +727,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>slb<wbr>Slave<wbr>Zone<wbr>Ids</span>
+        <span id="slbslavezoneids_nodejs">
+<a href="#slbslavezoneids_nodejs" style="color: inherit; text-decoration: inherit;">slb<wbr>Slave<wbr>Zone<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -633,7 +745,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -642,7 +756,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>slb<wbr>Slave<wbr>Zone<wbr>Ids</span>
+        <span id="slbslavezoneids_python">
+<a href="#slbslavezoneids_python" style="color: inherit; text-decoration: inherit;">slb<wbr>Slave<wbr>Zone<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>

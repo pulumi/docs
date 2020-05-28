@@ -22,7 +22,94 @@ For information about Elastic Network Interface and how to use it, see [Elastic 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using System.Collections.Generic;
+using System.Linq;
+using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var config = new Config();
+        var name = config.Get("name") ?? "networkInterfaceAttachment";
+        var number = config.Get("number") ?? "2";
+        var vpc = new AliCloud.Vpc.Network("vpc", new AliCloud.Vpc.NetworkArgs
+        {
+            CidrBlock = "192.168.0.0/24",
+        });
+        var defaultZones = Output.Create(AliCloud.GetZones.InvokeAsync(new AliCloud.GetZonesArgs
+        {
+            AvailableResourceCreation = "VSwitch",
+        }));
+        var vswitch = new AliCloud.Vpc.Switch("vswitch", new AliCloud.Vpc.SwitchArgs
+        {
+            AvailabilityZone = defaultZones.Apply(defaultZones => defaultZones.Zones[0].Id),
+            CidrBlock = "192.168.0.0/24",
+            VpcId = vpc.Id,
+        });
+        var @group = new AliCloud.Ecs.SecurityGroup("group", new AliCloud.Ecs.SecurityGroupArgs
+        {
+            VpcId = vpc.Id,
+        });
+        var instanceType = defaultZones.Apply(defaultZones => Output.Create(AliCloud.Ecs.GetInstanceTypes.InvokeAsync(new AliCloud.Ecs.GetInstanceTypesArgs
+        {
+            AvailabilityZone = defaultZones.Zones[0].Id,
+            EniAmount = 2,
+        })));
+        var defaultImages = Output.Create(AliCloud.Ecs.GetImages.InvokeAsync(new AliCloud.Ecs.GetImagesArgs
+        {
+            MostRecent = true,
+            NameRegex = "^ubuntu_18.*64",
+            Owners = "system",
+        }));
+        var instance = new List<AliCloud.Ecs.Instance>();
+        for (var rangeIndex = 0; rangeIndex < number; rangeIndex++)
+        {
+            var range = new { Value = rangeIndex };
+            instance.Add(new AliCloud.Ecs.Instance($"instance-{range.Value}", new AliCloud.Ecs.InstanceArgs
+            {
+                AvailabilityZone = defaultZones.Apply(defaultZones => defaultZones.Zones[0].Id),
+                ImageId = defaultImages.Apply(defaultImages => defaultImages.Images[0].Id),
+                InstanceName = name,
+                InstanceType = instanceType.Apply(instanceType => instanceType.InstanceTypes[0].Id),
+                InternetMaxBandwidthOut = 10,
+                SecurityGroups = 
+                {
+                    @group.Id,
+                },
+                SystemDiskCategory = "cloud_efficiency",
+                VswitchId = vswitch.Id,
+            }));
+        }
+        var @interface = new List<AliCloud.Vpc.NetworkInterface>();
+        for (var rangeIndex = 0; rangeIndex < number; rangeIndex++)
+        {
+            var range = new { Value = rangeIndex };
+            @interface.Add(new AliCloud.Vpc.NetworkInterface($"interface-{range.Value}", new AliCloud.Vpc.NetworkInterfaceArgs
+            {
+                SecurityGroups = 
+                {
+                    @group.Id,
+                },
+                VswitchId = vswitch.Id,
+            }));
+        }
+        var attachment = new List<AliCloud.Vpc.NetworkInterfaceAttachment>();
+        for (var rangeIndex = 0; rangeIndex < number; rangeIndex++)
+        {
+            var range = new { Value = rangeIndex };
+            attachment.Add(new AliCloud.Vpc.NetworkInterfaceAttachment($"attachment-{range.Value}", new AliCloud.Vpc.NetworkInterfaceAttachmentArgs
+            {
+                InstanceId = instance.Select(__item => __item.Id).ToList()[range.Index],
+                NetworkInterfaceId = @interface.Select(__item => __item.Id).ToList()[range.Index],
+            }));
+        }
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -325,7 +412,9 @@ The NetworkInterfaceAttachment resource accepts the following [input]({{< relref
 
     <dt class="property-required"
             title="Required">
-        <span>Instance<wbr>Id</span>
+        <span id="instanceid_csharp">
+<a href="#instanceid_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -334,7 +423,9 @@ The NetworkInterfaceAttachment resource accepts the following [input]({{< relref
 
     <dt class="property-required"
             title="Required">
-        <span>Network<wbr>Interface<wbr>Id</span>
+        <span id="networkinterfaceid_csharp">
+<a href="#networkinterfaceid_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Interface<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -350,7 +441,9 @@ The NetworkInterfaceAttachment resource accepts the following [input]({{< relref
 
     <dt class="property-required"
             title="Required">
-        <span>Instance<wbr>Id</span>
+        <span id="instanceid_go">
+<a href="#instanceid_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -359,7 +452,9 @@ The NetworkInterfaceAttachment resource accepts the following [input]({{< relref
 
     <dt class="property-required"
             title="Required">
-        <span>Network<wbr>Interface<wbr>Id</span>
+        <span id="networkinterfaceid_go">
+<a href="#networkinterfaceid_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Interface<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -375,7 +470,9 @@ The NetworkInterfaceAttachment resource accepts the following [input]({{< relref
 
     <dt class="property-required"
             title="Required">
-        <span>instance<wbr>Id</span>
+        <span id="instanceid_nodejs">
+<a href="#instanceid_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -384,7 +481,9 @@ The NetworkInterfaceAttachment resource accepts the following [input]({{< relref
 
     <dt class="property-required"
             title="Required">
-        <span>network<wbr>Interface<wbr>Id</span>
+        <span id="networkinterfaceid_nodejs">
+<a href="#networkinterfaceid_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Interface<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -400,7 +499,9 @@ The NetworkInterfaceAttachment resource accepts the following [input]({{< relref
 
     <dt class="property-required"
             title="Required">
-        <span>instance_<wbr>id</span>
+        <span id="instance_id_python">
+<a href="#instance_id_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -409,7 +510,9 @@ The NetworkInterfaceAttachment resource accepts the following [input]({{< relref
 
     <dt class="property-required"
             title="Required">
-        <span>network_<wbr>interface_<wbr>id</span>
+        <span id="network_interface_id_python">
+<a href="#network_interface_id_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interface_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -436,7 +539,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -451,7 +556,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -466,7 +573,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -481,7 +590,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -622,7 +733,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Instance<wbr>Id</span>
+        <span id="state_instanceid_csharp">
+<a href="#state_instanceid_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -631,7 +744,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Network<wbr>Interface<wbr>Id</span>
+        <span id="state_networkinterfaceid_csharp">
+<a href="#state_networkinterfaceid_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Interface<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -647,7 +762,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Instance<wbr>Id</span>
+        <span id="state_instanceid_go">
+<a href="#state_instanceid_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -656,7 +773,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Network<wbr>Interface<wbr>Id</span>
+        <span id="state_networkinterfaceid_go">
+<a href="#state_networkinterfaceid_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Interface<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -672,7 +791,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>instance<wbr>Id</span>
+        <span id="state_instanceid_nodejs">
+<a href="#state_instanceid_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -681,7 +802,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>network<wbr>Interface<wbr>Id</span>
+        <span id="state_networkinterfaceid_nodejs">
+<a href="#state_networkinterfaceid_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Interface<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -697,7 +820,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>instance_<wbr>id</span>
+        <span id="state_instance_id_python">
+<a href="#state_instance_id_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -706,7 +831,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>network_<wbr>interface_<wbr>id</span>
+        <span id="state_network_interface_id_python">
+<a href="#state_network_interface_id_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interface_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

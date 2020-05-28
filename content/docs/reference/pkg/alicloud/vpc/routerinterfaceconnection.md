@@ -29,7 +29,59 @@ After that, all of the two router interfaces will be active.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var config = new Config();
+        var region = config.Get("region") ?? "cn-hangzhou";
+        var name = config.Get("name") ?? "alicloudRouterInterfaceConnectionBasic";
+        var fooNetwork = new AliCloud.Vpc.Network("fooNetwork", new AliCloud.Vpc.NetworkArgs
+        {
+            CidrBlock = "172.16.0.0/12",
+        });
+        var barNetwork = new AliCloud.Vpc.Network("barNetwork", new AliCloud.Vpc.NetworkArgs
+        {
+            CidrBlock = "192.168.0.0/16",
+        });
+        var initiate = new AliCloud.Vpc.RouterInterface("initiate", new AliCloud.Vpc.RouterInterfaceArgs
+        {
+            Description = name,
+            InstanceChargeType = "PostPaid",
+            OppositeRegion = region,
+            Role = "InitiatingSide",
+            RouterId = fooNetwork.RouterId,
+            RouterType = "VRouter",
+            Specification = "Large.2",
+        });
+        var opposite = new AliCloud.Vpc.RouterInterface("opposite", new AliCloud.Vpc.RouterInterfaceArgs
+        {
+            Description = $"{name}-opposite",
+            OppositeRegion = region,
+            Role = "AcceptingSide",
+            RouterId = barNetwork.RouterId,
+            RouterType = "VRouter",
+            Specification = "Large.1",
+        });
+        // A integrated router interface connection tunnel requires both InitiatingSide and AcceptingSide configuring opposite router interface.
+        var fooRouterInterfaceConnection = new AliCloud.Vpc.RouterInterfaceConnection("fooRouterInterfaceConnection", new AliCloud.Vpc.RouterInterfaceConnectionArgs
+        {
+            InterfaceId = initiate.Id,
+            OppositeInterfaceId = opposite.Id,
+        });
+        var barRouterInterfaceConnection = new AliCloud.Vpc.RouterInterfaceConnection("barRouterInterfaceConnection", new AliCloud.Vpc.RouterInterfaceConnectionArgs
+        {
+            InterfaceId = opposite.Id,
+            OppositeInterfaceId = initiate.Id,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -305,7 +357,9 @@ The RouterInterfaceConnection resource accepts the following [input]({{< relref 
 
     <dt class="property-required"
             title="Required">
-        <span>Interface<wbr>Id</span>
+        <span id="interfaceid_csharp">
+<a href="#interfaceid_csharp" style="color: inherit; text-decoration: inherit;">Interface<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -314,7 +368,9 @@ The RouterInterfaceConnection resource accepts the following [input]({{< relref 
 
     <dt class="property-required"
             title="Required">
-        <span>Opposite<wbr>Interface<wbr>Id</span>
+        <span id="oppositeinterfaceid_csharp">
+<a href="#oppositeinterfaceid_csharp" style="color: inherit; text-decoration: inherit;">Opposite<wbr>Interface<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -323,7 +379,9 @@ The RouterInterfaceConnection resource accepts the following [input]({{< relref 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Opposite<wbr>Interface<wbr>Owner<wbr>Id</span>
+        <span id="oppositeinterfaceownerid_csharp">
+<a href="#oppositeinterfaceownerid_csharp" style="color: inherit; text-decoration: inherit;">Opposite<wbr>Interface<wbr>Owner<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -331,7 +389,9 @@ The RouterInterfaceConnection resource accepts the following [input]({{< relref 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Opposite<wbr>Router<wbr>Id</span>
+        <span id="oppositerouterid_csharp">
+<a href="#oppositerouterid_csharp" style="color: inherit; text-decoration: inherit;">Opposite<wbr>Router<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -340,7 +400,9 @@ The RouterInterfaceConnection resource accepts the following [input]({{< relref 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Opposite<wbr>Router<wbr>Type</span>
+        <span id="oppositeroutertype_csharp">
+<a href="#oppositeroutertype_csharp" style="color: inherit; text-decoration: inherit;">Opposite<wbr>Router<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -356,7 +418,9 @@ The RouterInterfaceConnection resource accepts the following [input]({{< relref 
 
     <dt class="property-required"
             title="Required">
-        <span>Interface<wbr>Id</span>
+        <span id="interfaceid_go">
+<a href="#interfaceid_go" style="color: inherit; text-decoration: inherit;">Interface<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -365,7 +429,9 @@ The RouterInterfaceConnection resource accepts the following [input]({{< relref 
 
     <dt class="property-required"
             title="Required">
-        <span>Opposite<wbr>Interface<wbr>Id</span>
+        <span id="oppositeinterfaceid_go">
+<a href="#oppositeinterfaceid_go" style="color: inherit; text-decoration: inherit;">Opposite<wbr>Interface<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -374,7 +440,9 @@ The RouterInterfaceConnection resource accepts the following [input]({{< relref 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Opposite<wbr>Interface<wbr>Owner<wbr>Id</span>
+        <span id="oppositeinterfaceownerid_go">
+<a href="#oppositeinterfaceownerid_go" style="color: inherit; text-decoration: inherit;">Opposite<wbr>Interface<wbr>Owner<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -382,7 +450,9 @@ The RouterInterfaceConnection resource accepts the following [input]({{< relref 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Opposite<wbr>Router<wbr>Id</span>
+        <span id="oppositerouterid_go">
+<a href="#oppositerouterid_go" style="color: inherit; text-decoration: inherit;">Opposite<wbr>Router<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -391,7 +461,9 @@ The RouterInterfaceConnection resource accepts the following [input]({{< relref 
 
     <dt class="property-optional"
             title="Optional">
-        <span>Opposite<wbr>Router<wbr>Type</span>
+        <span id="oppositeroutertype_go">
+<a href="#oppositeroutertype_go" style="color: inherit; text-decoration: inherit;">Opposite<wbr>Router<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -407,7 +479,9 @@ The RouterInterfaceConnection resource accepts the following [input]({{< relref 
 
     <dt class="property-required"
             title="Required">
-        <span>interface<wbr>Id</span>
+        <span id="interfaceid_nodejs">
+<a href="#interfaceid_nodejs" style="color: inherit; text-decoration: inherit;">interface<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -416,7 +490,9 @@ The RouterInterfaceConnection resource accepts the following [input]({{< relref 
 
     <dt class="property-required"
             title="Required">
-        <span>opposite<wbr>Interface<wbr>Id</span>
+        <span id="oppositeinterfaceid_nodejs">
+<a href="#oppositeinterfaceid_nodejs" style="color: inherit; text-decoration: inherit;">opposite<wbr>Interface<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -425,7 +501,9 @@ The RouterInterfaceConnection resource accepts the following [input]({{< relref 
 
     <dt class="property-optional"
             title="Optional">
-        <span>opposite<wbr>Interface<wbr>Owner<wbr>Id</span>
+        <span id="oppositeinterfaceownerid_nodejs">
+<a href="#oppositeinterfaceownerid_nodejs" style="color: inherit; text-decoration: inherit;">opposite<wbr>Interface<wbr>Owner<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -433,7 +511,9 @@ The RouterInterfaceConnection resource accepts the following [input]({{< relref 
 
     <dt class="property-optional"
             title="Optional">
-        <span>opposite<wbr>Router<wbr>Id</span>
+        <span id="oppositerouterid_nodejs">
+<a href="#oppositerouterid_nodejs" style="color: inherit; text-decoration: inherit;">opposite<wbr>Router<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -442,7 +522,9 @@ The RouterInterfaceConnection resource accepts the following [input]({{< relref 
 
     <dt class="property-optional"
             title="Optional">
-        <span>opposite<wbr>Router<wbr>Type</span>
+        <span id="oppositeroutertype_nodejs">
+<a href="#oppositeroutertype_nodejs" style="color: inherit; text-decoration: inherit;">opposite<wbr>Router<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -458,7 +540,9 @@ The RouterInterfaceConnection resource accepts the following [input]({{< relref 
 
     <dt class="property-required"
             title="Required">
-        <span>interface_<wbr>id</span>
+        <span id="interface_id_python">
+<a href="#interface_id_python" style="color: inherit; text-decoration: inherit;">interface_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -467,7 +551,9 @@ The RouterInterfaceConnection resource accepts the following [input]({{< relref 
 
     <dt class="property-required"
             title="Required">
-        <span>opposite_<wbr>interface_<wbr>id</span>
+        <span id="opposite_interface_id_python">
+<a href="#opposite_interface_id_python" style="color: inherit; text-decoration: inherit;">opposite_<wbr>interface_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -476,7 +562,9 @@ The RouterInterfaceConnection resource accepts the following [input]({{< relref 
 
     <dt class="property-optional"
             title="Optional">
-        <span>opposite_<wbr>interface_<wbr>owner_<wbr>id</span>
+        <span id="opposite_interface_owner_id_python">
+<a href="#opposite_interface_owner_id_python" style="color: inherit; text-decoration: inherit;">opposite_<wbr>interface_<wbr>owner_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -484,7 +572,9 @@ The RouterInterfaceConnection resource accepts the following [input]({{< relref 
 
     <dt class="property-optional"
             title="Optional">
-        <span>opposite_<wbr>router_<wbr>id</span>
+        <span id="opposite_router_id_python">
+<a href="#opposite_router_id_python" style="color: inherit; text-decoration: inherit;">opposite_<wbr>router_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -493,7 +583,9 @@ The RouterInterfaceConnection resource accepts the following [input]({{< relref 
 
     <dt class="property-optional"
             title="Optional">
-        <span>opposite_<wbr>router_<wbr>type</span>
+        <span id="opposite_router_type_python">
+<a href="#opposite_router_type_python" style="color: inherit; text-decoration: inherit;">opposite_<wbr>router_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -520,7 +612,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -535,7 +629,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -550,7 +646,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -565,7 +663,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -706,7 +806,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Interface<wbr>Id</span>
+        <span id="state_interfaceid_csharp">
+<a href="#state_interfaceid_csharp" style="color: inherit; text-decoration: inherit;">Interface<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -715,7 +817,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Opposite<wbr>Interface<wbr>Id</span>
+        <span id="state_oppositeinterfaceid_csharp">
+<a href="#state_oppositeinterfaceid_csharp" style="color: inherit; text-decoration: inherit;">Opposite<wbr>Interface<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -724,7 +828,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Opposite<wbr>Interface<wbr>Owner<wbr>Id</span>
+        <span id="state_oppositeinterfaceownerid_csharp">
+<a href="#state_oppositeinterfaceownerid_csharp" style="color: inherit; text-decoration: inherit;">Opposite<wbr>Interface<wbr>Owner<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -732,7 +838,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Opposite<wbr>Router<wbr>Id</span>
+        <span id="state_oppositerouterid_csharp">
+<a href="#state_oppositerouterid_csharp" style="color: inherit; text-decoration: inherit;">Opposite<wbr>Router<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -741,7 +849,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Opposite<wbr>Router<wbr>Type</span>
+        <span id="state_oppositeroutertype_csharp">
+<a href="#state_oppositeroutertype_csharp" style="color: inherit; text-decoration: inherit;">Opposite<wbr>Router<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -757,7 +867,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Interface<wbr>Id</span>
+        <span id="state_interfaceid_go">
+<a href="#state_interfaceid_go" style="color: inherit; text-decoration: inherit;">Interface<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -766,7 +878,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Opposite<wbr>Interface<wbr>Id</span>
+        <span id="state_oppositeinterfaceid_go">
+<a href="#state_oppositeinterfaceid_go" style="color: inherit; text-decoration: inherit;">Opposite<wbr>Interface<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -775,7 +889,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Opposite<wbr>Interface<wbr>Owner<wbr>Id</span>
+        <span id="state_oppositeinterfaceownerid_go">
+<a href="#state_oppositeinterfaceownerid_go" style="color: inherit; text-decoration: inherit;">Opposite<wbr>Interface<wbr>Owner<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -783,7 +899,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Opposite<wbr>Router<wbr>Id</span>
+        <span id="state_oppositerouterid_go">
+<a href="#state_oppositerouterid_go" style="color: inherit; text-decoration: inherit;">Opposite<wbr>Router<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -792,7 +910,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Opposite<wbr>Router<wbr>Type</span>
+        <span id="state_oppositeroutertype_go">
+<a href="#state_oppositeroutertype_go" style="color: inherit; text-decoration: inherit;">Opposite<wbr>Router<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -808,7 +928,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>interface<wbr>Id</span>
+        <span id="state_interfaceid_nodejs">
+<a href="#state_interfaceid_nodejs" style="color: inherit; text-decoration: inherit;">interface<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -817,7 +939,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>opposite<wbr>Interface<wbr>Id</span>
+        <span id="state_oppositeinterfaceid_nodejs">
+<a href="#state_oppositeinterfaceid_nodejs" style="color: inherit; text-decoration: inherit;">opposite<wbr>Interface<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -826,7 +950,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>opposite<wbr>Interface<wbr>Owner<wbr>Id</span>
+        <span id="state_oppositeinterfaceownerid_nodejs">
+<a href="#state_oppositeinterfaceownerid_nodejs" style="color: inherit; text-decoration: inherit;">opposite<wbr>Interface<wbr>Owner<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -834,7 +960,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>opposite<wbr>Router<wbr>Id</span>
+        <span id="state_oppositerouterid_nodejs">
+<a href="#state_oppositerouterid_nodejs" style="color: inherit; text-decoration: inherit;">opposite<wbr>Router<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -843,7 +971,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>opposite<wbr>Router<wbr>Type</span>
+        <span id="state_oppositeroutertype_nodejs">
+<a href="#state_oppositeroutertype_nodejs" style="color: inherit; text-decoration: inherit;">opposite<wbr>Router<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -859,7 +989,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>interface_<wbr>id</span>
+        <span id="state_interface_id_python">
+<a href="#state_interface_id_python" style="color: inherit; text-decoration: inherit;">interface_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -868,7 +1000,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>opposite_<wbr>interface_<wbr>id</span>
+        <span id="state_opposite_interface_id_python">
+<a href="#state_opposite_interface_id_python" style="color: inherit; text-decoration: inherit;">opposite_<wbr>interface_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -877,7 +1011,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>opposite_<wbr>interface_<wbr>owner_<wbr>id</span>
+        <span id="state_opposite_interface_owner_id_python">
+<a href="#state_opposite_interface_owner_id_python" style="color: inherit; text-decoration: inherit;">opposite_<wbr>interface_<wbr>owner_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -885,7 +1021,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>opposite_<wbr>router_<wbr>id</span>
+        <span id="state_opposite_router_id_python">
+<a href="#state_opposite_router_id_python" style="color: inherit; text-decoration: inherit;">opposite_<wbr>router_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -894,7 +1032,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>opposite_<wbr>router_<wbr>type</span>
+        <span id="state_opposite_router_type_python">
+<a href="#state_opposite_router_type_python" style="color: inherit; text-decoration: inherit;">opposite_<wbr>router_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

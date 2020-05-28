@@ -28,7 +28,34 @@ This resource will help you to manager cluster-autoscaler in Kubernetes Cluster.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var @default = new AliCloud.CS.KubernetesAutoscaler("default", new AliCloud.CS.KubernetesAutoscalerArgs
+        {
+            ClusterId = @var.Cluster_id,
+            CoolDownDuration = @var.Cool_down_duration,
+            DeferScaleInDuration = @var.Defer_scale_in_duration,
+            Nodepools = 
+            {
+                new AliCloud.CS.Inputs.KubernetesAutoscalerNodepoolArgs
+                {
+                    Id = "scaling_group_id",
+                    Labels = "a=b",
+                    Taints = "c=d:NoSchedule",
+                },
+            },
+            Utilization = @var.Utilization,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -258,7 +285,9 @@ The KubernetesAutoscaler resource accepts the following [input]({{< relref "/doc
 
     <dt class="property-required"
             title="Required">
-        <span>Cluster<wbr>Id</span>
+        <span id="clusterid_csharp">
+<a href="#clusterid_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -267,7 +296,9 @@ The KubernetesAutoscaler resource accepts the following [input]({{< relref "/doc
 
     <dt class="property-required"
             title="Required">
-        <span>Cool<wbr>Down<wbr>Duration</span>
+        <span id="cooldownduration_csharp">
+<a href="#cooldownduration_csharp" style="color: inherit; text-decoration: inherit;">Cool<wbr>Down<wbr>Duration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -276,7 +307,9 @@ The KubernetesAutoscaler resource accepts the following [input]({{< relref "/doc
 
     <dt class="property-required"
             title="Required">
-        <span>Defer<wbr>Scale<wbr>In<wbr>Duration</span>
+        <span id="deferscaleinduration_csharp">
+<a href="#deferscaleinduration_csharp" style="color: inherit; text-decoration: inherit;">Defer<wbr>Scale<wbr>In<wbr>Duration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -285,7 +318,9 @@ The KubernetesAutoscaler resource accepts the following [input]({{< relref "/doc
 
     <dt class="property-required"
             title="Required">
-        <span>Utilization</span>
+        <span id="utilization_csharp">
+<a href="#utilization_csharp" style="color: inherit; text-decoration: inherit;">Utilization</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -294,7 +329,9 @@ The KubernetesAutoscaler resource accepts the following [input]({{< relref "/doc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Nodepools</span>
+        <span id="nodepools_csharp">
+<a href="#nodepools_csharp" style="color: inherit; text-decoration: inherit;">Nodepools</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesautoscalernodepool">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>CS.<wbr>Inputs.<wbr>Kubernetes<wbr>Autoscaler<wbr>Nodepool<wbr>Args&gt;</a></span>
     </dt>
@@ -313,7 +350,9 @@ The KubernetesAutoscaler resource accepts the following [input]({{< relref "/doc
 
     <dt class="property-required"
             title="Required">
-        <span>Cluster<wbr>Id</span>
+        <span id="clusterid_go">
+<a href="#clusterid_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -322,7 +361,9 @@ The KubernetesAutoscaler resource accepts the following [input]({{< relref "/doc
 
     <dt class="property-required"
             title="Required">
-        <span>Cool<wbr>Down<wbr>Duration</span>
+        <span id="cooldownduration_go">
+<a href="#cooldownduration_go" style="color: inherit; text-decoration: inherit;">Cool<wbr>Down<wbr>Duration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -331,7 +372,9 @@ The KubernetesAutoscaler resource accepts the following [input]({{< relref "/doc
 
     <dt class="property-required"
             title="Required">
-        <span>Defer<wbr>Scale<wbr>In<wbr>Duration</span>
+        <span id="deferscaleinduration_go">
+<a href="#deferscaleinduration_go" style="color: inherit; text-decoration: inherit;">Defer<wbr>Scale<wbr>In<wbr>Duration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -340,7 +383,9 @@ The KubernetesAutoscaler resource accepts the following [input]({{< relref "/doc
 
     <dt class="property-required"
             title="Required">
-        <span>Utilization</span>
+        <span id="utilization_go">
+<a href="#utilization_go" style="color: inherit; text-decoration: inherit;">Utilization</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -349,7 +394,9 @@ The KubernetesAutoscaler resource accepts the following [input]({{< relref "/doc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Nodepools</span>
+        <span id="nodepools_go">
+<a href="#nodepools_go" style="color: inherit; text-decoration: inherit;">Nodepools</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesautoscalernodepool">[]Kubernetes<wbr>Autoscaler<wbr>Nodepool</a></span>
     </dt>
@@ -368,7 +415,9 @@ The KubernetesAutoscaler resource accepts the following [input]({{< relref "/doc
 
     <dt class="property-required"
             title="Required">
-        <span>cluster<wbr>Id</span>
+        <span id="clusterid_nodejs">
+<a href="#clusterid_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -377,7 +426,9 @@ The KubernetesAutoscaler resource accepts the following [input]({{< relref "/doc
 
     <dt class="property-required"
             title="Required">
-        <span>cool<wbr>Down<wbr>Duration</span>
+        <span id="cooldownduration_nodejs">
+<a href="#cooldownduration_nodejs" style="color: inherit; text-decoration: inherit;">cool<wbr>Down<wbr>Duration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -386,7 +437,9 @@ The KubernetesAutoscaler resource accepts the following [input]({{< relref "/doc
 
     <dt class="property-required"
             title="Required">
-        <span>defer<wbr>Scale<wbr>In<wbr>Duration</span>
+        <span id="deferscaleinduration_nodejs">
+<a href="#deferscaleinduration_nodejs" style="color: inherit; text-decoration: inherit;">defer<wbr>Scale<wbr>In<wbr>Duration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -395,7 +448,9 @@ The KubernetesAutoscaler resource accepts the following [input]({{< relref "/doc
 
     <dt class="property-required"
             title="Required">
-        <span>utilization</span>
+        <span id="utilization_nodejs">
+<a href="#utilization_nodejs" style="color: inherit; text-decoration: inherit;">utilization</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -404,7 +459,9 @@ The KubernetesAutoscaler resource accepts the following [input]({{< relref "/doc
 
     <dt class="property-optional"
             title="Optional">
-        <span>nodepools</span>
+        <span id="nodepools_nodejs">
+<a href="#nodepools_nodejs" style="color: inherit; text-decoration: inherit;">nodepools</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesautoscalernodepool">Kubernetes<wbr>Autoscaler<wbr>Nodepool[]</a></span>
     </dt>
@@ -423,7 +480,9 @@ The KubernetesAutoscaler resource accepts the following [input]({{< relref "/doc
 
     <dt class="property-required"
             title="Required">
-        <span>cluster_<wbr>id</span>
+        <span id="cluster_id_python">
+<a href="#cluster_id_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -432,7 +491,9 @@ The KubernetesAutoscaler resource accepts the following [input]({{< relref "/doc
 
     <dt class="property-required"
             title="Required">
-        <span>cool_<wbr>down_<wbr>duration</span>
+        <span id="cool_down_duration_python">
+<a href="#cool_down_duration_python" style="color: inherit; text-decoration: inherit;">cool_<wbr>down_<wbr>duration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -441,7 +502,9 @@ The KubernetesAutoscaler resource accepts the following [input]({{< relref "/doc
 
     <dt class="property-required"
             title="Required">
-        <span>defer_<wbr>scale_<wbr>in_<wbr>duration</span>
+        <span id="defer_scale_in_duration_python">
+<a href="#defer_scale_in_duration_python" style="color: inherit; text-decoration: inherit;">defer_<wbr>scale_<wbr>in_<wbr>duration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -450,7 +513,9 @@ The KubernetesAutoscaler resource accepts the following [input]({{< relref "/doc
 
     <dt class="property-required"
             title="Required">
-        <span>utilization</span>
+        <span id="utilization_python">
+<a href="#utilization_python" style="color: inherit; text-decoration: inherit;">utilization</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -459,7 +524,9 @@ The KubernetesAutoscaler resource accepts the following [input]({{< relref "/doc
 
     <dt class="property-optional"
             title="Optional">
-        <span>nodepools</span>
+        <span id="nodepools_python">
+<a href="#nodepools_python" style="color: inherit; text-decoration: inherit;">nodepools</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesautoscalernodepool">List[Kubernetes<wbr>Autoscaler<wbr>Nodepool]</a></span>
     </dt>
@@ -489,7 +556,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -504,7 +573,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -519,7 +590,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -534,7 +607,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -675,7 +750,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cluster<wbr>Id</span>
+        <span id="state_clusterid_csharp">
+<a href="#state_clusterid_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -684,7 +761,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cool<wbr>Down<wbr>Duration</span>
+        <span id="state_cooldownduration_csharp">
+<a href="#state_cooldownduration_csharp" style="color: inherit; text-decoration: inherit;">Cool<wbr>Down<wbr>Duration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -693,7 +772,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Defer<wbr>Scale<wbr>In<wbr>Duration</span>
+        <span id="state_deferscaleinduration_csharp">
+<a href="#state_deferscaleinduration_csharp" style="color: inherit; text-decoration: inherit;">Defer<wbr>Scale<wbr>In<wbr>Duration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -702,7 +783,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Nodepools</span>
+        <span id="state_nodepools_csharp">
+<a href="#state_nodepools_csharp" style="color: inherit; text-decoration: inherit;">Nodepools</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesautoscalernodepool">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>CS.<wbr>Inputs.<wbr>Kubernetes<wbr>Autoscaler<wbr>Nodepool<wbr>Args&gt;</a></span>
     </dt>
@@ -714,7 +797,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Utilization</span>
+        <span id="state_utilization_csharp">
+<a href="#state_utilization_csharp" style="color: inherit; text-decoration: inherit;">Utilization</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -730,7 +815,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cluster<wbr>Id</span>
+        <span id="state_clusterid_go">
+<a href="#state_clusterid_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -739,7 +826,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cool<wbr>Down<wbr>Duration</span>
+        <span id="state_cooldownduration_go">
+<a href="#state_cooldownduration_go" style="color: inherit; text-decoration: inherit;">Cool<wbr>Down<wbr>Duration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -748,7 +837,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Defer<wbr>Scale<wbr>In<wbr>Duration</span>
+        <span id="state_deferscaleinduration_go">
+<a href="#state_deferscaleinduration_go" style="color: inherit; text-decoration: inherit;">Defer<wbr>Scale<wbr>In<wbr>Duration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -757,7 +848,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Nodepools</span>
+        <span id="state_nodepools_go">
+<a href="#state_nodepools_go" style="color: inherit; text-decoration: inherit;">Nodepools</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesautoscalernodepool">[]Kubernetes<wbr>Autoscaler<wbr>Nodepool</a></span>
     </dt>
@@ -769,7 +862,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Utilization</span>
+        <span id="state_utilization_go">
+<a href="#state_utilization_go" style="color: inherit; text-decoration: inherit;">Utilization</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -785,7 +880,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>cluster<wbr>Id</span>
+        <span id="state_clusterid_nodejs">
+<a href="#state_clusterid_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -794,7 +891,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>cool<wbr>Down<wbr>Duration</span>
+        <span id="state_cooldownduration_nodejs">
+<a href="#state_cooldownduration_nodejs" style="color: inherit; text-decoration: inherit;">cool<wbr>Down<wbr>Duration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -803,7 +902,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>defer<wbr>Scale<wbr>In<wbr>Duration</span>
+        <span id="state_deferscaleinduration_nodejs">
+<a href="#state_deferscaleinduration_nodejs" style="color: inherit; text-decoration: inherit;">defer<wbr>Scale<wbr>In<wbr>Duration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -812,7 +913,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>nodepools</span>
+        <span id="state_nodepools_nodejs">
+<a href="#state_nodepools_nodejs" style="color: inherit; text-decoration: inherit;">nodepools</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesautoscalernodepool">Kubernetes<wbr>Autoscaler<wbr>Nodepool[]</a></span>
     </dt>
@@ -824,7 +927,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>utilization</span>
+        <span id="state_utilization_nodejs">
+<a href="#state_utilization_nodejs" style="color: inherit; text-decoration: inherit;">utilization</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -840,7 +945,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>cluster_<wbr>id</span>
+        <span id="state_cluster_id_python">
+<a href="#state_cluster_id_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -849,7 +956,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>cool_<wbr>down_<wbr>duration</span>
+        <span id="state_cool_down_duration_python">
+<a href="#state_cool_down_duration_python" style="color: inherit; text-decoration: inherit;">cool_<wbr>down_<wbr>duration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -858,7 +967,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>defer_<wbr>scale_<wbr>in_<wbr>duration</span>
+        <span id="state_defer_scale_in_duration_python">
+<a href="#state_defer_scale_in_duration_python" style="color: inherit; text-decoration: inherit;">defer_<wbr>scale_<wbr>in_<wbr>duration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -867,7 +978,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>nodepools</span>
+        <span id="state_nodepools_python">
+<a href="#state_nodepools_python" style="color: inherit; text-decoration: inherit;">nodepools</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesautoscalernodepool">List[Kubernetes<wbr>Autoscaler<wbr>Nodepool]</a></span>
     </dt>
@@ -879,7 +992,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>utilization</span>
+        <span id="state_utilization_python">
+<a href="#state_utilization_python" style="color: inherit; text-decoration: inherit;">utilization</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -921,7 +1036,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -929,7 +1046,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Labels</span>
+        <span id="labels_csharp">
+<a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -937,7 +1056,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Taints</span>
+        <span id="taints_csharp">
+<a href="#taints_csharp" style="color: inherit; text-decoration: inherit;">Taints</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -952,7 +1073,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -960,7 +1083,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Labels</span>
+        <span id="labels_go">
+<a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -968,7 +1093,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Taints</span>
+        <span id="taints_go">
+<a href="#taints_go" style="color: inherit; text-decoration: inherit;">Taints</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -983,7 +1110,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -991,7 +1120,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>labels</span>
+        <span id="labels_nodejs">
+<a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -999,7 +1130,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>taints</span>
+        <span id="taints_nodejs">
+<a href="#taints_nodejs" style="color: inherit; text-decoration: inherit;">taints</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1014,7 +1147,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1022,7 +1157,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>labels</span>
+        <span id="labels_python">
+<a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1030,7 +1167,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>taints</span>
+        <span id="taints_python">
+<a href="#taints_python" style="color: inherit; text-decoration: inherit;">taints</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

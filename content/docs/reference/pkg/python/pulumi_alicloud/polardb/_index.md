@@ -474,7 +474,7 @@ databases.</p>
 <dl class="py attribute">
 <dt id="pulumi_alicloud.polardb.Cluster.connection_string">
 <code class="sig-name descname">connection_string</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.polardb.Cluster.connection_string" title="Permalink to this definition">¶</a></dt>
-<dd><p>(Available in 1.81.0+) PolarDB cluster connection string. Only return the Primary endpoint address if security_ips is configured.</p>
+<dd><p>(Available in 1.81.0+) PolarDB cluster connection string. When security_ips is configured, the address of cluster type endpoint will be returned, and if only “127.0.0.1” is configured, it will also be an empty string.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -581,7 +581,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>auto_renew_period</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Auto-renewal period of an cluster, in the unit of the month. It is valid when pay_type is <code class="docutils literal notranslate"><span class="pre">PrePaid</span></code>. Valid value:1, 2, 3, 6, 12, 24, 36, Default to 1.</p></li>
-<li><p><strong>connection_string</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – (Available in 1.81.0+) PolarDB cluster connection string. Only return the Primary endpoint address if security_ips is configured.</p></li>
+<li><p><strong>connection_string</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – (Available in 1.81.0+) PolarDB cluster connection string. When security_ips is configured, the address of cluster type endpoint will be returned, and if only “127.0.0.1” is configured, it will also be an empty string.</p></li>
 <li><p><strong>db_node_class</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The db_node_class of cluster node.</p></li>
 <li><p><strong>db_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Database type. Value options: MySQL, Oracle, PostgreSQL.</p></li>
 <li><p><strong>db_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Database version. Value options can refer to the latest docs <a class="reference external" href="https://help.aliyun.com/document_detail/98169.html">CreateDBCluster</a> <code class="docutils literal notranslate"><span class="pre">DBVersion</span></code>.</p>

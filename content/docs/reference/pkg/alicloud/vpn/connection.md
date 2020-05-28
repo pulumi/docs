@@ -196,7 +196,9 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
 
     <dt class="property-required"
             title="Required">
-        <span>Customer<wbr>Gateway<wbr>Id</span>
+        <span id="customergatewayid_csharp">
+<a href="#customergatewayid_csharp" style="color: inherit; text-decoration: inherit;">Customer<wbr>Gateway<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -205,7 +207,9 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
 
     <dt class="property-required"
             title="Required">
-        <span>Local<wbr>Subnets</span>
+        <span id="localsubnets_csharp">
+<a href="#localsubnets_csharp" style="color: inherit; text-decoration: inherit;">Local<wbr>Subnets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -214,7 +218,9 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
 
     <dt class="property-required"
             title="Required">
-        <span>Remote<wbr>Subnets</span>
+        <span id="remotesubnets_csharp">
+<a href="#remotesubnets_csharp" style="color: inherit; text-decoration: inherit;">Remote<wbr>Subnets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -223,7 +229,9 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
 
     <dt class="property-required"
             title="Required">
-        <span>Vpn<wbr>Gateway<wbr>Id</span>
+        <span id="vpngatewayid_csharp">
+<a href="#vpngatewayid_csharp" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Gateway<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -232,7 +240,9 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
 
     <dt class="property-optional"
             title="Optional">
-        <span>Effect<wbr>Immediately</span>
+        <span id="effectimmediately_csharp">
+<a href="#effectimmediately_csharp" style="color: inherit; text-decoration: inherit;">Effect<wbr>Immediately</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -241,7 +251,9 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ike<wbr>Configs</span>
+        <span id="ikeconfigs_csharp">
+<a href="#ikeconfigs_csharp" style="color: inherit; text-decoration: inherit;">Ike<wbr>Configs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectionikeconfig">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Vpn.<wbr>Inputs.<wbr>Connection<wbr>Ike<wbr>Config<wbr>Args&gt;</a></span>
     </dt>
@@ -250,7 +262,9 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ipsec<wbr>Configs</span>
+        <span id="ipsecconfigs_csharp">
+<a href="#ipsecconfigs_csharp" style="color: inherit; text-decoration: inherit;">Ipsec<wbr>Configs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectionipsecconfig">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Vpn.<wbr>Inputs.<wbr>Connection<wbr>Ipsec<wbr>Config<wbr>Args&gt;</a></span>
     </dt>
@@ -259,7 +273,9 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -275,7 +291,9 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
 
     <dt class="property-required"
             title="Required">
-        <span>Customer<wbr>Gateway<wbr>Id</span>
+        <span id="customergatewayid_go">
+<a href="#customergatewayid_go" style="color: inherit; text-decoration: inherit;">Customer<wbr>Gateway<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -284,7 +302,9 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
 
     <dt class="property-required"
             title="Required">
-        <span>Local<wbr>Subnets</span>
+        <span id="localsubnets_go">
+<a href="#localsubnets_go" style="color: inherit; text-decoration: inherit;">Local<wbr>Subnets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -293,7 +313,9 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
 
     <dt class="property-required"
             title="Required">
-        <span>Remote<wbr>Subnets</span>
+        <span id="remotesubnets_go">
+<a href="#remotesubnets_go" style="color: inherit; text-decoration: inherit;">Remote<wbr>Subnets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -302,7 +324,9 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
 
     <dt class="property-required"
             title="Required">
-        <span>Vpn<wbr>Gateway<wbr>Id</span>
+        <span id="vpngatewayid_go">
+<a href="#vpngatewayid_go" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Gateway<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -311,7 +335,9 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
 
     <dt class="property-optional"
             title="Optional">
-        <span>Effect<wbr>Immediately</span>
+        <span id="effectimmediately_go">
+<a href="#effectimmediately_go" style="color: inherit; text-decoration: inherit;">Effect<wbr>Immediately</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -320,7 +346,9 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ike<wbr>Configs</span>
+        <span id="ikeconfigs_go">
+<a href="#ikeconfigs_go" style="color: inherit; text-decoration: inherit;">Ike<wbr>Configs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectionikeconfig">[]Connection<wbr>Ike<wbr>Config</a></span>
     </dt>
@@ -329,7 +357,9 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ipsec<wbr>Configs</span>
+        <span id="ipsecconfigs_go">
+<a href="#ipsecconfigs_go" style="color: inherit; text-decoration: inherit;">Ipsec<wbr>Configs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectionipsecconfig">[]Connection<wbr>Ipsec<wbr>Config</a></span>
     </dt>
@@ -338,7 +368,9 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -354,7 +386,9 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
 
     <dt class="property-required"
             title="Required">
-        <span>customer<wbr>Gateway<wbr>Id</span>
+        <span id="customergatewayid_nodejs">
+<a href="#customergatewayid_nodejs" style="color: inherit; text-decoration: inherit;">customer<wbr>Gateway<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -363,7 +397,9 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
 
     <dt class="property-required"
             title="Required">
-        <span>local<wbr>Subnets</span>
+        <span id="localsubnets_nodejs">
+<a href="#localsubnets_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Subnets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -372,7 +408,9 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
 
     <dt class="property-required"
             title="Required">
-        <span>remote<wbr>Subnets</span>
+        <span id="remotesubnets_nodejs">
+<a href="#remotesubnets_nodejs" style="color: inherit; text-decoration: inherit;">remote<wbr>Subnets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -381,7 +419,9 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
 
     <dt class="property-required"
             title="Required">
-        <span>vpn<wbr>Gateway<wbr>Id</span>
+        <span id="vpngatewayid_nodejs">
+<a href="#vpngatewayid_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Gateway<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -390,7 +430,9 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
 
     <dt class="property-optional"
             title="Optional">
-        <span>effect<wbr>Immediately</span>
+        <span id="effectimmediately_nodejs">
+<a href="#effectimmediately_nodejs" style="color: inherit; text-decoration: inherit;">effect<wbr>Immediately</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -399,7 +441,9 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
 
     <dt class="property-optional"
             title="Optional">
-        <span>ike<wbr>Configs</span>
+        <span id="ikeconfigs_nodejs">
+<a href="#ikeconfigs_nodejs" style="color: inherit; text-decoration: inherit;">ike<wbr>Configs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectionikeconfig">Connection<wbr>Ike<wbr>Config[]</a></span>
     </dt>
@@ -408,7 +452,9 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
 
     <dt class="property-optional"
             title="Optional">
-        <span>ipsec<wbr>Configs</span>
+        <span id="ipsecconfigs_nodejs">
+<a href="#ipsecconfigs_nodejs" style="color: inherit; text-decoration: inherit;">ipsec<wbr>Configs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectionipsecconfig">Connection<wbr>Ipsec<wbr>Config[]</a></span>
     </dt>
@@ -417,7 +463,9 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -433,7 +481,9 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
 
     <dt class="property-required"
             title="Required">
-        <span>customer_<wbr>gateway_<wbr>id</span>
+        <span id="customer_gateway_id_python">
+<a href="#customer_gateway_id_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>gateway_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -442,7 +492,9 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
 
     <dt class="property-required"
             title="Required">
-        <span>local_<wbr>subnets</span>
+        <span id="local_subnets_python">
+<a href="#local_subnets_python" style="color: inherit; text-decoration: inherit;">local_<wbr>subnets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -451,7 +503,9 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
 
     <dt class="property-required"
             title="Required">
-        <span>remote_<wbr>subnets</span>
+        <span id="remote_subnets_python">
+<a href="#remote_subnets_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>subnets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -460,7 +514,9 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
 
     <dt class="property-required"
             title="Required">
-        <span>vpn_<wbr>gateway_<wbr>id</span>
+        <span id="vpn_gateway_id_python">
+<a href="#vpn_gateway_id_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>gateway_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -469,7 +525,9 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
 
     <dt class="property-optional"
             title="Optional">
-        <span>effect_<wbr>immediately</span>
+        <span id="effect_immediately_python">
+<a href="#effect_immediately_python" style="color: inherit; text-decoration: inherit;">effect_<wbr>immediately</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -478,7 +536,9 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
 
     <dt class="property-optional"
             title="Optional">
-        <span>ike_<wbr>configs</span>
+        <span id="ike_configs_python">
+<a href="#ike_configs_python" style="color: inherit; text-decoration: inherit;">ike_<wbr>configs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectionikeconfig">List[Connection<wbr>Ike<wbr>Config]</a></span>
     </dt>
@@ -487,7 +547,9 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
 
     <dt class="property-optional"
             title="Optional">
-        <span>ipsec_<wbr>configs</span>
+        <span id="ipsec_configs_python">
+<a href="#ipsec_configs_python" style="color: inherit; text-decoration: inherit;">ipsec_<wbr>configs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectionipsecconfig">List[Connection<wbr>Ipsec<wbr>Config]</a></span>
     </dt>
@@ -496,7 +558,9 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -523,7 +587,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -531,7 +597,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Status</span>
+        <span id="status_csharp">
+<a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -547,7 +615,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -555,7 +625,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Status</span>
+        <span id="status_go">
+<a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -571,7 +643,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -579,7 +653,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>status</span>
+        <span id="status_nodejs">
+<a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -595,7 +671,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -603,7 +681,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>status</span>
+        <span id="status_python">
+<a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -745,7 +825,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Customer<wbr>Gateway<wbr>Id</span>
+        <span id="state_customergatewayid_csharp">
+<a href="#state_customergatewayid_csharp" style="color: inherit; text-decoration: inherit;">Customer<wbr>Gateway<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -754,7 +836,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Effect<wbr>Immediately</span>
+        <span id="state_effectimmediately_csharp">
+<a href="#state_effectimmediately_csharp" style="color: inherit; text-decoration: inherit;">Effect<wbr>Immediately</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -763,7 +847,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ike<wbr>Configs</span>
+        <span id="state_ikeconfigs_csharp">
+<a href="#state_ikeconfigs_csharp" style="color: inherit; text-decoration: inherit;">Ike<wbr>Configs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectionikeconfig">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Vpn.<wbr>Inputs.<wbr>Connection<wbr>Ike<wbr>Config<wbr>Args&gt;</a></span>
     </dt>
@@ -772,7 +858,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ipsec<wbr>Configs</span>
+        <span id="state_ipsecconfigs_csharp">
+<a href="#state_ipsecconfigs_csharp" style="color: inherit; text-decoration: inherit;">Ipsec<wbr>Configs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectionipsecconfig">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Vpn.<wbr>Inputs.<wbr>Connection<wbr>Ipsec<wbr>Config<wbr>Args&gt;</a></span>
     </dt>
@@ -781,7 +869,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Local<wbr>Subnets</span>
+        <span id="state_localsubnets_csharp">
+<a href="#state_localsubnets_csharp" style="color: inherit; text-decoration: inherit;">Local<wbr>Subnets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -790,7 +880,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -799,7 +891,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Remote<wbr>Subnets</span>
+        <span id="state_remotesubnets_csharp">
+<a href="#state_remotesubnets_csharp" style="color: inherit; text-decoration: inherit;">Remote<wbr>Subnets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -808,7 +902,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Status</span>
+        <span id="state_status_csharp">
+<a href="#state_status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -817,7 +913,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vpn<wbr>Gateway<wbr>Id</span>
+        <span id="state_vpngatewayid_csharp">
+<a href="#state_vpngatewayid_csharp" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Gateway<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -833,7 +931,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Customer<wbr>Gateway<wbr>Id</span>
+        <span id="state_customergatewayid_go">
+<a href="#state_customergatewayid_go" style="color: inherit; text-decoration: inherit;">Customer<wbr>Gateway<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -842,7 +942,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Effect<wbr>Immediately</span>
+        <span id="state_effectimmediately_go">
+<a href="#state_effectimmediately_go" style="color: inherit; text-decoration: inherit;">Effect<wbr>Immediately</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -851,7 +953,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ike<wbr>Configs</span>
+        <span id="state_ikeconfigs_go">
+<a href="#state_ikeconfigs_go" style="color: inherit; text-decoration: inherit;">Ike<wbr>Configs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectionikeconfig">[]Connection<wbr>Ike<wbr>Config</a></span>
     </dt>
@@ -860,7 +964,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ipsec<wbr>Configs</span>
+        <span id="state_ipsecconfigs_go">
+<a href="#state_ipsecconfigs_go" style="color: inherit; text-decoration: inherit;">Ipsec<wbr>Configs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectionipsecconfig">[]Connection<wbr>Ipsec<wbr>Config</a></span>
     </dt>
@@ -869,7 +975,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Local<wbr>Subnets</span>
+        <span id="state_localsubnets_go">
+<a href="#state_localsubnets_go" style="color: inherit; text-decoration: inherit;">Local<wbr>Subnets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -878,7 +986,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -887,7 +997,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Remote<wbr>Subnets</span>
+        <span id="state_remotesubnets_go">
+<a href="#state_remotesubnets_go" style="color: inherit; text-decoration: inherit;">Remote<wbr>Subnets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -896,7 +1008,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Status</span>
+        <span id="state_status_go">
+<a href="#state_status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -905,7 +1019,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vpn<wbr>Gateway<wbr>Id</span>
+        <span id="state_vpngatewayid_go">
+<a href="#state_vpngatewayid_go" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Gateway<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -921,7 +1037,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>customer<wbr>Gateway<wbr>Id</span>
+        <span id="state_customergatewayid_nodejs">
+<a href="#state_customergatewayid_nodejs" style="color: inherit; text-decoration: inherit;">customer<wbr>Gateway<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -930,7 +1048,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>effect<wbr>Immediately</span>
+        <span id="state_effectimmediately_nodejs">
+<a href="#state_effectimmediately_nodejs" style="color: inherit; text-decoration: inherit;">effect<wbr>Immediately</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -939,7 +1059,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>ike<wbr>Configs</span>
+        <span id="state_ikeconfigs_nodejs">
+<a href="#state_ikeconfigs_nodejs" style="color: inherit; text-decoration: inherit;">ike<wbr>Configs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectionikeconfig">Connection<wbr>Ike<wbr>Config[]</a></span>
     </dt>
@@ -948,7 +1070,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>ipsec<wbr>Configs</span>
+        <span id="state_ipsecconfigs_nodejs">
+<a href="#state_ipsecconfigs_nodejs" style="color: inherit; text-decoration: inherit;">ipsec<wbr>Configs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectionipsecconfig">Connection<wbr>Ipsec<wbr>Config[]</a></span>
     </dt>
@@ -957,7 +1081,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>local<wbr>Subnets</span>
+        <span id="state_localsubnets_nodejs">
+<a href="#state_localsubnets_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Subnets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -966,7 +1092,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -975,7 +1103,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>remote<wbr>Subnets</span>
+        <span id="state_remotesubnets_nodejs">
+<a href="#state_remotesubnets_nodejs" style="color: inherit; text-decoration: inherit;">remote<wbr>Subnets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -984,7 +1114,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>status</span>
+        <span id="state_status_nodejs">
+<a href="#state_status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -993,7 +1125,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>vpn<wbr>Gateway<wbr>Id</span>
+        <span id="state_vpngatewayid_nodejs">
+<a href="#state_vpngatewayid_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Gateway<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1009,7 +1143,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>customer_<wbr>gateway_<wbr>id</span>
+        <span id="state_customer_gateway_id_python">
+<a href="#state_customer_gateway_id_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>gateway_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1018,7 +1154,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>effect_<wbr>immediately</span>
+        <span id="state_effect_immediately_python">
+<a href="#state_effect_immediately_python" style="color: inherit; text-decoration: inherit;">effect_<wbr>immediately</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1027,7 +1165,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>ike_<wbr>configs</span>
+        <span id="state_ike_configs_python">
+<a href="#state_ike_configs_python" style="color: inherit; text-decoration: inherit;">ike_<wbr>configs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectionikeconfig">List[Connection<wbr>Ike<wbr>Config]</a></span>
     </dt>
@@ -1036,7 +1176,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>ipsec_<wbr>configs</span>
+        <span id="state_ipsec_configs_python">
+<a href="#state_ipsec_configs_python" style="color: inherit; text-decoration: inherit;">ipsec_<wbr>configs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectionipsecconfig">List[Connection<wbr>Ipsec<wbr>Config]</a></span>
     </dt>
@@ -1045,7 +1187,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>local_<wbr>subnets</span>
+        <span id="state_local_subnets_python">
+<a href="#state_local_subnets_python" style="color: inherit; text-decoration: inherit;">local_<wbr>subnets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1054,7 +1198,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1063,7 +1209,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>remote_<wbr>subnets</span>
+        <span id="state_remote_subnets_python">
+<a href="#state_remote_subnets_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>subnets</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1072,7 +1220,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>status</span>
+        <span id="state_status_python">
+<a href="#state_status_python" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1081,7 +1231,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>vpn_<wbr>gateway_<wbr>id</span>
+        <span id="state_vpn_gateway_id_python">
+<a href="#state_vpn_gateway_id_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>gateway_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1123,7 +1275,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ike<wbr>Auth<wbr>Alg</span>
+        <span id="ikeauthalg_csharp">
+<a href="#ikeauthalg_csharp" style="color: inherit; text-decoration: inherit;">Ike<wbr>Auth<wbr>Alg</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1132,7 +1286,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ike<wbr>Enc<wbr>Alg</span>
+        <span id="ikeencalg_csharp">
+<a href="#ikeencalg_csharp" style="color: inherit; text-decoration: inherit;">Ike<wbr>Enc<wbr>Alg</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1141,7 +1297,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ike<wbr>Lifetime</span>
+        <span id="ikelifetime_csharp">
+<a href="#ikelifetime_csharp" style="color: inherit; text-decoration: inherit;">Ike<wbr>Lifetime</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1150,7 +1308,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ike<wbr>Local<wbr>Id</span>
+        <span id="ikelocalid_csharp">
+<a href="#ikelocalid_csharp" style="color: inherit; text-decoration: inherit;">Ike<wbr>Local<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1159,7 +1319,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ike<wbr>Mode</span>
+        <span id="ikemode_csharp">
+<a href="#ikemode_csharp" style="color: inherit; text-decoration: inherit;">Ike<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1168,7 +1330,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ike<wbr>Pfs</span>
+        <span id="ikepfs_csharp">
+<a href="#ikepfs_csharp" style="color: inherit; text-decoration: inherit;">Ike<wbr>Pfs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1177,7 +1341,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ike<wbr>Remote<wbr>Id</span>
+        <span id="ikeremoteid_csharp">
+<a href="#ikeremoteid_csharp" style="color: inherit; text-decoration: inherit;">Ike<wbr>Remote<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1186,7 +1352,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ike<wbr>Version</span>
+        <span id="ikeversion_csharp">
+<a href="#ikeversion_csharp" style="color: inherit; text-decoration: inherit;">Ike<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1195,7 +1363,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Psk</span>
+        <span id="psk_csharp">
+<a href="#psk_csharp" style="color: inherit; text-decoration: inherit;">Psk</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1211,7 +1381,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ike<wbr>Auth<wbr>Alg</span>
+        <span id="ikeauthalg_go">
+<a href="#ikeauthalg_go" style="color: inherit; text-decoration: inherit;">Ike<wbr>Auth<wbr>Alg</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1220,7 +1392,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ike<wbr>Enc<wbr>Alg</span>
+        <span id="ikeencalg_go">
+<a href="#ikeencalg_go" style="color: inherit; text-decoration: inherit;">Ike<wbr>Enc<wbr>Alg</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1229,7 +1403,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ike<wbr>Lifetime</span>
+        <span id="ikelifetime_go">
+<a href="#ikelifetime_go" style="color: inherit; text-decoration: inherit;">Ike<wbr>Lifetime</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1238,7 +1414,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ike<wbr>Local<wbr>Id</span>
+        <span id="ikelocalid_go">
+<a href="#ikelocalid_go" style="color: inherit; text-decoration: inherit;">Ike<wbr>Local<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1247,7 +1425,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ike<wbr>Mode</span>
+        <span id="ikemode_go">
+<a href="#ikemode_go" style="color: inherit; text-decoration: inherit;">Ike<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1256,7 +1436,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ike<wbr>Pfs</span>
+        <span id="ikepfs_go">
+<a href="#ikepfs_go" style="color: inherit; text-decoration: inherit;">Ike<wbr>Pfs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1265,7 +1447,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ike<wbr>Remote<wbr>Id</span>
+        <span id="ikeremoteid_go">
+<a href="#ikeremoteid_go" style="color: inherit; text-decoration: inherit;">Ike<wbr>Remote<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1274,7 +1458,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ike<wbr>Version</span>
+        <span id="ikeversion_go">
+<a href="#ikeversion_go" style="color: inherit; text-decoration: inherit;">Ike<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1283,7 +1469,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Psk</span>
+        <span id="psk_go">
+<a href="#psk_go" style="color: inherit; text-decoration: inherit;">Psk</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1299,7 +1487,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>ike<wbr>Auth<wbr>Alg</span>
+        <span id="ikeauthalg_nodejs">
+<a href="#ikeauthalg_nodejs" style="color: inherit; text-decoration: inherit;">ike<wbr>Auth<wbr>Alg</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1308,7 +1498,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>ike<wbr>Enc<wbr>Alg</span>
+        <span id="ikeencalg_nodejs">
+<a href="#ikeencalg_nodejs" style="color: inherit; text-decoration: inherit;">ike<wbr>Enc<wbr>Alg</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1317,7 +1509,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>ike<wbr>Lifetime</span>
+        <span id="ikelifetime_nodejs">
+<a href="#ikelifetime_nodejs" style="color: inherit; text-decoration: inherit;">ike<wbr>Lifetime</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1326,7 +1520,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>ike<wbr>Local<wbr>Id</span>
+        <span id="ikelocalid_nodejs">
+<a href="#ikelocalid_nodejs" style="color: inherit; text-decoration: inherit;">ike<wbr>Local<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1335,7 +1531,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>ike<wbr>Mode</span>
+        <span id="ikemode_nodejs">
+<a href="#ikemode_nodejs" style="color: inherit; text-decoration: inherit;">ike<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1344,7 +1542,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>ike<wbr>Pfs</span>
+        <span id="ikepfs_nodejs">
+<a href="#ikepfs_nodejs" style="color: inherit; text-decoration: inherit;">ike<wbr>Pfs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1353,7 +1553,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>ike<wbr>Remote<wbr>Id</span>
+        <span id="ikeremoteid_nodejs">
+<a href="#ikeremoteid_nodejs" style="color: inherit; text-decoration: inherit;">ike<wbr>Remote<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1362,7 +1564,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>ike<wbr>Version</span>
+        <span id="ikeversion_nodejs">
+<a href="#ikeversion_nodejs" style="color: inherit; text-decoration: inherit;">ike<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1371,7 +1575,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>psk</span>
+        <span id="psk_nodejs">
+<a href="#psk_nodejs" style="color: inherit; text-decoration: inherit;">psk</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1387,7 +1593,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>ike<wbr>Auth<wbr>Alg</span>
+        <span id="ikeauthalg_python">
+<a href="#ikeauthalg_python" style="color: inherit; text-decoration: inherit;">ike<wbr>Auth<wbr>Alg</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1396,7 +1604,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>ike<wbr>Enc<wbr>Alg</span>
+        <span id="ikeencalg_python">
+<a href="#ikeencalg_python" style="color: inherit; text-decoration: inherit;">ike<wbr>Enc<wbr>Alg</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1405,7 +1615,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>ike<wbr>Lifetime</span>
+        <span id="ikelifetime_python">
+<a href="#ikelifetime_python" style="color: inherit; text-decoration: inherit;">ike<wbr>Lifetime</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1414,7 +1626,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>ike<wbr>Local<wbr>Id</span>
+        <span id="ikelocalid_python">
+<a href="#ikelocalid_python" style="color: inherit; text-decoration: inherit;">ike<wbr>Local<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1423,7 +1637,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>ike<wbr>Mode</span>
+        <span id="ikemode_python">
+<a href="#ikemode_python" style="color: inherit; text-decoration: inherit;">ike<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1432,7 +1648,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>ike<wbr>Pfs</span>
+        <span id="ikepfs_python">
+<a href="#ikepfs_python" style="color: inherit; text-decoration: inherit;">ike<wbr>Pfs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1441,7 +1659,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>ike<wbr>Remote<wbr>Id</span>
+        <span id="ikeremoteid_python">
+<a href="#ikeremoteid_python" style="color: inherit; text-decoration: inherit;">ike<wbr>Remote<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1450,7 +1670,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>ike<wbr>Version</span>
+        <span id="ikeversion_python">
+<a href="#ikeversion_python" style="color: inherit; text-decoration: inherit;">ike<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1459,7 +1681,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>psk</span>
+        <span id="psk_python">
+<a href="#psk_python" style="color: inherit; text-decoration: inherit;">psk</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1493,7 +1717,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ipsec<wbr>Auth<wbr>Alg</span>
+        <span id="ipsecauthalg_csharp">
+<a href="#ipsecauthalg_csharp" style="color: inherit; text-decoration: inherit;">Ipsec<wbr>Auth<wbr>Alg</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1502,7 +1728,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ipsec<wbr>Enc<wbr>Alg</span>
+        <span id="ipsecencalg_csharp">
+<a href="#ipsecencalg_csharp" style="color: inherit; text-decoration: inherit;">Ipsec<wbr>Enc<wbr>Alg</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1511,7 +1739,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ipsec<wbr>Lifetime</span>
+        <span id="ipseclifetime_csharp">
+<a href="#ipseclifetime_csharp" style="color: inherit; text-decoration: inherit;">Ipsec<wbr>Lifetime</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1520,7 +1750,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ipsec<wbr>Pfs</span>
+        <span id="ipsecpfs_csharp">
+<a href="#ipsecpfs_csharp" style="color: inherit; text-decoration: inherit;">Ipsec<wbr>Pfs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1536,7 +1768,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ipsec<wbr>Auth<wbr>Alg</span>
+        <span id="ipsecauthalg_go">
+<a href="#ipsecauthalg_go" style="color: inherit; text-decoration: inherit;">Ipsec<wbr>Auth<wbr>Alg</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1545,7 +1779,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ipsec<wbr>Enc<wbr>Alg</span>
+        <span id="ipsecencalg_go">
+<a href="#ipsecencalg_go" style="color: inherit; text-decoration: inherit;">Ipsec<wbr>Enc<wbr>Alg</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1554,7 +1790,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ipsec<wbr>Lifetime</span>
+        <span id="ipseclifetime_go">
+<a href="#ipseclifetime_go" style="color: inherit; text-decoration: inherit;">Ipsec<wbr>Lifetime</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1563,7 +1801,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ipsec<wbr>Pfs</span>
+        <span id="ipsecpfs_go">
+<a href="#ipsecpfs_go" style="color: inherit; text-decoration: inherit;">Ipsec<wbr>Pfs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1579,7 +1819,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>ipsec<wbr>Auth<wbr>Alg</span>
+        <span id="ipsecauthalg_nodejs">
+<a href="#ipsecauthalg_nodejs" style="color: inherit; text-decoration: inherit;">ipsec<wbr>Auth<wbr>Alg</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1588,7 +1830,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>ipsec<wbr>Enc<wbr>Alg</span>
+        <span id="ipsecencalg_nodejs">
+<a href="#ipsecencalg_nodejs" style="color: inherit; text-decoration: inherit;">ipsec<wbr>Enc<wbr>Alg</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1597,7 +1841,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>ipsec<wbr>Lifetime</span>
+        <span id="ipseclifetime_nodejs">
+<a href="#ipseclifetime_nodejs" style="color: inherit; text-decoration: inherit;">ipsec<wbr>Lifetime</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1606,7 +1852,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>ipsec<wbr>Pfs</span>
+        <span id="ipsecpfs_nodejs">
+<a href="#ipsecpfs_nodejs" style="color: inherit; text-decoration: inherit;">ipsec<wbr>Pfs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1622,7 +1870,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>ipsec<wbr>Auth<wbr>Alg</span>
+        <span id="ipsecauthalg_python">
+<a href="#ipsecauthalg_python" style="color: inherit; text-decoration: inherit;">ipsec<wbr>Auth<wbr>Alg</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1631,7 +1881,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>ipsec<wbr>Enc<wbr>Alg</span>
+        <span id="ipsecencalg_python">
+<a href="#ipsecencalg_python" style="color: inherit; text-decoration: inherit;">ipsec<wbr>Enc<wbr>Alg</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1640,7 +1892,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>ipsec<wbr>Lifetime</span>
+        <span id="ipseclifetime_python">
+<a href="#ipseclifetime_python" style="color: inherit; text-decoration: inherit;">ipsec<wbr>Lifetime</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1649,7 +1903,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>ipsec<wbr>Pfs</span>
+        <span id="ipsecpfs_python">
+<a href="#ipsecpfs_python" style="color: inherit; text-decoration: inherit;">ipsec<wbr>Pfs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

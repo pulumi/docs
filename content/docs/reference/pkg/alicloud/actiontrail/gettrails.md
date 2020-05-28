@@ -20,7 +20,25 @@ This data source provides a list of action trail of the current Alibaba Cloud us
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var trails = Output.Create(AliCloud.ActionTrail.GetTrails.InvokeAsync(new AliCloud.ActionTrail.GetTrailsArgs
+        {
+            NameRegex = "tf-testacc-actiontrail",
+        }));
+        this.FirstTrailName = trails.Apply(trails => trails.Actiontrails[0].Name);
+    }
+
+    [Output("firstTrailName")]
+    public Output<string> FirstTrailName { get; set; }
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -91,7 +109,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name<wbr>Regex</span>
+        <span id="nameregex_csharp">
+<a href="#nameregex_csharp" style="color: inherit; text-decoration: inherit;">Name<wbr>Regex</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -100,7 +120,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Output<wbr>File</span>
+        <span id="outputfile_csharp">
+<a href="#outputfile_csharp" style="color: inherit; text-decoration: inherit;">Output<wbr>File</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -115,7 +137,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name<wbr>Regex</span>
+        <span id="nameregex_go">
+<a href="#nameregex_go" style="color: inherit; text-decoration: inherit;">Name<wbr>Regex</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -124,7 +148,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Output<wbr>File</span>
+        <span id="outputfile_go">
+<a href="#outputfile_go" style="color: inherit; text-decoration: inherit;">Output<wbr>File</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -139,7 +165,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name<wbr>Regex</span>
+        <span id="nameregex_nodejs">
+<a href="#nameregex_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Regex</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -148,7 +176,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>output<wbr>File</span>
+        <span id="outputfile_nodejs">
+<a href="#outputfile_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>File</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -163,7 +193,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name_<wbr>regex</span>
+        <span id="name_regex_python">
+<a href="#name_regex_python" style="color: inherit; text-decoration: inherit;">name_<wbr>regex</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -172,7 +204,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>output_<wbr>file</span>
+        <span id="output_file_python">
+<a href="#output_file_python" style="color: inherit; text-decoration: inherit;">output_<wbr>file</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -200,7 +234,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Actiontrails</span>
+        <span id="actiontrails_csharp">
+<a href="#actiontrails_csharp" style="color: inherit; text-decoration: inherit;">Actiontrails</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gettrailsactiontrail">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Action<wbr>Trail.<wbr>Outputs.<wbr>Get<wbr>Trails<wbr>Actiontrail&gt;</a></span>
     </dt>
@@ -209,7 +245,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -218,7 +256,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Names</span>
+        <span id="names_csharp">
+<a href="#names_csharp" style="color: inherit; text-decoration: inherit;">Names</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -227,7 +267,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Name<wbr>Regex</span>
+        <span id="nameregex_csharp">
+<a href="#nameregex_csharp" style="color: inherit; text-decoration: inherit;">Name<wbr>Regex</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -235,7 +277,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Output<wbr>File</span>
+        <span id="outputfile_csharp">
+<a href="#outputfile_csharp" style="color: inherit; text-decoration: inherit;">Output<wbr>File</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -250,7 +294,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Actiontrails</span>
+        <span id="actiontrails_go">
+<a href="#actiontrails_go" style="color: inherit; text-decoration: inherit;">Actiontrails</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gettrailsactiontrail">[]Get<wbr>Trails<wbr>Actiontrail</a></span>
     </dt>
@@ -259,7 +305,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -268,7 +316,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Names</span>
+        <span id="names_go">
+<a href="#names_go" style="color: inherit; text-decoration: inherit;">Names</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -277,7 +327,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Name<wbr>Regex</span>
+        <span id="nameregex_go">
+<a href="#nameregex_go" style="color: inherit; text-decoration: inherit;">Name<wbr>Regex</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -285,7 +337,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Output<wbr>File</span>
+        <span id="outputfile_go">
+<a href="#outputfile_go" style="color: inherit; text-decoration: inherit;">Output<wbr>File</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -300,7 +354,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>actiontrails</span>
+        <span id="actiontrails_nodejs">
+<a href="#actiontrails_nodejs" style="color: inherit; text-decoration: inherit;">actiontrails</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gettrailsactiontrail">Get<wbr>Trails<wbr>Actiontrail[]</a></span>
     </dt>
@@ -309,7 +365,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -318,7 +376,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>names</span>
+        <span id="names_nodejs">
+<a href="#names_nodejs" style="color: inherit; text-decoration: inherit;">names</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -327,7 +387,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>name<wbr>Regex</span>
+        <span id="nameregex_nodejs">
+<a href="#nameregex_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Regex</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -335,7 +397,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>output<wbr>File</span>
+        <span id="outputfile_nodejs">
+<a href="#outputfile_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>File</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -350,7 +414,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>actiontrails</span>
+        <span id="actiontrails_python">
+<a href="#actiontrails_python" style="color: inherit; text-decoration: inherit;">actiontrails</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gettrailsactiontrail">List[Get<wbr>Trails<wbr>Actiontrail]</a></span>
     </dt>
@@ -359,7 +425,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -368,7 +436,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>names</span>
+        <span id="names_python">
+<a href="#names_python" style="color: inherit; text-decoration: inherit;">names</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -377,7 +447,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>name_<wbr>regex</span>
+        <span id="name_regex_python">
+<a href="#name_regex_python" style="color: inherit; text-decoration: inherit;">name_<wbr>regex</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -385,7 +457,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>output_<wbr>file</span>
+        <span id="output_file_python">
+<a href="#output_file_python" style="color: inherit; text-decoration: inherit;">output_<wbr>file</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -424,7 +498,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Event<wbr>Rw</span>
+        <span id="eventrw_csharp">
+<a href="#eventrw_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Rw</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -433,7 +509,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -442,7 +520,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Oss<wbr>Bucket<wbr>Name</span>
+        <span id="ossbucketname_csharp">
+<a href="#ossbucketname_csharp" style="color: inherit; text-decoration: inherit;">Oss<wbr>Bucket<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -451,7 +531,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Oss<wbr>Key<wbr>Prefix</span>
+        <span id="osskeyprefix_csharp">
+<a href="#osskeyprefix_csharp" style="color: inherit; text-decoration: inherit;">Oss<wbr>Key<wbr>Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -460,7 +542,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Role<wbr>Name</span>
+        <span id="rolename_csharp">
+<a href="#rolename_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -469,7 +553,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Sls<wbr>Project<wbr>Arn</span>
+        <span id="slsprojectarn_csharp">
+<a href="#slsprojectarn_csharp" style="color: inherit; text-decoration: inherit;">Sls<wbr>Project<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -478,7 +564,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Sls<wbr>Write<wbr>Role<wbr>Arn</span>
+        <span id="slswriterolearn_csharp">
+<a href="#slswriterolearn_csharp" style="color: inherit; text-decoration: inherit;">Sls<wbr>Write<wbr>Role<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -494,7 +582,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Event<wbr>Rw</span>
+        <span id="eventrw_go">
+<a href="#eventrw_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Rw</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -503,7 +593,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -512,7 +604,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Oss<wbr>Bucket<wbr>Name</span>
+        <span id="ossbucketname_go">
+<a href="#ossbucketname_go" style="color: inherit; text-decoration: inherit;">Oss<wbr>Bucket<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -521,7 +615,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Oss<wbr>Key<wbr>Prefix</span>
+        <span id="osskeyprefix_go">
+<a href="#osskeyprefix_go" style="color: inherit; text-decoration: inherit;">Oss<wbr>Key<wbr>Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -530,7 +626,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Role<wbr>Name</span>
+        <span id="rolename_go">
+<a href="#rolename_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -539,7 +637,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Sls<wbr>Project<wbr>Arn</span>
+        <span id="slsprojectarn_go">
+<a href="#slsprojectarn_go" style="color: inherit; text-decoration: inherit;">Sls<wbr>Project<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -548,7 +648,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Sls<wbr>Write<wbr>Role<wbr>Arn</span>
+        <span id="slswriterolearn_go">
+<a href="#slswriterolearn_go" style="color: inherit; text-decoration: inherit;">Sls<wbr>Write<wbr>Role<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -564,7 +666,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>event<wbr>Rw</span>
+        <span id="eventrw_nodejs">
+<a href="#eventrw_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Rw</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -573,7 +677,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -582,7 +688,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>oss<wbr>Bucket<wbr>Name</span>
+        <span id="ossbucketname_nodejs">
+<a href="#ossbucketname_nodejs" style="color: inherit; text-decoration: inherit;">oss<wbr>Bucket<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -591,7 +699,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>oss<wbr>Key<wbr>Prefix</span>
+        <span id="osskeyprefix_nodejs">
+<a href="#osskeyprefix_nodejs" style="color: inherit; text-decoration: inherit;">oss<wbr>Key<wbr>Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -600,7 +710,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>role<wbr>Name</span>
+        <span id="rolename_nodejs">
+<a href="#rolename_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -609,7 +721,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>sls<wbr>Project<wbr>Arn</span>
+        <span id="slsprojectarn_nodejs">
+<a href="#slsprojectarn_nodejs" style="color: inherit; text-decoration: inherit;">sls<wbr>Project<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -618,7 +732,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>sls<wbr>Write<wbr>Role<wbr>Arn</span>
+        <span id="slswriterolearn_nodejs">
+<a href="#slswriterolearn_nodejs" style="color: inherit; text-decoration: inherit;">sls<wbr>Write<wbr>Role<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -634,7 +750,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>event_<wbr>rw</span>
+        <span id="event_rw_python">
+<a href="#event_rw_python" style="color: inherit; text-decoration: inherit;">event_<wbr>rw</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -643,7 +761,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -652,7 +772,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>oss_<wbr>bucket_<wbr>name</span>
+        <span id="oss_bucket_name_python">
+<a href="#oss_bucket_name_python" style="color: inherit; text-decoration: inherit;">oss_<wbr>bucket_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -661,7 +783,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>oss_<wbr>key_<wbr>prefix</span>
+        <span id="oss_key_prefix_python">
+<a href="#oss_key_prefix_python" style="color: inherit; text-decoration: inherit;">oss_<wbr>key_<wbr>prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -670,7 +794,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>role_<wbr>name</span>
+        <span id="role_name_python">
+<a href="#role_name_python" style="color: inherit; text-decoration: inherit;">role_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -679,7 +805,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>sls_<wbr>project_<wbr>arn</span>
+        <span id="sls_project_arn_python">
+<a href="#sls_project_arn_python" style="color: inherit; text-decoration: inherit;">sls_<wbr>project_<wbr>arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -688,7 +816,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>sls_<wbr>write_<wbr>role_<wbr>arn</span>
+        <span id="sls_write_role_arn_python">
+<a href="#sls_write_role_arn_python" style="color: inherit; text-decoration: inherit;">sls_<wbr>write_<wbr>role_<wbr>arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

@@ -22,7 +22,57 @@ This data source provides a list of Snat Entries owned by an Alibaba Cloud accou
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var config = new Config();
+        var name = config.Get("name") ?? "snat-entry-example-name";
+        var @default = Output.Create(AliCloud.GetZones.InvokeAsync(new AliCloud.GetZonesArgs
+        {
+            AvailableResourceCreation = "VSwitch",
+        }));
+        var fooNetwork = new AliCloud.Vpc.Network("fooNetwork", new AliCloud.Vpc.NetworkArgs
+        {
+            CidrBlock = "172.16.0.0/12",
+        });
+        var fooSwitch = new AliCloud.Vpc.Switch("fooSwitch", new AliCloud.Vpc.SwitchArgs
+        {
+            AvailabilityZone = @default.Apply(@default => @default.Zones[0].Id),
+            CidrBlock = "172.16.0.0/21",
+            VpcId = fooNetwork.Id,
+        });
+        var fooNatGateway = new AliCloud.Vpc.NatGateway("fooNatGateway", new AliCloud.Vpc.NatGatewayArgs
+        {
+            Specification = "Small",
+            VpcId = fooNetwork.Id,
+        });
+        var fooEip = new AliCloud.Ecs.Eip("fooEip", new AliCloud.Ecs.EipArgs
+        {
+        });
+        var fooEipAssociation = new AliCloud.Ecs.EipAssociation("fooEipAssociation", new AliCloud.Ecs.EipAssociationArgs
+        {
+            AllocationId = fooEip.Id,
+            InstanceId = fooNatGateway.Id,
+        });
+        var fooSnatEntry = new AliCloud.Vpc.SnatEntry("fooSnatEntry", new AliCloud.Vpc.SnatEntryArgs
+        {
+            SnatIp = fooEip.IpAddress,
+            SnatTableId = fooNatGateway.SnatTableIds,
+            SourceVswitchId = fooSwitch.Id,
+        });
+        var fooSnatEntries = fooSnatEntry.SnatTableId.Apply(snatTableId => AliCloud.Vpc.GetSnatEntries.InvokeAsync(new AliCloud.Vpc.GetSnatEntriesArgs
+        {
+            SnatTableId = snatTableId,
+        }));
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -139,7 +189,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Snat<wbr>Table<wbr>Id</span>
+        <span id="snattableid_csharp">
+<a href="#snattableid_csharp" style="color: inherit; text-decoration: inherit;">Snat<wbr>Table<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -148,7 +200,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ids</span>
+        <span id="ids_csharp">
+<a href="#ids_csharp" style="color: inherit; text-decoration: inherit;">Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -157,7 +211,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Output<wbr>File</span>
+        <span id="outputfile_csharp">
+<a href="#outputfile_csharp" style="color: inherit; text-decoration: inherit;">Output<wbr>File</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -165,7 +221,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Snat<wbr>Ip</span>
+        <span id="snatip_csharp">
+<a href="#snatip_csharp" style="color: inherit; text-decoration: inherit;">Snat<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -174,7 +232,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Source<wbr>Cidr</span>
+        <span id="sourcecidr_csharp">
+<a href="#sourcecidr_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Cidr</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -190,7 +250,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Snat<wbr>Table<wbr>Id</span>
+        <span id="snattableid_go">
+<a href="#snattableid_go" style="color: inherit; text-decoration: inherit;">Snat<wbr>Table<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -199,7 +261,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ids</span>
+        <span id="ids_go">
+<a href="#ids_go" style="color: inherit; text-decoration: inherit;">Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -208,7 +272,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Output<wbr>File</span>
+        <span id="outputfile_go">
+<a href="#outputfile_go" style="color: inherit; text-decoration: inherit;">Output<wbr>File</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -216,7 +282,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Snat<wbr>Ip</span>
+        <span id="snatip_go">
+<a href="#snatip_go" style="color: inherit; text-decoration: inherit;">Snat<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -225,7 +293,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Source<wbr>Cidr</span>
+        <span id="sourcecidr_go">
+<a href="#sourcecidr_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Cidr</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -241,7 +311,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>snat<wbr>Table<wbr>Id</span>
+        <span id="snattableid_nodejs">
+<a href="#snattableid_nodejs" style="color: inherit; text-decoration: inherit;">snat<wbr>Table<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -250,7 +322,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>ids</span>
+        <span id="ids_nodejs">
+<a href="#ids_nodejs" style="color: inherit; text-decoration: inherit;">ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -259,7 +333,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>output<wbr>File</span>
+        <span id="outputfile_nodejs">
+<a href="#outputfile_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>File</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -267,7 +343,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>snat<wbr>Ip</span>
+        <span id="snatip_nodejs">
+<a href="#snatip_nodejs" style="color: inherit; text-decoration: inherit;">snat<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -276,7 +354,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>source<wbr>Cidr</span>
+        <span id="sourcecidr_nodejs">
+<a href="#sourcecidr_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Cidr</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -292,7 +372,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>snat_<wbr>table_<wbr>id</span>
+        <span id="snat_table_id_python">
+<a href="#snat_table_id_python" style="color: inherit; text-decoration: inherit;">snat_<wbr>table_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -301,7 +383,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>ids</span>
+        <span id="ids_python">
+<a href="#ids_python" style="color: inherit; text-decoration: inherit;">ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -310,7 +394,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>output_<wbr>file</span>
+        <span id="output_file_python">
+<a href="#output_file_python" style="color: inherit; text-decoration: inherit;">output_<wbr>file</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -318,7 +404,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>snat_<wbr>ip</span>
+        <span id="snat_ip_python">
+<a href="#snat_ip_python" style="color: inherit; text-decoration: inherit;">snat_<wbr>ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -327,7 +415,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>source_<wbr>cidr</span>
+        <span id="source_cidr_python">
+<a href="#source_cidr_python" style="color: inherit; text-decoration: inherit;">source_<wbr>cidr</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -356,7 +446,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Entries</span>
+        <span id="entries_csharp">
+<a href="#entries_csharp" style="color: inherit; text-decoration: inherit;">Entries</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getsnatentriesentry">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Vpc.<wbr>Outputs.<wbr>Get<wbr>Snat<wbr>Entries<wbr>Entry&gt;</a></span>
     </dt>
@@ -365,7 +457,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -374,7 +468,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Ids</span>
+        <span id="ids_csharp">
+<a href="#ids_csharp" style="color: inherit; text-decoration: inherit;">Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -383,7 +479,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Snat<wbr>Table<wbr>Id</span>
+        <span id="snattableid_csharp">
+<a href="#snattableid_csharp" style="color: inherit; text-decoration: inherit;">Snat<wbr>Table<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -391,7 +489,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Output<wbr>File</span>
+        <span id="outputfile_csharp">
+<a href="#outputfile_csharp" style="color: inherit; text-decoration: inherit;">Output<wbr>File</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -399,7 +499,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Snat<wbr>Ip</span>
+        <span id="snatip_csharp">
+<a href="#snatip_csharp" style="color: inherit; text-decoration: inherit;">Snat<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -408,7 +510,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Source<wbr>Cidr</span>
+        <span id="sourcecidr_csharp">
+<a href="#sourcecidr_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Cidr</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -424,7 +528,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Entries</span>
+        <span id="entries_go">
+<a href="#entries_go" style="color: inherit; text-decoration: inherit;">Entries</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getsnatentriesentry">[]Get<wbr>Snat<wbr>Entries<wbr>Entry</a></span>
     </dt>
@@ -433,7 +539,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -442,7 +550,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Ids</span>
+        <span id="ids_go">
+<a href="#ids_go" style="color: inherit; text-decoration: inherit;">Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -451,7 +561,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Snat<wbr>Table<wbr>Id</span>
+        <span id="snattableid_go">
+<a href="#snattableid_go" style="color: inherit; text-decoration: inherit;">Snat<wbr>Table<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -459,7 +571,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Output<wbr>File</span>
+        <span id="outputfile_go">
+<a href="#outputfile_go" style="color: inherit; text-decoration: inherit;">Output<wbr>File</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -467,7 +581,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Snat<wbr>Ip</span>
+        <span id="snatip_go">
+<a href="#snatip_go" style="color: inherit; text-decoration: inherit;">Snat<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -476,7 +592,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Source<wbr>Cidr</span>
+        <span id="sourcecidr_go">
+<a href="#sourcecidr_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Cidr</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -492,7 +610,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>entries</span>
+        <span id="entries_nodejs">
+<a href="#entries_nodejs" style="color: inherit; text-decoration: inherit;">entries</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getsnatentriesentry">Get<wbr>Snat<wbr>Entries<wbr>Entry[]</a></span>
     </dt>
@@ -501,7 +621,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -510,7 +632,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>ids</span>
+        <span id="ids_nodejs">
+<a href="#ids_nodejs" style="color: inherit; text-decoration: inherit;">ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -519,7 +643,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>snat<wbr>Table<wbr>Id</span>
+        <span id="snattableid_nodejs">
+<a href="#snattableid_nodejs" style="color: inherit; text-decoration: inherit;">snat<wbr>Table<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -527,7 +653,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>output<wbr>File</span>
+        <span id="outputfile_nodejs">
+<a href="#outputfile_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>File</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -535,7 +663,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>snat<wbr>Ip</span>
+        <span id="snatip_nodejs">
+<a href="#snatip_nodejs" style="color: inherit; text-decoration: inherit;">snat<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -544,7 +674,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>source<wbr>Cidr</span>
+        <span id="sourcecidr_nodejs">
+<a href="#sourcecidr_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Cidr</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -560,7 +692,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>entries</span>
+        <span id="entries_python">
+<a href="#entries_python" style="color: inherit; text-decoration: inherit;">entries</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getsnatentriesentry">List[Get<wbr>Snat<wbr>Entries<wbr>Entry]</a></span>
     </dt>
@@ -569,7 +703,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -578,7 +714,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>ids</span>
+        <span id="ids_python">
+<a href="#ids_python" style="color: inherit; text-decoration: inherit;">ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -587,7 +725,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>snat_<wbr>table_<wbr>id</span>
+        <span id="snat_table_id_python">
+<a href="#snat_table_id_python" style="color: inherit; text-decoration: inherit;">snat_<wbr>table_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -595,7 +735,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>output_<wbr>file</span>
+        <span id="output_file_python">
+<a href="#output_file_python" style="color: inherit; text-decoration: inherit;">output_<wbr>file</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -603,7 +745,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>snat_<wbr>ip</span>
+        <span id="snat_ip_python">
+<a href="#snat_ip_python" style="color: inherit; text-decoration: inherit;">snat_<wbr>ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -612,7 +756,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>source_<wbr>cidr</span>
+        <span id="source_cidr_python">
+<a href="#source_cidr_python" style="color: inherit; text-decoration: inherit;">source_<wbr>cidr</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -652,7 +798,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -661,7 +809,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Snat<wbr>Ip</span>
+        <span id="snatip_csharp">
+<a href="#snatip_csharp" style="color: inherit; text-decoration: inherit;">Snat<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -670,7 +820,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Source<wbr>Cidr</span>
+        <span id="sourcecidr_csharp">
+<a href="#sourcecidr_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Cidr</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -679,7 +831,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Status</span>
+        <span id="status_csharp">
+<a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -695,7 +849,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -704,7 +860,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Snat<wbr>Ip</span>
+        <span id="snatip_go">
+<a href="#snatip_go" style="color: inherit; text-decoration: inherit;">Snat<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -713,7 +871,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Source<wbr>Cidr</span>
+        <span id="sourcecidr_go">
+<a href="#sourcecidr_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Cidr</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -722,7 +882,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Status</span>
+        <span id="status_go">
+<a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -738,7 +900,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -747,7 +911,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>snat<wbr>Ip</span>
+        <span id="snatip_nodejs">
+<a href="#snatip_nodejs" style="color: inherit; text-decoration: inherit;">snat<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -756,7 +922,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>source<wbr>Cidr</span>
+        <span id="sourcecidr_nodejs">
+<a href="#sourcecidr_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Cidr</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -765,7 +933,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>status</span>
+        <span id="status_nodejs">
+<a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -781,7 +951,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -790,7 +962,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>snat_<wbr>ip</span>
+        <span id="snat_ip_python">
+<a href="#snat_ip_python" style="color: inherit; text-decoration: inherit;">snat_<wbr>ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -799,7 +973,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>source_<wbr>cidr</span>
+        <span id="source_cidr_python">
+<a href="#source_cidr_python" style="color: inherit; text-decoration: inherit;">source_<wbr>cidr</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -808,7 +984,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>status</span>
+        <span id="status_python">
+<a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

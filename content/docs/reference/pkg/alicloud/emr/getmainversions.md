@@ -23,7 +23,33 @@ main versions available in Alibaba Cloud account when create a emr cluster.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var @default = Output.Create(AliCloud.Emr.GetMainVersions.InvokeAsync(new AliCloud.Emr.GetMainVersionsArgs
+        {
+            ClusterTypes = 
+            {
+                "HADOOP",
+                "ZOOKEEPER",
+            },
+            EmrVersion = "EMR-3.22.0",
+        }));
+        this.FirstMainVersion = @default.Apply(@default => @default.MainVersions[0].EmrVersion);
+        this.ThisClusterTypes = @default.Apply(@default => @default.MainVersions[0].ClusterTypes);
+    }
+
+    [Output("firstMainVersion")]
+    public Output<string> FirstMainVersion { get; set; }
+    [Output("thisClusterTypes")]
+    public Output<string> ThisClusterTypes { get; set; }
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -104,7 +130,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cluster<wbr>Types</span>
+        <span id="clustertypes_csharp">
+<a href="#clustertypes_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Types</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -114,7 +142,9 @@ Possible values may be any one or combination of these: ["HADOOP", "DRUID", "KAF
 
     <dt class="property-optional"
             title="Optional">
-        <span>Emr<wbr>Version</span>
+        <span id="emrversion_csharp">
+<a href="#emrversion_csharp" style="color: inherit; text-decoration: inherit;">Emr<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -123,7 +153,9 @@ Possible values may be any one or combination of these: ["HADOOP", "DRUID", "KAF
 
     <dt class="property-optional"
             title="Optional">
-        <span>Output<wbr>File</span>
+        <span id="outputfile_csharp">
+<a href="#outputfile_csharp" style="color: inherit; text-decoration: inherit;">Output<wbr>File</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -138,7 +170,9 @@ Possible values may be any one or combination of these: ["HADOOP", "DRUID", "KAF
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cluster<wbr>Types</span>
+        <span id="clustertypes_go">
+<a href="#clustertypes_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Types</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -148,7 +182,9 @@ Possible values may be any one or combination of these: ["HADOOP", "DRUID", "KAF
 
     <dt class="property-optional"
             title="Optional">
-        <span>Emr<wbr>Version</span>
+        <span id="emrversion_go">
+<a href="#emrversion_go" style="color: inherit; text-decoration: inherit;">Emr<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -157,7 +193,9 @@ Possible values may be any one or combination of these: ["HADOOP", "DRUID", "KAF
 
     <dt class="property-optional"
             title="Optional">
-        <span>Output<wbr>File</span>
+        <span id="outputfile_go">
+<a href="#outputfile_go" style="color: inherit; text-decoration: inherit;">Output<wbr>File</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -172,7 +210,9 @@ Possible values may be any one or combination of these: ["HADOOP", "DRUID", "KAF
 
     <dt class="property-optional"
             title="Optional">
-        <span>cluster<wbr>Types</span>
+        <span id="clustertypes_nodejs">
+<a href="#clustertypes_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Types</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -182,7 +222,9 @@ Possible values may be any one or combination of these: ["HADOOP", "DRUID", "KAF
 
     <dt class="property-optional"
             title="Optional">
-        <span>emr<wbr>Version</span>
+        <span id="emrversion_nodejs">
+<a href="#emrversion_nodejs" style="color: inherit; text-decoration: inherit;">emr<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -191,7 +233,9 @@ Possible values may be any one or combination of these: ["HADOOP", "DRUID", "KAF
 
     <dt class="property-optional"
             title="Optional">
-        <span>output<wbr>File</span>
+        <span id="outputfile_nodejs">
+<a href="#outputfile_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>File</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -206,7 +250,9 @@ Possible values may be any one or combination of these: ["HADOOP", "DRUID", "KAF
 
     <dt class="property-optional"
             title="Optional">
-        <span>cluster_<wbr>types</span>
+        <span id="cluster_types_python">
+<a href="#cluster_types_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>types</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -216,7 +262,9 @@ Possible values may be any one or combination of these: ["HADOOP", "DRUID", "KAF
 
     <dt class="property-optional"
             title="Optional">
-        <span>emr_<wbr>version</span>
+        <span id="emr_version_python">
+<a href="#emr_version_python" style="color: inherit; text-decoration: inherit;">emr_<wbr>version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -225,7 +273,9 @@ Possible values may be any one or combination of these: ["HADOOP", "DRUID", "KAF
 
     <dt class="property-optional"
             title="Optional">
-        <span>output_<wbr>file</span>
+        <span id="output_file_python">
+<a href="#output_file_python" style="color: inherit; text-decoration: inherit;">output_<wbr>file</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -253,7 +303,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -262,7 +314,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Ids</span>
+        <span id="ids_csharp">
+<a href="#ids_csharp" style="color: inherit; text-decoration: inherit;">Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -271,7 +325,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Main<wbr>Versions</span>
+        <span id="mainversions_csharp">
+<a href="#mainversions_csharp" style="color: inherit; text-decoration: inherit;">Main<wbr>Versions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getmainversionsmainversion">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Emr.<wbr>Outputs.<wbr>Get<wbr>Main<wbr>Versions<wbr>Main<wbr>Version&gt;</a></span>
     </dt>
@@ -280,7 +336,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Cluster<wbr>Types</span>
+        <span id="clustertypes_csharp">
+<a href="#clustertypes_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Types</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -288,7 +346,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Emr<wbr>Version</span>
+        <span id="emrversion_csharp">
+<a href="#emrversion_csharp" style="color: inherit; text-decoration: inherit;">Emr<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -297,7 +357,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Output<wbr>File</span>
+        <span id="outputfile_csharp">
+<a href="#outputfile_csharp" style="color: inherit; text-decoration: inherit;">Output<wbr>File</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -312,7 +374,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -321,7 +385,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Ids</span>
+        <span id="ids_go">
+<a href="#ids_go" style="color: inherit; text-decoration: inherit;">Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -330,7 +396,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Main<wbr>Versions</span>
+        <span id="mainversions_go">
+<a href="#mainversions_go" style="color: inherit; text-decoration: inherit;">Main<wbr>Versions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getmainversionsmainversion">[]Get<wbr>Main<wbr>Versions<wbr>Main<wbr>Version</a></span>
     </dt>
@@ -339,7 +407,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Cluster<wbr>Types</span>
+        <span id="clustertypes_go">
+<a href="#clustertypes_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Types</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -347,7 +417,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Emr<wbr>Version</span>
+        <span id="emrversion_go">
+<a href="#emrversion_go" style="color: inherit; text-decoration: inherit;">Emr<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -356,7 +428,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Output<wbr>File</span>
+        <span id="outputfile_go">
+<a href="#outputfile_go" style="color: inherit; text-decoration: inherit;">Output<wbr>File</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -371,7 +445,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -380,7 +456,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>ids</span>
+        <span id="ids_nodejs">
+<a href="#ids_nodejs" style="color: inherit; text-decoration: inherit;">ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -389,7 +467,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>main<wbr>Versions</span>
+        <span id="mainversions_nodejs">
+<a href="#mainversions_nodejs" style="color: inherit; text-decoration: inherit;">main<wbr>Versions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getmainversionsmainversion">Get<wbr>Main<wbr>Versions<wbr>Main<wbr>Version[]</a></span>
     </dt>
@@ -398,7 +478,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>cluster<wbr>Types</span>
+        <span id="clustertypes_nodejs">
+<a href="#clustertypes_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Types</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -406,7 +488,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>emr<wbr>Version</span>
+        <span id="emrversion_nodejs">
+<a href="#emrversion_nodejs" style="color: inherit; text-decoration: inherit;">emr<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -415,7 +499,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>output<wbr>File</span>
+        <span id="outputfile_nodejs">
+<a href="#outputfile_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>File</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -430,7 +516,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -439,7 +527,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>ids</span>
+        <span id="ids_python">
+<a href="#ids_python" style="color: inherit; text-decoration: inherit;">ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -448,7 +538,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>main_<wbr>versions</span>
+        <span id="main_versions_python">
+<a href="#main_versions_python" style="color: inherit; text-decoration: inherit;">main_<wbr>versions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getmainversionsmainversion">List[Get<wbr>Main<wbr>Versions<wbr>Main<wbr>Version]</a></span>
     </dt>
@@ -457,7 +549,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>cluster_<wbr>types</span>
+        <span id="cluster_types_python">
+<a href="#cluster_types_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>types</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -465,7 +559,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>emr_<wbr>version</span>
+        <span id="emr_version_python">
+<a href="#emr_version_python" style="color: inherit; text-decoration: inherit;">emr_<wbr>version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -474,7 +570,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>output_<wbr>file</span>
+        <span id="output_file_python">
+<a href="#output_file_python" style="color: inherit; text-decoration: inherit;">output_<wbr>file</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -513,7 +611,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Cluster<wbr>Types</span>
+        <span id="clustertypes_csharp">
+<a href="#clustertypes_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Types</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -522,7 +622,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Emr<wbr>Version</span>
+        <span id="emrversion_csharp">
+<a href="#emrversion_csharp" style="color: inherit; text-decoration: inherit;">Emr<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -531,7 +633,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Image<wbr>Id</span>
+        <span id="imageid_csharp">
+<a href="#imageid_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -547,7 +651,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Cluster<wbr>Types</span>
+        <span id="clustertypes_go">
+<a href="#clustertypes_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Types</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -556,7 +662,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Emr<wbr>Version</span>
+        <span id="emrversion_go">
+<a href="#emrversion_go" style="color: inherit; text-decoration: inherit;">Emr<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -565,7 +673,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Image<wbr>Id</span>
+        <span id="imageid_go">
+<a href="#imageid_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -581,7 +691,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>cluster<wbr>Types</span>
+        <span id="clustertypes_nodejs">
+<a href="#clustertypes_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Types</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -590,7 +702,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>emr<wbr>Version</span>
+        <span id="emrversion_nodejs">
+<a href="#emrversion_nodejs" style="color: inherit; text-decoration: inherit;">emr<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -599,7 +713,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>image<wbr>Id</span>
+        <span id="imageid_nodejs">
+<a href="#imageid_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -615,7 +731,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>cluster<wbr>Types</span>
+        <span id="clustertypes_python">
+<a href="#clustertypes_python" style="color: inherit; text-decoration: inherit;">cluster<wbr>Types</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -624,7 +742,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>emr<wbr>Version</span>
+        <span id="emrversion_python">
+<a href="#emrversion_python" style="color: inherit; text-decoration: inherit;">emr<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -633,7 +753,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>image_<wbr>id</span>
+        <span id="image_id_python">
+<a href="#image_id_python" style="color: inherit; text-decoration: inherit;">image_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

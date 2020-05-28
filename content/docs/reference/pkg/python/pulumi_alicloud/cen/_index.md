@@ -1032,6 +1032,133 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="py class">
+<dt id="pulumi_alicloud.cen.PrivateZone">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.cen.</code><code class="sig-name descname">PrivateZone</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">access_region_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cen_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">host_region_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">host_vpc_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.cen.PrivateZone" title="Permalink to this definition">¶</a></dt>
+<dd><p>This topic describes how to configure PrivateZone access. 
+PrivateZone is a VPC-based resolution and management service for private domain names. 
+After you set a PrivateZone access, the Cloud Connect Network (CCN) and Virtual Border Router (VBR) attached to a CEN instance can access the PrivateZone service through CEN.</p>
+<p>For information about CEN Private Zone and how to use it, see <a class="reference external" href="https://www.alibabacloud.com/help/en/doc-detail/106693.htm">Manage CEN Private Zone</a>.</p>
+<blockquote>
+<div><p><strong>NOTE:</strong> Available in 1.83.0+</p>
+</div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">default_instance</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">cen</span><span class="o">.</span><span class="n">Instance</span><span class="p">(</span><span class="s2">&quot;defaultInstance&quot;</span><span class="p">)</span>
+<span class="n">default_network</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">vpc</span><span class="o">.</span><span class="n">Network</span><span class="p">(</span><span class="s2">&quot;defaultNetwork&quot;</span><span class="p">,</span> <span class="n">cidr_block</span><span class="o">=</span><span class="s2">&quot;172.16.0.0/12&quot;</span><span class="p">)</span>
+<span class="n">default_instance_attachment</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">cen</span><span class="o">.</span><span class="n">InstanceAttachment</span><span class="p">(</span><span class="s2">&quot;defaultInstanceAttachment&quot;</span><span class="p">,</span>
+    <span class="n">child_instance_id</span><span class="o">=</span><span class="n">default_network</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">child_instance_region_id</span><span class="o">=</span><span class="s2">&quot;cn-hangzhou&quot;</span><span class="p">,</span>
+    <span class="n">instance_id</span><span class="o">=</span><span class="n">default_instance</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">default_private_zone</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">cen</span><span class="o">.</span><span class="n">PrivateZone</span><span class="p">(</span><span class="s2">&quot;defaultPrivateZone&quot;</span><span class="p">,</span>
+    <span class="n">access_region_id</span><span class="o">=</span><span class="s2">&quot;cn-hangzhou&quot;</span><span class="p">,</span>
+    <span class="n">cen_id</span><span class="o">=</span><span class="n">default_instance</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">host_region_id</span><span class="o">=</span><span class="s2">&quot;cn-hangzhou&quot;</span><span class="p">,</span>
+    <span class="n">host_vpc_id</span><span class="o">=</span><span class="n">default_network</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>access_region_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The access region. The access region is the region of the cloud resource that accesses the PrivateZone service through CEN.</p></li>
+<li><p><strong>cen_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the CEN instance.</p></li>
+<li><p><strong>host_region_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The service region. The service region is the target region of the PrivateZone service to be accessed through CEN.</p></li>
+<li><p><strong>host_vpc_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The VPC that belongs to the service region.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt id="pulumi_alicloud.cen.PrivateZone.access_region_id">
+<code class="sig-name descname">access_region_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cen.PrivateZone.access_region_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The access region. The access region is the region of the cloud resource that accesses the PrivateZone service through CEN.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.cen.PrivateZone.cen_id">
+<code class="sig-name descname">cen_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cen.PrivateZone.cen_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the CEN instance.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.cen.PrivateZone.host_region_id">
+<code class="sig-name descname">host_region_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cen.PrivateZone.host_region_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The service region. The service region is the target region of the PrivateZone service to be accessed through CEN.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.cen.PrivateZone.host_vpc_id">
+<code class="sig-name descname">host_vpc_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cen.PrivateZone.host_vpc_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The VPC that belongs to the service region.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.cen.PrivateZone.status">
+<code class="sig-name descname">status</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cen.PrivateZone.status" title="Permalink to this definition">¶</a></dt>
+<dd><p>The status of the PrivateZone service. Valid values: [“Creating”, “Active”, “Deleting”].</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_alicloud.cen.PrivateZone.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">access_region_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cen_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">host_region_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">host_vpc_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">status</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.cen.PrivateZone.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing PrivateZone resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>access_region_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The access region. The access region is the region of the cloud resource that accesses the PrivateZone service through CEN.</p></li>
+<li><p><strong>cen_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the CEN instance.</p></li>
+<li><p><strong>host_region_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The service region. The service region is the target region of the PrivateZone service to be accessed through CEN.</p></li>
+<li><p><strong>host_vpc_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The VPC that belongs to the service region.</p></li>
+<li><p><strong>status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The status of the PrivateZone service. Valid values: [“Creating”, “Active”, “Deleting”].</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_alicloud.cen.PrivateZone.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.cen.PrivateZone.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_alicloud.cen.PrivateZone.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.cen.PrivateZone.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt id="pulumi_alicloud.cen.RouteEntry">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.cen.</code><code class="sig-name descname">RouteEntry</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cidr_block</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">route_table_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.cen.RouteEntry" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a CEN route entry resource. Cloud Enterprise Network (CEN) supports publishing and withdrawing route entries of attached networks. You can publish a route entry of an attached VPC or VBR to a CEN instance, then other attached networks can learn the route if there is no route conflict. You can withdraw a published route entry when CEN does not need it any more.</p>

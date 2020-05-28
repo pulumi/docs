@@ -31,7 +31,7 @@ Explore the resources and functions of the pvtz module in the AliCloud package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
 	<dt>Version</dt>
-	<dd>2.5.0</dd>
+	<dd>2.6.0</dd>
 </dl>
 
 

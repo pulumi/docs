@@ -22,7 +22,25 @@ Provides an EDAS application deployment resource.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var @default = new AliCloud.Edas.ApplicationDeployment("default", new AliCloud.Edas.ApplicationDeploymentArgs
+        {
+            AppId = @var.App_id,
+            GroupId = @var.Group_id,
+            PackageVersion = @var.Package_version,
+            WarUrl = @var.War_url,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -47,11 +65,11 @@ default = alicloud.edas.ApplicationDeployment("default",
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const default = new alicloud.edas.ApplicationDeployment("default", {
-    appId: var.app_id,
-    groupId: var.group_id,
-    packageVersion: var.package_version,
-    warUrl: var.war_url,
+const _default = new alicloud.edas.ApplicationDeployment("default", {
+    appId: _var.app_id,
+    groupId: _var.group_id,
+    packageVersion: _var.package_version,
+    warUrl: _var.war_url,
 });
 ```
 {{% /example %}}
@@ -242,7 +260,9 @@ The ApplicationDeployment resource accepts the following [input]({{< relref "/do
 
     <dt class="property-required"
             title="Required">
-        <span>App<wbr>Id</span>
+        <span id="appid_csharp">
+<a href="#appid_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -251,7 +271,9 @@ The ApplicationDeployment resource accepts the following [input]({{< relref "/do
 
     <dt class="property-required"
             title="Required">
-        <span>Group<wbr>Id</span>
+        <span id="groupid_csharp">
+<a href="#groupid_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -260,7 +282,9 @@ The ApplicationDeployment resource accepts the following [input]({{< relref "/do
 
     <dt class="property-required"
             title="Required">
-        <span>War<wbr>Url</span>
+        <span id="warurl_csharp">
+<a href="#warurl_csharp" style="color: inherit; text-decoration: inherit;">War<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -269,7 +293,9 @@ The ApplicationDeployment resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
-        <span>Package<wbr>Version</span>
+        <span id="packageversion_csharp">
+<a href="#packageversion_csharp" style="color: inherit; text-decoration: inherit;">Package<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -285,7 +311,9 @@ The ApplicationDeployment resource accepts the following [input]({{< relref "/do
 
     <dt class="property-required"
             title="Required">
-        <span>App<wbr>Id</span>
+        <span id="appid_go">
+<a href="#appid_go" style="color: inherit; text-decoration: inherit;">App<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -294,7 +322,9 @@ The ApplicationDeployment resource accepts the following [input]({{< relref "/do
 
     <dt class="property-required"
             title="Required">
-        <span>Group<wbr>Id</span>
+        <span id="groupid_go">
+<a href="#groupid_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -303,7 +333,9 @@ The ApplicationDeployment resource accepts the following [input]({{< relref "/do
 
     <dt class="property-required"
             title="Required">
-        <span>War<wbr>Url</span>
+        <span id="warurl_go">
+<a href="#warurl_go" style="color: inherit; text-decoration: inherit;">War<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -312,7 +344,9 @@ The ApplicationDeployment resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
-        <span>Package<wbr>Version</span>
+        <span id="packageversion_go">
+<a href="#packageversion_go" style="color: inherit; text-decoration: inherit;">Package<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -328,7 +362,9 @@ The ApplicationDeployment resource accepts the following [input]({{< relref "/do
 
     <dt class="property-required"
             title="Required">
-        <span>app<wbr>Id</span>
+        <span id="appid_nodejs">
+<a href="#appid_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -337,7 +373,9 @@ The ApplicationDeployment resource accepts the following [input]({{< relref "/do
 
     <dt class="property-required"
             title="Required">
-        <span>group<wbr>Id</span>
+        <span id="groupid_nodejs">
+<a href="#groupid_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -346,7 +384,9 @@ The ApplicationDeployment resource accepts the following [input]({{< relref "/do
 
     <dt class="property-required"
             title="Required">
-        <span>war<wbr>Url</span>
+        <span id="warurl_nodejs">
+<a href="#warurl_nodejs" style="color: inherit; text-decoration: inherit;">war<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -355,7 +395,9 @@ The ApplicationDeployment resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
-        <span>package<wbr>Version</span>
+        <span id="packageversion_nodejs">
+<a href="#packageversion_nodejs" style="color: inherit; text-decoration: inherit;">package<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -371,7 +413,9 @@ The ApplicationDeployment resource accepts the following [input]({{< relref "/do
 
     <dt class="property-required"
             title="Required">
-        <span>app_<wbr>id</span>
+        <span id="app_id_python">
+<a href="#app_id_python" style="color: inherit; text-decoration: inherit;">app_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -380,7 +424,9 @@ The ApplicationDeployment resource accepts the following [input]({{< relref "/do
 
     <dt class="property-required"
             title="Required">
-        <span>group_<wbr>id</span>
+        <span id="group_id_python">
+<a href="#group_id_python" style="color: inherit; text-decoration: inherit;">group_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -389,7 +435,9 @@ The ApplicationDeployment resource accepts the following [input]({{< relref "/do
 
     <dt class="property-required"
             title="Required">
-        <span>war_<wbr>url</span>
+        <span id="war_url_python">
+<a href="#war_url_python" style="color: inherit; text-decoration: inherit;">war_<wbr>url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -398,7 +446,9 @@ The ApplicationDeployment resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
-        <span>package_<wbr>version</span>
+        <span id="package_version_python">
+<a href="#package_version_python" style="color: inherit; text-decoration: inherit;">package_<wbr>version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -425,7 +475,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -433,7 +485,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Last<wbr>Package<wbr>Version</span>
+        <span id="lastpackageversion_csharp">
+<a href="#lastpackageversion_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Package<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -449,7 +503,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -457,7 +513,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Last<wbr>Package<wbr>Version</span>
+        <span id="lastpackageversion_go">
+<a href="#lastpackageversion_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Package<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -473,7 +531,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -481,7 +541,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>last<wbr>Package<wbr>Version</span>
+        <span id="lastpackageversion_nodejs">
+<a href="#lastpackageversion_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Package<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -497,7 +559,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -505,7 +569,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>last_<wbr>package_<wbr>version</span>
+        <span id="last_package_version_python">
+<a href="#last_package_version_python" style="color: inherit; text-decoration: inherit;">last_<wbr>package_<wbr>version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -647,7 +713,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>App<wbr>Id</span>
+        <span id="state_appid_csharp">
+<a href="#state_appid_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -656,7 +724,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Group<wbr>Id</span>
+        <span id="state_groupid_csharp">
+<a href="#state_groupid_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -665,7 +735,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Last<wbr>Package<wbr>Version</span>
+        <span id="state_lastpackageversion_csharp">
+<a href="#state_lastpackageversion_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Package<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -674,7 +746,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Package<wbr>Version</span>
+        <span id="state_packageversion_csharp">
+<a href="#state_packageversion_csharp" style="color: inherit; text-decoration: inherit;">Package<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -683,7 +757,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>War<wbr>Url</span>
+        <span id="state_warurl_csharp">
+<a href="#state_warurl_csharp" style="color: inherit; text-decoration: inherit;">War<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -699,7 +775,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>App<wbr>Id</span>
+        <span id="state_appid_go">
+<a href="#state_appid_go" style="color: inherit; text-decoration: inherit;">App<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -708,7 +786,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Group<wbr>Id</span>
+        <span id="state_groupid_go">
+<a href="#state_groupid_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -717,7 +797,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Last<wbr>Package<wbr>Version</span>
+        <span id="state_lastpackageversion_go">
+<a href="#state_lastpackageversion_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Package<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -726,7 +808,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Package<wbr>Version</span>
+        <span id="state_packageversion_go">
+<a href="#state_packageversion_go" style="color: inherit; text-decoration: inherit;">Package<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -735,7 +819,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>War<wbr>Url</span>
+        <span id="state_warurl_go">
+<a href="#state_warurl_go" style="color: inherit; text-decoration: inherit;">War<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -751,7 +837,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>app<wbr>Id</span>
+        <span id="state_appid_nodejs">
+<a href="#state_appid_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -760,7 +848,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>group<wbr>Id</span>
+        <span id="state_groupid_nodejs">
+<a href="#state_groupid_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -769,7 +859,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>last<wbr>Package<wbr>Version</span>
+        <span id="state_lastpackageversion_nodejs">
+<a href="#state_lastpackageversion_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Package<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -778,7 +870,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>package<wbr>Version</span>
+        <span id="state_packageversion_nodejs">
+<a href="#state_packageversion_nodejs" style="color: inherit; text-decoration: inherit;">package<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -787,7 +881,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>war<wbr>Url</span>
+        <span id="state_warurl_nodejs">
+<a href="#state_warurl_nodejs" style="color: inherit; text-decoration: inherit;">war<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -803,7 +899,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>app_<wbr>id</span>
+        <span id="state_app_id_python">
+<a href="#state_app_id_python" style="color: inherit; text-decoration: inherit;">app_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -812,7 +910,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>group_<wbr>id</span>
+        <span id="state_group_id_python">
+<a href="#state_group_id_python" style="color: inherit; text-decoration: inherit;">group_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -821,7 +921,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>last_<wbr>package_<wbr>version</span>
+        <span id="state_last_package_version_python">
+<a href="#state_last_package_version_python" style="color: inherit; text-decoration: inherit;">last_<wbr>package_<wbr>version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -830,7 +932,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>package_<wbr>version</span>
+        <span id="state_package_version_python">
+<a href="#state_package_version_python" style="color: inherit; text-decoration: inherit;">package_<wbr>version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -839,7 +943,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>war_<wbr>url</span>
+        <span id="state_war_url_python">
+<a href="#state_war_url_python" style="color: inherit; text-decoration: inherit;">war_<wbr>url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

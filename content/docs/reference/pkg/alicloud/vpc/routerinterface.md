@@ -196,7 +196,9 @@ The RouterInterface resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-required"
             title="Required">
-        <span>Opposite<wbr>Region</span>
+        <span id="oppositeregion_csharp">
+<a href="#oppositeregion_csharp" style="color: inherit; text-decoration: inherit;">Opposite<wbr>Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -205,7 +207,9 @@ The RouterInterface resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-required"
             title="Required">
-        <span>Role</span>
+        <span id="role_csharp">
+<a href="#role_csharp" style="color: inherit; text-decoration: inherit;">Role</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -214,7 +218,9 @@ The RouterInterface resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-required"
             title="Required">
-        <span>Router<wbr>Id</span>
+        <span id="routerid_csharp">
+<a href="#routerid_csharp" style="color: inherit; text-decoration: inherit;">Router<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -223,7 +229,9 @@ The RouterInterface resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-required"
             title="Required">
-        <span>Router<wbr>Type</span>
+        <span id="routertype_csharp">
+<a href="#routertype_csharp" style="color: inherit; text-decoration: inherit;">Router<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -232,7 +240,9 @@ The RouterInterface resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -241,7 +251,9 @@ The RouterInterface resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-optional"
             title="Optional">
-        <span>Health<wbr>Check<wbr>Source<wbr>Ip</span>
+        <span id="healthchecksourceip_csharp">
+<a href="#healthchecksourceip_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Source<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -250,7 +262,9 @@ The RouterInterface resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-optional"
             title="Optional">
-        <span>Health<wbr>Check<wbr>Target<wbr>Ip</span>
+        <span id="healthchecktargetip_csharp">
+<a href="#healthchecktargetip_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Target<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -259,7 +273,9 @@ The RouterInterface resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-optional"
             title="Optional">
-        <span>Instance<wbr>Charge<wbr>Type</span>
+        <span id="instancechargetype_csharp">
+<a href="#instancechargetype_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Charge<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -268,7 +284,9 @@ The RouterInterface resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -278,7 +296,9 @@ If it is not specified, the default value is interface ID. The name cannot start
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>Opposite<wbr>Access<wbr>Point<wbr>Id</span>
+        <span id="oppositeaccesspointid_csharp">
+<a href="#oppositeaccesspointid_csharp" style="color: inherit; text-decoration: inherit;">Opposite<wbr>Access<wbr>Point<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -287,7 +307,9 @@ If it is not specified, the default value is interface ID. The name cannot start
 
     <dt class="property-optional"
             title="Optional">
-        <span>Period</span>
+        <span id="period_csharp">
+<a href="#period_csharp" style="color: inherit; text-decoration: inherit;">Period</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -296,7 +318,9 @@ If it is not specified, the default value is interface ID. The name cannot start
 
     <dt class="property-optional"
             title="Optional">
-        <span>Specification</span>
+        <span id="specification_csharp">
+<a href="#specification_csharp" style="color: inherit; text-decoration: inherit;">Specification</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -312,7 +336,9 @@ If it is not specified, the default value is interface ID. The name cannot start
 
     <dt class="property-required"
             title="Required">
-        <span>Opposite<wbr>Region</span>
+        <span id="oppositeregion_go">
+<a href="#oppositeregion_go" style="color: inherit; text-decoration: inherit;">Opposite<wbr>Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -321,7 +347,9 @@ If it is not specified, the default value is interface ID. The name cannot start
 
     <dt class="property-required"
             title="Required">
-        <span>Role</span>
+        <span id="role_go">
+<a href="#role_go" style="color: inherit; text-decoration: inherit;">Role</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -330,7 +358,9 @@ If it is not specified, the default value is interface ID. The name cannot start
 
     <dt class="property-required"
             title="Required">
-        <span>Router<wbr>Id</span>
+        <span id="routerid_go">
+<a href="#routerid_go" style="color: inherit; text-decoration: inherit;">Router<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -339,7 +369,9 @@ If it is not specified, the default value is interface ID. The name cannot start
 
     <dt class="property-required"
             title="Required">
-        <span>Router<wbr>Type</span>
+        <span id="routertype_go">
+<a href="#routertype_go" style="color: inherit; text-decoration: inherit;">Router<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -348,7 +380,9 @@ If it is not specified, the default value is interface ID. The name cannot start
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -357,7 +391,9 @@ If it is not specified, the default value is interface ID. The name cannot start
 
     <dt class="property-optional"
             title="Optional">
-        <span>Health<wbr>Check<wbr>Source<wbr>Ip</span>
+        <span id="healthchecksourceip_go">
+<a href="#healthchecksourceip_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Source<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -366,7 +402,9 @@ If it is not specified, the default value is interface ID. The name cannot start
 
     <dt class="property-optional"
             title="Optional">
-        <span>Health<wbr>Check<wbr>Target<wbr>Ip</span>
+        <span id="healthchecktargetip_go">
+<a href="#healthchecktargetip_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Target<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -375,7 +413,9 @@ If it is not specified, the default value is interface ID. The name cannot start
 
     <dt class="property-optional"
             title="Optional">
-        <span>Instance<wbr>Charge<wbr>Type</span>
+        <span id="instancechargetype_go">
+<a href="#instancechargetype_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Charge<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -384,7 +424,9 @@ If it is not specified, the default value is interface ID. The name cannot start
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -394,7 +436,9 @@ If it is not specified, the default value is interface ID. The name cannot start
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>Opposite<wbr>Access<wbr>Point<wbr>Id</span>
+        <span id="oppositeaccesspointid_go">
+<a href="#oppositeaccesspointid_go" style="color: inherit; text-decoration: inherit;">Opposite<wbr>Access<wbr>Point<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -403,7 +447,9 @@ If it is not specified, the default value is interface ID. The name cannot start
 
     <dt class="property-optional"
             title="Optional">
-        <span>Period</span>
+        <span id="period_go">
+<a href="#period_go" style="color: inherit; text-decoration: inherit;">Period</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -412,7 +458,9 @@ If it is not specified, the default value is interface ID. The name cannot start
 
     <dt class="property-optional"
             title="Optional">
-        <span>Specification</span>
+        <span id="specification_go">
+<a href="#specification_go" style="color: inherit; text-decoration: inherit;">Specification</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -428,7 +476,9 @@ If it is not specified, the default value is interface ID. The name cannot start
 
     <dt class="property-required"
             title="Required">
-        <span>opposite<wbr>Region</span>
+        <span id="oppositeregion_nodejs">
+<a href="#oppositeregion_nodejs" style="color: inherit; text-decoration: inherit;">opposite<wbr>Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -437,7 +487,9 @@ If it is not specified, the default value is interface ID. The name cannot start
 
     <dt class="property-required"
             title="Required">
-        <span>role</span>
+        <span id="role_nodejs">
+<a href="#role_nodejs" style="color: inherit; text-decoration: inherit;">role</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -446,7 +498,9 @@ If it is not specified, the default value is interface ID. The name cannot start
 
     <dt class="property-required"
             title="Required">
-        <span>router<wbr>Id</span>
+        <span id="routerid_nodejs">
+<a href="#routerid_nodejs" style="color: inherit; text-decoration: inherit;">router<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -455,7 +509,9 @@ If it is not specified, the default value is interface ID. The name cannot start
 
     <dt class="property-required"
             title="Required">
-        <span>router<wbr>Type</span>
+        <span id="routertype_nodejs">
+<a href="#routertype_nodejs" style="color: inherit; text-decoration: inherit;">router<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -464,7 +520,9 @@ If it is not specified, the default value is interface ID. The name cannot start
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -473,7 +531,9 @@ If it is not specified, the default value is interface ID. The name cannot start
 
     <dt class="property-optional"
             title="Optional">
-        <span>health<wbr>Check<wbr>Source<wbr>Ip</span>
+        <span id="healthchecksourceip_nodejs">
+<a href="#healthchecksourceip_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Check<wbr>Source<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -482,7 +542,9 @@ If it is not specified, the default value is interface ID. The name cannot start
 
     <dt class="property-optional"
             title="Optional">
-        <span>health<wbr>Check<wbr>Target<wbr>Ip</span>
+        <span id="healthchecktargetip_nodejs">
+<a href="#healthchecktargetip_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Check<wbr>Target<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -491,7 +553,9 @@ If it is not specified, the default value is interface ID. The name cannot start
 
     <dt class="property-optional"
             title="Optional">
-        <span>instance<wbr>Charge<wbr>Type</span>
+        <span id="instancechargetype_nodejs">
+<a href="#instancechargetype_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Charge<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -500,7 +564,9 @@ If it is not specified, the default value is interface ID. The name cannot start
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -510,7 +576,9 @@ If it is not specified, the default value is interface ID. The name cannot start
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>opposite<wbr>Access<wbr>Point<wbr>Id</span>
+        <span id="oppositeaccesspointid_nodejs">
+<a href="#oppositeaccesspointid_nodejs" style="color: inherit; text-decoration: inherit;">opposite<wbr>Access<wbr>Point<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -519,7 +587,9 @@ If it is not specified, the default value is interface ID. The name cannot start
 
     <dt class="property-optional"
             title="Optional">
-        <span>period</span>
+        <span id="period_nodejs">
+<a href="#period_nodejs" style="color: inherit; text-decoration: inherit;">period</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -528,7 +598,9 @@ If it is not specified, the default value is interface ID. The name cannot start
 
     <dt class="property-optional"
             title="Optional">
-        <span>specification</span>
+        <span id="specification_nodejs">
+<a href="#specification_nodejs" style="color: inherit; text-decoration: inherit;">specification</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -544,7 +616,9 @@ If it is not specified, the default value is interface ID. The name cannot start
 
     <dt class="property-required"
             title="Required">
-        <span>opposite_<wbr>region</span>
+        <span id="opposite_region_python">
+<a href="#opposite_region_python" style="color: inherit; text-decoration: inherit;">opposite_<wbr>region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -553,7 +627,9 @@ If it is not specified, the default value is interface ID. The name cannot start
 
     <dt class="property-required"
             title="Required">
-        <span>role</span>
+        <span id="role_python">
+<a href="#role_python" style="color: inherit; text-decoration: inherit;">role</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -562,7 +638,9 @@ If it is not specified, the default value is interface ID. The name cannot start
 
     <dt class="property-required"
             title="Required">
-        <span>router_<wbr>id</span>
+        <span id="router_id_python">
+<a href="#router_id_python" style="color: inherit; text-decoration: inherit;">router_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -571,7 +649,9 @@ If it is not specified, the default value is interface ID. The name cannot start
 
     <dt class="property-required"
             title="Required">
-        <span>router_<wbr>type</span>
+        <span id="router_type_python">
+<a href="#router_type_python" style="color: inherit; text-decoration: inherit;">router_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -580,7 +660,9 @@ If it is not specified, the default value is interface ID. The name cannot start
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -589,7 +671,9 @@ If it is not specified, the default value is interface ID. The name cannot start
 
     <dt class="property-optional"
             title="Optional">
-        <span>health_<wbr>check_<wbr>source_<wbr>ip</span>
+        <span id="health_check_source_ip_python">
+<a href="#health_check_source_ip_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check_<wbr>source_<wbr>ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -598,7 +682,9 @@ If it is not specified, the default value is interface ID. The name cannot start
 
     <dt class="property-optional"
             title="Optional">
-        <span>health_<wbr>check_<wbr>target_<wbr>ip</span>
+        <span id="health_check_target_ip_python">
+<a href="#health_check_target_ip_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check_<wbr>target_<wbr>ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -607,7 +693,9 @@ If it is not specified, the default value is interface ID. The name cannot start
 
     <dt class="property-optional"
             title="Optional">
-        <span>instance_<wbr>charge_<wbr>type</span>
+        <span id="instance_charge_type_python">
+<a href="#instance_charge_type_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>charge_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -616,7 +704,9 @@ If it is not specified, the default value is interface ID. The name cannot start
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -626,7 +716,9 @@ If it is not specified, the default value is interface ID. The name cannot start
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>opposite_<wbr>access_<wbr>point_<wbr>id</span>
+        <span id="opposite_access_point_id_python">
+<a href="#opposite_access_point_id_python" style="color: inherit; text-decoration: inherit;">opposite_<wbr>access_<wbr>point_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -635,7 +727,9 @@ If it is not specified, the default value is interface ID. The name cannot start
 
     <dt class="property-optional"
             title="Optional">
-        <span>period</span>
+        <span id="period_python">
+<a href="#period_python" style="color: inherit; text-decoration: inherit;">period</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -644,7 +738,9 @@ If it is not specified, the default value is interface ID. The name cannot start
 
     <dt class="property-optional"
             title="Optional">
-        <span>specification</span>
+        <span id="specification_python">
+<a href="#specification_python" style="color: inherit; text-decoration: inherit;">specification</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -671,7 +767,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property- property-deprecated"
             title=", Deprecated">
-        <span>Access<wbr>Point<wbr>Id</span>
+        <span id="accesspointid_csharp">
+<a href="#accesspointid_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Point<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -680,7 +778,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -688,7 +788,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property- property-deprecated"
             title=", Deprecated">
-        <span>Opposite<wbr>Interface<wbr>Id</span>
+        <span id="oppositeinterfaceid_csharp">
+<a href="#oppositeinterfaceid_csharp" style="color: inherit; text-decoration: inherit;">Opposite<wbr>Interface<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -697,7 +799,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property- property-deprecated"
             title=", Deprecated">
-        <span>Opposite<wbr>Interface<wbr>Owner<wbr>Id</span>
+        <span id="oppositeinterfaceownerid_csharp">
+<a href="#oppositeinterfaceownerid_csharp" style="color: inherit; text-decoration: inherit;">Opposite<wbr>Interface<wbr>Owner<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -706,7 +810,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property- property-deprecated"
             title=", Deprecated">
-        <span>Opposite<wbr>Router<wbr>Id</span>
+        <span id="oppositerouterid_csharp">
+<a href="#oppositerouterid_csharp" style="color: inherit; text-decoration: inherit;">Opposite<wbr>Router<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -715,7 +821,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property- property-deprecated"
             title=", Deprecated">
-        <span>Opposite<wbr>Router<wbr>Type</span>
+        <span id="oppositeroutertype_csharp">
+<a href="#oppositeroutertype_csharp" style="color: inherit; text-decoration: inherit;">Opposite<wbr>Router<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -731,7 +839,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property- property-deprecated"
             title=", Deprecated">
-        <span>Access<wbr>Point<wbr>Id</span>
+        <span id="accesspointid_go">
+<a href="#accesspointid_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Point<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -740,7 +850,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -748,7 +860,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property- property-deprecated"
             title=", Deprecated">
-        <span>Opposite<wbr>Interface<wbr>Id</span>
+        <span id="oppositeinterfaceid_go">
+<a href="#oppositeinterfaceid_go" style="color: inherit; text-decoration: inherit;">Opposite<wbr>Interface<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -757,7 +871,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property- property-deprecated"
             title=", Deprecated">
-        <span>Opposite<wbr>Interface<wbr>Owner<wbr>Id</span>
+        <span id="oppositeinterfaceownerid_go">
+<a href="#oppositeinterfaceownerid_go" style="color: inherit; text-decoration: inherit;">Opposite<wbr>Interface<wbr>Owner<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -766,7 +882,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property- property-deprecated"
             title=", Deprecated">
-        <span>Opposite<wbr>Router<wbr>Id</span>
+        <span id="oppositerouterid_go">
+<a href="#oppositerouterid_go" style="color: inherit; text-decoration: inherit;">Opposite<wbr>Router<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -775,7 +893,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property- property-deprecated"
             title=", Deprecated">
-        <span>Opposite<wbr>Router<wbr>Type</span>
+        <span id="oppositeroutertype_go">
+<a href="#oppositeroutertype_go" style="color: inherit; text-decoration: inherit;">Opposite<wbr>Router<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -791,7 +911,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property- property-deprecated"
             title=", Deprecated">
-        <span>access<wbr>Point<wbr>Id</span>
+        <span id="accesspointid_nodejs">
+<a href="#accesspointid_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Point<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -800,7 +922,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -808,7 +932,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property- property-deprecated"
             title=", Deprecated">
-        <span>opposite<wbr>Interface<wbr>Id</span>
+        <span id="oppositeinterfaceid_nodejs">
+<a href="#oppositeinterfaceid_nodejs" style="color: inherit; text-decoration: inherit;">opposite<wbr>Interface<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -817,7 +943,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property- property-deprecated"
             title=", Deprecated">
-        <span>opposite<wbr>Interface<wbr>Owner<wbr>Id</span>
+        <span id="oppositeinterfaceownerid_nodejs">
+<a href="#oppositeinterfaceownerid_nodejs" style="color: inherit; text-decoration: inherit;">opposite<wbr>Interface<wbr>Owner<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -826,7 +954,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property- property-deprecated"
             title=", Deprecated">
-        <span>opposite<wbr>Router<wbr>Id</span>
+        <span id="oppositerouterid_nodejs">
+<a href="#oppositerouterid_nodejs" style="color: inherit; text-decoration: inherit;">opposite<wbr>Router<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -835,7 +965,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property- property-deprecated"
             title=", Deprecated">
-        <span>opposite<wbr>Router<wbr>Type</span>
+        <span id="oppositeroutertype_nodejs">
+<a href="#oppositeroutertype_nodejs" style="color: inherit; text-decoration: inherit;">opposite<wbr>Router<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -851,7 +983,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property- property-deprecated"
             title=", Deprecated">
-        <span>access_<wbr>point_<wbr>id</span>
+        <span id="access_point_id_python">
+<a href="#access_point_id_python" style="color: inherit; text-decoration: inherit;">access_<wbr>point_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -860,7 +994,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -868,7 +1004,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property- property-deprecated"
             title=", Deprecated">
-        <span>opposite_<wbr>interface_<wbr>id</span>
+        <span id="opposite_interface_id_python">
+<a href="#opposite_interface_id_python" style="color: inherit; text-decoration: inherit;">opposite_<wbr>interface_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -877,7 +1015,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property- property-deprecated"
             title=", Deprecated">
-        <span>opposite_<wbr>interface_<wbr>owner_<wbr>id</span>
+        <span id="opposite_interface_owner_id_python">
+<a href="#opposite_interface_owner_id_python" style="color: inherit; text-decoration: inherit;">opposite_<wbr>interface_<wbr>owner_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -886,7 +1026,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property- property-deprecated"
             title=", Deprecated">
-        <span>opposite_<wbr>router_<wbr>id</span>
+        <span id="opposite_router_id_python">
+<a href="#opposite_router_id_python" style="color: inherit; text-decoration: inherit;">opposite_<wbr>router_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -895,7 +1037,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property- property-deprecated"
             title=", Deprecated">
-        <span>opposite_<wbr>router_<wbr>type</span>
+        <span id="opposite_router_type_python">
+<a href="#opposite_router_type_python" style="color: inherit; text-decoration: inherit;">opposite_<wbr>router_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1037,7 +1181,9 @@ The following state arguments are supported:
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>Access<wbr>Point<wbr>Id</span>
+        <span id="state_accesspointid_csharp">
+<a href="#state_accesspointid_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Point<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1046,7 +1192,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="state_description_csharp">
+<a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1055,7 +1203,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Health<wbr>Check<wbr>Source<wbr>Ip</span>
+        <span id="state_healthchecksourceip_csharp">
+<a href="#state_healthchecksourceip_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Source<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1064,7 +1214,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Health<wbr>Check<wbr>Target<wbr>Ip</span>
+        <span id="state_healthchecktargetip_csharp">
+<a href="#state_healthchecktargetip_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Target<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1073,7 +1225,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Instance<wbr>Charge<wbr>Type</span>
+        <span id="state_instancechargetype_csharp">
+<a href="#state_instancechargetype_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Charge<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1082,7 +1236,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1092,7 +1248,9 @@ If it is not specified, the default value is interface ID. The name cannot start
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>Opposite<wbr>Access<wbr>Point<wbr>Id</span>
+        <span id="state_oppositeaccesspointid_csharp">
+<a href="#state_oppositeaccesspointid_csharp" style="color: inherit; text-decoration: inherit;">Opposite<wbr>Access<wbr>Point<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1101,7 +1259,9 @@ If it is not specified, the default value is interface ID. The name cannot start
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>Opposite<wbr>Interface<wbr>Id</span>
+        <span id="state_oppositeinterfaceid_csharp">
+<a href="#state_oppositeinterfaceid_csharp" style="color: inherit; text-decoration: inherit;">Opposite<wbr>Interface<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1110,7 +1270,9 @@ If it is not specified, the default value is interface ID. The name cannot start
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>Opposite<wbr>Interface<wbr>Owner<wbr>Id</span>
+        <span id="state_oppositeinterfaceownerid_csharp">
+<a href="#state_oppositeinterfaceownerid_csharp" style="color: inherit; text-decoration: inherit;">Opposite<wbr>Interface<wbr>Owner<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1119,7 +1281,9 @@ If it is not specified, the default value is interface ID. The name cannot start
 
     <dt class="property-optional"
             title="Optional">
-        <span>Opposite<wbr>Region</span>
+        <span id="state_oppositeregion_csharp">
+<a href="#state_oppositeregion_csharp" style="color: inherit; text-decoration: inherit;">Opposite<wbr>Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1128,7 +1292,9 @@ If it is not specified, the default value is interface ID. The name cannot start
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>Opposite<wbr>Router<wbr>Id</span>
+        <span id="state_oppositerouterid_csharp">
+<a href="#state_oppositerouterid_csharp" style="color: inherit; text-decoration: inherit;">Opposite<wbr>Router<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1137,7 +1303,9 @@ If it is not specified, the default value is interface ID. The name cannot start
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>Opposite<wbr>Router<wbr>Type</span>
+        <span id="state_oppositeroutertype_csharp">
+<a href="#state_oppositeroutertype_csharp" style="color: inherit; text-decoration: inherit;">Opposite<wbr>Router<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1146,7 +1314,9 @@ If it is not specified, the default value is interface ID. The name cannot start
 
     <dt class="property-optional"
             title="Optional">
-        <span>Period</span>
+        <span id="state_period_csharp">
+<a href="#state_period_csharp" style="color: inherit; text-decoration: inherit;">Period</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1155,7 +1325,9 @@ If it is not specified, the default value is interface ID. The name cannot start
 
     <dt class="property-optional"
             title="Optional">
-        <span>Role</span>
+        <span id="state_role_csharp">
+<a href="#state_role_csharp" style="color: inherit; text-decoration: inherit;">Role</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1164,7 +1336,9 @@ If it is not specified, the default value is interface ID. The name cannot start
 
     <dt class="property-optional"
             title="Optional">
-        <span>Router<wbr>Id</span>
+        <span id="state_routerid_csharp">
+<a href="#state_routerid_csharp" style="color: inherit; text-decoration: inherit;">Router<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1173,7 +1347,9 @@ If it is not specified, the default value is interface ID. The name cannot start
 
     <dt class="property-optional"
             title="Optional">
-        <span>Router<wbr>Type</span>
+        <span id="state_routertype_csharp">
+<a href="#state_routertype_csharp" style="color: inherit; text-decoration: inherit;">Router<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1182,7 +1358,9 @@ If it is not specified, the default value is interface ID. The name cannot start
 
     <dt class="property-optional"
             title="Optional">
-        <span>Specification</span>
+        <span id="state_specification_csharp">
+<a href="#state_specification_csharp" style="color: inherit; text-decoration: inherit;">Specification</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1198,7 +1376,9 @@ If it is not specified, the default value is interface ID. The name cannot start
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>Access<wbr>Point<wbr>Id</span>
+        <span id="state_accesspointid_go">
+<a href="#state_accesspointid_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Point<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1207,7 +1387,9 @@ If it is not specified, the default value is interface ID. The name cannot start
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="state_description_go">
+<a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1216,7 +1398,9 @@ If it is not specified, the default value is interface ID. The name cannot start
 
     <dt class="property-optional"
             title="Optional">
-        <span>Health<wbr>Check<wbr>Source<wbr>Ip</span>
+        <span id="state_healthchecksourceip_go">
+<a href="#state_healthchecksourceip_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Source<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1225,7 +1409,9 @@ If it is not specified, the default value is interface ID. The name cannot start
 
     <dt class="property-optional"
             title="Optional">
-        <span>Health<wbr>Check<wbr>Target<wbr>Ip</span>
+        <span id="state_healthchecktargetip_go">
+<a href="#state_healthchecktargetip_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Target<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1234,7 +1420,9 @@ If it is not specified, the default value is interface ID. The name cannot start
 
     <dt class="property-optional"
             title="Optional">
-        <span>Instance<wbr>Charge<wbr>Type</span>
+        <span id="state_instancechargetype_go">
+<a href="#state_instancechargetype_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Charge<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1243,7 +1431,9 @@ If it is not specified, the default value is interface ID. The name cannot start
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1253,7 +1443,9 @@ If it is not specified, the default value is interface ID. The name cannot start
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>Opposite<wbr>Access<wbr>Point<wbr>Id</span>
+        <span id="state_oppositeaccesspointid_go">
+<a href="#state_oppositeaccesspointid_go" style="color: inherit; text-decoration: inherit;">Opposite<wbr>Access<wbr>Point<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1262,7 +1454,9 @@ If it is not specified, the default value is interface ID. The name cannot start
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>Opposite<wbr>Interface<wbr>Id</span>
+        <span id="state_oppositeinterfaceid_go">
+<a href="#state_oppositeinterfaceid_go" style="color: inherit; text-decoration: inherit;">Opposite<wbr>Interface<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1271,7 +1465,9 @@ If it is not specified, the default value is interface ID. The name cannot start
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>Opposite<wbr>Interface<wbr>Owner<wbr>Id</span>
+        <span id="state_oppositeinterfaceownerid_go">
+<a href="#state_oppositeinterfaceownerid_go" style="color: inherit; text-decoration: inherit;">Opposite<wbr>Interface<wbr>Owner<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1280,7 +1476,9 @@ If it is not specified, the default value is interface ID. The name cannot start
 
     <dt class="property-optional"
             title="Optional">
-        <span>Opposite<wbr>Region</span>
+        <span id="state_oppositeregion_go">
+<a href="#state_oppositeregion_go" style="color: inherit; text-decoration: inherit;">Opposite<wbr>Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1289,7 +1487,9 @@ If it is not specified, the default value is interface ID. The name cannot start
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>Opposite<wbr>Router<wbr>Id</span>
+        <span id="state_oppositerouterid_go">
+<a href="#state_oppositerouterid_go" style="color: inherit; text-decoration: inherit;">Opposite<wbr>Router<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1298,7 +1498,9 @@ If it is not specified, the default value is interface ID. The name cannot start
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>Opposite<wbr>Router<wbr>Type</span>
+        <span id="state_oppositeroutertype_go">
+<a href="#state_oppositeroutertype_go" style="color: inherit; text-decoration: inherit;">Opposite<wbr>Router<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1307,7 +1509,9 @@ If it is not specified, the default value is interface ID. The name cannot start
 
     <dt class="property-optional"
             title="Optional">
-        <span>Period</span>
+        <span id="state_period_go">
+<a href="#state_period_go" style="color: inherit; text-decoration: inherit;">Period</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1316,7 +1520,9 @@ If it is not specified, the default value is interface ID. The name cannot start
 
     <dt class="property-optional"
             title="Optional">
-        <span>Role</span>
+        <span id="state_role_go">
+<a href="#state_role_go" style="color: inherit; text-decoration: inherit;">Role</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1325,7 +1531,9 @@ If it is not specified, the default value is interface ID. The name cannot start
 
     <dt class="property-optional"
             title="Optional">
-        <span>Router<wbr>Id</span>
+        <span id="state_routerid_go">
+<a href="#state_routerid_go" style="color: inherit; text-decoration: inherit;">Router<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1334,7 +1542,9 @@ If it is not specified, the default value is interface ID. The name cannot start
 
     <dt class="property-optional"
             title="Optional">
-        <span>Router<wbr>Type</span>
+        <span id="state_routertype_go">
+<a href="#state_routertype_go" style="color: inherit; text-decoration: inherit;">Router<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1343,7 +1553,9 @@ If it is not specified, the default value is interface ID. The name cannot start
 
     <dt class="property-optional"
             title="Optional">
-        <span>Specification</span>
+        <span id="state_specification_go">
+<a href="#state_specification_go" style="color: inherit; text-decoration: inherit;">Specification</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1359,7 +1571,9 @@ If it is not specified, the default value is interface ID. The name cannot start
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>access<wbr>Point<wbr>Id</span>
+        <span id="state_accesspointid_nodejs">
+<a href="#state_accesspointid_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Point<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1368,7 +1582,9 @@ If it is not specified, the default value is interface ID. The name cannot start
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="state_description_nodejs">
+<a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1377,7 +1593,9 @@ If it is not specified, the default value is interface ID. The name cannot start
 
     <dt class="property-optional"
             title="Optional">
-        <span>health<wbr>Check<wbr>Source<wbr>Ip</span>
+        <span id="state_healthchecksourceip_nodejs">
+<a href="#state_healthchecksourceip_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Check<wbr>Source<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1386,7 +1604,9 @@ If it is not specified, the default value is interface ID. The name cannot start
 
     <dt class="property-optional"
             title="Optional">
-        <span>health<wbr>Check<wbr>Target<wbr>Ip</span>
+        <span id="state_healthchecktargetip_nodejs">
+<a href="#state_healthchecktargetip_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Check<wbr>Target<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1395,7 +1615,9 @@ If it is not specified, the default value is interface ID. The name cannot start
 
     <dt class="property-optional"
             title="Optional">
-        <span>instance<wbr>Charge<wbr>Type</span>
+        <span id="state_instancechargetype_nodejs">
+<a href="#state_instancechargetype_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Charge<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1404,7 +1626,9 @@ If it is not specified, the default value is interface ID. The name cannot start
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1414,7 +1638,9 @@ If it is not specified, the default value is interface ID. The name cannot start
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>opposite<wbr>Access<wbr>Point<wbr>Id</span>
+        <span id="state_oppositeaccesspointid_nodejs">
+<a href="#state_oppositeaccesspointid_nodejs" style="color: inherit; text-decoration: inherit;">opposite<wbr>Access<wbr>Point<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1423,7 +1649,9 @@ If it is not specified, the default value is interface ID. The name cannot start
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>opposite<wbr>Interface<wbr>Id</span>
+        <span id="state_oppositeinterfaceid_nodejs">
+<a href="#state_oppositeinterfaceid_nodejs" style="color: inherit; text-decoration: inherit;">opposite<wbr>Interface<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1432,7 +1660,9 @@ If it is not specified, the default value is interface ID. The name cannot start
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>opposite<wbr>Interface<wbr>Owner<wbr>Id</span>
+        <span id="state_oppositeinterfaceownerid_nodejs">
+<a href="#state_oppositeinterfaceownerid_nodejs" style="color: inherit; text-decoration: inherit;">opposite<wbr>Interface<wbr>Owner<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1441,7 +1671,9 @@ If it is not specified, the default value is interface ID. The name cannot start
 
     <dt class="property-optional"
             title="Optional">
-        <span>opposite<wbr>Region</span>
+        <span id="state_oppositeregion_nodejs">
+<a href="#state_oppositeregion_nodejs" style="color: inherit; text-decoration: inherit;">opposite<wbr>Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1450,7 +1682,9 @@ If it is not specified, the default value is interface ID. The name cannot start
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>opposite<wbr>Router<wbr>Id</span>
+        <span id="state_oppositerouterid_nodejs">
+<a href="#state_oppositerouterid_nodejs" style="color: inherit; text-decoration: inherit;">opposite<wbr>Router<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1459,7 +1693,9 @@ If it is not specified, the default value is interface ID. The name cannot start
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>opposite<wbr>Router<wbr>Type</span>
+        <span id="state_oppositeroutertype_nodejs">
+<a href="#state_oppositeroutertype_nodejs" style="color: inherit; text-decoration: inherit;">opposite<wbr>Router<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1468,7 +1704,9 @@ If it is not specified, the default value is interface ID. The name cannot start
 
     <dt class="property-optional"
             title="Optional">
-        <span>period</span>
+        <span id="state_period_nodejs">
+<a href="#state_period_nodejs" style="color: inherit; text-decoration: inherit;">period</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1477,7 +1715,9 @@ If it is not specified, the default value is interface ID. The name cannot start
 
     <dt class="property-optional"
             title="Optional">
-        <span>role</span>
+        <span id="state_role_nodejs">
+<a href="#state_role_nodejs" style="color: inherit; text-decoration: inherit;">role</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1486,7 +1726,9 @@ If it is not specified, the default value is interface ID. The name cannot start
 
     <dt class="property-optional"
             title="Optional">
-        <span>router<wbr>Id</span>
+        <span id="state_routerid_nodejs">
+<a href="#state_routerid_nodejs" style="color: inherit; text-decoration: inherit;">router<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1495,7 +1737,9 @@ If it is not specified, the default value is interface ID. The name cannot start
 
     <dt class="property-optional"
             title="Optional">
-        <span>router<wbr>Type</span>
+        <span id="state_routertype_nodejs">
+<a href="#state_routertype_nodejs" style="color: inherit; text-decoration: inherit;">router<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1504,7 +1748,9 @@ If it is not specified, the default value is interface ID. The name cannot start
 
     <dt class="property-optional"
             title="Optional">
-        <span>specification</span>
+        <span id="state_specification_nodejs">
+<a href="#state_specification_nodejs" style="color: inherit; text-decoration: inherit;">specification</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1520,7 +1766,9 @@ If it is not specified, the default value is interface ID. The name cannot start
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>access_<wbr>point_<wbr>id</span>
+        <span id="state_access_point_id_python">
+<a href="#state_access_point_id_python" style="color: inherit; text-decoration: inherit;">access_<wbr>point_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1529,7 +1777,9 @@ If it is not specified, the default value is interface ID. The name cannot start
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="state_description_python">
+<a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1538,7 +1788,9 @@ If it is not specified, the default value is interface ID. The name cannot start
 
     <dt class="property-optional"
             title="Optional">
-        <span>health_<wbr>check_<wbr>source_<wbr>ip</span>
+        <span id="state_health_check_source_ip_python">
+<a href="#state_health_check_source_ip_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check_<wbr>source_<wbr>ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1547,7 +1799,9 @@ If it is not specified, the default value is interface ID. The name cannot start
 
     <dt class="property-optional"
             title="Optional">
-        <span>health_<wbr>check_<wbr>target_<wbr>ip</span>
+        <span id="state_health_check_target_ip_python">
+<a href="#state_health_check_target_ip_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check_<wbr>target_<wbr>ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1556,7 +1810,9 @@ If it is not specified, the default value is interface ID. The name cannot start
 
     <dt class="property-optional"
             title="Optional">
-        <span>instance_<wbr>charge_<wbr>type</span>
+        <span id="state_instance_charge_type_python">
+<a href="#state_instance_charge_type_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>charge_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1565,7 +1821,9 @@ If it is not specified, the default value is interface ID. The name cannot start
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1575,7 +1833,9 @@ If it is not specified, the default value is interface ID. The name cannot start
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>opposite_<wbr>access_<wbr>point_<wbr>id</span>
+        <span id="state_opposite_access_point_id_python">
+<a href="#state_opposite_access_point_id_python" style="color: inherit; text-decoration: inherit;">opposite_<wbr>access_<wbr>point_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1584,7 +1844,9 @@ If it is not specified, the default value is interface ID. The name cannot start
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>opposite_<wbr>interface_<wbr>id</span>
+        <span id="state_opposite_interface_id_python">
+<a href="#state_opposite_interface_id_python" style="color: inherit; text-decoration: inherit;">opposite_<wbr>interface_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1593,7 +1855,9 @@ If it is not specified, the default value is interface ID. The name cannot start
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>opposite_<wbr>interface_<wbr>owner_<wbr>id</span>
+        <span id="state_opposite_interface_owner_id_python">
+<a href="#state_opposite_interface_owner_id_python" style="color: inherit; text-decoration: inherit;">opposite_<wbr>interface_<wbr>owner_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1602,7 +1866,9 @@ If it is not specified, the default value is interface ID. The name cannot start
 
     <dt class="property-optional"
             title="Optional">
-        <span>opposite_<wbr>region</span>
+        <span id="state_opposite_region_python">
+<a href="#state_opposite_region_python" style="color: inherit; text-decoration: inherit;">opposite_<wbr>region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1611,7 +1877,9 @@ If it is not specified, the default value is interface ID. The name cannot start
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>opposite_<wbr>router_<wbr>id</span>
+        <span id="state_opposite_router_id_python">
+<a href="#state_opposite_router_id_python" style="color: inherit; text-decoration: inherit;">opposite_<wbr>router_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1620,7 +1888,9 @@ If it is not specified, the default value is interface ID. The name cannot start
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>opposite_<wbr>router_<wbr>type</span>
+        <span id="state_opposite_router_type_python">
+<a href="#state_opposite_router_type_python" style="color: inherit; text-decoration: inherit;">opposite_<wbr>router_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1629,7 +1899,9 @@ If it is not specified, the default value is interface ID. The name cannot start
 
     <dt class="property-optional"
             title="Optional">
-        <span>period</span>
+        <span id="state_period_python">
+<a href="#state_period_python" style="color: inherit; text-decoration: inherit;">period</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1638,7 +1910,9 @@ If it is not specified, the default value is interface ID. The name cannot start
 
     <dt class="property-optional"
             title="Optional">
-        <span>role</span>
+        <span id="state_role_python">
+<a href="#state_role_python" style="color: inherit; text-decoration: inherit;">role</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1647,7 +1921,9 @@ If it is not specified, the default value is interface ID. The name cannot start
 
     <dt class="property-optional"
             title="Optional">
-        <span>router_<wbr>id</span>
+        <span id="state_router_id_python">
+<a href="#state_router_id_python" style="color: inherit; text-decoration: inherit;">router_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1656,7 +1932,9 @@ If it is not specified, the default value is interface ID. The name cannot start
 
     <dt class="property-optional"
             title="Optional">
-        <span>router_<wbr>type</span>
+        <span id="state_router_type_python">
+<a href="#state_router_type_python" style="color: inherit; text-decoration: inherit;">router_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1665,7 +1943,9 @@ If it is not specified, the default value is interface ID. The name cannot start
 
     <dt class="property-optional"
             title="Optional">
-        <span>specification</span>
+        <span id="state_specification_python">
+<a href="#state_specification_python" style="color: inherit; text-decoration: inherit;">specification</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

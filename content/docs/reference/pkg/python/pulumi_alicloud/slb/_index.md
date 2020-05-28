@@ -1905,13 +1905,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
         <span class="p">{</span>
             <span class="s2">&quot;port&quot;</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
             <span class="s2">&quot;serverId&quot;</span><span class="p">:</span> <span class="n">instance_instance</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
-            <span class="s2">&quot;serverType&quot;</span><span class="p">:</span> <span class="s2">&quot;Master&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;server_type&quot;</span><span class="p">:</span> <span class="s2">&quot;Master&quot;</span><span class="p">,</span>
             <span class="s2">&quot;weight&quot;</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
         <span class="p">},</span>
         <span class="p">{</span>
             <span class="s2">&quot;port&quot;</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
             <span class="s2">&quot;serverId&quot;</span><span class="p">:</span> <span class="n">instance_instance</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
-            <span class="s2">&quot;serverType&quot;</span><span class="p">:</span> <span class="s2">&quot;Slave&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;server_type&quot;</span><span class="p">:</span> <span class="s2">&quot;Slave&quot;</span><span class="p">,</span>
             <span class="s2">&quot;weight&quot;</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
         <span class="p">},</span>
     <span class="p">])</span>

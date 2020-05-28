@@ -25,7 +25,30 @@ For information about Server Certificate and how to use it, see [Configure Serve
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        // create a server certificate
+        var foo = new AliCloud.Slb.ServerCertificate("foo", new AliCloud.Slb.ServerCertificateArgs
+        {
+            PrivateKey = @"-----BEGIN RSA PRIVATE KEY-----
+MIICXAIBAAKBgQDO0knDrlNdiys******ErVpjsckAaOW/JDG5PCSwkaMxk=
+-----END RSA PRIVATE KEY-----
+",
+            ServerCertificate = @"-----BEGIN CERTIFICATE-----
+MIIDRjCCAq+gAwIBAgI+OuMs******XTtI90EAxEG/bJJyOm5LqoiA=
+-----END CERTIFICATE-----
+",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -253,7 +276,9 @@ The ServerCertificate resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>Alicloud<wbr>Certifacte<wbr>Id</span>
+        <span id="alicloudcertifacteid_csharp">
+<a href="#alicloudcertifacteid_csharp" style="color: inherit; text-decoration: inherit;">Alicloud<wbr>Certifacte<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -261,7 +286,9 @@ The ServerCertificate resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>Alicloud<wbr>Certifacte<wbr>Name</span>
+        <span id="alicloudcertifactename_csharp">
+<a href="#alicloudcertifactename_csharp" style="color: inherit; text-decoration: inherit;">Alicloud<wbr>Certifacte<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -269,7 +296,9 @@ The ServerCertificate resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Alicloud<wbr>Certificate<wbr>Id</span>
+        <span id="alicloudcertificateid_csharp">
+<a href="#alicloudcertificateid_csharp" style="color: inherit; text-decoration: inherit;">Alicloud<wbr>Certificate<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -278,7 +307,9 @@ The ServerCertificate resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Alicloud<wbr>Certificate<wbr>Name</span>
+        <span id="alicloudcertificatename_csharp">
+<a href="#alicloudcertificatename_csharp" style="color: inherit; text-decoration: inherit;">Alicloud<wbr>Certificate<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -287,7 +318,9 @@ The ServerCertificate resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Alicloud<wbr>Certificate<wbr>Region<wbr>Id</span>
+        <span id="alicloudcertificateregionid_csharp">
+<a href="#alicloudcertificateregionid_csharp" style="color: inherit; text-decoration: inherit;">Alicloud<wbr>Certificate<wbr>Region<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -296,7 +329,9 @@ The ServerCertificate resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Certificate</span>
+        <span id="certificate_csharp">
+<a href="#certificate_csharp" style="color: inherit; text-decoration: inherit;">Certificate</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -305,7 +340,9 @@ The ServerCertificate resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -314,7 +351,9 @@ The ServerCertificate resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Private<wbr>Key</span>
+        <span id="privatekey_csharp">
+<a href="#privatekey_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -323,7 +362,9 @@ The ServerCertificate resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resource<wbr>Group<wbr>Id</span>
+        <span id="resourcegroupid_csharp">
+<a href="#resourcegroupid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -332,7 +373,9 @@ The ServerCertificate resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -348,7 +391,9 @@ The ServerCertificate resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>Alicloud<wbr>Certifacte<wbr>Id</span>
+        <span id="alicloudcertifacteid_go">
+<a href="#alicloudcertifacteid_go" style="color: inherit; text-decoration: inherit;">Alicloud<wbr>Certifacte<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -356,7 +401,9 @@ The ServerCertificate resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>Alicloud<wbr>Certifacte<wbr>Name</span>
+        <span id="alicloudcertifactename_go">
+<a href="#alicloudcertifactename_go" style="color: inherit; text-decoration: inherit;">Alicloud<wbr>Certifacte<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -364,7 +411,9 @@ The ServerCertificate resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Alicloud<wbr>Certificate<wbr>Id</span>
+        <span id="alicloudcertificateid_go">
+<a href="#alicloudcertificateid_go" style="color: inherit; text-decoration: inherit;">Alicloud<wbr>Certificate<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -373,7 +422,9 @@ The ServerCertificate resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Alicloud<wbr>Certificate<wbr>Name</span>
+        <span id="alicloudcertificatename_go">
+<a href="#alicloudcertificatename_go" style="color: inherit; text-decoration: inherit;">Alicloud<wbr>Certificate<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -382,7 +433,9 @@ The ServerCertificate resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Alicloud<wbr>Certificate<wbr>Region<wbr>Id</span>
+        <span id="alicloudcertificateregionid_go">
+<a href="#alicloudcertificateregionid_go" style="color: inherit; text-decoration: inherit;">Alicloud<wbr>Certificate<wbr>Region<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -391,7 +444,9 @@ The ServerCertificate resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -400,7 +455,9 @@ The ServerCertificate resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Private<wbr>Key</span>
+        <span id="privatekey_go">
+<a href="#privatekey_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -409,7 +466,9 @@ The ServerCertificate resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resource<wbr>Group<wbr>Id</span>
+        <span id="resourcegroupid_go">
+<a href="#resourcegroupid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -418,7 +477,9 @@ The ServerCertificate resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Server<wbr>Certificate</span>
+        <span id="servercertificate_go">
+<a href="#servercertificate_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Certificate</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -427,7 +488,9 @@ The ServerCertificate resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -443,7 +506,9 @@ The ServerCertificate resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>alicloud<wbr>Certifacte<wbr>Id</span>
+        <span id="alicloudcertifacteid_nodejs">
+<a href="#alicloudcertifacteid_nodejs" style="color: inherit; text-decoration: inherit;">alicloud<wbr>Certifacte<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -451,7 +516,9 @@ The ServerCertificate resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>alicloud<wbr>Certifacte<wbr>Name</span>
+        <span id="alicloudcertifactename_nodejs">
+<a href="#alicloudcertifactename_nodejs" style="color: inherit; text-decoration: inherit;">alicloud<wbr>Certifacte<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -459,7 +526,9 @@ The ServerCertificate resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>alicloud<wbr>Certificate<wbr>Id</span>
+        <span id="alicloudcertificateid_nodejs">
+<a href="#alicloudcertificateid_nodejs" style="color: inherit; text-decoration: inherit;">alicloud<wbr>Certificate<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -468,7 +537,9 @@ The ServerCertificate resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>alicloud<wbr>Certificate<wbr>Name</span>
+        <span id="alicloudcertificatename_nodejs">
+<a href="#alicloudcertificatename_nodejs" style="color: inherit; text-decoration: inherit;">alicloud<wbr>Certificate<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -477,7 +548,9 @@ The ServerCertificate resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>alicloud<wbr>Certificate<wbr>Region<wbr>Id</span>
+        <span id="alicloudcertificateregionid_nodejs">
+<a href="#alicloudcertificateregionid_nodejs" style="color: inherit; text-decoration: inherit;">alicloud<wbr>Certificate<wbr>Region<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -486,7 +559,9 @@ The ServerCertificate resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -495,7 +570,9 @@ The ServerCertificate resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>private<wbr>Key</span>
+        <span id="privatekey_nodejs">
+<a href="#privatekey_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -504,7 +581,9 @@ The ServerCertificate resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource<wbr>Group<wbr>Id</span>
+        <span id="resourcegroupid_nodejs">
+<a href="#resourcegroupid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -513,7 +592,9 @@ The ServerCertificate resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>server<wbr>Certificate</span>
+        <span id="servercertificate_nodejs">
+<a href="#servercertificate_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Certificate</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -522,7 +603,9 @@ The ServerCertificate resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -538,7 +621,9 @@ The ServerCertificate resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>alicloud_<wbr>certifacte_<wbr>id</span>
+        <span id="alicloud_certifacte_id_python">
+<a href="#alicloud_certifacte_id_python" style="color: inherit; text-decoration: inherit;">alicloud_<wbr>certifacte_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -546,7 +631,9 @@ The ServerCertificate resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>alicloud_<wbr>certifacte_<wbr>name</span>
+        <span id="alicloud_certifacte_name_python">
+<a href="#alicloud_certifacte_name_python" style="color: inherit; text-decoration: inherit;">alicloud_<wbr>certifacte_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -554,7 +641,9 @@ The ServerCertificate resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>alicloud_<wbr>certificate_<wbr>id</span>
+        <span id="alicloud_certificate_id_python">
+<a href="#alicloud_certificate_id_python" style="color: inherit; text-decoration: inherit;">alicloud_<wbr>certificate_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -563,7 +652,9 @@ The ServerCertificate resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>alicloud_<wbr>certificate_<wbr>name</span>
+        <span id="alicloud_certificate_name_python">
+<a href="#alicloud_certificate_name_python" style="color: inherit; text-decoration: inherit;">alicloud_<wbr>certificate_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -572,7 +663,9 @@ The ServerCertificate resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>alicloud_<wbr>certificate_<wbr>region_<wbr>id</span>
+        <span id="alicloud_certificate_region_id_python">
+<a href="#alicloud_certificate_region_id_python" style="color: inherit; text-decoration: inherit;">alicloud_<wbr>certificate_<wbr>region_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -581,7 +674,9 @@ The ServerCertificate resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -590,7 +685,9 @@ The ServerCertificate resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>private_<wbr>key</span>
+        <span id="private_key_python">
+<a href="#private_key_python" style="color: inherit; text-decoration: inherit;">private_<wbr>key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -599,7 +696,9 @@ The ServerCertificate resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource_<wbr>group_<wbr>id</span>
+        <span id="resource_group_id_python">
+<a href="#resource_group_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -608,7 +707,9 @@ The ServerCertificate resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>server_<wbr>certificate</span>
+        <span id="server_certificate_python">
+<a href="#server_certificate_python" style="color: inherit; text-decoration: inherit;">server_<wbr>certificate</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -617,7 +718,9 @@ The ServerCertificate resource accepts the following [input]({{< relref "/docs/i
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -644,7 +747,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -659,7 +764,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -674,7 +781,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -689,7 +798,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -830,7 +941,9 @@ The following state arguments are supported:
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>Alicloud<wbr>Certifacte<wbr>Id</span>
+        <span id="state_alicloudcertifacteid_csharp">
+<a href="#state_alicloudcertifacteid_csharp" style="color: inherit; text-decoration: inherit;">Alicloud<wbr>Certifacte<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -838,7 +951,9 @@ The following state arguments are supported:
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>Alicloud<wbr>Certifacte<wbr>Name</span>
+        <span id="state_alicloudcertifactename_csharp">
+<a href="#state_alicloudcertifactename_csharp" style="color: inherit; text-decoration: inherit;">Alicloud<wbr>Certifacte<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -846,7 +961,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Alicloud<wbr>Certificate<wbr>Id</span>
+        <span id="state_alicloudcertificateid_csharp">
+<a href="#state_alicloudcertificateid_csharp" style="color: inherit; text-decoration: inherit;">Alicloud<wbr>Certificate<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -855,7 +972,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Alicloud<wbr>Certificate<wbr>Name</span>
+        <span id="state_alicloudcertificatename_csharp">
+<a href="#state_alicloudcertificatename_csharp" style="color: inherit; text-decoration: inherit;">Alicloud<wbr>Certificate<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -864,7 +983,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Alicloud<wbr>Certificate<wbr>Region<wbr>Id</span>
+        <span id="state_alicloudcertificateregionid_csharp">
+<a href="#state_alicloudcertificateregionid_csharp" style="color: inherit; text-decoration: inherit;">Alicloud<wbr>Certificate<wbr>Region<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -873,7 +994,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Certificate</span>
+        <span id="state_certificate_csharp">
+<a href="#state_certificate_csharp" style="color: inherit; text-decoration: inherit;">Certificate</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -882,7 +1005,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -891,7 +1016,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Private<wbr>Key</span>
+        <span id="state_privatekey_csharp">
+<a href="#state_privatekey_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -900,7 +1027,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resource<wbr>Group<wbr>Id</span>
+        <span id="state_resourcegroupid_csharp">
+<a href="#state_resourcegroupid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -909,7 +1038,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="state_tags_csharp">
+<a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -925,7 +1056,9 @@ The following state arguments are supported:
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>Alicloud<wbr>Certifacte<wbr>Id</span>
+        <span id="state_alicloudcertifacteid_go">
+<a href="#state_alicloudcertifacteid_go" style="color: inherit; text-decoration: inherit;">Alicloud<wbr>Certifacte<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -933,7 +1066,9 @@ The following state arguments are supported:
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>Alicloud<wbr>Certifacte<wbr>Name</span>
+        <span id="state_alicloudcertifactename_go">
+<a href="#state_alicloudcertifactename_go" style="color: inherit; text-decoration: inherit;">Alicloud<wbr>Certifacte<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -941,7 +1076,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Alicloud<wbr>Certificate<wbr>Id</span>
+        <span id="state_alicloudcertificateid_go">
+<a href="#state_alicloudcertificateid_go" style="color: inherit; text-decoration: inherit;">Alicloud<wbr>Certificate<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -950,7 +1087,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Alicloud<wbr>Certificate<wbr>Name</span>
+        <span id="state_alicloudcertificatename_go">
+<a href="#state_alicloudcertificatename_go" style="color: inherit; text-decoration: inherit;">Alicloud<wbr>Certificate<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -959,7 +1098,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Alicloud<wbr>Certificate<wbr>Region<wbr>Id</span>
+        <span id="state_alicloudcertificateregionid_go">
+<a href="#state_alicloudcertificateregionid_go" style="color: inherit; text-decoration: inherit;">Alicloud<wbr>Certificate<wbr>Region<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -968,7 +1109,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -977,7 +1120,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Private<wbr>Key</span>
+        <span id="state_privatekey_go">
+<a href="#state_privatekey_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -986,7 +1131,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resource<wbr>Group<wbr>Id</span>
+        <span id="state_resourcegroupid_go">
+<a href="#state_resourcegroupid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -995,7 +1142,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Server<wbr>Certificate</span>
+        <span id="state_servercertificate_go">
+<a href="#state_servercertificate_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Certificate</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1004,7 +1153,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="state_tags_go">
+<a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -1020,7 +1171,9 @@ The following state arguments are supported:
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>alicloud<wbr>Certifacte<wbr>Id</span>
+        <span id="state_alicloudcertifacteid_nodejs">
+<a href="#state_alicloudcertifacteid_nodejs" style="color: inherit; text-decoration: inherit;">alicloud<wbr>Certifacte<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1028,7 +1181,9 @@ The following state arguments are supported:
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>alicloud<wbr>Certifacte<wbr>Name</span>
+        <span id="state_alicloudcertifactename_nodejs">
+<a href="#state_alicloudcertifactename_nodejs" style="color: inherit; text-decoration: inherit;">alicloud<wbr>Certifacte<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1036,7 +1191,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>alicloud<wbr>Certificate<wbr>Id</span>
+        <span id="state_alicloudcertificateid_nodejs">
+<a href="#state_alicloudcertificateid_nodejs" style="color: inherit; text-decoration: inherit;">alicloud<wbr>Certificate<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1045,7 +1202,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>alicloud<wbr>Certificate<wbr>Name</span>
+        <span id="state_alicloudcertificatename_nodejs">
+<a href="#state_alicloudcertificatename_nodejs" style="color: inherit; text-decoration: inherit;">alicloud<wbr>Certificate<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1054,7 +1213,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>alicloud<wbr>Certificate<wbr>Region<wbr>Id</span>
+        <span id="state_alicloudcertificateregionid_nodejs">
+<a href="#state_alicloudcertificateregionid_nodejs" style="color: inherit; text-decoration: inherit;">alicloud<wbr>Certificate<wbr>Region<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1063,7 +1224,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1072,7 +1235,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>private<wbr>Key</span>
+        <span id="state_privatekey_nodejs">
+<a href="#state_privatekey_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1081,7 +1246,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource<wbr>Group<wbr>Id</span>
+        <span id="state_resourcegroupid_nodejs">
+<a href="#state_resourcegroupid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1090,7 +1257,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>server<wbr>Certificate</span>
+        <span id="state_servercertificate_nodejs">
+<a href="#state_servercertificate_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Certificate</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1099,7 +1268,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="state_tags_nodejs">
+<a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -1115,7 +1286,9 @@ The following state arguments are supported:
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>alicloud_<wbr>certifacte_<wbr>id</span>
+        <span id="state_alicloud_certifacte_id_python">
+<a href="#state_alicloud_certifacte_id_python" style="color: inherit; text-decoration: inherit;">alicloud_<wbr>certifacte_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1123,7 +1296,9 @@ The following state arguments are supported:
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>alicloud_<wbr>certifacte_<wbr>name</span>
+        <span id="state_alicloud_certifacte_name_python">
+<a href="#state_alicloud_certifacte_name_python" style="color: inherit; text-decoration: inherit;">alicloud_<wbr>certifacte_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1131,7 +1306,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>alicloud_<wbr>certificate_<wbr>id</span>
+        <span id="state_alicloud_certificate_id_python">
+<a href="#state_alicloud_certificate_id_python" style="color: inherit; text-decoration: inherit;">alicloud_<wbr>certificate_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1140,7 +1317,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>alicloud_<wbr>certificate_<wbr>name</span>
+        <span id="state_alicloud_certificate_name_python">
+<a href="#state_alicloud_certificate_name_python" style="color: inherit; text-decoration: inherit;">alicloud_<wbr>certificate_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1149,7 +1328,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>alicloud_<wbr>certificate_<wbr>region_<wbr>id</span>
+        <span id="state_alicloud_certificate_region_id_python">
+<a href="#state_alicloud_certificate_region_id_python" style="color: inherit; text-decoration: inherit;">alicloud_<wbr>certificate_<wbr>region_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1158,7 +1339,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1167,7 +1350,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>private_<wbr>key</span>
+        <span id="state_private_key_python">
+<a href="#state_private_key_python" style="color: inherit; text-decoration: inherit;">private_<wbr>key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1176,7 +1361,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource_<wbr>group_<wbr>id</span>
+        <span id="state_resource_group_id_python">
+<a href="#state_resource_group_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1185,7 +1372,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>server_<wbr>certificate</span>
+        <span id="state_server_certificate_python">
+<a href="#state_server_certificate_python" style="color: inherit; text-decoration: inherit;">server_<wbr>certificate</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1194,7 +1383,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="state_tags_python">
+<a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>

@@ -31,7 +31,66 @@ The config mapping supports the following:
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var config = new Config();
+        var name = config.Get("name") ?? "auto_provisioning_group";
+        var defaultZones = Output.Create(AliCloud.GetZones.InvokeAsync(new AliCloud.GetZonesArgs
+        {
+            AvailableDiskCategory = "cloud_efficiency",
+            AvailableResourceCreation = "VSwitch",
+        }));
+        var defaultNetwork = new AliCloud.Vpc.Network("defaultNetwork", new AliCloud.Vpc.NetworkArgs
+        {
+            CidrBlock = "172.16.0.0/16",
+        });
+        var defaultSwitch = new AliCloud.Vpc.Switch("defaultSwitch", new AliCloud.Vpc.SwitchArgs
+        {
+            AvailabilityZone = defaultZones.Apply(defaultZones => defaultZones.Zones[0].Id),
+            CidrBlock = "172.16.0.0/24",
+            VpcId = defaultNetwork.Id,
+        });
+        var defaultSecurityGroup = new AliCloud.Ecs.SecurityGroup("defaultSecurityGroup", new AliCloud.Ecs.SecurityGroupArgs
+        {
+            VpcId = defaultNetwork.Id,
+        });
+        var defaultImages = Output.Create(AliCloud.Ecs.GetImages.InvokeAsync(new AliCloud.Ecs.GetImagesArgs
+        {
+            MostRecent = true,
+            NameRegex = "^ubuntu_18.*64",
+            Owners = "system",
+        }));
+        var template = new AliCloud.Ecs.LaunchTemplate("template", new AliCloud.Ecs.LaunchTemplateArgs
+        {
+            ImageId = defaultImages.Apply(defaultImages => defaultImages.Images[0].Id),
+            InstanceType = "ecs.n1.tiny",
+            SecurityGroupId = defaultSecurityGroup.Id,
+        });
+        var defaultAutoProvisioningGroup = new AliCloud.Ecs.AutoProvisioningGroup("defaultAutoProvisioningGroup", new AliCloud.Ecs.AutoProvisioningGroupArgs
+        {
+            LaunchTemplateConfigs = 
+            {
+                new AliCloud.Ecs.Inputs.AutoProvisioningGroupLaunchTemplateConfigArgs
+                {
+                    InstanceType = "ecs.n1.small",
+                    VswitchId = defaultSwitch.Id,
+                },
+            },
+            LaunchTemplateId = template.Id,
+            PayAsYouGoTargetCapacity = "1",
+            SpotTargetCapacity = "2",
+            TotalTargetCapacity = "4",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -64,8 +123,8 @@ template = alicloud.ecs.LaunchTemplate("template",
     security_group_id=default_security_group.id)
 default_auto_provisioning_group = alicloud.ecs.AutoProvisioningGroup("defaultAutoProvisioningGroup",
     launch_template_configs=[{
-        "instanceType": "ecs.n1.small",
-        "vswitchId": default_switch.id,
+        "instance_type": "ecs.n1.small",
+        "vswitch_id": default_switch.id,
     }],
     launch_template_id=template.id,
     pay_as_you_go_target_capacity="1",
@@ -306,7 +365,9 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
 
     <dt class="property-required"
             title="Required">
-        <span>Launch<wbr>Template<wbr>Configs</span>
+        <span id="launchtemplateconfigs_csharp">
+<a href="#launchtemplateconfigs_csharp" style="color: inherit; text-decoration: inherit;">Launch<wbr>Template<wbr>Configs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoprovisioninggrouplaunchtemplateconfig">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Ecs.<wbr>Inputs.<wbr>Auto<wbr>Provisioning<wbr>Group<wbr>Launch<wbr>Template<wbr>Config<wbr>Args&gt;</a></span>
     </dt>
@@ -315,7 +376,9 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
 
     <dt class="property-required"
             title="Required">
-        <span>Launch<wbr>Template<wbr>Id</span>
+        <span id="launchtemplateid_csharp">
+<a href="#launchtemplateid_csharp" style="color: inherit; text-decoration: inherit;">Launch<wbr>Template<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -324,7 +387,9 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
 
     <dt class="property-required"
             title="Required">
-        <span>Total<wbr>Target<wbr>Capacity</span>
+        <span id="totaltargetcapacity_csharp">
+<a href="#totaltargetcapacity_csharp" style="color: inherit; text-decoration: inherit;">Total<wbr>Target<wbr>Capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -333,7 +398,9 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
-        <span>Auto<wbr>Provisioning<wbr>Group<wbr>Name</span>
+        <span id="autoprovisioninggroupname_csharp">
+<a href="#autoprovisioninggroupname_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Provisioning<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -341,7 +408,9 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
-        <span>Auto<wbr>Provisioning<wbr>Group<wbr>Type</span>
+        <span id="autoprovisioninggrouptype_csharp">
+<a href="#autoprovisioninggrouptype_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Provisioning<wbr>Group<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -349,7 +418,9 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
-        <span>Default<wbr>Target<wbr>Capacity<wbr>Type</span>
+        <span id="defaulttargetcapacitytype_csharp">
+<a href="#defaulttargetcapacitytype_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Target<wbr>Capacity<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -358,7 +429,9 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -367,7 +440,9 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
-        <span>Excess<wbr>Capacity<wbr>Termination<wbr>Policy</span>
+        <span id="excesscapacityterminationpolicy_csharp">
+<a href="#excesscapacityterminationpolicy_csharp" style="color: inherit; text-decoration: inherit;">Excess<wbr>Capacity<wbr>Termination<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -376,7 +451,9 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
-        <span>Launch<wbr>Template<wbr>Version</span>
+        <span id="launchtemplateversion_csharp">
+<a href="#launchtemplateversion_csharp" style="color: inherit; text-decoration: inherit;">Launch<wbr>Template<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -385,7 +462,9 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Spot<wbr>Price</span>
+        <span id="maxspotprice_csharp">
+<a href="#maxspotprice_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Spot<wbr>Price</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
@@ -394,7 +473,9 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
-        <span>Pay<wbr>As<wbr>You<wbr>Go<wbr>Allocation<wbr>Strategy</span>
+        <span id="payasyougoallocationstrategy_csharp">
+<a href="#payasyougoallocationstrategy_csharp" style="color: inherit; text-decoration: inherit;">Pay<wbr>As<wbr>You<wbr>Go<wbr>Allocation<wbr>Strategy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -403,7 +484,9 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
-        <span>Pay<wbr>As<wbr>You<wbr>Go<wbr>Target<wbr>Capacity</span>
+        <span id="payasyougotargetcapacity_csharp">
+<a href="#payasyougotargetcapacity_csharp" style="color: inherit; text-decoration: inherit;">Pay<wbr>As<wbr>You<wbr>Go<wbr>Target<wbr>Capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -412,7 +495,9 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
-        <span>Spot<wbr>Allocation<wbr>Strategy</span>
+        <span id="spotallocationstrategy_csharp">
+<a href="#spotallocationstrategy_csharp" style="color: inherit; text-decoration: inherit;">Spot<wbr>Allocation<wbr>Strategy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -421,7 +506,9 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
-        <span>Spot<wbr>Instance<wbr>Interruption<wbr>Behavior</span>
+        <span id="spotinstanceinterruptionbehavior_csharp">
+<a href="#spotinstanceinterruptionbehavior_csharp" style="color: inherit; text-decoration: inherit;">Spot<wbr>Instance<wbr>Interruption<wbr>Behavior</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -430,7 +517,9 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
-        <span>Spot<wbr>Instance<wbr>Pools<wbr>To<wbr>Use<wbr>Count</span>
+        <span id="spotinstancepoolstousecount_csharp">
+<a href="#spotinstancepoolstousecount_csharp" style="color: inherit; text-decoration: inherit;">Spot<wbr>Instance<wbr>Pools<wbr>To<wbr>Use<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -439,7 +528,9 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
-        <span>Spot<wbr>Target<wbr>Capacity</span>
+        <span id="spottargetcapacity_csharp">
+<a href="#spottargetcapacity_csharp" style="color: inherit; text-decoration: inherit;">Spot<wbr>Target<wbr>Capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -448,7 +539,9 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
-        <span>Terminate<wbr>Instances</span>
+        <span id="terminateinstances_csharp">
+<a href="#terminateinstances_csharp" style="color: inherit; text-decoration: inherit;">Terminate<wbr>Instances</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -457,7 +550,9 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
-        <span>Terminate<wbr>Instances<wbr>With<wbr>Expiration</span>
+        <span id="terminateinstanceswithexpiration_csharp">
+<a href="#terminateinstanceswithexpiration_csharp" style="color: inherit; text-decoration: inherit;">Terminate<wbr>Instances<wbr>With<wbr>Expiration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -466,7 +561,9 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
-        <span>Valid<wbr>From</span>
+        <span id="validfrom_csharp">
+<a href="#validfrom_csharp" style="color: inherit; text-decoration: inherit;">Valid<wbr>From</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -475,7 +572,9 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
-        <span>Valid<wbr>Until</span>
+        <span id="validuntil_csharp">
+<a href="#validuntil_csharp" style="color: inherit; text-decoration: inherit;">Valid<wbr>Until</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -491,7 +590,9 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
 
     <dt class="property-required"
             title="Required">
-        <span>Launch<wbr>Template<wbr>Configs</span>
+        <span id="launchtemplateconfigs_go">
+<a href="#launchtemplateconfigs_go" style="color: inherit; text-decoration: inherit;">Launch<wbr>Template<wbr>Configs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoprovisioninggrouplaunchtemplateconfig">[]Auto<wbr>Provisioning<wbr>Group<wbr>Launch<wbr>Template<wbr>Config</a></span>
     </dt>
@@ -500,7 +601,9 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
 
     <dt class="property-required"
             title="Required">
-        <span>Launch<wbr>Template<wbr>Id</span>
+        <span id="launchtemplateid_go">
+<a href="#launchtemplateid_go" style="color: inherit; text-decoration: inherit;">Launch<wbr>Template<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -509,7 +612,9 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
 
     <dt class="property-required"
             title="Required">
-        <span>Total<wbr>Target<wbr>Capacity</span>
+        <span id="totaltargetcapacity_go">
+<a href="#totaltargetcapacity_go" style="color: inherit; text-decoration: inherit;">Total<wbr>Target<wbr>Capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -518,7 +623,9 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
-        <span>Auto<wbr>Provisioning<wbr>Group<wbr>Name</span>
+        <span id="autoprovisioninggroupname_go">
+<a href="#autoprovisioninggroupname_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Provisioning<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -526,7 +633,9 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
-        <span>Auto<wbr>Provisioning<wbr>Group<wbr>Type</span>
+        <span id="autoprovisioninggrouptype_go">
+<a href="#autoprovisioninggrouptype_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Provisioning<wbr>Group<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -534,7 +643,9 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
-        <span>Default<wbr>Target<wbr>Capacity<wbr>Type</span>
+        <span id="defaulttargetcapacitytype_go">
+<a href="#defaulttargetcapacitytype_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Target<wbr>Capacity<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -543,7 +654,9 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -552,7 +665,9 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
-        <span>Excess<wbr>Capacity<wbr>Termination<wbr>Policy</span>
+        <span id="excesscapacityterminationpolicy_go">
+<a href="#excesscapacityterminationpolicy_go" style="color: inherit; text-decoration: inherit;">Excess<wbr>Capacity<wbr>Termination<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -561,7 +676,9 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
-        <span>Launch<wbr>Template<wbr>Version</span>
+        <span id="launchtemplateversion_go">
+<a href="#launchtemplateversion_go" style="color: inherit; text-decoration: inherit;">Launch<wbr>Template<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -570,7 +687,9 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Spot<wbr>Price</span>
+        <span id="maxspotprice_go">
+<a href="#maxspotprice_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Spot<wbr>Price</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
@@ -579,7 +698,9 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
-        <span>Pay<wbr>As<wbr>You<wbr>Go<wbr>Allocation<wbr>Strategy</span>
+        <span id="payasyougoallocationstrategy_go">
+<a href="#payasyougoallocationstrategy_go" style="color: inherit; text-decoration: inherit;">Pay<wbr>As<wbr>You<wbr>Go<wbr>Allocation<wbr>Strategy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -588,7 +709,9 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
-        <span>Pay<wbr>As<wbr>You<wbr>Go<wbr>Target<wbr>Capacity</span>
+        <span id="payasyougotargetcapacity_go">
+<a href="#payasyougotargetcapacity_go" style="color: inherit; text-decoration: inherit;">Pay<wbr>As<wbr>You<wbr>Go<wbr>Target<wbr>Capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -597,7 +720,9 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
-        <span>Spot<wbr>Allocation<wbr>Strategy</span>
+        <span id="spotallocationstrategy_go">
+<a href="#spotallocationstrategy_go" style="color: inherit; text-decoration: inherit;">Spot<wbr>Allocation<wbr>Strategy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -606,7 +731,9 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
-        <span>Spot<wbr>Instance<wbr>Interruption<wbr>Behavior</span>
+        <span id="spotinstanceinterruptionbehavior_go">
+<a href="#spotinstanceinterruptionbehavior_go" style="color: inherit; text-decoration: inherit;">Spot<wbr>Instance<wbr>Interruption<wbr>Behavior</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -615,7 +742,9 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
-        <span>Spot<wbr>Instance<wbr>Pools<wbr>To<wbr>Use<wbr>Count</span>
+        <span id="spotinstancepoolstousecount_go">
+<a href="#spotinstancepoolstousecount_go" style="color: inherit; text-decoration: inherit;">Spot<wbr>Instance<wbr>Pools<wbr>To<wbr>Use<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -624,7 +753,9 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
-        <span>Spot<wbr>Target<wbr>Capacity</span>
+        <span id="spottargetcapacity_go">
+<a href="#spottargetcapacity_go" style="color: inherit; text-decoration: inherit;">Spot<wbr>Target<wbr>Capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -633,7 +764,9 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
-        <span>Terminate<wbr>Instances</span>
+        <span id="terminateinstances_go">
+<a href="#terminateinstances_go" style="color: inherit; text-decoration: inherit;">Terminate<wbr>Instances</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -642,7 +775,9 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
-        <span>Terminate<wbr>Instances<wbr>With<wbr>Expiration</span>
+        <span id="terminateinstanceswithexpiration_go">
+<a href="#terminateinstanceswithexpiration_go" style="color: inherit; text-decoration: inherit;">Terminate<wbr>Instances<wbr>With<wbr>Expiration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -651,7 +786,9 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
-        <span>Valid<wbr>From</span>
+        <span id="validfrom_go">
+<a href="#validfrom_go" style="color: inherit; text-decoration: inherit;">Valid<wbr>From</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -660,7 +797,9 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
-        <span>Valid<wbr>Until</span>
+        <span id="validuntil_go">
+<a href="#validuntil_go" style="color: inherit; text-decoration: inherit;">Valid<wbr>Until</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -676,7 +815,9 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
 
     <dt class="property-required"
             title="Required">
-        <span>launch<wbr>Template<wbr>Configs</span>
+        <span id="launchtemplateconfigs_nodejs">
+<a href="#launchtemplateconfigs_nodejs" style="color: inherit; text-decoration: inherit;">launch<wbr>Template<wbr>Configs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoprovisioninggrouplaunchtemplateconfig">Auto<wbr>Provisioning<wbr>Group<wbr>Launch<wbr>Template<wbr>Config[]</a></span>
     </dt>
@@ -685,7 +826,9 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
 
     <dt class="property-required"
             title="Required">
-        <span>launch<wbr>Template<wbr>Id</span>
+        <span id="launchtemplateid_nodejs">
+<a href="#launchtemplateid_nodejs" style="color: inherit; text-decoration: inherit;">launch<wbr>Template<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -694,7 +837,9 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
 
     <dt class="property-required"
             title="Required">
-        <span>total<wbr>Target<wbr>Capacity</span>
+        <span id="totaltargetcapacity_nodejs">
+<a href="#totaltargetcapacity_nodejs" style="color: inherit; text-decoration: inherit;">total<wbr>Target<wbr>Capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -703,7 +848,9 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
-        <span>auto<wbr>Provisioning<wbr>Group<wbr>Name</span>
+        <span id="autoprovisioninggroupname_nodejs">
+<a href="#autoprovisioninggroupname_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Provisioning<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -711,7 +858,9 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
-        <span>auto<wbr>Provisioning<wbr>Group<wbr>Type</span>
+        <span id="autoprovisioninggrouptype_nodejs">
+<a href="#autoprovisioninggrouptype_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Provisioning<wbr>Group<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -719,7 +868,9 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
-        <span>default<wbr>Target<wbr>Capacity<wbr>Type</span>
+        <span id="defaulttargetcapacitytype_nodejs">
+<a href="#defaulttargetcapacitytype_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Target<wbr>Capacity<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -728,7 +879,9 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -737,7 +890,9 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
-        <span>excess<wbr>Capacity<wbr>Termination<wbr>Policy</span>
+        <span id="excesscapacityterminationpolicy_nodejs">
+<a href="#excesscapacityterminationpolicy_nodejs" style="color: inherit; text-decoration: inherit;">excess<wbr>Capacity<wbr>Termination<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -746,7 +901,9 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
-        <span>launch<wbr>Template<wbr>Version</span>
+        <span id="launchtemplateversion_nodejs">
+<a href="#launchtemplateversion_nodejs" style="color: inherit; text-decoration: inherit;">launch<wbr>Template<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -755,7 +912,9 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Spot<wbr>Price</span>
+        <span id="maxspotprice_nodejs">
+<a href="#maxspotprice_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Spot<wbr>Price</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
@@ -764,7 +923,9 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
-        <span>pay<wbr>As<wbr>You<wbr>Go<wbr>Allocation<wbr>Strategy</span>
+        <span id="payasyougoallocationstrategy_nodejs">
+<a href="#payasyougoallocationstrategy_nodejs" style="color: inherit; text-decoration: inherit;">pay<wbr>As<wbr>You<wbr>Go<wbr>Allocation<wbr>Strategy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -773,7 +934,9 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
-        <span>pay<wbr>As<wbr>You<wbr>Go<wbr>Target<wbr>Capacity</span>
+        <span id="payasyougotargetcapacity_nodejs">
+<a href="#payasyougotargetcapacity_nodejs" style="color: inherit; text-decoration: inherit;">pay<wbr>As<wbr>You<wbr>Go<wbr>Target<wbr>Capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -782,7 +945,9 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
-        <span>spot<wbr>Allocation<wbr>Strategy</span>
+        <span id="spotallocationstrategy_nodejs">
+<a href="#spotallocationstrategy_nodejs" style="color: inherit; text-decoration: inherit;">spot<wbr>Allocation<wbr>Strategy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -791,7 +956,9 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
-        <span>spot<wbr>Instance<wbr>Interruption<wbr>Behavior</span>
+        <span id="spotinstanceinterruptionbehavior_nodejs">
+<a href="#spotinstanceinterruptionbehavior_nodejs" style="color: inherit; text-decoration: inherit;">spot<wbr>Instance<wbr>Interruption<wbr>Behavior</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -800,7 +967,9 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
-        <span>spot<wbr>Instance<wbr>Pools<wbr>To<wbr>Use<wbr>Count</span>
+        <span id="spotinstancepoolstousecount_nodejs">
+<a href="#spotinstancepoolstousecount_nodejs" style="color: inherit; text-decoration: inherit;">spot<wbr>Instance<wbr>Pools<wbr>To<wbr>Use<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -809,7 +978,9 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
-        <span>spot<wbr>Target<wbr>Capacity</span>
+        <span id="spottargetcapacity_nodejs">
+<a href="#spottargetcapacity_nodejs" style="color: inherit; text-decoration: inherit;">spot<wbr>Target<wbr>Capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -818,7 +989,9 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
-        <span>terminate<wbr>Instances</span>
+        <span id="terminateinstances_nodejs">
+<a href="#terminateinstances_nodejs" style="color: inherit; text-decoration: inherit;">terminate<wbr>Instances</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -827,7 +1000,9 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
-        <span>terminate<wbr>Instances<wbr>With<wbr>Expiration</span>
+        <span id="terminateinstanceswithexpiration_nodejs">
+<a href="#terminateinstanceswithexpiration_nodejs" style="color: inherit; text-decoration: inherit;">terminate<wbr>Instances<wbr>With<wbr>Expiration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -836,7 +1011,9 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
-        <span>valid<wbr>From</span>
+        <span id="validfrom_nodejs">
+<a href="#validfrom_nodejs" style="color: inherit; text-decoration: inherit;">valid<wbr>From</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -845,7 +1022,9 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
-        <span>valid<wbr>Until</span>
+        <span id="validuntil_nodejs">
+<a href="#validuntil_nodejs" style="color: inherit; text-decoration: inherit;">valid<wbr>Until</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -861,7 +1040,9 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
 
     <dt class="property-required"
             title="Required">
-        <span>launch_<wbr>template_<wbr>configs</span>
+        <span id="launch_template_configs_python">
+<a href="#launch_template_configs_python" style="color: inherit; text-decoration: inherit;">launch_<wbr>template_<wbr>configs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoprovisioninggrouplaunchtemplateconfig">List[Auto<wbr>Provisioning<wbr>Group<wbr>Launch<wbr>Template<wbr>Config]</a></span>
     </dt>
@@ -870,7 +1051,9 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
 
     <dt class="property-required"
             title="Required">
-        <span>launch_<wbr>template_<wbr>id</span>
+        <span id="launch_template_id_python">
+<a href="#launch_template_id_python" style="color: inherit; text-decoration: inherit;">launch_<wbr>template_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -879,7 +1062,9 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
 
     <dt class="property-required"
             title="Required">
-        <span>total_<wbr>target_<wbr>capacity</span>
+        <span id="total_target_capacity_python">
+<a href="#total_target_capacity_python" style="color: inherit; text-decoration: inherit;">total_<wbr>target_<wbr>capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -888,7 +1073,9 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
-        <span>auto_<wbr>provisioning_<wbr>group_<wbr>name</span>
+        <span id="auto_provisioning_group_name_python">
+<a href="#auto_provisioning_group_name_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>provisioning_<wbr>group_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -896,7 +1083,9 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
-        <span>auto_<wbr>provisioning_<wbr>group_<wbr>type</span>
+        <span id="auto_provisioning_group_type_python">
+<a href="#auto_provisioning_group_type_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>provisioning_<wbr>group_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -904,7 +1093,9 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
-        <span>default_<wbr>target_<wbr>capacity_<wbr>type</span>
+        <span id="default_target_capacity_type_python">
+<a href="#default_target_capacity_type_python" style="color: inherit; text-decoration: inherit;">default_<wbr>target_<wbr>capacity_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -913,7 +1104,9 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -922,7 +1115,9 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
-        <span>excess_<wbr>capacity_<wbr>termination_<wbr>policy</span>
+        <span id="excess_capacity_termination_policy_python">
+<a href="#excess_capacity_termination_policy_python" style="color: inherit; text-decoration: inherit;">excess_<wbr>capacity_<wbr>termination_<wbr>policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -931,7 +1126,9 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
-        <span>launch_<wbr>template_<wbr>version</span>
+        <span id="launch_template_version_python">
+<a href="#launch_template_version_python" style="color: inherit; text-decoration: inherit;">launch_<wbr>template_<wbr>version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -940,7 +1137,9 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
-        <span>max_<wbr>spot_<wbr>price</span>
+        <span id="max_spot_price_python">
+<a href="#max_spot_price_python" style="color: inherit; text-decoration: inherit;">max_<wbr>spot_<wbr>price</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -949,7 +1148,9 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
-        <span>pay_<wbr>as_<wbr>you_<wbr>go_<wbr>allocation_<wbr>strategy</span>
+        <span id="pay_as_you_go_allocation_strategy_python">
+<a href="#pay_as_you_go_allocation_strategy_python" style="color: inherit; text-decoration: inherit;">pay_<wbr>as_<wbr>you_<wbr>go_<wbr>allocation_<wbr>strategy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -958,7 +1159,9 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
-        <span>pay_<wbr>as_<wbr>you_<wbr>go_<wbr>target_<wbr>capacity</span>
+        <span id="pay_as_you_go_target_capacity_python">
+<a href="#pay_as_you_go_target_capacity_python" style="color: inherit; text-decoration: inherit;">pay_<wbr>as_<wbr>you_<wbr>go_<wbr>target_<wbr>capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -967,7 +1170,9 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
-        <span>spot_<wbr>allocation_<wbr>strategy</span>
+        <span id="spot_allocation_strategy_python">
+<a href="#spot_allocation_strategy_python" style="color: inherit; text-decoration: inherit;">spot_<wbr>allocation_<wbr>strategy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -976,7 +1181,9 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
-        <span>spot_<wbr>instance_<wbr>interruption_<wbr>behavior</span>
+        <span id="spot_instance_interruption_behavior_python">
+<a href="#spot_instance_interruption_behavior_python" style="color: inherit; text-decoration: inherit;">spot_<wbr>instance_<wbr>interruption_<wbr>behavior</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -985,7 +1192,9 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
-        <span>spot_<wbr>instance_<wbr>pools_<wbr>to_<wbr>use_<wbr>count</span>
+        <span id="spot_instance_pools_to_use_count_python">
+<a href="#spot_instance_pools_to_use_count_python" style="color: inherit; text-decoration: inherit;">spot_<wbr>instance_<wbr>pools_<wbr>to_<wbr>use_<wbr>count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -994,7 +1203,9 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
-        <span>spot_<wbr>target_<wbr>capacity</span>
+        <span id="spot_target_capacity_python">
+<a href="#spot_target_capacity_python" style="color: inherit; text-decoration: inherit;">spot_<wbr>target_<wbr>capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1003,7 +1214,9 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
-        <span>terminate_<wbr>instances</span>
+        <span id="terminate_instances_python">
+<a href="#terminate_instances_python" style="color: inherit; text-decoration: inherit;">terminate_<wbr>instances</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1012,7 +1225,9 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
-        <span>terminate_<wbr>instances_<wbr>with_<wbr>expiration</span>
+        <span id="terminate_instances_with_expiration_python">
+<a href="#terminate_instances_with_expiration_python" style="color: inherit; text-decoration: inherit;">terminate_<wbr>instances_<wbr>with_<wbr>expiration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1021,7 +1236,9 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
-        <span>valid_<wbr>from</span>
+        <span id="valid_from_python">
+<a href="#valid_from_python" style="color: inherit; text-decoration: inherit;">valid_<wbr>from</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1030,7 +1247,9 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
-        <span>valid_<wbr>until</span>
+        <span id="valid_until_python">
+<a href="#valid_until_python" style="color: inherit; text-decoration: inherit;">valid_<wbr>until</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1057,7 +1276,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1072,7 +1293,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1087,7 +1310,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1102,7 +1327,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1243,7 +1470,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Auto<wbr>Provisioning<wbr>Group<wbr>Name</span>
+        <span id="state_autoprovisioninggroupname_csharp">
+<a href="#state_autoprovisioninggroupname_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Provisioning<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1251,7 +1480,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Auto<wbr>Provisioning<wbr>Group<wbr>Type</span>
+        <span id="state_autoprovisioninggrouptype_csharp">
+<a href="#state_autoprovisioninggrouptype_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Provisioning<wbr>Group<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1259,7 +1490,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Default<wbr>Target<wbr>Capacity<wbr>Type</span>
+        <span id="state_defaulttargetcapacitytype_csharp">
+<a href="#state_defaulttargetcapacitytype_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Target<wbr>Capacity<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1268,7 +1501,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="state_description_csharp">
+<a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1277,7 +1512,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Excess<wbr>Capacity<wbr>Termination<wbr>Policy</span>
+        <span id="state_excesscapacityterminationpolicy_csharp">
+<a href="#state_excesscapacityterminationpolicy_csharp" style="color: inherit; text-decoration: inherit;">Excess<wbr>Capacity<wbr>Termination<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1286,7 +1523,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Launch<wbr>Template<wbr>Configs</span>
+        <span id="state_launchtemplateconfigs_csharp">
+<a href="#state_launchtemplateconfigs_csharp" style="color: inherit; text-decoration: inherit;">Launch<wbr>Template<wbr>Configs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoprovisioninggrouplaunchtemplateconfig">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Ecs.<wbr>Inputs.<wbr>Auto<wbr>Provisioning<wbr>Group<wbr>Launch<wbr>Template<wbr>Config<wbr>Args&gt;</a></span>
     </dt>
@@ -1295,7 +1534,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Launch<wbr>Template<wbr>Id</span>
+        <span id="state_launchtemplateid_csharp">
+<a href="#state_launchtemplateid_csharp" style="color: inherit; text-decoration: inherit;">Launch<wbr>Template<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1304,7 +1545,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Launch<wbr>Template<wbr>Version</span>
+        <span id="state_launchtemplateversion_csharp">
+<a href="#state_launchtemplateversion_csharp" style="color: inherit; text-decoration: inherit;">Launch<wbr>Template<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1313,7 +1556,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Spot<wbr>Price</span>
+        <span id="state_maxspotprice_csharp">
+<a href="#state_maxspotprice_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Spot<wbr>Price</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
@@ -1322,7 +1567,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Pay<wbr>As<wbr>You<wbr>Go<wbr>Allocation<wbr>Strategy</span>
+        <span id="state_payasyougoallocationstrategy_csharp">
+<a href="#state_payasyougoallocationstrategy_csharp" style="color: inherit; text-decoration: inherit;">Pay<wbr>As<wbr>You<wbr>Go<wbr>Allocation<wbr>Strategy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1331,7 +1578,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Pay<wbr>As<wbr>You<wbr>Go<wbr>Target<wbr>Capacity</span>
+        <span id="state_payasyougotargetcapacity_csharp">
+<a href="#state_payasyougotargetcapacity_csharp" style="color: inherit; text-decoration: inherit;">Pay<wbr>As<wbr>You<wbr>Go<wbr>Target<wbr>Capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1340,7 +1589,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Spot<wbr>Allocation<wbr>Strategy</span>
+        <span id="state_spotallocationstrategy_csharp">
+<a href="#state_spotallocationstrategy_csharp" style="color: inherit; text-decoration: inherit;">Spot<wbr>Allocation<wbr>Strategy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1349,7 +1600,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Spot<wbr>Instance<wbr>Interruption<wbr>Behavior</span>
+        <span id="state_spotinstanceinterruptionbehavior_csharp">
+<a href="#state_spotinstanceinterruptionbehavior_csharp" style="color: inherit; text-decoration: inherit;">Spot<wbr>Instance<wbr>Interruption<wbr>Behavior</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1358,7 +1611,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Spot<wbr>Instance<wbr>Pools<wbr>To<wbr>Use<wbr>Count</span>
+        <span id="state_spotinstancepoolstousecount_csharp">
+<a href="#state_spotinstancepoolstousecount_csharp" style="color: inherit; text-decoration: inherit;">Spot<wbr>Instance<wbr>Pools<wbr>To<wbr>Use<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1367,7 +1622,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Spot<wbr>Target<wbr>Capacity</span>
+        <span id="state_spottargetcapacity_csharp">
+<a href="#state_spottargetcapacity_csharp" style="color: inherit; text-decoration: inherit;">Spot<wbr>Target<wbr>Capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1376,7 +1633,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Terminate<wbr>Instances</span>
+        <span id="state_terminateinstances_csharp">
+<a href="#state_terminateinstances_csharp" style="color: inherit; text-decoration: inherit;">Terminate<wbr>Instances</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1385,7 +1644,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Terminate<wbr>Instances<wbr>With<wbr>Expiration</span>
+        <span id="state_terminateinstanceswithexpiration_csharp">
+<a href="#state_terminateinstanceswithexpiration_csharp" style="color: inherit; text-decoration: inherit;">Terminate<wbr>Instances<wbr>With<wbr>Expiration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1394,7 +1655,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Total<wbr>Target<wbr>Capacity</span>
+        <span id="state_totaltargetcapacity_csharp">
+<a href="#state_totaltargetcapacity_csharp" style="color: inherit; text-decoration: inherit;">Total<wbr>Target<wbr>Capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1403,7 +1666,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Valid<wbr>From</span>
+        <span id="state_validfrom_csharp">
+<a href="#state_validfrom_csharp" style="color: inherit; text-decoration: inherit;">Valid<wbr>From</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1412,7 +1677,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Valid<wbr>Until</span>
+        <span id="state_validuntil_csharp">
+<a href="#state_validuntil_csharp" style="color: inherit; text-decoration: inherit;">Valid<wbr>Until</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1428,7 +1695,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Auto<wbr>Provisioning<wbr>Group<wbr>Name</span>
+        <span id="state_autoprovisioninggroupname_go">
+<a href="#state_autoprovisioninggroupname_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Provisioning<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1436,7 +1705,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Auto<wbr>Provisioning<wbr>Group<wbr>Type</span>
+        <span id="state_autoprovisioninggrouptype_go">
+<a href="#state_autoprovisioninggrouptype_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Provisioning<wbr>Group<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1444,7 +1715,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Default<wbr>Target<wbr>Capacity<wbr>Type</span>
+        <span id="state_defaulttargetcapacitytype_go">
+<a href="#state_defaulttargetcapacitytype_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Target<wbr>Capacity<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1453,7 +1726,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="state_description_go">
+<a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1462,7 +1737,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Excess<wbr>Capacity<wbr>Termination<wbr>Policy</span>
+        <span id="state_excesscapacityterminationpolicy_go">
+<a href="#state_excesscapacityterminationpolicy_go" style="color: inherit; text-decoration: inherit;">Excess<wbr>Capacity<wbr>Termination<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1471,7 +1748,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Launch<wbr>Template<wbr>Configs</span>
+        <span id="state_launchtemplateconfigs_go">
+<a href="#state_launchtemplateconfigs_go" style="color: inherit; text-decoration: inherit;">Launch<wbr>Template<wbr>Configs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoprovisioninggrouplaunchtemplateconfig">[]Auto<wbr>Provisioning<wbr>Group<wbr>Launch<wbr>Template<wbr>Config</a></span>
     </dt>
@@ -1480,7 +1759,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Launch<wbr>Template<wbr>Id</span>
+        <span id="state_launchtemplateid_go">
+<a href="#state_launchtemplateid_go" style="color: inherit; text-decoration: inherit;">Launch<wbr>Template<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1489,7 +1770,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Launch<wbr>Template<wbr>Version</span>
+        <span id="state_launchtemplateversion_go">
+<a href="#state_launchtemplateversion_go" style="color: inherit; text-decoration: inherit;">Launch<wbr>Template<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1498,7 +1781,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Spot<wbr>Price</span>
+        <span id="state_maxspotprice_go">
+<a href="#state_maxspotprice_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Spot<wbr>Price</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
@@ -1507,7 +1792,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Pay<wbr>As<wbr>You<wbr>Go<wbr>Allocation<wbr>Strategy</span>
+        <span id="state_payasyougoallocationstrategy_go">
+<a href="#state_payasyougoallocationstrategy_go" style="color: inherit; text-decoration: inherit;">Pay<wbr>As<wbr>You<wbr>Go<wbr>Allocation<wbr>Strategy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1516,7 +1803,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Pay<wbr>As<wbr>You<wbr>Go<wbr>Target<wbr>Capacity</span>
+        <span id="state_payasyougotargetcapacity_go">
+<a href="#state_payasyougotargetcapacity_go" style="color: inherit; text-decoration: inherit;">Pay<wbr>As<wbr>You<wbr>Go<wbr>Target<wbr>Capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1525,7 +1814,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Spot<wbr>Allocation<wbr>Strategy</span>
+        <span id="state_spotallocationstrategy_go">
+<a href="#state_spotallocationstrategy_go" style="color: inherit; text-decoration: inherit;">Spot<wbr>Allocation<wbr>Strategy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1534,7 +1825,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Spot<wbr>Instance<wbr>Interruption<wbr>Behavior</span>
+        <span id="state_spotinstanceinterruptionbehavior_go">
+<a href="#state_spotinstanceinterruptionbehavior_go" style="color: inherit; text-decoration: inherit;">Spot<wbr>Instance<wbr>Interruption<wbr>Behavior</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1543,7 +1836,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Spot<wbr>Instance<wbr>Pools<wbr>To<wbr>Use<wbr>Count</span>
+        <span id="state_spotinstancepoolstousecount_go">
+<a href="#state_spotinstancepoolstousecount_go" style="color: inherit; text-decoration: inherit;">Spot<wbr>Instance<wbr>Pools<wbr>To<wbr>Use<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1552,7 +1847,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Spot<wbr>Target<wbr>Capacity</span>
+        <span id="state_spottargetcapacity_go">
+<a href="#state_spottargetcapacity_go" style="color: inherit; text-decoration: inherit;">Spot<wbr>Target<wbr>Capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1561,7 +1858,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Terminate<wbr>Instances</span>
+        <span id="state_terminateinstances_go">
+<a href="#state_terminateinstances_go" style="color: inherit; text-decoration: inherit;">Terminate<wbr>Instances</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1570,7 +1869,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Terminate<wbr>Instances<wbr>With<wbr>Expiration</span>
+        <span id="state_terminateinstanceswithexpiration_go">
+<a href="#state_terminateinstanceswithexpiration_go" style="color: inherit; text-decoration: inherit;">Terminate<wbr>Instances<wbr>With<wbr>Expiration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1579,7 +1880,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Total<wbr>Target<wbr>Capacity</span>
+        <span id="state_totaltargetcapacity_go">
+<a href="#state_totaltargetcapacity_go" style="color: inherit; text-decoration: inherit;">Total<wbr>Target<wbr>Capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1588,7 +1891,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Valid<wbr>From</span>
+        <span id="state_validfrom_go">
+<a href="#state_validfrom_go" style="color: inherit; text-decoration: inherit;">Valid<wbr>From</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1597,7 +1902,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Valid<wbr>Until</span>
+        <span id="state_validuntil_go">
+<a href="#state_validuntil_go" style="color: inherit; text-decoration: inherit;">Valid<wbr>Until</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1613,7 +1920,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>auto<wbr>Provisioning<wbr>Group<wbr>Name</span>
+        <span id="state_autoprovisioninggroupname_nodejs">
+<a href="#state_autoprovisioninggroupname_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Provisioning<wbr>Group<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1621,7 +1930,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>auto<wbr>Provisioning<wbr>Group<wbr>Type</span>
+        <span id="state_autoprovisioninggrouptype_nodejs">
+<a href="#state_autoprovisioninggrouptype_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Provisioning<wbr>Group<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1629,7 +1940,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>default<wbr>Target<wbr>Capacity<wbr>Type</span>
+        <span id="state_defaulttargetcapacitytype_nodejs">
+<a href="#state_defaulttargetcapacitytype_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Target<wbr>Capacity<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1638,7 +1951,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="state_description_nodejs">
+<a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1647,7 +1962,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>excess<wbr>Capacity<wbr>Termination<wbr>Policy</span>
+        <span id="state_excesscapacityterminationpolicy_nodejs">
+<a href="#state_excesscapacityterminationpolicy_nodejs" style="color: inherit; text-decoration: inherit;">excess<wbr>Capacity<wbr>Termination<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1656,7 +1973,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>launch<wbr>Template<wbr>Configs</span>
+        <span id="state_launchtemplateconfigs_nodejs">
+<a href="#state_launchtemplateconfigs_nodejs" style="color: inherit; text-decoration: inherit;">launch<wbr>Template<wbr>Configs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoprovisioninggrouplaunchtemplateconfig">Auto<wbr>Provisioning<wbr>Group<wbr>Launch<wbr>Template<wbr>Config[]</a></span>
     </dt>
@@ -1665,7 +1984,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>launch<wbr>Template<wbr>Id</span>
+        <span id="state_launchtemplateid_nodejs">
+<a href="#state_launchtemplateid_nodejs" style="color: inherit; text-decoration: inherit;">launch<wbr>Template<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1674,7 +1995,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>launch<wbr>Template<wbr>Version</span>
+        <span id="state_launchtemplateversion_nodejs">
+<a href="#state_launchtemplateversion_nodejs" style="color: inherit; text-decoration: inherit;">launch<wbr>Template<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1683,7 +2006,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Spot<wbr>Price</span>
+        <span id="state_maxspotprice_nodejs">
+<a href="#state_maxspotprice_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Spot<wbr>Price</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
@@ -1692,7 +2017,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>pay<wbr>As<wbr>You<wbr>Go<wbr>Allocation<wbr>Strategy</span>
+        <span id="state_payasyougoallocationstrategy_nodejs">
+<a href="#state_payasyougoallocationstrategy_nodejs" style="color: inherit; text-decoration: inherit;">pay<wbr>As<wbr>You<wbr>Go<wbr>Allocation<wbr>Strategy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1701,7 +2028,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>pay<wbr>As<wbr>You<wbr>Go<wbr>Target<wbr>Capacity</span>
+        <span id="state_payasyougotargetcapacity_nodejs">
+<a href="#state_payasyougotargetcapacity_nodejs" style="color: inherit; text-decoration: inherit;">pay<wbr>As<wbr>You<wbr>Go<wbr>Target<wbr>Capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1710,7 +2039,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>spot<wbr>Allocation<wbr>Strategy</span>
+        <span id="state_spotallocationstrategy_nodejs">
+<a href="#state_spotallocationstrategy_nodejs" style="color: inherit; text-decoration: inherit;">spot<wbr>Allocation<wbr>Strategy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1719,7 +2050,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>spot<wbr>Instance<wbr>Interruption<wbr>Behavior</span>
+        <span id="state_spotinstanceinterruptionbehavior_nodejs">
+<a href="#state_spotinstanceinterruptionbehavior_nodejs" style="color: inherit; text-decoration: inherit;">spot<wbr>Instance<wbr>Interruption<wbr>Behavior</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1728,7 +2061,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>spot<wbr>Instance<wbr>Pools<wbr>To<wbr>Use<wbr>Count</span>
+        <span id="state_spotinstancepoolstousecount_nodejs">
+<a href="#state_spotinstancepoolstousecount_nodejs" style="color: inherit; text-decoration: inherit;">spot<wbr>Instance<wbr>Pools<wbr>To<wbr>Use<wbr>Count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1737,7 +2072,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>spot<wbr>Target<wbr>Capacity</span>
+        <span id="state_spottargetcapacity_nodejs">
+<a href="#state_spottargetcapacity_nodejs" style="color: inherit; text-decoration: inherit;">spot<wbr>Target<wbr>Capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1746,7 +2083,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>terminate<wbr>Instances</span>
+        <span id="state_terminateinstances_nodejs">
+<a href="#state_terminateinstances_nodejs" style="color: inherit; text-decoration: inherit;">terminate<wbr>Instances</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1755,7 +2094,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>terminate<wbr>Instances<wbr>With<wbr>Expiration</span>
+        <span id="state_terminateinstanceswithexpiration_nodejs">
+<a href="#state_terminateinstanceswithexpiration_nodejs" style="color: inherit; text-decoration: inherit;">terminate<wbr>Instances<wbr>With<wbr>Expiration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1764,7 +2105,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>total<wbr>Target<wbr>Capacity</span>
+        <span id="state_totaltargetcapacity_nodejs">
+<a href="#state_totaltargetcapacity_nodejs" style="color: inherit; text-decoration: inherit;">total<wbr>Target<wbr>Capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1773,7 +2116,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>valid<wbr>From</span>
+        <span id="state_validfrom_nodejs">
+<a href="#state_validfrom_nodejs" style="color: inherit; text-decoration: inherit;">valid<wbr>From</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1782,7 +2127,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>valid<wbr>Until</span>
+        <span id="state_validuntil_nodejs">
+<a href="#state_validuntil_nodejs" style="color: inherit; text-decoration: inherit;">valid<wbr>Until</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1798,7 +2145,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>auto_<wbr>provisioning_<wbr>group_<wbr>name</span>
+        <span id="state_auto_provisioning_group_name_python">
+<a href="#state_auto_provisioning_group_name_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>provisioning_<wbr>group_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1806,7 +2155,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>auto_<wbr>provisioning_<wbr>group_<wbr>type</span>
+        <span id="state_auto_provisioning_group_type_python">
+<a href="#state_auto_provisioning_group_type_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>provisioning_<wbr>group_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1814,7 +2165,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>default_<wbr>target_<wbr>capacity_<wbr>type</span>
+        <span id="state_default_target_capacity_type_python">
+<a href="#state_default_target_capacity_type_python" style="color: inherit; text-decoration: inherit;">default_<wbr>target_<wbr>capacity_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1823,7 +2176,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="state_description_python">
+<a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1832,7 +2187,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>excess_<wbr>capacity_<wbr>termination_<wbr>policy</span>
+        <span id="state_excess_capacity_termination_policy_python">
+<a href="#state_excess_capacity_termination_policy_python" style="color: inherit; text-decoration: inherit;">excess_<wbr>capacity_<wbr>termination_<wbr>policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1841,7 +2198,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>launch_<wbr>template_<wbr>configs</span>
+        <span id="state_launch_template_configs_python">
+<a href="#state_launch_template_configs_python" style="color: inherit; text-decoration: inherit;">launch_<wbr>template_<wbr>configs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoprovisioninggrouplaunchtemplateconfig">List[Auto<wbr>Provisioning<wbr>Group<wbr>Launch<wbr>Template<wbr>Config]</a></span>
     </dt>
@@ -1850,7 +2209,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>launch_<wbr>template_<wbr>id</span>
+        <span id="state_launch_template_id_python">
+<a href="#state_launch_template_id_python" style="color: inherit; text-decoration: inherit;">launch_<wbr>template_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1859,7 +2220,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>launch_<wbr>template_<wbr>version</span>
+        <span id="state_launch_template_version_python">
+<a href="#state_launch_template_version_python" style="color: inherit; text-decoration: inherit;">launch_<wbr>template_<wbr>version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1868,7 +2231,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>max_<wbr>spot_<wbr>price</span>
+        <span id="state_max_spot_price_python">
+<a href="#state_max_spot_price_python" style="color: inherit; text-decoration: inherit;">max_<wbr>spot_<wbr>price</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1877,7 +2242,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>pay_<wbr>as_<wbr>you_<wbr>go_<wbr>allocation_<wbr>strategy</span>
+        <span id="state_pay_as_you_go_allocation_strategy_python">
+<a href="#state_pay_as_you_go_allocation_strategy_python" style="color: inherit; text-decoration: inherit;">pay_<wbr>as_<wbr>you_<wbr>go_<wbr>allocation_<wbr>strategy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1886,7 +2253,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>pay_<wbr>as_<wbr>you_<wbr>go_<wbr>target_<wbr>capacity</span>
+        <span id="state_pay_as_you_go_target_capacity_python">
+<a href="#state_pay_as_you_go_target_capacity_python" style="color: inherit; text-decoration: inherit;">pay_<wbr>as_<wbr>you_<wbr>go_<wbr>target_<wbr>capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1895,7 +2264,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>spot_<wbr>allocation_<wbr>strategy</span>
+        <span id="state_spot_allocation_strategy_python">
+<a href="#state_spot_allocation_strategy_python" style="color: inherit; text-decoration: inherit;">spot_<wbr>allocation_<wbr>strategy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1904,7 +2275,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>spot_<wbr>instance_<wbr>interruption_<wbr>behavior</span>
+        <span id="state_spot_instance_interruption_behavior_python">
+<a href="#state_spot_instance_interruption_behavior_python" style="color: inherit; text-decoration: inherit;">spot_<wbr>instance_<wbr>interruption_<wbr>behavior</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1913,7 +2286,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>spot_<wbr>instance_<wbr>pools_<wbr>to_<wbr>use_<wbr>count</span>
+        <span id="state_spot_instance_pools_to_use_count_python">
+<a href="#state_spot_instance_pools_to_use_count_python" style="color: inherit; text-decoration: inherit;">spot_<wbr>instance_<wbr>pools_<wbr>to_<wbr>use_<wbr>count</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1922,7 +2297,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>spot_<wbr>target_<wbr>capacity</span>
+        <span id="state_spot_target_capacity_python">
+<a href="#state_spot_target_capacity_python" style="color: inherit; text-decoration: inherit;">spot_<wbr>target_<wbr>capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1931,7 +2308,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>terminate_<wbr>instances</span>
+        <span id="state_terminate_instances_python">
+<a href="#state_terminate_instances_python" style="color: inherit; text-decoration: inherit;">terminate_<wbr>instances</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1940,7 +2319,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>terminate_<wbr>instances_<wbr>with_<wbr>expiration</span>
+        <span id="state_terminate_instances_with_expiration_python">
+<a href="#state_terminate_instances_with_expiration_python" style="color: inherit; text-decoration: inherit;">terminate_<wbr>instances_<wbr>with_<wbr>expiration</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1949,7 +2330,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>total_<wbr>target_<wbr>capacity</span>
+        <span id="state_total_target_capacity_python">
+<a href="#state_total_target_capacity_python" style="color: inherit; text-decoration: inherit;">total_<wbr>target_<wbr>capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1958,7 +2341,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>valid_<wbr>from</span>
+        <span id="state_valid_from_python">
+<a href="#state_valid_from_python" style="color: inherit; text-decoration: inherit;">valid_<wbr>from</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1967,7 +2352,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>valid_<wbr>until</span>
+        <span id="state_valid_until_python">
+<a href="#state_valid_until_python" style="color: inherit; text-decoration: inherit;">valid_<wbr>until</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2009,7 +2396,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Max<wbr>Price</span>
+        <span id="maxprice_csharp">
+<a href="#maxprice_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Price</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2017,7 +2406,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Vswitch<wbr>Id</span>
+        <span id="vswitchid_csharp">
+<a href="#vswitchid_csharp" style="color: inherit; text-decoration: inherit;">Vswitch<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2025,7 +2416,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Instance<wbr>Type</span>
+        <span id="instancetype_csharp">
+<a href="#instancetype_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2033,7 +2426,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Priority</span>
+        <span id="priority_csharp">
+<a href="#priority_csharp" style="color: inherit; text-decoration: inherit;">Priority</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2041,7 +2436,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Weighted<wbr>Capacity</span>
+        <span id="weightedcapacity_csharp">
+<a href="#weightedcapacity_csharp" style="color: inherit; text-decoration: inherit;">Weighted<wbr>Capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2056,7 +2453,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Max<wbr>Price</span>
+        <span id="maxprice_go">
+<a href="#maxprice_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Price</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2064,7 +2463,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Vswitch<wbr>Id</span>
+        <span id="vswitchid_go">
+<a href="#vswitchid_go" style="color: inherit; text-decoration: inherit;">Vswitch<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2072,7 +2473,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Instance<wbr>Type</span>
+        <span id="instancetype_go">
+<a href="#instancetype_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2080,7 +2483,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Priority</span>
+        <span id="priority_go">
+<a href="#priority_go" style="color: inherit; text-decoration: inherit;">Priority</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2088,7 +2493,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Weighted<wbr>Capacity</span>
+        <span id="weightedcapacity_go">
+<a href="#weightedcapacity_go" style="color: inherit; text-decoration: inherit;">Weighted<wbr>Capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2103,7 +2510,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>max<wbr>Price</span>
+        <span id="maxprice_nodejs">
+<a href="#maxprice_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Price</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2111,7 +2520,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>vswitch<wbr>Id</span>
+        <span id="vswitchid_nodejs">
+<a href="#vswitchid_nodejs" style="color: inherit; text-decoration: inherit;">vswitch<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2119,7 +2530,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>instance<wbr>Type</span>
+        <span id="instancetype_nodejs">
+<a href="#instancetype_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2127,7 +2540,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>priority</span>
+        <span id="priority_nodejs">
+<a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2135,7 +2550,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>weighted<wbr>Capacity</span>
+        <span id="weightedcapacity_nodejs">
+<a href="#weightedcapacity_nodejs" style="color: inherit; text-decoration: inherit;">weighted<wbr>Capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2150,7 +2567,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>max<wbr>Price</span>
+        <span id="maxprice_python">
+<a href="#maxprice_python" style="color: inherit; text-decoration: inherit;">max<wbr>Price</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2158,7 +2577,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>vswitch_<wbr>id</span>
+        <span id="vswitch_id_python">
+<a href="#vswitch_id_python" style="color: inherit; text-decoration: inherit;">vswitch_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2166,7 +2587,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>instance_<wbr>type</span>
+        <span id="instance_type_python">
+<a href="#instance_type_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2174,7 +2597,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>priority</span>
+        <span id="priority_python">
+<a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2182,7 +2607,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>weighted<wbr>Capacity</span>
+        <span id="weightedcapacity_python">
+<a href="#weightedcapacity_python" style="color: inherit; text-decoration: inherit;">weighted<wbr>Capacity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

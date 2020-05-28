@@ -44,7 +44,141 @@ The servers mapping supports the following:
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using System.Collections.Generic;
+using System.Linq;
+using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var defaultZones = Output.Create(AliCloud.GetZones.InvokeAsync(new AliCloud.GetZonesArgs
+        {
+            AvailableDiskCategory = "cloud_efficiency",
+            AvailableResourceCreation = "VSwitch",
+        }));
+        var defaultInstanceTypes = defaultZones.Apply(defaultZones => Output.Create(AliCloud.Ecs.GetInstanceTypes.InvokeAsync(new AliCloud.Ecs.GetInstanceTypesArgs
+        {
+            AvailabilityZone = defaultZones.Zones[0].Id,
+            EniAmount = 2,
+        })));
+        var image = Output.Create(AliCloud.Ecs.GetImages.InvokeAsync(new AliCloud.Ecs.GetImagesArgs
+        {
+            MostRecent = true,
+            NameRegex = "^ubuntu_18.*64",
+            Owners = "system",
+        }));
+        var config = new Config();
+        var name = config.Get("name") ?? "tf-testAccSlbMasterSlaveServerGroupVpc";
+        var number = config.Get("number") ?? "1";
+        var mainNetwork = new AliCloud.Vpc.Network("mainNetwork", new AliCloud.Vpc.NetworkArgs
+        {
+            CidrBlock = "172.16.0.0/16",
+        });
+        var mainSwitch = new AliCloud.Vpc.Switch("mainSwitch", new AliCloud.Vpc.SwitchArgs
+        {
+            AvailabilityZone = defaultZones.Apply(defaultZones => defaultZones.Zones[0].Id),
+            CidrBlock = "172.16.0.0/16",
+            VpcId = mainNetwork.Id,
+        });
+        var groupSecurityGroup = new AliCloud.Ecs.SecurityGroup("groupSecurityGroup", new AliCloud.Ecs.SecurityGroupArgs
+        {
+            VpcId = mainNetwork.Id,
+        });
+        var instanceInstance = new List<AliCloud.Ecs.Instance>();
+        for (var rangeIndex = 0; rangeIndex < 2; rangeIndex++)
+        {
+            var range = new { Value = rangeIndex };
+            instanceInstance.Add(new AliCloud.Ecs.Instance($"instanceInstance-{range.Value}", new AliCloud.Ecs.InstanceArgs
+            {
+                AvailabilityZone = defaultZones.Apply(defaultZones => defaultZones.Zones[0].Id),
+                ImageId = image.Apply(image => image.Images[0].Id),
+                InstanceChargeType = "PostPaid",
+                InstanceName = name,
+                InstanceType = defaultInstanceTypes.Apply(defaultInstanceTypes => defaultInstanceTypes.InstanceTypes[0].Id),
+                InternetChargeType = "PayByTraffic",
+                InternetMaxBandwidthOut = "10",
+                SecurityGroups = 
+                {
+                    groupSecurityGroup.Id,
+                },
+                SystemDiskCategory = "cloud_efficiency",
+                VswitchId = mainSwitch.Id,
+            }));
+        }
+        var instanceLoadBalancer = new AliCloud.Slb.LoadBalancer("instanceLoadBalancer", new AliCloud.Slb.LoadBalancerArgs
+        {
+            Specification = "slb.s2.small",
+            VswitchId = mainSwitch.Id,
+        });
+        var defaultNetworkInterface = new List<AliCloud.Vpc.NetworkInterface>();
+        for (var rangeIndex = 0; rangeIndex < number; rangeIndex++)
+        {
+            var range = new { Value = rangeIndex };
+            defaultNetworkInterface.Add(new AliCloud.Vpc.NetworkInterface($"defaultNetworkInterface-{range.Value}", new AliCloud.Vpc.NetworkInterfaceArgs
+            {
+                SecurityGroups = 
+                {
+                    groupSecurityGroup.Id,
+                },
+                VswitchId = mainSwitch.Id,
+            }));
+        }
+        var defaultNetworkInterfaceAttachment = new List<AliCloud.Vpc.NetworkInterfaceAttachment>();
+        for (var rangeIndex = 0; rangeIndex < number; rangeIndex++)
+        {
+            var range = new { Value = rangeIndex };
+            defaultNetworkInterfaceAttachment.Add(new AliCloud.Vpc.NetworkInterfaceAttachment($"defaultNetworkInterfaceAttachment-{range.Value}", new AliCloud.Vpc.NetworkInterfaceAttachmentArgs
+            {
+                InstanceId = instanceInstance[0].Id,
+                NetworkInterfaceId = defaultNetworkInterface.Select(__item => __item.Id).ToList()[range.Index],
+            }));
+        }
+        var groupMasterSlaveServerGroup = new AliCloud.Slb.MasterSlaveServerGroup("groupMasterSlaveServerGroup", new AliCloud.Slb.MasterSlaveServerGroupArgs
+        {
+            LoadBalancerId = instanceLoadBalancer.Id,
+            Servers = 
+            {
+                new AliCloud.Slb.Inputs.MasterSlaveServerGroupServerArgs
+                {
+                    Port = 100,
+                    ServerId = instanceInstance[0].Id,
+                    ServerType = "Master",
+                    Weight = 100,
+                },
+                new AliCloud.Slb.Inputs.MasterSlaveServerGroupServerArgs
+                {
+                    Port = 100,
+                    ServerId = instanceInstance[1].Id,
+                    ServerType = "Slave",
+                    Weight = 100,
+                },
+            },
+        });
+        var tcp = new AliCloud.Slb.Listener("tcp", new AliCloud.Slb.ListenerArgs
+        {
+            Bandwidth = "10",
+            EstablishedTimeout = 600,
+            FrontendPort = "22",
+            HealthCheckConnectPort = 20,
+            HealthCheckHttpCode = "http_2xx",
+            HealthCheckInterval = 5,
+            HealthCheckTimeout = 8,
+            HealthCheckType = "tcp",
+            HealthCheckUri = "/console",
+            HealthyThreshold = 8,
+            LoadBalancerId = instanceLoadBalancer.Id,
+            MasterSlaveServerGroupId = groupMasterSlaveServerGroup.Id,
+            PersistenceTimeout = 3600,
+            Protocol = "tcp",
+            UnhealthyThreshold = 8,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -108,13 +242,13 @@ group_master_slave_server_group = alicloud.slb.MasterSlaveServerGroup("groupMast
         {
             "port": 100,
             "serverId": instance_instance[0].id,
-            "serverType": "Master",
+            "server_type": "Master",
             "weight": 100,
         },
         {
             "port": 100,
             "serverId": instance_instance[1].id,
-            "serverType": "Slave",
+            "server_type": "Slave",
             "weight": 100,
         },
     ])
@@ -426,7 +560,9 @@ The MasterSlaveServerGroup resource accepts the following [input]({{< relref "/d
 
     <dt class="property-required"
             title="Required">
-        <span>Load<wbr>Balancer<wbr>Id</span>
+        <span id="loadbalancerid_csharp">
+<a href="#loadbalancerid_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -435,7 +571,9 @@ The MasterSlaveServerGroup resource accepts the following [input]({{< relref "/d
 
     <dt class="property-optional"
             title="Optional">
-        <span>Delete<wbr>Protection<wbr>Validation</span>
+        <span id="deleteprotectionvalidation_csharp">
+<a href="#deleteprotectionvalidation_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>Protection<wbr>Validation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -444,7 +582,9 @@ The MasterSlaveServerGroup resource accepts the following [input]({{< relref "/d
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -453,7 +593,9 @@ The MasterSlaveServerGroup resource accepts the following [input]({{< relref "/d
 
     <dt class="property-optional"
             title="Optional">
-        <span>Servers</span>
+        <span id="servers_csharp">
+<a href="#servers_csharp" style="color: inherit; text-decoration: inherit;">Servers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#masterslaveservergroupserver">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Slb.<wbr>Inputs.<wbr>Master<wbr>Slave<wbr>Server<wbr>Group<wbr>Server<wbr>Args&gt;</a></span>
     </dt>
@@ -469,7 +611,9 @@ The MasterSlaveServerGroup resource accepts the following [input]({{< relref "/d
 
     <dt class="property-required"
             title="Required">
-        <span>Load<wbr>Balancer<wbr>Id</span>
+        <span id="loadbalancerid_go">
+<a href="#loadbalancerid_go" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -478,7 +622,9 @@ The MasterSlaveServerGroup resource accepts the following [input]({{< relref "/d
 
     <dt class="property-optional"
             title="Optional">
-        <span>Delete<wbr>Protection<wbr>Validation</span>
+        <span id="deleteprotectionvalidation_go">
+<a href="#deleteprotectionvalidation_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>Protection<wbr>Validation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -487,7 +633,9 @@ The MasterSlaveServerGroup resource accepts the following [input]({{< relref "/d
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -496,7 +644,9 @@ The MasterSlaveServerGroup resource accepts the following [input]({{< relref "/d
 
     <dt class="property-optional"
             title="Optional">
-        <span>Servers</span>
+        <span id="servers_go">
+<a href="#servers_go" style="color: inherit; text-decoration: inherit;">Servers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#masterslaveservergroupserver">[]Master<wbr>Slave<wbr>Server<wbr>Group<wbr>Server</a></span>
     </dt>
@@ -512,7 +662,9 @@ The MasterSlaveServerGroup resource accepts the following [input]({{< relref "/d
 
     <dt class="property-required"
             title="Required">
-        <span>load<wbr>Balancer<wbr>Id</span>
+        <span id="loadbalancerid_nodejs">
+<a href="#loadbalancerid_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -521,7 +673,9 @@ The MasterSlaveServerGroup resource accepts the following [input]({{< relref "/d
 
     <dt class="property-optional"
             title="Optional">
-        <span>delete<wbr>Protection<wbr>Validation</span>
+        <span id="deleteprotectionvalidation_nodejs">
+<a href="#deleteprotectionvalidation_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>Protection<wbr>Validation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -530,7 +684,9 @@ The MasterSlaveServerGroup resource accepts the following [input]({{< relref "/d
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -539,7 +695,9 @@ The MasterSlaveServerGroup resource accepts the following [input]({{< relref "/d
 
     <dt class="property-optional"
             title="Optional">
-        <span>servers</span>
+        <span id="servers_nodejs">
+<a href="#servers_nodejs" style="color: inherit; text-decoration: inherit;">servers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#masterslaveservergroupserver">Master<wbr>Slave<wbr>Server<wbr>Group<wbr>Server[]</a></span>
     </dt>
@@ -555,7 +713,9 @@ The MasterSlaveServerGroup resource accepts the following [input]({{< relref "/d
 
     <dt class="property-required"
             title="Required">
-        <span>load_<wbr>balancer_<wbr>id</span>
+        <span id="load_balancer_id_python">
+<a href="#load_balancer_id_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -564,7 +724,9 @@ The MasterSlaveServerGroup resource accepts the following [input]({{< relref "/d
 
     <dt class="property-optional"
             title="Optional">
-        <span>delete_<wbr>protection_<wbr>validation</span>
+        <span id="delete_protection_validation_python">
+<a href="#delete_protection_validation_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>protection_<wbr>validation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -573,7 +735,9 @@ The MasterSlaveServerGroup resource accepts the following [input]({{< relref "/d
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -582,7 +746,9 @@ The MasterSlaveServerGroup resource accepts the following [input]({{< relref "/d
 
     <dt class="property-optional"
             title="Optional">
-        <span>servers</span>
+        <span id="servers_python">
+<a href="#servers_python" style="color: inherit; text-decoration: inherit;">servers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#masterslaveservergroupserver">List[Master<wbr>Slave<wbr>Server<wbr>Group<wbr>Server]</a></span>
     </dt>
@@ -609,7 +775,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -624,7 +792,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -639,7 +809,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -654,7 +826,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -795,7 +969,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Delete<wbr>Protection<wbr>Validation</span>
+        <span id="state_deleteprotectionvalidation_csharp">
+<a href="#state_deleteprotectionvalidation_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>Protection<wbr>Validation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -804,7 +980,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Load<wbr>Balancer<wbr>Id</span>
+        <span id="state_loadbalancerid_csharp">
+<a href="#state_loadbalancerid_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -813,7 +991,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -822,7 +1002,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Servers</span>
+        <span id="state_servers_csharp">
+<a href="#state_servers_csharp" style="color: inherit; text-decoration: inherit;">Servers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#masterslaveservergroupserver">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Slb.<wbr>Inputs.<wbr>Master<wbr>Slave<wbr>Server<wbr>Group<wbr>Server<wbr>Args&gt;</a></span>
     </dt>
@@ -838,7 +1020,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Delete<wbr>Protection<wbr>Validation</span>
+        <span id="state_deleteprotectionvalidation_go">
+<a href="#state_deleteprotectionvalidation_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>Protection<wbr>Validation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -847,7 +1031,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Load<wbr>Balancer<wbr>Id</span>
+        <span id="state_loadbalancerid_go">
+<a href="#state_loadbalancerid_go" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -856,7 +1042,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -865,7 +1053,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Servers</span>
+        <span id="state_servers_go">
+<a href="#state_servers_go" style="color: inherit; text-decoration: inherit;">Servers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#masterslaveservergroupserver">[]Master<wbr>Slave<wbr>Server<wbr>Group<wbr>Server</a></span>
     </dt>
@@ -881,7 +1071,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>delete<wbr>Protection<wbr>Validation</span>
+        <span id="state_deleteprotectionvalidation_nodejs">
+<a href="#state_deleteprotectionvalidation_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>Protection<wbr>Validation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -890,7 +1082,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>load<wbr>Balancer<wbr>Id</span>
+        <span id="state_loadbalancerid_nodejs">
+<a href="#state_loadbalancerid_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -899,7 +1093,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -908,7 +1104,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>servers</span>
+        <span id="state_servers_nodejs">
+<a href="#state_servers_nodejs" style="color: inherit; text-decoration: inherit;">servers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#masterslaveservergroupserver">Master<wbr>Slave<wbr>Server<wbr>Group<wbr>Server[]</a></span>
     </dt>
@@ -924,7 +1122,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>delete_<wbr>protection_<wbr>validation</span>
+        <span id="state_delete_protection_validation_python">
+<a href="#state_delete_protection_validation_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>protection_<wbr>validation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -933,7 +1133,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>load_<wbr>balancer_<wbr>id</span>
+        <span id="state_load_balancer_id_python">
+<a href="#state_load_balancer_id_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -942,7 +1144,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -951,7 +1155,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>servers</span>
+        <span id="state_servers_python">
+<a href="#state_servers_python" style="color: inherit; text-decoration: inherit;">servers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#masterslaveservergroupserver">List[Master<wbr>Slave<wbr>Server<wbr>Group<wbr>Server]</a></span>
     </dt>
@@ -993,7 +1199,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Port</span>
+        <span id="port_csharp">
+<a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1001,7 +1209,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Server<wbr>Id</span>
+        <span id="serverid_csharp">
+<a href="#serverid_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1009,7 +1219,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Server<wbr>Type</span>
+        <span id="servertype_csharp">
+<a href="#servertype_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1017,7 +1229,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Type</span>
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1025,7 +1239,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Weight</span>
+        <span id="weight_csharp">
+<a href="#weight_csharp" style="color: inherit; text-decoration: inherit;">Weight</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1040,7 +1256,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Port</span>
+        <span id="port_go">
+<a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1048,7 +1266,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Server<wbr>Id</span>
+        <span id="serverid_go">
+<a href="#serverid_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1056,7 +1276,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Server<wbr>Type</span>
+        <span id="servertype_go">
+<a href="#servertype_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1064,7 +1286,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Type</span>
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1072,7 +1296,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Weight</span>
+        <span id="weight_go">
+<a href="#weight_go" style="color: inherit; text-decoration: inherit;">Weight</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1087,7 +1313,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>port</span>
+        <span id="port_nodejs">
+<a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1095,7 +1323,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>server<wbr>Id</span>
+        <span id="serverid_nodejs">
+<a href="#serverid_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1103,7 +1333,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>server<wbr>Type</span>
+        <span id="servertype_nodejs">
+<a href="#servertype_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1111,7 +1343,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>type</span>
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1119,7 +1353,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>weight</span>
+        <span id="weight_nodejs">
+<a href="#weight_nodejs" style="color: inherit; text-decoration: inherit;">weight</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1134,7 +1370,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>port</span>
+        <span id="port_python">
+<a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1142,7 +1380,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>server<wbr>Id</span>
+        <span id="serverid_python">
+<a href="#serverid_python" style="color: inherit; text-decoration: inherit;">server<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1150,7 +1390,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>server_<wbr>type</span>
+        <span id="server_type_python">
+<a href="#server_type_python" style="color: inherit; text-decoration: inherit;">server_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1158,7 +1400,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>type</span>
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1166,7 +1410,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>weight</span>
+        <span id="weight_python">
+<a href="#weight_python" style="color: inherit; text-decoration: inherit;">weight</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>

@@ -27,7 +27,33 @@ For information about Sag Qos Car and how to use it, see [What is Qos Car](https
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var defaultQos = new AliCloud.RocketMQ.Qos("defaultQos", new AliCloud.RocketMQ.QosArgs
+        {
+        });
+        var defaultQosCar = new AliCloud.RocketMQ.QosCar("defaultQosCar", new AliCloud.RocketMQ.QosCarArgs
+        {
+            Description = "tf-testSagQosCarDescription",
+            LimitType = "Absolute",
+            MaxBandwidthAbs = "20",
+            MaxBandwidthPercent = "20",
+            MinBandwidthAbs = "10",
+            MinBandwidthPercent = "10",
+            PercentSourceType = "InternetUpBandwidth",
+            Priority = "1",
+            QosId = defaultQos.Id,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -259,7 +285,9 @@ The QosCar resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-required"
             title="Required">
-        <span>Limit<wbr>Type</span>
+        <span id="limittype_csharp">
+<a href="#limittype_csharp" style="color: inherit; text-decoration: inherit;">Limit<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -268,7 +296,9 @@ The QosCar resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-required"
             title="Required">
-        <span>Priority</span>
+        <span id="priority_csharp">
+<a href="#priority_csharp" style="color: inherit; text-decoration: inherit;">Priority</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -277,7 +307,9 @@ The QosCar resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-required"
             title="Required">
-        <span>Qos<wbr>Id</span>
+        <span id="qosid_csharp">
+<a href="#qosid_csharp" style="color: inherit; text-decoration: inherit;">Qos<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -286,7 +318,9 @@ The QosCar resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -295,7 +329,9 @@ The QosCar resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Bandwidth<wbr>Abs</span>
+        <span id="maxbandwidthabs_csharp">
+<a href="#maxbandwidthabs_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Bandwidth<wbr>Abs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -304,7 +340,9 @@ The QosCar resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Bandwidth<wbr>Percent</span>
+        <span id="maxbandwidthpercent_csharp">
+<a href="#maxbandwidthpercent_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Bandwidth<wbr>Percent</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -313,7 +351,9 @@ The QosCar resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
-        <span>Min<wbr>Bandwidth<wbr>Abs</span>
+        <span id="minbandwidthabs_csharp">
+<a href="#minbandwidthabs_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Bandwidth<wbr>Abs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -322,7 +362,9 @@ The QosCar resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
-        <span>Min<wbr>Bandwidth<wbr>Percent</span>
+        <span id="minbandwidthpercent_csharp">
+<a href="#minbandwidthpercent_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Bandwidth<wbr>Percent</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -331,7 +373,9 @@ The QosCar resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -340,7 +384,9 @@ The QosCar resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
-        <span>Percent<wbr>Source<wbr>Type</span>
+        <span id="percentsourcetype_csharp">
+<a href="#percentsourcetype_csharp" style="color: inherit; text-decoration: inherit;">Percent<wbr>Source<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -356,7 +402,9 @@ The QosCar resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-required"
             title="Required">
-        <span>Limit<wbr>Type</span>
+        <span id="limittype_go">
+<a href="#limittype_go" style="color: inherit; text-decoration: inherit;">Limit<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -365,7 +413,9 @@ The QosCar resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-required"
             title="Required">
-        <span>Priority</span>
+        <span id="priority_go">
+<a href="#priority_go" style="color: inherit; text-decoration: inherit;">Priority</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -374,7 +424,9 @@ The QosCar resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-required"
             title="Required">
-        <span>Qos<wbr>Id</span>
+        <span id="qosid_go">
+<a href="#qosid_go" style="color: inherit; text-decoration: inherit;">Qos<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -383,7 +435,9 @@ The QosCar resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -392,7 +446,9 @@ The QosCar resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Bandwidth<wbr>Abs</span>
+        <span id="maxbandwidthabs_go">
+<a href="#maxbandwidthabs_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Bandwidth<wbr>Abs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -401,7 +457,9 @@ The QosCar resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Bandwidth<wbr>Percent</span>
+        <span id="maxbandwidthpercent_go">
+<a href="#maxbandwidthpercent_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Bandwidth<wbr>Percent</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -410,7 +468,9 @@ The QosCar resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
-        <span>Min<wbr>Bandwidth<wbr>Abs</span>
+        <span id="minbandwidthabs_go">
+<a href="#minbandwidthabs_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Bandwidth<wbr>Abs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -419,7 +479,9 @@ The QosCar resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
-        <span>Min<wbr>Bandwidth<wbr>Percent</span>
+        <span id="minbandwidthpercent_go">
+<a href="#minbandwidthpercent_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Bandwidth<wbr>Percent</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -428,7 +490,9 @@ The QosCar resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -437,7 +501,9 @@ The QosCar resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
-        <span>Percent<wbr>Source<wbr>Type</span>
+        <span id="percentsourcetype_go">
+<a href="#percentsourcetype_go" style="color: inherit; text-decoration: inherit;">Percent<wbr>Source<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -453,7 +519,9 @@ The QosCar resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-required"
             title="Required">
-        <span>limit<wbr>Type</span>
+        <span id="limittype_nodejs">
+<a href="#limittype_nodejs" style="color: inherit; text-decoration: inherit;">limit<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -462,7 +530,9 @@ The QosCar resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-required"
             title="Required">
-        <span>priority</span>
+        <span id="priority_nodejs">
+<a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -471,7 +541,9 @@ The QosCar resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-required"
             title="Required">
-        <span>qos<wbr>Id</span>
+        <span id="qosid_nodejs">
+<a href="#qosid_nodejs" style="color: inherit; text-decoration: inherit;">qos<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -480,7 +552,9 @@ The QosCar resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -489,7 +563,9 @@ The QosCar resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Bandwidth<wbr>Abs</span>
+        <span id="maxbandwidthabs_nodejs">
+<a href="#maxbandwidthabs_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Bandwidth<wbr>Abs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -498,7 +574,9 @@ The QosCar resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Bandwidth<wbr>Percent</span>
+        <span id="maxbandwidthpercent_nodejs">
+<a href="#maxbandwidthpercent_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Bandwidth<wbr>Percent</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -507,7 +585,9 @@ The QosCar resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
-        <span>min<wbr>Bandwidth<wbr>Abs</span>
+        <span id="minbandwidthabs_nodejs">
+<a href="#minbandwidthabs_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Bandwidth<wbr>Abs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -516,7 +596,9 @@ The QosCar resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
-        <span>min<wbr>Bandwidth<wbr>Percent</span>
+        <span id="minbandwidthpercent_nodejs">
+<a href="#minbandwidthpercent_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Bandwidth<wbr>Percent</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -525,7 +607,9 @@ The QosCar resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -534,7 +618,9 @@ The QosCar resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
-        <span>percent<wbr>Source<wbr>Type</span>
+        <span id="percentsourcetype_nodejs">
+<a href="#percentsourcetype_nodejs" style="color: inherit; text-decoration: inherit;">percent<wbr>Source<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -550,7 +636,9 @@ The QosCar resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-required"
             title="Required">
-        <span>limit_<wbr>type</span>
+        <span id="limit_type_python">
+<a href="#limit_type_python" style="color: inherit; text-decoration: inherit;">limit_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -559,7 +647,9 @@ The QosCar resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-required"
             title="Required">
-        <span>priority</span>
+        <span id="priority_python">
+<a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -568,7 +658,9 @@ The QosCar resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-required"
             title="Required">
-        <span>qos_<wbr>id</span>
+        <span id="qos_id_python">
+<a href="#qos_id_python" style="color: inherit; text-decoration: inherit;">qos_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -577,7 +669,9 @@ The QosCar resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -586,7 +680,9 @@ The QosCar resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
-        <span>max_<wbr>bandwidth_<wbr>abs</span>
+        <span id="max_bandwidth_abs_python">
+<a href="#max_bandwidth_abs_python" style="color: inherit; text-decoration: inherit;">max_<wbr>bandwidth_<wbr>abs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -595,7 +691,9 @@ The QosCar resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
-        <span>max_<wbr>bandwidth_<wbr>percent</span>
+        <span id="max_bandwidth_percent_python">
+<a href="#max_bandwidth_percent_python" style="color: inherit; text-decoration: inherit;">max_<wbr>bandwidth_<wbr>percent</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -604,7 +702,9 @@ The QosCar resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
-        <span>min_<wbr>bandwidth_<wbr>abs</span>
+        <span id="min_bandwidth_abs_python">
+<a href="#min_bandwidth_abs_python" style="color: inherit; text-decoration: inherit;">min_<wbr>bandwidth_<wbr>abs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -613,7 +713,9 @@ The QosCar resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
-        <span>min_<wbr>bandwidth_<wbr>percent</span>
+        <span id="min_bandwidth_percent_python">
+<a href="#min_bandwidth_percent_python" style="color: inherit; text-decoration: inherit;">min_<wbr>bandwidth_<wbr>percent</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -622,7 +724,9 @@ The QosCar resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -631,7 +735,9 @@ The QosCar resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
-        <span>percent_<wbr>source_<wbr>type</span>
+        <span id="percent_source_type_python">
+<a href="#percent_source_type_python" style="color: inherit; text-decoration: inherit;">percent_<wbr>source_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -658,7 +764,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -673,7 +781,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -688,7 +798,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -703,7 +815,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -844,7 +958,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="state_description_csharp">
+<a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -853,7 +969,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Limit<wbr>Type</span>
+        <span id="state_limittype_csharp">
+<a href="#state_limittype_csharp" style="color: inherit; text-decoration: inherit;">Limit<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -862,7 +980,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Bandwidth<wbr>Abs</span>
+        <span id="state_maxbandwidthabs_csharp">
+<a href="#state_maxbandwidthabs_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Bandwidth<wbr>Abs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -871,7 +991,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Bandwidth<wbr>Percent</span>
+        <span id="state_maxbandwidthpercent_csharp">
+<a href="#state_maxbandwidthpercent_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Bandwidth<wbr>Percent</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -880,7 +1002,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Min<wbr>Bandwidth<wbr>Abs</span>
+        <span id="state_minbandwidthabs_csharp">
+<a href="#state_minbandwidthabs_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Bandwidth<wbr>Abs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -889,7 +1013,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Min<wbr>Bandwidth<wbr>Percent</span>
+        <span id="state_minbandwidthpercent_csharp">
+<a href="#state_minbandwidthpercent_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Bandwidth<wbr>Percent</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -898,7 +1024,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -907,7 +1035,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Percent<wbr>Source<wbr>Type</span>
+        <span id="state_percentsourcetype_csharp">
+<a href="#state_percentsourcetype_csharp" style="color: inherit; text-decoration: inherit;">Percent<wbr>Source<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -916,7 +1046,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Priority</span>
+        <span id="state_priority_csharp">
+<a href="#state_priority_csharp" style="color: inherit; text-decoration: inherit;">Priority</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -925,7 +1057,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Qos<wbr>Id</span>
+        <span id="state_qosid_csharp">
+<a href="#state_qosid_csharp" style="color: inherit; text-decoration: inherit;">Qos<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -941,7 +1075,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="state_description_go">
+<a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -950,7 +1086,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Limit<wbr>Type</span>
+        <span id="state_limittype_go">
+<a href="#state_limittype_go" style="color: inherit; text-decoration: inherit;">Limit<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -959,7 +1097,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Bandwidth<wbr>Abs</span>
+        <span id="state_maxbandwidthabs_go">
+<a href="#state_maxbandwidthabs_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Bandwidth<wbr>Abs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -968,7 +1108,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Bandwidth<wbr>Percent</span>
+        <span id="state_maxbandwidthpercent_go">
+<a href="#state_maxbandwidthpercent_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Bandwidth<wbr>Percent</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -977,7 +1119,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Min<wbr>Bandwidth<wbr>Abs</span>
+        <span id="state_minbandwidthabs_go">
+<a href="#state_minbandwidthabs_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Bandwidth<wbr>Abs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -986,7 +1130,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Min<wbr>Bandwidth<wbr>Percent</span>
+        <span id="state_minbandwidthpercent_go">
+<a href="#state_minbandwidthpercent_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Bandwidth<wbr>Percent</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -995,7 +1141,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1004,7 +1152,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Percent<wbr>Source<wbr>Type</span>
+        <span id="state_percentsourcetype_go">
+<a href="#state_percentsourcetype_go" style="color: inherit; text-decoration: inherit;">Percent<wbr>Source<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1013,7 +1163,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Priority</span>
+        <span id="state_priority_go">
+<a href="#state_priority_go" style="color: inherit; text-decoration: inherit;">Priority</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1022,7 +1174,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Qos<wbr>Id</span>
+        <span id="state_qosid_go">
+<a href="#state_qosid_go" style="color: inherit; text-decoration: inherit;">Qos<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1038,7 +1192,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="state_description_nodejs">
+<a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1047,7 +1203,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>limit<wbr>Type</span>
+        <span id="state_limittype_nodejs">
+<a href="#state_limittype_nodejs" style="color: inherit; text-decoration: inherit;">limit<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1056,7 +1214,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Bandwidth<wbr>Abs</span>
+        <span id="state_maxbandwidthabs_nodejs">
+<a href="#state_maxbandwidthabs_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Bandwidth<wbr>Abs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1065,7 +1225,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Bandwidth<wbr>Percent</span>
+        <span id="state_maxbandwidthpercent_nodejs">
+<a href="#state_maxbandwidthpercent_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Bandwidth<wbr>Percent</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1074,7 +1236,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>min<wbr>Bandwidth<wbr>Abs</span>
+        <span id="state_minbandwidthabs_nodejs">
+<a href="#state_minbandwidthabs_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Bandwidth<wbr>Abs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1083,7 +1247,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>min<wbr>Bandwidth<wbr>Percent</span>
+        <span id="state_minbandwidthpercent_nodejs">
+<a href="#state_minbandwidthpercent_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Bandwidth<wbr>Percent</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1092,7 +1258,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1101,7 +1269,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>percent<wbr>Source<wbr>Type</span>
+        <span id="state_percentsourcetype_nodejs">
+<a href="#state_percentsourcetype_nodejs" style="color: inherit; text-decoration: inherit;">percent<wbr>Source<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1110,7 +1280,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>priority</span>
+        <span id="state_priority_nodejs">
+<a href="#state_priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1119,7 +1291,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>qos<wbr>Id</span>
+        <span id="state_qosid_nodejs">
+<a href="#state_qosid_nodejs" style="color: inherit; text-decoration: inherit;">qos<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1135,7 +1309,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="state_description_python">
+<a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1144,7 +1320,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>limit_<wbr>type</span>
+        <span id="state_limit_type_python">
+<a href="#state_limit_type_python" style="color: inherit; text-decoration: inherit;">limit_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1153,7 +1331,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>max_<wbr>bandwidth_<wbr>abs</span>
+        <span id="state_max_bandwidth_abs_python">
+<a href="#state_max_bandwidth_abs_python" style="color: inherit; text-decoration: inherit;">max_<wbr>bandwidth_<wbr>abs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1162,7 +1342,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>max_<wbr>bandwidth_<wbr>percent</span>
+        <span id="state_max_bandwidth_percent_python">
+<a href="#state_max_bandwidth_percent_python" style="color: inherit; text-decoration: inherit;">max_<wbr>bandwidth_<wbr>percent</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1171,7 +1353,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>min_<wbr>bandwidth_<wbr>abs</span>
+        <span id="state_min_bandwidth_abs_python">
+<a href="#state_min_bandwidth_abs_python" style="color: inherit; text-decoration: inherit;">min_<wbr>bandwidth_<wbr>abs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1180,7 +1364,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>min_<wbr>bandwidth_<wbr>percent</span>
+        <span id="state_min_bandwidth_percent_python">
+<a href="#state_min_bandwidth_percent_python" style="color: inherit; text-decoration: inherit;">min_<wbr>bandwidth_<wbr>percent</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1189,7 +1375,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1198,7 +1386,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>percent_<wbr>source_<wbr>type</span>
+        <span id="state_percent_source_type_python">
+<a href="#state_percent_source_type_python" style="color: inherit; text-decoration: inherit;">percent_<wbr>source_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1207,7 +1397,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>priority</span>
+        <span id="state_priority_python">
+<a href="#state_priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1216,7 +1408,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>qos_<wbr>id</span>
+        <span id="state_qos_id_python">
+<a href="#state_qos_id_python" style="color: inherit; text-decoration: inherit;">qos_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

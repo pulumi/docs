@@ -1550,7 +1550,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
         <span class="s2">&quot;loadbalancerId&quot;</span><span class="p">:</span> <span class="n">default_load_balancer</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
         <span class="s2">&quot;vserverAttributes&quot;</span><span class="p">:</span> <span class="p">[{</span>
             <span class="s2">&quot;port&quot;</span><span class="p">:</span> <span class="s2">&quot;100&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;vserverGroupId&quot;</span><span class="p">:</span> <span class="n">default_server_group</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+            <span class="s2">&quot;vserver_group_id&quot;</span><span class="p">:</span> <span class="n">default_server_group</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
             <span class="s2">&quot;weight&quot;</span><span class="p">:</span> <span class="s2">&quot;60&quot;</span><span class="p">,</span>
         <span class="p">}],</span>
     <span class="p">}])</span>

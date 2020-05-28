@@ -44,8 +44,8 @@ anything, please consult the source <a class="reference external" href="https://
     <span class="n">security_group_id</span><span class="o">=</span><span class="n">default_security_group</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
 <span class="n">default_auto_provisioning_group</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">ecs</span><span class="o">.</span><span class="n">AutoProvisioningGroup</span><span class="p">(</span><span class="s2">&quot;defaultAutoProvisioningGroup&quot;</span><span class="p">,</span>
     <span class="n">launch_template_configs</span><span class="o">=</span><span class="p">[{</span>
-        <span class="s2">&quot;instanceType&quot;</span><span class="p">:</span> <span class="s2">&quot;ecs.n1.small&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;vswitchId&quot;</span><span class="p">:</span> <span class="n">default_switch</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;instance_type&quot;</span><span class="p">:</span> <span class="s2">&quot;ecs.n1.small&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;vswitch_id&quot;</span><span class="p">:</span> <span class="n">default_switch</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
     <span class="p">}],</span>
     <span class="n">launch_template_id</span><span class="o">=</span><span class="n">template</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
     <span class="n">pay_as_you_go_target_capacity</span><span class="o">=</span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
@@ -1965,7 +1965,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">description</span><span class="o">=</span><span class="s2">&quot;test import image&quot;</span><span class="p">,</span>
     <span class="n">disk_device_mappings</span><span class="o">=</span><span class="p">[{</span>
         <span class="s2">&quot;diskImageSize&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
-        <span class="s2">&quot;ossBucket&quot;</span><span class="p">:</span> <span class="s2">&quot;testimportimage&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;oss_bucket&quot;</span><span class="p">:</span> <span class="s2">&quot;testimportimage&quot;</span><span class="p">,</span>
         <span class="s2">&quot;ossObject&quot;</span><span class="p">:</span> <span class="s2">&quot;root.img&quot;</span><span class="p">,</span>
     <span class="p">}],</span>
     <span class="n">image_name</span><span class="o">=</span><span class="s2">&quot;test-import-image&quot;</span><span class="p">,</span>
@@ -2258,7 +2258,7 @@ Set it to null can cancel automatic release attribute and the ECS instance will 
 <li><p><strong>force_delete</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If it is true, the “PrePaid” instance will be change to “PostPaid” and then deleted forcibly.
 However, because of changing instance charge type has CPU core count quota limitation, so strongly recommand that “Don’t modify instance charge type frequentlly in one month”.</p></li>
 <li><p><strong>host*name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Host name of the ECS, which is a string of at least two characters. “hostname” cannot start or end with “.” or “-“. In addition, two or more consecutive “.” or “-“ symbols are not allowed. On Windows, the host name can contain a maximum of 15 characters, which can be a combination of uppercase/lowercase letters, numerals, and “-“. The host name cannot contain dots (“.”) or contain only numeric characters. When it is changed, the instance will reboot to make the change take effect.
-On other OSs such as Linux, the host name can contain a maximum of 30 characters, which can be segments separated by dots (“.”), where each segment can contain uppercase/lowercase letters, numerals, or “<a href="#id33"><span class="problematic" id="id34">*</span></a>“. When it is changed, the instance will reboot to make the change take effect.</p>
+On other OSs such as Linux, the host name can contain a maximum of 64 characters, which can be segments separated by dots (“.”), where each segment can contain uppercase/lowercase letters, numerals, or “<a href="#id33"><span class="problematic" id="id34">*</span></a>“. When it is changed, the instance will reboot to make the change take effect.</p>
 </p></li>
 <li><p><strong>image_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Image to use for the instance. ECS instance’s image can be replaced via changing ‘image_id’. When it is changed, the instance will reboot to make the change take effect.</p></li>
 <li><p><strong>include_data_disks</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to change instance disks charge type when changing instance charge type.</p></li>
@@ -2487,7 +2487,7 @@ However, because of changing instance charge type has CPU core count quota limit
 <dt id="pulumi_alicloud.ecs.Instance.host_name">
 <code class="sig-name descname">host_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ecs.Instance.host_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>Host name of the ECS, which is a string of at least two characters. “hostname” cannot start or end with “.” or “-“. In addition, two or more consecutive “.” or “-“ symbols are not allowed. On Windows, the host name can contain a maximum of 15 characters, which can be a combination of uppercase/lowercase letters, numerals, and “-“. The host name cannot contain dots (“.”) or contain only numeric characters. When it is changed, the instance will reboot to make the change take effect.
-On other OSs such as Linux, the host name can contain a maximum of 30 characters, which can be segments separated by dots (“.”), where each segment can contain uppercase/lowercase letters, numerals, or “_“. When it is changed, the instance will reboot to make the change take effect.</p>
+On other OSs such as Linux, the host name can contain a maximum of 64 characters, which can be segments separated by dots (“.”), where each segment can contain uppercase/lowercase letters, numerals, or “_“. When it is changed, the instance will reboot to make the change take effect.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -2763,7 +2763,7 @@ Set it to null can cancel automatic release attribute and the ECS instance will 
 <li><p><strong>force_delete</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If it is true, the “PrePaid” instance will be change to “PostPaid” and then deleted forcibly.
 However, because of changing instance charge type has CPU core count quota limitation, so strongly recommand that “Don’t modify instance charge type frequentlly in one month”.</p></li>
 <li><p><strong>host*name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Host name of the ECS, which is a string of at least two characters. “hostname” cannot start or end with “.” or “-“. In addition, two or more consecutive “.” or “-“ symbols are not allowed. On Windows, the host name can contain a maximum of 15 characters, which can be a combination of uppercase/lowercase letters, numerals, and “-“. The host name cannot contain dots (“.”) or contain only numeric characters. When it is changed, the instance will reboot to make the change take effect.
-On other OSs such as Linux, the host name can contain a maximum of 30 characters, which can be segments separated by dots (“.”), where each segment can contain uppercase/lowercase letters, numerals, or “<a href="#id39"><span class="problematic" id="id40">*</span></a>“. When it is changed, the instance will reboot to make the change take effect.</p>
+On other OSs such as Linux, the host name can contain a maximum of 64 characters, which can be segments separated by dots (“.”), where each segment can contain uppercase/lowercase letters, numerals, or “<a href="#id39"><span class="problematic" id="id40">*</span></a>“. When it is changed, the instance will reboot to make the change take effect.</p>
 </p></li>
 <li><p><strong>image_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Image to use for the instance. ECS instance’s image can be replaced via changing ‘image_id’. When it is changed, the instance will reboot to make the change take effect.</p></li>
 <li><p><strong>include_data_disks</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to change instance disks charge type when changing instance charge type.</p></li>
@@ -3193,8 +3193,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
         <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;hello1&quot;</span><span class="p">,</span>
         <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;eth0&quot;</span><span class="p">,</span>
         <span class="s2">&quot;primaryIp&quot;</span><span class="p">:</span> <span class="s2">&quot;10.0.0.2&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;securityGroupId&quot;</span><span class="p">:</span> <span class="s2">&quot;xxxx&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;vswitchId&quot;</span><span class="p">:</span> <span class="s2">&quot;xxxxxxx&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;security_group_id&quot;</span><span class="p">:</span> <span class="s2">&quot;xxxx&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;vswitch_id&quot;</span><span class="p">:</span> <span class="s2">&quot;xxxxxxx&quot;</span><span class="p">,</span>
     <span class="p">},</span>
     <span class="n">network_type</span><span class="o">=</span><span class="s2">&quot;vpc&quot;</span><span class="p">,</span>
     <span class="n">ram_role_name</span><span class="o">=</span><span class="s2">&quot;xxxxx&quot;</span><span class="p">,</span>
@@ -4605,6 +4605,14 @@ other public images and the ones available on the image market.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in 1.54.0+</p>
 </div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">default</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">ecs</span><span class="o">.</span><span class="n">get_instance_type_families</span><span class="p">(</span><span class="n">instance_charge_type</span><span class="o">=</span><span class="s2">&quot;PrePaid&quot;</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;firstInstanceTypeFamilyId&quot;</span><span class="p">,</span> <span class="n">default</span><span class="o">.</span><span class="n">families</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;instanceIds&quot;</span><span class="p">,</span> <span class="n">default</span><span class="o">.</span><span class="n">ids</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -4715,7 +4723,7 @@ tagKey2 = &quot;tagValue2&quot;
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>finger_print</strong> (<em>bool</em>) – A finger print used to retrieve specified key pair.</p></li>
+<li><p><strong>finger_print</strong> (<em>str</em>) – A finger print used to retrieve specified key pair.</p></li>
 <li><p><strong>ids</strong> (<em>list</em>) – A list of key pair IDs.</p></li>
 <li><p><strong>name_regex</strong> (<em>str</em>) – A regex string to apply to the resulting key pairs.</p></li>
 <li><p><strong>resource_group_id</strong> (<em>str</em>) – The Id of resource group which the key pair belongs.</p></li>

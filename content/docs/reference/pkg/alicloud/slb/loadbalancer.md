@@ -196,7 +196,9 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Address</span>
+        <span id="address_csharp">
+<a href="#address_csharp" style="color: inherit; text-decoration: inherit;">Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -205,7 +207,9 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Address<wbr>Ip<wbr>Version</span>
+        <span id="addressipversion_csharp">
+<a href="#addressipversion_csharp" style="color: inherit; text-decoration: inherit;">Address<wbr>Ip<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -214,7 +218,9 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Address<wbr>Type</span>
+        <span id="addresstype_csharp">
+<a href="#addresstype_csharp" style="color: inherit; text-decoration: inherit;">Address<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -225,7 +231,9 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Bandwidth</span>
+        <span id="bandwidth_csharp">
+<a href="#bandwidth_csharp" style="color: inherit; text-decoration: inherit;">Bandwidth</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -235,7 +243,9 @@ value is between 1 and 1000, If argument "internet_charge_type" is "paybytraffic
 
     <dt class="property-optional"
             title="Optional">
-        <span>Delete<wbr>Protection</span>
+        <span id="deleteprotection_csharp">
+<a href="#deleteprotection_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>Protection</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -244,7 +254,9 @@ value is between 1 and 1000, If argument "internet_charge_type" is "paybytraffic
 
     <dt class="property-optional"
             title="Optional">
-        <span>Instance<wbr>Charge<wbr>Type</span>
+        <span id="instancechargetype_csharp">
+<a href="#instancechargetype_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Charge<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -253,7 +265,9 @@ value is between 1 and 1000, If argument "internet_charge_type" is "paybytraffic
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>Internet</span>
+        <span id="internet_csharp">
+<a href="#internet_csharp" style="color: inherit; text-decoration: inherit;">Internet</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -262,7 +276,9 @@ value is between 1 and 1000, If argument "internet_charge_type" is "paybytraffic
 
     <dt class="property-optional"
             title="Optional">
-        <span>Internet<wbr>Charge<wbr>Type</span>
+        <span id="internetchargetype_csharp">
+<a href="#internetchargetype_csharp" style="color: inherit; text-decoration: inherit;">Internet<wbr>Charge<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -273,7 +289,9 @@ Before version 1.10.1, the valid values are "paybybandwidth" and "paybytraffic".
 
     <dt class="property-optional"
             title="Optional">
-        <span>Master<wbr>Zone<wbr>Id</span>
+        <span id="masterzoneid_csharp">
+<a href="#masterzoneid_csharp" style="color: inherit; text-decoration: inherit;">Master<wbr>Zone<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -282,7 +300,9 @@ Before version 1.10.1, the valid values are "paybybandwidth" and "paybytraffic".
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -290,7 +310,9 @@ Before version 1.10.1, the valid values are "paybybandwidth" and "paybytraffic".
 
     <dt class="property-optional"
             title="Optional">
-        <span>Period</span>
+        <span id="period_csharp">
+<a href="#period_csharp" style="color: inherit; text-decoration: inherit;">Period</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -299,7 +321,9 @@ Before version 1.10.1, the valid values are "paybybandwidth" and "paybytraffic".
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resource<wbr>Group<wbr>Id</span>
+        <span id="resourcegroupid_csharp">
+<a href="#resourcegroupid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -308,7 +332,9 @@ Before version 1.10.1, the valid values are "paybybandwidth" and "paybytraffic".
 
     <dt class="property-optional"
             title="Optional">
-        <span>Slave<wbr>Zone<wbr>Id</span>
+        <span id="slavezoneid_csharp">
+<a href="#slavezoneid_csharp" style="color: inherit; text-decoration: inherit;">Slave<wbr>Zone<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -317,7 +343,9 @@ Before version 1.10.1, the valid values are "paybybandwidth" and "paybytraffic".
 
     <dt class="property-optional"
             title="Optional">
-        <span>Specification</span>
+        <span id="specification_csharp">
+<a href="#specification_csharp" style="color: inherit; text-decoration: inherit;">Specification</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -328,7 +356,9 @@ Launching "[Performance-guaranteed](https://www.alibabacloud.com/help/doc-detail
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -337,7 +367,9 @@ Launching "[Performance-guaranteed](https://www.alibabacloud.com/help/doc-detail
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vswitch<wbr>Id</span>
+        <span id="vswitchid_csharp">
+<a href="#vswitchid_csharp" style="color: inherit; text-decoration: inherit;">Vswitch<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -353,7 +385,9 @@ Launching "[Performance-guaranteed](https://www.alibabacloud.com/help/doc-detail
 
     <dt class="property-optional"
             title="Optional">
-        <span>Address</span>
+        <span id="address_go">
+<a href="#address_go" style="color: inherit; text-decoration: inherit;">Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -362,7 +396,9 @@ Launching "[Performance-guaranteed](https://www.alibabacloud.com/help/doc-detail
 
     <dt class="property-optional"
             title="Optional">
-        <span>Address<wbr>Ip<wbr>Version</span>
+        <span id="addressipversion_go">
+<a href="#addressipversion_go" style="color: inherit; text-decoration: inherit;">Address<wbr>Ip<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -371,7 +407,9 @@ Launching "[Performance-guaranteed](https://www.alibabacloud.com/help/doc-detail
 
     <dt class="property-optional"
             title="Optional">
-        <span>Address<wbr>Type</span>
+        <span id="addresstype_go">
+<a href="#addresstype_go" style="color: inherit; text-decoration: inherit;">Address<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -382,7 +420,9 @@ Launching "[Performance-guaranteed](https://www.alibabacloud.com/help/doc-detail
 
     <dt class="property-optional"
             title="Optional">
-        <span>Bandwidth</span>
+        <span id="bandwidth_go">
+<a href="#bandwidth_go" style="color: inherit; text-decoration: inherit;">Bandwidth</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -392,7 +432,9 @@ value is between 1 and 1000, If argument "internet_charge_type" is "paybytraffic
 
     <dt class="property-optional"
             title="Optional">
-        <span>Delete<wbr>Protection</span>
+        <span id="deleteprotection_go">
+<a href="#deleteprotection_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>Protection</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -401,7 +443,9 @@ value is between 1 and 1000, If argument "internet_charge_type" is "paybytraffic
 
     <dt class="property-optional"
             title="Optional">
-        <span>Instance<wbr>Charge<wbr>Type</span>
+        <span id="instancechargetype_go">
+<a href="#instancechargetype_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Charge<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -410,7 +454,9 @@ value is between 1 and 1000, If argument "internet_charge_type" is "paybytraffic
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>Internet</span>
+        <span id="internet_go">
+<a href="#internet_go" style="color: inherit; text-decoration: inherit;">Internet</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -419,7 +465,9 @@ value is between 1 and 1000, If argument "internet_charge_type" is "paybytraffic
 
     <dt class="property-optional"
             title="Optional">
-        <span>Internet<wbr>Charge<wbr>Type</span>
+        <span id="internetchargetype_go">
+<a href="#internetchargetype_go" style="color: inherit; text-decoration: inherit;">Internet<wbr>Charge<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -430,7 +478,9 @@ Before version 1.10.1, the valid values are "paybybandwidth" and "paybytraffic".
 
     <dt class="property-optional"
             title="Optional">
-        <span>Master<wbr>Zone<wbr>Id</span>
+        <span id="masterzoneid_go">
+<a href="#masterzoneid_go" style="color: inherit; text-decoration: inherit;">Master<wbr>Zone<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -439,7 +489,9 @@ Before version 1.10.1, the valid values are "paybybandwidth" and "paybytraffic".
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -447,7 +499,9 @@ Before version 1.10.1, the valid values are "paybybandwidth" and "paybytraffic".
 
     <dt class="property-optional"
             title="Optional">
-        <span>Period</span>
+        <span id="period_go">
+<a href="#period_go" style="color: inherit; text-decoration: inherit;">Period</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -456,7 +510,9 @@ Before version 1.10.1, the valid values are "paybybandwidth" and "paybytraffic".
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resource<wbr>Group<wbr>Id</span>
+        <span id="resourcegroupid_go">
+<a href="#resourcegroupid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -465,7 +521,9 @@ Before version 1.10.1, the valid values are "paybybandwidth" and "paybytraffic".
 
     <dt class="property-optional"
             title="Optional">
-        <span>Slave<wbr>Zone<wbr>Id</span>
+        <span id="slavezoneid_go">
+<a href="#slavezoneid_go" style="color: inherit; text-decoration: inherit;">Slave<wbr>Zone<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -474,7 +532,9 @@ Before version 1.10.1, the valid values are "paybybandwidth" and "paybytraffic".
 
     <dt class="property-optional"
             title="Optional">
-        <span>Specification</span>
+        <span id="specification_go">
+<a href="#specification_go" style="color: inherit; text-decoration: inherit;">Specification</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -485,7 +545,9 @@ Launching "[Performance-guaranteed](https://www.alibabacloud.com/help/doc-detail
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -494,7 +556,9 @@ Launching "[Performance-guaranteed](https://www.alibabacloud.com/help/doc-detail
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vswitch<wbr>Id</span>
+        <span id="vswitchid_go">
+<a href="#vswitchid_go" style="color: inherit; text-decoration: inherit;">Vswitch<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -510,7 +574,9 @@ Launching "[Performance-guaranteed](https://www.alibabacloud.com/help/doc-detail
 
     <dt class="property-optional"
             title="Optional">
-        <span>address</span>
+        <span id="address_nodejs">
+<a href="#address_nodejs" style="color: inherit; text-decoration: inherit;">address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -519,7 +585,9 @@ Launching "[Performance-guaranteed](https://www.alibabacloud.com/help/doc-detail
 
     <dt class="property-optional"
             title="Optional">
-        <span>address<wbr>Ip<wbr>Version</span>
+        <span id="addressipversion_nodejs">
+<a href="#addressipversion_nodejs" style="color: inherit; text-decoration: inherit;">address<wbr>Ip<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -528,7 +596,9 @@ Launching "[Performance-guaranteed](https://www.alibabacloud.com/help/doc-detail
 
     <dt class="property-optional"
             title="Optional">
-        <span>address<wbr>Type</span>
+        <span id="addresstype_nodejs">
+<a href="#addresstype_nodejs" style="color: inherit; text-decoration: inherit;">address<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -539,7 +609,9 @@ Launching "[Performance-guaranteed](https://www.alibabacloud.com/help/doc-detail
 
     <dt class="property-optional"
             title="Optional">
-        <span>bandwidth</span>
+        <span id="bandwidth_nodejs">
+<a href="#bandwidth_nodejs" style="color: inherit; text-decoration: inherit;">bandwidth</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -549,7 +621,9 @@ value is between 1 and 1000, If argument "internet_charge_type" is "paybytraffic
 
     <dt class="property-optional"
             title="Optional">
-        <span>delete<wbr>Protection</span>
+        <span id="deleteprotection_nodejs">
+<a href="#deleteprotection_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>Protection</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -558,7 +632,9 @@ value is between 1 and 1000, If argument "internet_charge_type" is "paybytraffic
 
     <dt class="property-optional"
             title="Optional">
-        <span>instance<wbr>Charge<wbr>Type</span>
+        <span id="instancechargetype_nodejs">
+<a href="#instancechargetype_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Charge<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -567,7 +643,9 @@ value is between 1 and 1000, If argument "internet_charge_type" is "paybytraffic
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>internet</span>
+        <span id="internet_nodejs">
+<a href="#internet_nodejs" style="color: inherit; text-decoration: inherit;">internet</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -576,7 +654,9 @@ value is between 1 and 1000, If argument "internet_charge_type" is "paybytraffic
 
     <dt class="property-optional"
             title="Optional">
-        <span>internet<wbr>Charge<wbr>Type</span>
+        <span id="internetchargetype_nodejs">
+<a href="#internetchargetype_nodejs" style="color: inherit; text-decoration: inherit;">internet<wbr>Charge<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -587,7 +667,9 @@ Before version 1.10.1, the valid values are "paybybandwidth" and "paybytraffic".
 
     <dt class="property-optional"
             title="Optional">
-        <span>master<wbr>Zone<wbr>Id</span>
+        <span id="masterzoneid_nodejs">
+<a href="#masterzoneid_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Zone<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -596,7 +678,9 @@ Before version 1.10.1, the valid values are "paybybandwidth" and "paybytraffic".
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -604,7 +688,9 @@ Before version 1.10.1, the valid values are "paybybandwidth" and "paybytraffic".
 
     <dt class="property-optional"
             title="Optional">
-        <span>period</span>
+        <span id="period_nodejs">
+<a href="#period_nodejs" style="color: inherit; text-decoration: inherit;">period</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -613,7 +699,9 @@ Before version 1.10.1, the valid values are "paybybandwidth" and "paybytraffic".
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource<wbr>Group<wbr>Id</span>
+        <span id="resourcegroupid_nodejs">
+<a href="#resourcegroupid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -622,7 +710,9 @@ Before version 1.10.1, the valid values are "paybybandwidth" and "paybytraffic".
 
     <dt class="property-optional"
             title="Optional">
-        <span>slave<wbr>Zone<wbr>Id</span>
+        <span id="slavezoneid_nodejs">
+<a href="#slavezoneid_nodejs" style="color: inherit; text-decoration: inherit;">slave<wbr>Zone<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -631,7 +721,9 @@ Before version 1.10.1, the valid values are "paybybandwidth" and "paybytraffic".
 
     <dt class="property-optional"
             title="Optional">
-        <span>specification</span>
+        <span id="specification_nodejs">
+<a href="#specification_nodejs" style="color: inherit; text-decoration: inherit;">specification</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -642,7 +734,9 @@ Launching "[Performance-guaranteed](https://www.alibabacloud.com/help/doc-detail
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -651,7 +745,9 @@ Launching "[Performance-guaranteed](https://www.alibabacloud.com/help/doc-detail
 
     <dt class="property-optional"
             title="Optional">
-        <span>vswitch<wbr>Id</span>
+        <span id="vswitchid_nodejs">
+<a href="#vswitchid_nodejs" style="color: inherit; text-decoration: inherit;">vswitch<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -667,7 +763,9 @@ Launching "[Performance-guaranteed](https://www.alibabacloud.com/help/doc-detail
 
     <dt class="property-optional"
             title="Optional">
-        <span>address</span>
+        <span id="address_python">
+<a href="#address_python" style="color: inherit; text-decoration: inherit;">address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -676,7 +774,9 @@ Launching "[Performance-guaranteed](https://www.alibabacloud.com/help/doc-detail
 
     <dt class="property-optional"
             title="Optional">
-        <span>address_<wbr>ip_<wbr>version</span>
+        <span id="address_ip_version_python">
+<a href="#address_ip_version_python" style="color: inherit; text-decoration: inherit;">address_<wbr>ip_<wbr>version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -685,7 +785,9 @@ Launching "[Performance-guaranteed](https://www.alibabacloud.com/help/doc-detail
 
     <dt class="property-optional"
             title="Optional">
-        <span>address_<wbr>type</span>
+        <span id="address_type_python">
+<a href="#address_type_python" style="color: inherit; text-decoration: inherit;">address_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -696,7 +798,9 @@ Launching "[Performance-guaranteed](https://www.alibabacloud.com/help/doc-detail
 
     <dt class="property-optional"
             title="Optional">
-        <span>bandwidth</span>
+        <span id="bandwidth_python">
+<a href="#bandwidth_python" style="color: inherit; text-decoration: inherit;">bandwidth</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -706,7 +810,9 @@ value is between 1 and 1000, If argument "internet_charge_type" is "paybytraffic
 
     <dt class="property-optional"
             title="Optional">
-        <span>delete_<wbr>protection</span>
+        <span id="delete_protection_python">
+<a href="#delete_protection_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>protection</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -715,7 +821,9 @@ value is between 1 and 1000, If argument "internet_charge_type" is "paybytraffic
 
     <dt class="property-optional"
             title="Optional">
-        <span>instance_<wbr>charge_<wbr>type</span>
+        <span id="instance_charge_type_python">
+<a href="#instance_charge_type_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>charge_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -724,7 +832,9 @@ value is between 1 and 1000, If argument "internet_charge_type" is "paybytraffic
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>internet</span>
+        <span id="internet_python">
+<a href="#internet_python" style="color: inherit; text-decoration: inherit;">internet</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -733,7 +843,9 @@ value is between 1 and 1000, If argument "internet_charge_type" is "paybytraffic
 
     <dt class="property-optional"
             title="Optional">
-        <span>internet_<wbr>charge_<wbr>type</span>
+        <span id="internet_charge_type_python">
+<a href="#internet_charge_type_python" style="color: inherit; text-decoration: inherit;">internet_<wbr>charge_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -744,7 +856,9 @@ Before version 1.10.1, the valid values are "paybybandwidth" and "paybytraffic".
 
     <dt class="property-optional"
             title="Optional">
-        <span>master_<wbr>zone_<wbr>id</span>
+        <span id="master_zone_id_python">
+<a href="#master_zone_id_python" style="color: inherit; text-decoration: inherit;">master_<wbr>zone_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -753,7 +867,9 @@ Before version 1.10.1, the valid values are "paybybandwidth" and "paybytraffic".
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -761,7 +877,9 @@ Before version 1.10.1, the valid values are "paybybandwidth" and "paybytraffic".
 
     <dt class="property-optional"
             title="Optional">
-        <span>period</span>
+        <span id="period_python">
+<a href="#period_python" style="color: inherit; text-decoration: inherit;">period</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -770,7 +888,9 @@ Before version 1.10.1, the valid values are "paybybandwidth" and "paybytraffic".
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource_<wbr>group_<wbr>id</span>
+        <span id="resource_group_id_python">
+<a href="#resource_group_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -779,7 +899,9 @@ Before version 1.10.1, the valid values are "paybybandwidth" and "paybytraffic".
 
     <dt class="property-optional"
             title="Optional">
-        <span>slave_<wbr>zone_<wbr>id</span>
+        <span id="slave_zone_id_python">
+<a href="#slave_zone_id_python" style="color: inherit; text-decoration: inherit;">slave_<wbr>zone_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -788,7 +910,9 @@ Before version 1.10.1, the valid values are "paybybandwidth" and "paybytraffic".
 
     <dt class="property-optional"
             title="Optional">
-        <span>specification</span>
+        <span id="specification_python">
+<a href="#specification_python" style="color: inherit; text-decoration: inherit;">specification</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -799,7 +923,9 @@ Launching "[Performance-guaranteed](https://www.alibabacloud.com/help/doc-detail
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -808,7 +934,9 @@ Launching "[Performance-guaranteed](https://www.alibabacloud.com/help/doc-detail
 
     <dt class="property-optional"
             title="Optional">
-        <span>vswitch_<wbr>id</span>
+        <span id="vswitch_id_python">
+<a href="#vswitch_id_python" style="color: inherit; text-decoration: inherit;">vswitch_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -835,7 +963,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -850,7 +980,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -865,7 +997,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -880,7 +1014,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1021,7 +1157,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Address</span>
+        <span id="state_address_csharp">
+<a href="#state_address_csharp" style="color: inherit; text-decoration: inherit;">Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1030,7 +1168,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Address<wbr>Ip<wbr>Version</span>
+        <span id="state_addressipversion_csharp">
+<a href="#state_addressipversion_csharp" style="color: inherit; text-decoration: inherit;">Address<wbr>Ip<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1039,7 +1179,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Address<wbr>Type</span>
+        <span id="state_addresstype_csharp">
+<a href="#state_addresstype_csharp" style="color: inherit; text-decoration: inherit;">Address<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1050,7 +1192,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Bandwidth</span>
+        <span id="state_bandwidth_csharp">
+<a href="#state_bandwidth_csharp" style="color: inherit; text-decoration: inherit;">Bandwidth</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1060,7 +1204,9 @@ value is between 1 and 1000, If argument "internet_charge_type" is "paybytraffic
 
     <dt class="property-optional"
             title="Optional">
-        <span>Delete<wbr>Protection</span>
+        <span id="state_deleteprotection_csharp">
+<a href="#state_deleteprotection_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>Protection</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1069,7 +1215,9 @@ value is between 1 and 1000, If argument "internet_charge_type" is "paybytraffic
 
     <dt class="property-optional"
             title="Optional">
-        <span>Instance<wbr>Charge<wbr>Type</span>
+        <span id="state_instancechargetype_csharp">
+<a href="#state_instancechargetype_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Charge<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1078,7 +1226,9 @@ value is between 1 and 1000, If argument "internet_charge_type" is "paybytraffic
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>Internet</span>
+        <span id="state_internet_csharp">
+<a href="#state_internet_csharp" style="color: inherit; text-decoration: inherit;">Internet</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1087,7 +1237,9 @@ value is between 1 and 1000, If argument "internet_charge_type" is "paybytraffic
 
     <dt class="property-optional"
             title="Optional">
-        <span>Internet<wbr>Charge<wbr>Type</span>
+        <span id="state_internetchargetype_csharp">
+<a href="#state_internetchargetype_csharp" style="color: inherit; text-decoration: inherit;">Internet<wbr>Charge<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1098,7 +1250,9 @@ Before version 1.10.1, the valid values are "paybybandwidth" and "paybytraffic".
 
     <dt class="property-optional"
             title="Optional">
-        <span>Master<wbr>Zone<wbr>Id</span>
+        <span id="state_masterzoneid_csharp">
+<a href="#state_masterzoneid_csharp" style="color: inherit; text-decoration: inherit;">Master<wbr>Zone<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1107,7 +1261,9 @@ Before version 1.10.1, the valid values are "paybybandwidth" and "paybytraffic".
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1115,7 +1271,9 @@ Before version 1.10.1, the valid values are "paybybandwidth" and "paybytraffic".
 
     <dt class="property-optional"
             title="Optional">
-        <span>Period</span>
+        <span id="state_period_csharp">
+<a href="#state_period_csharp" style="color: inherit; text-decoration: inherit;">Period</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1124,7 +1282,9 @@ Before version 1.10.1, the valid values are "paybybandwidth" and "paybytraffic".
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resource<wbr>Group<wbr>Id</span>
+        <span id="state_resourcegroupid_csharp">
+<a href="#state_resourcegroupid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1133,7 +1293,9 @@ Before version 1.10.1, the valid values are "paybybandwidth" and "paybytraffic".
 
     <dt class="property-optional"
             title="Optional">
-        <span>Slave<wbr>Zone<wbr>Id</span>
+        <span id="state_slavezoneid_csharp">
+<a href="#state_slavezoneid_csharp" style="color: inherit; text-decoration: inherit;">Slave<wbr>Zone<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1142,7 +1304,9 @@ Before version 1.10.1, the valid values are "paybybandwidth" and "paybytraffic".
 
     <dt class="property-optional"
             title="Optional">
-        <span>Specification</span>
+        <span id="state_specification_csharp">
+<a href="#state_specification_csharp" style="color: inherit; text-decoration: inherit;">Specification</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1153,7 +1317,9 @@ Launching "[Performance-guaranteed](https://www.alibabacloud.com/help/doc-detail
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="state_tags_csharp">
+<a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -1162,7 +1328,9 @@ Launching "[Performance-guaranteed](https://www.alibabacloud.com/help/doc-detail
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vswitch<wbr>Id</span>
+        <span id="state_vswitchid_csharp">
+<a href="#state_vswitchid_csharp" style="color: inherit; text-decoration: inherit;">Vswitch<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1178,7 +1346,9 @@ Launching "[Performance-guaranteed](https://www.alibabacloud.com/help/doc-detail
 
     <dt class="property-optional"
             title="Optional">
-        <span>Address</span>
+        <span id="state_address_go">
+<a href="#state_address_go" style="color: inherit; text-decoration: inherit;">Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1187,7 +1357,9 @@ Launching "[Performance-guaranteed](https://www.alibabacloud.com/help/doc-detail
 
     <dt class="property-optional"
             title="Optional">
-        <span>Address<wbr>Ip<wbr>Version</span>
+        <span id="state_addressipversion_go">
+<a href="#state_addressipversion_go" style="color: inherit; text-decoration: inherit;">Address<wbr>Ip<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1196,7 +1368,9 @@ Launching "[Performance-guaranteed](https://www.alibabacloud.com/help/doc-detail
 
     <dt class="property-optional"
             title="Optional">
-        <span>Address<wbr>Type</span>
+        <span id="state_addresstype_go">
+<a href="#state_addresstype_go" style="color: inherit; text-decoration: inherit;">Address<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1207,7 +1381,9 @@ Launching "[Performance-guaranteed](https://www.alibabacloud.com/help/doc-detail
 
     <dt class="property-optional"
             title="Optional">
-        <span>Bandwidth</span>
+        <span id="state_bandwidth_go">
+<a href="#state_bandwidth_go" style="color: inherit; text-decoration: inherit;">Bandwidth</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1217,7 +1393,9 @@ value is between 1 and 1000, If argument "internet_charge_type" is "paybytraffic
 
     <dt class="property-optional"
             title="Optional">
-        <span>Delete<wbr>Protection</span>
+        <span id="state_deleteprotection_go">
+<a href="#state_deleteprotection_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>Protection</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1226,7 +1404,9 @@ value is between 1 and 1000, If argument "internet_charge_type" is "paybytraffic
 
     <dt class="property-optional"
             title="Optional">
-        <span>Instance<wbr>Charge<wbr>Type</span>
+        <span id="state_instancechargetype_go">
+<a href="#state_instancechargetype_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Charge<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1235,7 +1415,9 @@ value is between 1 and 1000, If argument "internet_charge_type" is "paybytraffic
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>Internet</span>
+        <span id="state_internet_go">
+<a href="#state_internet_go" style="color: inherit; text-decoration: inherit;">Internet</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1244,7 +1426,9 @@ value is between 1 and 1000, If argument "internet_charge_type" is "paybytraffic
 
     <dt class="property-optional"
             title="Optional">
-        <span>Internet<wbr>Charge<wbr>Type</span>
+        <span id="state_internetchargetype_go">
+<a href="#state_internetchargetype_go" style="color: inherit; text-decoration: inherit;">Internet<wbr>Charge<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1255,7 +1439,9 @@ Before version 1.10.1, the valid values are "paybybandwidth" and "paybytraffic".
 
     <dt class="property-optional"
             title="Optional">
-        <span>Master<wbr>Zone<wbr>Id</span>
+        <span id="state_masterzoneid_go">
+<a href="#state_masterzoneid_go" style="color: inherit; text-decoration: inherit;">Master<wbr>Zone<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1264,7 +1450,9 @@ Before version 1.10.1, the valid values are "paybybandwidth" and "paybytraffic".
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1272,7 +1460,9 @@ Before version 1.10.1, the valid values are "paybybandwidth" and "paybytraffic".
 
     <dt class="property-optional"
             title="Optional">
-        <span>Period</span>
+        <span id="state_period_go">
+<a href="#state_period_go" style="color: inherit; text-decoration: inherit;">Period</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1281,7 +1471,9 @@ Before version 1.10.1, the valid values are "paybybandwidth" and "paybytraffic".
 
     <dt class="property-optional"
             title="Optional">
-        <span>Resource<wbr>Group<wbr>Id</span>
+        <span id="state_resourcegroupid_go">
+<a href="#state_resourcegroupid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1290,7 +1482,9 @@ Before version 1.10.1, the valid values are "paybybandwidth" and "paybytraffic".
 
     <dt class="property-optional"
             title="Optional">
-        <span>Slave<wbr>Zone<wbr>Id</span>
+        <span id="state_slavezoneid_go">
+<a href="#state_slavezoneid_go" style="color: inherit; text-decoration: inherit;">Slave<wbr>Zone<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1299,7 +1493,9 @@ Before version 1.10.1, the valid values are "paybybandwidth" and "paybytraffic".
 
     <dt class="property-optional"
             title="Optional">
-        <span>Specification</span>
+        <span id="state_specification_go">
+<a href="#state_specification_go" style="color: inherit; text-decoration: inherit;">Specification</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1310,7 +1506,9 @@ Launching "[Performance-guaranteed](https://www.alibabacloud.com/help/doc-detail
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="state_tags_go">
+<a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -1319,7 +1517,9 @@ Launching "[Performance-guaranteed](https://www.alibabacloud.com/help/doc-detail
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vswitch<wbr>Id</span>
+        <span id="state_vswitchid_go">
+<a href="#state_vswitchid_go" style="color: inherit; text-decoration: inherit;">Vswitch<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1335,7 +1535,9 @@ Launching "[Performance-guaranteed](https://www.alibabacloud.com/help/doc-detail
 
     <dt class="property-optional"
             title="Optional">
-        <span>address</span>
+        <span id="state_address_nodejs">
+<a href="#state_address_nodejs" style="color: inherit; text-decoration: inherit;">address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1344,7 +1546,9 @@ Launching "[Performance-guaranteed](https://www.alibabacloud.com/help/doc-detail
 
     <dt class="property-optional"
             title="Optional">
-        <span>address<wbr>Ip<wbr>Version</span>
+        <span id="state_addressipversion_nodejs">
+<a href="#state_addressipversion_nodejs" style="color: inherit; text-decoration: inherit;">address<wbr>Ip<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1353,7 +1557,9 @@ Launching "[Performance-guaranteed](https://www.alibabacloud.com/help/doc-detail
 
     <dt class="property-optional"
             title="Optional">
-        <span>address<wbr>Type</span>
+        <span id="state_addresstype_nodejs">
+<a href="#state_addresstype_nodejs" style="color: inherit; text-decoration: inherit;">address<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1364,7 +1570,9 @@ Launching "[Performance-guaranteed](https://www.alibabacloud.com/help/doc-detail
 
     <dt class="property-optional"
             title="Optional">
-        <span>bandwidth</span>
+        <span id="state_bandwidth_nodejs">
+<a href="#state_bandwidth_nodejs" style="color: inherit; text-decoration: inherit;">bandwidth</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1374,7 +1582,9 @@ value is between 1 and 1000, If argument "internet_charge_type" is "paybytraffic
 
     <dt class="property-optional"
             title="Optional">
-        <span>delete<wbr>Protection</span>
+        <span id="state_deleteprotection_nodejs">
+<a href="#state_deleteprotection_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>Protection</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1383,7 +1593,9 @@ value is between 1 and 1000, If argument "internet_charge_type" is "paybytraffic
 
     <dt class="property-optional"
             title="Optional">
-        <span>instance<wbr>Charge<wbr>Type</span>
+        <span id="state_instancechargetype_nodejs">
+<a href="#state_instancechargetype_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Charge<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1392,7 +1604,9 @@ value is between 1 and 1000, If argument "internet_charge_type" is "paybytraffic
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>internet</span>
+        <span id="state_internet_nodejs">
+<a href="#state_internet_nodejs" style="color: inherit; text-decoration: inherit;">internet</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1401,7 +1615,9 @@ value is between 1 and 1000, If argument "internet_charge_type" is "paybytraffic
 
     <dt class="property-optional"
             title="Optional">
-        <span>internet<wbr>Charge<wbr>Type</span>
+        <span id="state_internetchargetype_nodejs">
+<a href="#state_internetchargetype_nodejs" style="color: inherit; text-decoration: inherit;">internet<wbr>Charge<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1412,7 +1628,9 @@ Before version 1.10.1, the valid values are "paybybandwidth" and "paybytraffic".
 
     <dt class="property-optional"
             title="Optional">
-        <span>master<wbr>Zone<wbr>Id</span>
+        <span id="state_masterzoneid_nodejs">
+<a href="#state_masterzoneid_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Zone<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1421,7 +1639,9 @@ Before version 1.10.1, the valid values are "paybybandwidth" and "paybytraffic".
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1429,7 +1649,9 @@ Before version 1.10.1, the valid values are "paybybandwidth" and "paybytraffic".
 
     <dt class="property-optional"
             title="Optional">
-        <span>period</span>
+        <span id="state_period_nodejs">
+<a href="#state_period_nodejs" style="color: inherit; text-decoration: inherit;">period</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1438,7 +1660,9 @@ Before version 1.10.1, the valid values are "paybybandwidth" and "paybytraffic".
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource<wbr>Group<wbr>Id</span>
+        <span id="state_resourcegroupid_nodejs">
+<a href="#state_resourcegroupid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1447,7 +1671,9 @@ Before version 1.10.1, the valid values are "paybybandwidth" and "paybytraffic".
 
     <dt class="property-optional"
             title="Optional">
-        <span>slave<wbr>Zone<wbr>Id</span>
+        <span id="state_slavezoneid_nodejs">
+<a href="#state_slavezoneid_nodejs" style="color: inherit; text-decoration: inherit;">slave<wbr>Zone<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1456,7 +1682,9 @@ Before version 1.10.1, the valid values are "paybybandwidth" and "paybytraffic".
 
     <dt class="property-optional"
             title="Optional">
-        <span>specification</span>
+        <span id="state_specification_nodejs">
+<a href="#state_specification_nodejs" style="color: inherit; text-decoration: inherit;">specification</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1467,7 +1695,9 @@ Launching "[Performance-guaranteed](https://www.alibabacloud.com/help/doc-detail
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="state_tags_nodejs">
+<a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -1476,7 +1706,9 @@ Launching "[Performance-guaranteed](https://www.alibabacloud.com/help/doc-detail
 
     <dt class="property-optional"
             title="Optional">
-        <span>vswitch<wbr>Id</span>
+        <span id="state_vswitchid_nodejs">
+<a href="#state_vswitchid_nodejs" style="color: inherit; text-decoration: inherit;">vswitch<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1492,7 +1724,9 @@ Launching "[Performance-guaranteed](https://www.alibabacloud.com/help/doc-detail
 
     <dt class="property-optional"
             title="Optional">
-        <span>address</span>
+        <span id="state_address_python">
+<a href="#state_address_python" style="color: inherit; text-decoration: inherit;">address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1501,7 +1735,9 @@ Launching "[Performance-guaranteed](https://www.alibabacloud.com/help/doc-detail
 
     <dt class="property-optional"
             title="Optional">
-        <span>address_<wbr>ip_<wbr>version</span>
+        <span id="state_address_ip_version_python">
+<a href="#state_address_ip_version_python" style="color: inherit; text-decoration: inherit;">address_<wbr>ip_<wbr>version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1510,7 +1746,9 @@ Launching "[Performance-guaranteed](https://www.alibabacloud.com/help/doc-detail
 
     <dt class="property-optional"
             title="Optional">
-        <span>address_<wbr>type</span>
+        <span id="state_address_type_python">
+<a href="#state_address_type_python" style="color: inherit; text-decoration: inherit;">address_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1521,7 +1759,9 @@ Launching "[Performance-guaranteed](https://www.alibabacloud.com/help/doc-detail
 
     <dt class="property-optional"
             title="Optional">
-        <span>bandwidth</span>
+        <span id="state_bandwidth_python">
+<a href="#state_bandwidth_python" style="color: inherit; text-decoration: inherit;">bandwidth</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1531,7 +1771,9 @@ value is between 1 and 1000, If argument "internet_charge_type" is "paybytraffic
 
     <dt class="property-optional"
             title="Optional">
-        <span>delete_<wbr>protection</span>
+        <span id="state_delete_protection_python">
+<a href="#state_delete_protection_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>protection</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1540,7 +1782,9 @@ value is between 1 and 1000, If argument "internet_charge_type" is "paybytraffic
 
     <dt class="property-optional"
             title="Optional">
-        <span>instance_<wbr>charge_<wbr>type</span>
+        <span id="state_instance_charge_type_python">
+<a href="#state_instance_charge_type_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>charge_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1549,7 +1793,9 @@ value is between 1 and 1000, If argument "internet_charge_type" is "paybytraffic
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>internet</span>
+        <span id="state_internet_python">
+<a href="#state_internet_python" style="color: inherit; text-decoration: inherit;">internet</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1558,7 +1804,9 @@ value is between 1 and 1000, If argument "internet_charge_type" is "paybytraffic
 
     <dt class="property-optional"
             title="Optional">
-        <span>internet_<wbr>charge_<wbr>type</span>
+        <span id="state_internet_charge_type_python">
+<a href="#state_internet_charge_type_python" style="color: inherit; text-decoration: inherit;">internet_<wbr>charge_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1569,7 +1817,9 @@ Before version 1.10.1, the valid values are "paybybandwidth" and "paybytraffic".
 
     <dt class="property-optional"
             title="Optional">
-        <span>master_<wbr>zone_<wbr>id</span>
+        <span id="state_master_zone_id_python">
+<a href="#state_master_zone_id_python" style="color: inherit; text-decoration: inherit;">master_<wbr>zone_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1578,7 +1828,9 @@ Before version 1.10.1, the valid values are "paybybandwidth" and "paybytraffic".
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1586,7 +1838,9 @@ Before version 1.10.1, the valid values are "paybybandwidth" and "paybytraffic".
 
     <dt class="property-optional"
             title="Optional">
-        <span>period</span>
+        <span id="state_period_python">
+<a href="#state_period_python" style="color: inherit; text-decoration: inherit;">period</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1595,7 +1849,9 @@ Before version 1.10.1, the valid values are "paybybandwidth" and "paybytraffic".
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource_<wbr>group_<wbr>id</span>
+        <span id="state_resource_group_id_python">
+<a href="#state_resource_group_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1604,7 +1860,9 @@ Before version 1.10.1, the valid values are "paybybandwidth" and "paybytraffic".
 
     <dt class="property-optional"
             title="Optional">
-        <span>slave_<wbr>zone_<wbr>id</span>
+        <span id="state_slave_zone_id_python">
+<a href="#state_slave_zone_id_python" style="color: inherit; text-decoration: inherit;">slave_<wbr>zone_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1613,7 +1871,9 @@ Before version 1.10.1, the valid values are "paybybandwidth" and "paybytraffic".
 
     <dt class="property-optional"
             title="Optional">
-        <span>specification</span>
+        <span id="state_specification_python">
+<a href="#state_specification_python" style="color: inherit; text-decoration: inherit;">specification</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1624,7 +1884,9 @@ Launching "[Performance-guaranteed](https://www.alibabacloud.com/help/doc-detail
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="state_tags_python">
+<a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -1633,7 +1895,9 @@ Launching "[Performance-guaranteed](https://www.alibabacloud.com/help/doc-detail
 
     <dt class="property-optional"
             title="Optional">
-        <span>vswitch_<wbr>id</span>
+        <span id="state_vswitch_id_python">
+<a href="#state_vswitch_id_python" style="color: inherit; text-decoration: inherit;">vswitch_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

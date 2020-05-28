@@ -23,7 +23,23 @@ Provides an EDAS instance cluster attachment resource.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var @default = new AliCloud.Edas.InstanceClusterAttachment("default", new AliCloud.Edas.InstanceClusterAttachmentArgs
+        {
+            ClusterId = @var.Cluster_id,
+            InstanceIds = @var.Instance_ids,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -46,9 +62,9 @@ default = alicloud.edas.InstanceClusterAttachment("default",
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const default = new alicloud.edas.InstanceClusterAttachment("default", {
-    clusterId: var.cluster_id,
-    instanceIds: var.instance_ids,
+const _default = new alicloud.edas.InstanceClusterAttachment("default", {
+    clusterId: _var.cluster_id,
+    instanceIds: _var.instance_ids,
 });
 ```
 {{% /example %}}
@@ -239,7 +255,9 @@ The InstanceClusterAttachment resource accepts the following [input]({{< relref 
 
     <dt class="property-required"
             title="Required">
-        <span>Cluster<wbr>Id</span>
+        <span id="clusterid_csharp">
+<a href="#clusterid_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -248,7 +266,9 @@ The InstanceClusterAttachment resource accepts the following [input]({{< relref 
 
     <dt class="property-required"
             title="Required">
-        <span>Instance<wbr>Ids</span>
+        <span id="instanceids_csharp">
+<a href="#instanceids_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -264,7 +284,9 @@ The InstanceClusterAttachment resource accepts the following [input]({{< relref 
 
     <dt class="property-required"
             title="Required">
-        <span>Cluster<wbr>Id</span>
+        <span id="clusterid_go">
+<a href="#clusterid_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -273,7 +295,9 @@ The InstanceClusterAttachment resource accepts the following [input]({{< relref 
 
     <dt class="property-required"
             title="Required">
-        <span>Instance<wbr>Ids</span>
+        <span id="instanceids_go">
+<a href="#instanceids_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -289,7 +313,9 @@ The InstanceClusterAttachment resource accepts the following [input]({{< relref 
 
     <dt class="property-required"
             title="Required">
-        <span>cluster<wbr>Id</span>
+        <span id="clusterid_nodejs">
+<a href="#clusterid_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -298,7 +324,9 @@ The InstanceClusterAttachment resource accepts the following [input]({{< relref 
 
     <dt class="property-required"
             title="Required">
-        <span>instance<wbr>Ids</span>
+        <span id="instanceids_nodejs">
+<a href="#instanceids_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -314,7 +342,9 @@ The InstanceClusterAttachment resource accepts the following [input]({{< relref 
 
     <dt class="property-required"
             title="Required">
-        <span>cluster_<wbr>id</span>
+        <span id="cluster_id_python">
+<a href="#cluster_id_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -323,7 +353,9 @@ The InstanceClusterAttachment resource accepts the following [input]({{< relref 
 
     <dt class="property-required"
             title="Required">
-        <span>instance_<wbr>ids</span>
+        <span id="instance_ids_python">
+<a href="#instance_ids_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -350,7 +382,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Cluster<wbr>Member<wbr>Ids</span>
+        <span id="clustermemberids_csharp">
+<a href="#clustermemberids_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Member<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -359,7 +393,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Ecu<wbr>Map</span>
+        <span id="ecumap_csharp">
+<a href="#ecumap_csharp" style="color: inherit; text-decoration: inherit;">Ecu<wbr>Map</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -368,7 +404,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -376,7 +414,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Status<wbr>Map</span>
+        <span id="statusmap_csharp">
+<a href="#statusmap_csharp" style="color: inherit; text-decoration: inherit;">Status<wbr>Map</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, int&gt;</span>
     </dt>
@@ -392,7 +432,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Cluster<wbr>Member<wbr>Ids</span>
+        <span id="clustermemberids_go">
+<a href="#clustermemberids_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Member<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -401,7 +443,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Ecu<wbr>Map</span>
+        <span id="ecumap_go">
+<a href="#ecumap_go" style="color: inherit; text-decoration: inherit;">Ecu<wbr>Map</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -410,7 +454,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -418,7 +464,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Status<wbr>Map</span>
+        <span id="statusmap_go">
+<a href="#statusmap_go" style="color: inherit; text-decoration: inherit;">Status<wbr>Map</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]int</span>
     </dt>
@@ -434,7 +482,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>cluster<wbr>Member<wbr>Ids</span>
+        <span id="clustermemberids_nodejs">
+<a href="#clustermemberids_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Member<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -443,7 +493,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>ecu<wbr>Map</span>
+        <span id="ecumap_nodejs">
+<a href="#ecumap_nodejs" style="color: inherit; text-decoration: inherit;">ecu<wbr>Map</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -452,7 +504,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -460,7 +514,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>status<wbr>Map</span>
+        <span id="statusmap_nodejs">
+<a href="#statusmap_nodejs" style="color: inherit; text-decoration: inherit;">status<wbr>Map</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: number}</span>
     </dt>
@@ -476,7 +532,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>cluster_<wbr>member_<wbr>ids</span>
+        <span id="cluster_member_ids_python">
+<a href="#cluster_member_ids_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>member_<wbr>ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -485,7 +543,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>ecu_<wbr>map</span>
+        <span id="ecu_map_python">
+<a href="#ecu_map_python" style="color: inherit; text-decoration: inherit;">ecu_<wbr>map</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -494,7 +554,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -502,7 +564,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>status_<wbr>map</span>
+        <span id="status_map_python">
+<a href="#status_map_python" style="color: inherit; text-decoration: inherit;">status_<wbr>map</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Integer]</span>
     </dt>
@@ -644,7 +708,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cluster<wbr>Id</span>
+        <span id="state_clusterid_csharp">
+<a href="#state_clusterid_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -653,7 +719,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cluster<wbr>Member<wbr>Ids</span>
+        <span id="state_clustermemberids_csharp">
+<a href="#state_clustermemberids_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Member<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -662,7 +730,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ecu<wbr>Map</span>
+        <span id="state_ecumap_csharp">
+<a href="#state_ecumap_csharp" style="color: inherit; text-decoration: inherit;">Ecu<wbr>Map</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -671,7 +741,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Instance<wbr>Ids</span>
+        <span id="state_instanceids_csharp">
+<a href="#state_instanceids_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -680,7 +752,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Status<wbr>Map</span>
+        <span id="state_statusmap_csharp">
+<a href="#state_statusmap_csharp" style="color: inherit; text-decoration: inherit;">Status<wbr>Map</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, int&gt;</span>
     </dt>
@@ -696,7 +770,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cluster<wbr>Id</span>
+        <span id="state_clusterid_go">
+<a href="#state_clusterid_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -705,7 +781,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cluster<wbr>Member<wbr>Ids</span>
+        <span id="state_clustermemberids_go">
+<a href="#state_clustermemberids_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Member<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -714,7 +792,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ecu<wbr>Map</span>
+        <span id="state_ecumap_go">
+<a href="#state_ecumap_go" style="color: inherit; text-decoration: inherit;">Ecu<wbr>Map</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -723,7 +803,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Instance<wbr>Ids</span>
+        <span id="state_instanceids_go">
+<a href="#state_instanceids_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -732,7 +814,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Status<wbr>Map</span>
+        <span id="state_statusmap_go">
+<a href="#state_statusmap_go" style="color: inherit; text-decoration: inherit;">Status<wbr>Map</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]int</span>
     </dt>
@@ -748,7 +832,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>cluster<wbr>Id</span>
+        <span id="state_clusterid_nodejs">
+<a href="#state_clusterid_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -757,7 +843,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>cluster<wbr>Member<wbr>Ids</span>
+        <span id="state_clustermemberids_nodejs">
+<a href="#state_clustermemberids_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Member<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -766,7 +854,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>ecu<wbr>Map</span>
+        <span id="state_ecumap_nodejs">
+<a href="#state_ecumap_nodejs" style="color: inherit; text-decoration: inherit;">ecu<wbr>Map</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -775,7 +865,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>instance<wbr>Ids</span>
+        <span id="state_instanceids_nodejs">
+<a href="#state_instanceids_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -784,7 +876,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>status<wbr>Map</span>
+        <span id="state_statusmap_nodejs">
+<a href="#state_statusmap_nodejs" style="color: inherit; text-decoration: inherit;">status<wbr>Map</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: number}</span>
     </dt>
@@ -800,7 +894,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>cluster_<wbr>id</span>
+        <span id="state_cluster_id_python">
+<a href="#state_cluster_id_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -809,7 +905,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>cluster_<wbr>member_<wbr>ids</span>
+        <span id="state_cluster_member_ids_python">
+<a href="#state_cluster_member_ids_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>member_<wbr>ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -818,7 +916,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>ecu_<wbr>map</span>
+        <span id="state_ecu_map_python">
+<a href="#state_ecu_map_python" style="color: inherit; text-decoration: inherit;">ecu_<wbr>map</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -827,7 +927,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>instance_<wbr>ids</span>
+        <span id="state_instance_ids_python">
+<a href="#state_instance_ids_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -836,7 +938,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>status_<wbr>map</span>
+        <span id="state_status_map_python">
+<a href="#state_status_map_python" style="color: inherit; text-decoration: inherit;">status_<wbr>map</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Integer]</span>
     </dt>
