@@ -1,13 +1,23 @@
 ---
-title: Before you begin | Kubernetes
-h1: Before you begin
-linktitle: Before you begin
+title: Before You Begin | Kubernetes
+h1: Before You Begin
+linktitle: Before You Begin
 meta_desc: This page provides an overview on how to get started with Pulumi when starting an Kubernetes project.
-weight: 10000
-block_external_search_index: true
-exclude_from_pulumi_search_index: true
+weight: 2
+menu:
+  getstarted:
+    parent: kubernetes
+    identifier: kubernetes-begin
 
-aliases: ["/docs/quickstart/kubernetes/begin/"]
+aliases: [
+  "/docs/quickstart/kubernetes/begin/",
+  "/docs/quickstart/kubernetes/install-pulumi/",
+  "/docs/quickstart/kubernetes/install-language-runtime/",
+  "/docs/quickstart/kubernetes/configure/",
+  "/docs/get-started/kubernetes/install-pulumi/",
+  "/docs/get-started/kubernetes/install-language-runtime/",
+  "/docs/get-started/kubernetes/configure/"
+]
 ---
 
 Before we get started using Pulumi, let's run through a few quick steps to ensure our environment is setup correctly.
@@ -48,5 +58,4 @@ Next, we'll configure Kubernetes.
 
 Next, we'll create a new project.
 
-<a data-track="previous-step" class="btn" href="/docs/get-started/kubernetes/">&lt; PREVIOUS STEP</a>
-<a data-track="next-step" class="btn" href="/docs/get-started/kubernetes/create-project/">CREATE A NEW PROJECT &gt;</a>
+{{< get-started-stepper >}}

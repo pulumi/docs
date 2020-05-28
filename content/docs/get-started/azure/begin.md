@@ -1,13 +1,23 @@
 ---
-title: Before you begin | Azure
-h1: Before you begin
-linktitle: Before you begin
+title: Before You Begin | Azure
+h1: Before You Begin
+linktitle: Before You Begin
 meta_desc: This page provides an overview on how to get started with Pulumi when starting an Azure project.
-weight: 10000
-block_external_search_index: true
-exclude_from_pulumi_search_index: true
+weight: 2
+menu:
+  getstarted:
+    parent: azure
+    identifier: azure-begin
 
-aliases: ["/docs/quickstart/azure/begin/"]
+aliases: [
+  "/docs/quickstart/azure/begin/",
+  "/docs/quickstart/azure/install-pulumi/",
+  "/docs/quickstart/azure/install-language-runtime/",
+  "/docs/quickstart/azure/configure/",
+  "/docs/get-started/azure/install-pulumi/",
+  "/docs/get-started/azure/install-language-runtime/",
+  "/docs/get-started/azure/configure/"
+]
 ---
 
 Before we get started using Pulumi, let's run through a few quick steps to ensure our environment is setup correctly.
@@ -48,5 +58,4 @@ Next, we'll configure Azure.
 
 Next, we'll create a new project.
 
-<a data-track="previous-step" class="btn" href="/docs/get-started/azure/">&lt; PREVIOUS STEP</a>
-<a data-track="next-step" class="btn" href="/docs/get-started/azure/create-project/">CREATE A NEW PROJECT &gt;</a>
+{{< get-started-stepper >}}
