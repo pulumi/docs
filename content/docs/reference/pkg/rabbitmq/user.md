@@ -23,7 +23,27 @@ The ``rabbitmq..User`` resource creates and manages a user.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using RabbitMQ = Pulumi.RabbitMQ;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var test = new RabbitMQ.User("test", new RabbitMQ.UserArgs
+        {
+            Password = "foobar",
+            Tags = 
+            {
+                "administrator",
+                "management",
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -245,7 +265,9 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 
     <dt class="property-required"
             title="Required">
-        <span>Password</span>
+        <span id="password_csharp">
+<a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -255,7 +277,9 @@ is plain-text so make sure to secure where this is defined.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -264,7 +288,9 @@ is plain-text so make sure to secure where this is defined.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -281,7 +307,9 @@ options are: management, policymaker, monitoring, and administrator.
 
     <dt class="property-required"
             title="Required">
-        <span>Password</span>
+        <span id="password_go">
+<a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -291,7 +319,9 @@ is plain-text so make sure to secure where this is defined.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -300,7 +330,9 @@ is plain-text so make sure to secure where this is defined.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -317,7 +349,9 @@ options are: management, policymaker, monitoring, and administrator.
 
     <dt class="property-required"
             title="Required">
-        <span>password</span>
+        <span id="password_nodejs">
+<a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -327,7 +361,9 @@ is plain-text so make sure to secure where this is defined.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -336,7 +372,9 @@ is plain-text so make sure to secure where this is defined.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -353,7 +391,9 @@ options are: management, policymaker, monitoring, and administrator.
 
     <dt class="property-required"
             title="Required">
-        <span>password</span>
+        <span id="password_python">
+<a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -363,7 +403,9 @@ is plain-text so make sure to secure where this is defined.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -372,7 +414,9 @@ is plain-text so make sure to secure where this is defined.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -400,7 +444,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -415,7 +461,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -430,7 +478,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -445,7 +495,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -586,7 +638,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -595,7 +649,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Password</span>
+        <span id="state_password_csharp">
+<a href="#state_password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -605,7 +661,9 @@ is plain-text so make sure to secure where this is defined.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="state_tags_csharp">
+<a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -622,7 +680,9 @@ options are: management, policymaker, monitoring, and administrator.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -631,7 +691,9 @@ options are: management, policymaker, monitoring, and administrator.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Password</span>
+        <span id="state_password_go">
+<a href="#state_password_go" style="color: inherit; text-decoration: inherit;">Password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -641,7 +703,9 @@ is plain-text so make sure to secure where this is defined.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="state_tags_go">
+<a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -658,7 +722,9 @@ options are: management, policymaker, monitoring, and administrator.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -667,7 +733,9 @@ options are: management, policymaker, monitoring, and administrator.
 
     <dt class="property-optional"
             title="Optional">
-        <span>password</span>
+        <span id="state_password_nodejs">
+<a href="#state_password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -677,7 +745,9 @@ is plain-text so make sure to secure where this is defined.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="state_tags_nodejs">
+<a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -694,7 +764,9 @@ options are: management, policymaker, monitoring, and administrator.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -703,7 +775,9 @@ options are: management, policymaker, monitoring, and administrator.
 
     <dt class="property-optional"
             title="Optional">
-        <span>password</span>
+        <span id="state_password_python">
+<a href="#state_password_python" style="color: inherit; text-decoration: inherit;">password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -713,7 +787,9 @@ is plain-text so make sure to secure where this is defined.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="state_tags_python">
+<a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>

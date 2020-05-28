@@ -21,7 +21,46 @@ and queues.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using RabbitMQ = Pulumi.RabbitMQ;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var testVHost = new RabbitMQ.VHost("testVHost", new RabbitMQ.VHostArgs
+        {
+        });
+        var guest = new RabbitMQ.Permissions("guest", new RabbitMQ.PermissionsArgs
+        {
+            Permissions = new RabbitMQ.Inputs.PermissionsPermissionsArgs
+            {
+                Configure = ".*",
+                Read = ".*",
+                Write = ".*",
+            },
+            User = "guest",
+            Vhost = testVHost.Name,
+        });
+        var testPolicy = new RabbitMQ.Policy("testPolicy", new RabbitMQ.PolicyArgs
+        {
+            Policy = new RabbitMQ.Inputs.PolicyPolicyArgs
+            {
+                ApplyTo = "all",
+                Definition = 
+                {
+                    { "ha-mode", "all" },
+                },
+                Pattern = ".*",
+                Priority = 0,
+            },
+            Vhost = guest.Vhost,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -270,7 +309,9 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-required"
             title="Required">
-        <span>Policy<wbr>Block</span>
+        <span id="policyblock_csharp">
+<a href="#policyblock_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Block</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policypolicy">Pulumi.<wbr>Rabbit<wbr>MQ.<wbr>Inputs.<wbr>Policy<wbr>Policy<wbr>Args</a></span>
     </dt>
@@ -280,7 +321,9 @@ described below.
 
     <dt class="property-required"
             title="Required">
-        <span>Vhost</span>
+        <span id="vhost_csharp">
+<a href="#vhost_csharp" style="color: inherit; text-decoration: inherit;">Vhost</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -289,7 +332,9 @@ described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -305,7 +350,9 @@ described below.
 
     <dt class="property-required"
             title="Required">
-        <span>Policy</span>
+        <span id="policy_go">
+<a href="#policy_go" style="color: inherit; text-decoration: inherit;">Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policypolicy">Policy<wbr>Policy</a></span>
     </dt>
@@ -315,7 +362,9 @@ described below.
 
     <dt class="property-required"
             title="Required">
-        <span>Vhost</span>
+        <span id="vhost_go">
+<a href="#vhost_go" style="color: inherit; text-decoration: inherit;">Vhost</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -324,7 +373,9 @@ described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -340,7 +391,9 @@ described below.
 
     <dt class="property-required"
             title="Required">
-        <span>policy</span>
+        <span id="policy_nodejs">
+<a href="#policy_nodejs" style="color: inherit; text-decoration: inherit;">policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policypolicy">Policy<wbr>Policy</a></span>
     </dt>
@@ -350,7 +403,9 @@ described below.
 
     <dt class="property-required"
             title="Required">
-        <span>vhost</span>
+        <span id="vhost_nodejs">
+<a href="#vhost_nodejs" style="color: inherit; text-decoration: inherit;">vhost</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -359,7 +414,9 @@ described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -375,7 +432,9 @@ described below.
 
     <dt class="property-required"
             title="Required">
-        <span>policy</span>
+        <span id="policy_python">
+<a href="#policy_python" style="color: inherit; text-decoration: inherit;">policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policypolicy">Dict[Policy<wbr>Policy]</a></span>
     </dt>
@@ -385,7 +444,9 @@ described below.
 
     <dt class="property-required"
             title="Required">
-        <span>vhost</span>
+        <span id="vhost_python">
+<a href="#vhost_python" style="color: inherit; text-decoration: inherit;">vhost</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -394,7 +455,9 @@ described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -421,7 +484,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -436,7 +501,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -451,7 +518,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -466,7 +535,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -607,7 +678,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -616,7 +689,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Policy<wbr>Block</span>
+        <span id="state_policyblock_csharp">
+<a href="#state_policyblock_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Block</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policypolicy">Pulumi.<wbr>Rabbit<wbr>MQ.<wbr>Inputs.<wbr>Policy<wbr>Policy<wbr>Args</a></span>
     </dt>
@@ -626,7 +701,9 @@ described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vhost</span>
+        <span id="state_vhost_csharp">
+<a href="#state_vhost_csharp" style="color: inherit; text-decoration: inherit;">Vhost</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -642,7 +719,9 @@ described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -651,7 +730,9 @@ described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Policy</span>
+        <span id="state_policy_go">
+<a href="#state_policy_go" style="color: inherit; text-decoration: inherit;">Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policypolicy">Policy<wbr>Policy</a></span>
     </dt>
@@ -661,7 +742,9 @@ described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vhost</span>
+        <span id="state_vhost_go">
+<a href="#state_vhost_go" style="color: inherit; text-decoration: inherit;">Vhost</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -677,7 +760,9 @@ described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -686,7 +771,9 @@ described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>policy</span>
+        <span id="state_policy_nodejs">
+<a href="#state_policy_nodejs" style="color: inherit; text-decoration: inherit;">policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policypolicy">Policy<wbr>Policy</a></span>
     </dt>
@@ -696,7 +783,9 @@ described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>vhost</span>
+        <span id="state_vhost_nodejs">
+<a href="#state_vhost_nodejs" style="color: inherit; text-decoration: inherit;">vhost</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -712,7 +801,9 @@ described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -721,7 +812,9 @@ described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>policy</span>
+        <span id="state_policy_python">
+<a href="#state_policy_python" style="color: inherit; text-decoration: inherit;">policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policypolicy">Dict[Policy<wbr>Policy]</a></span>
     </dt>
@@ -731,7 +824,9 @@ described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>vhost</span>
+        <span id="state_vhost_python">
+<a href="#state_vhost_python" style="color: inherit; text-decoration: inherit;">vhost</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -773,7 +868,9 @@ described below.
 
     <dt class="property-required"
             title="Required">
-        <span>Apply<wbr>To</span>
+        <span id="applyto_csharp">
+<a href="#applyto_csharp" style="color: inherit; text-decoration: inherit;">Apply<wbr>To</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -782,7 +879,9 @@ described below.
 
     <dt class="property-required"
             title="Required">
-        <span>Definition</span>
+        <span id="definition_csharp">
+<a href="#definition_csharp" style="color: inherit; text-decoration: inherit;">Definition</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -792,7 +891,9 @@ RabbitMQ documentation for definition references and examples.
 
     <dt class="property-required"
             title="Required">
-        <span>Pattern</span>
+        <span id="pattern_csharp">
+<a href="#pattern_csharp" style="color: inherit; text-decoration: inherit;">Pattern</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -801,7 +902,9 @@ RabbitMQ documentation for definition references and examples.
 
     <dt class="property-required"
             title="Required">
-        <span>Priority</span>
+        <span id="priority_csharp">
+<a href="#priority_csharp" style="color: inherit; text-decoration: inherit;">Priority</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -817,7 +920,9 @@ RabbitMQ documentation for definition references and examples.
 
     <dt class="property-required"
             title="Required">
-        <span>Apply<wbr>To</span>
+        <span id="applyto_go">
+<a href="#applyto_go" style="color: inherit; text-decoration: inherit;">Apply<wbr>To</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -826,7 +931,9 @@ RabbitMQ documentation for definition references and examples.
 
     <dt class="property-required"
             title="Required">
-        <span>Definition</span>
+        <span id="definition_go">
+<a href="#definition_go" style="color: inherit; text-decoration: inherit;">Definition</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -836,7 +943,9 @@ RabbitMQ documentation for definition references and examples.
 
     <dt class="property-required"
             title="Required">
-        <span>Pattern</span>
+        <span id="pattern_go">
+<a href="#pattern_go" style="color: inherit; text-decoration: inherit;">Pattern</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -845,7 +954,9 @@ RabbitMQ documentation for definition references and examples.
 
     <dt class="property-required"
             title="Required">
-        <span>Priority</span>
+        <span id="priority_go">
+<a href="#priority_go" style="color: inherit; text-decoration: inherit;">Priority</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -861,7 +972,9 @@ RabbitMQ documentation for definition references and examples.
 
     <dt class="property-required"
             title="Required">
-        <span>apply<wbr>To</span>
+        <span id="applyto_nodejs">
+<a href="#applyto_nodejs" style="color: inherit; text-decoration: inherit;">apply<wbr>To</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -870,7 +983,9 @@ RabbitMQ documentation for definition references and examples.
 
     <dt class="property-required"
             title="Required">
-        <span>definition</span>
+        <span id="definition_nodejs">
+<a href="#definition_nodejs" style="color: inherit; text-decoration: inherit;">definition</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -880,7 +995,9 @@ RabbitMQ documentation for definition references and examples.
 
     <dt class="property-required"
             title="Required">
-        <span>pattern</span>
+        <span id="pattern_nodejs">
+<a href="#pattern_nodejs" style="color: inherit; text-decoration: inherit;">pattern</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -889,7 +1006,9 @@ RabbitMQ documentation for definition references and examples.
 
     <dt class="property-required"
             title="Required">
-        <span>priority</span>
+        <span id="priority_nodejs">
+<a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -905,7 +1024,9 @@ RabbitMQ documentation for definition references and examples.
 
     <dt class="property-required"
             title="Required">
-        <span>apply<wbr>To</span>
+        <span id="applyto_python">
+<a href="#applyto_python" style="color: inherit; text-decoration: inherit;">apply<wbr>To</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -914,7 +1035,9 @@ RabbitMQ documentation for definition references and examples.
 
     <dt class="property-required"
             title="Required">
-        <span>definition</span>
+        <span id="definition_python">
+<a href="#definition_python" style="color: inherit; text-decoration: inherit;">definition</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -924,7 +1047,9 @@ RabbitMQ documentation for definition references and examples.
 
     <dt class="property-required"
             title="Required">
-        <span>pattern</span>
+        <span id="pattern_python">
+<a href="#pattern_python" style="color: inherit; text-decoration: inherit;">pattern</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -933,7 +1058,9 @@ RabbitMQ documentation for definition references and examples.
 
     <dt class="property-required"
             title="Required">
-        <span>priority</span>
+        <span id="priority_python">
+<a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
