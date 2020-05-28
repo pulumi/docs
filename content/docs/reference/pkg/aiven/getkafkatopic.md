@@ -18,7 +18,24 @@ meta_desc: "Explore the GetKafkaTopic function of the Aiven package, including e
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aiven = Pulumi.Aiven;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var mytesttopic = Output.Create(Aiven.GetKafkaTopic.InvokeAsync(new Aiven.GetKafkaTopicArgs
+        {
+            Project = data.Aiven_service.Myservice.Project,
+            ServiceName = data.Aiven_service.Myservice.Service_name,
+            TopicName = "<TOPIC_NAME>",
+        }));
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -92,7 +109,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Project</span>
+        <span id="project_csharp">
+<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -100,7 +119,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Service<wbr>Name</span>
+        <span id="servicename_csharp">
+<a href="#servicename_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -108,7 +129,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Topic<wbr>Name</span>
+        <span id="topicname_csharp">
+<a href="#topicname_csharp" style="color: inherit; text-decoration: inherit;">Topic<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -116,7 +139,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cleanup<wbr>Policy</span>
+        <span id="cleanuppolicy_csharp">
+<a href="#cleanuppolicy_csharp" style="color: inherit; text-decoration: inherit;">Cleanup<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -124,7 +149,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Minimum<wbr>In<wbr>Sync<wbr>Replicas</span>
+        <span id="minimuminsyncreplicas_csharp">
+<a href="#minimuminsyncreplicas_csharp" style="color: inherit; text-decoration: inherit;">Minimum<wbr>In<wbr>Sync<wbr>Replicas</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -132,7 +159,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Partitions</span>
+        <span id="partitions_csharp">
+<a href="#partitions_csharp" style="color: inherit; text-decoration: inherit;">Partitions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -140,7 +169,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Replication</span>
+        <span id="replication_csharp">
+<a href="#replication_csharp" style="color: inherit; text-decoration: inherit;">Replication</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -148,7 +179,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Retention<wbr>Bytes</span>
+        <span id="retentionbytes_csharp">
+<a href="#retentionbytes_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Bytes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -156,7 +189,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Retention<wbr>Hours</span>
+        <span id="retentionhours_csharp">
+<a href="#retentionhours_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Hours</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -164,7 +199,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Termination<wbr>Protection</span>
+        <span id="terminationprotection_csharp">
+<a href="#terminationprotection_csharp" style="color: inherit; text-decoration: inherit;">Termination<wbr>Protection</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -179,7 +216,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Project</span>
+        <span id="project_go">
+<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -187,7 +226,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Service<wbr>Name</span>
+        <span id="servicename_go">
+<a href="#servicename_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -195,7 +236,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Topic<wbr>Name</span>
+        <span id="topicname_go">
+<a href="#topicname_go" style="color: inherit; text-decoration: inherit;">Topic<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -203,7 +246,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cleanup<wbr>Policy</span>
+        <span id="cleanuppolicy_go">
+<a href="#cleanuppolicy_go" style="color: inherit; text-decoration: inherit;">Cleanup<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -211,7 +256,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Minimum<wbr>In<wbr>Sync<wbr>Replicas</span>
+        <span id="minimuminsyncreplicas_go">
+<a href="#minimuminsyncreplicas_go" style="color: inherit; text-decoration: inherit;">Minimum<wbr>In<wbr>Sync<wbr>Replicas</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -219,7 +266,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Partitions</span>
+        <span id="partitions_go">
+<a href="#partitions_go" style="color: inherit; text-decoration: inherit;">Partitions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -227,7 +276,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Replication</span>
+        <span id="replication_go">
+<a href="#replication_go" style="color: inherit; text-decoration: inherit;">Replication</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -235,7 +286,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Retention<wbr>Bytes</span>
+        <span id="retentionbytes_go">
+<a href="#retentionbytes_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Bytes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -243,7 +296,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Retention<wbr>Hours</span>
+        <span id="retentionhours_go">
+<a href="#retentionhours_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Hours</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -251,7 +306,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Termination<wbr>Protection</span>
+        <span id="terminationprotection_go">
+<a href="#terminationprotection_go" style="color: inherit; text-decoration: inherit;">Termination<wbr>Protection</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -266,7 +323,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>project</span>
+        <span id="project_nodejs">
+<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -274,7 +333,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>service<wbr>Name</span>
+        <span id="servicename_nodejs">
+<a href="#servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -282,7 +343,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>topic<wbr>Name</span>
+        <span id="topicname_nodejs">
+<a href="#topicname_nodejs" style="color: inherit; text-decoration: inherit;">topic<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -290,7 +353,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>cleanup<wbr>Policy</span>
+        <span id="cleanuppolicy_nodejs">
+<a href="#cleanuppolicy_nodejs" style="color: inherit; text-decoration: inherit;">cleanup<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -298,7 +363,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>minimum<wbr>In<wbr>Sync<wbr>Replicas</span>
+        <span id="minimuminsyncreplicas_nodejs">
+<a href="#minimuminsyncreplicas_nodejs" style="color: inherit; text-decoration: inherit;">minimum<wbr>In<wbr>Sync<wbr>Replicas</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -306,7 +373,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>partitions</span>
+        <span id="partitions_nodejs">
+<a href="#partitions_nodejs" style="color: inherit; text-decoration: inherit;">partitions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -314,7 +383,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>replication</span>
+        <span id="replication_nodejs">
+<a href="#replication_nodejs" style="color: inherit; text-decoration: inherit;">replication</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -322,7 +393,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>retention<wbr>Bytes</span>
+        <span id="retentionbytes_nodejs">
+<a href="#retentionbytes_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Bytes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -330,7 +403,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>retention<wbr>Hours</span>
+        <span id="retentionhours_nodejs">
+<a href="#retentionhours_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Hours</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -338,7 +413,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>termination<wbr>Protection</span>
+        <span id="terminationprotection_nodejs">
+<a href="#terminationprotection_nodejs" style="color: inherit; text-decoration: inherit;">termination<wbr>Protection</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -353,7 +430,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>project</span>
+        <span id="project_python">
+<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -361,7 +440,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>service_<wbr>name</span>
+        <span id="service_name_python">
+<a href="#service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -369,7 +450,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>topic_<wbr>name</span>
+        <span id="topic_name_python">
+<a href="#topic_name_python" style="color: inherit; text-decoration: inherit;">topic_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -377,7 +460,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>cleanup_<wbr>policy</span>
+        <span id="cleanup_policy_python">
+<a href="#cleanup_policy_python" style="color: inherit; text-decoration: inherit;">cleanup_<wbr>policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -385,7 +470,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>minimum_<wbr>in_<wbr>sync_<wbr>replicas</span>
+        <span id="minimum_in_sync_replicas_python">
+<a href="#minimum_in_sync_replicas_python" style="color: inherit; text-decoration: inherit;">minimum_<wbr>in_<wbr>sync_<wbr>replicas</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -393,7 +480,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>partitions</span>
+        <span id="partitions_python">
+<a href="#partitions_python" style="color: inherit; text-decoration: inherit;">partitions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -401,7 +490,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>replication</span>
+        <span id="replication_python">
+<a href="#replication_python" style="color: inherit; text-decoration: inherit;">replication</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -409,7 +500,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>retention_<wbr>bytes</span>
+        <span id="retention_bytes_python">
+<a href="#retention_bytes_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>bytes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -417,7 +510,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>retention_<wbr>hours</span>
+        <span id="retention_hours_python">
+<a href="#retention_hours_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>hours</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -425,7 +520,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>termination_<wbr>protection</span>
+        <span id="termination_protection_python">
+<a href="#termination_protection_python" style="color: inherit; text-decoration: inherit;">termination_<wbr>protection</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -453,7 +550,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -462,7 +561,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Project</span>
+        <span id="project_csharp">
+<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -470,7 +571,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Service<wbr>Name</span>
+        <span id="servicename_csharp">
+<a href="#servicename_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -478,7 +581,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Topic<wbr>Name</span>
+        <span id="topicname_csharp">
+<a href="#topicname_csharp" style="color: inherit; text-decoration: inherit;">Topic<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -486,7 +591,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Cleanup<wbr>Policy</span>
+        <span id="cleanuppolicy_csharp">
+<a href="#cleanuppolicy_csharp" style="color: inherit; text-decoration: inherit;">Cleanup<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -494,7 +601,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Minimum<wbr>In<wbr>Sync<wbr>Replicas</span>
+        <span id="minimuminsyncreplicas_csharp">
+<a href="#minimuminsyncreplicas_csharp" style="color: inherit; text-decoration: inherit;">Minimum<wbr>In<wbr>Sync<wbr>Replicas</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -502,7 +611,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Partitions</span>
+        <span id="partitions_csharp">
+<a href="#partitions_csharp" style="color: inherit; text-decoration: inherit;">Partitions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -510,7 +621,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Replication</span>
+        <span id="replication_csharp">
+<a href="#replication_csharp" style="color: inherit; text-decoration: inherit;">Replication</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -518,7 +631,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Retention<wbr>Bytes</span>
+        <span id="retentionbytes_csharp">
+<a href="#retentionbytes_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Bytes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -526,7 +641,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Retention<wbr>Hours</span>
+        <span id="retentionhours_csharp">
+<a href="#retentionhours_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Hours</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -534,7 +651,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Termination<wbr>Protection</span>
+        <span id="terminationprotection_csharp">
+<a href="#terminationprotection_csharp" style="color: inherit; text-decoration: inherit;">Termination<wbr>Protection</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -549,7 +668,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -558,7 +679,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Project</span>
+        <span id="project_go">
+<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -566,7 +689,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Service<wbr>Name</span>
+        <span id="servicename_go">
+<a href="#servicename_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -574,7 +699,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Topic<wbr>Name</span>
+        <span id="topicname_go">
+<a href="#topicname_go" style="color: inherit; text-decoration: inherit;">Topic<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -582,7 +709,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Cleanup<wbr>Policy</span>
+        <span id="cleanuppolicy_go">
+<a href="#cleanuppolicy_go" style="color: inherit; text-decoration: inherit;">Cleanup<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -590,7 +719,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Minimum<wbr>In<wbr>Sync<wbr>Replicas</span>
+        <span id="minimuminsyncreplicas_go">
+<a href="#minimuminsyncreplicas_go" style="color: inherit; text-decoration: inherit;">Minimum<wbr>In<wbr>Sync<wbr>Replicas</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -598,7 +729,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Partitions</span>
+        <span id="partitions_go">
+<a href="#partitions_go" style="color: inherit; text-decoration: inherit;">Partitions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -606,7 +739,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Replication</span>
+        <span id="replication_go">
+<a href="#replication_go" style="color: inherit; text-decoration: inherit;">Replication</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -614,7 +749,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Retention<wbr>Bytes</span>
+        <span id="retentionbytes_go">
+<a href="#retentionbytes_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Bytes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -622,7 +759,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Retention<wbr>Hours</span>
+        <span id="retentionhours_go">
+<a href="#retentionhours_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Hours</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -630,7 +769,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Termination<wbr>Protection</span>
+        <span id="terminationprotection_go">
+<a href="#terminationprotection_go" style="color: inherit; text-decoration: inherit;">Termination<wbr>Protection</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -645,7 +786,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -654,7 +797,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>project</span>
+        <span id="project_nodejs">
+<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -662,7 +807,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>service<wbr>Name</span>
+        <span id="servicename_nodejs">
+<a href="#servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -670,7 +817,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>topic<wbr>Name</span>
+        <span id="topicname_nodejs">
+<a href="#topicname_nodejs" style="color: inherit; text-decoration: inherit;">topic<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -678,7 +827,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>cleanup<wbr>Policy</span>
+        <span id="cleanuppolicy_nodejs">
+<a href="#cleanuppolicy_nodejs" style="color: inherit; text-decoration: inherit;">cleanup<wbr>Policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -686,7 +837,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>minimum<wbr>In<wbr>Sync<wbr>Replicas</span>
+        <span id="minimuminsyncreplicas_nodejs">
+<a href="#minimuminsyncreplicas_nodejs" style="color: inherit; text-decoration: inherit;">minimum<wbr>In<wbr>Sync<wbr>Replicas</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -694,7 +847,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>partitions</span>
+        <span id="partitions_nodejs">
+<a href="#partitions_nodejs" style="color: inherit; text-decoration: inherit;">partitions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -702,7 +857,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>replication</span>
+        <span id="replication_nodejs">
+<a href="#replication_nodejs" style="color: inherit; text-decoration: inherit;">replication</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -710,7 +867,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>retention<wbr>Bytes</span>
+        <span id="retentionbytes_nodejs">
+<a href="#retentionbytes_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Bytes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -718,7 +877,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>retention<wbr>Hours</span>
+        <span id="retentionhours_nodejs">
+<a href="#retentionhours_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Hours</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -726,7 +887,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>termination<wbr>Protection</span>
+        <span id="terminationprotection_nodejs">
+<a href="#terminationprotection_nodejs" style="color: inherit; text-decoration: inherit;">termination<wbr>Protection</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -741,7 +904,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -750,7 +915,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>project</span>
+        <span id="project_python">
+<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -758,7 +925,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>service_<wbr>name</span>
+        <span id="service_name_python">
+<a href="#service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -766,7 +935,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>topic_<wbr>name</span>
+        <span id="topic_name_python">
+<a href="#topic_name_python" style="color: inherit; text-decoration: inherit;">topic_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -774,7 +945,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>cleanup_<wbr>policy</span>
+        <span id="cleanup_policy_python">
+<a href="#cleanup_policy_python" style="color: inherit; text-decoration: inherit;">cleanup_<wbr>policy</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -782,7 +955,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>minimum_<wbr>in_<wbr>sync_<wbr>replicas</span>
+        <span id="minimum_in_sync_replicas_python">
+<a href="#minimum_in_sync_replicas_python" style="color: inherit; text-decoration: inherit;">minimum_<wbr>in_<wbr>sync_<wbr>replicas</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -790,7 +965,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>partitions</span>
+        <span id="partitions_python">
+<a href="#partitions_python" style="color: inherit; text-decoration: inherit;">partitions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -798,7 +975,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>replication</span>
+        <span id="replication_python">
+<a href="#replication_python" style="color: inherit; text-decoration: inherit;">replication</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -806,7 +985,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>retention_<wbr>bytes</span>
+        <span id="retention_bytes_python">
+<a href="#retention_bytes_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>bytes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -814,7 +995,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>retention_<wbr>hours</span>
+        <span id="retention_hours_python">
+<a href="#retention_hours_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>hours</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -822,7 +1005,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>termination_<wbr>protection</span>
+        <span id="termination_protection_python">
+<a href="#termination_protection_python" style="color: inherit; text-decoration: inherit;">termination_<wbr>protection</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>

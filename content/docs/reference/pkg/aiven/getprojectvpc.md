@@ -18,7 +18,23 @@ meta_desc: "Explore the GetProjectVpc function of the Aiven package, including e
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aiven = Pulumi.Aiven;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var myvpc = Output.Create(Aiven.GetProjectVpc.InvokeAsync(new Aiven.GetProjectVpcArgs
+        {
+            Project = data.Aiven_project.Myproject.Project,
+            CloudName = "google-europe-west1",
+        }));
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -90,7 +106,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Cloud<wbr>Name</span>
+        <span id="cloudname_csharp">
+<a href="#cloudname_csharp" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -98,7 +116,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Project</span>
+        <span id="project_csharp">
+<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -106,7 +126,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Network<wbr>Cidr</span>
+        <span id="networkcidr_csharp">
+<a href="#networkcidr_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Cidr</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -114,7 +136,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>State</span>
+        <span id="state_csharp">
+<a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -129,7 +153,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Cloud<wbr>Name</span>
+        <span id="cloudname_go">
+<a href="#cloudname_go" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -137,7 +163,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Project</span>
+        <span id="project_go">
+<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -145,7 +173,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Network<wbr>Cidr</span>
+        <span id="networkcidr_go">
+<a href="#networkcidr_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Cidr</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -153,7 +183,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>State</span>
+        <span id="state_go">
+<a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -168,7 +200,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>cloud<wbr>Name</span>
+        <span id="cloudname_nodejs">
+<a href="#cloudname_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -176,7 +210,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>project</span>
+        <span id="project_nodejs">
+<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -184,7 +220,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>network<wbr>Cidr</span>
+        <span id="networkcidr_nodejs">
+<a href="#networkcidr_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Cidr</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -192,7 +230,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>state</span>
+        <span id="state_nodejs">
+<a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -207,7 +247,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>cloud_<wbr>name</span>
+        <span id="cloud_name_python">
+<a href="#cloud_name_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -215,7 +257,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>project</span>
+        <span id="project_python">
+<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -223,7 +267,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>network_<wbr>cidr</span>
+        <span id="network_cidr_python">
+<a href="#network_cidr_python" style="color: inherit; text-decoration: inherit;">network_<wbr>cidr</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -231,7 +277,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>state</span>
+        <span id="state_python">
+<a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -259,7 +307,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Cloud<wbr>Name</span>
+        <span id="cloudname_csharp">
+<a href="#cloudname_csharp" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -267,7 +317,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -276,7 +328,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Project</span>
+        <span id="project_csharp">
+<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -284,7 +338,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>State</span>
+        <span id="state_csharp">
+<a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -292,7 +348,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Network<wbr>Cidr</span>
+        <span id="networkcidr_csharp">
+<a href="#networkcidr_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Cidr</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -307,7 +365,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Cloud<wbr>Name</span>
+        <span id="cloudname_go">
+<a href="#cloudname_go" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -315,7 +375,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -324,7 +386,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Project</span>
+        <span id="project_go">
+<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -332,7 +396,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>State</span>
+        <span id="state_go">
+<a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -340,7 +406,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Network<wbr>Cidr</span>
+        <span id="networkcidr_go">
+<a href="#networkcidr_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Cidr</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -355,7 +423,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>cloud<wbr>Name</span>
+        <span id="cloudname_nodejs">
+<a href="#cloudname_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -363,7 +433,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -372,7 +444,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>project</span>
+        <span id="project_nodejs">
+<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -380,7 +454,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>state</span>
+        <span id="state_nodejs">
+<a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -388,7 +464,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>network<wbr>Cidr</span>
+        <span id="networkcidr_nodejs">
+<a href="#networkcidr_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Cidr</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -403,7 +481,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>cloud_<wbr>name</span>
+        <span id="cloud_name_python">
+<a href="#cloud_name_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -411,7 +491,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -420,7 +502,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>project</span>
+        <span id="project_python">
+<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -428,7 +512,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>state</span>
+        <span id="state_python">
+<a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -436,7 +522,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>network_<wbr>cidr</span>
+        <span id="network_cidr_python">
+<a href="#network_cidr_python" style="color: inherit; text-decoration: inherit;">network_<wbr>cidr</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

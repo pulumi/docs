@@ -18,7 +18,23 @@ meta_desc: "Explore the GetProjectUser function of the Aiven package, including 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aiven = Pulumi.Aiven;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var mytestuser = Output.Create(Aiven.GetProjectUser.InvokeAsync(new Aiven.GetProjectUserArgs
+        {
+            Project = data.Aiven_project.Myproject.Project,
+            Email = "john.doe@example.com",
+        }));
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -90,7 +106,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Email</span>
+        <span id="email_csharp">
+<a href="#email_csharp" style="color: inherit; text-decoration: inherit;">Email</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -98,7 +116,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Project</span>
+        <span id="project_csharp">
+<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -106,7 +126,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Accepted</span>
+        <span id="accepted_csharp">
+<a href="#accepted_csharp" style="color: inherit; text-decoration: inherit;">Accepted</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -114,7 +136,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Member<wbr>Type</span>
+        <span id="membertype_csharp">
+<a href="#membertype_csharp" style="color: inherit; text-decoration: inherit;">Member<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -129,7 +153,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Email</span>
+        <span id="email_go">
+<a href="#email_go" style="color: inherit; text-decoration: inherit;">Email</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -137,7 +163,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Project</span>
+        <span id="project_go">
+<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -145,7 +173,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Accepted</span>
+        <span id="accepted_go">
+<a href="#accepted_go" style="color: inherit; text-decoration: inherit;">Accepted</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -153,7 +183,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Member<wbr>Type</span>
+        <span id="membertype_go">
+<a href="#membertype_go" style="color: inherit; text-decoration: inherit;">Member<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -168,7 +200,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>email</span>
+        <span id="email_nodejs">
+<a href="#email_nodejs" style="color: inherit; text-decoration: inherit;">email</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -176,7 +210,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>project</span>
+        <span id="project_nodejs">
+<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -184,7 +220,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>accepted</span>
+        <span id="accepted_nodejs">
+<a href="#accepted_nodejs" style="color: inherit; text-decoration: inherit;">accepted</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -192,7 +230,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>member<wbr>Type</span>
+        <span id="membertype_nodejs">
+<a href="#membertype_nodejs" style="color: inherit; text-decoration: inherit;">member<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -207,7 +247,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>email</span>
+        <span id="email_python">
+<a href="#email_python" style="color: inherit; text-decoration: inherit;">email</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -215,7 +257,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>project</span>
+        <span id="project_python">
+<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -223,7 +267,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>accepted</span>
+        <span id="accepted_python">
+<a href="#accepted_python" style="color: inherit; text-decoration: inherit;">accepted</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -231,7 +277,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>member_<wbr>type</span>
+        <span id="member_type_python">
+<a href="#member_type_python" style="color: inherit; text-decoration: inherit;">member_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -259,7 +307,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Accepted</span>
+        <span id="accepted_csharp">
+<a href="#accepted_csharp" style="color: inherit; text-decoration: inherit;">Accepted</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -267,7 +317,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Email</span>
+        <span id="email_csharp">
+<a href="#email_csharp" style="color: inherit; text-decoration: inherit;">Email</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -275,7 +327,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -284,7 +338,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Project</span>
+        <span id="project_csharp">
+<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -292,7 +348,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Member<wbr>Type</span>
+        <span id="membertype_csharp">
+<a href="#membertype_csharp" style="color: inherit; text-decoration: inherit;">Member<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -307,7 +365,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Accepted</span>
+        <span id="accepted_go">
+<a href="#accepted_go" style="color: inherit; text-decoration: inherit;">Accepted</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -315,7 +375,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Email</span>
+        <span id="email_go">
+<a href="#email_go" style="color: inherit; text-decoration: inherit;">Email</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -323,7 +385,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -332,7 +396,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Project</span>
+        <span id="project_go">
+<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -340,7 +406,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Member<wbr>Type</span>
+        <span id="membertype_go">
+<a href="#membertype_go" style="color: inherit; text-decoration: inherit;">Member<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -355,7 +423,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>accepted</span>
+        <span id="accepted_nodejs">
+<a href="#accepted_nodejs" style="color: inherit; text-decoration: inherit;">accepted</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -363,7 +433,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>email</span>
+        <span id="email_nodejs">
+<a href="#email_nodejs" style="color: inherit; text-decoration: inherit;">email</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -371,7 +443,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -380,7 +454,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>project</span>
+        <span id="project_nodejs">
+<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -388,7 +464,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>member<wbr>Type</span>
+        <span id="membertype_nodejs">
+<a href="#membertype_nodejs" style="color: inherit; text-decoration: inherit;">member<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -403,7 +481,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>accepted</span>
+        <span id="accepted_python">
+<a href="#accepted_python" style="color: inherit; text-decoration: inherit;">accepted</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -411,7 +491,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>email</span>
+        <span id="email_python">
+<a href="#email_python" style="color: inherit; text-decoration: inherit;">email</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -419,7 +501,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -428,7 +512,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>project</span>
+        <span id="project_python">
+<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -436,7 +522,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>member_<wbr>type</span>
+        <span id="member_type_python">
+<a href="#member_type_python" style="color: inherit; text-decoration: inherit;">member_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

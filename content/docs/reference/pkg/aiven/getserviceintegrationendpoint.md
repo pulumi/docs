@@ -18,7 +18,23 @@ meta_desc: "Explore the GetServiceIntegrationEndpoint function of the Aiven pack
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aiven = Pulumi.Aiven;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var myendpoint = Output.Create(Aiven.GetServiceIntegrationEndpoint.InvokeAsync(new Aiven.GetServiceIntegrationEndpointArgs
+        {
+            Project = data.Aiven_project.Myproject.Project,
+            EndpointName = "<ENDPOINT_NAME>",
+        }));
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -90,7 +106,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Endpoint<wbr>Name</span>
+        <span id="endpointname_csharp">
+<a href="#endpointname_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -98,7 +116,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Project</span>
+        <span id="project_csharp">
+<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -106,7 +126,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Datadog<wbr>User<wbr>Config</span>
+        <span id="datadoguserconfig_csharp">
+<a href="#datadoguserconfig_csharp" style="color: inherit; text-decoration: inherit;">Datadog<wbr>User<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getserviceintegrationendpointdatadoguserconfig">Get<wbr>Service<wbr>Integration<wbr>Endpoint<wbr>Datadog<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
@@ -114,7 +136,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Endpoint<wbr>Config</span>
+        <span id="endpointconfig_csharp">
+<a href="#endpointconfig_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -122,7 +146,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Endpoint<wbr>Type</span>
+        <span id="endpointtype_csharp">
+<a href="#endpointtype_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -130,7 +156,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>External<wbr>Elasticsearch<wbr>Logs<wbr>User<wbr>Config</span>
+        <span id="externalelasticsearchlogsuserconfig_csharp">
+<a href="#externalelasticsearchlogsuserconfig_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Elasticsearch<wbr>Logs<wbr>User<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getserviceintegrationendpointexternalelasticsearchlogsuserconfig">Get<wbr>Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Elasticsearch<wbr>Logs<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
@@ -138,7 +166,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Prometheus<wbr>User<wbr>Config</span>
+        <span id="prometheususerconfig_csharp">
+<a href="#prometheususerconfig_csharp" style="color: inherit; text-decoration: inherit;">Prometheus<wbr>User<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getserviceintegrationendpointprometheususerconfig">Get<wbr>Service<wbr>Integration<wbr>Endpoint<wbr>Prometheus<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
@@ -146,7 +176,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Rsyslog<wbr>User<wbr>Config</span>
+        <span id="rsysloguserconfig_csharp">
+<a href="#rsysloguserconfig_csharp" style="color: inherit; text-decoration: inherit;">Rsyslog<wbr>User<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getserviceintegrationendpointrsysloguserconfig">Get<wbr>Service<wbr>Integration<wbr>Endpoint<wbr>Rsyslog<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
@@ -161,7 +193,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Endpoint<wbr>Name</span>
+        <span id="endpointname_go">
+<a href="#endpointname_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -169,7 +203,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Project</span>
+        <span id="project_go">
+<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -177,7 +213,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Datadog<wbr>User<wbr>Config</span>
+        <span id="datadoguserconfig_go">
+<a href="#datadoguserconfig_go" style="color: inherit; text-decoration: inherit;">Datadog<wbr>User<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getserviceintegrationendpointdatadoguserconfig">Get<wbr>Service<wbr>Integration<wbr>Endpoint<wbr>Datadog<wbr>User<wbr>Config</a></span>
     </dt>
@@ -185,7 +223,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Endpoint<wbr>Config</span>
+        <span id="endpointconfig_go">
+<a href="#endpointconfig_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -193,7 +233,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Endpoint<wbr>Type</span>
+        <span id="endpointtype_go">
+<a href="#endpointtype_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -201,7 +243,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>External<wbr>Elasticsearch<wbr>Logs<wbr>User<wbr>Config</span>
+        <span id="externalelasticsearchlogsuserconfig_go">
+<a href="#externalelasticsearchlogsuserconfig_go" style="color: inherit; text-decoration: inherit;">External<wbr>Elasticsearch<wbr>Logs<wbr>User<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getserviceintegrationendpointexternalelasticsearchlogsuserconfig">Get<wbr>Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Elasticsearch<wbr>Logs<wbr>User<wbr>Config</a></span>
     </dt>
@@ -209,7 +253,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Prometheus<wbr>User<wbr>Config</span>
+        <span id="prometheususerconfig_go">
+<a href="#prometheususerconfig_go" style="color: inherit; text-decoration: inherit;">Prometheus<wbr>User<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getserviceintegrationendpointprometheususerconfig">Get<wbr>Service<wbr>Integration<wbr>Endpoint<wbr>Prometheus<wbr>User<wbr>Config</a></span>
     </dt>
@@ -217,7 +263,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Rsyslog<wbr>User<wbr>Config</span>
+        <span id="rsysloguserconfig_go">
+<a href="#rsysloguserconfig_go" style="color: inherit; text-decoration: inherit;">Rsyslog<wbr>User<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getserviceintegrationendpointrsysloguserconfig">Get<wbr>Service<wbr>Integration<wbr>Endpoint<wbr>Rsyslog<wbr>User<wbr>Config</a></span>
     </dt>
@@ -232,7 +280,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>endpoint<wbr>Name</span>
+        <span id="endpointname_nodejs">
+<a href="#endpointname_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -240,7 +290,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>project</span>
+        <span id="project_nodejs">
+<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -248,7 +300,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>datadog<wbr>User<wbr>Config</span>
+        <span id="datadoguserconfig_nodejs">
+<a href="#datadoguserconfig_nodejs" style="color: inherit; text-decoration: inherit;">datadog<wbr>User<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getserviceintegrationendpointdatadoguserconfig">Get<wbr>Service<wbr>Integration<wbr>Endpoint<wbr>Datadog<wbr>User<wbr>Config</a></span>
     </dt>
@@ -256,7 +310,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>endpoint<wbr>Config</span>
+        <span id="endpointconfig_nodejs">
+<a href="#endpointconfig_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -264,7 +320,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>endpoint<wbr>Type</span>
+        <span id="endpointtype_nodejs">
+<a href="#endpointtype_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -272,7 +330,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>external<wbr>Elasticsearch<wbr>Logs<wbr>User<wbr>Config</span>
+        <span id="externalelasticsearchlogsuserconfig_nodejs">
+<a href="#externalelasticsearchlogsuserconfig_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Elasticsearch<wbr>Logs<wbr>User<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getserviceintegrationendpointexternalelasticsearchlogsuserconfig">Get<wbr>Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Elasticsearch<wbr>Logs<wbr>User<wbr>Config</a></span>
     </dt>
@@ -280,7 +340,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>prometheus<wbr>User<wbr>Config</span>
+        <span id="prometheususerconfig_nodejs">
+<a href="#prometheususerconfig_nodejs" style="color: inherit; text-decoration: inherit;">prometheus<wbr>User<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getserviceintegrationendpointprometheususerconfig">Get<wbr>Service<wbr>Integration<wbr>Endpoint<wbr>Prometheus<wbr>User<wbr>Config</a></span>
     </dt>
@@ -288,7 +350,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>rsyslog<wbr>User<wbr>Config</span>
+        <span id="rsysloguserconfig_nodejs">
+<a href="#rsysloguserconfig_nodejs" style="color: inherit; text-decoration: inherit;">rsyslog<wbr>User<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getserviceintegrationendpointrsysloguserconfig">Get<wbr>Service<wbr>Integration<wbr>Endpoint<wbr>Rsyslog<wbr>User<wbr>Config</a></span>
     </dt>
@@ -303,7 +367,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>endpoint_<wbr>name</span>
+        <span id="endpoint_name_python">
+<a href="#endpoint_name_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -311,7 +377,9 @@ The following arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>project</span>
+        <span id="project_python">
+<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -319,7 +387,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>datadog_<wbr>user_<wbr>config</span>
+        <span id="datadog_user_config_python">
+<a href="#datadog_user_config_python" style="color: inherit; text-decoration: inherit;">datadog_<wbr>user_<wbr>config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getserviceintegrationendpointdatadoguserconfig">Dict[Get<wbr>Service<wbr>Integration<wbr>Endpoint<wbr>Datadog<wbr>User<wbr>Config]</a></span>
     </dt>
@@ -327,7 +397,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>endpoint_<wbr>config</span>
+        <span id="endpoint_config_python">
+<a href="#endpoint_config_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -335,7 +407,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>endpoint_<wbr>type</span>
+        <span id="endpoint_type_python">
+<a href="#endpoint_type_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -343,7 +417,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>external_<wbr>elasticsearch_<wbr>logs_<wbr>user_<wbr>config</span>
+        <span id="external_elasticsearch_logs_user_config_python">
+<a href="#external_elasticsearch_logs_user_config_python" style="color: inherit; text-decoration: inherit;">external_<wbr>elasticsearch_<wbr>logs_<wbr>user_<wbr>config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getserviceintegrationendpointexternalelasticsearchlogsuserconfig">Dict[Get<wbr>Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Elasticsearch<wbr>Logs<wbr>User<wbr>Config]</a></span>
     </dt>
@@ -351,7 +427,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>prometheus_<wbr>user_<wbr>config</span>
+        <span id="prometheus_user_config_python">
+<a href="#prometheus_user_config_python" style="color: inherit; text-decoration: inherit;">prometheus_<wbr>user_<wbr>config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getserviceintegrationendpointprometheususerconfig">Dict[Get<wbr>Service<wbr>Integration<wbr>Endpoint<wbr>Prometheus<wbr>User<wbr>Config]</a></span>
     </dt>
@@ -359,7 +437,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>rsyslog_<wbr>user_<wbr>config</span>
+        <span id="rsyslog_user_config_python">
+<a href="#rsyslog_user_config_python" style="color: inherit; text-decoration: inherit;">rsyslog_<wbr>user_<wbr>config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getserviceintegrationendpointrsysloguserconfig">Dict[Get<wbr>Service<wbr>Integration<wbr>Endpoint<wbr>Rsyslog<wbr>User<wbr>Config]</a></span>
     </dt>
@@ -387,7 +467,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Endpoint<wbr>Config</span>
+        <span id="endpointconfig_csharp">
+<a href="#endpointconfig_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -395,7 +477,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Endpoint<wbr>Name</span>
+        <span id="endpointname_csharp">
+<a href="#endpointname_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -403,7 +487,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -412,7 +498,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Project</span>
+        <span id="project_csharp">
+<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -420,7 +508,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Datadog<wbr>User<wbr>Config</span>
+        <span id="datadoguserconfig_csharp">
+<a href="#datadoguserconfig_csharp" style="color: inherit; text-decoration: inherit;">Datadog<wbr>User<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getserviceintegrationendpointdatadoguserconfig">Get<wbr>Service<wbr>Integration<wbr>Endpoint<wbr>Datadog<wbr>User<wbr>Config</a></span>
     </dt>
@@ -428,7 +518,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Endpoint<wbr>Type</span>
+        <span id="endpointtype_csharp">
+<a href="#endpointtype_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -436,7 +528,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>External<wbr>Elasticsearch<wbr>Logs<wbr>User<wbr>Config</span>
+        <span id="externalelasticsearchlogsuserconfig_csharp">
+<a href="#externalelasticsearchlogsuserconfig_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Elasticsearch<wbr>Logs<wbr>User<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getserviceintegrationendpointexternalelasticsearchlogsuserconfig">Get<wbr>Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Elasticsearch<wbr>Logs<wbr>User<wbr>Config</a></span>
     </dt>
@@ -444,7 +538,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Prometheus<wbr>User<wbr>Config</span>
+        <span id="prometheususerconfig_csharp">
+<a href="#prometheususerconfig_csharp" style="color: inherit; text-decoration: inherit;">Prometheus<wbr>User<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getserviceintegrationendpointprometheususerconfig">Get<wbr>Service<wbr>Integration<wbr>Endpoint<wbr>Prometheus<wbr>User<wbr>Config</a></span>
     </dt>
@@ -452,7 +548,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Rsyslog<wbr>User<wbr>Config</span>
+        <span id="rsysloguserconfig_csharp">
+<a href="#rsysloguserconfig_csharp" style="color: inherit; text-decoration: inherit;">Rsyslog<wbr>User<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getserviceintegrationendpointrsysloguserconfig">Get<wbr>Service<wbr>Integration<wbr>Endpoint<wbr>Rsyslog<wbr>User<wbr>Config</a></span>
     </dt>
@@ -467,7 +565,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Endpoint<wbr>Config</span>
+        <span id="endpointconfig_go">
+<a href="#endpointconfig_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -475,7 +575,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Endpoint<wbr>Name</span>
+        <span id="endpointname_go">
+<a href="#endpointname_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -483,7 +585,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -492,7 +596,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Project</span>
+        <span id="project_go">
+<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -500,7 +606,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Datadog<wbr>User<wbr>Config</span>
+        <span id="datadoguserconfig_go">
+<a href="#datadoguserconfig_go" style="color: inherit; text-decoration: inherit;">Datadog<wbr>User<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getserviceintegrationendpointdatadoguserconfig">Get<wbr>Service<wbr>Integration<wbr>Endpoint<wbr>Datadog<wbr>User<wbr>Config</a></span>
     </dt>
@@ -508,7 +616,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Endpoint<wbr>Type</span>
+        <span id="endpointtype_go">
+<a href="#endpointtype_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -516,7 +626,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>External<wbr>Elasticsearch<wbr>Logs<wbr>User<wbr>Config</span>
+        <span id="externalelasticsearchlogsuserconfig_go">
+<a href="#externalelasticsearchlogsuserconfig_go" style="color: inherit; text-decoration: inherit;">External<wbr>Elasticsearch<wbr>Logs<wbr>User<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getserviceintegrationendpointexternalelasticsearchlogsuserconfig">Get<wbr>Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Elasticsearch<wbr>Logs<wbr>User<wbr>Config</a></span>
     </dt>
@@ -524,7 +636,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Prometheus<wbr>User<wbr>Config</span>
+        <span id="prometheususerconfig_go">
+<a href="#prometheususerconfig_go" style="color: inherit; text-decoration: inherit;">Prometheus<wbr>User<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getserviceintegrationendpointprometheususerconfig">Get<wbr>Service<wbr>Integration<wbr>Endpoint<wbr>Prometheus<wbr>User<wbr>Config</a></span>
     </dt>
@@ -532,7 +646,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Rsyslog<wbr>User<wbr>Config</span>
+        <span id="rsysloguserconfig_go">
+<a href="#rsysloguserconfig_go" style="color: inherit; text-decoration: inherit;">Rsyslog<wbr>User<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getserviceintegrationendpointrsysloguserconfig">Get<wbr>Service<wbr>Integration<wbr>Endpoint<wbr>Rsyslog<wbr>User<wbr>Config</a></span>
     </dt>
@@ -547,7 +663,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>endpoint<wbr>Config</span>
+        <span id="endpointconfig_nodejs">
+<a href="#endpointconfig_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -555,7 +673,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>endpoint<wbr>Name</span>
+        <span id="endpointname_nodejs">
+<a href="#endpointname_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -563,7 +683,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -572,7 +694,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>project</span>
+        <span id="project_nodejs">
+<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -580,7 +704,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>datadog<wbr>User<wbr>Config</span>
+        <span id="datadoguserconfig_nodejs">
+<a href="#datadoguserconfig_nodejs" style="color: inherit; text-decoration: inherit;">datadog<wbr>User<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getserviceintegrationendpointdatadoguserconfig">Get<wbr>Service<wbr>Integration<wbr>Endpoint<wbr>Datadog<wbr>User<wbr>Config</a></span>
     </dt>
@@ -588,7 +714,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>endpoint<wbr>Type</span>
+        <span id="endpointtype_nodejs">
+<a href="#endpointtype_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -596,7 +724,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>external<wbr>Elasticsearch<wbr>Logs<wbr>User<wbr>Config</span>
+        <span id="externalelasticsearchlogsuserconfig_nodejs">
+<a href="#externalelasticsearchlogsuserconfig_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Elasticsearch<wbr>Logs<wbr>User<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getserviceintegrationendpointexternalelasticsearchlogsuserconfig">Get<wbr>Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Elasticsearch<wbr>Logs<wbr>User<wbr>Config</a></span>
     </dt>
@@ -604,7 +734,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>prometheus<wbr>User<wbr>Config</span>
+        <span id="prometheususerconfig_nodejs">
+<a href="#prometheususerconfig_nodejs" style="color: inherit; text-decoration: inherit;">prometheus<wbr>User<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getserviceintegrationendpointprometheususerconfig">Get<wbr>Service<wbr>Integration<wbr>Endpoint<wbr>Prometheus<wbr>User<wbr>Config</a></span>
     </dt>
@@ -612,7 +744,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>rsyslog<wbr>User<wbr>Config</span>
+        <span id="rsysloguserconfig_nodejs">
+<a href="#rsysloguserconfig_nodejs" style="color: inherit; text-decoration: inherit;">rsyslog<wbr>User<wbr>Config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getserviceintegrationendpointrsysloguserconfig">Get<wbr>Service<wbr>Integration<wbr>Endpoint<wbr>Rsyslog<wbr>User<wbr>Config</a></span>
     </dt>
@@ -627,7 +761,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>endpoint_<wbr>config</span>
+        <span id="endpoint_config_python">
+<a href="#endpoint_config_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -635,7 +771,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>endpoint_<wbr>name</span>
+        <span id="endpoint_name_python">
+<a href="#endpoint_name_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -643,7 +781,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -652,7 +792,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>project</span>
+        <span id="project_python">
+<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -660,7 +802,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>datadog_<wbr>user_<wbr>config</span>
+        <span id="datadog_user_config_python">
+<a href="#datadog_user_config_python" style="color: inherit; text-decoration: inherit;">datadog_<wbr>user_<wbr>config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getserviceintegrationendpointdatadoguserconfig">Dict[Get<wbr>Service<wbr>Integration<wbr>Endpoint<wbr>Datadog<wbr>User<wbr>Config]</a></span>
     </dt>
@@ -668,7 +812,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>endpoint_<wbr>type</span>
+        <span id="endpoint_type_python">
+<a href="#endpoint_type_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -676,7 +822,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>external_<wbr>elasticsearch_<wbr>logs_<wbr>user_<wbr>config</span>
+        <span id="external_elasticsearch_logs_user_config_python">
+<a href="#external_elasticsearch_logs_user_config_python" style="color: inherit; text-decoration: inherit;">external_<wbr>elasticsearch_<wbr>logs_<wbr>user_<wbr>config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getserviceintegrationendpointexternalelasticsearchlogsuserconfig">Dict[Get<wbr>Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Elasticsearch<wbr>Logs<wbr>User<wbr>Config]</a></span>
     </dt>
@@ -684,7 +832,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>prometheus_<wbr>user_<wbr>config</span>
+        <span id="prometheus_user_config_python">
+<a href="#prometheus_user_config_python" style="color: inherit; text-decoration: inherit;">prometheus_<wbr>user_<wbr>config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getserviceintegrationendpointprometheususerconfig">Dict[Get<wbr>Service<wbr>Integration<wbr>Endpoint<wbr>Prometheus<wbr>User<wbr>Config]</a></span>
     </dt>
@@ -692,7 +842,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>rsyslog_<wbr>user_<wbr>config</span>
+        <span id="rsyslog_user_config_python">
+<a href="#rsyslog_user_config_python" style="color: inherit; text-decoration: inherit;">rsyslog_<wbr>user_<wbr>config</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getserviceintegrationendpointrsysloguserconfig">Dict[Get<wbr>Service<wbr>Integration<wbr>Endpoint<wbr>Rsyslog<wbr>User<wbr>Config]</a></span>
     </dt>
@@ -731,7 +883,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Datadog<wbr>Api<wbr>Key</span>
+        <span id="datadogapikey_csharp">
+<a href="#datadogapikey_csharp" style="color: inherit; text-decoration: inherit;">Datadog<wbr>Api<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -739,7 +893,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Disable<wbr>Consumer<wbr>Stats</span>
+        <span id="disableconsumerstats_csharp">
+<a href="#disableconsumerstats_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Consumer<wbr>Stats</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -747,7 +903,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Partition<wbr>Contexts</span>
+        <span id="maxpartitioncontexts_csharp">
+<a href="#maxpartitioncontexts_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Partition<wbr>Contexts</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -755,7 +913,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Site</span>
+        <span id="site_csharp">
+<a href="#site_csharp" style="color: inherit; text-decoration: inherit;">Site</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -770,7 +930,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Datadog<wbr>Api<wbr>Key</span>
+        <span id="datadogapikey_go">
+<a href="#datadogapikey_go" style="color: inherit; text-decoration: inherit;">Datadog<wbr>Api<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -778,7 +940,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Disable<wbr>Consumer<wbr>Stats</span>
+        <span id="disableconsumerstats_go">
+<a href="#disableconsumerstats_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Consumer<wbr>Stats</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -786,7 +950,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Partition<wbr>Contexts</span>
+        <span id="maxpartitioncontexts_go">
+<a href="#maxpartitioncontexts_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Partition<wbr>Contexts</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -794,7 +960,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Site</span>
+        <span id="site_go">
+<a href="#site_go" style="color: inherit; text-decoration: inherit;">Site</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -809,7 +977,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>datadog<wbr>Api<wbr>Key</span>
+        <span id="datadogapikey_nodejs">
+<a href="#datadogapikey_nodejs" style="color: inherit; text-decoration: inherit;">datadog<wbr>Api<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -817,7 +987,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>disable<wbr>Consumer<wbr>Stats</span>
+        <span id="disableconsumerstats_nodejs">
+<a href="#disableconsumerstats_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Consumer<wbr>Stats</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -825,7 +997,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Partition<wbr>Contexts</span>
+        <span id="maxpartitioncontexts_nodejs">
+<a href="#maxpartitioncontexts_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Partition<wbr>Contexts</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -833,7 +1007,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>site</span>
+        <span id="site_nodejs">
+<a href="#site_nodejs" style="color: inherit; text-decoration: inherit;">site</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -848,7 +1024,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>datadog<wbr>Api<wbr>Key</span>
+        <span id="datadogapikey_python">
+<a href="#datadogapikey_python" style="color: inherit; text-decoration: inherit;">datadog<wbr>Api<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -856,7 +1034,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>disable<wbr>Consumer<wbr>Stats</span>
+        <span id="disableconsumerstats_python">
+<a href="#disableconsumerstats_python" style="color: inherit; text-decoration: inherit;">disable<wbr>Consumer<wbr>Stats</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -864,7 +1044,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Partition<wbr>Contexts</span>
+        <span id="maxpartitioncontexts_python">
+<a href="#maxpartitioncontexts_python" style="color: inherit; text-decoration: inherit;">max<wbr>Partition<wbr>Contexts</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -872,7 +1054,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>site</span>
+        <span id="site_python">
+<a href="#site_python" style="color: inherit; text-decoration: inherit;">site</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -905,7 +1089,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ca</span>
+        <span id="ca_csharp">
+<a href="#ca_csharp" style="color: inherit; text-decoration: inherit;">Ca</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -913,7 +1099,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Index<wbr>Days<wbr>Max</span>
+        <span id="indexdaysmax_csharp">
+<a href="#indexdaysmax_csharp" style="color: inherit; text-decoration: inherit;">Index<wbr>Days<wbr>Max</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -921,7 +1109,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Index<wbr>Prefix</span>
+        <span id="indexprefix_csharp">
+<a href="#indexprefix_csharp" style="color: inherit; text-decoration: inherit;">Index<wbr>Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -929,7 +1119,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Timeout</span>
+        <span id="timeout_csharp">
+<a href="#timeout_csharp" style="color: inherit; text-decoration: inherit;">Timeout</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
@@ -937,7 +1129,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Url</span>
+        <span id="url_csharp">
+<a href="#url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -952,7 +1146,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ca</span>
+        <span id="ca_go">
+<a href="#ca_go" style="color: inherit; text-decoration: inherit;">Ca</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -960,7 +1156,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Index<wbr>Days<wbr>Max</span>
+        <span id="indexdaysmax_go">
+<a href="#indexdaysmax_go" style="color: inherit; text-decoration: inherit;">Index<wbr>Days<wbr>Max</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -968,7 +1166,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Index<wbr>Prefix</span>
+        <span id="indexprefix_go">
+<a href="#indexprefix_go" style="color: inherit; text-decoration: inherit;">Index<wbr>Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -976,7 +1176,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Timeout</span>
+        <span id="timeout_go">
+<a href="#timeout_go" style="color: inherit; text-decoration: inherit;">Timeout</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
@@ -984,7 +1186,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Url</span>
+        <span id="url_go">
+<a href="#url_go" style="color: inherit; text-decoration: inherit;">Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -999,7 +1203,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>ca</span>
+        <span id="ca_nodejs">
+<a href="#ca_nodejs" style="color: inherit; text-decoration: inherit;">ca</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1007,7 +1213,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>index<wbr>Days<wbr>Max</span>
+        <span id="indexdaysmax_nodejs">
+<a href="#indexdaysmax_nodejs" style="color: inherit; text-decoration: inherit;">index<wbr>Days<wbr>Max</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1015,7 +1223,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>index<wbr>Prefix</span>
+        <span id="indexprefix_nodejs">
+<a href="#indexprefix_nodejs" style="color: inherit; text-decoration: inherit;">index<wbr>Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1023,7 +1233,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>timeout</span>
+        <span id="timeout_nodejs">
+<a href="#timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
@@ -1031,7 +1243,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>url</span>
+        <span id="url_nodejs">
+<a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1046,7 +1260,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>ca</span>
+        <span id="ca_python">
+<a href="#ca_python" style="color: inherit; text-decoration: inherit;">ca</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1054,7 +1270,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>index<wbr>Days<wbr>Max</span>
+        <span id="indexdaysmax_python">
+<a href="#indexdaysmax_python" style="color: inherit; text-decoration: inherit;">index<wbr>Days<wbr>Max</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1062,7 +1280,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>index<wbr>Prefix</span>
+        <span id="indexprefix_python">
+<a href="#indexprefix_python" style="color: inherit; text-decoration: inherit;">index<wbr>Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1070,7 +1290,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>timeout</span>
+        <span id="timeout_python">
+<a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1078,7 +1300,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>url</span>
+        <span id="url_python">
+<a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1111,7 +1335,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Basic<wbr>Auth<wbr>Password</span>
+        <span id="basicauthpassword_csharp">
+<a href="#basicauthpassword_csharp" style="color: inherit; text-decoration: inherit;">Basic<wbr>Auth<wbr>Password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1119,7 +1345,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Basic<wbr>Auth<wbr>Username</span>
+        <span id="basicauthusername_csharp">
+<a href="#basicauthusername_csharp" style="color: inherit; text-decoration: inherit;">Basic<wbr>Auth<wbr>Username</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1134,7 +1362,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Basic<wbr>Auth<wbr>Password</span>
+        <span id="basicauthpassword_go">
+<a href="#basicauthpassword_go" style="color: inherit; text-decoration: inherit;">Basic<wbr>Auth<wbr>Password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1142,7 +1372,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Basic<wbr>Auth<wbr>Username</span>
+        <span id="basicauthusername_go">
+<a href="#basicauthusername_go" style="color: inherit; text-decoration: inherit;">Basic<wbr>Auth<wbr>Username</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1157,7 +1389,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>basic<wbr>Auth<wbr>Password</span>
+        <span id="basicauthpassword_nodejs">
+<a href="#basicauthpassword_nodejs" style="color: inherit; text-decoration: inherit;">basic<wbr>Auth<wbr>Password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1165,7 +1399,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>basic<wbr>Auth<wbr>Username</span>
+        <span id="basicauthusername_nodejs">
+<a href="#basicauthusername_nodejs" style="color: inherit; text-decoration: inherit;">basic<wbr>Auth<wbr>Username</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1180,7 +1416,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>basic<wbr>Auth<wbr>Password</span>
+        <span id="basicauthpassword_python">
+<a href="#basicauthpassword_python" style="color: inherit; text-decoration: inherit;">basic<wbr>Auth<wbr>Password</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1188,7 +1426,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>basic<wbr>Auth<wbr>Username</span>
+        <span id="basicauthusername_python">
+<a href="#basicauthusername_python" style="color: inherit; text-decoration: inherit;">basic<wbr>Auth<wbr>Username</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1221,7 +1461,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ca</span>
+        <span id="ca_csharp">
+<a href="#ca_csharp" style="color: inherit; text-decoration: inherit;">Ca</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1229,7 +1471,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cert</span>
+        <span id="cert_csharp">
+<a href="#cert_csharp" style="color: inherit; text-decoration: inherit;">Cert</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1237,7 +1481,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Format</span>
+        <span id="format_csharp">
+<a href="#format_csharp" style="color: inherit; text-decoration: inherit;">Format</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1245,7 +1491,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Key</span>
+        <span id="key_csharp">
+<a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1253,7 +1501,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Logline</span>
+        <span id="logline_csharp">
+<a href="#logline_csharp" style="color: inherit; text-decoration: inherit;">Logline</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1261,7 +1511,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Port</span>
+        <span id="port_csharp">
+<a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1269,7 +1521,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Sd</span>
+        <span id="sd_csharp">
+<a href="#sd_csharp" style="color: inherit; text-decoration: inherit;">Sd</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1277,7 +1531,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Server</span>
+        <span id="server_csharp">
+<a href="#server_csharp" style="color: inherit; text-decoration: inherit;">Server</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1285,7 +1541,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tls</span>
+        <span id="tls_csharp">
+<a href="#tls_csharp" style="color: inherit; text-decoration: inherit;">Tls</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1300,7 +1558,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ca</span>
+        <span id="ca_go">
+<a href="#ca_go" style="color: inherit; text-decoration: inherit;">Ca</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1308,7 +1568,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cert</span>
+        <span id="cert_go">
+<a href="#cert_go" style="color: inherit; text-decoration: inherit;">Cert</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1316,7 +1578,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Format</span>
+        <span id="format_go">
+<a href="#format_go" style="color: inherit; text-decoration: inherit;">Format</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1324,7 +1588,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Key</span>
+        <span id="key_go">
+<a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1332,7 +1598,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Logline</span>
+        <span id="logline_go">
+<a href="#logline_go" style="color: inherit; text-decoration: inherit;">Logline</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1340,7 +1608,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Port</span>
+        <span id="port_go">
+<a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1348,7 +1618,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Sd</span>
+        <span id="sd_go">
+<a href="#sd_go" style="color: inherit; text-decoration: inherit;">Sd</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1356,7 +1628,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Server</span>
+        <span id="server_go">
+<a href="#server_go" style="color: inherit; text-decoration: inherit;">Server</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1364,7 +1638,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tls</span>
+        <span id="tls_go">
+<a href="#tls_go" style="color: inherit; text-decoration: inherit;">Tls</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1379,7 +1655,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>ca</span>
+        <span id="ca_nodejs">
+<a href="#ca_nodejs" style="color: inherit; text-decoration: inherit;">ca</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1387,7 +1665,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>cert</span>
+        <span id="cert_nodejs">
+<a href="#cert_nodejs" style="color: inherit; text-decoration: inherit;">cert</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1395,7 +1675,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>format</span>
+        <span id="format_nodejs">
+<a href="#format_nodejs" style="color: inherit; text-decoration: inherit;">format</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1403,7 +1685,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>key</span>
+        <span id="key_nodejs">
+<a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1411,7 +1695,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>logline</span>
+        <span id="logline_nodejs">
+<a href="#logline_nodejs" style="color: inherit; text-decoration: inherit;">logline</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1419,7 +1705,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>port</span>
+        <span id="port_nodejs">
+<a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1427,7 +1715,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>sd</span>
+        <span id="sd_nodejs">
+<a href="#sd_nodejs" style="color: inherit; text-decoration: inherit;">sd</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1435,7 +1725,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>server</span>
+        <span id="server_nodejs">
+<a href="#server_nodejs" style="color: inherit; text-decoration: inherit;">server</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1443,7 +1735,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>tls</span>
+        <span id="tls_nodejs">
+<a href="#tls_nodejs" style="color: inherit; text-decoration: inherit;">tls</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1458,7 +1752,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>ca</span>
+        <span id="ca_python">
+<a href="#ca_python" style="color: inherit; text-decoration: inherit;">ca</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1466,7 +1762,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>cert</span>
+        <span id="cert_python">
+<a href="#cert_python" style="color: inherit; text-decoration: inherit;">cert</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1474,7 +1772,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>format</span>
+        <span id="format_python">
+<a href="#format_python" style="color: inherit; text-decoration: inherit;">format</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1482,7 +1782,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>key</span>
+        <span id="key_python">
+<a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1490,7 +1792,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>logline</span>
+        <span id="logline_python">
+<a href="#logline_python" style="color: inherit; text-decoration: inherit;">logline</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1498,7 +1802,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>port</span>
+        <span id="port_python">
+<a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1506,7 +1812,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>sd</span>
+        <span id="sd_python">
+<a href="#sd_python" style="color: inherit; text-decoration: inherit;">sd</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1514,7 +1822,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>server</span>
+        <span id="server_python">
+<a href="#server_python" style="color: inherit; text-decoration: inherit;">server</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1522,7 +1832,9 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>tls</span>
+        <span id="tls_python">
+<a href="#tls_python" style="color: inherit; text-decoration: inherit;">tls</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
