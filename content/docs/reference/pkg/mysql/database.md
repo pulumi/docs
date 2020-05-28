@@ -27,7 +27,21 @@ on your database resources as an extra safety measure.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using MySql = Pulumi.MySql;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var app = new MySql.Database("app", new MySql.DatabaseArgs
+        {
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -238,7 +252,9 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Default<wbr>Character<wbr>Set</span>
+        <span id="defaultcharacterset_csharp">
+<a href="#defaultcharacterset_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Character<wbr>Set</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -249,7 +265,9 @@ to "utf8".
 
     <dt class="property-optional"
             title="Optional">
-        <span>Default<wbr>Collation</span>
+        <span id="defaultcollation_csharp">
+<a href="#defaultcollation_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Collation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -261,7 +279,9 @@ changing the character set requires also changing the collation.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -279,7 +299,9 @@ the operating system on which the MySQL server is running.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Default<wbr>Character<wbr>Set</span>
+        <span id="defaultcharacterset_go">
+<a href="#defaultcharacterset_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Character<wbr>Set</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -290,7 +312,9 @@ to "utf8".
 
     <dt class="property-optional"
             title="Optional">
-        <span>Default<wbr>Collation</span>
+        <span id="defaultcollation_go">
+<a href="#defaultcollation_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Collation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -302,7 +326,9 @@ changing the character set requires also changing the collation.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -320,7 +346,9 @@ the operating system on which the MySQL server is running.
 
     <dt class="property-optional"
             title="Optional">
-        <span>default<wbr>Character<wbr>Set</span>
+        <span id="defaultcharacterset_nodejs">
+<a href="#defaultcharacterset_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Character<wbr>Set</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -331,7 +359,9 @@ to "utf8".
 
     <dt class="property-optional"
             title="Optional">
-        <span>default<wbr>Collation</span>
+        <span id="defaultcollation_nodejs">
+<a href="#defaultcollation_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Collation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -343,7 +373,9 @@ changing the character set requires also changing the collation.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -361,7 +393,9 @@ the operating system on which the MySQL server is running.
 
     <dt class="property-optional"
             title="Optional">
-        <span>default_<wbr>character_<wbr>set</span>
+        <span id="default_character_set_python">
+<a href="#default_character_set_python" style="color: inherit; text-decoration: inherit;">default_<wbr>character_<wbr>set</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -372,7 +406,9 @@ to "utf8".
 
     <dt class="property-optional"
             title="Optional">
-        <span>default_<wbr>collation</span>
+        <span id="default_collation_python">
+<a href="#default_collation_python" style="color: inherit; text-decoration: inherit;">default_<wbr>collation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -384,7 +420,9 @@ changing the character set requires also changing the collation.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -413,7 +451,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -428,7 +468,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -443,7 +485,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -458,7 +502,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -599,7 +645,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Default<wbr>Character<wbr>Set</span>
+        <span id="state_defaultcharacterset_csharp">
+<a href="#state_defaultcharacterset_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Character<wbr>Set</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -610,7 +658,9 @@ to "utf8".
 
     <dt class="property-optional"
             title="Optional">
-        <span>Default<wbr>Collation</span>
+        <span id="state_defaultcollation_csharp">
+<a href="#state_defaultcollation_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Collation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -622,7 +672,9 @@ changing the character set requires also changing the collation.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -640,7 +692,9 @@ the operating system on which the MySQL server is running.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Default<wbr>Character<wbr>Set</span>
+        <span id="state_defaultcharacterset_go">
+<a href="#state_defaultcharacterset_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Character<wbr>Set</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -651,7 +705,9 @@ to "utf8".
 
     <dt class="property-optional"
             title="Optional">
-        <span>Default<wbr>Collation</span>
+        <span id="state_defaultcollation_go">
+<a href="#state_defaultcollation_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Collation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -663,7 +719,9 @@ changing the character set requires also changing the collation.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -681,7 +739,9 @@ the operating system on which the MySQL server is running.
 
     <dt class="property-optional"
             title="Optional">
-        <span>default<wbr>Character<wbr>Set</span>
+        <span id="state_defaultcharacterset_nodejs">
+<a href="#state_defaultcharacterset_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Character<wbr>Set</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -692,7 +752,9 @@ to "utf8".
 
     <dt class="property-optional"
             title="Optional">
-        <span>default<wbr>Collation</span>
+        <span id="state_defaultcollation_nodejs">
+<a href="#state_defaultcollation_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Collation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -704,7 +766,9 @@ changing the character set requires also changing the collation.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -722,7 +786,9 @@ the operating system on which the MySQL server is running.
 
     <dt class="property-optional"
             title="Optional">
-        <span>default_<wbr>character_<wbr>set</span>
+        <span id="state_default_character_set_python">
+<a href="#state_default_character_set_python" style="color: inherit; text-decoration: inherit;">default_<wbr>character_<wbr>set</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -733,7 +799,9 @@ to "utf8".
 
     <dt class="property-optional"
             title="Optional">
-        <span>default_<wbr>collation</span>
+        <span id="state_default_collation_python">
+<a href="#state_default_collation_python" style="color: inherit; text-decoration: inherit;">default_<wbr>collation</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -745,7 +813,9 @@ changing the character set requires also changing the collation.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
