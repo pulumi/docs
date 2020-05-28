@@ -196,7 +196,9 @@ The KeyPrefix resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-required"
             title="Required">
-        <span>Path<wbr>Prefix</span>
+        <span id="pathprefix_csharp">
+<a href="#pathprefix_csharp" style="color: inherit; text-decoration: inherit;">Path<wbr>Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -207,7 +209,9 @@ end with a slash, to manage a "folder" of keys.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Datacenter</span>
+        <span id="datacenter_csharp">
+<a href="#datacenter_csharp" style="color: inherit; text-decoration: inherit;">Datacenter</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -217,7 +221,9 @@ agent's default datacenter and the datacenter in the provider setup.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Namespace</span>
+        <span id="namespace_csharp">
+<a href="#namespace_csharp" style="color: inherit; text-decoration: inherit;">Namespace</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -226,7 +232,9 @@ agent's default datacenter and the datacenter in the provider setup.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Subkey<wbr>Collection</span>
+        <span id="subkeycollection_csharp">
+<a href="#subkeycollection_csharp" style="color: inherit; text-decoration: inherit;">Subkey<wbr>Collection</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#keyprefixsubkeycollection">List&lt;Key<wbr>Prefix<wbr>Subkey<wbr>Collection<wbr>Args&gt;</a></span>
     </dt>
@@ -236,7 +244,9 @@ Multiple blocks supported.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Subkeys</span>
+        <span id="subkeys_csharp">
+<a href="#subkeys_csharp" style="color: inherit; text-decoration: inherit;">Subkeys</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -248,7 +258,9 @@ the given path prefix.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Token</span>
+        <span id="token_csharp">
+<a href="#token_csharp" style="color: inherit; text-decoration: inherit;">Token</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -265,7 +277,9 @@ token that the agent provides by default.
 
     <dt class="property-required"
             title="Required">
-        <span>Path<wbr>Prefix</span>
+        <span id="pathprefix_go">
+<a href="#pathprefix_go" style="color: inherit; text-decoration: inherit;">Path<wbr>Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -276,7 +290,9 @@ end with a slash, to manage a "folder" of keys.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Datacenter</span>
+        <span id="datacenter_go">
+<a href="#datacenter_go" style="color: inherit; text-decoration: inherit;">Datacenter</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -286,7 +302,9 @@ agent's default datacenter and the datacenter in the provider setup.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Namespace</span>
+        <span id="namespace_go">
+<a href="#namespace_go" style="color: inherit; text-decoration: inherit;">Namespace</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -295,7 +313,9 @@ agent's default datacenter and the datacenter in the provider setup.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Subkey<wbr>Collection</span>
+        <span id="subkeycollection_go">
+<a href="#subkeycollection_go" style="color: inherit; text-decoration: inherit;">Subkey<wbr>Collection</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#keyprefixsubkeycollection">[]Key<wbr>Prefix<wbr>Subkey<wbr>Collection</a></span>
     </dt>
@@ -305,7 +325,9 @@ Multiple blocks supported.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Subkeys</span>
+        <span id="subkeys_go">
+<a href="#subkeys_go" style="color: inherit; text-decoration: inherit;">Subkeys</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -317,7 +339,9 @@ the given path prefix.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Token</span>
+        <span id="token_go">
+<a href="#token_go" style="color: inherit; text-decoration: inherit;">Token</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -334,7 +358,9 @@ token that the agent provides by default.
 
     <dt class="property-required"
             title="Required">
-        <span>path<wbr>Prefix</span>
+        <span id="pathprefix_nodejs">
+<a href="#pathprefix_nodejs" style="color: inherit; text-decoration: inherit;">path<wbr>Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -345,7 +371,9 @@ end with a slash, to manage a "folder" of keys.
 
     <dt class="property-optional"
             title="Optional">
-        <span>datacenter</span>
+        <span id="datacenter_nodejs">
+<a href="#datacenter_nodejs" style="color: inherit; text-decoration: inherit;">datacenter</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -355,7 +383,9 @@ agent's default datacenter and the datacenter in the provider setup.
 
     <dt class="property-optional"
             title="Optional">
-        <span>namespace</span>
+        <span id="namespace_nodejs">
+<a href="#namespace_nodejs" style="color: inherit; text-decoration: inherit;">namespace</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -364,7 +394,9 @@ agent's default datacenter and the datacenter in the provider setup.
 
     <dt class="property-optional"
             title="Optional">
-        <span>subkey<wbr>Collection</span>
+        <span id="subkeycollection_nodejs">
+<a href="#subkeycollection_nodejs" style="color: inherit; text-decoration: inherit;">subkey<wbr>Collection</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#keyprefixsubkeycollection">Key<wbr>Prefix<wbr>Subkey<wbr>Collection[]</a></span>
     </dt>
@@ -374,7 +406,9 @@ Multiple blocks supported.
 
     <dt class="property-optional"
             title="Optional">
-        <span>subkeys</span>
+        <span id="subkeys_nodejs">
+<a href="#subkeys_nodejs" style="color: inherit; text-decoration: inherit;">subkeys</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -386,7 +420,9 @@ the given path prefix.
 
     <dt class="property-optional"
             title="Optional">
-        <span>token</span>
+        <span id="token_nodejs">
+<a href="#token_nodejs" style="color: inherit; text-decoration: inherit;">token</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -403,7 +439,9 @@ token that the agent provides by default.
 
     <dt class="property-required"
             title="Required">
-        <span>path_<wbr>prefix</span>
+        <span id="path_prefix_python">
+<a href="#path_prefix_python" style="color: inherit; text-decoration: inherit;">path_<wbr>prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -414,7 +452,9 @@ end with a slash, to manage a "folder" of keys.
 
     <dt class="property-optional"
             title="Optional">
-        <span>datacenter</span>
+        <span id="datacenter_python">
+<a href="#datacenter_python" style="color: inherit; text-decoration: inherit;">datacenter</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -424,7 +464,9 @@ agent's default datacenter and the datacenter in the provider setup.
 
     <dt class="property-optional"
             title="Optional">
-        <span>namespace</span>
+        <span id="namespace_python">
+<a href="#namespace_python" style="color: inherit; text-decoration: inherit;">namespace</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -433,7 +475,9 @@ agent's default datacenter and the datacenter in the provider setup.
 
     <dt class="property-optional"
             title="Optional">
-        <span>subkey_<wbr>collection</span>
+        <span id="subkey_collection_python">
+<a href="#subkey_collection_python" style="color: inherit; text-decoration: inherit;">subkey_<wbr>collection</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#keyprefixsubkeycollection">List[Key<wbr>Prefix<wbr>Subkey<wbr>Collection]</a></span>
     </dt>
@@ -443,7 +487,9 @@ Multiple blocks supported.
 
     <dt class="property-optional"
             title="Optional">
-        <span>subkeys</span>
+        <span id="subkeys_python">
+<a href="#subkeys_python" style="color: inherit; text-decoration: inherit;">subkeys</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -455,7 +501,9 @@ the given path prefix.
 
     <dt class="property-optional"
             title="Optional">
-        <span>token</span>
+        <span id="token_python">
+<a href="#token_python" style="color: inherit; text-decoration: inherit;">token</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -483,7 +531,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -498,7 +548,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -513,7 +565,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -528,7 +582,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -669,7 +725,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Datacenter</span>
+        <span id="state_datacenter_csharp">
+<a href="#state_datacenter_csharp" style="color: inherit; text-decoration: inherit;">Datacenter</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -679,7 +737,9 @@ agent's default datacenter and the datacenter in the provider setup.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Namespace</span>
+        <span id="state_namespace_csharp">
+<a href="#state_namespace_csharp" style="color: inherit; text-decoration: inherit;">Namespace</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -688,7 +748,9 @@ agent's default datacenter and the datacenter in the provider setup.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Path<wbr>Prefix</span>
+        <span id="state_pathprefix_csharp">
+<a href="#state_pathprefix_csharp" style="color: inherit; text-decoration: inherit;">Path<wbr>Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -699,7 +761,9 @@ end with a slash, to manage a "folder" of keys.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Subkey<wbr>Collection</span>
+        <span id="state_subkeycollection_csharp">
+<a href="#state_subkeycollection_csharp" style="color: inherit; text-decoration: inherit;">Subkey<wbr>Collection</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#keyprefixsubkeycollection">List&lt;Key<wbr>Prefix<wbr>Subkey<wbr>Collection<wbr>Args&gt;</a></span>
     </dt>
@@ -709,7 +773,9 @@ Multiple blocks supported.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Subkeys</span>
+        <span id="state_subkeys_csharp">
+<a href="#state_subkeys_csharp" style="color: inherit; text-decoration: inherit;">Subkeys</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -721,7 +787,9 @@ the given path prefix.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Token</span>
+        <span id="state_token_csharp">
+<a href="#state_token_csharp" style="color: inherit; text-decoration: inherit;">Token</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -738,7 +806,9 @@ token that the agent provides by default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Datacenter</span>
+        <span id="state_datacenter_go">
+<a href="#state_datacenter_go" style="color: inherit; text-decoration: inherit;">Datacenter</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -748,7 +818,9 @@ agent's default datacenter and the datacenter in the provider setup.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Namespace</span>
+        <span id="state_namespace_go">
+<a href="#state_namespace_go" style="color: inherit; text-decoration: inherit;">Namespace</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -757,7 +829,9 @@ agent's default datacenter and the datacenter in the provider setup.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Path<wbr>Prefix</span>
+        <span id="state_pathprefix_go">
+<a href="#state_pathprefix_go" style="color: inherit; text-decoration: inherit;">Path<wbr>Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -768,7 +842,9 @@ end with a slash, to manage a "folder" of keys.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Subkey<wbr>Collection</span>
+        <span id="state_subkeycollection_go">
+<a href="#state_subkeycollection_go" style="color: inherit; text-decoration: inherit;">Subkey<wbr>Collection</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#keyprefixsubkeycollection">[]Key<wbr>Prefix<wbr>Subkey<wbr>Collection</a></span>
     </dt>
@@ -778,7 +854,9 @@ Multiple blocks supported.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Subkeys</span>
+        <span id="state_subkeys_go">
+<a href="#state_subkeys_go" style="color: inherit; text-decoration: inherit;">Subkeys</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -790,7 +868,9 @@ the given path prefix.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Token</span>
+        <span id="state_token_go">
+<a href="#state_token_go" style="color: inherit; text-decoration: inherit;">Token</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -807,7 +887,9 @@ token that the agent provides by default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>datacenter</span>
+        <span id="state_datacenter_nodejs">
+<a href="#state_datacenter_nodejs" style="color: inherit; text-decoration: inherit;">datacenter</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -817,7 +899,9 @@ agent's default datacenter and the datacenter in the provider setup.
 
     <dt class="property-optional"
             title="Optional">
-        <span>namespace</span>
+        <span id="state_namespace_nodejs">
+<a href="#state_namespace_nodejs" style="color: inherit; text-decoration: inherit;">namespace</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -826,7 +910,9 @@ agent's default datacenter and the datacenter in the provider setup.
 
     <dt class="property-optional"
             title="Optional">
-        <span>path<wbr>Prefix</span>
+        <span id="state_pathprefix_nodejs">
+<a href="#state_pathprefix_nodejs" style="color: inherit; text-decoration: inherit;">path<wbr>Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -837,7 +923,9 @@ end with a slash, to manage a "folder" of keys.
 
     <dt class="property-optional"
             title="Optional">
-        <span>subkey<wbr>Collection</span>
+        <span id="state_subkeycollection_nodejs">
+<a href="#state_subkeycollection_nodejs" style="color: inherit; text-decoration: inherit;">subkey<wbr>Collection</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#keyprefixsubkeycollection">Key<wbr>Prefix<wbr>Subkey<wbr>Collection[]</a></span>
     </dt>
@@ -847,7 +935,9 @@ Multiple blocks supported.
 
     <dt class="property-optional"
             title="Optional">
-        <span>subkeys</span>
+        <span id="state_subkeys_nodejs">
+<a href="#state_subkeys_nodejs" style="color: inherit; text-decoration: inherit;">subkeys</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -859,7 +949,9 @@ the given path prefix.
 
     <dt class="property-optional"
             title="Optional">
-        <span>token</span>
+        <span id="state_token_nodejs">
+<a href="#state_token_nodejs" style="color: inherit; text-decoration: inherit;">token</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -876,7 +968,9 @@ token that the agent provides by default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>datacenter</span>
+        <span id="state_datacenter_python">
+<a href="#state_datacenter_python" style="color: inherit; text-decoration: inherit;">datacenter</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -886,7 +980,9 @@ agent's default datacenter and the datacenter in the provider setup.
 
     <dt class="property-optional"
             title="Optional">
-        <span>namespace</span>
+        <span id="state_namespace_python">
+<a href="#state_namespace_python" style="color: inherit; text-decoration: inherit;">namespace</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -895,7 +991,9 @@ agent's default datacenter and the datacenter in the provider setup.
 
     <dt class="property-optional"
             title="Optional">
-        <span>path_<wbr>prefix</span>
+        <span id="state_path_prefix_python">
+<a href="#state_path_prefix_python" style="color: inherit; text-decoration: inherit;">path_<wbr>prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -906,7 +1004,9 @@ end with a slash, to manage a "folder" of keys.
 
     <dt class="property-optional"
             title="Optional">
-        <span>subkey_<wbr>collection</span>
+        <span id="state_subkey_collection_python">
+<a href="#state_subkey_collection_python" style="color: inherit; text-decoration: inherit;">subkey_<wbr>collection</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#keyprefixsubkeycollection">List[Key<wbr>Prefix<wbr>Subkey<wbr>Collection]</a></span>
     </dt>
@@ -916,7 +1016,9 @@ Multiple blocks supported.
 
     <dt class="property-optional"
             title="Optional">
-        <span>subkeys</span>
+        <span id="state_subkeys_python">
+<a href="#state_subkeys_python" style="color: inherit; text-decoration: inherit;">subkeys</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -928,7 +1030,9 @@ the given path prefix.
 
     <dt class="property-optional"
             title="Optional">
-        <span>token</span>
+        <span id="state_token_python">
+<a href="#state_token_python" style="color: inherit; text-decoration: inherit;">token</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -971,7 +1075,9 @@ token that the agent provides by default.
 
     <dt class="property-required"
             title="Required">
-        <span>Path</span>
+        <span id="path_csharp">
+<a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -981,7 +1087,9 @@ token that the agent provides by default.
 
     <dt class="property-required"
             title="Required">
-        <span>Value</span>
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -990,7 +1098,9 @@ token that the agent provides by default.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Flags</span>
+        <span id="flags_csharp">
+<a href="#flags_csharp" style="color: inherit; text-decoration: inherit;">Flags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1007,7 +1117,9 @@ to attach to the key (defaults to 0).
 
     <dt class="property-required"
             title="Required">
-        <span>Path</span>
+        <span id="path_go">
+<a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1017,7 +1129,9 @@ to attach to the key (defaults to 0).
 
     <dt class="property-required"
             title="Required">
-        <span>Value</span>
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1026,7 +1140,9 @@ to attach to the key (defaults to 0).
 
     <dt class="property-optional"
             title="Optional">
-        <span>Flags</span>
+        <span id="flags_go">
+<a href="#flags_go" style="color: inherit; text-decoration: inherit;">Flags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1043,7 +1159,9 @@ to attach to the key (defaults to 0).
 
     <dt class="property-required"
             title="Required">
-        <span>path</span>
+        <span id="path_nodejs">
+<a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1053,7 +1171,9 @@ to attach to the key (defaults to 0).
 
     <dt class="property-required"
             title="Required">
-        <span>value</span>
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1062,7 +1182,9 @@ to attach to the key (defaults to 0).
 
     <dt class="property-optional"
             title="Optional">
-        <span>flags</span>
+        <span id="flags_nodejs">
+<a href="#flags_nodejs" style="color: inherit; text-decoration: inherit;">flags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1079,7 +1201,9 @@ to attach to the key (defaults to 0).
 
     <dt class="property-required"
             title="Required">
-        <span>path</span>
+        <span id="path_python">
+<a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1089,7 +1213,9 @@ to attach to the key (defaults to 0).
 
     <dt class="property-required"
             title="Required">
-        <span>value</span>
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1098,7 +1224,9 @@ to attach to the key (defaults to 0).
 
     <dt class="property-optional"
             title="Optional">
-        <span>flags</span>
+        <span id="flags_python">
+<a href="#flags_python" style="color: inherit; text-decoration: inherit;">flags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
