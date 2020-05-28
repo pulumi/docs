@@ -202,7 +202,9 @@ The WebhookIntegration resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-required"
             title="Required">
-        <span>Enabled</span>
+        <span id="enabled_csharp">
+<a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -211,7 +213,9 @@ The WebhookIntegration resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Headers</span>
+        <span id="headers_csharp">
+<a href="#headers_csharp" style="color: inherit; text-decoration: inherit;">Headers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#webhookintegrationheader">List&lt;Pulumi.<wbr>Signal<wbr>Fx.<wbr>Inputs.<wbr>Webhook<wbr>Integration<wbr>Header<wbr>Args&gt;</a></span>
     </dt>
@@ -220,7 +224,9 @@ The WebhookIntegration resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -229,7 +235,9 @@ The WebhookIntegration resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Shared<wbr>Secret</span>
+        <span id="sharedsecret_csharp">
+<a href="#sharedsecret_csharp" style="color: inherit; text-decoration: inherit;">Shared<wbr>Secret</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -237,7 +245,9 @@ The WebhookIntegration resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Url</span>
+        <span id="url_csharp">
+<a href="#url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -253,7 +263,9 @@ The WebhookIntegration resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-required"
             title="Required">
-        <span>Enabled</span>
+        <span id="enabled_go">
+<a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -262,7 +274,9 @@ The WebhookIntegration resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Headers</span>
+        <span id="headers_go">
+<a href="#headers_go" style="color: inherit; text-decoration: inherit;">Headers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#webhookintegrationheader">[]Webhook<wbr>Integration<wbr>Header</a></span>
     </dt>
@@ -271,7 +285,9 @@ The WebhookIntegration resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -280,7 +296,9 @@ The WebhookIntegration resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Shared<wbr>Secret</span>
+        <span id="sharedsecret_go">
+<a href="#sharedsecret_go" style="color: inherit; text-decoration: inherit;">Shared<wbr>Secret</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -288,7 +306,9 @@ The WebhookIntegration resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Url</span>
+        <span id="url_go">
+<a href="#url_go" style="color: inherit; text-decoration: inherit;">Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -304,7 +324,9 @@ The WebhookIntegration resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-required"
             title="Required">
-        <span>enabled</span>
+        <span id="enabled_nodejs">
+<a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -313,7 +335,9 @@ The WebhookIntegration resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-optional"
             title="Optional">
-        <span>headers</span>
+        <span id="headers_nodejs">
+<a href="#headers_nodejs" style="color: inherit; text-decoration: inherit;">headers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#webhookintegrationheader">Webhook<wbr>Integration<wbr>Header[]</a></span>
     </dt>
@@ -322,7 +346,9 @@ The WebhookIntegration resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -331,7 +357,9 @@ The WebhookIntegration resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-optional"
             title="Optional">
-        <span>shared<wbr>Secret</span>
+        <span id="sharedsecret_nodejs">
+<a href="#sharedsecret_nodejs" style="color: inherit; text-decoration: inherit;">shared<wbr>Secret</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -339,7 +367,9 @@ The WebhookIntegration resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-optional"
             title="Optional">
-        <span>url</span>
+        <span id="url_nodejs">
+<a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -355,7 +385,9 @@ The WebhookIntegration resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-required"
             title="Required">
-        <span>enabled</span>
+        <span id="enabled_python">
+<a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -364,7 +396,9 @@ The WebhookIntegration resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-optional"
             title="Optional">
-        <span>headers</span>
+        <span id="headers_python">
+<a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#webhookintegrationheader">List[Webhook<wbr>Integration<wbr>Header]</a></span>
     </dt>
@@ -373,7 +407,9 @@ The WebhookIntegration resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -382,7 +418,9 @@ The WebhookIntegration resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-optional"
             title="Optional">
-        <span>shared_<wbr>secret</span>
+        <span id="shared_secret_python">
+<a href="#shared_secret_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>secret</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -390,7 +428,9 @@ The WebhookIntegration resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-optional"
             title="Optional">
-        <span>url</span>
+        <span id="url_python">
+<a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -417,7 +457,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -432,7 +474,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -447,7 +491,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -462,7 +508,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -603,7 +651,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enabled</span>
+        <span id="state_enabled_csharp">
+<a href="#state_enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -612,7 +662,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Headers</span>
+        <span id="state_headers_csharp">
+<a href="#state_headers_csharp" style="color: inherit; text-decoration: inherit;">Headers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#webhookintegrationheader">List&lt;Pulumi.<wbr>Signal<wbr>Fx.<wbr>Inputs.<wbr>Webhook<wbr>Integration<wbr>Header<wbr>Args&gt;</a></span>
     </dt>
@@ -621,7 +673,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -630,7 +684,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Shared<wbr>Secret</span>
+        <span id="state_sharedsecret_csharp">
+<a href="#state_sharedsecret_csharp" style="color: inherit; text-decoration: inherit;">Shared<wbr>Secret</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -638,7 +694,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Url</span>
+        <span id="state_url_csharp">
+<a href="#state_url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -654,7 +712,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enabled</span>
+        <span id="state_enabled_go">
+<a href="#state_enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -663,7 +723,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Headers</span>
+        <span id="state_headers_go">
+<a href="#state_headers_go" style="color: inherit; text-decoration: inherit;">Headers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#webhookintegrationheader">[]Webhook<wbr>Integration<wbr>Header</a></span>
     </dt>
@@ -672,7 +734,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -681,7 +745,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Shared<wbr>Secret</span>
+        <span id="state_sharedsecret_go">
+<a href="#state_sharedsecret_go" style="color: inherit; text-decoration: inherit;">Shared<wbr>Secret</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -689,7 +755,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Url</span>
+        <span id="state_url_go">
+<a href="#state_url_go" style="color: inherit; text-decoration: inherit;">Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -705,7 +773,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>enabled</span>
+        <span id="state_enabled_nodejs">
+<a href="#state_enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -714,7 +784,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>headers</span>
+        <span id="state_headers_nodejs">
+<a href="#state_headers_nodejs" style="color: inherit; text-decoration: inherit;">headers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#webhookintegrationheader">Webhook<wbr>Integration<wbr>Header[]</a></span>
     </dt>
@@ -723,7 +795,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -732,7 +806,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>shared<wbr>Secret</span>
+        <span id="state_sharedsecret_nodejs">
+<a href="#state_sharedsecret_nodejs" style="color: inherit; text-decoration: inherit;">shared<wbr>Secret</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -740,7 +816,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>url</span>
+        <span id="state_url_nodejs">
+<a href="#state_url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -756,7 +834,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>enabled</span>
+        <span id="state_enabled_python">
+<a href="#state_enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -765,7 +845,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>headers</span>
+        <span id="state_headers_python">
+<a href="#state_headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#webhookintegrationheader">List[Webhook<wbr>Integration<wbr>Header]</a></span>
     </dt>
@@ -774,7 +856,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -783,7 +867,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>shared_<wbr>secret</span>
+        <span id="state_shared_secret_python">
+<a href="#state_shared_secret_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>secret</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -791,7 +877,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>url</span>
+        <span id="state_url_python">
+<a href="#state_url_python" style="color: inherit; text-decoration: inherit;">url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -833,7 +921,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Header<wbr>Key</span>
+        <span id="headerkey_csharp">
+<a href="#headerkey_csharp" style="color: inherit; text-decoration: inherit;">Header<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -842,7 +932,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Header<wbr>Value</span>
+        <span id="headervalue_csharp">
+<a href="#headervalue_csharp" style="color: inherit; text-decoration: inherit;">Header<wbr>Value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -858,7 +950,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Header<wbr>Key</span>
+        <span id="headerkey_go">
+<a href="#headerkey_go" style="color: inherit; text-decoration: inherit;">Header<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -867,7 +961,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Header<wbr>Value</span>
+        <span id="headervalue_go">
+<a href="#headervalue_go" style="color: inherit; text-decoration: inherit;">Header<wbr>Value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -883,7 +979,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>header<wbr>Key</span>
+        <span id="headerkey_nodejs">
+<a href="#headerkey_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -892,7 +990,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>header<wbr>Value</span>
+        <span id="headervalue_nodejs">
+<a href="#headervalue_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -908,7 +1008,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>header<wbr>Key</span>
+        <span id="headerkey_python">
+<a href="#headerkey_python" style="color: inherit; text-decoration: inherit;">header<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -917,7 +1019,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>header<wbr>Value</span>
+        <span id="headervalue_python">
+<a href="#headervalue_python" style="color: inherit; text-decoration: inherit;">header<wbr>Value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

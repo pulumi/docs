@@ -14,501 +14,9 @@ Provides a SignalFx detector resource. This can be used to create and manage det
 
 > **NOTE** If you're interested in using SignalFx detector features such as Historical Anomaly, Resource Running Out, or others then consider building them in the UI first then using the "Show SignalFlow" feature to extract the value for `program_text`. You may also consult the [documentation for detector functions in signalflow-library](https://github.com/signalfx/signalflow-library/tree/master/library/signalfx/detectors).
 
-
-
 {{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Jira
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_signalfx as signalfx
-
-application_delay = []
-for range in [{"value": i} for i in range(0, len(var.clusters))]:
-    application_delay.append(signalfx.Detector(f"applicationDelay-{range['value']}",
-        description=f"your application is slow - {var['clusters'][range['value']]}",
-        max_delay=30,
-        authorized_writer_teams=[signalfx_team["mycoolteam"]["id"]],
-        authorized_writer_users=["abc123"],
-        program_text=f"""signal = data('app.delay', filter('cluster','{var["clusters"][range["value"]]}'), extrapolation='last_value', maxExtrapolations=5).max()
-detect(when(signal > 60, '5m')).publish('Processing old messages 5m')
-detect(when(signal > 60, '30m')).publish('Processing old messages 30m')
-""",
-        rule=[{
-            "description": "maximum > 60 for 5m",
-            "severity": "Warning",
-            "detectLabel": "Processing old messages 5m",
-            "notifications": ["Jira,credentialId"],
-        }]))
-```
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as signalfx from "@pulumi/signalfx";
-
-const applicationDelay: signalfx.Detector[];
-for (const range = {value: 0}; range.value < var.clusters.length; range.value++) {
-    applicationDelay.push(new signalfx.Detector(`applicationDelay-${range.value}`, {
-        description: `your application is slow - ${var.clusters[range.value]}`,
-        maxDelay: 30,
-        authorizedWriterTeams: [signalfx_team.mycoolteam.id],
-        authorizedWriterUsers: ["abc123"],
-        programText: `signal = data('app.delay', filter('cluster','${var.clusters[range.value]}'), extrapolation='last_value', maxExtrapolations=5).max()
-detect(when(signal > 60, '5m')).publish('Processing old messages 5m')
-detect(when(signal > 60, '30m')).publish('Processing old messages 30m')
-`,
-        rule: [{
-            description: "maximum > 60 for 5m",
-            severity: "Warning",
-            detectLabel: "Processing old messages 5m",
-            notifications: ["Jira,credentialId"],
-        }],
-    }));
-}
-```
-{{% /example %}}
-
-### Opsgenie
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_signalfx as signalfx
-
-application_delay = []
-for range in [{"value": i} for i in range(0, len(var.clusters))]:
-    application_delay.append(signalfx.Detector(f"applicationDelay-{range['value']}",
-        description=f"your application is slow - {var['clusters'][range['value']]}",
-        max_delay=30,
-        authorized_writer_teams=[signalfx_team["mycoolteam"]["id"]],
-        authorized_writer_users=["abc123"],
-        program_text=f"""signal = data('app.delay', filter('cluster','{var["clusters"][range["value"]]}'), extrapolation='last_value', maxExtrapolations=5).max()
-detect(when(signal > 60, '5m')).publish('Processing old messages 5m')
-detect(when(signal > 60, '30m')).publish('Processing old messages 30m')
-""",
-        rule=[{
-            "description": "maximum > 60 for 5m",
-            "severity": "Warning",
-            "detectLabel": "Processing old messages 5m",
-            "notifications": ["Opsgenie,credentialId,responderName,responderId,Team"],
-        }]))
-```
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as signalfx from "@pulumi/signalfx";
-
-const applicationDelay: signalfx.Detector[];
-for (const range = {value: 0}; range.value < var.clusters.length; range.value++) {
-    applicationDelay.push(new signalfx.Detector(`applicationDelay-${range.value}`, {
-        description: `your application is slow - ${var.clusters[range.value]}`,
-        maxDelay: 30,
-        authorizedWriterTeams: [signalfx_team.mycoolteam.id],
-        authorizedWriterUsers: ["abc123"],
-        programText: `signal = data('app.delay', filter('cluster','${var.clusters[range.value]}'), extrapolation='last_value', maxExtrapolations=5).max()
-detect(when(signal > 60, '5m')).publish('Processing old messages 5m')
-detect(when(signal > 60, '30m')).publish('Processing old messages 30m')
-`,
-        rule: [{
-            description: "maximum > 60 for 5m",
-            severity: "Warning",
-            detectLabel: "Processing old messages 5m",
-            notifications: ["Opsgenie,credentialId,responderName,responderId,Team"],
-        }],
-    }));
-}
-```
-{{% /example %}}
-
-### PagerDuty
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_signalfx as signalfx
-
-application_delay = []
-for range in [{"value": i} for i in range(0, len(var.clusters))]:
-    application_delay.append(signalfx.Detector(f"applicationDelay-{range['value']}",
-        description=f"your application is slow - {var['clusters'][range['value']]}",
-        max_delay=30,
-        authorized_writer_teams=[signalfx_team["mycoolteam"]["id"]],
-        authorized_writer_users=["abc123"],
-        program_text=f"""signal = data('app.delay', filter('cluster','{var["clusters"][range["value"]]}'), extrapolation='last_value', maxExtrapolations=5).max()
-detect(when(signal > 60, '5m')).publish('Processing old messages 5m')
-detect(when(signal > 60, '30m')).publish('Processing old messages 30m')
-""",
-        rule=[{
-            "description": "maximum > 60 for 5m",
-            "severity": "Warning",
-            "detectLabel": "Processing old messages 5m",
-            "notifications": ["PagerDuty,credentialId"],
-        }]))
-```
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as signalfx from "@pulumi/signalfx";
-
-const applicationDelay: signalfx.Detector[];
-for (const range = {value: 0}; range.value < var.clusters.length; range.value++) {
-    applicationDelay.push(new signalfx.Detector(`applicationDelay-${range.value}`, {
-        description: `your application is slow - ${var.clusters[range.value]}`,
-        maxDelay: 30,
-        authorizedWriterTeams: [signalfx_team.mycoolteam.id],
-        authorizedWriterUsers: ["abc123"],
-        programText: `signal = data('app.delay', filter('cluster','${var.clusters[range.value]}'), extrapolation='last_value', maxExtrapolations=5).max()
-detect(when(signal > 60, '5m')).publish('Processing old messages 5m')
-detect(when(signal > 60, '30m')).publish('Processing old messages 30m')
-`,
-        rule: [{
-            description: "maximum > 60 for 5m",
-            severity: "Warning",
-            detectLabel: "Processing old messages 5m",
-            notifications: ["PagerDuty,credentialId"],
-        }],
-    }));
-}
-```
-{{% /example %}}
-
-### Slack
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_signalfx as signalfx
-
-application_delay = []
-for range in [{"value": i} for i in range(0, len(var.clusters))]:
-    application_delay.append(signalfx.Detector(f"applicationDelay-{range['value']}",
-        description=f"your application is slow - {var['clusters'][range['value']]}",
-        max_delay=30,
-        authorized_writer_teams=[signalfx_team["mycoolteam"]["id"]],
-        authorized_writer_users=["abc123"],
-        program_text=f"""signal = data('app.delay', filter('cluster','{var["clusters"][range["value"]]}'), extrapolation='last_value', maxExtrapolations=5).max()
-detect(when(signal > 60, '5m')).publish('Processing old messages 5m')
-detect(when(signal > 60, '30m')).publish('Processing old messages 30m')
-""",
-        rule=[{
-            "description": "maximum > 60 for 5m",
-            "severity": "Warning",
-            "detectLabel": "Processing old messages 5m",
-            "notifications": ["Slack,credentialId,channel"],
-        }]))
-```
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as signalfx from "@pulumi/signalfx";
-
-const applicationDelay: signalfx.Detector[];
-for (const range = {value: 0}; range.value < var.clusters.length; range.value++) {
-    applicationDelay.push(new signalfx.Detector(`applicationDelay-${range.value}`, {
-        description: `your application is slow - ${var.clusters[range.value]}`,
-        maxDelay: 30,
-        authorizedWriterTeams: [signalfx_team.mycoolteam.id],
-        authorizedWriterUsers: ["abc123"],
-        programText: `signal = data('app.delay', filter('cluster','${var.clusters[range.value]}'), extrapolation='last_value', maxExtrapolations=5).max()
-detect(when(signal > 60, '5m')).publish('Processing old messages 5m')
-detect(when(signal > 60, '30m')).publish('Processing old messages 30m')
-`,
-        rule: [{
-            description: "maximum > 60 for 5m",
-            severity: "Warning",
-            detectLabel: "Processing old messages 5m",
-            notifications: ["Slack,credentialId,channel"],
-        }],
-    }));
-}
-```
-{{% /example %}}
-
-### Team
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_signalfx as signalfx
-
-application_delay = []
-for range in [{"value": i} for i in range(0, len(var.clusters))]:
-    application_delay.append(signalfx.Detector(f"applicationDelay-{range['value']}",
-        description=f"your application is slow - {var['clusters'][range['value']]}",
-        max_delay=30,
-        authorized_writer_teams=[signalfx_team["mycoolteam"]["id"]],
-        authorized_writer_users=["abc123"],
-        program_text=f"""signal = data('app.delay', filter('cluster','{var["clusters"][range["value"]]}'), extrapolation='last_value', maxExtrapolations=5).max()
-detect(when(signal > 60, '5m')).publish('Processing old messages 5m')
-detect(when(signal > 60, '30m')).publish('Processing old messages 30m')
-""",
-        rule=[{
-            "description": "maximum > 60 for 5m",
-            "severity": "Warning",
-            "detectLabel": "Processing old messages 5m",
-            "notifications": ["Team,teamId"],
-        }]))
-```
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as signalfx from "@pulumi/signalfx";
-
-const applicationDelay: signalfx.Detector[];
-for (const range = {value: 0}; range.value < var.clusters.length; range.value++) {
-    applicationDelay.push(new signalfx.Detector(`applicationDelay-${range.value}`, {
-        description: `your application is slow - ${var.clusters[range.value]}`,
-        maxDelay: 30,
-        authorizedWriterTeams: [signalfx_team.mycoolteam.id],
-        authorizedWriterUsers: ["abc123"],
-        programText: `signal = data('app.delay', filter('cluster','${var.clusters[range.value]}'), extrapolation='last_value', maxExtrapolations=5).max()
-detect(when(signal > 60, '5m')).publish('Processing old messages 5m')
-detect(when(signal > 60, '30m')).publish('Processing old messages 30m')
-`,
-        rule: [{
-            description: "maximum > 60 for 5m",
-            severity: "Warning",
-            detectLabel: "Processing old messages 5m",
-            notifications: ["Team,teamId"],
-        }],
-    }));
-}
-```
-{{% /example %}}
-
-### TeamEmail
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_signalfx as signalfx
-
-application_delay = []
-for range in [{"value": i} for i in range(0, len(var.clusters))]:
-    application_delay.append(signalfx.Detector(f"applicationDelay-{range['value']}",
-        description=f"your application is slow - {var['clusters'][range['value']]}",
-        max_delay=30,
-        authorized_writer_teams=[signalfx_team["mycoolteam"]["id"]],
-        authorized_writer_users=["abc123"],
-        program_text=f"""signal = data('app.delay', filter('cluster','{var["clusters"][range["value"]]}'), extrapolation='last_value', maxExtrapolations=5).max()
-detect(when(signal > 60, '5m')).publish('Processing old messages 5m')
-detect(when(signal > 60, '30m')).publish('Processing old messages 30m')
-""",
-        rule=[{
-            "description": "maximum > 60 for 5m",
-            "severity": "Warning",
-            "detectLabel": "Processing old messages 5m",
-            "notifications": ["TeamEmail,teamId"],
-        }]))
-```
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as signalfx from "@pulumi/signalfx";
-
-const applicationDelay: signalfx.Detector[];
-for (const range = {value: 0}; range.value < var.clusters.length; range.value++) {
-    applicationDelay.push(new signalfx.Detector(`applicationDelay-${range.value}`, {
-        description: `your application is slow - ${var.clusters[range.value]}`,
-        maxDelay: 30,
-        authorizedWriterTeams: [signalfx_team.mycoolteam.id],
-        authorizedWriterUsers: ["abc123"],
-        programText: `signal = data('app.delay', filter('cluster','${var.clusters[range.value]}'), extrapolation='last_value', maxExtrapolations=5).max()
-detect(when(signal > 60, '5m')).publish('Processing old messages 5m')
-detect(when(signal > 60, '30m')).publish('Processing old messages 30m')
-`,
-        rule: [{
-            description: "maximum > 60 for 5m",
-            severity: "Warning",
-            detectLabel: "Processing old messages 5m",
-            notifications: ["TeamEmail,teamId"],
-        }],
-    }));
-}
-```
-{{% /example %}}
-
-### VictorOps
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_signalfx as signalfx
-
-application_delay = []
-for range in [{"value": i} for i in range(0, len(var.clusters))]:
-    application_delay.append(signalfx.Detector(f"applicationDelay-{range['value']}",
-        description=f"your application is slow - {var['clusters'][range['value']]}",
-        max_delay=30,
-        authorized_writer_teams=[signalfx_team["mycoolteam"]["id"]],
-        authorized_writer_users=["abc123"],
-        program_text=f"""signal = data('app.delay', filter('cluster','{var["clusters"][range["value"]]}'), extrapolation='last_value', maxExtrapolations=5).max()
-detect(when(signal > 60, '5m')).publish('Processing old messages 5m')
-detect(when(signal > 60, '30m')).publish('Processing old messages 30m')
-""",
-        rule=[{
-            "description": "maximum > 60 for 5m",
-            "severity": "Warning",
-            "detectLabel": "Processing old messages 5m",
-            "notifications": ["VictorOps,credentialId,routingKey"],
-        }]))
-```
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as signalfx from "@pulumi/signalfx";
-
-const applicationDelay: signalfx.Detector[];
-for (const range = {value: 0}; range.value < var.clusters.length; range.value++) {
-    applicationDelay.push(new signalfx.Detector(`applicationDelay-${range.value}`, {
-        description: `your application is slow - ${var.clusters[range.value]}`,
-        maxDelay: 30,
-        authorizedWriterTeams: [signalfx_team.mycoolteam.id],
-        authorizedWriterUsers: ["abc123"],
-        programText: `signal = data('app.delay', filter('cluster','${var.clusters[range.value]}'), extrapolation='last_value', maxExtrapolations=5).max()
-detect(when(signal > 60, '5m')).publish('Processing old messages 5m')
-detect(when(signal > 60, '30m')).publish('Processing old messages 30m')
-`,
-        rule: [{
-            description: "maximum > 60 for 5m",
-            severity: "Warning",
-            detectLabel: "Processing old messages 5m",
-            notifications: ["VictorOps,credentialId,routingKey"],
-        }],
-    }));
-}
-```
-{{% /example %}}
-
-### Webhook
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_signalfx as signalfx
-
-application_delay = []
-for range in [{"value": i} for i in range(0, len(var.clusters))]:
-    application_delay.append(signalfx.Detector(f"applicationDelay-{range['value']}",
-        description=f"your application is slow - {var['clusters'][range['value']]}",
-        max_delay=30,
-        authorized_writer_teams=[signalfx_team["mycoolteam"]["id"]],
-        authorized_writer_users=["abc123"],
-        program_text=f"""signal = data('app.delay', filter('cluster','{var["clusters"][range["value"]]}'), extrapolation='last_value', maxExtrapolations=5).max()
-detect(when(signal > 60, '5m')).publish('Processing old messages 5m')
-detect(when(signal > 60, '30m')).publish('Processing old messages 30m')
-""",
-        rule=[{
-            "description": "maximum > 60 for 5m",
-            "severity": "Warning",
-            "detectLabel": "Processing old messages 5m",
-            "notifications": ["Webhook,credentialId,x,"],
-        }]))
-```
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as signalfx from "@pulumi/signalfx";
-
-const applicationDelay: signalfx.Detector[];
-for (const range = {value: 0}; range.value < var.clusters.length; range.value++) {
-    applicationDelay.push(new signalfx.Detector(`applicationDelay-${range.value}`, {
-        description: `your application is slow - ${var.clusters[range.value]}`,
-        maxDelay: 30,
-        authorizedWriterTeams: [signalfx_team.mycoolteam.id],
-        authorizedWriterUsers: ["abc123"],
-        programText: `signal = data('app.delay', filter('cluster','${var.clusters[range.value]}'), extrapolation='last_value', maxExtrapolations=5).max()
-detect(when(signal > 60, '5m')).publish('Processing old messages 5m')
-detect(when(signal > 60, '30m')).publish('Processing old messages 30m')
-`,
-        rule: [{
-            description: "maximum > 60 for 5m",
-            severity: "Warning",
-            detectLabel: "Processing old messages 5m",
-            notifications: ["Webhook,credentialId,x,"],
-        }],
-    }));
-}
-```
-{{% /example %}}
-
 {{% /examples %}}
+
 
 
 ## Create a Detector Resource {#create}
@@ -694,7 +202,9 @@ The Detector resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-required"
             title="Required">
-        <span>Program<wbr>Text</span>
+        <span id="programtext_csharp">
+<a href="#programtext_csharp" style="color: inherit; text-decoration: inherit;">Program<wbr>Text</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -703,7 +213,9 @@ The Detector resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-required"
             title="Required">
-        <span>Rules</span>
+        <span id="rules_csharp">
+<a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#detectorrule">List&lt;Pulumi.<wbr>Signal<wbr>Fx.<wbr>Inputs.<wbr>Detector<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
@@ -712,7 +224,9 @@ The Detector resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Authorized<wbr>Writer<wbr>Teams</span>
+        <span id="authorizedwriterteams_csharp">
+<a href="#authorizedwriterteams_csharp" style="color: inherit; text-decoration: inherit;">Authorized<wbr>Writer<wbr>Teams</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -721,7 +235,9 @@ The Detector resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Authorized<wbr>Writer<wbr>Users</span>
+        <span id="authorizedwriterusers_csharp">
+<a href="#authorizedwriterusers_csharp" style="color: inherit; text-decoration: inherit;">Authorized<wbr>Writer<wbr>Users</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -730,7 +246,9 @@ The Detector resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -739,7 +257,9 @@ The Detector resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Disable<wbr>Sampling</span>
+        <span id="disablesampling_csharp">
+<a href="#disablesampling_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Sampling</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -748,7 +268,9 @@ The Detector resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>End<wbr>Time</span>
+        <span id="endtime_csharp">
+<a href="#endtime_csharp" style="color: inherit; text-decoration: inherit;">End<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -757,7 +279,9 @@ The Detector resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Delay</span>
+        <span id="maxdelay_csharp">
+<a href="#maxdelay_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Delay</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -766,7 +290,9 @@ The Detector resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -775,7 +301,9 @@ The Detector resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Show<wbr>Data<wbr>Markers</span>
+        <span id="showdatamarkers_csharp">
+<a href="#showdatamarkers_csharp" style="color: inherit; text-decoration: inherit;">Show<wbr>Data<wbr>Markers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -784,7 +312,9 @@ The Detector resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Show<wbr>Event<wbr>Lines</span>
+        <span id="showeventlines_csharp">
+<a href="#showeventlines_csharp" style="color: inherit; text-decoration: inherit;">Show<wbr>Event<wbr>Lines</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -793,7 +323,9 @@ The Detector resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Start<wbr>Time</span>
+        <span id="starttime_csharp">
+<a href="#starttime_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -802,7 +334,9 @@ The Detector resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Teams</span>
+        <span id="teams_csharp">
+<a href="#teams_csharp" style="color: inherit; text-decoration: inherit;">Teams</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -811,7 +345,9 @@ The Detector resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Time<wbr>Range</span>
+        <span id="timerange_csharp">
+<a href="#timerange_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Range</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -820,7 +356,9 @@ The Detector resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Viz<wbr>Options</span>
+        <span id="vizoptions_csharp">
+<a href="#vizoptions_csharp" style="color: inherit; text-decoration: inherit;">Viz<wbr>Options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#detectorvizoption">List&lt;Pulumi.<wbr>Signal<wbr>Fx.<wbr>Inputs.<wbr>Detector<wbr>Viz<wbr>Option<wbr>Args&gt;</a></span>
     </dt>
@@ -836,7 +374,9 @@ The Detector resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-required"
             title="Required">
-        <span>Program<wbr>Text</span>
+        <span id="programtext_go">
+<a href="#programtext_go" style="color: inherit; text-decoration: inherit;">Program<wbr>Text</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -845,7 +385,9 @@ The Detector resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-required"
             title="Required">
-        <span>Rules</span>
+        <span id="rules_go">
+<a href="#rules_go" style="color: inherit; text-decoration: inherit;">Rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#detectorrule">[]Detector<wbr>Rule</a></span>
     </dt>
@@ -854,7 +396,9 @@ The Detector resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Authorized<wbr>Writer<wbr>Teams</span>
+        <span id="authorizedwriterteams_go">
+<a href="#authorizedwriterteams_go" style="color: inherit; text-decoration: inherit;">Authorized<wbr>Writer<wbr>Teams</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -863,7 +407,9 @@ The Detector resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Authorized<wbr>Writer<wbr>Users</span>
+        <span id="authorizedwriterusers_go">
+<a href="#authorizedwriterusers_go" style="color: inherit; text-decoration: inherit;">Authorized<wbr>Writer<wbr>Users</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -872,7 +418,9 @@ The Detector resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -881,7 +429,9 @@ The Detector resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Disable<wbr>Sampling</span>
+        <span id="disablesampling_go">
+<a href="#disablesampling_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Sampling</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -890,7 +440,9 @@ The Detector resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>End<wbr>Time</span>
+        <span id="endtime_go">
+<a href="#endtime_go" style="color: inherit; text-decoration: inherit;">End<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -899,7 +451,9 @@ The Detector resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Delay</span>
+        <span id="maxdelay_go">
+<a href="#maxdelay_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Delay</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -908,7 +462,9 @@ The Detector resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -917,7 +473,9 @@ The Detector resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Show<wbr>Data<wbr>Markers</span>
+        <span id="showdatamarkers_go">
+<a href="#showdatamarkers_go" style="color: inherit; text-decoration: inherit;">Show<wbr>Data<wbr>Markers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -926,7 +484,9 @@ The Detector resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Show<wbr>Event<wbr>Lines</span>
+        <span id="showeventlines_go">
+<a href="#showeventlines_go" style="color: inherit; text-decoration: inherit;">Show<wbr>Event<wbr>Lines</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -935,7 +495,9 @@ The Detector resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Start<wbr>Time</span>
+        <span id="starttime_go">
+<a href="#starttime_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -944,7 +506,9 @@ The Detector resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Teams</span>
+        <span id="teams_go">
+<a href="#teams_go" style="color: inherit; text-decoration: inherit;">Teams</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -953,7 +517,9 @@ The Detector resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Time<wbr>Range</span>
+        <span id="timerange_go">
+<a href="#timerange_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Range</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -962,7 +528,9 @@ The Detector resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>Viz<wbr>Options</span>
+        <span id="vizoptions_go">
+<a href="#vizoptions_go" style="color: inherit; text-decoration: inherit;">Viz<wbr>Options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#detectorvizoption">[]Detector<wbr>Viz<wbr>Option</a></span>
     </dt>
@@ -978,7 +546,9 @@ The Detector resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-required"
             title="Required">
-        <span>program<wbr>Text</span>
+        <span id="programtext_nodejs">
+<a href="#programtext_nodejs" style="color: inherit; text-decoration: inherit;">program<wbr>Text</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -987,7 +557,9 @@ The Detector resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-required"
             title="Required">
-        <span>rules</span>
+        <span id="rules_nodejs">
+<a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#detectorrule">Detector<wbr>Rule[]</a></span>
     </dt>
@@ -996,7 +568,9 @@ The Detector resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>authorized<wbr>Writer<wbr>Teams</span>
+        <span id="authorizedwriterteams_nodejs">
+<a href="#authorizedwriterteams_nodejs" style="color: inherit; text-decoration: inherit;">authorized<wbr>Writer<wbr>Teams</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1005,7 +579,9 @@ The Detector resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>authorized<wbr>Writer<wbr>Users</span>
+        <span id="authorizedwriterusers_nodejs">
+<a href="#authorizedwriterusers_nodejs" style="color: inherit; text-decoration: inherit;">authorized<wbr>Writer<wbr>Users</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1014,7 +590,9 @@ The Detector resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1023,7 +601,9 @@ The Detector resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>disable<wbr>Sampling</span>
+        <span id="disablesampling_nodejs">
+<a href="#disablesampling_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Sampling</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1032,7 +612,9 @@ The Detector resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>end<wbr>Time</span>
+        <span id="endtime_nodejs">
+<a href="#endtime_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1041,7 +623,9 @@ The Detector resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Delay</span>
+        <span id="maxdelay_nodejs">
+<a href="#maxdelay_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Delay</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1050,7 +634,9 @@ The Detector resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1059,7 +645,9 @@ The Detector resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>show<wbr>Data<wbr>Markers</span>
+        <span id="showdatamarkers_nodejs">
+<a href="#showdatamarkers_nodejs" style="color: inherit; text-decoration: inherit;">show<wbr>Data<wbr>Markers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1068,7 +656,9 @@ The Detector resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>show<wbr>Event<wbr>Lines</span>
+        <span id="showeventlines_nodejs">
+<a href="#showeventlines_nodejs" style="color: inherit; text-decoration: inherit;">show<wbr>Event<wbr>Lines</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1077,7 +667,9 @@ The Detector resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>start<wbr>Time</span>
+        <span id="starttime_nodejs">
+<a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1086,7 +678,9 @@ The Detector resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>teams</span>
+        <span id="teams_nodejs">
+<a href="#teams_nodejs" style="color: inherit; text-decoration: inherit;">teams</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1095,7 +689,9 @@ The Detector resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>time<wbr>Range</span>
+        <span id="timerange_nodejs">
+<a href="#timerange_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Range</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1104,7 +700,9 @@ The Detector resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>viz<wbr>Options</span>
+        <span id="vizoptions_nodejs">
+<a href="#vizoptions_nodejs" style="color: inherit; text-decoration: inherit;">viz<wbr>Options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#detectorvizoption">Detector<wbr>Viz<wbr>Option[]</a></span>
     </dt>
@@ -1120,7 +718,9 @@ The Detector resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-required"
             title="Required">
-        <span>program_<wbr>text</span>
+        <span id="program_text_python">
+<a href="#program_text_python" style="color: inherit; text-decoration: inherit;">program_<wbr>text</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1129,7 +729,9 @@ The Detector resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-required"
             title="Required">
-        <span>rules</span>
+        <span id="rules_python">
+<a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#detectorrule">List[Detector<wbr>Rule]</a></span>
     </dt>
@@ -1138,7 +740,9 @@ The Detector resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>authorized_<wbr>writer_<wbr>teams</span>
+        <span id="authorized_writer_teams_python">
+<a href="#authorized_writer_teams_python" style="color: inherit; text-decoration: inherit;">authorized_<wbr>writer_<wbr>teams</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1147,7 +751,9 @@ The Detector resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>authorized_<wbr>writer_<wbr>users</span>
+        <span id="authorized_writer_users_python">
+<a href="#authorized_writer_users_python" style="color: inherit; text-decoration: inherit;">authorized_<wbr>writer_<wbr>users</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1156,7 +762,9 @@ The Detector resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1165,7 +773,9 @@ The Detector resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>disable_<wbr>sampling</span>
+        <span id="disable_sampling_python">
+<a href="#disable_sampling_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>sampling</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1174,7 +784,9 @@ The Detector resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>end_<wbr>time</span>
+        <span id="end_time_python">
+<a href="#end_time_python" style="color: inherit; text-decoration: inherit;">end_<wbr>time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1183,7 +795,9 @@ The Detector resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>max_<wbr>delay</span>
+        <span id="max_delay_python">
+<a href="#max_delay_python" style="color: inherit; text-decoration: inherit;">max_<wbr>delay</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1192,7 +806,9 @@ The Detector resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1201,7 +817,9 @@ The Detector resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>show_<wbr>data_<wbr>markers</span>
+        <span id="show_data_markers_python">
+<a href="#show_data_markers_python" style="color: inherit; text-decoration: inherit;">show_<wbr>data_<wbr>markers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1210,7 +828,9 @@ The Detector resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>show_<wbr>event_<wbr>lines</span>
+        <span id="show_event_lines_python">
+<a href="#show_event_lines_python" style="color: inherit; text-decoration: inherit;">show_<wbr>event_<wbr>lines</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1219,7 +839,9 @@ The Detector resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>start_<wbr>time</span>
+        <span id="start_time_python">
+<a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1228,7 +850,9 @@ The Detector resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>teams</span>
+        <span id="teams_python">
+<a href="#teams_python" style="color: inherit; text-decoration: inherit;">teams</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1237,7 +861,9 @@ The Detector resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>time_<wbr>range</span>
+        <span id="time_range_python">
+<a href="#time_range_python" style="color: inherit; text-decoration: inherit;">time_<wbr>range</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1246,7 +872,9 @@ The Detector resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
-        <span>viz_<wbr>options</span>
+        <span id="viz_options_python">
+<a href="#viz_options_python" style="color: inherit; text-decoration: inherit;">viz_<wbr>options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#detectorvizoption">List[Detector<wbr>Viz<wbr>Option]</a></span>
     </dt>
@@ -1273,7 +901,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1281,7 +911,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Url</span>
+        <span id="url_csharp">
+<a href="#url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1297,7 +929,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1305,7 +939,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Url</span>
+        <span id="url_go">
+<a href="#url_go" style="color: inherit; text-decoration: inherit;">Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1321,7 +957,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1329,7 +967,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>url</span>
+        <span id="url_nodejs">
+<a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1345,7 +985,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1353,7 +995,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>url</span>
+        <span id="url_python">
+<a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1495,7 +1139,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Authorized<wbr>Writer<wbr>Teams</span>
+        <span id="state_authorizedwriterteams_csharp">
+<a href="#state_authorizedwriterteams_csharp" style="color: inherit; text-decoration: inherit;">Authorized<wbr>Writer<wbr>Teams</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1504,7 +1150,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Authorized<wbr>Writer<wbr>Users</span>
+        <span id="state_authorizedwriterusers_csharp">
+<a href="#state_authorizedwriterusers_csharp" style="color: inherit; text-decoration: inherit;">Authorized<wbr>Writer<wbr>Users</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1513,7 +1161,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="state_description_csharp">
+<a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1522,7 +1172,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Disable<wbr>Sampling</span>
+        <span id="state_disablesampling_csharp">
+<a href="#state_disablesampling_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Sampling</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1531,7 +1183,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>End<wbr>Time</span>
+        <span id="state_endtime_csharp">
+<a href="#state_endtime_csharp" style="color: inherit; text-decoration: inherit;">End<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1540,7 +1194,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Delay</span>
+        <span id="state_maxdelay_csharp">
+<a href="#state_maxdelay_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Delay</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1549,7 +1205,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1558,7 +1216,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Program<wbr>Text</span>
+        <span id="state_programtext_csharp">
+<a href="#state_programtext_csharp" style="color: inherit; text-decoration: inherit;">Program<wbr>Text</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1567,7 +1227,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Rules</span>
+        <span id="state_rules_csharp">
+<a href="#state_rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#detectorrule">List&lt;Pulumi.<wbr>Signal<wbr>Fx.<wbr>Inputs.<wbr>Detector<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
@@ -1576,7 +1238,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Show<wbr>Data<wbr>Markers</span>
+        <span id="state_showdatamarkers_csharp">
+<a href="#state_showdatamarkers_csharp" style="color: inherit; text-decoration: inherit;">Show<wbr>Data<wbr>Markers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1585,7 +1249,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Show<wbr>Event<wbr>Lines</span>
+        <span id="state_showeventlines_csharp">
+<a href="#state_showeventlines_csharp" style="color: inherit; text-decoration: inherit;">Show<wbr>Event<wbr>Lines</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1594,7 +1260,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Start<wbr>Time</span>
+        <span id="state_starttime_csharp">
+<a href="#state_starttime_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1603,7 +1271,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Teams</span>
+        <span id="state_teams_csharp">
+<a href="#state_teams_csharp" style="color: inherit; text-decoration: inherit;">Teams</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1612,7 +1282,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Time<wbr>Range</span>
+        <span id="state_timerange_csharp">
+<a href="#state_timerange_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Range</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1621,7 +1293,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Url</span>
+        <span id="state_url_csharp">
+<a href="#state_url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1630,7 +1304,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Viz<wbr>Options</span>
+        <span id="state_vizoptions_csharp">
+<a href="#state_vizoptions_csharp" style="color: inherit; text-decoration: inherit;">Viz<wbr>Options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#detectorvizoption">List&lt;Pulumi.<wbr>Signal<wbr>Fx.<wbr>Inputs.<wbr>Detector<wbr>Viz<wbr>Option<wbr>Args&gt;</a></span>
     </dt>
@@ -1646,7 +1322,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Authorized<wbr>Writer<wbr>Teams</span>
+        <span id="state_authorizedwriterteams_go">
+<a href="#state_authorizedwriterteams_go" style="color: inherit; text-decoration: inherit;">Authorized<wbr>Writer<wbr>Teams</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1655,7 +1333,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Authorized<wbr>Writer<wbr>Users</span>
+        <span id="state_authorizedwriterusers_go">
+<a href="#state_authorizedwriterusers_go" style="color: inherit; text-decoration: inherit;">Authorized<wbr>Writer<wbr>Users</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1664,7 +1344,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="state_description_go">
+<a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1673,7 +1355,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Disable<wbr>Sampling</span>
+        <span id="state_disablesampling_go">
+<a href="#state_disablesampling_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Sampling</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1682,7 +1366,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>End<wbr>Time</span>
+        <span id="state_endtime_go">
+<a href="#state_endtime_go" style="color: inherit; text-decoration: inherit;">End<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1691,7 +1377,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Delay</span>
+        <span id="state_maxdelay_go">
+<a href="#state_maxdelay_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Delay</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1700,7 +1388,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1709,7 +1399,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Program<wbr>Text</span>
+        <span id="state_programtext_go">
+<a href="#state_programtext_go" style="color: inherit; text-decoration: inherit;">Program<wbr>Text</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1718,7 +1410,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Rules</span>
+        <span id="state_rules_go">
+<a href="#state_rules_go" style="color: inherit; text-decoration: inherit;">Rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#detectorrule">[]Detector<wbr>Rule</a></span>
     </dt>
@@ -1727,7 +1421,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Show<wbr>Data<wbr>Markers</span>
+        <span id="state_showdatamarkers_go">
+<a href="#state_showdatamarkers_go" style="color: inherit; text-decoration: inherit;">Show<wbr>Data<wbr>Markers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1736,7 +1432,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Show<wbr>Event<wbr>Lines</span>
+        <span id="state_showeventlines_go">
+<a href="#state_showeventlines_go" style="color: inherit; text-decoration: inherit;">Show<wbr>Event<wbr>Lines</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1745,7 +1443,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Start<wbr>Time</span>
+        <span id="state_starttime_go">
+<a href="#state_starttime_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1754,7 +1454,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Teams</span>
+        <span id="state_teams_go">
+<a href="#state_teams_go" style="color: inherit; text-decoration: inherit;">Teams</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1763,7 +1465,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Time<wbr>Range</span>
+        <span id="state_timerange_go">
+<a href="#state_timerange_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Range</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1772,7 +1476,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Url</span>
+        <span id="state_url_go">
+<a href="#state_url_go" style="color: inherit; text-decoration: inherit;">Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1781,7 +1487,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Viz<wbr>Options</span>
+        <span id="state_vizoptions_go">
+<a href="#state_vizoptions_go" style="color: inherit; text-decoration: inherit;">Viz<wbr>Options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#detectorvizoption">[]Detector<wbr>Viz<wbr>Option</a></span>
     </dt>
@@ -1797,7 +1505,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>authorized<wbr>Writer<wbr>Teams</span>
+        <span id="state_authorizedwriterteams_nodejs">
+<a href="#state_authorizedwriterteams_nodejs" style="color: inherit; text-decoration: inherit;">authorized<wbr>Writer<wbr>Teams</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1806,7 +1516,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>authorized<wbr>Writer<wbr>Users</span>
+        <span id="state_authorizedwriterusers_nodejs">
+<a href="#state_authorizedwriterusers_nodejs" style="color: inherit; text-decoration: inherit;">authorized<wbr>Writer<wbr>Users</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1815,7 +1527,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="state_description_nodejs">
+<a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1824,7 +1538,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>disable<wbr>Sampling</span>
+        <span id="state_disablesampling_nodejs">
+<a href="#state_disablesampling_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Sampling</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1833,7 +1549,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>end<wbr>Time</span>
+        <span id="state_endtime_nodejs">
+<a href="#state_endtime_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1842,7 +1560,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Delay</span>
+        <span id="state_maxdelay_nodejs">
+<a href="#state_maxdelay_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Delay</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1851,7 +1571,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1860,7 +1582,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>program<wbr>Text</span>
+        <span id="state_programtext_nodejs">
+<a href="#state_programtext_nodejs" style="color: inherit; text-decoration: inherit;">program<wbr>Text</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1869,7 +1593,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>rules</span>
+        <span id="state_rules_nodejs">
+<a href="#state_rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#detectorrule">Detector<wbr>Rule[]</a></span>
     </dt>
@@ -1878,7 +1604,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>show<wbr>Data<wbr>Markers</span>
+        <span id="state_showdatamarkers_nodejs">
+<a href="#state_showdatamarkers_nodejs" style="color: inherit; text-decoration: inherit;">show<wbr>Data<wbr>Markers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1887,7 +1615,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>show<wbr>Event<wbr>Lines</span>
+        <span id="state_showeventlines_nodejs">
+<a href="#state_showeventlines_nodejs" style="color: inherit; text-decoration: inherit;">show<wbr>Event<wbr>Lines</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1896,7 +1626,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>start<wbr>Time</span>
+        <span id="state_starttime_nodejs">
+<a href="#state_starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1905,7 +1637,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>teams</span>
+        <span id="state_teams_nodejs">
+<a href="#state_teams_nodejs" style="color: inherit; text-decoration: inherit;">teams</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1914,7 +1648,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>time<wbr>Range</span>
+        <span id="state_timerange_nodejs">
+<a href="#state_timerange_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Range</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1923,7 +1659,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>url</span>
+        <span id="state_url_nodejs">
+<a href="#state_url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1932,7 +1670,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>viz<wbr>Options</span>
+        <span id="state_vizoptions_nodejs">
+<a href="#state_vizoptions_nodejs" style="color: inherit; text-decoration: inherit;">viz<wbr>Options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#detectorvizoption">Detector<wbr>Viz<wbr>Option[]</a></span>
     </dt>
@@ -1948,7 +1688,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>authorized_<wbr>writer_<wbr>teams</span>
+        <span id="state_authorized_writer_teams_python">
+<a href="#state_authorized_writer_teams_python" style="color: inherit; text-decoration: inherit;">authorized_<wbr>writer_<wbr>teams</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1957,7 +1699,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>authorized_<wbr>writer_<wbr>users</span>
+        <span id="state_authorized_writer_users_python">
+<a href="#state_authorized_writer_users_python" style="color: inherit; text-decoration: inherit;">authorized_<wbr>writer_<wbr>users</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1966,7 +1710,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="state_description_python">
+<a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1975,7 +1721,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>disable_<wbr>sampling</span>
+        <span id="state_disable_sampling_python">
+<a href="#state_disable_sampling_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>sampling</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1984,7 +1732,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>end_<wbr>time</span>
+        <span id="state_end_time_python">
+<a href="#state_end_time_python" style="color: inherit; text-decoration: inherit;">end_<wbr>time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1993,7 +1743,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>max_<wbr>delay</span>
+        <span id="state_max_delay_python">
+<a href="#state_max_delay_python" style="color: inherit; text-decoration: inherit;">max_<wbr>delay</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -2002,7 +1754,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2011,7 +1765,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>program_<wbr>text</span>
+        <span id="state_program_text_python">
+<a href="#state_program_text_python" style="color: inherit; text-decoration: inherit;">program_<wbr>text</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2020,7 +1776,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>rules</span>
+        <span id="state_rules_python">
+<a href="#state_rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#detectorrule">List[Detector<wbr>Rule]</a></span>
     </dt>
@@ -2029,7 +1787,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>show_<wbr>data_<wbr>markers</span>
+        <span id="state_show_data_markers_python">
+<a href="#state_show_data_markers_python" style="color: inherit; text-decoration: inherit;">show_<wbr>data_<wbr>markers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2038,7 +1798,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>show_<wbr>event_<wbr>lines</span>
+        <span id="state_show_event_lines_python">
+<a href="#state_show_event_lines_python" style="color: inherit; text-decoration: inherit;">show_<wbr>event_<wbr>lines</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2047,7 +1809,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>start_<wbr>time</span>
+        <span id="state_start_time_python">
+<a href="#state_start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -2056,7 +1820,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>teams</span>
+        <span id="state_teams_python">
+<a href="#state_teams_python" style="color: inherit; text-decoration: inherit;">teams</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -2065,7 +1831,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>time_<wbr>range</span>
+        <span id="state_time_range_python">
+<a href="#state_time_range_python" style="color: inherit; text-decoration: inherit;">time_<wbr>range</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -2074,7 +1842,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>url</span>
+        <span id="state_url_python">
+<a href="#state_url_python" style="color: inherit; text-decoration: inherit;">url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2083,7 +1853,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>viz_<wbr>options</span>
+        <span id="state_viz_options_python">
+<a href="#state_viz_options_python" style="color: inherit; text-decoration: inherit;">viz_<wbr>options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#detectorvizoption">List[Detector<wbr>Viz<wbr>Option]</a></span>
     </dt>
@@ -2125,7 +1897,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Detect<wbr>Label</span>
+        <span id="detectlabel_csharp">
+<a href="#detectlabel_csharp" style="color: inherit; text-decoration: inherit;">Detect<wbr>Label</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2134,7 +1908,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Severity</span>
+        <span id="severity_csharp">
+<a href="#severity_csharp" style="color: inherit; text-decoration: inherit;">Severity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2143,7 +1919,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2152,7 +1930,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Disabled</span>
+        <span id="disabled_csharp">
+<a href="#disabled_csharp" style="color: inherit; text-decoration: inherit;">Disabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -2161,7 +1941,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Notifications</span>
+        <span id="notifications_csharp">
+<a href="#notifications_csharp" style="color: inherit; text-decoration: inherit;">Notifications</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -2170,7 +1952,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Parameterized<wbr>Body</span>
+        <span id="parameterizedbody_csharp">
+<a href="#parameterizedbody_csharp" style="color: inherit; text-decoration: inherit;">Parameterized<wbr>Body</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2179,7 +1963,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Parameterized<wbr>Subject</span>
+        <span id="parameterizedsubject_csharp">
+<a href="#parameterizedsubject_csharp" style="color: inherit; text-decoration: inherit;">Parameterized<wbr>Subject</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2188,7 +1974,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Runbook<wbr>Url</span>
+        <span id="runbookurl_csharp">
+<a href="#runbookurl_csharp" style="color: inherit; text-decoration: inherit;">Runbook<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2197,7 +1985,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tip</span>
+        <span id="tip_csharp">
+<a href="#tip_csharp" style="color: inherit; text-decoration: inherit;">Tip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2213,7 +2003,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Detect<wbr>Label</span>
+        <span id="detectlabel_go">
+<a href="#detectlabel_go" style="color: inherit; text-decoration: inherit;">Detect<wbr>Label</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2222,7 +2014,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Severity</span>
+        <span id="severity_go">
+<a href="#severity_go" style="color: inherit; text-decoration: inherit;">Severity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2231,7 +2025,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2240,7 +2036,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Disabled</span>
+        <span id="disabled_go">
+<a href="#disabled_go" style="color: inherit; text-decoration: inherit;">Disabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -2249,7 +2047,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Notifications</span>
+        <span id="notifications_go">
+<a href="#notifications_go" style="color: inherit; text-decoration: inherit;">Notifications</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -2258,7 +2058,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Parameterized<wbr>Body</span>
+        <span id="parameterizedbody_go">
+<a href="#parameterizedbody_go" style="color: inherit; text-decoration: inherit;">Parameterized<wbr>Body</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2267,7 +2069,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Parameterized<wbr>Subject</span>
+        <span id="parameterizedsubject_go">
+<a href="#parameterizedsubject_go" style="color: inherit; text-decoration: inherit;">Parameterized<wbr>Subject</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2276,7 +2080,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Runbook<wbr>Url</span>
+        <span id="runbookurl_go">
+<a href="#runbookurl_go" style="color: inherit; text-decoration: inherit;">Runbook<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2285,7 +2091,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tip</span>
+        <span id="tip_go">
+<a href="#tip_go" style="color: inherit; text-decoration: inherit;">Tip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2301,7 +2109,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>detect<wbr>Label</span>
+        <span id="detectlabel_nodejs">
+<a href="#detectlabel_nodejs" style="color: inherit; text-decoration: inherit;">detect<wbr>Label</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2310,7 +2120,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>severity</span>
+        <span id="severity_nodejs">
+<a href="#severity_nodejs" style="color: inherit; text-decoration: inherit;">severity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2319,7 +2131,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2328,7 +2142,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>disabled</span>
+        <span id="disabled_nodejs">
+<a href="#disabled_nodejs" style="color: inherit; text-decoration: inherit;">disabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -2337,7 +2153,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>notifications</span>
+        <span id="notifications_nodejs">
+<a href="#notifications_nodejs" style="color: inherit; text-decoration: inherit;">notifications</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -2346,7 +2164,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>parameterized<wbr>Body</span>
+        <span id="parameterizedbody_nodejs">
+<a href="#parameterizedbody_nodejs" style="color: inherit; text-decoration: inherit;">parameterized<wbr>Body</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2355,7 +2175,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>parameterized<wbr>Subject</span>
+        <span id="parameterizedsubject_nodejs">
+<a href="#parameterizedsubject_nodejs" style="color: inherit; text-decoration: inherit;">parameterized<wbr>Subject</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2364,7 +2186,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>runbook<wbr>Url</span>
+        <span id="runbookurl_nodejs">
+<a href="#runbookurl_nodejs" style="color: inherit; text-decoration: inherit;">runbook<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2373,7 +2197,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>tip</span>
+        <span id="tip_nodejs">
+<a href="#tip_nodejs" style="color: inherit; text-decoration: inherit;">tip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2389,7 +2215,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>detect<wbr>Label</span>
+        <span id="detectlabel_python">
+<a href="#detectlabel_python" style="color: inherit; text-decoration: inherit;">detect<wbr>Label</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2398,7 +2226,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>severity</span>
+        <span id="severity_python">
+<a href="#severity_python" style="color: inherit; text-decoration: inherit;">severity</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2407,7 +2237,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2416,7 +2248,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>disabled</span>
+        <span id="disabled_python">
+<a href="#disabled_python" style="color: inherit; text-decoration: inherit;">disabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2425,7 +2259,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>notifications</span>
+        <span id="notifications_python">
+<a href="#notifications_python" style="color: inherit; text-decoration: inherit;">notifications</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -2434,7 +2270,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>parameterized<wbr>Body</span>
+        <span id="parameterizedbody_python">
+<a href="#parameterizedbody_python" style="color: inherit; text-decoration: inherit;">parameterized<wbr>Body</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2443,7 +2281,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>parameterized<wbr>Subject</span>
+        <span id="parameterizedsubject_python">
+<a href="#parameterizedsubject_python" style="color: inherit; text-decoration: inherit;">parameterized<wbr>Subject</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2452,7 +2292,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>runbook<wbr>Url</span>
+        <span id="runbookurl_python">
+<a href="#runbookurl_python" style="color: inherit; text-decoration: inherit;">runbook<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2461,7 +2303,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>tip</span>
+        <span id="tip_python">
+<a href="#tip_python" style="color: inherit; text-decoration: inherit;">tip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2495,7 +2339,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Label</span>
+        <span id="label_csharp">
+<a href="#label_csharp" style="color: inherit; text-decoration: inherit;">Label</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2504,7 +2350,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Color</span>
+        <span id="color_csharp">
+<a href="#color_csharp" style="color: inherit; text-decoration: inherit;">Color</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2513,7 +2361,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Display<wbr>Name</span>
+        <span id="displayname_csharp">
+<a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2522,7 +2372,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Value<wbr>Prefix</span>
+        <span id="valueprefix_csharp">
+<a href="#valueprefix_csharp" style="color: inherit; text-decoration: inherit;">Value<wbr>Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2530,7 +2382,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Value<wbr>Suffix</span>
+        <span id="valuesuffix_csharp">
+<a href="#valuesuffix_csharp" style="color: inherit; text-decoration: inherit;">Value<wbr>Suffix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2538,7 +2392,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Value<wbr>Unit</span>
+        <span id="valueunit_csharp">
+<a href="#valueunit_csharp" style="color: inherit; text-decoration: inherit;">Value<wbr>Unit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2555,7 +2411,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Label</span>
+        <span id="label_go">
+<a href="#label_go" style="color: inherit; text-decoration: inherit;">Label</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2564,7 +2422,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Color</span>
+        <span id="color_go">
+<a href="#color_go" style="color: inherit; text-decoration: inherit;">Color</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2573,7 +2433,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Display<wbr>Name</span>
+        <span id="displayname_go">
+<a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2582,7 +2444,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Value<wbr>Prefix</span>
+        <span id="valueprefix_go">
+<a href="#valueprefix_go" style="color: inherit; text-decoration: inherit;">Value<wbr>Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2590,7 +2454,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Value<wbr>Suffix</span>
+        <span id="valuesuffix_go">
+<a href="#valuesuffix_go" style="color: inherit; text-decoration: inherit;">Value<wbr>Suffix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2598,7 +2464,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Value<wbr>Unit</span>
+        <span id="valueunit_go">
+<a href="#valueunit_go" style="color: inherit; text-decoration: inherit;">Value<wbr>Unit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2615,7 +2483,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>label</span>
+        <span id="label_nodejs">
+<a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2624,7 +2494,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>color</span>
+        <span id="color_nodejs">
+<a href="#color_nodejs" style="color: inherit; text-decoration: inherit;">color</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2633,7 +2505,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>display<wbr>Name</span>
+        <span id="displayname_nodejs">
+<a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2642,7 +2516,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>value<wbr>Prefix</span>
+        <span id="valueprefix_nodejs">
+<a href="#valueprefix_nodejs" style="color: inherit; text-decoration: inherit;">value<wbr>Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2650,7 +2526,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>value<wbr>Suffix</span>
+        <span id="valuesuffix_nodejs">
+<a href="#valuesuffix_nodejs" style="color: inherit; text-decoration: inherit;">value<wbr>Suffix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2658,7 +2536,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>value<wbr>Unit</span>
+        <span id="valueunit_nodejs">
+<a href="#valueunit_nodejs" style="color: inherit; text-decoration: inherit;">value<wbr>Unit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2675,7 +2555,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>label</span>
+        <span id="label_python">
+<a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2684,7 +2566,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>color</span>
+        <span id="color_python">
+<a href="#color_python" style="color: inherit; text-decoration: inherit;">color</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2693,7 +2577,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>display<wbr>Name</span>
+        <span id="displayname_python">
+<a href="#displayname_python" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2702,7 +2588,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>value<wbr>Prefix</span>
+        <span id="valueprefix_python">
+<a href="#valueprefix_python" style="color: inherit; text-decoration: inherit;">value<wbr>Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2710,7 +2598,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>value<wbr>Suffix</span>
+        <span id="valuesuffix_python">
+<a href="#valuesuffix_python" style="color: inherit; text-decoration: inherit;">value<wbr>Suffix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2718,7 +2608,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>value<wbr>Unit</span>
+        <span id="valueunit_python">
+<a href="#valueunit_python" style="color: inherit; text-decoration: inherit;">value<wbr>Unit</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

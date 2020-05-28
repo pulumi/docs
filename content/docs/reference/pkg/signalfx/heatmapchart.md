@@ -20,7 +20,59 @@ This chart type displays the specified plot in a heatmap fashion. This format is
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using SignalFx = Pulumi.SignalFx;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var myheatmapchart0 = new SignalFx.HeatmapChart("myheatmapchart0", new SignalFx.HeatmapChartArgs
+        {
+            ColorRange = new SignalFx.Inputs.HeatmapChartColorRangeArgs
+            {
+                Color = "#ff0000",
+                MaxValue = 100,
+                MinValue = 0,
+            },
+            ColorScales = 
+            {
+                new SignalFx.Inputs.HeatmapChartColorScaleArgs
+                {
+                    Color = "green",
+                    Gte = 99,
+                },
+                new SignalFx.Inputs.HeatmapChartColorScaleArgs
+                {
+                    Color = "yellow",
+                    Gte = 95,
+                    Lt = 99,
+                },
+                new SignalFx.Inputs.HeatmapChartColorScaleArgs
+                {
+                    Color = "red",
+                    Lt = 95,
+                },
+            },
+            Description = "Very cool Heatmap",
+            DisableSampling = true,
+            GroupBies = 
+            {
+                "hostname",
+                "host",
+            },
+            HideTimestamp = true,
+            ProgramText = @"myfilters = filter(""cluster_name"", ""prod"") and filter(""role"", ""search"")
+data(""cpu.total.idle"", filter=myfilters).publish()
+
+",
+            SortBy = "+host",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -296,7 +348,9 @@ The HeatmapChart resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-required"
             title="Required">
-        <span>Program<wbr>Text</span>
+        <span id="programtext_csharp">
+<a href="#programtext_csharp" style="color: inherit; text-decoration: inherit;">Program<wbr>Text</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -305,7 +359,9 @@ The HeatmapChart resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Color<wbr>Range</span>
+        <span id="colorrange_csharp">
+<a href="#colorrange_csharp" style="color: inherit; text-decoration: inherit;">Color<wbr>Range</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#heatmapchartcolorrange">Pulumi.<wbr>Signal<wbr>Fx.<wbr>Inputs.<wbr>Heatmap<wbr>Chart<wbr>Color<wbr>Range<wbr>Args</a></span>
     </dt>
@@ -314,7 +370,9 @@ The HeatmapChart resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Color<wbr>Scales</span>
+        <span id="colorscales_csharp">
+<a href="#colorscales_csharp" style="color: inherit; text-decoration: inherit;">Color<wbr>Scales</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#heatmapchartcolorscale">List&lt;Pulumi.<wbr>Signal<wbr>Fx.<wbr>Inputs.<wbr>Heatmap<wbr>Chart<wbr>Color<wbr>Scale<wbr>Args&gt;</a></span>
     </dt>
@@ -323,7 +381,9 @@ The HeatmapChart resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -332,7 +392,9 @@ The HeatmapChart resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Disable<wbr>Sampling</span>
+        <span id="disablesampling_csharp">
+<a href="#disablesampling_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Sampling</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -341,7 +403,9 @@ The HeatmapChart resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Group<wbr>Bies</span>
+        <span id="groupbies_csharp">
+<a href="#groupbies_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Bies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -350,7 +414,9 @@ The HeatmapChart resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Hide<wbr>Timestamp</span>
+        <span id="hidetimestamp_csharp">
+<a href="#hidetimestamp_csharp" style="color: inherit; text-decoration: inherit;">Hide<wbr>Timestamp</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -359,7 +425,9 @@ The HeatmapChart resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Delay</span>
+        <span id="maxdelay_csharp">
+<a href="#maxdelay_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Delay</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -368,7 +436,9 @@ The HeatmapChart resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Minimum<wbr>Resolution</span>
+        <span id="minimumresolution_csharp">
+<a href="#minimumresolution_csharp" style="color: inherit; text-decoration: inherit;">Minimum<wbr>Resolution</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -377,7 +447,9 @@ The HeatmapChart resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -386,7 +458,9 @@ The HeatmapChart resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Refresh<wbr>Interval</span>
+        <span id="refreshinterval_csharp">
+<a href="#refreshinterval_csharp" style="color: inherit; text-decoration: inherit;">Refresh<wbr>Interval</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -395,7 +469,9 @@ The HeatmapChart resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Sort<wbr>By</span>
+        <span id="sortby_csharp">
+<a href="#sortby_csharp" style="color: inherit; text-decoration: inherit;">Sort<wbr>By</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -404,7 +480,9 @@ The HeatmapChart resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Unit<wbr>Prefix</span>
+        <span id="unitprefix_csharp">
+<a href="#unitprefix_csharp" style="color: inherit; text-decoration: inherit;">Unit<wbr>Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -420,7 +498,9 @@ The HeatmapChart resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-required"
             title="Required">
-        <span>Program<wbr>Text</span>
+        <span id="programtext_go">
+<a href="#programtext_go" style="color: inherit; text-decoration: inherit;">Program<wbr>Text</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -429,7 +509,9 @@ The HeatmapChart resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Color<wbr>Range</span>
+        <span id="colorrange_go">
+<a href="#colorrange_go" style="color: inherit; text-decoration: inherit;">Color<wbr>Range</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#heatmapchartcolorrange">Heatmap<wbr>Chart<wbr>Color<wbr>Range</a></span>
     </dt>
@@ -438,7 +520,9 @@ The HeatmapChart resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Color<wbr>Scales</span>
+        <span id="colorscales_go">
+<a href="#colorscales_go" style="color: inherit; text-decoration: inherit;">Color<wbr>Scales</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#heatmapchartcolorscale">[]Heatmap<wbr>Chart<wbr>Color<wbr>Scale</a></span>
     </dt>
@@ -447,7 +531,9 @@ The HeatmapChart resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -456,7 +542,9 @@ The HeatmapChart resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Disable<wbr>Sampling</span>
+        <span id="disablesampling_go">
+<a href="#disablesampling_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Sampling</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -465,7 +553,9 @@ The HeatmapChart resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Group<wbr>Bies</span>
+        <span id="groupbies_go">
+<a href="#groupbies_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Bies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -474,7 +564,9 @@ The HeatmapChart resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Hide<wbr>Timestamp</span>
+        <span id="hidetimestamp_go">
+<a href="#hidetimestamp_go" style="color: inherit; text-decoration: inherit;">Hide<wbr>Timestamp</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -483,7 +575,9 @@ The HeatmapChart resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Delay</span>
+        <span id="maxdelay_go">
+<a href="#maxdelay_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Delay</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -492,7 +586,9 @@ The HeatmapChart resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Minimum<wbr>Resolution</span>
+        <span id="minimumresolution_go">
+<a href="#minimumresolution_go" style="color: inherit; text-decoration: inherit;">Minimum<wbr>Resolution</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -501,7 +597,9 @@ The HeatmapChart resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -510,7 +608,9 @@ The HeatmapChart resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Refresh<wbr>Interval</span>
+        <span id="refreshinterval_go">
+<a href="#refreshinterval_go" style="color: inherit; text-decoration: inherit;">Refresh<wbr>Interval</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -519,7 +619,9 @@ The HeatmapChart resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Sort<wbr>By</span>
+        <span id="sortby_go">
+<a href="#sortby_go" style="color: inherit; text-decoration: inherit;">Sort<wbr>By</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -528,7 +630,9 @@ The HeatmapChart resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>Unit<wbr>Prefix</span>
+        <span id="unitprefix_go">
+<a href="#unitprefix_go" style="color: inherit; text-decoration: inherit;">Unit<wbr>Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -544,7 +648,9 @@ The HeatmapChart resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-required"
             title="Required">
-        <span>program<wbr>Text</span>
+        <span id="programtext_nodejs">
+<a href="#programtext_nodejs" style="color: inherit; text-decoration: inherit;">program<wbr>Text</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -553,7 +659,9 @@ The HeatmapChart resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>color<wbr>Range</span>
+        <span id="colorrange_nodejs">
+<a href="#colorrange_nodejs" style="color: inherit; text-decoration: inherit;">color<wbr>Range</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#heatmapchartcolorrange">Heatmap<wbr>Chart<wbr>Color<wbr>Range</a></span>
     </dt>
@@ -562,7 +670,9 @@ The HeatmapChart resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>color<wbr>Scales</span>
+        <span id="colorscales_nodejs">
+<a href="#colorscales_nodejs" style="color: inherit; text-decoration: inherit;">color<wbr>Scales</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#heatmapchartcolorscale">Heatmap<wbr>Chart<wbr>Color<wbr>Scale[]</a></span>
     </dt>
@@ -571,7 +681,9 @@ The HeatmapChart resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -580,7 +692,9 @@ The HeatmapChart resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>disable<wbr>Sampling</span>
+        <span id="disablesampling_nodejs">
+<a href="#disablesampling_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Sampling</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -589,7 +703,9 @@ The HeatmapChart resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>group<wbr>Bies</span>
+        <span id="groupbies_nodejs">
+<a href="#groupbies_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Bies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -598,7 +714,9 @@ The HeatmapChart resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>hide<wbr>Timestamp</span>
+        <span id="hidetimestamp_nodejs">
+<a href="#hidetimestamp_nodejs" style="color: inherit; text-decoration: inherit;">hide<wbr>Timestamp</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -607,7 +725,9 @@ The HeatmapChart resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Delay</span>
+        <span id="maxdelay_nodejs">
+<a href="#maxdelay_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Delay</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -616,7 +736,9 @@ The HeatmapChart resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>minimum<wbr>Resolution</span>
+        <span id="minimumresolution_nodejs">
+<a href="#minimumresolution_nodejs" style="color: inherit; text-decoration: inherit;">minimum<wbr>Resolution</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -625,7 +747,9 @@ The HeatmapChart resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -634,7 +758,9 @@ The HeatmapChart resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>refresh<wbr>Interval</span>
+        <span id="refreshinterval_nodejs">
+<a href="#refreshinterval_nodejs" style="color: inherit; text-decoration: inherit;">refresh<wbr>Interval</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -643,7 +769,9 @@ The HeatmapChart resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>sort<wbr>By</span>
+        <span id="sortby_nodejs">
+<a href="#sortby_nodejs" style="color: inherit; text-decoration: inherit;">sort<wbr>By</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -652,7 +780,9 @@ The HeatmapChart resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>unit<wbr>Prefix</span>
+        <span id="unitprefix_nodejs">
+<a href="#unitprefix_nodejs" style="color: inherit; text-decoration: inherit;">unit<wbr>Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -668,7 +798,9 @@ The HeatmapChart resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-required"
             title="Required">
-        <span>program_<wbr>text</span>
+        <span id="program_text_python">
+<a href="#program_text_python" style="color: inherit; text-decoration: inherit;">program_<wbr>text</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -677,7 +809,9 @@ The HeatmapChart resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>color_<wbr>range</span>
+        <span id="color_range_python">
+<a href="#color_range_python" style="color: inherit; text-decoration: inherit;">color_<wbr>range</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#heatmapchartcolorrange">Dict[Heatmap<wbr>Chart<wbr>Color<wbr>Range]</a></span>
     </dt>
@@ -686,7 +820,9 @@ The HeatmapChart resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>color_<wbr>scales</span>
+        <span id="color_scales_python">
+<a href="#color_scales_python" style="color: inherit; text-decoration: inherit;">color_<wbr>scales</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#heatmapchartcolorscale">List[Heatmap<wbr>Chart<wbr>Color<wbr>Scale]</a></span>
     </dt>
@@ -695,7 +831,9 @@ The HeatmapChart resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -704,7 +842,9 @@ The HeatmapChart resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>disable_<wbr>sampling</span>
+        <span id="disable_sampling_python">
+<a href="#disable_sampling_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>sampling</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -713,7 +853,9 @@ The HeatmapChart resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>group_<wbr>bies</span>
+        <span id="group_bies_python">
+<a href="#group_bies_python" style="color: inherit; text-decoration: inherit;">group_<wbr>bies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -722,7 +864,9 @@ The HeatmapChart resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>hide_<wbr>timestamp</span>
+        <span id="hide_timestamp_python">
+<a href="#hide_timestamp_python" style="color: inherit; text-decoration: inherit;">hide_<wbr>timestamp</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -731,7 +875,9 @@ The HeatmapChart resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>max_<wbr>delay</span>
+        <span id="max_delay_python">
+<a href="#max_delay_python" style="color: inherit; text-decoration: inherit;">max_<wbr>delay</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -740,7 +886,9 @@ The HeatmapChart resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>minimum_<wbr>resolution</span>
+        <span id="minimum_resolution_python">
+<a href="#minimum_resolution_python" style="color: inherit; text-decoration: inherit;">minimum_<wbr>resolution</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -749,7 +897,9 @@ The HeatmapChart resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -758,7 +908,9 @@ The HeatmapChart resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>refresh_<wbr>interval</span>
+        <span id="refresh_interval_python">
+<a href="#refresh_interval_python" style="color: inherit; text-decoration: inherit;">refresh_<wbr>interval</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -767,7 +919,9 @@ The HeatmapChart resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>sort_<wbr>by</span>
+        <span id="sort_by_python">
+<a href="#sort_by_python" style="color: inherit; text-decoration: inherit;">sort_<wbr>by</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -776,7 +930,9 @@ The HeatmapChart resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
-        <span>unit_<wbr>prefix</span>
+        <span id="unit_prefix_python">
+<a href="#unit_prefix_python" style="color: inherit; text-decoration: inherit;">unit_<wbr>prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -803,7 +959,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -811,7 +969,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Url</span>
+        <span id="url_csharp">
+<a href="#url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -827,7 +987,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -835,7 +997,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Url</span>
+        <span id="url_go">
+<a href="#url_go" style="color: inherit; text-decoration: inherit;">Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -851,7 +1015,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -859,7 +1025,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>url</span>
+        <span id="url_nodejs">
+<a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -875,7 +1043,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -883,7 +1053,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>url</span>
+        <span id="url_python">
+<a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1025,7 +1197,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Color<wbr>Range</span>
+        <span id="state_colorrange_csharp">
+<a href="#state_colorrange_csharp" style="color: inherit; text-decoration: inherit;">Color<wbr>Range</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#heatmapchartcolorrange">Pulumi.<wbr>Signal<wbr>Fx.<wbr>Inputs.<wbr>Heatmap<wbr>Chart<wbr>Color<wbr>Range<wbr>Args</a></span>
     </dt>
@@ -1034,7 +1208,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Color<wbr>Scales</span>
+        <span id="state_colorscales_csharp">
+<a href="#state_colorscales_csharp" style="color: inherit; text-decoration: inherit;">Color<wbr>Scales</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#heatmapchartcolorscale">List&lt;Pulumi.<wbr>Signal<wbr>Fx.<wbr>Inputs.<wbr>Heatmap<wbr>Chart<wbr>Color<wbr>Scale<wbr>Args&gt;</a></span>
     </dt>
@@ -1043,7 +1219,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="state_description_csharp">
+<a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1052,7 +1230,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Disable<wbr>Sampling</span>
+        <span id="state_disablesampling_csharp">
+<a href="#state_disablesampling_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Sampling</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1061,7 +1241,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Group<wbr>Bies</span>
+        <span id="state_groupbies_csharp">
+<a href="#state_groupbies_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Bies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1070,7 +1252,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Hide<wbr>Timestamp</span>
+        <span id="state_hidetimestamp_csharp">
+<a href="#state_hidetimestamp_csharp" style="color: inherit; text-decoration: inherit;">Hide<wbr>Timestamp</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1079,7 +1263,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Delay</span>
+        <span id="state_maxdelay_csharp">
+<a href="#state_maxdelay_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Delay</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1088,7 +1274,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Minimum<wbr>Resolution</span>
+        <span id="state_minimumresolution_csharp">
+<a href="#state_minimumresolution_csharp" style="color: inherit; text-decoration: inherit;">Minimum<wbr>Resolution</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1097,7 +1285,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1106,7 +1296,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Program<wbr>Text</span>
+        <span id="state_programtext_csharp">
+<a href="#state_programtext_csharp" style="color: inherit; text-decoration: inherit;">Program<wbr>Text</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1115,7 +1307,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Refresh<wbr>Interval</span>
+        <span id="state_refreshinterval_csharp">
+<a href="#state_refreshinterval_csharp" style="color: inherit; text-decoration: inherit;">Refresh<wbr>Interval</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1124,7 +1318,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Sort<wbr>By</span>
+        <span id="state_sortby_csharp">
+<a href="#state_sortby_csharp" style="color: inherit; text-decoration: inherit;">Sort<wbr>By</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1133,7 +1329,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Unit<wbr>Prefix</span>
+        <span id="state_unitprefix_csharp">
+<a href="#state_unitprefix_csharp" style="color: inherit; text-decoration: inherit;">Unit<wbr>Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1142,7 +1340,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Url</span>
+        <span id="state_url_csharp">
+<a href="#state_url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1158,7 +1358,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Color<wbr>Range</span>
+        <span id="state_colorrange_go">
+<a href="#state_colorrange_go" style="color: inherit; text-decoration: inherit;">Color<wbr>Range</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#heatmapchartcolorrange">Heatmap<wbr>Chart<wbr>Color<wbr>Range</a></span>
     </dt>
@@ -1167,7 +1369,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Color<wbr>Scales</span>
+        <span id="state_colorscales_go">
+<a href="#state_colorscales_go" style="color: inherit; text-decoration: inherit;">Color<wbr>Scales</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#heatmapchartcolorscale">[]Heatmap<wbr>Chart<wbr>Color<wbr>Scale</a></span>
     </dt>
@@ -1176,7 +1380,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="state_description_go">
+<a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1185,7 +1391,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Disable<wbr>Sampling</span>
+        <span id="state_disablesampling_go">
+<a href="#state_disablesampling_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Sampling</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1194,7 +1402,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Group<wbr>Bies</span>
+        <span id="state_groupbies_go">
+<a href="#state_groupbies_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Bies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1203,7 +1413,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Hide<wbr>Timestamp</span>
+        <span id="state_hidetimestamp_go">
+<a href="#state_hidetimestamp_go" style="color: inherit; text-decoration: inherit;">Hide<wbr>Timestamp</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1212,7 +1424,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Delay</span>
+        <span id="state_maxdelay_go">
+<a href="#state_maxdelay_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Delay</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1221,7 +1435,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Minimum<wbr>Resolution</span>
+        <span id="state_minimumresolution_go">
+<a href="#state_minimumresolution_go" style="color: inherit; text-decoration: inherit;">Minimum<wbr>Resolution</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1230,7 +1446,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1239,7 +1457,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Program<wbr>Text</span>
+        <span id="state_programtext_go">
+<a href="#state_programtext_go" style="color: inherit; text-decoration: inherit;">Program<wbr>Text</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1248,7 +1468,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Refresh<wbr>Interval</span>
+        <span id="state_refreshinterval_go">
+<a href="#state_refreshinterval_go" style="color: inherit; text-decoration: inherit;">Refresh<wbr>Interval</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1257,7 +1479,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Sort<wbr>By</span>
+        <span id="state_sortby_go">
+<a href="#state_sortby_go" style="color: inherit; text-decoration: inherit;">Sort<wbr>By</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1266,7 +1490,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Unit<wbr>Prefix</span>
+        <span id="state_unitprefix_go">
+<a href="#state_unitprefix_go" style="color: inherit; text-decoration: inherit;">Unit<wbr>Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1275,7 +1501,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Url</span>
+        <span id="state_url_go">
+<a href="#state_url_go" style="color: inherit; text-decoration: inherit;">Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1291,7 +1519,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>color<wbr>Range</span>
+        <span id="state_colorrange_nodejs">
+<a href="#state_colorrange_nodejs" style="color: inherit; text-decoration: inherit;">color<wbr>Range</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#heatmapchartcolorrange">Heatmap<wbr>Chart<wbr>Color<wbr>Range</a></span>
     </dt>
@@ -1300,7 +1530,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>color<wbr>Scales</span>
+        <span id="state_colorscales_nodejs">
+<a href="#state_colorscales_nodejs" style="color: inherit; text-decoration: inherit;">color<wbr>Scales</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#heatmapchartcolorscale">Heatmap<wbr>Chart<wbr>Color<wbr>Scale[]</a></span>
     </dt>
@@ -1309,7 +1541,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="state_description_nodejs">
+<a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1318,7 +1552,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>disable<wbr>Sampling</span>
+        <span id="state_disablesampling_nodejs">
+<a href="#state_disablesampling_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Sampling</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1327,7 +1563,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>group<wbr>Bies</span>
+        <span id="state_groupbies_nodejs">
+<a href="#state_groupbies_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Bies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1336,7 +1574,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>hide<wbr>Timestamp</span>
+        <span id="state_hidetimestamp_nodejs">
+<a href="#state_hidetimestamp_nodejs" style="color: inherit; text-decoration: inherit;">hide<wbr>Timestamp</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1345,7 +1585,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Delay</span>
+        <span id="state_maxdelay_nodejs">
+<a href="#state_maxdelay_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Delay</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1354,7 +1596,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>minimum<wbr>Resolution</span>
+        <span id="state_minimumresolution_nodejs">
+<a href="#state_minimumresolution_nodejs" style="color: inherit; text-decoration: inherit;">minimum<wbr>Resolution</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1363,7 +1607,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1372,7 +1618,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>program<wbr>Text</span>
+        <span id="state_programtext_nodejs">
+<a href="#state_programtext_nodejs" style="color: inherit; text-decoration: inherit;">program<wbr>Text</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1381,7 +1629,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>refresh<wbr>Interval</span>
+        <span id="state_refreshinterval_nodejs">
+<a href="#state_refreshinterval_nodejs" style="color: inherit; text-decoration: inherit;">refresh<wbr>Interval</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1390,7 +1640,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>sort<wbr>By</span>
+        <span id="state_sortby_nodejs">
+<a href="#state_sortby_nodejs" style="color: inherit; text-decoration: inherit;">sort<wbr>By</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1399,7 +1651,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>unit<wbr>Prefix</span>
+        <span id="state_unitprefix_nodejs">
+<a href="#state_unitprefix_nodejs" style="color: inherit; text-decoration: inherit;">unit<wbr>Prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1408,7 +1662,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>url</span>
+        <span id="state_url_nodejs">
+<a href="#state_url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1424,7 +1680,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>color_<wbr>range</span>
+        <span id="state_color_range_python">
+<a href="#state_color_range_python" style="color: inherit; text-decoration: inherit;">color_<wbr>range</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#heatmapchartcolorrange">Dict[Heatmap<wbr>Chart<wbr>Color<wbr>Range]</a></span>
     </dt>
@@ -1433,7 +1691,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>color_<wbr>scales</span>
+        <span id="state_color_scales_python">
+<a href="#state_color_scales_python" style="color: inherit; text-decoration: inherit;">color_<wbr>scales</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#heatmapchartcolorscale">List[Heatmap<wbr>Chart<wbr>Color<wbr>Scale]</a></span>
     </dt>
@@ -1442,7 +1702,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="state_description_python">
+<a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1451,7 +1713,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>disable_<wbr>sampling</span>
+        <span id="state_disable_sampling_python">
+<a href="#state_disable_sampling_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>sampling</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1460,7 +1724,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>group_<wbr>bies</span>
+        <span id="state_group_bies_python">
+<a href="#state_group_bies_python" style="color: inherit; text-decoration: inherit;">group_<wbr>bies</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1469,7 +1735,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>hide_<wbr>timestamp</span>
+        <span id="state_hide_timestamp_python">
+<a href="#state_hide_timestamp_python" style="color: inherit; text-decoration: inherit;">hide_<wbr>timestamp</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1478,7 +1746,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>max_<wbr>delay</span>
+        <span id="state_max_delay_python">
+<a href="#state_max_delay_python" style="color: inherit; text-decoration: inherit;">max_<wbr>delay</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1487,7 +1757,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>minimum_<wbr>resolution</span>
+        <span id="state_minimum_resolution_python">
+<a href="#state_minimum_resolution_python" style="color: inherit; text-decoration: inherit;">minimum_<wbr>resolution</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1496,7 +1768,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1505,7 +1779,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>program_<wbr>text</span>
+        <span id="state_program_text_python">
+<a href="#state_program_text_python" style="color: inherit; text-decoration: inherit;">program_<wbr>text</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1514,7 +1790,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>refresh_<wbr>interval</span>
+        <span id="state_refresh_interval_python">
+<a href="#state_refresh_interval_python" style="color: inherit; text-decoration: inherit;">refresh_<wbr>interval</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1523,7 +1801,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>sort_<wbr>by</span>
+        <span id="state_sort_by_python">
+<a href="#state_sort_by_python" style="color: inherit; text-decoration: inherit;">sort_<wbr>by</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1532,7 +1812,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>unit_<wbr>prefix</span>
+        <span id="state_unit_prefix_python">
+<a href="#state_unit_prefix_python" style="color: inherit; text-decoration: inherit;">unit_<wbr>prefix</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1541,7 +1823,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>url</span>
+        <span id="state_url_python">
+<a href="#state_url_python" style="color: inherit; text-decoration: inherit;">url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1583,7 +1867,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Color</span>
+        <span id="color_csharp">
+<a href="#color_csharp" style="color: inherit; text-decoration: inherit;">Color</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1592,7 +1878,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Value</span>
+        <span id="maxvalue_csharp">
+<a href="#maxvalue_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
@@ -1601,7 +1889,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Min<wbr>Value</span>
+        <span id="minvalue_csharp">
+<a href="#minvalue_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
@@ -1617,7 +1907,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Color</span>
+        <span id="color_go">
+<a href="#color_go" style="color: inherit; text-decoration: inherit;">Color</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1626,7 +1918,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Max<wbr>Value</span>
+        <span id="maxvalue_go">
+<a href="#maxvalue_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
@@ -1635,7 +1929,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Min<wbr>Value</span>
+        <span id="minvalue_go">
+<a href="#minvalue_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
@@ -1651,7 +1947,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>color</span>
+        <span id="color_nodejs">
+<a href="#color_nodejs" style="color: inherit; text-decoration: inherit;">color</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1660,7 +1958,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Value</span>
+        <span id="maxvalue_nodejs">
+<a href="#maxvalue_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
@@ -1669,7 +1969,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>min<wbr>Value</span>
+        <span id="minvalue_nodejs">
+<a href="#minvalue_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
@@ -1685,7 +1987,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>color</span>
+        <span id="color_python">
+<a href="#color_python" style="color: inherit; text-decoration: inherit;">color</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1694,7 +1998,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Value</span>
+        <span id="maxvalue_python">
+<a href="#maxvalue_python" style="color: inherit; text-decoration: inherit;">max<wbr>Value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1703,7 +2009,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>min<wbr>Value</span>
+        <span id="minvalue_python">
+<a href="#minvalue_python" style="color: inherit; text-decoration: inherit;">min<wbr>Value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1737,7 +2045,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Color</span>
+        <span id="color_csharp">
+<a href="#color_csharp" style="color: inherit; text-decoration: inherit;">Color</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1746,7 +2056,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Gt</span>
+        <span id="gt_csharp">
+<a href="#gt_csharp" style="color: inherit; text-decoration: inherit;">Gt</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
@@ -1755,7 +2067,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Gte</span>
+        <span id="gte_csharp">
+<a href="#gte_csharp" style="color: inherit; text-decoration: inherit;">Gte</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
@@ -1764,7 +2078,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Lt</span>
+        <span id="lt_csharp">
+<a href="#lt_csharp" style="color: inherit; text-decoration: inherit;">Lt</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
@@ -1773,7 +2089,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Lte</span>
+        <span id="lte_csharp">
+<a href="#lte_csharp" style="color: inherit; text-decoration: inherit;">Lte</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
@@ -1789,7 +2107,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Color</span>
+        <span id="color_go">
+<a href="#color_go" style="color: inherit; text-decoration: inherit;">Color</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1798,7 +2118,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Gt</span>
+        <span id="gt_go">
+<a href="#gt_go" style="color: inherit; text-decoration: inherit;">Gt</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
@@ -1807,7 +2129,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Gte</span>
+        <span id="gte_go">
+<a href="#gte_go" style="color: inherit; text-decoration: inherit;">Gte</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
@@ -1816,7 +2140,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Lt</span>
+        <span id="lt_go">
+<a href="#lt_go" style="color: inherit; text-decoration: inherit;">Lt</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
@@ -1825,7 +2151,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Lte</span>
+        <span id="lte_go">
+<a href="#lte_go" style="color: inherit; text-decoration: inherit;">Lte</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
@@ -1841,7 +2169,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>color</span>
+        <span id="color_nodejs">
+<a href="#color_nodejs" style="color: inherit; text-decoration: inherit;">color</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1850,7 +2180,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>gt</span>
+        <span id="gt_nodejs">
+<a href="#gt_nodejs" style="color: inherit; text-decoration: inherit;">gt</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
@@ -1859,7 +2191,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>gte</span>
+        <span id="gte_nodejs">
+<a href="#gte_nodejs" style="color: inherit; text-decoration: inherit;">gte</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
@@ -1868,7 +2202,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>lt</span>
+        <span id="lt_nodejs">
+<a href="#lt_nodejs" style="color: inherit; text-decoration: inherit;">lt</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
@@ -1877,7 +2213,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>lte</span>
+        <span id="lte_nodejs">
+<a href="#lte_nodejs" style="color: inherit; text-decoration: inherit;">lte</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
@@ -1893,7 +2231,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>color</span>
+        <span id="color_python">
+<a href="#color_python" style="color: inherit; text-decoration: inherit;">color</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1902,7 +2242,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>gt</span>
+        <span id="gt_python">
+<a href="#gt_python" style="color: inherit; text-decoration: inherit;">gt</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1911,7 +2253,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>gte</span>
+        <span id="gte_python">
+<a href="#gte_python" style="color: inherit; text-decoration: inherit;">gte</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1920,7 +2264,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>lt</span>
+        <span id="lt_python">
+<a href="#lt_python" style="color: inherit; text-decoration: inherit;">lt</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1929,7 +2275,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>lte</span>
+        <span id="lte_python">
+<a href="#lte_python" style="color: inherit; text-decoration: inherit;">lte</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>

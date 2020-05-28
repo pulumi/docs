@@ -20,7 +20,29 @@ Use this data source to get a list of Azure service names.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using System.Linq;
+using Pulumi;
+using SignalFx = Pulumi.SignalFx;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var azureServices = Output.Create(SignalFx.Azure.GetServices.InvokeAsync());
+        // Leaves out most of the integration bits, see the docs
+        // for signalfx.azure.Integration for more
+        var azureMyteam = new SignalFx.Azure.Integration("azureMyteam", new SignalFx.Azure.IntegrationArgs
+        {
+            Services = 
+            {
+                azureServices.Apply(azureServices => azureServices.Services),
+            }.Select(__item => __item?.Name).ToList(),
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -28,15 +50,7 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-```python
-import pulumi
-import pulumi_signalfx as signalfx
-
-azure_services = signalfx.azure.get_services()
-# Leaves out most of the integration bits, see the docs
-# for signalfx.azure.Integration for more
-azure_myteam = signalfx.azure.Integration("azureMyteam", services=[__item["name"] for __item in [azure_services.services]])
-```
+Coming soon!
 {{% /example %}}
 
 {{% example typescript %}}
@@ -92,7 +106,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Services</span>
+        <span id="services_csharp">
+<a href="#services_csharp" style="color: inherit; text-decoration: inherit;">Services</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getservicesservice">List&lt;Pulumi.<wbr>Signal<wbr>Fx.<wbr>Azure.<wbr>Inputs.<wbr>Get<wbr>Services<wbr>Service<wbr>Args&gt;</a></span>
     </dt>
@@ -107,7 +123,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Services</span>
+        <span id="services_go">
+<a href="#services_go" style="color: inherit; text-decoration: inherit;">Services</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getservicesservice">[]Get<wbr>Services<wbr>Service</a></span>
     </dt>
@@ -122,7 +140,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>services</span>
+        <span id="services_nodejs">
+<a href="#services_nodejs" style="color: inherit; text-decoration: inherit;">services</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getservicesservice">Get<wbr>Services<wbr>Service[]</a></span>
     </dt>
@@ -137,7 +157,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>services</span>
+        <span id="services_python">
+<a href="#services_python" style="color: inherit; text-decoration: inherit;">services</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getservicesservice">List[Get<wbr>Services<wbr>Service]</a></span>
     </dt>
@@ -165,7 +187,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -174,7 +198,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Services</span>
+        <span id="services_csharp">
+<a href="#services_csharp" style="color: inherit; text-decoration: inherit;">Services</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getservicesservice">List&lt;Pulumi.<wbr>Signal<wbr>Fx.<wbr>Azure.<wbr>Outputs.<wbr>Get<wbr>Services<wbr>Service&gt;</a></span>
     </dt>
@@ -189,7 +215,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -198,7 +226,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Services</span>
+        <span id="services_go">
+<a href="#services_go" style="color: inherit; text-decoration: inherit;">Services</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getservicesservice">[]Get<wbr>Services<wbr>Service</a></span>
     </dt>
@@ -213,7 +243,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -222,7 +254,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>services</span>
+        <span id="services_nodejs">
+<a href="#services_nodejs" style="color: inherit; text-decoration: inherit;">services</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getservicesservice">Get<wbr>Services<wbr>Service[]</a></span>
     </dt>
@@ -237,7 +271,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -246,7 +282,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>services</span>
+        <span id="services_python">
+<a href="#services_python" style="color: inherit; text-decoration: inherit;">services</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getservicesservice">List[Get<wbr>Services<wbr>Service]</a></span>
     </dt>
@@ -285,7 +323,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -300,7 +340,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -315,7 +357,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -330,7 +374,9 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

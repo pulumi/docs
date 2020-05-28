@@ -29,11 +29,11 @@ anything, please consult the source <a class="reference external" href="https://
     <span class="n">project_service_keys</span><span class="o">=</span><span class="p">[</span>
         <span class="p">{</span>
             <span class="s2">&quot;projectId&quot;</span><span class="p">:</span> <span class="s2">&quot;gcp_project_id_1&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;projectKey&quot;</span><span class="p">:</span> <span class="p">(</span><span class="k">lambda</span> <span class="n">path</span><span class="p">:</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())(</span><span class="s2">&quot;/path/to/gcp_credentials_1.json&quot;</span><span class="p">),</span>
+            <span class="s2">&quot;project_key&quot;</span><span class="p">:</span> <span class="p">(</span><span class="k">lambda</span> <span class="n">path</span><span class="p">:</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())(</span><span class="s2">&quot;/path/to/gcp_credentials_1.json&quot;</span><span class="p">),</span>
         <span class="p">},</span>
         <span class="p">{</span>
             <span class="s2">&quot;projectId&quot;</span><span class="p">:</span> <span class="s2">&quot;gcp_project_id_2&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;projectKey&quot;</span><span class="p">:</span> <span class="p">(</span><span class="k">lambda</span> <span class="n">path</span><span class="p">:</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())(</span><span class="s2">&quot;/path/to/gcp_credentials_2.json&quot;</span><span class="p">),</span>
+            <span class="s2">&quot;project_key&quot;</span><span class="p">:</span> <span class="p">(</span><span class="k">lambda</span> <span class="n">path</span><span class="p">:</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())(</span><span class="s2">&quot;/path/to/gcp_credentials_2.json&quot;</span><span class="p">),</span>
         <span class="p">},</span>
     <span class="p">],</span>
     <span class="n">services</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;compute&quot;</span><span class="p">])</span>

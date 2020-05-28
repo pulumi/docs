@@ -14,76 +14,12 @@ SignalFx Azure integrations. For help with this integration see [Monitoring Micr
 
 > **NOTE** When managing integrations you'll need to use an admin token to authenticate the SignalFx provider. Otherwise you'll receive a 4xx error.
 
-
+{{% examples %}}
+{{% /examples %}}
 ## Service Names
 
 > **NOTE** You can use the data source "signalfx.azure.getServices" to specify all services.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_signalfx as signalfx
-
-azure_myteam = signalfx.azure.Integration("azureMyteam",
-    enabled=True,
-    resource=[{
-        "signalfxAzureIntegration": [{
-            "azureMyteamXX": [{
-                "appId": "YYY",
-                "enabled": False,
-                "environment": "azure",
-                "name": "AzureFoo",
-                "pollRate": 300,
-                "secretKey": "XXX",
-                "services": ["microsoft.sql/servers/elasticpools"],
-                "subscriptions": ["sub-guid-here"],
-                "tenantId": "ZZZ",
-            }],
-        }],
-    }])
-```
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as signalfx from "@pulumi/signalfx";
-
-const azureMyteam = new signalfx.azure.Integration("azure_myteam", {
-    enabled: true,
-    resource: [{
-        signalfxAzureIntegration: [{
-            azureMyteamXX: [{
-                appId: "YYY",
-                enabled: false,
-                environment: "azure",
-                name: "AzureFoo",
-                pollRate: 300,
-                secretKey: "XXX",
-                services: ["microsoft.sql/servers/elasticpools"],
-                subscriptions: ["sub-guid-here"],
-                tenantId: "ZZZ",
-            }],
-        }],
-    }],
-});
-```
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a Integration Resource {#create}
@@ -269,7 +205,9 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-required"
             title="Required">
-        <span>App<wbr>Id</span>
+        <span id="appid_csharp">
+<a href="#appid_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -278,7 +216,9 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-required"
             title="Required">
-        <span>Enabled</span>
+        <span id="enabled_csharp">
+<a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -287,7 +227,9 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-required"
             title="Required">
-        <span>Secret<wbr>Key</span>
+        <span id="secretkey_csharp">
+<a href="#secretkey_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -296,7 +238,9 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-required"
             title="Required">
-        <span>Services</span>
+        <span id="services_csharp">
+<a href="#services_csharp" style="color: inherit; text-decoration: inherit;">Services</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -305,7 +249,9 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-required"
             title="Required">
-        <span>Subscriptions</span>
+        <span id="subscriptions_csharp">
+<a href="#subscriptions_csharp" style="color: inherit; text-decoration: inherit;">Subscriptions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -314,7 +260,9 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-required"
             title="Required">
-        <span>Tenant<wbr>Id</span>
+        <span id="tenantid_csharp">
+<a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -323,7 +271,9 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Environment</span>
+        <span id="environment_csharp">
+<a href="#environment_csharp" style="color: inherit; text-decoration: inherit;">Environment</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -332,7 +282,9 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -341,7 +293,9 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Poll<wbr>Rate</span>
+        <span id="pollrate_csharp">
+<a href="#pollrate_csharp" style="color: inherit; text-decoration: inherit;">Poll<wbr>Rate</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -357,7 +311,9 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-required"
             title="Required">
-        <span>App<wbr>Id</span>
+        <span id="appid_go">
+<a href="#appid_go" style="color: inherit; text-decoration: inherit;">App<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -366,7 +322,9 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-required"
             title="Required">
-        <span>Enabled</span>
+        <span id="enabled_go">
+<a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -375,7 +333,9 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-required"
             title="Required">
-        <span>Secret<wbr>Key</span>
+        <span id="secretkey_go">
+<a href="#secretkey_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -384,7 +344,9 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-required"
             title="Required">
-        <span>Services</span>
+        <span id="services_go">
+<a href="#services_go" style="color: inherit; text-decoration: inherit;">Services</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -393,7 +355,9 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-required"
             title="Required">
-        <span>Subscriptions</span>
+        <span id="subscriptions_go">
+<a href="#subscriptions_go" style="color: inherit; text-decoration: inherit;">Subscriptions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -402,7 +366,9 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-required"
             title="Required">
-        <span>Tenant<wbr>Id</span>
+        <span id="tenantid_go">
+<a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -411,7 +377,9 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Environment</span>
+        <span id="environment_go">
+<a href="#environment_go" style="color: inherit; text-decoration: inherit;">Environment</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -420,7 +388,9 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -429,7 +399,9 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Poll<wbr>Rate</span>
+        <span id="pollrate_go">
+<a href="#pollrate_go" style="color: inherit; text-decoration: inherit;">Poll<wbr>Rate</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -445,7 +417,9 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-required"
             title="Required">
-        <span>app<wbr>Id</span>
+        <span id="appid_nodejs">
+<a href="#appid_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -454,7 +428,9 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-required"
             title="Required">
-        <span>enabled</span>
+        <span id="enabled_nodejs">
+<a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -463,7 +439,9 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-required"
             title="Required">
-        <span>secret<wbr>Key</span>
+        <span id="secretkey_nodejs">
+<a href="#secretkey_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -472,7 +450,9 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-required"
             title="Required">
-        <span>services</span>
+        <span id="services_nodejs">
+<a href="#services_nodejs" style="color: inherit; text-decoration: inherit;">services</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -481,7 +461,9 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-required"
             title="Required">
-        <span>subscriptions</span>
+        <span id="subscriptions_nodejs">
+<a href="#subscriptions_nodejs" style="color: inherit; text-decoration: inherit;">subscriptions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -490,7 +472,9 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-required"
             title="Required">
-        <span>tenant<wbr>Id</span>
+        <span id="tenantid_nodejs">
+<a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -499,7 +483,9 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>environment</span>
+        <span id="environment_nodejs">
+<a href="#environment_nodejs" style="color: inherit; text-decoration: inherit;">environment</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -508,7 +494,9 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -517,7 +505,9 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>poll<wbr>Rate</span>
+        <span id="pollrate_nodejs">
+<a href="#pollrate_nodejs" style="color: inherit; text-decoration: inherit;">poll<wbr>Rate</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -533,7 +523,9 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-required"
             title="Required">
-        <span>app_<wbr>id</span>
+        <span id="app_id_python">
+<a href="#app_id_python" style="color: inherit; text-decoration: inherit;">app_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -542,7 +534,9 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-required"
             title="Required">
-        <span>enabled</span>
+        <span id="enabled_python">
+<a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -551,7 +545,9 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-required"
             title="Required">
-        <span>secret_<wbr>key</span>
+        <span id="secret_key_python">
+<a href="#secret_key_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -560,7 +556,9 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-required"
             title="Required">
-        <span>services</span>
+        <span id="services_python">
+<a href="#services_python" style="color: inherit; text-decoration: inherit;">services</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -569,7 +567,9 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-required"
             title="Required">
-        <span>subscriptions</span>
+        <span id="subscriptions_python">
+<a href="#subscriptions_python" style="color: inherit; text-decoration: inherit;">subscriptions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -578,7 +578,9 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-required"
             title="Required">
-        <span>tenant_<wbr>id</span>
+        <span id="tenant_id_python">
+<a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -587,7 +589,9 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>environment</span>
+        <span id="environment_python">
+<a href="#environment_python" style="color: inherit; text-decoration: inherit;">environment</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -596,7 +600,9 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -605,7 +611,9 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>poll_<wbr>rate</span>
+        <span id="poll_rate_python">
+<a href="#poll_rate_python" style="color: inherit; text-decoration: inherit;">poll_<wbr>rate</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -632,7 +640,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -647,7 +657,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -662,7 +674,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -677,7 +691,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -818,7 +834,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>App<wbr>Id</span>
+        <span id="state_appid_csharp">
+<a href="#state_appid_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -827,7 +845,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enabled</span>
+        <span id="state_enabled_csharp">
+<a href="#state_enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -836,7 +856,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Environment</span>
+        <span id="state_environment_csharp">
+<a href="#state_environment_csharp" style="color: inherit; text-decoration: inherit;">Environment</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -845,7 +867,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -854,7 +878,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Poll<wbr>Rate</span>
+        <span id="state_pollrate_csharp">
+<a href="#state_pollrate_csharp" style="color: inherit; text-decoration: inherit;">Poll<wbr>Rate</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -863,7 +889,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Secret<wbr>Key</span>
+        <span id="state_secretkey_csharp">
+<a href="#state_secretkey_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -872,7 +900,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Services</span>
+        <span id="state_services_csharp">
+<a href="#state_services_csharp" style="color: inherit; text-decoration: inherit;">Services</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -881,7 +911,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Subscriptions</span>
+        <span id="state_subscriptions_csharp">
+<a href="#state_subscriptions_csharp" style="color: inherit; text-decoration: inherit;">Subscriptions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -890,7 +922,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tenant<wbr>Id</span>
+        <span id="state_tenantid_csharp">
+<a href="#state_tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -906,7 +940,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>App<wbr>Id</span>
+        <span id="state_appid_go">
+<a href="#state_appid_go" style="color: inherit; text-decoration: inherit;">App<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -915,7 +951,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enabled</span>
+        <span id="state_enabled_go">
+<a href="#state_enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -924,7 +962,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Environment</span>
+        <span id="state_environment_go">
+<a href="#state_environment_go" style="color: inherit; text-decoration: inherit;">Environment</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -933,7 +973,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -942,7 +984,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Poll<wbr>Rate</span>
+        <span id="state_pollrate_go">
+<a href="#state_pollrate_go" style="color: inherit; text-decoration: inherit;">Poll<wbr>Rate</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -951,7 +995,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Secret<wbr>Key</span>
+        <span id="state_secretkey_go">
+<a href="#state_secretkey_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -960,7 +1006,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Services</span>
+        <span id="state_services_go">
+<a href="#state_services_go" style="color: inherit; text-decoration: inherit;">Services</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -969,7 +1017,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Subscriptions</span>
+        <span id="state_subscriptions_go">
+<a href="#state_subscriptions_go" style="color: inherit; text-decoration: inherit;">Subscriptions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -978,7 +1028,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tenant<wbr>Id</span>
+        <span id="state_tenantid_go">
+<a href="#state_tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -994,7 +1046,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>app<wbr>Id</span>
+        <span id="state_appid_nodejs">
+<a href="#state_appid_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1003,7 +1057,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>enabled</span>
+        <span id="state_enabled_nodejs">
+<a href="#state_enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1012,7 +1068,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>environment</span>
+        <span id="state_environment_nodejs">
+<a href="#state_environment_nodejs" style="color: inherit; text-decoration: inherit;">environment</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1021,7 +1079,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1030,7 +1090,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>poll<wbr>Rate</span>
+        <span id="state_pollrate_nodejs">
+<a href="#state_pollrate_nodejs" style="color: inherit; text-decoration: inherit;">poll<wbr>Rate</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1039,7 +1101,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>secret<wbr>Key</span>
+        <span id="state_secretkey_nodejs">
+<a href="#state_secretkey_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1048,7 +1112,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>services</span>
+        <span id="state_services_nodejs">
+<a href="#state_services_nodejs" style="color: inherit; text-decoration: inherit;">services</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1057,7 +1123,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>subscriptions</span>
+        <span id="state_subscriptions_nodejs">
+<a href="#state_subscriptions_nodejs" style="color: inherit; text-decoration: inherit;">subscriptions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1066,7 +1134,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>tenant<wbr>Id</span>
+        <span id="state_tenantid_nodejs">
+<a href="#state_tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1082,7 +1152,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>app_<wbr>id</span>
+        <span id="state_app_id_python">
+<a href="#state_app_id_python" style="color: inherit; text-decoration: inherit;">app_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1091,7 +1163,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>enabled</span>
+        <span id="state_enabled_python">
+<a href="#state_enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1100,7 +1174,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>environment</span>
+        <span id="state_environment_python">
+<a href="#state_environment_python" style="color: inherit; text-decoration: inherit;">environment</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1109,7 +1185,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1118,7 +1196,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>poll_<wbr>rate</span>
+        <span id="state_poll_rate_python">
+<a href="#state_poll_rate_python" style="color: inherit; text-decoration: inherit;">poll_<wbr>rate</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1127,7 +1207,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>secret_<wbr>key</span>
+        <span id="state_secret_key_python">
+<a href="#state_secret_key_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1136,7 +1218,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>services</span>
+        <span id="state_services_python">
+<a href="#state_services_python" style="color: inherit; text-decoration: inherit;">services</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1145,7 +1229,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>subscriptions</span>
+        <span id="state_subscriptions_python">
+<a href="#state_subscriptions_python" style="color: inherit; text-decoration: inherit;">subscriptions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1154,7 +1240,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>tenant_<wbr>id</span>
+        <span id="state_tenant_id_python">
+<a href="#state_tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

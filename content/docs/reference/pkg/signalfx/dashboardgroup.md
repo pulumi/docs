@@ -15,59 +15,6 @@ In the SignalFx web UI, a [dashboard group](https://developers.signalfx.com/dash
 > **NOTE** Dashboard groups cannot be accessed directly, but just via a dashboard contained in them. This is the reason why make show won't show any of yours dashboard groups.
 
 
-## Example Usage With Mirrored Dashboards
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as signalfx from "@pulumi/signalfx";
-
-const mydashboardgroupWithmirrors = new signalfx.DashboardGroup("mydashboardgroupWithmirrors", {
-    description: "Cool dashboard group",
-    dashboard: [{
-        dashboardId: signalfx_dashboard.gc_dashboard.id,
-        nameOverride: "GC For My Service",
-        descriptionOverride: "Garbage Collection dashboard maintained by JVM team",
-        filter_override: [{
-            property: "service",
-            values: ["myservice"],
-            negated: false,
-        }],
-        variable_override: [{
-            property: "region",
-            values: ["us-west1"],
-            valuesSuggesteds: [
-                "us-west-1",
-                "us-east-1",
-            ],
-        }],
-    }],
-});
-```
-```python
-import pulumi
-import pulumi_signalfx as signalfx
-
-mydashboardgroup_withmirrors = signalfx.DashboardGroup("mydashboardgroupWithmirrors",
-    description="Cool dashboard group",
-    dashboard=[{
-        "dashboardId": signalfx_dashboard["gc_dashboard"]["id"],
-        "nameOverride": "GC For My Service",
-        "descriptionOverride": "Garbage Collection dashboard maintained by JVM team",
-        "filter_override": [{
-            "property": "service",
-            "values": ["myservice"],
-            "negated": False,
-        }],
-        "variable_override": [{
-            "property": "region",
-            "values": ["us-west1"],
-            "valuesSuggesteds": [
-                "us-west-1",
-                "us-east-1",
-            ],
-        }],
-    }])
-```
 
 {{% examples %}}
 ## Example Usage
@@ -75,7 +22,30 @@ mydashboardgroup_withmirrors = signalfx.DashboardGroup("mydashboardgroupWithmirr
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using SignalFx = Pulumi.SignalFx;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var mydashboardgroup0 = new SignalFx.DashboardGroup("mydashboardgroup0", new SignalFx.DashboardGroupArgs
+        {
+            Description = "Cool dashboard group",
+            AuthorizedWriterTeams = 
+            {
+                signalfx_team.Mycoolteam.Id,
+            },
+            AuthorizedWriterUsers = 
+            {
+                "abc123",
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -293,7 +263,9 @@ The DashboardGroup resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>Authorized<wbr>Writer<wbr>Teams</span>
+        <span id="authorizedwriterteams_csharp">
+<a href="#authorizedwriterteams_csharp" style="color: inherit; text-decoration: inherit;">Authorized<wbr>Writer<wbr>Teams</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -302,7 +274,9 @@ The DashboardGroup resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>Authorized<wbr>Writer<wbr>Users</span>
+        <span id="authorizedwriterusers_csharp">
+<a href="#authorizedwriterusers_csharp" style="color: inherit; text-decoration: inherit;">Authorized<wbr>Writer<wbr>Users</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -311,7 +285,9 @@ The DashboardGroup resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>Dashboards</span>
+        <span id="dashboards_csharp">
+<a href="#dashboards_csharp" style="color: inherit; text-decoration: inherit;">Dashboards</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dashboardgroupdashboard">List&lt;Pulumi.<wbr>Signal<wbr>Fx.<wbr>Inputs.<wbr>Dashboard<wbr>Group<wbr>Dashboard<wbr>Args&gt;</a></span>
     </dt>
@@ -320,7 +296,9 @@ The DashboardGroup resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -329,7 +307,9 @@ The DashboardGroup resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>Import<wbr>Qualifiers</span>
+        <span id="importqualifiers_csharp">
+<a href="#importqualifiers_csharp" style="color: inherit; text-decoration: inherit;">Import<wbr>Qualifiers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dashboardgroupimportqualifier">List&lt;Pulumi.<wbr>Signal<wbr>Fx.<wbr>Inputs.<wbr>Dashboard<wbr>Group<wbr>Import<wbr>Qualifier<wbr>Args&gt;</a></span>
     </dt>
@@ -337,7 +317,9 @@ The DashboardGroup resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -346,7 +328,9 @@ The DashboardGroup resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>Teams</span>
+        <span id="teams_csharp">
+<a href="#teams_csharp" style="color: inherit; text-decoration: inherit;">Teams</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -362,7 +346,9 @@ The DashboardGroup resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>Authorized<wbr>Writer<wbr>Teams</span>
+        <span id="authorizedwriterteams_go">
+<a href="#authorizedwriterteams_go" style="color: inherit; text-decoration: inherit;">Authorized<wbr>Writer<wbr>Teams</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -371,7 +357,9 @@ The DashboardGroup resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>Authorized<wbr>Writer<wbr>Users</span>
+        <span id="authorizedwriterusers_go">
+<a href="#authorizedwriterusers_go" style="color: inherit; text-decoration: inherit;">Authorized<wbr>Writer<wbr>Users</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -380,7 +368,9 @@ The DashboardGroup resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>Dashboards</span>
+        <span id="dashboards_go">
+<a href="#dashboards_go" style="color: inherit; text-decoration: inherit;">Dashboards</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dashboardgroupdashboard">[]Dashboard<wbr>Group<wbr>Dashboard</a></span>
     </dt>
@@ -389,7 +379,9 @@ The DashboardGroup resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -398,7 +390,9 @@ The DashboardGroup resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>Import<wbr>Qualifiers</span>
+        <span id="importqualifiers_go">
+<a href="#importqualifiers_go" style="color: inherit; text-decoration: inherit;">Import<wbr>Qualifiers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dashboardgroupimportqualifier">[]Dashboard<wbr>Group<wbr>Import<wbr>Qualifier</a></span>
     </dt>
@@ -406,7 +400,9 @@ The DashboardGroup resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -415,7 +411,9 @@ The DashboardGroup resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>Teams</span>
+        <span id="teams_go">
+<a href="#teams_go" style="color: inherit; text-decoration: inherit;">Teams</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -431,7 +429,9 @@ The DashboardGroup resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>authorized<wbr>Writer<wbr>Teams</span>
+        <span id="authorizedwriterteams_nodejs">
+<a href="#authorizedwriterteams_nodejs" style="color: inherit; text-decoration: inherit;">authorized<wbr>Writer<wbr>Teams</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -440,7 +440,9 @@ The DashboardGroup resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>authorized<wbr>Writer<wbr>Users</span>
+        <span id="authorizedwriterusers_nodejs">
+<a href="#authorizedwriterusers_nodejs" style="color: inherit; text-decoration: inherit;">authorized<wbr>Writer<wbr>Users</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -449,7 +451,9 @@ The DashboardGroup resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>dashboards</span>
+        <span id="dashboards_nodejs">
+<a href="#dashboards_nodejs" style="color: inherit; text-decoration: inherit;">dashboards</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dashboardgroupdashboard">Dashboard<wbr>Group<wbr>Dashboard[]</a></span>
     </dt>
@@ -458,7 +462,9 @@ The DashboardGroup resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -467,7 +473,9 @@ The DashboardGroup resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>import<wbr>Qualifiers</span>
+        <span id="importqualifiers_nodejs">
+<a href="#importqualifiers_nodejs" style="color: inherit; text-decoration: inherit;">import<wbr>Qualifiers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dashboardgroupimportqualifier">Dashboard<wbr>Group<wbr>Import<wbr>Qualifier[]</a></span>
     </dt>
@@ -475,7 +483,9 @@ The DashboardGroup resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -484,7 +494,9 @@ The DashboardGroup resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>teams</span>
+        <span id="teams_nodejs">
+<a href="#teams_nodejs" style="color: inherit; text-decoration: inherit;">teams</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -500,7 +512,9 @@ The DashboardGroup resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>authorized_<wbr>writer_<wbr>teams</span>
+        <span id="authorized_writer_teams_python">
+<a href="#authorized_writer_teams_python" style="color: inherit; text-decoration: inherit;">authorized_<wbr>writer_<wbr>teams</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -509,7 +523,9 @@ The DashboardGroup resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>authorized_<wbr>writer_<wbr>users</span>
+        <span id="authorized_writer_users_python">
+<a href="#authorized_writer_users_python" style="color: inherit; text-decoration: inherit;">authorized_<wbr>writer_<wbr>users</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -518,7 +534,9 @@ The DashboardGroup resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>dashboards</span>
+        <span id="dashboards_python">
+<a href="#dashboards_python" style="color: inherit; text-decoration: inherit;">dashboards</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dashboardgroupdashboard">List[Dashboard<wbr>Group<wbr>Dashboard]</a></span>
     </dt>
@@ -527,7 +545,9 @@ The DashboardGroup resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -536,7 +556,9 @@ The DashboardGroup resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>import_<wbr>qualifiers</span>
+        <span id="import_qualifiers_python">
+<a href="#import_qualifiers_python" style="color: inherit; text-decoration: inherit;">import_<wbr>qualifiers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dashboardgroupimportqualifier">List[Dashboard<wbr>Group<wbr>Import<wbr>Qualifier]</a></span>
     </dt>
@@ -544,7 +566,9 @@ The DashboardGroup resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -553,7 +577,9 @@ The DashboardGroup resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
-        <span>teams</span>
+        <span id="teams_python">
+<a href="#teams_python" style="color: inherit; text-decoration: inherit;">teams</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -580,7 +606,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -595,7 +623,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -610,7 +640,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -625,7 +657,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -766,7 +800,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Authorized<wbr>Writer<wbr>Teams</span>
+        <span id="state_authorizedwriterteams_csharp">
+<a href="#state_authorizedwriterteams_csharp" style="color: inherit; text-decoration: inherit;">Authorized<wbr>Writer<wbr>Teams</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -775,7 +811,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Authorized<wbr>Writer<wbr>Users</span>
+        <span id="state_authorizedwriterusers_csharp">
+<a href="#state_authorizedwriterusers_csharp" style="color: inherit; text-decoration: inherit;">Authorized<wbr>Writer<wbr>Users</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -784,7 +822,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Dashboards</span>
+        <span id="state_dashboards_csharp">
+<a href="#state_dashboards_csharp" style="color: inherit; text-decoration: inherit;">Dashboards</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dashboardgroupdashboard">List&lt;Pulumi.<wbr>Signal<wbr>Fx.<wbr>Inputs.<wbr>Dashboard<wbr>Group<wbr>Dashboard<wbr>Args&gt;</a></span>
     </dt>
@@ -793,7 +833,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="state_description_csharp">
+<a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -802,7 +844,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Import<wbr>Qualifiers</span>
+        <span id="state_importqualifiers_csharp">
+<a href="#state_importqualifiers_csharp" style="color: inherit; text-decoration: inherit;">Import<wbr>Qualifiers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dashboardgroupimportqualifier">List&lt;Pulumi.<wbr>Signal<wbr>Fx.<wbr>Inputs.<wbr>Dashboard<wbr>Group<wbr>Import<wbr>Qualifier<wbr>Args&gt;</a></span>
     </dt>
@@ -810,7 +854,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -819,7 +865,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Teams</span>
+        <span id="state_teams_csharp">
+<a href="#state_teams_csharp" style="color: inherit; text-decoration: inherit;">Teams</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -835,7 +883,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Authorized<wbr>Writer<wbr>Teams</span>
+        <span id="state_authorizedwriterteams_go">
+<a href="#state_authorizedwriterteams_go" style="color: inherit; text-decoration: inherit;">Authorized<wbr>Writer<wbr>Teams</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -844,7 +894,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Authorized<wbr>Writer<wbr>Users</span>
+        <span id="state_authorizedwriterusers_go">
+<a href="#state_authorizedwriterusers_go" style="color: inherit; text-decoration: inherit;">Authorized<wbr>Writer<wbr>Users</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -853,7 +905,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Dashboards</span>
+        <span id="state_dashboards_go">
+<a href="#state_dashboards_go" style="color: inherit; text-decoration: inherit;">Dashboards</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dashboardgroupdashboard">[]Dashboard<wbr>Group<wbr>Dashboard</a></span>
     </dt>
@@ -862,7 +916,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="state_description_go">
+<a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -871,7 +927,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Import<wbr>Qualifiers</span>
+        <span id="state_importqualifiers_go">
+<a href="#state_importqualifiers_go" style="color: inherit; text-decoration: inherit;">Import<wbr>Qualifiers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dashboardgroupimportqualifier">[]Dashboard<wbr>Group<wbr>Import<wbr>Qualifier</a></span>
     </dt>
@@ -879,7 +937,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -888,7 +948,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Teams</span>
+        <span id="state_teams_go">
+<a href="#state_teams_go" style="color: inherit; text-decoration: inherit;">Teams</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -904,7 +966,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>authorized<wbr>Writer<wbr>Teams</span>
+        <span id="state_authorizedwriterteams_nodejs">
+<a href="#state_authorizedwriterteams_nodejs" style="color: inherit; text-decoration: inherit;">authorized<wbr>Writer<wbr>Teams</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -913,7 +977,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>authorized<wbr>Writer<wbr>Users</span>
+        <span id="state_authorizedwriterusers_nodejs">
+<a href="#state_authorizedwriterusers_nodejs" style="color: inherit; text-decoration: inherit;">authorized<wbr>Writer<wbr>Users</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -922,7 +988,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>dashboards</span>
+        <span id="state_dashboards_nodejs">
+<a href="#state_dashboards_nodejs" style="color: inherit; text-decoration: inherit;">dashboards</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dashboardgroupdashboard">Dashboard<wbr>Group<wbr>Dashboard[]</a></span>
     </dt>
@@ -931,7 +999,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="state_description_nodejs">
+<a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -940,7 +1010,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>import<wbr>Qualifiers</span>
+        <span id="state_importqualifiers_nodejs">
+<a href="#state_importqualifiers_nodejs" style="color: inherit; text-decoration: inherit;">import<wbr>Qualifiers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dashboardgroupimportqualifier">Dashboard<wbr>Group<wbr>Import<wbr>Qualifier[]</a></span>
     </dt>
@@ -948,7 +1020,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -957,7 +1031,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>teams</span>
+        <span id="state_teams_nodejs">
+<a href="#state_teams_nodejs" style="color: inherit; text-decoration: inherit;">teams</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -973,7 +1049,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>authorized_<wbr>writer_<wbr>teams</span>
+        <span id="state_authorized_writer_teams_python">
+<a href="#state_authorized_writer_teams_python" style="color: inherit; text-decoration: inherit;">authorized_<wbr>writer_<wbr>teams</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -982,7 +1060,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>authorized_<wbr>writer_<wbr>users</span>
+        <span id="state_authorized_writer_users_python">
+<a href="#state_authorized_writer_users_python" style="color: inherit; text-decoration: inherit;">authorized_<wbr>writer_<wbr>users</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -991,7 +1071,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>dashboards</span>
+        <span id="state_dashboards_python">
+<a href="#state_dashboards_python" style="color: inherit; text-decoration: inherit;">dashboards</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dashboardgroupdashboard">List[Dashboard<wbr>Group<wbr>Dashboard]</a></span>
     </dt>
@@ -1000,7 +1082,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="state_description_python">
+<a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1009,7 +1093,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>import_<wbr>qualifiers</span>
+        <span id="state_import_qualifiers_python">
+<a href="#state_import_qualifiers_python" style="color: inherit; text-decoration: inherit;">import_<wbr>qualifiers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dashboardgroupimportqualifier">List[Dashboard<wbr>Group<wbr>Import<wbr>Qualifier]</a></span>
     </dt>
@@ -1017,7 +1103,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1026,7 +1114,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>teams</span>
+        <span id="state_teams_python">
+<a href="#state_teams_python" style="color: inherit; text-decoration: inherit;">teams</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1068,7 +1158,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Dashboard<wbr>Id</span>
+        <span id="dashboardid_csharp">
+<a href="#dashboardid_csharp" style="color: inherit; text-decoration: inherit;">Dashboard<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1077,7 +1169,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description<wbr>Override</span>
+        <span id="descriptionoverride_csharp">
+<a href="#descriptionoverride_csharp" style="color: inherit; text-decoration: inherit;">Description<wbr>Override</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1086,7 +1180,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Filter<wbr>Overrides</span>
+        <span id="filteroverrides_csharp">
+<a href="#filteroverrides_csharp" style="color: inherit; text-decoration: inherit;">Filter<wbr>Overrides</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dashboardgroupdashboardfilteroverride">List&lt;Pulumi.<wbr>Signal<wbr>Fx.<wbr>Inputs.<wbr>Dashboard<wbr>Group<wbr>Dashboard<wbr>Filter<wbr>Override<wbr>Args&gt;</a></span>
     </dt>
@@ -1095,7 +1191,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name<wbr>Override</span>
+        <span id="nameoverride_csharp">
+<a href="#nameoverride_csharp" style="color: inherit; text-decoration: inherit;">Name<wbr>Override</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1104,7 +1202,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Variable<wbr>Overrides</span>
+        <span id="variableoverrides_csharp">
+<a href="#variableoverrides_csharp" style="color: inherit; text-decoration: inherit;">Variable<wbr>Overrides</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dashboardgroupdashboardvariableoverride">List&lt;Pulumi.<wbr>Signal<wbr>Fx.<wbr>Inputs.<wbr>Dashboard<wbr>Group<wbr>Dashboard<wbr>Variable<wbr>Override<wbr>Args&gt;</a></span>
     </dt>
@@ -1119,7 +1219,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Dashboard<wbr>Id</span>
+        <span id="dashboardid_go">
+<a href="#dashboardid_go" style="color: inherit; text-decoration: inherit;">Dashboard<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1128,7 +1230,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description<wbr>Override</span>
+        <span id="descriptionoverride_go">
+<a href="#descriptionoverride_go" style="color: inherit; text-decoration: inherit;">Description<wbr>Override</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1137,7 +1241,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Filter<wbr>Overrides</span>
+        <span id="filteroverrides_go">
+<a href="#filteroverrides_go" style="color: inherit; text-decoration: inherit;">Filter<wbr>Overrides</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dashboardgroupdashboardfilteroverride">[]Dashboard<wbr>Group<wbr>Dashboard<wbr>Filter<wbr>Override</a></span>
     </dt>
@@ -1146,7 +1252,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name<wbr>Override</span>
+        <span id="nameoverride_go">
+<a href="#nameoverride_go" style="color: inherit; text-decoration: inherit;">Name<wbr>Override</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1155,7 +1263,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Variable<wbr>Overrides</span>
+        <span id="variableoverrides_go">
+<a href="#variableoverrides_go" style="color: inherit; text-decoration: inherit;">Variable<wbr>Overrides</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dashboardgroupdashboardvariableoverride">[]Dashboard<wbr>Group<wbr>Dashboard<wbr>Variable<wbr>Override</a></span>
     </dt>
@@ -1170,7 +1280,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>dashboard<wbr>Id</span>
+        <span id="dashboardid_nodejs">
+<a href="#dashboardid_nodejs" style="color: inherit; text-decoration: inherit;">dashboard<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1179,7 +1291,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>description<wbr>Override</span>
+        <span id="descriptionoverride_nodejs">
+<a href="#descriptionoverride_nodejs" style="color: inherit; text-decoration: inherit;">description<wbr>Override</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1188,7 +1302,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>filter<wbr>Overrides</span>
+        <span id="filteroverrides_nodejs">
+<a href="#filteroverrides_nodejs" style="color: inherit; text-decoration: inherit;">filter<wbr>Overrides</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dashboardgroupdashboardfilteroverride">Dashboard<wbr>Group<wbr>Dashboard<wbr>Filter<wbr>Override[]</a></span>
     </dt>
@@ -1197,7 +1313,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name<wbr>Override</span>
+        <span id="nameoverride_nodejs">
+<a href="#nameoverride_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Override</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1206,7 +1324,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>variable<wbr>Overrides</span>
+        <span id="variableoverrides_nodejs">
+<a href="#variableoverrides_nodejs" style="color: inherit; text-decoration: inherit;">variable<wbr>Overrides</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dashboardgroupdashboardvariableoverride">Dashboard<wbr>Group<wbr>Dashboard<wbr>Variable<wbr>Override[]</a></span>
     </dt>
@@ -1221,7 +1341,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>dashboard<wbr>Id</span>
+        <span id="dashboardid_python">
+<a href="#dashboardid_python" style="color: inherit; text-decoration: inherit;">dashboard<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1230,7 +1352,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>description<wbr>Override</span>
+        <span id="descriptionoverride_python">
+<a href="#descriptionoverride_python" style="color: inherit; text-decoration: inherit;">description<wbr>Override</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1239,7 +1363,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>filter<wbr>Overrides</span>
+        <span id="filteroverrides_python">
+<a href="#filteroverrides_python" style="color: inherit; text-decoration: inherit;">filter<wbr>Overrides</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dashboardgroupdashboardfilteroverride">List[Dashboard<wbr>Group<wbr>Dashboard<wbr>Filter<wbr>Override]</a></span>
     </dt>
@@ -1248,7 +1374,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>name<wbr>Override</span>
+        <span id="nameoverride_python">
+<a href="#nameoverride_python" style="color: inherit; text-decoration: inherit;">name<wbr>Override</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1257,7 +1385,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>variable<wbr>Overrides</span>
+        <span id="variableoverrides_python">
+<a href="#variableoverrides_python" style="color: inherit; text-decoration: inherit;">variable<wbr>Overrides</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dashboardgroupdashboardvariableoverride">List[Dashboard<wbr>Group<wbr>Dashboard<wbr>Variable<wbr>Override]</a></span>
     </dt>
@@ -1290,7 +1420,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Property</span>
+        <span id="property_csharp">
+<a href="#property_csharp" style="color: inherit; text-decoration: inherit;">Property</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1299,7 +1431,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Values</span>
+        <span id="values_csharp">
+<a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1308,7 +1442,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Negated</span>
+        <span id="negated_csharp">
+<a href="#negated_csharp" style="color: inherit; text-decoration: inherit;">Negated</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1324,7 +1460,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Property</span>
+        <span id="property_go">
+<a href="#property_go" style="color: inherit; text-decoration: inherit;">Property</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1333,7 +1471,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Values</span>
+        <span id="values_go">
+<a href="#values_go" style="color: inherit; text-decoration: inherit;">Values</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1342,7 +1482,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Negated</span>
+        <span id="negated_go">
+<a href="#negated_go" style="color: inherit; text-decoration: inherit;">Negated</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1358,7 +1500,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>property</span>
+        <span id="property_nodejs">
+<a href="#property_nodejs" style="color: inherit; text-decoration: inherit;">property</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1367,7 +1511,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>values</span>
+        <span id="values_nodejs">
+<a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1376,7 +1522,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>negated</span>
+        <span id="negated_nodejs">
+<a href="#negated_nodejs" style="color: inherit; text-decoration: inherit;">negated</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1392,7 +1540,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>property</span>
+        <span id="property_python">
+<a href="#property_python" style="color: inherit; text-decoration: inherit;">property</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1401,7 +1551,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>values</span>
+        <span id="values_python">
+<a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1410,7 +1562,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>negated</span>
+        <span id="negated_python">
+<a href="#negated_python" style="color: inherit; text-decoration: inherit;">negated</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1444,7 +1598,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Property</span>
+        <span id="property_csharp">
+<a href="#property_csharp" style="color: inherit; text-decoration: inherit;">Property</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1453,7 +1609,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Values</span>
+        <span id="values_csharp">
+<a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1462,7 +1620,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Values<wbr>Suggesteds</span>
+        <span id="valuessuggesteds_csharp">
+<a href="#valuessuggesteds_csharp" style="color: inherit; text-decoration: inherit;">Values<wbr>Suggesteds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1478,7 +1638,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Property</span>
+        <span id="property_go">
+<a href="#property_go" style="color: inherit; text-decoration: inherit;">Property</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1487,7 +1649,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Values</span>
+        <span id="values_go">
+<a href="#values_go" style="color: inherit; text-decoration: inherit;">Values</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1496,7 +1660,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Values<wbr>Suggesteds</span>
+        <span id="valuessuggesteds_go">
+<a href="#valuessuggesteds_go" style="color: inherit; text-decoration: inherit;">Values<wbr>Suggesteds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1512,7 +1678,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>property</span>
+        <span id="property_nodejs">
+<a href="#property_nodejs" style="color: inherit; text-decoration: inherit;">property</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1521,7 +1689,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>values</span>
+        <span id="values_nodejs">
+<a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1530,7 +1700,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>values<wbr>Suggesteds</span>
+        <span id="valuessuggesteds_nodejs">
+<a href="#valuessuggesteds_nodejs" style="color: inherit; text-decoration: inherit;">values<wbr>Suggesteds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1546,7 +1718,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>property</span>
+        <span id="property_python">
+<a href="#property_python" style="color: inherit; text-decoration: inherit;">property</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1555,7 +1729,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>values</span>
+        <span id="values_python">
+<a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1564,7 +1740,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>values<wbr>Suggesteds</span>
+        <span id="valuessuggesteds_python">
+<a href="#valuessuggesteds_python" style="color: inherit; text-decoration: inherit;">values<wbr>Suggesteds</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1598,7 +1776,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Metric</span>
+        <span id="metric_csharp">
+<a href="#metric_csharp" style="color: inherit; text-decoration: inherit;">Metric</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1606,7 +1786,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Filters</span>
+        <span id="filters_csharp">
+<a href="#filters_csharp" style="color: inherit; text-decoration: inherit;">Filters</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dashboardgroupimportqualifierfilter">List&lt;Pulumi.<wbr>Signal<wbr>Fx.<wbr>Inputs.<wbr>Dashboard<wbr>Group<wbr>Import<wbr>Qualifier<wbr>Filter<wbr>Args&gt;</a></span>
     </dt>
@@ -1621,7 +1803,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Metric</span>
+        <span id="metric_go">
+<a href="#metric_go" style="color: inherit; text-decoration: inherit;">Metric</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1629,7 +1813,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Filters</span>
+        <span id="filters_go">
+<a href="#filters_go" style="color: inherit; text-decoration: inherit;">Filters</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dashboardgroupimportqualifierfilter">[]Dashboard<wbr>Group<wbr>Import<wbr>Qualifier<wbr>Filter</a></span>
     </dt>
@@ -1644,7 +1830,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>metric</span>
+        <span id="metric_nodejs">
+<a href="#metric_nodejs" style="color: inherit; text-decoration: inherit;">metric</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1652,7 +1840,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>filters</span>
+        <span id="filters_nodejs">
+<a href="#filters_nodejs" style="color: inherit; text-decoration: inherit;">filters</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dashboardgroupimportqualifierfilter">Dashboard<wbr>Group<wbr>Import<wbr>Qualifier<wbr>Filter[]</a></span>
     </dt>
@@ -1667,7 +1857,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>metric</span>
+        <span id="metric_python">
+<a href="#metric_python" style="color: inherit; text-decoration: inherit;">metric</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1675,7 +1867,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>filters</span>
+        <span id="filters_python">
+<a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dashboardgroupimportqualifierfilter">List[Dashboard<wbr>Group<wbr>Import<wbr>Qualifier<wbr>Filter]</a></span>
     </dt>
@@ -1708,7 +1902,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Property</span>
+        <span id="property_csharp">
+<a href="#property_csharp" style="color: inherit; text-decoration: inherit;">Property</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1717,7 +1913,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Values</span>
+        <span id="values_csharp">
+<a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1726,7 +1924,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Negated</span>
+        <span id="negated_csharp">
+<a href="#negated_csharp" style="color: inherit; text-decoration: inherit;">Negated</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1742,7 +1942,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Property</span>
+        <span id="property_go">
+<a href="#property_go" style="color: inherit; text-decoration: inherit;">Property</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1751,7 +1953,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Values</span>
+        <span id="values_go">
+<a href="#values_go" style="color: inherit; text-decoration: inherit;">Values</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1760,7 +1964,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Negated</span>
+        <span id="negated_go">
+<a href="#negated_go" style="color: inherit; text-decoration: inherit;">Negated</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1776,7 +1982,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>property</span>
+        <span id="property_nodejs">
+<a href="#property_nodejs" style="color: inherit; text-decoration: inherit;">property</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1785,7 +1993,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>values</span>
+        <span id="values_nodejs">
+<a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1794,7 +2004,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>negated</span>
+        <span id="negated_nodejs">
+<a href="#negated_nodejs" style="color: inherit; text-decoration: inherit;">negated</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1810,7 +2022,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>property</span>
+        <span id="property_python">
+<a href="#property_python" style="color: inherit; text-decoration: inherit;">property</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1819,7 +2033,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>values</span>
+        <span id="values_python">
+<a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1828,7 +2044,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>negated</span>
+        <span id="negated_python">
+<a href="#negated_python" style="color: inherit; text-decoration: inherit;">negated</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>

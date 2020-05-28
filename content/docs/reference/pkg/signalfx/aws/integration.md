@@ -16,96 +16,12 @@ SignalFx AWS CloudWatch integrations. For help with this integration see [Monito
 
 > **WARNING** This resource implements a part of a workflow. You must use it with one of either `signalfx.aws.ExternalIntegration` or `signalfx.aws.TokenIntegration`.
 
-
+{{% examples %}}
+{{% /examples %}}
 ## Service Names
 
 > **NOTE** You can use the data source "signalfx.aws.getServices" to specify all services.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_aws as aws
-import pulumi_signalfx as signalfx
-
-# This resource returns an account id in `external_id`…
-aws_myteam_external = signalfx.aws.ExternalIntegration("awsMyteamExternal")
-# Make yourself an AWS IAM role here, use `signalfx_aws_external_integration.aws_myteam_external.external_id`
-aws_sfx_role = aws.iam.Role("awsSfxRole")
-# Stuff here that uses the external and account ID
-aws_myteam = signalfx.aws.Integration("awsMyteam",
-    enabled=True,
-    integration_id=aws_myteam_external.id,
-    external_id=aws_myteam_external.external_id,
-    role_arn=aws_sfx_role.arn,
-    regions=["us-east-1"],
-    poll_rate=300,
-    import_cloud_watch=True,
-    enable_aws_usage=True,
-    custom_namespace_sync_rule=[{
-        "defaultAction": "Exclude",
-        "filterAction": "Include",
-        "filterSource": "filter('code', '200')",
-        "namespace": "fart",
-    }],
-    namespace_sync_rule=[{
-        "defaultAction": "Exclude",
-        "filterAction": "Include",
-        "filterSource": "filter('code', '200')",
-        "namespace": "AWS/EC2",
-    }])
-```
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-import * as signalfx from "@pulumi/signalfx";
-
-// This resource returns an account id in `external_id`…
-const awsMyteamExternal = new signalfx.aws.ExternalIntegration("awsMyteamExternal", {});
-// Make yourself an AWS IAM role here, use `signalfx_aws_external_integration.aws_myteam_external.external_id`
-const awsSfxRole = new aws.iam.Role("awsSfxRole", {});
-// Stuff here that uses the external and account ID
-const awsMyteam = new signalfx.aws.Integration("awsMyteam", {
-    enabled: true,
-    integrationId: awsMyteamExternal.id,
-    externalId: awsMyteamExternal.externalId,
-    roleArn: awsSfxRole.arn,
-    regions: ["us-east-1"],
-    pollRate: 300,
-    importCloudWatch: true,
-    enableAwsUsage: true,
-    custom_namespace_sync_rule: [{
-        defaultAction: "Exclude",
-        filterAction: "Include",
-        filterSource: "filter('code', '200')",
-        namespace: "fart",
-    }],
-    namespace_sync_rule: [{
-        defaultAction: "Exclude",
-        filterAction: "Include",
-        filterSource: "filter('code', '200')",
-        namespace: "AWS/EC2",
-    }],
-});
-```
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a Integration Resource {#create}
@@ -291,7 +207,9 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-required"
             title="Required">
-        <span>Enabled</span>
+        <span id="enabled_csharp">
+<a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -300,7 +218,9 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-required"
             title="Required">
-        <span>Integration<wbr>Id</span>
+        <span id="integrationid_csharp">
+<a href="#integrationid_csharp" style="color: inherit; text-decoration: inherit;">Integration<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -309,7 +229,9 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Custom<wbr>Cloudwatch<wbr>Namespaces</span>
+        <span id="customcloudwatchnamespaces_csharp">
+<a href="#customcloudwatchnamespaces_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Cloudwatch<wbr>Namespaces</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -318,7 +240,9 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Custom<wbr>Namespace<wbr>Sync<wbr>Rules</span>
+        <span id="customnamespacesyncrules_csharp">
+<a href="#customnamespacesyncrules_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Namespace<wbr>Sync<wbr>Rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#integrationcustomnamespacesyncrule">List&lt;Pulumi.<wbr>Signal<wbr>Fx.<wbr>Aws.<wbr>Inputs.<wbr>Integration<wbr>Custom<wbr>Namespace<wbr>Sync<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
@@ -327,7 +251,9 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enable<wbr>Aws<wbr>Usage</span>
+        <span id="enableawsusage_csharp">
+<a href="#enableawsusage_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Aws<wbr>Usage</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -336,7 +262,9 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>External<wbr>Id</span>
+        <span id="externalid_csharp">
+<a href="#externalid_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -345,7 +273,9 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Import<wbr>Cloud<wbr>Watch</span>
+        <span id="importcloudwatch_csharp">
+<a href="#importcloudwatch_csharp" style="color: inherit; text-decoration: inherit;">Import<wbr>Cloud<wbr>Watch</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -354,7 +284,9 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Key</span>
+        <span id="key_csharp">
+<a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -363,7 +295,9 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Namespace<wbr>Sync<wbr>Rules</span>
+        <span id="namespacesyncrules_csharp">
+<a href="#namespacesyncrules_csharp" style="color: inherit; text-decoration: inherit;">Namespace<wbr>Sync<wbr>Rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#integrationnamespacesyncrule">List&lt;Pulumi.<wbr>Signal<wbr>Fx.<wbr>Aws.<wbr>Inputs.<wbr>Integration<wbr>Namespace<wbr>Sync<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
@@ -372,7 +306,9 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Poll<wbr>Rate</span>
+        <span id="pollrate_csharp">
+<a href="#pollrate_csharp" style="color: inherit; text-decoration: inherit;">Poll<wbr>Rate</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -381,7 +317,9 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Regions</span>
+        <span id="regions_csharp">
+<a href="#regions_csharp" style="color: inherit; text-decoration: inherit;">Regions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -390,7 +328,9 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Role<wbr>Arn</span>
+        <span id="rolearn_csharp">
+<a href="#rolearn_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -399,7 +339,9 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Services</span>
+        <span id="services_csharp">
+<a href="#services_csharp" style="color: inherit; text-decoration: inherit;">Services</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -408,7 +350,9 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Token</span>
+        <span id="token_csharp">
+<a href="#token_csharp" style="color: inherit; text-decoration: inherit;">Token</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -417,7 +361,9 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Use<wbr>Get<wbr>Metric<wbr>Data<wbr>Method</span>
+        <span id="usegetmetricdatamethod_csharp">
+<a href="#usegetmetricdatamethod_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Get<wbr>Metric<wbr>Data<wbr>Method</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -433,7 +379,9 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-required"
             title="Required">
-        <span>Enabled</span>
+        <span id="enabled_go">
+<a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -442,7 +390,9 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-required"
             title="Required">
-        <span>Integration<wbr>Id</span>
+        <span id="integrationid_go">
+<a href="#integrationid_go" style="color: inherit; text-decoration: inherit;">Integration<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -451,7 +401,9 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Custom<wbr>Cloudwatch<wbr>Namespaces</span>
+        <span id="customcloudwatchnamespaces_go">
+<a href="#customcloudwatchnamespaces_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Cloudwatch<wbr>Namespaces</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -460,7 +412,9 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Custom<wbr>Namespace<wbr>Sync<wbr>Rules</span>
+        <span id="customnamespacesyncrules_go">
+<a href="#customnamespacesyncrules_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Namespace<wbr>Sync<wbr>Rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#integrationcustomnamespacesyncrule">[]Integration<wbr>Custom<wbr>Namespace<wbr>Sync<wbr>Rule</a></span>
     </dt>
@@ -469,7 +423,9 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enable<wbr>Aws<wbr>Usage</span>
+        <span id="enableawsusage_go">
+<a href="#enableawsusage_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Aws<wbr>Usage</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -478,7 +434,9 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>External<wbr>Id</span>
+        <span id="externalid_go">
+<a href="#externalid_go" style="color: inherit; text-decoration: inherit;">External<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -487,7 +445,9 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Import<wbr>Cloud<wbr>Watch</span>
+        <span id="importcloudwatch_go">
+<a href="#importcloudwatch_go" style="color: inherit; text-decoration: inherit;">Import<wbr>Cloud<wbr>Watch</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -496,7 +456,9 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Key</span>
+        <span id="key_go">
+<a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -505,7 +467,9 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Namespace<wbr>Sync<wbr>Rules</span>
+        <span id="namespacesyncrules_go">
+<a href="#namespacesyncrules_go" style="color: inherit; text-decoration: inherit;">Namespace<wbr>Sync<wbr>Rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#integrationnamespacesyncrule">[]Integration<wbr>Namespace<wbr>Sync<wbr>Rule</a></span>
     </dt>
@@ -514,7 +478,9 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Poll<wbr>Rate</span>
+        <span id="pollrate_go">
+<a href="#pollrate_go" style="color: inherit; text-decoration: inherit;">Poll<wbr>Rate</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -523,7 +489,9 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Regions</span>
+        <span id="regions_go">
+<a href="#regions_go" style="color: inherit; text-decoration: inherit;">Regions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -532,7 +500,9 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Role<wbr>Arn</span>
+        <span id="rolearn_go">
+<a href="#rolearn_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -541,7 +511,9 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Services</span>
+        <span id="services_go">
+<a href="#services_go" style="color: inherit; text-decoration: inherit;">Services</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -550,7 +522,9 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Token</span>
+        <span id="token_go">
+<a href="#token_go" style="color: inherit; text-decoration: inherit;">Token</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -559,7 +533,9 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Use<wbr>Get<wbr>Metric<wbr>Data<wbr>Method</span>
+        <span id="usegetmetricdatamethod_go">
+<a href="#usegetmetricdatamethod_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Get<wbr>Metric<wbr>Data<wbr>Method</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -575,7 +551,9 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-required"
             title="Required">
-        <span>enabled</span>
+        <span id="enabled_nodejs">
+<a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -584,7 +562,9 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-required"
             title="Required">
-        <span>integration<wbr>Id</span>
+        <span id="integrationid_nodejs">
+<a href="#integrationid_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -593,7 +573,9 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>custom<wbr>Cloudwatch<wbr>Namespaces</span>
+        <span id="customcloudwatchnamespaces_nodejs">
+<a href="#customcloudwatchnamespaces_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Cloudwatch<wbr>Namespaces</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -602,7 +584,9 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>custom<wbr>Namespace<wbr>Sync<wbr>Rules</span>
+        <span id="customnamespacesyncrules_nodejs">
+<a href="#customnamespacesyncrules_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Namespace<wbr>Sync<wbr>Rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#integrationcustomnamespacesyncrule">Integration<wbr>Custom<wbr>Namespace<wbr>Sync<wbr>Rule[]</a></span>
     </dt>
@@ -611,7 +595,9 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>enable<wbr>Aws<wbr>Usage</span>
+        <span id="enableawsusage_nodejs">
+<a href="#enableawsusage_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Aws<wbr>Usage</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -620,7 +606,9 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>external<wbr>Id</span>
+        <span id="externalid_nodejs">
+<a href="#externalid_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -629,7 +617,9 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>import<wbr>Cloud<wbr>Watch</span>
+        <span id="importcloudwatch_nodejs">
+<a href="#importcloudwatch_nodejs" style="color: inherit; text-decoration: inherit;">import<wbr>Cloud<wbr>Watch</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -638,7 +628,9 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>key</span>
+        <span id="key_nodejs">
+<a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -647,7 +639,9 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>namespace<wbr>Sync<wbr>Rules</span>
+        <span id="namespacesyncrules_nodejs">
+<a href="#namespacesyncrules_nodejs" style="color: inherit; text-decoration: inherit;">namespace<wbr>Sync<wbr>Rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#integrationnamespacesyncrule">Integration<wbr>Namespace<wbr>Sync<wbr>Rule[]</a></span>
     </dt>
@@ -656,7 +650,9 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>poll<wbr>Rate</span>
+        <span id="pollrate_nodejs">
+<a href="#pollrate_nodejs" style="color: inherit; text-decoration: inherit;">poll<wbr>Rate</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -665,7 +661,9 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>regions</span>
+        <span id="regions_nodejs">
+<a href="#regions_nodejs" style="color: inherit; text-decoration: inherit;">regions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -674,7 +672,9 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>role<wbr>Arn</span>
+        <span id="rolearn_nodejs">
+<a href="#rolearn_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -683,7 +683,9 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>services</span>
+        <span id="services_nodejs">
+<a href="#services_nodejs" style="color: inherit; text-decoration: inherit;">services</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -692,7 +694,9 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>token</span>
+        <span id="token_nodejs">
+<a href="#token_nodejs" style="color: inherit; text-decoration: inherit;">token</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -701,7 +705,9 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>use<wbr>Get<wbr>Metric<wbr>Data<wbr>Method</span>
+        <span id="usegetmetricdatamethod_nodejs">
+<a href="#usegetmetricdatamethod_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Get<wbr>Metric<wbr>Data<wbr>Method</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -717,7 +723,9 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-required"
             title="Required">
-        <span>enabled</span>
+        <span id="enabled_python">
+<a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -726,7 +734,9 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-required"
             title="Required">
-        <span>integration_<wbr>id</span>
+        <span id="integration_id_python">
+<a href="#integration_id_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -735,7 +745,9 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>custom_<wbr>cloudwatch_<wbr>namespaces</span>
+        <span id="custom_cloudwatch_namespaces_python">
+<a href="#custom_cloudwatch_namespaces_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>cloudwatch_<wbr>namespaces</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -744,7 +756,9 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>custom_<wbr>namespace_<wbr>sync_<wbr>rules</span>
+        <span id="custom_namespace_sync_rules_python">
+<a href="#custom_namespace_sync_rules_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>namespace_<wbr>sync_<wbr>rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#integrationcustomnamespacesyncrule">List[Integration<wbr>Custom<wbr>Namespace<wbr>Sync<wbr>Rule]</a></span>
     </dt>
@@ -753,7 +767,9 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>enable_<wbr>aws_<wbr>usage</span>
+        <span id="enable_aws_usage_python">
+<a href="#enable_aws_usage_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>aws_<wbr>usage</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -762,7 +778,9 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>external_<wbr>id</span>
+        <span id="external_id_python">
+<a href="#external_id_python" style="color: inherit; text-decoration: inherit;">external_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -771,7 +789,9 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>import_<wbr>cloud_<wbr>watch</span>
+        <span id="import_cloud_watch_python">
+<a href="#import_cloud_watch_python" style="color: inherit; text-decoration: inherit;">import_<wbr>cloud_<wbr>watch</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -780,7 +800,9 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>key</span>
+        <span id="key_python">
+<a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -789,7 +811,9 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>namespace_<wbr>sync_<wbr>rules</span>
+        <span id="namespace_sync_rules_python">
+<a href="#namespace_sync_rules_python" style="color: inherit; text-decoration: inherit;">namespace_<wbr>sync_<wbr>rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#integrationnamespacesyncrule">List[Integration<wbr>Namespace<wbr>Sync<wbr>Rule]</a></span>
     </dt>
@@ -798,7 +822,9 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>poll_<wbr>rate</span>
+        <span id="poll_rate_python">
+<a href="#poll_rate_python" style="color: inherit; text-decoration: inherit;">poll_<wbr>rate</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -807,7 +833,9 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>regions</span>
+        <span id="regions_python">
+<a href="#regions_python" style="color: inherit; text-decoration: inherit;">regions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -816,7 +844,9 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>role_<wbr>arn</span>
+        <span id="role_arn_python">
+<a href="#role_arn_python" style="color: inherit; text-decoration: inherit;">role_<wbr>arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -825,7 +855,9 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>services</span>
+        <span id="services_python">
+<a href="#services_python" style="color: inherit; text-decoration: inherit;">services</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -834,7 +866,9 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>token</span>
+        <span id="token_python">
+<a href="#token_python" style="color: inherit; text-decoration: inherit;">token</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -843,7 +877,9 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>use_<wbr>get_<wbr>metric_<wbr>data_<wbr>method</span>
+        <span id="use_get_metric_data_method_python">
+<a href="#use_get_metric_data_method_python" style="color: inherit; text-decoration: inherit;">use_<wbr>get_<wbr>metric_<wbr>data_<wbr>method</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -870,7 +906,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -885,7 +923,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -900,7 +940,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -915,7 +957,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1056,7 +1100,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Custom<wbr>Cloudwatch<wbr>Namespaces</span>
+        <span id="state_customcloudwatchnamespaces_csharp">
+<a href="#state_customcloudwatchnamespaces_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Cloudwatch<wbr>Namespaces</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1065,7 +1111,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Custom<wbr>Namespace<wbr>Sync<wbr>Rules</span>
+        <span id="state_customnamespacesyncrules_csharp">
+<a href="#state_customnamespacesyncrules_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Namespace<wbr>Sync<wbr>Rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#integrationcustomnamespacesyncrule">List&lt;Pulumi.<wbr>Signal<wbr>Fx.<wbr>Aws.<wbr>Inputs.<wbr>Integration<wbr>Custom<wbr>Namespace<wbr>Sync<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
@@ -1074,7 +1122,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enable<wbr>Aws<wbr>Usage</span>
+        <span id="state_enableawsusage_csharp">
+<a href="#state_enableawsusage_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Aws<wbr>Usage</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1083,7 +1133,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enabled</span>
+        <span id="state_enabled_csharp">
+<a href="#state_enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1092,7 +1144,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>External<wbr>Id</span>
+        <span id="state_externalid_csharp">
+<a href="#state_externalid_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1101,7 +1155,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Import<wbr>Cloud<wbr>Watch</span>
+        <span id="state_importcloudwatch_csharp">
+<a href="#state_importcloudwatch_csharp" style="color: inherit; text-decoration: inherit;">Import<wbr>Cloud<wbr>Watch</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1110,7 +1166,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Integration<wbr>Id</span>
+        <span id="state_integrationid_csharp">
+<a href="#state_integrationid_csharp" style="color: inherit; text-decoration: inherit;">Integration<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1119,7 +1177,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Key</span>
+        <span id="state_key_csharp">
+<a href="#state_key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1128,7 +1188,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Namespace<wbr>Sync<wbr>Rules</span>
+        <span id="state_namespacesyncrules_csharp">
+<a href="#state_namespacesyncrules_csharp" style="color: inherit; text-decoration: inherit;">Namespace<wbr>Sync<wbr>Rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#integrationnamespacesyncrule">List&lt;Pulumi.<wbr>Signal<wbr>Fx.<wbr>Aws.<wbr>Inputs.<wbr>Integration<wbr>Namespace<wbr>Sync<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
@@ -1137,7 +1199,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Poll<wbr>Rate</span>
+        <span id="state_pollrate_csharp">
+<a href="#state_pollrate_csharp" style="color: inherit; text-decoration: inherit;">Poll<wbr>Rate</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1146,7 +1210,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Regions</span>
+        <span id="state_regions_csharp">
+<a href="#state_regions_csharp" style="color: inherit; text-decoration: inherit;">Regions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1155,7 +1221,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Role<wbr>Arn</span>
+        <span id="state_rolearn_csharp">
+<a href="#state_rolearn_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1164,7 +1232,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Services</span>
+        <span id="state_services_csharp">
+<a href="#state_services_csharp" style="color: inherit; text-decoration: inherit;">Services</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1173,7 +1243,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Token</span>
+        <span id="state_token_csharp">
+<a href="#state_token_csharp" style="color: inherit; text-decoration: inherit;">Token</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1182,7 +1254,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Use<wbr>Get<wbr>Metric<wbr>Data<wbr>Method</span>
+        <span id="state_usegetmetricdatamethod_csharp">
+<a href="#state_usegetmetricdatamethod_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Get<wbr>Metric<wbr>Data<wbr>Method</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1198,7 +1272,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Custom<wbr>Cloudwatch<wbr>Namespaces</span>
+        <span id="state_customcloudwatchnamespaces_go">
+<a href="#state_customcloudwatchnamespaces_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Cloudwatch<wbr>Namespaces</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1207,7 +1283,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Custom<wbr>Namespace<wbr>Sync<wbr>Rules</span>
+        <span id="state_customnamespacesyncrules_go">
+<a href="#state_customnamespacesyncrules_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Namespace<wbr>Sync<wbr>Rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#integrationcustomnamespacesyncrule">[]Integration<wbr>Custom<wbr>Namespace<wbr>Sync<wbr>Rule</a></span>
     </dt>
@@ -1216,7 +1294,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enable<wbr>Aws<wbr>Usage</span>
+        <span id="state_enableawsusage_go">
+<a href="#state_enableawsusage_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Aws<wbr>Usage</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1225,7 +1305,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enabled</span>
+        <span id="state_enabled_go">
+<a href="#state_enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1234,7 +1316,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>External<wbr>Id</span>
+        <span id="state_externalid_go">
+<a href="#state_externalid_go" style="color: inherit; text-decoration: inherit;">External<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1243,7 +1327,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Import<wbr>Cloud<wbr>Watch</span>
+        <span id="state_importcloudwatch_go">
+<a href="#state_importcloudwatch_go" style="color: inherit; text-decoration: inherit;">Import<wbr>Cloud<wbr>Watch</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1252,7 +1338,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Integration<wbr>Id</span>
+        <span id="state_integrationid_go">
+<a href="#state_integrationid_go" style="color: inherit; text-decoration: inherit;">Integration<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1261,7 +1349,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Key</span>
+        <span id="state_key_go">
+<a href="#state_key_go" style="color: inherit; text-decoration: inherit;">Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1270,7 +1360,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Namespace<wbr>Sync<wbr>Rules</span>
+        <span id="state_namespacesyncrules_go">
+<a href="#state_namespacesyncrules_go" style="color: inherit; text-decoration: inherit;">Namespace<wbr>Sync<wbr>Rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#integrationnamespacesyncrule">[]Integration<wbr>Namespace<wbr>Sync<wbr>Rule</a></span>
     </dt>
@@ -1279,7 +1371,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Poll<wbr>Rate</span>
+        <span id="state_pollrate_go">
+<a href="#state_pollrate_go" style="color: inherit; text-decoration: inherit;">Poll<wbr>Rate</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1288,7 +1382,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Regions</span>
+        <span id="state_regions_go">
+<a href="#state_regions_go" style="color: inherit; text-decoration: inherit;">Regions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1297,7 +1393,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Role<wbr>Arn</span>
+        <span id="state_rolearn_go">
+<a href="#state_rolearn_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1306,7 +1404,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Services</span>
+        <span id="state_services_go">
+<a href="#state_services_go" style="color: inherit; text-decoration: inherit;">Services</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1315,7 +1415,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Token</span>
+        <span id="state_token_go">
+<a href="#state_token_go" style="color: inherit; text-decoration: inherit;">Token</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1324,7 +1426,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Use<wbr>Get<wbr>Metric<wbr>Data<wbr>Method</span>
+        <span id="state_usegetmetricdatamethod_go">
+<a href="#state_usegetmetricdatamethod_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Get<wbr>Metric<wbr>Data<wbr>Method</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1340,7 +1444,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>custom<wbr>Cloudwatch<wbr>Namespaces</span>
+        <span id="state_customcloudwatchnamespaces_nodejs">
+<a href="#state_customcloudwatchnamespaces_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Cloudwatch<wbr>Namespaces</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1349,7 +1455,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>custom<wbr>Namespace<wbr>Sync<wbr>Rules</span>
+        <span id="state_customnamespacesyncrules_nodejs">
+<a href="#state_customnamespacesyncrules_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Namespace<wbr>Sync<wbr>Rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#integrationcustomnamespacesyncrule">Integration<wbr>Custom<wbr>Namespace<wbr>Sync<wbr>Rule[]</a></span>
     </dt>
@@ -1358,7 +1466,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>enable<wbr>Aws<wbr>Usage</span>
+        <span id="state_enableawsusage_nodejs">
+<a href="#state_enableawsusage_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Aws<wbr>Usage</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1367,7 +1477,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>enabled</span>
+        <span id="state_enabled_nodejs">
+<a href="#state_enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1376,7 +1488,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>external<wbr>Id</span>
+        <span id="state_externalid_nodejs">
+<a href="#state_externalid_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1385,7 +1499,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>import<wbr>Cloud<wbr>Watch</span>
+        <span id="state_importcloudwatch_nodejs">
+<a href="#state_importcloudwatch_nodejs" style="color: inherit; text-decoration: inherit;">import<wbr>Cloud<wbr>Watch</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1394,7 +1510,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>integration<wbr>Id</span>
+        <span id="state_integrationid_nodejs">
+<a href="#state_integrationid_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1403,7 +1521,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>key</span>
+        <span id="state_key_nodejs">
+<a href="#state_key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1412,7 +1532,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>namespace<wbr>Sync<wbr>Rules</span>
+        <span id="state_namespacesyncrules_nodejs">
+<a href="#state_namespacesyncrules_nodejs" style="color: inherit; text-decoration: inherit;">namespace<wbr>Sync<wbr>Rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#integrationnamespacesyncrule">Integration<wbr>Namespace<wbr>Sync<wbr>Rule[]</a></span>
     </dt>
@@ -1421,7 +1543,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>poll<wbr>Rate</span>
+        <span id="state_pollrate_nodejs">
+<a href="#state_pollrate_nodejs" style="color: inherit; text-decoration: inherit;">poll<wbr>Rate</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1430,7 +1554,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>regions</span>
+        <span id="state_regions_nodejs">
+<a href="#state_regions_nodejs" style="color: inherit; text-decoration: inherit;">regions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1439,7 +1565,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>role<wbr>Arn</span>
+        <span id="state_rolearn_nodejs">
+<a href="#state_rolearn_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1448,7 +1576,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>services</span>
+        <span id="state_services_nodejs">
+<a href="#state_services_nodejs" style="color: inherit; text-decoration: inherit;">services</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1457,7 +1587,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>token</span>
+        <span id="state_token_nodejs">
+<a href="#state_token_nodejs" style="color: inherit; text-decoration: inherit;">token</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1466,7 +1598,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>use<wbr>Get<wbr>Metric<wbr>Data<wbr>Method</span>
+        <span id="state_usegetmetricdatamethod_nodejs">
+<a href="#state_usegetmetricdatamethod_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Get<wbr>Metric<wbr>Data<wbr>Method</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1482,7 +1616,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>custom_<wbr>cloudwatch_<wbr>namespaces</span>
+        <span id="state_custom_cloudwatch_namespaces_python">
+<a href="#state_custom_cloudwatch_namespaces_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>cloudwatch_<wbr>namespaces</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1491,7 +1627,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>custom_<wbr>namespace_<wbr>sync_<wbr>rules</span>
+        <span id="state_custom_namespace_sync_rules_python">
+<a href="#state_custom_namespace_sync_rules_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>namespace_<wbr>sync_<wbr>rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#integrationcustomnamespacesyncrule">List[Integration<wbr>Custom<wbr>Namespace<wbr>Sync<wbr>Rule]</a></span>
     </dt>
@@ -1500,7 +1638,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>enable_<wbr>aws_<wbr>usage</span>
+        <span id="state_enable_aws_usage_python">
+<a href="#state_enable_aws_usage_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>aws_<wbr>usage</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1509,7 +1649,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>enabled</span>
+        <span id="state_enabled_python">
+<a href="#state_enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1518,7 +1660,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>external_<wbr>id</span>
+        <span id="state_external_id_python">
+<a href="#state_external_id_python" style="color: inherit; text-decoration: inherit;">external_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1527,7 +1671,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>import_<wbr>cloud_<wbr>watch</span>
+        <span id="state_import_cloud_watch_python">
+<a href="#state_import_cloud_watch_python" style="color: inherit; text-decoration: inherit;">import_<wbr>cloud_<wbr>watch</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1536,7 +1682,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>integration_<wbr>id</span>
+        <span id="state_integration_id_python">
+<a href="#state_integration_id_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1545,7 +1693,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>key</span>
+        <span id="state_key_python">
+<a href="#state_key_python" style="color: inherit; text-decoration: inherit;">key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1554,7 +1704,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>namespace_<wbr>sync_<wbr>rules</span>
+        <span id="state_namespace_sync_rules_python">
+<a href="#state_namespace_sync_rules_python" style="color: inherit; text-decoration: inherit;">namespace_<wbr>sync_<wbr>rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#integrationnamespacesyncrule">List[Integration<wbr>Namespace<wbr>Sync<wbr>Rule]</a></span>
     </dt>
@@ -1563,7 +1715,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>poll_<wbr>rate</span>
+        <span id="state_poll_rate_python">
+<a href="#state_poll_rate_python" style="color: inherit; text-decoration: inherit;">poll_<wbr>rate</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1572,7 +1726,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>regions</span>
+        <span id="state_regions_python">
+<a href="#state_regions_python" style="color: inherit; text-decoration: inherit;">regions</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1581,7 +1737,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>role_<wbr>arn</span>
+        <span id="state_role_arn_python">
+<a href="#state_role_arn_python" style="color: inherit; text-decoration: inherit;">role_<wbr>arn</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1590,7 +1748,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>services</span>
+        <span id="state_services_python">
+<a href="#state_services_python" style="color: inherit; text-decoration: inherit;">services</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1599,7 +1759,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>token</span>
+        <span id="state_token_python">
+<a href="#state_token_python" style="color: inherit; text-decoration: inherit;">token</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1608,7 +1770,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>use_<wbr>get_<wbr>metric_<wbr>data_<wbr>method</span>
+        <span id="state_use_get_metric_data_method_python">
+<a href="#state_use_get_metric_data_method_python" style="color: inherit; text-decoration: inherit;">use_<wbr>get_<wbr>metric_<wbr>data_<wbr>method</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1650,7 +1814,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Namespace</span>
+        <span id="namespace_csharp">
+<a href="#namespace_csharp" style="color: inherit; text-decoration: inherit;">Namespace</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1659,7 +1825,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Default<wbr>Action</span>
+        <span id="defaultaction_csharp">
+<a href="#defaultaction_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Action</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1668,7 +1836,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Filter<wbr>Action</span>
+        <span id="filteraction_csharp">
+<a href="#filteraction_csharp" style="color: inherit; text-decoration: inherit;">Filter<wbr>Action</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1677,7 +1847,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Filter<wbr>Source</span>
+        <span id="filtersource_csharp">
+<a href="#filtersource_csharp" style="color: inherit; text-decoration: inherit;">Filter<wbr>Source</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1693,7 +1865,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Namespace</span>
+        <span id="namespace_go">
+<a href="#namespace_go" style="color: inherit; text-decoration: inherit;">Namespace</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1702,7 +1876,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Default<wbr>Action</span>
+        <span id="defaultaction_go">
+<a href="#defaultaction_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Action</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1711,7 +1887,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Filter<wbr>Action</span>
+        <span id="filteraction_go">
+<a href="#filteraction_go" style="color: inherit; text-decoration: inherit;">Filter<wbr>Action</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1720,7 +1898,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Filter<wbr>Source</span>
+        <span id="filtersource_go">
+<a href="#filtersource_go" style="color: inherit; text-decoration: inherit;">Filter<wbr>Source</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1736,7 +1916,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>namespace</span>
+        <span id="namespace_nodejs">
+<a href="#namespace_nodejs" style="color: inherit; text-decoration: inherit;">namespace</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1745,7 +1927,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>default<wbr>Action</span>
+        <span id="defaultaction_nodejs">
+<a href="#defaultaction_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Action</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1754,7 +1938,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>filter<wbr>Action</span>
+        <span id="filteraction_nodejs">
+<a href="#filteraction_nodejs" style="color: inherit; text-decoration: inherit;">filter<wbr>Action</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1763,7 +1949,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>filter<wbr>Source</span>
+        <span id="filtersource_nodejs">
+<a href="#filtersource_nodejs" style="color: inherit; text-decoration: inherit;">filter<wbr>Source</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1779,7 +1967,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>namespace</span>
+        <span id="namespace_python">
+<a href="#namespace_python" style="color: inherit; text-decoration: inherit;">namespace</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1788,7 +1978,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>default<wbr>Action</span>
+        <span id="defaultaction_python">
+<a href="#defaultaction_python" style="color: inherit; text-decoration: inherit;">default<wbr>Action</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1797,7 +1989,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>filter<wbr>Action</span>
+        <span id="filteraction_python">
+<a href="#filteraction_python" style="color: inherit; text-decoration: inherit;">filter<wbr>Action</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1806,7 +2000,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>filter<wbr>Source</span>
+        <span id="filtersource_python">
+<a href="#filtersource_python" style="color: inherit; text-decoration: inherit;">filter<wbr>Source</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1840,7 +2036,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Namespace</span>
+        <span id="namespace_csharp">
+<a href="#namespace_csharp" style="color: inherit; text-decoration: inherit;">Namespace</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1849,7 +2047,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Default<wbr>Action</span>
+        <span id="defaultaction_csharp">
+<a href="#defaultaction_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Action</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1858,7 +2058,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Filter<wbr>Action</span>
+        <span id="filteraction_csharp">
+<a href="#filteraction_csharp" style="color: inherit; text-decoration: inherit;">Filter<wbr>Action</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1867,7 +2069,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Filter<wbr>Source</span>
+        <span id="filtersource_csharp">
+<a href="#filtersource_csharp" style="color: inherit; text-decoration: inherit;">Filter<wbr>Source</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1883,7 +2087,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>Namespace</span>
+        <span id="namespace_go">
+<a href="#namespace_go" style="color: inherit; text-decoration: inherit;">Namespace</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1892,7 +2098,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Default<wbr>Action</span>
+        <span id="defaultaction_go">
+<a href="#defaultaction_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Action</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1901,7 +2109,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Filter<wbr>Action</span>
+        <span id="filteraction_go">
+<a href="#filteraction_go" style="color: inherit; text-decoration: inherit;">Filter<wbr>Action</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1910,7 +2120,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Filter<wbr>Source</span>
+        <span id="filtersource_go">
+<a href="#filtersource_go" style="color: inherit; text-decoration: inherit;">Filter<wbr>Source</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1926,7 +2138,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>namespace</span>
+        <span id="namespace_nodejs">
+<a href="#namespace_nodejs" style="color: inherit; text-decoration: inherit;">namespace</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1935,7 +2149,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>default<wbr>Action</span>
+        <span id="defaultaction_nodejs">
+<a href="#defaultaction_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Action</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1944,7 +2160,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>filter<wbr>Action</span>
+        <span id="filteraction_nodejs">
+<a href="#filteraction_nodejs" style="color: inherit; text-decoration: inherit;">filter<wbr>Action</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1953,7 +2171,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>filter<wbr>Source</span>
+        <span id="filtersource_nodejs">
+<a href="#filtersource_nodejs" style="color: inherit; text-decoration: inherit;">filter<wbr>Source</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1969,7 +2189,9 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>namespace</span>
+        <span id="namespace_python">
+<a href="#namespace_python" style="color: inherit; text-decoration: inherit;">namespace</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1978,7 +2200,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>default<wbr>Action</span>
+        <span id="defaultaction_python">
+<a href="#defaultaction_python" style="color: inherit; text-decoration: inherit;">default<wbr>Action</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1987,7 +2211,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>filter<wbr>Action</span>
+        <span id="filteraction_python">
+<a href="#filteraction_python" style="color: inherit; text-decoration: inherit;">filter<wbr>Action</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1996,7 +2222,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>filter<wbr>Source</span>
+        <span id="filtersource_python">
+<a href="#filtersource_python" style="color: inherit; text-decoration: inherit;">filter<wbr>Source</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
