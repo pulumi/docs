@@ -48,7 +48,7 @@ The unit test suite for our data lake consists of over 700 tests and previously 
 
 Continuously testing resource definitions is a best practice and it’s incredibly easy to get started. In this example, we mock a resource name to attach to an IAM Policy Role. The test checks that we attach the correct policy to the expected role.
 
-**test-setup.ts**
+**test-setup**.**ts**
 
 ```ts
 /**
@@ -77,7 +77,7 @@ pulumi.runtime.setMocks({
 });
 ```
 
-**infra.ts**
+**infra**.**ts**
 
 ```ts
 export const attachment = new aws.iam.RolePolicyAttachment(
@@ -89,7 +89,7 @@ export const attachment = new aws.iam.RolePolicyAttachment(
 );
 ```
 
-**infra.spec.ts**
+**infra**.**spec**.**ts**
 
 ```ts
 /**
@@ -120,7 +120,7 @@ The key part is that we never actually talk to the cloud provider. Instead, we a
 
 In addition to resource testing with mocks, we can test the entire stack with policies. This example ensures that the EKS cluster uses version 1.13 deployed on a custom VPC.
 
-**infras.ts**
+**infra**.**ts**
 
 ```ts
 import * as awsx from "@pulumi/awsx";
@@ -142,7 +142,7 @@ const cluster = new eks.Cluster("my-cluster", {
 });
 ```
 
-policy test:
+**policy**.**test**
 
 ```ts
 const stackPolicy: policy.StackValidationPolicy = {
