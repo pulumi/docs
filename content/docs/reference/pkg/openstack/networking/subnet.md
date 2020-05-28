@@ -20,7 +20,27 @@ Manages a V2 Neutron subnet resource within OpenStack.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var network1 = new OpenStack.Networking.Network("network1", new OpenStack.Networking.NetworkArgs
+        {
+            AdminStateUp = "true",
+        });
+        var subnet1 = new OpenStack.Networking.Subnet("subnet1", new OpenStack.Networking.SubnetArgs
+        {
+            Cidr = "192.168.199.0/24",
+            NetworkId = network1.Id,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -240,7 +260,9 @@ The Subnet resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-required"
             title="Required">
-        <span>Network<wbr>Id</span>
+        <span id="networkid_csharp">
+<a href="#networkid_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -250,7 +272,9 @@ creates a new subnet.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Allocation<wbr>Pools</span>
+        <span id="allocationpools_csharp">
+<a href="#allocationpools_csharp" style="color: inherit; text-decoration: inherit;">Allocation<wbr>Pools</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subnetallocationpool">List&lt;Pulumi.<wbr>Open<wbr>Stack.<wbr>Networking.<wbr>Inputs.<wbr>Subnet<wbr>Allocation<wbr>Pool<wbr>Args&gt;</a></span>
     </dt>
@@ -264,7 +288,9 @@ The `allocation_pool` block is documented below.
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>Allocation<wbr>Pools<wbr>Collection</span>
+        <span id="allocationpoolscollection_csharp">
+<a href="#allocationpoolscollection_csharp" style="color: inherit; text-decoration: inherit;">Allocation<wbr>Pools<wbr>Collection</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subnetallocationpoolscollection">List&lt;Pulumi.<wbr>Open<wbr>Stack.<wbr>Networking.<wbr>Inputs.<wbr>Subnet<wbr>Allocation<wbr>Pools<wbr>Collection<wbr>Args&gt;</a></span>
     </dt>
@@ -276,7 +302,9 @@ The `allocation_pools` block is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cidr</span>
+        <span id="cidr_csharp">
+<a href="#cidr_csharp" style="color: inherit; text-decoration: inherit;">Cidr</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -287,7 +315,9 @@ subnet pool.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -297,7 +327,9 @@ updates the name of the existing subnet.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Dns<wbr>Nameservers</span>
+        <span id="dnsnameservers_csharp">
+<a href="#dnsnameservers_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Nameservers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -308,7 +340,9 @@ subnet.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enable<wbr>Dhcp</span>
+        <span id="enabledhcp_csharp">
+<a href="#enabledhcp_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Dhcp</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -319,7 +353,9 @@ disables the DHCP capabilities of the existing subnet. Defaults to true.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Gateway<wbr>Ip</span>
+        <span id="gatewayip_csharp">
+<a href="#gatewayip_csharp" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -331,7 +367,9 @@ existing subnet.
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>Host<wbr>Routes</span>
+        <span id="hostroutes_csharp">
+<a href="#hostroutes_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Routes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subnethostroute">List&lt;Pulumi.<wbr>Open<wbr>Stack.<wbr>Networking.<wbr>Inputs.<wbr>Subnet<wbr>Host<wbr>Route<wbr>Args&gt;</a></span>
     </dt>
@@ -344,7 +382,9 @@ for the existing subnet.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ip<wbr>Version</span>
+        <span id="ipversion_csharp">
+<a href="#ipversion_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -354,7 +394,9 @@ new subnet.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ipv6Address<wbr>Mode</span>
+        <span id="ipv6addressmode_csharp">
+<a href="#ipv6addressmode_csharp" style="color: inherit; text-decoration: inherit;">Ipv6Address<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -364,7 +406,9 @@ new subnet.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ipv6Ra<wbr>Mode</span>
+        <span id="ipv6ramode_csharp">
+<a href="#ipv6ramode_csharp" style="color: inherit; text-decoration: inherit;">Ipv6Ra<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -374,7 +418,9 @@ are `dhcpv6-stateful`, `dhcpv6-stateless`, or `slaac`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -384,7 +430,9 @@ the existing subnet.
 
     <dt class="property-optional"
             title="Optional">
-        <span>No<wbr>Gateway</span>
+        <span id="nogateway_csharp">
+<a href="#nogateway_csharp" style="color: inherit; text-decoration: inherit;">No<wbr>Gateway</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -394,7 +442,9 @@ this removes or adds a default gateway IP of the existing subnet.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Prefix<wbr>Length</span>
+        <span id="prefixlength_csharp">
+<a href="#prefixlength_csharp" style="color: inherit; text-decoration: inherit;">Prefix<wbr>Length</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -406,7 +456,9 @@ creates a new subnet.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="region_csharp">
+<a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -418,7 +470,9 @@ subnet.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Subnetpool<wbr>Id</span>
+        <span id="subnetpoolid_csharp">
+<a href="#subnetpoolid_csharp" style="color: inherit; text-decoration: inherit;">Subnetpool<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -427,7 +481,9 @@ subnet.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -436,7 +492,9 @@ subnet.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tenant<wbr>Id</span>
+        <span id="tenantid_csharp">
+<a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -446,7 +504,9 @@ create a subnet for another tenant. Changing this creates a new subnet.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Value<wbr>Specs</span>
+        <span id="valuespecs_csharp">
+<a href="#valuespecs_csharp" style="color: inherit; text-decoration: inherit;">Value<wbr>Specs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -462,7 +522,9 @@ create a subnet for another tenant. Changing this creates a new subnet.
 
     <dt class="property-required"
             title="Required">
-        <span>Network<wbr>Id</span>
+        <span id="networkid_go">
+<a href="#networkid_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -472,7 +534,9 @@ creates a new subnet.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Allocation<wbr>Pools</span>
+        <span id="allocationpools_go">
+<a href="#allocationpools_go" style="color: inherit; text-decoration: inherit;">Allocation<wbr>Pools</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subnetallocationpool">[]Subnet<wbr>Allocation<wbr>Pool</a></span>
     </dt>
@@ -486,7 +550,9 @@ The `allocation_pool` block is documented below.
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>Allocation<wbr>Pools<wbr>Collection</span>
+        <span id="allocationpoolscollection_go">
+<a href="#allocationpoolscollection_go" style="color: inherit; text-decoration: inherit;">Allocation<wbr>Pools<wbr>Collection</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subnetallocationpoolscollection">[]Subnet<wbr>Allocation<wbr>Pools<wbr>Collection</a></span>
     </dt>
@@ -498,7 +564,9 @@ The `allocation_pools` block is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cidr</span>
+        <span id="cidr_go">
+<a href="#cidr_go" style="color: inherit; text-decoration: inherit;">Cidr</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -509,7 +577,9 @@ subnet pool.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -519,7 +589,9 @@ updates the name of the existing subnet.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Dns<wbr>Nameservers</span>
+        <span id="dnsnameservers_go">
+<a href="#dnsnameservers_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Nameservers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -530,7 +602,9 @@ subnet.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enable<wbr>Dhcp</span>
+        <span id="enabledhcp_go">
+<a href="#enabledhcp_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Dhcp</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -541,7 +615,9 @@ disables the DHCP capabilities of the existing subnet. Defaults to true.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Gateway<wbr>Ip</span>
+        <span id="gatewayip_go">
+<a href="#gatewayip_go" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -553,7 +629,9 @@ existing subnet.
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>Host<wbr>Routes</span>
+        <span id="hostroutes_go">
+<a href="#hostroutes_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Routes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subnethostroute">[]Subnet<wbr>Host<wbr>Route</a></span>
     </dt>
@@ -566,7 +644,9 @@ for the existing subnet.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ip<wbr>Version</span>
+        <span id="ipversion_go">
+<a href="#ipversion_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -576,7 +656,9 @@ new subnet.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ipv6Address<wbr>Mode</span>
+        <span id="ipv6addressmode_go">
+<a href="#ipv6addressmode_go" style="color: inherit; text-decoration: inherit;">Ipv6Address<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -586,7 +668,9 @@ new subnet.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ipv6Ra<wbr>Mode</span>
+        <span id="ipv6ramode_go">
+<a href="#ipv6ramode_go" style="color: inherit; text-decoration: inherit;">Ipv6Ra<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -596,7 +680,9 @@ are `dhcpv6-stateful`, `dhcpv6-stateless`, or `slaac`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -606,7 +692,9 @@ the existing subnet.
 
     <dt class="property-optional"
             title="Optional">
-        <span>No<wbr>Gateway</span>
+        <span id="nogateway_go">
+<a href="#nogateway_go" style="color: inherit; text-decoration: inherit;">No<wbr>Gateway</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -616,7 +704,9 @@ this removes or adds a default gateway IP of the existing subnet.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Prefix<wbr>Length</span>
+        <span id="prefixlength_go">
+<a href="#prefixlength_go" style="color: inherit; text-decoration: inherit;">Prefix<wbr>Length</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -628,7 +718,9 @@ creates a new subnet.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="region_go">
+<a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -640,7 +732,9 @@ subnet.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Subnetpool<wbr>Id</span>
+        <span id="subnetpoolid_go">
+<a href="#subnetpoolid_go" style="color: inherit; text-decoration: inherit;">Subnetpool<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -649,7 +743,9 @@ subnet.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -658,7 +754,9 @@ subnet.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tenant<wbr>Id</span>
+        <span id="tenantid_go">
+<a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -668,7 +766,9 @@ create a subnet for another tenant. Changing this creates a new subnet.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Value<wbr>Specs</span>
+        <span id="valuespecs_go">
+<a href="#valuespecs_go" style="color: inherit; text-decoration: inherit;">Value<wbr>Specs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -684,7 +784,9 @@ create a subnet for another tenant. Changing this creates a new subnet.
 
     <dt class="property-required"
             title="Required">
-        <span>network<wbr>Id</span>
+        <span id="networkid_nodejs">
+<a href="#networkid_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -694,7 +796,9 @@ creates a new subnet.
 
     <dt class="property-optional"
             title="Optional">
-        <span>allocation<wbr>Pools</span>
+        <span id="allocationpools_nodejs">
+<a href="#allocationpools_nodejs" style="color: inherit; text-decoration: inherit;">allocation<wbr>Pools</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subnetallocationpool">Subnet<wbr>Allocation<wbr>Pool[]</a></span>
     </dt>
@@ -708,7 +812,9 @@ The `allocation_pool` block is documented below.
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>allocation<wbr>Pools<wbr>Collection</span>
+        <span id="allocationpoolscollection_nodejs">
+<a href="#allocationpoolscollection_nodejs" style="color: inherit; text-decoration: inherit;">allocation<wbr>Pools<wbr>Collection</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subnetallocationpoolscollection">Subnet<wbr>Allocation<wbr>Pools<wbr>Collection[]</a></span>
     </dt>
@@ -720,7 +826,9 @@ The `allocation_pools` block is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>cidr</span>
+        <span id="cidr_nodejs">
+<a href="#cidr_nodejs" style="color: inherit; text-decoration: inherit;">cidr</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -731,7 +839,9 @@ subnet pool.
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -741,7 +851,9 @@ updates the name of the existing subnet.
 
     <dt class="property-optional"
             title="Optional">
-        <span>dns<wbr>Nameservers</span>
+        <span id="dnsnameservers_nodejs">
+<a href="#dnsnameservers_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Nameservers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -752,7 +864,9 @@ subnet.
 
     <dt class="property-optional"
             title="Optional">
-        <span>enable<wbr>Dhcp</span>
+        <span id="enabledhcp_nodejs">
+<a href="#enabledhcp_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Dhcp</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -763,7 +877,9 @@ disables the DHCP capabilities of the existing subnet. Defaults to true.
 
     <dt class="property-optional"
             title="Optional">
-        <span>gateway<wbr>Ip</span>
+        <span id="gatewayip_nodejs">
+<a href="#gatewayip_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -775,7 +891,9 @@ existing subnet.
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>host<wbr>Routes</span>
+        <span id="hostroutes_nodejs">
+<a href="#hostroutes_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Routes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subnethostroute">Subnet<wbr>Host<wbr>Route[]</a></span>
     </dt>
@@ -788,7 +906,9 @@ for the existing subnet.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ip<wbr>Version</span>
+        <span id="ipversion_nodejs">
+<a href="#ipversion_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -798,7 +918,9 @@ new subnet.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ipv6Address<wbr>Mode</span>
+        <span id="ipv6addressmode_nodejs">
+<a href="#ipv6addressmode_nodejs" style="color: inherit; text-decoration: inherit;">ipv6Address<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -808,7 +930,9 @@ new subnet.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ipv6Ra<wbr>Mode</span>
+        <span id="ipv6ramode_nodejs">
+<a href="#ipv6ramode_nodejs" style="color: inherit; text-decoration: inherit;">ipv6Ra<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -818,7 +942,9 @@ are `dhcpv6-stateful`, `dhcpv6-stateless`, or `slaac`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -828,7 +954,9 @@ the existing subnet.
 
     <dt class="property-optional"
             title="Optional">
-        <span>no<wbr>Gateway</span>
+        <span id="nogateway_nodejs">
+<a href="#nogateway_nodejs" style="color: inherit; text-decoration: inherit;">no<wbr>Gateway</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -838,7 +966,9 @@ this removes or adds a default gateway IP of the existing subnet.
 
     <dt class="property-optional"
             title="Optional">
-        <span>prefix<wbr>Length</span>
+        <span id="prefixlength_nodejs">
+<a href="#prefixlength_nodejs" style="color: inherit; text-decoration: inherit;">prefix<wbr>Length</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -850,7 +980,9 @@ creates a new subnet.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="region_nodejs">
+<a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -862,7 +994,9 @@ subnet.
 
     <dt class="property-optional"
             title="Optional">
-        <span>subnetpool<wbr>Id</span>
+        <span id="subnetpoolid_nodejs">
+<a href="#subnetpoolid_nodejs" style="color: inherit; text-decoration: inherit;">subnetpool<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -871,7 +1005,9 @@ subnet.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -880,7 +1016,9 @@ subnet.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tenant<wbr>Id</span>
+        <span id="tenantid_nodejs">
+<a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -890,7 +1028,9 @@ create a subnet for another tenant. Changing this creates a new subnet.
 
     <dt class="property-optional"
             title="Optional">
-        <span>value<wbr>Specs</span>
+        <span id="valuespecs_nodejs">
+<a href="#valuespecs_nodejs" style="color: inherit; text-decoration: inherit;">value<wbr>Specs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -906,7 +1046,9 @@ create a subnet for another tenant. Changing this creates a new subnet.
 
     <dt class="property-required"
             title="Required">
-        <span>network_<wbr>id</span>
+        <span id="network_id_python">
+<a href="#network_id_python" style="color: inherit; text-decoration: inherit;">network_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -916,7 +1058,9 @@ creates a new subnet.
 
     <dt class="property-optional"
             title="Optional">
-        <span>allocation_<wbr>pools</span>
+        <span id="allocation_pools_python">
+<a href="#allocation_pools_python" style="color: inherit; text-decoration: inherit;">allocation_<wbr>pools</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subnetallocationpool">List[Subnet<wbr>Allocation<wbr>Pool]</a></span>
     </dt>
@@ -930,7 +1074,9 @@ The `allocation_pool` block is documented below.
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>allocation_<wbr>pools_<wbr>collection</span>
+        <span id="allocation_pools_collection_python">
+<a href="#allocation_pools_collection_python" style="color: inherit; text-decoration: inherit;">allocation_<wbr>pools_<wbr>collection</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subnetallocationpoolscollection">List[Subnet<wbr>Allocation<wbr>Pools<wbr>Collection]</a></span>
     </dt>
@@ -942,7 +1088,9 @@ The `allocation_pools` block is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>cidr</span>
+        <span id="cidr_python">
+<a href="#cidr_python" style="color: inherit; text-decoration: inherit;">cidr</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -953,7 +1101,9 @@ subnet pool.
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -963,7 +1113,9 @@ updates the name of the existing subnet.
 
     <dt class="property-optional"
             title="Optional">
-        <span>dns_<wbr>nameservers</span>
+        <span id="dns_nameservers_python">
+<a href="#dns_nameservers_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>nameservers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -974,7 +1126,9 @@ subnet.
 
     <dt class="property-optional"
             title="Optional">
-        <span>enable_<wbr>dhcp</span>
+        <span id="enable_dhcp_python">
+<a href="#enable_dhcp_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>dhcp</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -985,7 +1139,9 @@ disables the DHCP capabilities of the existing subnet. Defaults to true.
 
     <dt class="property-optional"
             title="Optional">
-        <span>gateway_<wbr>ip</span>
+        <span id="gateway_ip_python">
+<a href="#gateway_ip_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -997,7 +1153,9 @@ existing subnet.
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>host_<wbr>routes</span>
+        <span id="host_routes_python">
+<a href="#host_routes_python" style="color: inherit; text-decoration: inherit;">host_<wbr>routes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subnethostroute">List[Subnet<wbr>Host<wbr>Route]</a></span>
     </dt>
@@ -1010,7 +1168,9 @@ for the existing subnet.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ip_<wbr>version</span>
+        <span id="ip_version_python">
+<a href="#ip_version_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1020,7 +1180,9 @@ new subnet.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ipv6_<wbr>address_<wbr>mode</span>
+        <span id="ipv6_address_mode_python">
+<a href="#ipv6_address_mode_python" style="color: inherit; text-decoration: inherit;">ipv6_<wbr>address_<wbr>mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1030,7 +1192,9 @@ new subnet.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ipv6_<wbr>ra_<wbr>mode</span>
+        <span id="ipv6_ra_mode_python">
+<a href="#ipv6_ra_mode_python" style="color: inherit; text-decoration: inherit;">ipv6_<wbr>ra_<wbr>mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1040,7 +1204,9 @@ are `dhcpv6-stateful`, `dhcpv6-stateless`, or `slaac`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1050,7 +1216,9 @@ the existing subnet.
 
     <dt class="property-optional"
             title="Optional">
-        <span>no_<wbr>gateway</span>
+        <span id="no_gateway_python">
+<a href="#no_gateway_python" style="color: inherit; text-decoration: inherit;">no_<wbr>gateway</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1060,7 +1228,9 @@ this removes or adds a default gateway IP of the existing subnet.
 
     <dt class="property-optional"
             title="Optional">
-        <span>prefix_<wbr>length</span>
+        <span id="prefix_length_python">
+<a href="#prefix_length_python" style="color: inherit; text-decoration: inherit;">prefix_<wbr>length</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1072,7 +1242,9 @@ creates a new subnet.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="region_python">
+<a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1084,7 +1256,9 @@ subnet.
 
     <dt class="property-optional"
             title="Optional">
-        <span>subnetpool_<wbr>id</span>
+        <span id="subnetpool_id_python">
+<a href="#subnetpool_id_python" style="color: inherit; text-decoration: inherit;">subnetpool_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1093,7 +1267,9 @@ subnet.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1102,7 +1278,9 @@ subnet.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tenant_<wbr>id</span>
+        <span id="tenant_id_python">
+<a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1112,7 +1290,9 @@ create a subnet for another tenant. Changing this creates a new subnet.
 
     <dt class="property-optional"
             title="Optional">
-        <span>value_<wbr>specs</span>
+        <span id="value_specs_python">
+<a href="#value_specs_python" style="color: inherit; text-decoration: inherit;">value_<wbr>specs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -1139,7 +1319,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>All<wbr>Tags</span>
+        <span id="alltags_csharp">
+<a href="#alltags_csharp" style="color: inherit; text-decoration: inherit;">All<wbr>Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1149,7 +1331,9 @@ explicitly and implicitly added.
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1164,7 +1348,9 @@ explicitly and implicitly added.
 
     <dt class="property-"
             title="">
-        <span>All<wbr>Tags</span>
+        <span id="alltags_go">
+<a href="#alltags_go" style="color: inherit; text-decoration: inherit;">All<wbr>Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1174,7 +1360,9 @@ explicitly and implicitly added.
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1189,7 +1377,9 @@ explicitly and implicitly added.
 
     <dt class="property-"
             title="">
-        <span>all<wbr>Tags</span>
+        <span id="alltags_nodejs">
+<a href="#alltags_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1199,7 +1389,9 @@ explicitly and implicitly added.
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1214,7 +1406,9 @@ explicitly and implicitly added.
 
     <dt class="property-"
             title="">
-        <span>all_<wbr>tags</span>
+        <span id="all_tags_python">
+<a href="#all_tags_python" style="color: inherit; text-decoration: inherit;">all_<wbr>tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1224,7 +1418,9 @@ explicitly and implicitly added.
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1365,7 +1561,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>All<wbr>Tags</span>
+        <span id="state_alltags_csharp">
+<a href="#state_alltags_csharp" style="color: inherit; text-decoration: inherit;">All<wbr>Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1375,7 +1573,9 @@ explicitly and implicitly added.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Allocation<wbr>Pools</span>
+        <span id="state_allocationpools_csharp">
+<a href="#state_allocationpools_csharp" style="color: inherit; text-decoration: inherit;">Allocation<wbr>Pools</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subnetallocationpool">List&lt;Pulumi.<wbr>Open<wbr>Stack.<wbr>Networking.<wbr>Inputs.<wbr>Subnet<wbr>Allocation<wbr>Pool<wbr>Args&gt;</a></span>
     </dt>
@@ -1389,7 +1589,9 @@ The `allocation_pool` block is documented below.
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>Allocation<wbr>Pools<wbr>Collection</span>
+        <span id="state_allocationpoolscollection_csharp">
+<a href="#state_allocationpoolscollection_csharp" style="color: inherit; text-decoration: inherit;">Allocation<wbr>Pools<wbr>Collection</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subnetallocationpoolscollection">List&lt;Pulumi.<wbr>Open<wbr>Stack.<wbr>Networking.<wbr>Inputs.<wbr>Subnet<wbr>Allocation<wbr>Pools<wbr>Collection<wbr>Args&gt;</a></span>
     </dt>
@@ -1401,7 +1603,9 @@ The `allocation_pools` block is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cidr</span>
+        <span id="state_cidr_csharp">
+<a href="#state_cidr_csharp" style="color: inherit; text-decoration: inherit;">Cidr</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1412,7 +1616,9 @@ subnet pool.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="state_description_csharp">
+<a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1422,7 +1628,9 @@ updates the name of the existing subnet.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Dns<wbr>Nameservers</span>
+        <span id="state_dnsnameservers_csharp">
+<a href="#state_dnsnameservers_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Nameservers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1433,7 +1641,9 @@ subnet.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enable<wbr>Dhcp</span>
+        <span id="state_enabledhcp_csharp">
+<a href="#state_enabledhcp_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Dhcp</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1444,7 +1654,9 @@ disables the DHCP capabilities of the existing subnet. Defaults to true.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Gateway<wbr>Ip</span>
+        <span id="state_gatewayip_csharp">
+<a href="#state_gatewayip_csharp" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1456,7 +1668,9 @@ existing subnet.
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>Host<wbr>Routes</span>
+        <span id="state_hostroutes_csharp">
+<a href="#state_hostroutes_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Routes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subnethostroute">List&lt;Pulumi.<wbr>Open<wbr>Stack.<wbr>Networking.<wbr>Inputs.<wbr>Subnet<wbr>Host<wbr>Route<wbr>Args&gt;</a></span>
     </dt>
@@ -1469,7 +1683,9 @@ for the existing subnet.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ip<wbr>Version</span>
+        <span id="state_ipversion_csharp">
+<a href="#state_ipversion_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1479,7 +1695,9 @@ new subnet.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ipv6Address<wbr>Mode</span>
+        <span id="state_ipv6addressmode_csharp">
+<a href="#state_ipv6addressmode_csharp" style="color: inherit; text-decoration: inherit;">Ipv6Address<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1489,7 +1707,9 @@ new subnet.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ipv6Ra<wbr>Mode</span>
+        <span id="state_ipv6ramode_csharp">
+<a href="#state_ipv6ramode_csharp" style="color: inherit; text-decoration: inherit;">Ipv6Ra<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1499,7 +1719,9 @@ are `dhcpv6-stateful`, `dhcpv6-stateless`, or `slaac`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1509,7 +1731,9 @@ the existing subnet.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Network<wbr>Id</span>
+        <span id="state_networkid_csharp">
+<a href="#state_networkid_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1519,7 +1743,9 @@ creates a new subnet.
 
     <dt class="property-optional"
             title="Optional">
-        <span>No<wbr>Gateway</span>
+        <span id="state_nogateway_csharp">
+<a href="#state_nogateway_csharp" style="color: inherit; text-decoration: inherit;">No<wbr>Gateway</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1529,7 +1755,9 @@ this removes or adds a default gateway IP of the existing subnet.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Prefix<wbr>Length</span>
+        <span id="state_prefixlength_csharp">
+<a href="#state_prefixlength_csharp" style="color: inherit; text-decoration: inherit;">Prefix<wbr>Length</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1541,7 +1769,9 @@ creates a new subnet.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="state_region_csharp">
+<a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1553,7 +1783,9 @@ subnet.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Subnetpool<wbr>Id</span>
+        <span id="state_subnetpoolid_csharp">
+<a href="#state_subnetpoolid_csharp" style="color: inherit; text-decoration: inherit;">Subnetpool<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1562,7 +1794,9 @@ subnet.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="state_tags_csharp">
+<a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1571,7 +1805,9 @@ subnet.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tenant<wbr>Id</span>
+        <span id="state_tenantid_csharp">
+<a href="#state_tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1581,7 +1817,9 @@ create a subnet for another tenant. Changing this creates a new subnet.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Value<wbr>Specs</span>
+        <span id="state_valuespecs_csharp">
+<a href="#state_valuespecs_csharp" style="color: inherit; text-decoration: inherit;">Value<wbr>Specs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -1597,7 +1835,9 @@ create a subnet for another tenant. Changing this creates a new subnet.
 
     <dt class="property-optional"
             title="Optional">
-        <span>All<wbr>Tags</span>
+        <span id="state_alltags_go">
+<a href="#state_alltags_go" style="color: inherit; text-decoration: inherit;">All<wbr>Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1607,7 +1847,9 @@ explicitly and implicitly added.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Allocation<wbr>Pools</span>
+        <span id="state_allocationpools_go">
+<a href="#state_allocationpools_go" style="color: inherit; text-decoration: inherit;">Allocation<wbr>Pools</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subnetallocationpool">[]Subnet<wbr>Allocation<wbr>Pool</a></span>
     </dt>
@@ -1621,7 +1863,9 @@ The `allocation_pool` block is documented below.
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>Allocation<wbr>Pools<wbr>Collection</span>
+        <span id="state_allocationpoolscollection_go">
+<a href="#state_allocationpoolscollection_go" style="color: inherit; text-decoration: inherit;">Allocation<wbr>Pools<wbr>Collection</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subnetallocationpoolscollection">[]Subnet<wbr>Allocation<wbr>Pools<wbr>Collection</a></span>
     </dt>
@@ -1633,7 +1877,9 @@ The `allocation_pools` block is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cidr</span>
+        <span id="state_cidr_go">
+<a href="#state_cidr_go" style="color: inherit; text-decoration: inherit;">Cidr</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1644,7 +1890,9 @@ subnet pool.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="state_description_go">
+<a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1654,7 +1902,9 @@ updates the name of the existing subnet.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Dns<wbr>Nameservers</span>
+        <span id="state_dnsnameservers_go">
+<a href="#state_dnsnameservers_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Nameservers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1665,7 +1915,9 @@ subnet.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enable<wbr>Dhcp</span>
+        <span id="state_enabledhcp_go">
+<a href="#state_enabledhcp_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Dhcp</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1676,7 +1928,9 @@ disables the DHCP capabilities of the existing subnet. Defaults to true.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Gateway<wbr>Ip</span>
+        <span id="state_gatewayip_go">
+<a href="#state_gatewayip_go" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1688,7 +1942,9 @@ existing subnet.
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>Host<wbr>Routes</span>
+        <span id="state_hostroutes_go">
+<a href="#state_hostroutes_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Routes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subnethostroute">[]Subnet<wbr>Host<wbr>Route</a></span>
     </dt>
@@ -1701,7 +1957,9 @@ for the existing subnet.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ip<wbr>Version</span>
+        <span id="state_ipversion_go">
+<a href="#state_ipversion_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1711,7 +1969,9 @@ new subnet.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ipv6Address<wbr>Mode</span>
+        <span id="state_ipv6addressmode_go">
+<a href="#state_ipv6addressmode_go" style="color: inherit; text-decoration: inherit;">Ipv6Address<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1721,7 +1981,9 @@ new subnet.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ipv6Ra<wbr>Mode</span>
+        <span id="state_ipv6ramode_go">
+<a href="#state_ipv6ramode_go" style="color: inherit; text-decoration: inherit;">Ipv6Ra<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1731,7 +1993,9 @@ are `dhcpv6-stateful`, `dhcpv6-stateless`, or `slaac`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1741,7 +2005,9 @@ the existing subnet.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Network<wbr>Id</span>
+        <span id="state_networkid_go">
+<a href="#state_networkid_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1751,7 +2017,9 @@ creates a new subnet.
 
     <dt class="property-optional"
             title="Optional">
-        <span>No<wbr>Gateway</span>
+        <span id="state_nogateway_go">
+<a href="#state_nogateway_go" style="color: inherit; text-decoration: inherit;">No<wbr>Gateway</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1761,7 +2029,9 @@ this removes or adds a default gateway IP of the existing subnet.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Prefix<wbr>Length</span>
+        <span id="state_prefixlength_go">
+<a href="#state_prefixlength_go" style="color: inherit; text-decoration: inherit;">Prefix<wbr>Length</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1773,7 +2043,9 @@ creates a new subnet.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="state_region_go">
+<a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1785,7 +2057,9 @@ subnet.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Subnetpool<wbr>Id</span>
+        <span id="state_subnetpoolid_go">
+<a href="#state_subnetpoolid_go" style="color: inherit; text-decoration: inherit;">Subnetpool<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1794,7 +2068,9 @@ subnet.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="state_tags_go">
+<a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1803,7 +2079,9 @@ subnet.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tenant<wbr>Id</span>
+        <span id="state_tenantid_go">
+<a href="#state_tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1813,7 +2091,9 @@ create a subnet for another tenant. Changing this creates a new subnet.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Value<wbr>Specs</span>
+        <span id="state_valuespecs_go">
+<a href="#state_valuespecs_go" style="color: inherit; text-decoration: inherit;">Value<wbr>Specs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -1829,7 +2109,9 @@ create a subnet for another tenant. Changing this creates a new subnet.
 
     <dt class="property-optional"
             title="Optional">
-        <span>all<wbr>Tags</span>
+        <span id="state_alltags_nodejs">
+<a href="#state_alltags_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1839,7 +2121,9 @@ explicitly and implicitly added.
 
     <dt class="property-optional"
             title="Optional">
-        <span>allocation<wbr>Pools</span>
+        <span id="state_allocationpools_nodejs">
+<a href="#state_allocationpools_nodejs" style="color: inherit; text-decoration: inherit;">allocation<wbr>Pools</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subnetallocationpool">Subnet<wbr>Allocation<wbr>Pool[]</a></span>
     </dt>
@@ -1853,7 +2137,9 @@ The `allocation_pool` block is documented below.
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>allocation<wbr>Pools<wbr>Collection</span>
+        <span id="state_allocationpoolscollection_nodejs">
+<a href="#state_allocationpoolscollection_nodejs" style="color: inherit; text-decoration: inherit;">allocation<wbr>Pools<wbr>Collection</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subnetallocationpoolscollection">Subnet<wbr>Allocation<wbr>Pools<wbr>Collection[]</a></span>
     </dt>
@@ -1865,7 +2151,9 @@ The `allocation_pools` block is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>cidr</span>
+        <span id="state_cidr_nodejs">
+<a href="#state_cidr_nodejs" style="color: inherit; text-decoration: inherit;">cidr</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1876,7 +2164,9 @@ subnet pool.
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="state_description_nodejs">
+<a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1886,7 +2176,9 @@ updates the name of the existing subnet.
 
     <dt class="property-optional"
             title="Optional">
-        <span>dns<wbr>Nameservers</span>
+        <span id="state_dnsnameservers_nodejs">
+<a href="#state_dnsnameservers_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Nameservers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1897,7 +2189,9 @@ subnet.
 
     <dt class="property-optional"
             title="Optional">
-        <span>enable<wbr>Dhcp</span>
+        <span id="state_enabledhcp_nodejs">
+<a href="#state_enabledhcp_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Dhcp</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1908,7 +2202,9 @@ disables the DHCP capabilities of the existing subnet. Defaults to true.
 
     <dt class="property-optional"
             title="Optional">
-        <span>gateway<wbr>Ip</span>
+        <span id="state_gatewayip_nodejs">
+<a href="#state_gatewayip_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1920,7 +2216,9 @@ existing subnet.
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>host<wbr>Routes</span>
+        <span id="state_hostroutes_nodejs">
+<a href="#state_hostroutes_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Routes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subnethostroute">Subnet<wbr>Host<wbr>Route[]</a></span>
     </dt>
@@ -1933,7 +2231,9 @@ for the existing subnet.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ip<wbr>Version</span>
+        <span id="state_ipversion_nodejs">
+<a href="#state_ipversion_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1943,7 +2243,9 @@ new subnet.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ipv6Address<wbr>Mode</span>
+        <span id="state_ipv6addressmode_nodejs">
+<a href="#state_ipv6addressmode_nodejs" style="color: inherit; text-decoration: inherit;">ipv6Address<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1953,7 +2255,9 @@ new subnet.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ipv6Ra<wbr>Mode</span>
+        <span id="state_ipv6ramode_nodejs">
+<a href="#state_ipv6ramode_nodejs" style="color: inherit; text-decoration: inherit;">ipv6Ra<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1963,7 +2267,9 @@ are `dhcpv6-stateful`, `dhcpv6-stateless`, or `slaac`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1973,7 +2279,9 @@ the existing subnet.
 
     <dt class="property-optional"
             title="Optional">
-        <span>network<wbr>Id</span>
+        <span id="state_networkid_nodejs">
+<a href="#state_networkid_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1983,7 +2291,9 @@ creates a new subnet.
 
     <dt class="property-optional"
             title="Optional">
-        <span>no<wbr>Gateway</span>
+        <span id="state_nogateway_nodejs">
+<a href="#state_nogateway_nodejs" style="color: inherit; text-decoration: inherit;">no<wbr>Gateway</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1993,7 +2303,9 @@ this removes or adds a default gateway IP of the existing subnet.
 
     <dt class="property-optional"
             title="Optional">
-        <span>prefix<wbr>Length</span>
+        <span id="state_prefixlength_nodejs">
+<a href="#state_prefixlength_nodejs" style="color: inherit; text-decoration: inherit;">prefix<wbr>Length</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -2005,7 +2317,9 @@ creates a new subnet.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="state_region_nodejs">
+<a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2017,7 +2331,9 @@ subnet.
 
     <dt class="property-optional"
             title="Optional">
-        <span>subnetpool<wbr>Id</span>
+        <span id="state_subnetpoolid_nodejs">
+<a href="#state_subnetpoolid_nodejs" style="color: inherit; text-decoration: inherit;">subnetpool<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2026,7 +2342,9 @@ subnet.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="state_tags_nodejs">
+<a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -2035,7 +2353,9 @@ subnet.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tenant<wbr>Id</span>
+        <span id="state_tenantid_nodejs">
+<a href="#state_tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2045,7 +2365,9 @@ create a subnet for another tenant. Changing this creates a new subnet.
 
     <dt class="property-optional"
             title="Optional">
-        <span>value<wbr>Specs</span>
+        <span id="state_valuespecs_nodejs">
+<a href="#state_valuespecs_nodejs" style="color: inherit; text-decoration: inherit;">value<wbr>Specs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -2061,7 +2383,9 @@ create a subnet for another tenant. Changing this creates a new subnet.
 
     <dt class="property-optional"
             title="Optional">
-        <span>all_<wbr>tags</span>
+        <span id="state_all_tags_python">
+<a href="#state_all_tags_python" style="color: inherit; text-decoration: inherit;">all_<wbr>tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -2071,7 +2395,9 @@ explicitly and implicitly added.
 
     <dt class="property-optional"
             title="Optional">
-        <span>allocation_<wbr>pools</span>
+        <span id="state_allocation_pools_python">
+<a href="#state_allocation_pools_python" style="color: inherit; text-decoration: inherit;">allocation_<wbr>pools</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subnetallocationpool">List[Subnet<wbr>Allocation<wbr>Pool]</a></span>
     </dt>
@@ -2085,7 +2411,9 @@ The `allocation_pool` block is documented below.
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>allocation_<wbr>pools_<wbr>collection</span>
+        <span id="state_allocation_pools_collection_python">
+<a href="#state_allocation_pools_collection_python" style="color: inherit; text-decoration: inherit;">allocation_<wbr>pools_<wbr>collection</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subnetallocationpoolscollection">List[Subnet<wbr>Allocation<wbr>Pools<wbr>Collection]</a></span>
     </dt>
@@ -2097,7 +2425,9 @@ The `allocation_pools` block is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>cidr</span>
+        <span id="state_cidr_python">
+<a href="#state_cidr_python" style="color: inherit; text-decoration: inherit;">cidr</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2108,7 +2438,9 @@ subnet pool.
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="state_description_python">
+<a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2118,7 +2450,9 @@ updates the name of the existing subnet.
 
     <dt class="property-optional"
             title="Optional">
-        <span>dns_<wbr>nameservers</span>
+        <span id="state_dns_nameservers_python">
+<a href="#state_dns_nameservers_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>nameservers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -2129,7 +2463,9 @@ subnet.
 
     <dt class="property-optional"
             title="Optional">
-        <span>enable_<wbr>dhcp</span>
+        <span id="state_enable_dhcp_python">
+<a href="#state_enable_dhcp_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>dhcp</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2140,7 +2476,9 @@ disables the DHCP capabilities of the existing subnet. Defaults to true.
 
     <dt class="property-optional"
             title="Optional">
-        <span>gateway_<wbr>ip</span>
+        <span id="state_gateway_ip_python">
+<a href="#state_gateway_ip_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2152,7 +2490,9 @@ existing subnet.
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>host_<wbr>routes</span>
+        <span id="state_host_routes_python">
+<a href="#state_host_routes_python" style="color: inherit; text-decoration: inherit;">host_<wbr>routes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subnethostroute">List[Subnet<wbr>Host<wbr>Route]</a></span>
     </dt>
@@ -2165,7 +2505,9 @@ for the existing subnet.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ip_<wbr>version</span>
+        <span id="state_ip_version_python">
+<a href="#state_ip_version_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -2175,7 +2517,9 @@ new subnet.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ipv6_<wbr>address_<wbr>mode</span>
+        <span id="state_ipv6_address_mode_python">
+<a href="#state_ipv6_address_mode_python" style="color: inherit; text-decoration: inherit;">ipv6_<wbr>address_<wbr>mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2185,7 +2529,9 @@ new subnet.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ipv6_<wbr>ra_<wbr>mode</span>
+        <span id="state_ipv6_ra_mode_python">
+<a href="#state_ipv6_ra_mode_python" style="color: inherit; text-decoration: inherit;">ipv6_<wbr>ra_<wbr>mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2195,7 +2541,9 @@ are `dhcpv6-stateful`, `dhcpv6-stateless`, or `slaac`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2205,7 +2553,9 @@ the existing subnet.
 
     <dt class="property-optional"
             title="Optional">
-        <span>network_<wbr>id</span>
+        <span id="state_network_id_python">
+<a href="#state_network_id_python" style="color: inherit; text-decoration: inherit;">network_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2215,7 +2565,9 @@ creates a new subnet.
 
     <dt class="property-optional"
             title="Optional">
-        <span>no_<wbr>gateway</span>
+        <span id="state_no_gateway_python">
+<a href="#state_no_gateway_python" style="color: inherit; text-decoration: inherit;">no_<wbr>gateway</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2225,7 +2577,9 @@ this removes or adds a default gateway IP of the existing subnet.
 
     <dt class="property-optional"
             title="Optional">
-        <span>prefix_<wbr>length</span>
+        <span id="state_prefix_length_python">
+<a href="#state_prefix_length_python" style="color: inherit; text-decoration: inherit;">prefix_<wbr>length</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -2237,7 +2591,9 @@ creates a new subnet.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="state_region_python">
+<a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2249,7 +2605,9 @@ subnet.
 
     <dt class="property-optional"
             title="Optional">
-        <span>subnetpool_<wbr>id</span>
+        <span id="state_subnetpool_id_python">
+<a href="#state_subnetpool_id_python" style="color: inherit; text-decoration: inherit;">subnetpool_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2258,7 +2616,9 @@ subnet.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="state_tags_python">
+<a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -2267,7 +2627,9 @@ subnet.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tenant_<wbr>id</span>
+        <span id="state_tenant_id_python">
+<a href="#state_tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2277,7 +2639,9 @@ create a subnet for another tenant. Changing this creates a new subnet.
 
     <dt class="property-optional"
             title="Optional">
-        <span>value_<wbr>specs</span>
+        <span id="state_value_specs_python">
+<a href="#state_value_specs_python" style="color: inherit; text-decoration: inherit;">value_<wbr>specs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -2319,7 +2683,9 @@ create a subnet for another tenant. Changing this creates a new subnet.
 
     <dt class="property-required"
             title="Required">
-        <span>End</span>
+        <span id="end_csharp">
+<a href="#end_csharp" style="color: inherit; text-decoration: inherit;">End</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2328,7 +2694,9 @@ create a subnet for another tenant. Changing this creates a new subnet.
 
     <dt class="property-required"
             title="Required">
-        <span>Start</span>
+        <span id="start_csharp">
+<a href="#start_csharp" style="color: inherit; text-decoration: inherit;">Start</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2344,7 +2712,9 @@ create a subnet for another tenant. Changing this creates a new subnet.
 
     <dt class="property-required"
             title="Required">
-        <span>End</span>
+        <span id="end_go">
+<a href="#end_go" style="color: inherit; text-decoration: inherit;">End</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2353,7 +2723,9 @@ create a subnet for another tenant. Changing this creates a new subnet.
 
     <dt class="property-required"
             title="Required">
-        <span>Start</span>
+        <span id="start_go">
+<a href="#start_go" style="color: inherit; text-decoration: inherit;">Start</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2369,7 +2741,9 @@ create a subnet for another tenant. Changing this creates a new subnet.
 
     <dt class="property-required"
             title="Required">
-        <span>end</span>
+        <span id="end_nodejs">
+<a href="#end_nodejs" style="color: inherit; text-decoration: inherit;">end</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2378,7 +2752,9 @@ create a subnet for another tenant. Changing this creates a new subnet.
 
     <dt class="property-required"
             title="Required">
-        <span>start</span>
+        <span id="start_nodejs">
+<a href="#start_nodejs" style="color: inherit; text-decoration: inherit;">start</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2394,7 +2770,9 @@ create a subnet for another tenant. Changing this creates a new subnet.
 
     <dt class="property-required"
             title="Required">
-        <span>end</span>
+        <span id="end_python">
+<a href="#end_python" style="color: inherit; text-decoration: inherit;">end</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2403,7 +2781,9 @@ create a subnet for another tenant. Changing this creates a new subnet.
 
     <dt class="property-required"
             title="Required">
-        <span>start</span>
+        <span id="start_python">
+<a href="#start_python" style="color: inherit; text-decoration: inherit;">start</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2437,7 +2817,9 @@ create a subnet for another tenant. Changing this creates a new subnet.
 
     <dt class="property-required"
             title="Required">
-        <span>End</span>
+        <span id="end_csharp">
+<a href="#end_csharp" style="color: inherit; text-decoration: inherit;">End</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2446,7 +2828,9 @@ create a subnet for another tenant. Changing this creates a new subnet.
 
     <dt class="property-required"
             title="Required">
-        <span>Start</span>
+        <span id="start_csharp">
+<a href="#start_csharp" style="color: inherit; text-decoration: inherit;">Start</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2462,7 +2846,9 @@ create a subnet for another tenant. Changing this creates a new subnet.
 
     <dt class="property-required"
             title="Required">
-        <span>End</span>
+        <span id="end_go">
+<a href="#end_go" style="color: inherit; text-decoration: inherit;">End</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2471,7 +2857,9 @@ create a subnet for another tenant. Changing this creates a new subnet.
 
     <dt class="property-required"
             title="Required">
-        <span>Start</span>
+        <span id="start_go">
+<a href="#start_go" style="color: inherit; text-decoration: inherit;">Start</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2487,7 +2875,9 @@ create a subnet for another tenant. Changing this creates a new subnet.
 
     <dt class="property-required"
             title="Required">
-        <span>end</span>
+        <span id="end_nodejs">
+<a href="#end_nodejs" style="color: inherit; text-decoration: inherit;">end</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2496,7 +2886,9 @@ create a subnet for another tenant. Changing this creates a new subnet.
 
     <dt class="property-required"
             title="Required">
-        <span>start</span>
+        <span id="start_nodejs">
+<a href="#start_nodejs" style="color: inherit; text-decoration: inherit;">start</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2512,7 +2904,9 @@ create a subnet for another tenant. Changing this creates a new subnet.
 
     <dt class="property-required"
             title="Required">
-        <span>end</span>
+        <span id="end_python">
+<a href="#end_python" style="color: inherit; text-decoration: inherit;">end</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2521,7 +2915,9 @@ create a subnet for another tenant. Changing this creates a new subnet.
 
     <dt class="property-required"
             title="Required">
-        <span>start</span>
+        <span id="start_python">
+<a href="#start_python" style="color: inherit; text-decoration: inherit;">start</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2555,7 +2951,9 @@ create a subnet for another tenant. Changing this creates a new subnet.
 
     <dt class="property-required"
             title="Required">
-        <span>Destination<wbr>Cidr</span>
+        <span id="destinationcidr_csharp">
+<a href="#destinationcidr_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Cidr</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2564,7 +2962,9 @@ create a subnet for another tenant. Changing this creates a new subnet.
 
     <dt class="property-required"
             title="Required">
-        <span>Next<wbr>Hop</span>
+        <span id="nexthop_csharp">
+<a href="#nexthop_csharp" style="color: inherit; text-decoration: inherit;">Next<wbr>Hop</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2580,7 +2980,9 @@ create a subnet for another tenant. Changing this creates a new subnet.
 
     <dt class="property-required"
             title="Required">
-        <span>Destination<wbr>Cidr</span>
+        <span id="destinationcidr_go">
+<a href="#destinationcidr_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Cidr</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2589,7 +2991,9 @@ create a subnet for another tenant. Changing this creates a new subnet.
 
     <dt class="property-required"
             title="Required">
-        <span>Next<wbr>Hop</span>
+        <span id="nexthop_go">
+<a href="#nexthop_go" style="color: inherit; text-decoration: inherit;">Next<wbr>Hop</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2605,7 +3009,9 @@ create a subnet for another tenant. Changing this creates a new subnet.
 
     <dt class="property-required"
             title="Required">
-        <span>destination<wbr>Cidr</span>
+        <span id="destinationcidr_nodejs">
+<a href="#destinationcidr_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Cidr</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2614,7 +3020,9 @@ create a subnet for another tenant. Changing this creates a new subnet.
 
     <dt class="property-required"
             title="Required">
-        <span>next<wbr>Hop</span>
+        <span id="nexthop_nodejs">
+<a href="#nexthop_nodejs" style="color: inherit; text-decoration: inherit;">next<wbr>Hop</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2630,7 +3038,9 @@ create a subnet for another tenant. Changing this creates a new subnet.
 
     <dt class="property-required"
             title="Required">
-        <span>destination_<wbr>cidr</span>
+        <span id="destination_cidr_python">
+<a href="#destination_cidr_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>cidr</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2639,7 +3049,9 @@ create a subnet for another tenant. Changing this creates a new subnet.
 
     <dt class="property-required"
             title="Required">
-        <span>next_<wbr>hop</span>
+        <span id="next_hop_python">
+<a href="#next_hop_python" style="color: inherit; text-decoration: inherit;">next_<wbr>hop</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

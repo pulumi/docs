@@ -20,7 +20,21 @@ Manages a V2 Neutron IPSec policy resource within OpenStack.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var policy1 = new OpenStack.VPNaaS.IpSecPolicy("policy1", new OpenStack.VPNaaS.IpSecPolicyArgs
+        {
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -231,7 +245,9 @@ The IpSecPolicy resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Auth<wbr>Algorithm</span>
+        <span id="authalgorithm_csharp">
+<a href="#authalgorithm_csharp" style="color: inherit; text-decoration: inherit;">Auth<wbr>Algorithm</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -241,7 +257,9 @@ Default is sha1. Changing this updates the algorithm of the existing policy.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -251,7 +269,9 @@ Changing this updates the description of the existing policy.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Encapsulation<wbr>Mode</span>
+        <span id="encapsulationmode_csharp">
+<a href="#encapsulationmode_csharp" style="color: inherit; text-decoration: inherit;">Encapsulation<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -261,7 +281,9 @@ Changing this updates the existing policy.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Encryption<wbr>Algorithm</span>
+        <span id="encryptionalgorithm_csharp">
+<a href="#encryptionalgorithm_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Algorithm</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -271,7 +293,9 @@ The default value is aes-128. Changing this updates the existing policy.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Lifetimes</span>
+        <span id="lifetimes_csharp">
+<a href="#lifetimes_csharp" style="color: inherit; text-decoration: inherit;">Lifetimes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ipsecpolicylifetime">List&lt;Pulumi.<wbr>Open<wbr>Stack.<wbr>VPNaa<wbr>S.<wbr>Inputs.<wbr>Ip<wbr>Sec<wbr>Policy<wbr>Lifetime<wbr>Args&gt;</a></span>
     </dt>
@@ -284,7 +308,9 @@ Default is 3600.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -294,7 +320,9 @@ the existing policy.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Pfs</span>
+        <span id="pfs_csharp">
+<a href="#pfs_csharp" style="color: inherit; text-decoration: inherit;">Pfs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -304,7 +332,9 @@ Changing this updates the existing policy.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="region_csharp">
+<a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -316,7 +346,9 @@ policy.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tenant<wbr>Id</span>
+        <span id="tenantid_csharp">
+<a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -326,7 +358,9 @@ create a policy for another project. Changing this creates a new policy.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Transform<wbr>Protocol</span>
+        <span id="transformprotocol_csharp">
+<a href="#transformprotocol_csharp" style="color: inherit; text-decoration: inherit;">Transform<wbr>Protocol</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -336,7 +370,9 @@ Changing this updates the existing policy. Default is ESP.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Value<wbr>Specs</span>
+        <span id="valuespecs_csharp">
+<a href="#valuespecs_csharp" style="color: inherit; text-decoration: inherit;">Value<wbr>Specs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -352,7 +388,9 @@ Changing this updates the existing policy. Default is ESP.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Auth<wbr>Algorithm</span>
+        <span id="authalgorithm_go">
+<a href="#authalgorithm_go" style="color: inherit; text-decoration: inherit;">Auth<wbr>Algorithm</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -362,7 +400,9 @@ Default is sha1. Changing this updates the algorithm of the existing policy.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -372,7 +412,9 @@ Changing this updates the description of the existing policy.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Encapsulation<wbr>Mode</span>
+        <span id="encapsulationmode_go">
+<a href="#encapsulationmode_go" style="color: inherit; text-decoration: inherit;">Encapsulation<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -382,7 +424,9 @@ Changing this updates the existing policy.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Encryption<wbr>Algorithm</span>
+        <span id="encryptionalgorithm_go">
+<a href="#encryptionalgorithm_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Algorithm</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -392,7 +436,9 @@ The default value is aes-128. Changing this updates the existing policy.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Lifetimes</span>
+        <span id="lifetimes_go">
+<a href="#lifetimes_go" style="color: inherit; text-decoration: inherit;">Lifetimes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ipsecpolicylifetime">[]Ip<wbr>Sec<wbr>Policy<wbr>Lifetime</a></span>
     </dt>
@@ -405,7 +451,9 @@ Default is 3600.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -415,7 +463,9 @@ the existing policy.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Pfs</span>
+        <span id="pfs_go">
+<a href="#pfs_go" style="color: inherit; text-decoration: inherit;">Pfs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -425,7 +475,9 @@ Changing this updates the existing policy.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="region_go">
+<a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -437,7 +489,9 @@ policy.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tenant<wbr>Id</span>
+        <span id="tenantid_go">
+<a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -447,7 +501,9 @@ create a policy for another project. Changing this creates a new policy.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Transform<wbr>Protocol</span>
+        <span id="transformprotocol_go">
+<a href="#transformprotocol_go" style="color: inherit; text-decoration: inherit;">Transform<wbr>Protocol</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -457,7 +513,9 @@ Changing this updates the existing policy. Default is ESP.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Value<wbr>Specs</span>
+        <span id="valuespecs_go">
+<a href="#valuespecs_go" style="color: inherit; text-decoration: inherit;">Value<wbr>Specs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -473,7 +531,9 @@ Changing this updates the existing policy. Default is ESP.
 
     <dt class="property-optional"
             title="Optional">
-        <span>auth<wbr>Algorithm</span>
+        <span id="authalgorithm_nodejs">
+<a href="#authalgorithm_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Algorithm</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -483,7 +543,9 @@ Default is sha1. Changing this updates the algorithm of the existing policy.
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -493,7 +555,9 @@ Changing this updates the description of the existing policy.
 
     <dt class="property-optional"
             title="Optional">
-        <span>encapsulation<wbr>Mode</span>
+        <span id="encapsulationmode_nodejs">
+<a href="#encapsulationmode_nodejs" style="color: inherit; text-decoration: inherit;">encapsulation<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -503,7 +567,9 @@ Changing this updates the existing policy.
 
     <dt class="property-optional"
             title="Optional">
-        <span>encryption<wbr>Algorithm</span>
+        <span id="encryptionalgorithm_nodejs">
+<a href="#encryptionalgorithm_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Algorithm</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -513,7 +579,9 @@ The default value is aes-128. Changing this updates the existing policy.
 
     <dt class="property-optional"
             title="Optional">
-        <span>lifetimes</span>
+        <span id="lifetimes_nodejs">
+<a href="#lifetimes_nodejs" style="color: inherit; text-decoration: inherit;">lifetimes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ipsecpolicylifetime">Ip<wbr>Sec<wbr>Policy<wbr>Lifetime[]</a></span>
     </dt>
@@ -526,7 +594,9 @@ Default is 3600.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -536,7 +606,9 @@ the existing policy.
 
     <dt class="property-optional"
             title="Optional">
-        <span>pfs</span>
+        <span id="pfs_nodejs">
+<a href="#pfs_nodejs" style="color: inherit; text-decoration: inherit;">pfs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -546,7 +618,9 @@ Changing this updates the existing policy.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="region_nodejs">
+<a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -558,7 +632,9 @@ policy.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tenant<wbr>Id</span>
+        <span id="tenantid_nodejs">
+<a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -568,7 +644,9 @@ create a policy for another project. Changing this creates a new policy.
 
     <dt class="property-optional"
             title="Optional">
-        <span>transform<wbr>Protocol</span>
+        <span id="transformprotocol_nodejs">
+<a href="#transformprotocol_nodejs" style="color: inherit; text-decoration: inherit;">transform<wbr>Protocol</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -578,7 +656,9 @@ Changing this updates the existing policy. Default is ESP.
 
     <dt class="property-optional"
             title="Optional">
-        <span>value<wbr>Specs</span>
+        <span id="valuespecs_nodejs">
+<a href="#valuespecs_nodejs" style="color: inherit; text-decoration: inherit;">value<wbr>Specs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -594,7 +674,9 @@ Changing this updates the existing policy. Default is ESP.
 
     <dt class="property-optional"
             title="Optional">
-        <span>auth_<wbr>algorithm</span>
+        <span id="auth_algorithm_python">
+<a href="#auth_algorithm_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>algorithm</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -604,7 +686,9 @@ Default is sha1. Changing this updates the algorithm of the existing policy.
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -614,7 +698,9 @@ Changing this updates the description of the existing policy.
 
     <dt class="property-optional"
             title="Optional">
-        <span>encapsulation_<wbr>mode</span>
+        <span id="encapsulation_mode_python">
+<a href="#encapsulation_mode_python" style="color: inherit; text-decoration: inherit;">encapsulation_<wbr>mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -624,7 +710,9 @@ Changing this updates the existing policy.
 
     <dt class="property-optional"
             title="Optional">
-        <span>encryption_<wbr>algorithm</span>
+        <span id="encryption_algorithm_python">
+<a href="#encryption_algorithm_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>algorithm</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -634,7 +722,9 @@ The default value is aes-128. Changing this updates the existing policy.
 
     <dt class="property-optional"
             title="Optional">
-        <span>lifetimes</span>
+        <span id="lifetimes_python">
+<a href="#lifetimes_python" style="color: inherit; text-decoration: inherit;">lifetimes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ipsecpolicylifetime">List[Ip<wbr>Sec<wbr>Policy<wbr>Lifetime]</a></span>
     </dt>
@@ -647,7 +737,9 @@ Default is 3600.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -657,7 +749,9 @@ the existing policy.
 
     <dt class="property-optional"
             title="Optional">
-        <span>pfs</span>
+        <span id="pfs_python">
+<a href="#pfs_python" style="color: inherit; text-decoration: inherit;">pfs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -667,7 +761,9 @@ Changing this updates the existing policy.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="region_python">
+<a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -679,7 +775,9 @@ policy.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tenant_<wbr>id</span>
+        <span id="tenant_id_python">
+<a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -689,7 +787,9 @@ create a policy for another project. Changing this creates a new policy.
 
     <dt class="property-optional"
             title="Optional">
-        <span>transform_<wbr>protocol</span>
+        <span id="transform_protocol_python">
+<a href="#transform_protocol_python" style="color: inherit; text-decoration: inherit;">transform_<wbr>protocol</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -699,7 +799,9 @@ Changing this updates the existing policy. Default is ESP.
 
     <dt class="property-optional"
             title="Optional">
-        <span>value_<wbr>specs</span>
+        <span id="value_specs_python">
+<a href="#value_specs_python" style="color: inherit; text-decoration: inherit;">value_<wbr>specs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -726,7 +828,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -741,7 +845,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -756,7 +862,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -771,7 +879,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -912,7 +1022,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Auth<wbr>Algorithm</span>
+        <span id="state_authalgorithm_csharp">
+<a href="#state_authalgorithm_csharp" style="color: inherit; text-decoration: inherit;">Auth<wbr>Algorithm</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -922,7 +1034,9 @@ Default is sha1. Changing this updates the algorithm of the existing policy.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="state_description_csharp">
+<a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -932,7 +1046,9 @@ Changing this updates the description of the existing policy.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Encapsulation<wbr>Mode</span>
+        <span id="state_encapsulationmode_csharp">
+<a href="#state_encapsulationmode_csharp" style="color: inherit; text-decoration: inherit;">Encapsulation<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -942,7 +1058,9 @@ Changing this updates the existing policy.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Encryption<wbr>Algorithm</span>
+        <span id="state_encryptionalgorithm_csharp">
+<a href="#state_encryptionalgorithm_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Algorithm</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -952,7 +1070,9 @@ The default value is aes-128. Changing this updates the existing policy.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Lifetimes</span>
+        <span id="state_lifetimes_csharp">
+<a href="#state_lifetimes_csharp" style="color: inherit; text-decoration: inherit;">Lifetimes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ipsecpolicylifetime">List&lt;Pulumi.<wbr>Open<wbr>Stack.<wbr>VPNaa<wbr>S.<wbr>Inputs.<wbr>Ip<wbr>Sec<wbr>Policy<wbr>Lifetime<wbr>Args&gt;</a></span>
     </dt>
@@ -965,7 +1085,9 @@ Default is 3600.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -975,7 +1097,9 @@ the existing policy.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Pfs</span>
+        <span id="state_pfs_csharp">
+<a href="#state_pfs_csharp" style="color: inherit; text-decoration: inherit;">Pfs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -985,7 +1109,9 @@ Changing this updates the existing policy.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="state_region_csharp">
+<a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -997,7 +1123,9 @@ policy.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tenant<wbr>Id</span>
+        <span id="state_tenantid_csharp">
+<a href="#state_tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1007,7 +1135,9 @@ create a policy for another project. Changing this creates a new policy.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Transform<wbr>Protocol</span>
+        <span id="state_transformprotocol_csharp">
+<a href="#state_transformprotocol_csharp" style="color: inherit; text-decoration: inherit;">Transform<wbr>Protocol</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1017,7 +1147,9 @@ Changing this updates the existing policy. Default is ESP.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Value<wbr>Specs</span>
+        <span id="state_valuespecs_csharp">
+<a href="#state_valuespecs_csharp" style="color: inherit; text-decoration: inherit;">Value<wbr>Specs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -1033,7 +1165,9 @@ Changing this updates the existing policy. Default is ESP.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Auth<wbr>Algorithm</span>
+        <span id="state_authalgorithm_go">
+<a href="#state_authalgorithm_go" style="color: inherit; text-decoration: inherit;">Auth<wbr>Algorithm</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1043,7 +1177,9 @@ Default is sha1. Changing this updates the algorithm of the existing policy.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="state_description_go">
+<a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1053,7 +1189,9 @@ Changing this updates the description of the existing policy.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Encapsulation<wbr>Mode</span>
+        <span id="state_encapsulationmode_go">
+<a href="#state_encapsulationmode_go" style="color: inherit; text-decoration: inherit;">Encapsulation<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1063,7 +1201,9 @@ Changing this updates the existing policy.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Encryption<wbr>Algorithm</span>
+        <span id="state_encryptionalgorithm_go">
+<a href="#state_encryptionalgorithm_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Algorithm</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1073,7 +1213,9 @@ The default value is aes-128. Changing this updates the existing policy.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Lifetimes</span>
+        <span id="state_lifetimes_go">
+<a href="#state_lifetimes_go" style="color: inherit; text-decoration: inherit;">Lifetimes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ipsecpolicylifetime">[]Ip<wbr>Sec<wbr>Policy<wbr>Lifetime</a></span>
     </dt>
@@ -1086,7 +1228,9 @@ Default is 3600.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1096,7 +1240,9 @@ the existing policy.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Pfs</span>
+        <span id="state_pfs_go">
+<a href="#state_pfs_go" style="color: inherit; text-decoration: inherit;">Pfs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1106,7 +1252,9 @@ Changing this updates the existing policy.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="state_region_go">
+<a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1118,7 +1266,9 @@ policy.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tenant<wbr>Id</span>
+        <span id="state_tenantid_go">
+<a href="#state_tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1128,7 +1278,9 @@ create a policy for another project. Changing this creates a new policy.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Transform<wbr>Protocol</span>
+        <span id="state_transformprotocol_go">
+<a href="#state_transformprotocol_go" style="color: inherit; text-decoration: inherit;">Transform<wbr>Protocol</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1138,7 +1290,9 @@ Changing this updates the existing policy. Default is ESP.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Value<wbr>Specs</span>
+        <span id="state_valuespecs_go">
+<a href="#state_valuespecs_go" style="color: inherit; text-decoration: inherit;">Value<wbr>Specs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -1154,7 +1308,9 @@ Changing this updates the existing policy. Default is ESP.
 
     <dt class="property-optional"
             title="Optional">
-        <span>auth<wbr>Algorithm</span>
+        <span id="state_authalgorithm_nodejs">
+<a href="#state_authalgorithm_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Algorithm</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1164,7 +1320,9 @@ Default is sha1. Changing this updates the algorithm of the existing policy.
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="state_description_nodejs">
+<a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1174,7 +1332,9 @@ Changing this updates the description of the existing policy.
 
     <dt class="property-optional"
             title="Optional">
-        <span>encapsulation<wbr>Mode</span>
+        <span id="state_encapsulationmode_nodejs">
+<a href="#state_encapsulationmode_nodejs" style="color: inherit; text-decoration: inherit;">encapsulation<wbr>Mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1184,7 +1344,9 @@ Changing this updates the existing policy.
 
     <dt class="property-optional"
             title="Optional">
-        <span>encryption<wbr>Algorithm</span>
+        <span id="state_encryptionalgorithm_nodejs">
+<a href="#state_encryptionalgorithm_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Algorithm</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1194,7 +1356,9 @@ The default value is aes-128. Changing this updates the existing policy.
 
     <dt class="property-optional"
             title="Optional">
-        <span>lifetimes</span>
+        <span id="state_lifetimes_nodejs">
+<a href="#state_lifetimes_nodejs" style="color: inherit; text-decoration: inherit;">lifetimes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ipsecpolicylifetime">Ip<wbr>Sec<wbr>Policy<wbr>Lifetime[]</a></span>
     </dt>
@@ -1207,7 +1371,9 @@ Default is 3600.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1217,7 +1383,9 @@ the existing policy.
 
     <dt class="property-optional"
             title="Optional">
-        <span>pfs</span>
+        <span id="state_pfs_nodejs">
+<a href="#state_pfs_nodejs" style="color: inherit; text-decoration: inherit;">pfs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1227,7 +1395,9 @@ Changing this updates the existing policy.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="state_region_nodejs">
+<a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1239,7 +1409,9 @@ policy.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tenant<wbr>Id</span>
+        <span id="state_tenantid_nodejs">
+<a href="#state_tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1249,7 +1421,9 @@ create a policy for another project. Changing this creates a new policy.
 
     <dt class="property-optional"
             title="Optional">
-        <span>transform<wbr>Protocol</span>
+        <span id="state_transformprotocol_nodejs">
+<a href="#state_transformprotocol_nodejs" style="color: inherit; text-decoration: inherit;">transform<wbr>Protocol</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1259,7 +1433,9 @@ Changing this updates the existing policy. Default is ESP.
 
     <dt class="property-optional"
             title="Optional">
-        <span>value<wbr>Specs</span>
+        <span id="state_valuespecs_nodejs">
+<a href="#state_valuespecs_nodejs" style="color: inherit; text-decoration: inherit;">value<wbr>Specs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -1275,7 +1451,9 @@ Changing this updates the existing policy. Default is ESP.
 
     <dt class="property-optional"
             title="Optional">
-        <span>auth_<wbr>algorithm</span>
+        <span id="state_auth_algorithm_python">
+<a href="#state_auth_algorithm_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>algorithm</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1285,7 +1463,9 @@ Default is sha1. Changing this updates the algorithm of the existing policy.
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="state_description_python">
+<a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1295,7 +1475,9 @@ Changing this updates the description of the existing policy.
 
     <dt class="property-optional"
             title="Optional">
-        <span>encapsulation_<wbr>mode</span>
+        <span id="state_encapsulation_mode_python">
+<a href="#state_encapsulation_mode_python" style="color: inherit; text-decoration: inherit;">encapsulation_<wbr>mode</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1305,7 +1487,9 @@ Changing this updates the existing policy.
 
     <dt class="property-optional"
             title="Optional">
-        <span>encryption_<wbr>algorithm</span>
+        <span id="state_encryption_algorithm_python">
+<a href="#state_encryption_algorithm_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>algorithm</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1315,7 +1499,9 @@ The default value is aes-128. Changing this updates the existing policy.
 
     <dt class="property-optional"
             title="Optional">
-        <span>lifetimes</span>
+        <span id="state_lifetimes_python">
+<a href="#state_lifetimes_python" style="color: inherit; text-decoration: inherit;">lifetimes</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ipsecpolicylifetime">List[Ip<wbr>Sec<wbr>Policy<wbr>Lifetime]</a></span>
     </dt>
@@ -1328,7 +1514,9 @@ Default is 3600.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1338,7 +1526,9 @@ the existing policy.
 
     <dt class="property-optional"
             title="Optional">
-        <span>pfs</span>
+        <span id="state_pfs_python">
+<a href="#state_pfs_python" style="color: inherit; text-decoration: inherit;">pfs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1348,7 +1538,9 @@ Changing this updates the existing policy.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="state_region_python">
+<a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1360,7 +1552,9 @@ policy.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tenant_<wbr>id</span>
+        <span id="state_tenant_id_python">
+<a href="#state_tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1370,7 +1564,9 @@ create a policy for another project. Changing this creates a new policy.
 
     <dt class="property-optional"
             title="Optional">
-        <span>transform_<wbr>protocol</span>
+        <span id="state_transform_protocol_python">
+<a href="#state_transform_protocol_python" style="color: inherit; text-decoration: inherit;">transform_<wbr>protocol</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1380,7 +1576,9 @@ Changing this updates the existing policy. Default is ESP.
 
     <dt class="property-optional"
             title="Optional">
-        <span>value_<wbr>specs</span>
+        <span id="state_value_specs_python">
+<a href="#state_value_specs_python" style="color: inherit; text-decoration: inherit;">value_<wbr>specs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -1422,7 +1620,9 @@ Changing this updates the existing policy. Default is ESP.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Units</span>
+        <span id="units_csharp">
+<a href="#units_csharp" style="color: inherit; text-decoration: inherit;">Units</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1430,7 +1630,9 @@ Changing this updates the existing policy. Default is ESP.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Value</span>
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1445,7 +1647,9 @@ Changing this updates the existing policy. Default is ESP.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Units</span>
+        <span id="units_go">
+<a href="#units_go" style="color: inherit; text-decoration: inherit;">Units</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1453,7 +1657,9 @@ Changing this updates the existing policy. Default is ESP.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Value</span>
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1468,7 +1674,9 @@ Changing this updates the existing policy. Default is ESP.
 
     <dt class="property-optional"
             title="Optional">
-        <span>units</span>
+        <span id="units_nodejs">
+<a href="#units_nodejs" style="color: inherit; text-decoration: inherit;">units</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1476,7 +1684,9 @@ Changing this updates the existing policy. Default is ESP.
 
     <dt class="property-optional"
             title="Optional">
-        <span>value</span>
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1491,7 +1701,9 @@ Changing this updates the existing policy. Default is ESP.
 
     <dt class="property-optional"
             title="Optional">
-        <span>units</span>
+        <span id="units_python">
+<a href="#units_python" style="color: inherit; text-decoration: inherit;">units</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1499,7 +1711,9 @@ Changing this updates the existing policy. Default is ESP.
 
     <dt class="property-optional"
             title="Optional">
-        <span>value</span>
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>

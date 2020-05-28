@@ -31,6 +31,17 @@ import * as pulumi from "@pulumi/pulumi";
 ```python
 import pulumi
 ```
+```csharp
+using Pulumi;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+    }
+
+}
+```
 
 A list of ICMP types and codes can be found [here](https://en.wikipedia.org/wiki/Internet_Control_Message_Protocol#Control_messages).
 
@@ -59,6 +70,28 @@ test_server = openstack.compute.Instance("test-server",
     key_pair="my_key_pair_name",
     security_groups=[openstack_compute_secgroup_v2["secgroup_1"]["name"]])
 ```
+```csharp
+using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var test_server = new OpenStack.Compute.Instance("test-server", new OpenStack.Compute.InstanceArgs
+        {
+            FlavorId = "3",
+            ImageId = "ad091b52-742f-469e-8f3c-fd81cadf0743",
+            KeyPair = "my_key_pair_name",
+            SecurityGroups = 
+            {
+                openstack_compute_secgroup_v2.Secgroup_1.Name,
+            },
+        });
+    }
+
+}
+```
 
 {{% examples %}}
 ## Example Usage
@@ -66,7 +99,39 @@ test_server = openstack.compute.Instance("test-server",
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var secgroup1 = new OpenStack.Compute.SecGroup("secgroup1", new OpenStack.Compute.SecGroupArgs
+        {
+            Description = "my security group",
+            Rules = 
+            {
+                new OpenStack.Compute.Inputs.SecGroupRuleArgs
+                {
+                    Cidr = "0.0.0.0/0",
+                    FromPort = 22,
+                    IpProtocol = "tcp",
+                    ToPort = 22,
+                },
+                new OpenStack.Compute.Inputs.SecGroupRuleArgs
+                {
+                    Cidr = "0.0.0.0/0",
+                    FromPort = 80,
+                    IpProtocol = "tcp",
+                    ToPort = 80,
+                },
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -308,7 +373,9 @@ The SecGroup resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-required"
             title="Required">
-        <span>Description</span>
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -318,7 +385,9 @@ updates the `description` of an existing security group.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -328,7 +397,9 @@ updates the `name` of an existing security group.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="region_csharp">
+<a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -340,7 +411,9 @@ security group.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Rules</span>
+        <span id="rules_csharp">
+<a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secgrouprule">List&lt;Pulumi.<wbr>Open<wbr>Stack.<wbr>Compute.<wbr>Inputs.<wbr>Sec<wbr>Group<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
@@ -359,7 +432,9 @@ may be used.
 
     <dt class="property-required"
             title="Required">
-        <span>Description</span>
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -369,7 +444,9 @@ updates the `description` of an existing security group.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -379,7 +456,9 @@ updates the `name` of an existing security group.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="region_go">
+<a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -391,7 +470,9 @@ security group.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Rules</span>
+        <span id="rules_go">
+<a href="#rules_go" style="color: inherit; text-decoration: inherit;">Rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secgrouprule">[]Sec<wbr>Group<wbr>Rule</a></span>
     </dt>
@@ -410,7 +491,9 @@ may be used.
 
     <dt class="property-required"
             title="Required">
-        <span>description</span>
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -420,7 +503,9 @@ updates the `description` of an existing security group.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -430,7 +515,9 @@ updates the `name` of an existing security group.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="region_nodejs">
+<a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -442,7 +529,9 @@ security group.
 
     <dt class="property-optional"
             title="Optional">
-        <span>rules</span>
+        <span id="rules_nodejs">
+<a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secgrouprule">Sec<wbr>Group<wbr>Rule[]</a></span>
     </dt>
@@ -461,7 +550,9 @@ may be used.
 
     <dt class="property-required"
             title="Required">
-        <span>description</span>
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -471,7 +562,9 @@ updates the `description` of an existing security group.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -481,7 +574,9 @@ updates the `name` of an existing security group.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="region_python">
+<a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -493,7 +588,9 @@ security group.
 
     <dt class="property-optional"
             title="Optional">
-        <span>rules</span>
+        <span id="rules_python">
+<a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secgrouprule">List[Sec<wbr>Group<wbr>Rule]</a></span>
     </dt>
@@ -523,7 +620,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -538,7 +637,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -553,7 +654,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -568,7 +671,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -709,7 +814,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="state_description_csharp">
+<a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -719,7 +826,9 @@ updates the `description` of an existing security group.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -729,7 +838,9 @@ updates the `name` of an existing security group.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="state_region_csharp">
+<a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -741,7 +852,9 @@ security group.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Rules</span>
+        <span id="state_rules_csharp">
+<a href="#state_rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secgrouprule">List&lt;Pulumi.<wbr>Open<wbr>Stack.<wbr>Compute.<wbr>Inputs.<wbr>Sec<wbr>Group<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
@@ -760,7 +873,9 @@ may be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="state_description_go">
+<a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -770,7 +885,9 @@ updates the `description` of an existing security group.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -780,7 +897,9 @@ updates the `name` of an existing security group.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="state_region_go">
+<a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -792,7 +911,9 @@ security group.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Rules</span>
+        <span id="state_rules_go">
+<a href="#state_rules_go" style="color: inherit; text-decoration: inherit;">Rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secgrouprule">[]Sec<wbr>Group<wbr>Rule</a></span>
     </dt>
@@ -811,7 +932,9 @@ may be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="state_description_nodejs">
+<a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -821,7 +944,9 @@ updates the `description` of an existing security group.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -831,7 +956,9 @@ updates the `name` of an existing security group.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="state_region_nodejs">
+<a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -843,7 +970,9 @@ security group.
 
     <dt class="property-optional"
             title="Optional">
-        <span>rules</span>
+        <span id="state_rules_nodejs">
+<a href="#state_rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secgrouprule">Sec<wbr>Group<wbr>Rule[]</a></span>
     </dt>
@@ -862,7 +991,9 @@ may be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="state_description_python">
+<a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -872,7 +1003,9 @@ updates the `description` of an existing security group.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -882,7 +1015,9 @@ updates the `name` of an existing security group.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="state_region_python">
+<a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -894,7 +1029,9 @@ security group.
 
     <dt class="property-optional"
             title="Optional">
-        <span>rules</span>
+        <span id="state_rules_python">
+<a href="#state_rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secgrouprule">List[Sec<wbr>Group<wbr>Rule]</a></span>
     </dt>
@@ -939,7 +1076,9 @@ may be used.
 
     <dt class="property-required"
             title="Required">
-        <span>From<wbr>Port</span>
+        <span id="fromport_csharp">
+<a href="#fromport_csharp" style="color: inherit; text-decoration: inherit;">From<wbr>Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -949,7 +1088,9 @@ range to open. Changing this creates a new security group rule.
 
     <dt class="property-required"
             title="Required">
-        <span>Ip<wbr>Protocol</span>
+        <span id="ipprotocol_csharp">
+<a href="#ipprotocol_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Protocol</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -959,7 +1100,9 @@ this creates a new security group rule.
 
     <dt class="property-required"
             title="Required">
-        <span>To<wbr>Port</span>
+        <span id="toport_csharp">
+<a href="#toport_csharp" style="color: inherit; text-decoration: inherit;">To<wbr>Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -969,7 +1112,9 @@ range to open. Changing this creates a new security group rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cidr</span>
+        <span id="cidr_csharp">
+<a href="#cidr_csharp" style="color: inherit; text-decoration: inherit;">Cidr</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -981,7 +1126,9 @@ be combined with `from_group_id` or `self`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>From<wbr>Group<wbr>Id</span>
+        <span id="fromgroupid_csharp">
+<a href="#fromgroupid_csharp" style="color: inherit; text-decoration: inherit;">From<wbr>Group<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -992,7 +1139,9 @@ new security group rule. Cannot be combined with `cidr` or `self`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1000,7 +1149,9 @@ new security group rule. Cannot be combined with `cidr` or `self`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Self</span>
+        <span id="self_csharp">
+<a href="#self_csharp" style="color: inherit; text-decoration: inherit;">Self</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1018,7 +1169,9 @@ be combined with `cidr` or `from_group_id`.
 
     <dt class="property-required"
             title="Required">
-        <span>From<wbr>Port</span>
+        <span id="fromport_go">
+<a href="#fromport_go" style="color: inherit; text-decoration: inherit;">From<wbr>Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1028,7 +1181,9 @@ range to open. Changing this creates a new security group rule.
 
     <dt class="property-required"
             title="Required">
-        <span>Ip<wbr>Protocol</span>
+        <span id="ipprotocol_go">
+<a href="#ipprotocol_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Protocol</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1038,7 +1193,9 @@ this creates a new security group rule.
 
     <dt class="property-required"
             title="Required">
-        <span>To<wbr>Port</span>
+        <span id="toport_go">
+<a href="#toport_go" style="color: inherit; text-decoration: inherit;">To<wbr>Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1048,7 +1205,9 @@ range to open. Changing this creates a new security group rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Cidr</span>
+        <span id="cidr_go">
+<a href="#cidr_go" style="color: inherit; text-decoration: inherit;">Cidr</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1060,7 +1219,9 @@ be combined with `from_group_id` or `self`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>From<wbr>Group<wbr>Id</span>
+        <span id="fromgroupid_go">
+<a href="#fromgroupid_go" style="color: inherit; text-decoration: inherit;">From<wbr>Group<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1071,7 +1232,9 @@ new security group rule. Cannot be combined with `cidr` or `self`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1079,7 +1242,9 @@ new security group rule. Cannot be combined with `cidr` or `self`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Self</span>
+        <span id="self_go">
+<a href="#self_go" style="color: inherit; text-decoration: inherit;">Self</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1097,7 +1262,9 @@ be combined with `cidr` or `from_group_id`.
 
     <dt class="property-required"
             title="Required">
-        <span>from<wbr>Port</span>
+        <span id="fromport_nodejs">
+<a href="#fromport_nodejs" style="color: inherit; text-decoration: inherit;">from<wbr>Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1107,7 +1274,9 @@ range to open. Changing this creates a new security group rule.
 
     <dt class="property-required"
             title="Required">
-        <span>ip<wbr>Protocol</span>
+        <span id="ipprotocol_nodejs">
+<a href="#ipprotocol_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Protocol</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1117,7 +1286,9 @@ this creates a new security group rule.
 
     <dt class="property-required"
             title="Required">
-        <span>to<wbr>Port</span>
+        <span id="toport_nodejs">
+<a href="#toport_nodejs" style="color: inherit; text-decoration: inherit;">to<wbr>Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1127,7 +1298,9 @@ range to open. Changing this creates a new security group rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>cidr</span>
+        <span id="cidr_nodejs">
+<a href="#cidr_nodejs" style="color: inherit; text-decoration: inherit;">cidr</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1139,7 +1312,9 @@ be combined with `from_group_id` or `self`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>from<wbr>Group<wbr>Id</span>
+        <span id="fromgroupid_nodejs">
+<a href="#fromgroupid_nodejs" style="color: inherit; text-decoration: inherit;">from<wbr>Group<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1150,7 +1325,9 @@ new security group rule. Cannot be combined with `cidr` or `self`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1158,7 +1335,9 @@ new security group rule. Cannot be combined with `cidr` or `self`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>self</span>
+        <span id="self_nodejs">
+<a href="#self_nodejs" style="color: inherit; text-decoration: inherit;">self</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1176,7 +1355,9 @@ be combined with `cidr` or `from_group_id`.
 
     <dt class="property-required"
             title="Required">
-        <span>from<wbr>Port</span>
+        <span id="fromport_python">
+<a href="#fromport_python" style="color: inherit; text-decoration: inherit;">from<wbr>Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1186,7 +1367,9 @@ range to open. Changing this creates a new security group rule.
 
     <dt class="property-required"
             title="Required">
-        <span>ip<wbr>Protocol</span>
+        <span id="ipprotocol_python">
+<a href="#ipprotocol_python" style="color: inherit; text-decoration: inherit;">ip<wbr>Protocol</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1196,7 +1379,9 @@ this creates a new security group rule.
 
     <dt class="property-required"
             title="Required">
-        <span>to<wbr>Port</span>
+        <span id="toport_python">
+<a href="#toport_python" style="color: inherit; text-decoration: inherit;">to<wbr>Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1206,7 +1391,9 @@ range to open. Changing this creates a new security group rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>cidr</span>
+        <span id="cidr_python">
+<a href="#cidr_python" style="color: inherit; text-decoration: inherit;">cidr</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1218,7 +1405,9 @@ be combined with `from_group_id` or `self`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>from<wbr>Group<wbr>Id</span>
+        <span id="fromgroupid_python">
+<a href="#fromgroupid_python" style="color: inherit; text-decoration: inherit;">from<wbr>Group<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1229,7 +1418,9 @@ new security group rule. Cannot be combined with `cidr` or `self`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1237,7 +1428,9 @@ new security group rule. Cannot be combined with `cidr` or `self`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>self</span>
+        <span id="self_python">
+<a href="#self_python" style="color: inherit; text-decoration: inherit;">self</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>

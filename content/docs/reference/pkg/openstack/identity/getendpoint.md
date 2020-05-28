@@ -22,7 +22,22 @@ Use this data source to get the ID of an OpenStack endpoint.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var endpoint1 = Output.Create(OpenStack.Identity.GetEndpoint.InvokeAsync(new OpenStack.Identity.GetEndpointArgs
+        {
+            ServiceName = "demo",
+        }));
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -90,7 +105,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Endpoint<wbr>Region</span>
+        <span id="endpointregion_csharp">
+<a href="#endpointregion_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -100,7 +117,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Interface</span>
+        <span id="interface_csharp">
+<a href="#interface_csharp" style="color: inherit; text-decoration: inherit;">Interface</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -110,7 +129,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -119,7 +140,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="region_csharp">
+<a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -129,7 +152,9 @@ If omitted, the `region` argument of the provider is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Service<wbr>Id</span>
+        <span id="serviceid_csharp">
+<a href="#serviceid_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -138,7 +163,9 @@ If omitted, the `region` argument of the provider is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Service<wbr>Name</span>
+        <span id="servicename_csharp">
+<a href="#servicename_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -147,7 +174,9 @@ If omitted, the `region` argument of the provider is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Service<wbr>Type</span>
+        <span id="servicetype_csharp">
+<a href="#servicetype_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -163,7 +192,9 @@ If omitted, the `region` argument of the provider is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Endpoint<wbr>Region</span>
+        <span id="endpointregion_go">
+<a href="#endpointregion_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -173,7 +204,9 @@ If omitted, the `region` argument of the provider is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Interface</span>
+        <span id="interface_go">
+<a href="#interface_go" style="color: inherit; text-decoration: inherit;">Interface</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -183,7 +216,9 @@ If omitted, the `region` argument of the provider is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -192,7 +227,9 @@ If omitted, the `region` argument of the provider is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="region_go">
+<a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -202,7 +239,9 @@ If omitted, the `region` argument of the provider is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Service<wbr>Id</span>
+        <span id="serviceid_go">
+<a href="#serviceid_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -211,7 +250,9 @@ If omitted, the `region` argument of the provider is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Service<wbr>Name</span>
+        <span id="servicename_go">
+<a href="#servicename_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -220,7 +261,9 @@ If omitted, the `region` argument of the provider is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Service<wbr>Type</span>
+        <span id="servicetype_go">
+<a href="#servicetype_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -236,7 +279,9 @@ If omitted, the `region` argument of the provider is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>endpoint<wbr>Region</span>
+        <span id="endpointregion_nodejs">
+<a href="#endpointregion_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -246,7 +291,9 @@ If omitted, the `region` argument of the provider is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>interface</span>
+        <span id="interface_nodejs">
+<a href="#interface_nodejs" style="color: inherit; text-decoration: inherit;">interface</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -256,7 +303,9 @@ If omitted, the `region` argument of the provider is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -265,7 +314,9 @@ If omitted, the `region` argument of the provider is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="region_nodejs">
+<a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -275,7 +326,9 @@ If omitted, the `region` argument of the provider is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>service<wbr>Id</span>
+        <span id="serviceid_nodejs">
+<a href="#serviceid_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -284,7 +337,9 @@ If omitted, the `region` argument of the provider is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>service<wbr>Name</span>
+        <span id="servicename_nodejs">
+<a href="#servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -293,7 +348,9 @@ If omitted, the `region` argument of the provider is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>service<wbr>Type</span>
+        <span id="servicetype_nodejs">
+<a href="#servicetype_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -309,7 +366,9 @@ If omitted, the `region` argument of the provider is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>endpoint_<wbr>region</span>
+        <span id="endpoint_region_python">
+<a href="#endpoint_region_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -319,7 +378,9 @@ If omitted, the `region` argument of the provider is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>interface</span>
+        <span id="interface_python">
+<a href="#interface_python" style="color: inherit; text-decoration: inherit;">interface</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -329,7 +390,9 @@ If omitted, the `region` argument of the provider is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -338,7 +401,9 @@ If omitted, the `region` argument of the provider is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="region_python">
+<a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -348,7 +413,9 @@ If omitted, the `region` argument of the provider is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>service_<wbr>id</span>
+        <span id="service_id_python">
+<a href="#service_id_python" style="color: inherit; text-decoration: inherit;">service_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -357,7 +424,9 @@ If omitted, the `region` argument of the provider is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>service_<wbr>name</span>
+        <span id="service_name_python">
+<a href="#service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -366,7 +435,9 @@ If omitted, the `region` argument of the provider is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>service_<wbr>type</span>
+        <span id="service_type_python">
+<a href="#service_type_python" style="color: inherit; text-decoration: inherit;">service_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -395,7 +466,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -404,7 +477,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Region</span>
+        <span id="region_csharp">
+<a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -413,7 +488,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Url</span>
+        <span id="url_csharp">
+<a href="#url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -422,7 +499,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Endpoint<wbr>Region</span>
+        <span id="endpointregion_csharp">
+<a href="#endpointregion_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -431,7 +510,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Interface</span>
+        <span id="interface_csharp">
+<a href="#interface_csharp" style="color: inherit; text-decoration: inherit;">Interface</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -440,7 +521,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -449,7 +532,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Service<wbr>Id</span>
+        <span id="serviceid_csharp">
+<a href="#serviceid_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -458,7 +543,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Service<wbr>Name</span>
+        <span id="servicename_csharp">
+<a href="#servicename_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -467,7 +554,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Service<wbr>Type</span>
+        <span id="servicetype_csharp">
+<a href="#servicetype_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -483,7 +572,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -492,7 +583,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Region</span>
+        <span id="region_go">
+<a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -501,7 +594,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Url</span>
+        <span id="url_go">
+<a href="#url_go" style="color: inherit; text-decoration: inherit;">Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -510,7 +605,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Endpoint<wbr>Region</span>
+        <span id="endpointregion_go">
+<a href="#endpointregion_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -519,7 +616,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Interface</span>
+        <span id="interface_go">
+<a href="#interface_go" style="color: inherit; text-decoration: inherit;">Interface</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -528,7 +627,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -537,7 +638,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Service<wbr>Id</span>
+        <span id="serviceid_go">
+<a href="#serviceid_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -546,7 +649,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Service<wbr>Name</span>
+        <span id="servicename_go">
+<a href="#servicename_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -555,7 +660,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Service<wbr>Type</span>
+        <span id="servicetype_go">
+<a href="#servicetype_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -571,7 +678,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -580,7 +689,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>region</span>
+        <span id="region_nodejs">
+<a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -589,7 +700,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>url</span>
+        <span id="url_nodejs">
+<a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -598,7 +711,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>endpoint<wbr>Region</span>
+        <span id="endpointregion_nodejs">
+<a href="#endpointregion_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -607,7 +722,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>interface</span>
+        <span id="interface_nodejs">
+<a href="#interface_nodejs" style="color: inherit; text-decoration: inherit;">interface</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -616,7 +733,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -625,7 +744,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>service<wbr>Id</span>
+        <span id="serviceid_nodejs">
+<a href="#serviceid_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -634,7 +755,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>service<wbr>Name</span>
+        <span id="servicename_nodejs">
+<a href="#servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -643,7 +766,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>service<wbr>Type</span>
+        <span id="servicetype_nodejs">
+<a href="#servicetype_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -659,7 +784,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -668,7 +795,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>region</span>
+        <span id="region_python">
+<a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -677,7 +806,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>url</span>
+        <span id="url_python">
+<a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -686,7 +817,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>endpoint_<wbr>region</span>
+        <span id="endpoint_region_python">
+<a href="#endpoint_region_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -695,7 +828,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>interface</span>
+        <span id="interface_python">
+<a href="#interface_python" style="color: inherit; text-decoration: inherit;">interface</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -704,7 +839,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -713,7 +850,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>service_<wbr>id</span>
+        <span id="service_id_python">
+<a href="#service_id_python" style="color: inherit; text-decoration: inherit;">service_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -722,7 +861,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>service_<wbr>name</span>
+        <span id="service_name_python">
+<a href="#service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -731,7 +872,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>service_<wbr>type</span>
+        <span id="service_type_python">
+<a href="#service_type_python" style="color: inherit; text-decoration: inherit;">service_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

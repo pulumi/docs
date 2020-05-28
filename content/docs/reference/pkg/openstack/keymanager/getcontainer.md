@@ -20,7 +20,22 @@ Use this data source to get the ID of an available Barbican container.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = Output.Create(OpenStack.KeyManager.GetContainer.InvokeAsync(new OpenStack.KeyManager.GetContainerArgs
+        {
+            Name = "my_container",
+        }));
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -88,7 +103,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -97,7 +114,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="region_csharp">
+<a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -115,7 +134,9 @@ argument of the provider is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -124,7 +145,9 @@ argument of the provider is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="region_go">
+<a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -142,7 +165,9 @@ argument of the provider is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -151,7 +176,9 @@ argument of the provider is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="region_nodejs">
+<a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -169,7 +196,9 @@ argument of the provider is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -178,7 +207,9 @@ argument of the provider is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="region_python">
+<a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -209,7 +240,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Acls</span>
+        <span id="acls_csharp">
+<a href="#acls_csharp" style="color: inherit; text-decoration: inherit;">Acls</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getcontaineracl">List&lt;Pulumi.<wbr>Open<wbr>Stack.<wbr>Key<wbr>Manager.<wbr>Outputs.<wbr>Get<wbr>Container<wbr>Acl&gt;</a></span>
     </dt>
@@ -219,7 +252,9 @@ described below.
 
     <dt class="property-"
             title="">
-        <span>Consumers</span>
+        <span id="consumers_csharp">
+<a href="#consumers_csharp" style="color: inherit; text-decoration: inherit;">Consumers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getcontainerconsumer">List&lt;Pulumi.<wbr>Open<wbr>Stack.<wbr>Key<wbr>Manager.<wbr>Outputs.<wbr>Get<wbr>Container<wbr>Consumer&gt;</a></span>
     </dt>
@@ -229,7 +264,9 @@ below.
 
     <dt class="property-"
             title="">
-        <span>Container<wbr>Ref</span>
+        <span id="containerref_csharp">
+<a href="#containerref_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Ref</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -238,7 +275,9 @@ below.
 
     <dt class="property-"
             title="">
-        <span>Created<wbr>At</span>
+        <span id="createdat_csharp">
+<a href="#createdat_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -247,7 +286,9 @@ below.
 
     <dt class="property-"
             title="">
-        <span>Creator<wbr>Id</span>
+        <span id="creatorid_csharp">
+<a href="#creatorid_csharp" style="color: inherit; text-decoration: inherit;">Creator<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -256,7 +297,9 @@ below.
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -265,7 +308,9 @@ below.
 
     <dt class="property-"
             title="">
-        <span>Secret<wbr>Refs</span>
+        <span id="secretrefs_csharp">
+<a href="#secretrefs_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Refs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getcontainersecretref">List&lt;Pulumi.<wbr>Open<wbr>Stack.<wbr>Key<wbr>Manager.<wbr>Outputs.<wbr>Get<wbr>Container<wbr>Secret<wbr>Ref&gt;</a></span>
     </dt>
@@ -275,7 +320,9 @@ structure is described below.
 
     <dt class="property-"
             title="">
-        <span>Status</span>
+        <span id="status_csharp">
+<a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -284,7 +331,9 @@ structure is described below.
 
     <dt class="property-"
             title="">
-        <span>Type</span>
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -293,7 +342,9 @@ structure is described below.
 
     <dt class="property-"
             title="">
-        <span>Updated<wbr>At</span>
+        <span id="updatedat_csharp">
+<a href="#updatedat_csharp" style="color: inherit; text-decoration: inherit;">Updated<wbr>At</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -302,7 +353,9 @@ structure is described below.
 
     <dt class="property-"
             title="">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -311,7 +364,9 @@ structure is described below.
 
     <dt class="property-"
             title="">
-        <span>Region</span>
+        <span id="region_csharp">
+<a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -327,7 +382,9 @@ structure is described below.
 
     <dt class="property-"
             title="">
-        <span>Acls</span>
+        <span id="acls_go">
+<a href="#acls_go" style="color: inherit; text-decoration: inherit;">Acls</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getcontaineracl">[]Get<wbr>Container<wbr>Acl</a></span>
     </dt>
@@ -337,7 +394,9 @@ described below.
 
     <dt class="property-"
             title="">
-        <span>Consumers</span>
+        <span id="consumers_go">
+<a href="#consumers_go" style="color: inherit; text-decoration: inherit;">Consumers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getcontainerconsumer">[]Get<wbr>Container<wbr>Consumer</a></span>
     </dt>
@@ -347,7 +406,9 @@ below.
 
     <dt class="property-"
             title="">
-        <span>Container<wbr>Ref</span>
+        <span id="containerref_go">
+<a href="#containerref_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Ref</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -356,7 +417,9 @@ below.
 
     <dt class="property-"
             title="">
-        <span>Created<wbr>At</span>
+        <span id="createdat_go">
+<a href="#createdat_go" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -365,7 +428,9 @@ below.
 
     <dt class="property-"
             title="">
-        <span>Creator<wbr>Id</span>
+        <span id="creatorid_go">
+<a href="#creatorid_go" style="color: inherit; text-decoration: inherit;">Creator<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -374,7 +439,9 @@ below.
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -383,7 +450,9 @@ below.
 
     <dt class="property-"
             title="">
-        <span>Secret<wbr>Refs</span>
+        <span id="secretrefs_go">
+<a href="#secretrefs_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Refs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getcontainersecretref">[]Get<wbr>Container<wbr>Secret<wbr>Ref</a></span>
     </dt>
@@ -393,7 +462,9 @@ structure is described below.
 
     <dt class="property-"
             title="">
-        <span>Status</span>
+        <span id="status_go">
+<a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -402,7 +473,9 @@ structure is described below.
 
     <dt class="property-"
             title="">
-        <span>Type</span>
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -411,7 +484,9 @@ structure is described below.
 
     <dt class="property-"
             title="">
-        <span>Updated<wbr>At</span>
+        <span id="updatedat_go">
+<a href="#updatedat_go" style="color: inherit; text-decoration: inherit;">Updated<wbr>At</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -420,7 +495,9 @@ structure is described below.
 
     <dt class="property-"
             title="">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -429,7 +506,9 @@ structure is described below.
 
     <dt class="property-"
             title="">
-        <span>Region</span>
+        <span id="region_go">
+<a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -445,7 +524,9 @@ structure is described below.
 
     <dt class="property-"
             title="">
-        <span>acls</span>
+        <span id="acls_nodejs">
+<a href="#acls_nodejs" style="color: inherit; text-decoration: inherit;">acls</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getcontaineracl">Get<wbr>Container<wbr>Acl[]</a></span>
     </dt>
@@ -455,7 +536,9 @@ described below.
 
     <dt class="property-"
             title="">
-        <span>consumers</span>
+        <span id="consumers_nodejs">
+<a href="#consumers_nodejs" style="color: inherit; text-decoration: inherit;">consumers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getcontainerconsumer">Get<wbr>Container<wbr>Consumer[]</a></span>
     </dt>
@@ -465,7 +548,9 @@ below.
 
     <dt class="property-"
             title="">
-        <span>container<wbr>Ref</span>
+        <span id="containerref_nodejs">
+<a href="#containerref_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Ref</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -474,7 +559,9 @@ below.
 
     <dt class="property-"
             title="">
-        <span>created<wbr>At</span>
+        <span id="createdat_nodejs">
+<a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -483,7 +570,9 @@ below.
 
     <dt class="property-"
             title="">
-        <span>creator<wbr>Id</span>
+        <span id="creatorid_nodejs">
+<a href="#creatorid_nodejs" style="color: inherit; text-decoration: inherit;">creator<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -492,7 +581,9 @@ below.
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -501,7 +592,9 @@ below.
 
     <dt class="property-"
             title="">
-        <span>secret<wbr>Refs</span>
+        <span id="secretrefs_nodejs">
+<a href="#secretrefs_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Refs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getcontainersecretref">Get<wbr>Container<wbr>Secret<wbr>Ref[]</a></span>
     </dt>
@@ -511,7 +604,9 @@ structure is described below.
 
     <dt class="property-"
             title="">
-        <span>status</span>
+        <span id="status_nodejs">
+<a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -520,7 +615,9 @@ structure is described below.
 
     <dt class="property-"
             title="">
-        <span>type</span>
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -529,7 +626,9 @@ structure is described below.
 
     <dt class="property-"
             title="">
-        <span>updated<wbr>At</span>
+        <span id="updatedat_nodejs">
+<a href="#updatedat_nodejs" style="color: inherit; text-decoration: inherit;">updated<wbr>At</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -538,7 +637,9 @@ structure is described below.
 
     <dt class="property-"
             title="">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -547,7 +648,9 @@ structure is described below.
 
     <dt class="property-"
             title="">
-        <span>region</span>
+        <span id="region_nodejs">
+<a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -563,7 +666,9 @@ structure is described below.
 
     <dt class="property-"
             title="">
-        <span>acls</span>
+        <span id="acls_python">
+<a href="#acls_python" style="color: inherit; text-decoration: inherit;">acls</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getcontaineracl">List[Get<wbr>Container<wbr>Acl]</a></span>
     </dt>
@@ -573,7 +678,9 @@ described below.
 
     <dt class="property-"
             title="">
-        <span>consumers</span>
+        <span id="consumers_python">
+<a href="#consumers_python" style="color: inherit; text-decoration: inherit;">consumers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getcontainerconsumer">List[Get<wbr>Container<wbr>Consumer]</a></span>
     </dt>
@@ -583,7 +690,9 @@ below.
 
     <dt class="property-"
             title="">
-        <span>container_<wbr>ref</span>
+        <span id="container_ref_python">
+<a href="#container_ref_python" style="color: inherit; text-decoration: inherit;">container_<wbr>ref</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -592,7 +701,9 @@ below.
 
     <dt class="property-"
             title="">
-        <span>created_<wbr>at</span>
+        <span id="created_at_python">
+<a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -601,7 +712,9 @@ below.
 
     <dt class="property-"
             title="">
-        <span>creator_<wbr>id</span>
+        <span id="creator_id_python">
+<a href="#creator_id_python" style="color: inherit; text-decoration: inherit;">creator_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -610,7 +723,9 @@ below.
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -619,7 +734,9 @@ below.
 
     <dt class="property-"
             title="">
-        <span>secret_<wbr>refs</span>
+        <span id="secret_refs_python">
+<a href="#secret_refs_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>refs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getcontainersecretref">List[Get<wbr>Container<wbr>Secret<wbr>Ref]</a></span>
     </dt>
@@ -629,7 +746,9 @@ structure is described below.
 
     <dt class="property-"
             title="">
-        <span>status</span>
+        <span id="status_python">
+<a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -638,7 +757,9 @@ structure is described below.
 
     <dt class="property-"
             title="">
-        <span>type</span>
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -647,7 +768,9 @@ structure is described below.
 
     <dt class="property-"
             title="">
-        <span>updated_<wbr>at</span>
+        <span id="updated_at_python">
+<a href="#updated_at_python" style="color: inherit; text-decoration: inherit;">updated_<wbr>at</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -656,7 +779,9 @@ structure is described below.
 
     <dt class="property-"
             title="">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -665,7 +790,9 @@ structure is described below.
 
     <dt class="property-"
             title="">
-        <span>region</span>
+        <span id="region_python">
+<a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -705,7 +832,9 @@ structure is described below.
 
     <dt class="property-required"
             title="Required">
-        <span>Read</span>
+        <span id="read_csharp">
+<a href="#read_csharp" style="color: inherit; text-decoration: inherit;">Read</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getcontaineraclread">Pulumi.<wbr>Open<wbr>Stack.<wbr>Key<wbr>Manager.<wbr>Inputs.<wbr>Get<wbr>Container<wbr>Acl<wbr>Read<wbr>Args</a></span>
     </dt>
@@ -720,7 +849,9 @@ structure is described below.
 
     <dt class="property-required"
             title="Required">
-        <span>Read</span>
+        <span id="read_go">
+<a href="#read_go" style="color: inherit; text-decoration: inherit;">Read</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getcontaineraclread">Get<wbr>Container<wbr>Acl<wbr>Read</a></span>
     </dt>
@@ -735,7 +866,9 @@ structure is described below.
 
     <dt class="property-required"
             title="Required">
-        <span>read</span>
+        <span id="read_nodejs">
+<a href="#read_nodejs" style="color: inherit; text-decoration: inherit;">read</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getcontaineraclread">Get<wbr>Container<wbr>Acl<wbr>Read</a></span>
     </dt>
@@ -750,7 +883,9 @@ structure is described below.
 
     <dt class="property-required"
             title="Required">
-        <span>read</span>
+        <span id="read_python">
+<a href="#read_python" style="color: inherit; text-decoration: inherit;">read</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getcontaineraclread">Dict[Get<wbr>Container<wbr>Acl<wbr>Read]</a></span>
     </dt>
@@ -783,7 +918,9 @@ structure is described below.
 
     <dt class="property-required"
             title="Required">
-        <span>Created<wbr>At</span>
+        <span id="createdat_csharp">
+<a href="#createdat_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -792,7 +929,9 @@ structure is described below.
 
     <dt class="property-required"
             title="Required">
-        <span>Updated<wbr>At</span>
+        <span id="updatedat_csharp">
+<a href="#updatedat_csharp" style="color: inherit; text-decoration: inherit;">Updated<wbr>At</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -801,7 +940,9 @@ structure is described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project<wbr>Access</span>
+        <span id="projectaccess_csharp">
+<a href="#projectaccess_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Access</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -810,7 +951,9 @@ structure is described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Users</span>
+        <span id="users_csharp">
+<a href="#users_csharp" style="color: inherit; text-decoration: inherit;">Users</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -827,7 +970,9 @@ when `project_access` is set to `false`.
 
     <dt class="property-required"
             title="Required">
-        <span>Created<wbr>At</span>
+        <span id="createdat_go">
+<a href="#createdat_go" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -836,7 +981,9 @@ when `project_access` is set to `false`.
 
     <dt class="property-required"
             title="Required">
-        <span>Updated<wbr>At</span>
+        <span id="updatedat_go">
+<a href="#updatedat_go" style="color: inherit; text-decoration: inherit;">Updated<wbr>At</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -845,7 +992,9 @@ when `project_access` is set to `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project<wbr>Access</span>
+        <span id="projectaccess_go">
+<a href="#projectaccess_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Access</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -854,7 +1003,9 @@ when `project_access` is set to `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Users</span>
+        <span id="users_go">
+<a href="#users_go" style="color: inherit; text-decoration: inherit;">Users</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -871,7 +1022,9 @@ when `project_access` is set to `false`.
 
     <dt class="property-required"
             title="Required">
-        <span>created<wbr>At</span>
+        <span id="createdat_nodejs">
+<a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -880,7 +1033,9 @@ when `project_access` is set to `false`.
 
     <dt class="property-required"
             title="Required">
-        <span>updated<wbr>At</span>
+        <span id="updatedat_nodejs">
+<a href="#updatedat_nodejs" style="color: inherit; text-decoration: inherit;">updated<wbr>At</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -889,7 +1044,9 @@ when `project_access` is set to `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>project<wbr>Access</span>
+        <span id="projectaccess_nodejs">
+<a href="#projectaccess_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Access</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -898,7 +1055,9 @@ when `project_access` is set to `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>users</span>
+        <span id="users_nodejs">
+<a href="#users_nodejs" style="color: inherit; text-decoration: inherit;">users</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -915,7 +1074,9 @@ when `project_access` is set to `false`.
 
     <dt class="property-required"
             title="Required">
-        <span>created_<wbr>at</span>
+        <span id="created_at_python">
+<a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -924,7 +1085,9 @@ when `project_access` is set to `false`.
 
     <dt class="property-required"
             title="Required">
-        <span>updated_<wbr>at</span>
+        <span id="updated_at_python">
+<a href="#updated_at_python" style="color: inherit; text-decoration: inherit;">updated_<wbr>at</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -933,7 +1096,9 @@ when `project_access` is set to `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>project<wbr>Access</span>
+        <span id="projectaccess_python">
+<a href="#projectaccess_python" style="color: inherit; text-decoration: inherit;">project<wbr>Access</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -942,7 +1107,9 @@ when `project_access` is set to `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>users</span>
+        <span id="users_python">
+<a href="#users_python" style="color: inherit; text-decoration: inherit;">users</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -977,7 +1144,9 @@ when `project_access` is set to `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -986,7 +1155,9 @@ when `project_access` is set to `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Url</span>
+        <span id="url_csharp">
+<a href="#url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1002,7 +1173,9 @@ when `project_access` is set to `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1011,7 +1184,9 @@ when `project_access` is set to `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Url</span>
+        <span id="url_go">
+<a href="#url_go" style="color: inherit; text-decoration: inherit;">Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1027,7 +1202,9 @@ when `project_access` is set to `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1036,7 +1213,9 @@ when `project_access` is set to `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>url</span>
+        <span id="url_nodejs">
+<a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1052,7 +1231,9 @@ when `project_access` is set to `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1061,7 +1242,9 @@ when `project_access` is set to `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>url</span>
+        <span id="url_python">
+<a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1095,7 +1278,9 @@ when `project_access` is set to `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1104,7 +1289,9 @@ when `project_access` is set to `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Secret<wbr>Ref</span>
+        <span id="secretref_csharp">
+<a href="#secretref_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Ref</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1120,7 +1307,9 @@ when `project_access` is set to `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1129,7 +1318,9 @@ when `project_access` is set to `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Secret<wbr>Ref</span>
+        <span id="secretref_go">
+<a href="#secretref_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Ref</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1145,7 +1336,9 @@ when `project_access` is set to `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1154,7 +1347,9 @@ when `project_access` is set to `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>secret<wbr>Ref</span>
+        <span id="secretref_nodejs">
+<a href="#secretref_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Ref</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1170,7 +1365,9 @@ when `project_access` is set to `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1179,7 +1376,9 @@ when `project_access` is set to `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>secret_<wbr>ref</span>
+        <span id="secret_ref_python">
+<a href="#secret_ref_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>ref</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

@@ -20,7 +20,22 @@ Manages a V2 loadbalancer resource within OpenStack.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var lb1 = new OpenStack.LoadBalancer.LoadBalancer("lb1", new OpenStack.LoadBalancer.LoadBalancerArgs
+        {
+            VipSubnetId = "d9415786-5f1a-428b-b35f-2f1523e146d2",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -233,7 +248,9 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-required"
             title="Required">
-        <span>Vip<wbr>Subnet<wbr>Id</span>
+        <span id="vipsubnetid_csharp">
+<a href="#vipsubnetid_csharp" style="color: inherit; text-decoration: inherit;">Vip<wbr>Subnet<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -245,7 +262,9 @@ are shared).  Changing this creates a new loadbalancer.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Admin<wbr>State<wbr>Up</span>
+        <span id="adminstateup_csharp">
+<a href="#adminstateup_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>State<wbr>Up</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -255,7 +274,9 @@ A valid value is true (UP) or false (DOWN).
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -264,7 +285,9 @@ A valid value is true (UP) or false (DOWN).
 
     <dt class="property-optional"
             title="Optional">
-        <span>Flavor<wbr>Id</span>
+        <span id="flavorid_csharp">
+<a href="#flavorid_csharp" style="color: inherit; text-decoration: inherit;">Flavor<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -274,7 +297,9 @@ loadbalancer.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Loadbalancer<wbr>Provider</span>
+        <span id="loadbalancerprovider_csharp">
+<a href="#loadbalancerprovider_csharp" style="color: inherit; text-decoration: inherit;">Loadbalancer<wbr>Provider</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -284,7 +309,9 @@ creates a new loadbalancer.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -294,7 +321,9 @@ to be unique.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="region_csharp">
+<a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -306,7 +335,9 @@ LB member.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Security<wbr>Group<wbr>Ids</span>
+        <span id="securitygroupids_csharp">
+<a href="#securitygroupids_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -317,7 +348,9 @@ opposed to how they are configured with the Compute Instance).
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tenant<wbr>Id</span>
+        <span id="tenantid_csharp">
+<a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -328,7 +361,9 @@ other than their own.  Changing this creates a new loadbalancer.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vip<wbr>Address</span>
+        <span id="vipaddress_csharp">
+<a href="#vipaddress_csharp" style="color: inherit; text-decoration: inherit;">Vip<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -345,7 +380,9 @@ Changing this creates a new loadbalancer.
 
     <dt class="property-required"
             title="Required">
-        <span>Vip<wbr>Subnet<wbr>Id</span>
+        <span id="vipsubnetid_go">
+<a href="#vipsubnetid_go" style="color: inherit; text-decoration: inherit;">Vip<wbr>Subnet<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -357,7 +394,9 @@ are shared).  Changing this creates a new loadbalancer.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Admin<wbr>State<wbr>Up</span>
+        <span id="adminstateup_go">
+<a href="#adminstateup_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>State<wbr>Up</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -367,7 +406,9 @@ A valid value is true (UP) or false (DOWN).
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -376,7 +417,9 @@ A valid value is true (UP) or false (DOWN).
 
     <dt class="property-optional"
             title="Optional">
-        <span>Flavor<wbr>Id</span>
+        <span id="flavorid_go">
+<a href="#flavorid_go" style="color: inherit; text-decoration: inherit;">Flavor<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -386,7 +429,9 @@ loadbalancer.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Loadbalancer<wbr>Provider</span>
+        <span id="loadbalancerprovider_go">
+<a href="#loadbalancerprovider_go" style="color: inherit; text-decoration: inherit;">Loadbalancer<wbr>Provider</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -396,7 +441,9 @@ creates a new loadbalancer.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -406,7 +453,9 @@ to be unique.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="region_go">
+<a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -418,7 +467,9 @@ LB member.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Security<wbr>Group<wbr>Ids</span>
+        <span id="securitygroupids_go">
+<a href="#securitygroupids_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -429,7 +480,9 @@ opposed to how they are configured with the Compute Instance).
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tenant<wbr>Id</span>
+        <span id="tenantid_go">
+<a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -440,7 +493,9 @@ other than their own.  Changing this creates a new loadbalancer.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vip<wbr>Address</span>
+        <span id="vipaddress_go">
+<a href="#vipaddress_go" style="color: inherit; text-decoration: inherit;">Vip<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -457,7 +512,9 @@ Changing this creates a new loadbalancer.
 
     <dt class="property-required"
             title="Required">
-        <span>vip<wbr>Subnet<wbr>Id</span>
+        <span id="vipsubnetid_nodejs">
+<a href="#vipsubnetid_nodejs" style="color: inherit; text-decoration: inherit;">vip<wbr>Subnet<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -469,7 +526,9 @@ are shared).  Changing this creates a new loadbalancer.
 
     <dt class="property-optional"
             title="Optional">
-        <span>admin<wbr>State<wbr>Up</span>
+        <span id="adminstateup_nodejs">
+<a href="#adminstateup_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>State<wbr>Up</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -479,7 +538,9 @@ A valid value is true (UP) or false (DOWN).
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -488,7 +549,9 @@ A valid value is true (UP) or false (DOWN).
 
     <dt class="property-optional"
             title="Optional">
-        <span>flavor<wbr>Id</span>
+        <span id="flavorid_nodejs">
+<a href="#flavorid_nodejs" style="color: inherit; text-decoration: inherit;">flavor<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -498,7 +561,9 @@ loadbalancer.
 
     <dt class="property-optional"
             title="Optional">
-        <span>loadbalancer<wbr>Provider</span>
+        <span id="loadbalancerprovider_nodejs">
+<a href="#loadbalancerprovider_nodejs" style="color: inherit; text-decoration: inherit;">loadbalancer<wbr>Provider</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -508,7 +573,9 @@ creates a new loadbalancer.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -518,7 +585,9 @@ to be unique.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="region_nodejs">
+<a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -530,7 +599,9 @@ LB member.
 
     <dt class="property-optional"
             title="Optional">
-        <span>security<wbr>Group<wbr>Ids</span>
+        <span id="securitygroupids_nodejs">
+<a href="#securitygroupids_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Group<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -541,7 +612,9 @@ opposed to how they are configured with the Compute Instance).
 
     <dt class="property-optional"
             title="Optional">
-        <span>tenant<wbr>Id</span>
+        <span id="tenantid_nodejs">
+<a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -552,7 +625,9 @@ other than their own.  Changing this creates a new loadbalancer.
 
     <dt class="property-optional"
             title="Optional">
-        <span>vip<wbr>Address</span>
+        <span id="vipaddress_nodejs">
+<a href="#vipaddress_nodejs" style="color: inherit; text-decoration: inherit;">vip<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -569,7 +644,9 @@ Changing this creates a new loadbalancer.
 
     <dt class="property-required"
             title="Required">
-        <span>vip_<wbr>subnet_<wbr>id</span>
+        <span id="vip_subnet_id_python">
+<a href="#vip_subnet_id_python" style="color: inherit; text-decoration: inherit;">vip_<wbr>subnet_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -581,7 +658,9 @@ are shared).  Changing this creates a new loadbalancer.
 
     <dt class="property-optional"
             title="Optional">
-        <span>admin_<wbr>state_<wbr>up</span>
+        <span id="admin_state_up_python">
+<a href="#admin_state_up_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>state_<wbr>up</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -591,7 +670,9 @@ A valid value is true (UP) or false (DOWN).
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -600,7 +681,9 @@ A valid value is true (UP) or false (DOWN).
 
     <dt class="property-optional"
             title="Optional">
-        <span>flavor_<wbr>id</span>
+        <span id="flavor_id_python">
+<a href="#flavor_id_python" style="color: inherit; text-decoration: inherit;">flavor_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -610,7 +693,9 @@ loadbalancer.
 
     <dt class="property-optional"
             title="Optional">
-        <span>loadbalancer_<wbr>provider</span>
+        <span id="loadbalancer_provider_python">
+<a href="#loadbalancer_provider_python" style="color: inherit; text-decoration: inherit;">loadbalancer_<wbr>provider</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -620,7 +705,9 @@ creates a new loadbalancer.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -630,7 +717,9 @@ to be unique.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="region_python">
+<a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -642,7 +731,9 @@ LB member.
 
     <dt class="property-optional"
             title="Optional">
-        <span>security_<wbr>group_<wbr>ids</span>
+        <span id="security_group_ids_python">
+<a href="#security_group_ids_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group_<wbr>ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -653,7 +744,9 @@ opposed to how they are configured with the Compute Instance).
 
     <dt class="property-optional"
             title="Optional">
-        <span>tenant_<wbr>id</span>
+        <span id="tenant_id_python">
+<a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -664,7 +757,9 @@ other than their own.  Changing this creates a new loadbalancer.
 
     <dt class="property-optional"
             title="Optional">
-        <span>vip_<wbr>address</span>
+        <span id="vip_address_python">
+<a href="#vip_address_python" style="color: inherit; text-decoration: inherit;">vip_<wbr>address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -692,7 +787,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -700,7 +797,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Vip<wbr>Port<wbr>Id</span>
+        <span id="vipportid_csharp">
+<a href="#vipportid_csharp" style="color: inherit; text-decoration: inherit;">Vip<wbr>Port<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -716,7 +815,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -724,7 +825,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Vip<wbr>Port<wbr>Id</span>
+        <span id="vipportid_go">
+<a href="#vipportid_go" style="color: inherit; text-decoration: inherit;">Vip<wbr>Port<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -740,7 +843,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -748,7 +853,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>vip<wbr>Port<wbr>Id</span>
+        <span id="vipportid_nodejs">
+<a href="#vipportid_nodejs" style="color: inherit; text-decoration: inherit;">vip<wbr>Port<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -764,7 +871,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -772,7 +881,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>vip_<wbr>port_<wbr>id</span>
+        <span id="vip_port_id_python">
+<a href="#vip_port_id_python" style="color: inherit; text-decoration: inherit;">vip_<wbr>port_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -914,7 +1025,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Admin<wbr>State<wbr>Up</span>
+        <span id="state_adminstateup_csharp">
+<a href="#state_adminstateup_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>State<wbr>Up</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -924,7 +1037,9 @@ A valid value is true (UP) or false (DOWN).
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="state_description_csharp">
+<a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -933,7 +1048,9 @@ A valid value is true (UP) or false (DOWN).
 
     <dt class="property-optional"
             title="Optional">
-        <span>Flavor<wbr>Id</span>
+        <span id="state_flavorid_csharp">
+<a href="#state_flavorid_csharp" style="color: inherit; text-decoration: inherit;">Flavor<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -943,7 +1060,9 @@ loadbalancer.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Loadbalancer<wbr>Provider</span>
+        <span id="state_loadbalancerprovider_csharp">
+<a href="#state_loadbalancerprovider_csharp" style="color: inherit; text-decoration: inherit;">Loadbalancer<wbr>Provider</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -953,7 +1072,9 @@ creates a new loadbalancer.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -963,7 +1084,9 @@ to be unique.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="state_region_csharp">
+<a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -975,7 +1098,9 @@ LB member.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Security<wbr>Group<wbr>Ids</span>
+        <span id="state_securitygroupids_csharp">
+<a href="#state_securitygroupids_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -986,7 +1111,9 @@ opposed to how they are configured with the Compute Instance).
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tenant<wbr>Id</span>
+        <span id="state_tenantid_csharp">
+<a href="#state_tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -997,7 +1124,9 @@ other than their own.  Changing this creates a new loadbalancer.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vip<wbr>Address</span>
+        <span id="state_vipaddress_csharp">
+<a href="#state_vipaddress_csharp" style="color: inherit; text-decoration: inherit;">Vip<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1007,7 +1136,9 @@ Changing this creates a new loadbalancer.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vip<wbr>Port<wbr>Id</span>
+        <span id="state_vipportid_csharp">
+<a href="#state_vipportid_csharp" style="color: inherit; text-decoration: inherit;">Vip<wbr>Port<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1016,7 +1147,9 @@ Changing this creates a new loadbalancer.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vip<wbr>Subnet<wbr>Id</span>
+        <span id="state_vipsubnetid_csharp">
+<a href="#state_vipsubnetid_csharp" style="color: inherit; text-decoration: inherit;">Vip<wbr>Subnet<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1035,7 +1168,9 @@ are shared).  Changing this creates a new loadbalancer.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Admin<wbr>State<wbr>Up</span>
+        <span id="state_adminstateup_go">
+<a href="#state_adminstateup_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>State<wbr>Up</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1045,7 +1180,9 @@ A valid value is true (UP) or false (DOWN).
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="state_description_go">
+<a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1054,7 +1191,9 @@ A valid value is true (UP) or false (DOWN).
 
     <dt class="property-optional"
             title="Optional">
-        <span>Flavor<wbr>Id</span>
+        <span id="state_flavorid_go">
+<a href="#state_flavorid_go" style="color: inherit; text-decoration: inherit;">Flavor<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1064,7 +1203,9 @@ loadbalancer.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Loadbalancer<wbr>Provider</span>
+        <span id="state_loadbalancerprovider_go">
+<a href="#state_loadbalancerprovider_go" style="color: inherit; text-decoration: inherit;">Loadbalancer<wbr>Provider</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1074,7 +1215,9 @@ creates a new loadbalancer.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1084,7 +1227,9 @@ to be unique.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="state_region_go">
+<a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1096,7 +1241,9 @@ LB member.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Security<wbr>Group<wbr>Ids</span>
+        <span id="state_securitygroupids_go">
+<a href="#state_securitygroupids_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1107,7 +1254,9 @@ opposed to how they are configured with the Compute Instance).
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tenant<wbr>Id</span>
+        <span id="state_tenantid_go">
+<a href="#state_tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1118,7 +1267,9 @@ other than their own.  Changing this creates a new loadbalancer.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vip<wbr>Address</span>
+        <span id="state_vipaddress_go">
+<a href="#state_vipaddress_go" style="color: inherit; text-decoration: inherit;">Vip<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1128,7 +1279,9 @@ Changing this creates a new loadbalancer.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vip<wbr>Port<wbr>Id</span>
+        <span id="state_vipportid_go">
+<a href="#state_vipportid_go" style="color: inherit; text-decoration: inherit;">Vip<wbr>Port<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1137,7 +1290,9 @@ Changing this creates a new loadbalancer.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vip<wbr>Subnet<wbr>Id</span>
+        <span id="state_vipsubnetid_go">
+<a href="#state_vipsubnetid_go" style="color: inherit; text-decoration: inherit;">Vip<wbr>Subnet<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1156,7 +1311,9 @@ are shared).  Changing this creates a new loadbalancer.
 
     <dt class="property-optional"
             title="Optional">
-        <span>admin<wbr>State<wbr>Up</span>
+        <span id="state_adminstateup_nodejs">
+<a href="#state_adminstateup_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>State<wbr>Up</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1166,7 +1323,9 @@ A valid value is true (UP) or false (DOWN).
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="state_description_nodejs">
+<a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1175,7 +1334,9 @@ A valid value is true (UP) or false (DOWN).
 
     <dt class="property-optional"
             title="Optional">
-        <span>flavor<wbr>Id</span>
+        <span id="state_flavorid_nodejs">
+<a href="#state_flavorid_nodejs" style="color: inherit; text-decoration: inherit;">flavor<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1185,7 +1346,9 @@ loadbalancer.
 
     <dt class="property-optional"
             title="Optional">
-        <span>loadbalancer<wbr>Provider</span>
+        <span id="state_loadbalancerprovider_nodejs">
+<a href="#state_loadbalancerprovider_nodejs" style="color: inherit; text-decoration: inherit;">loadbalancer<wbr>Provider</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1195,7 +1358,9 @@ creates a new loadbalancer.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1205,7 +1370,9 @@ to be unique.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="state_region_nodejs">
+<a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1217,7 +1384,9 @@ LB member.
 
     <dt class="property-optional"
             title="Optional">
-        <span>security<wbr>Group<wbr>Ids</span>
+        <span id="state_securitygroupids_nodejs">
+<a href="#state_securitygroupids_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Group<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1228,7 +1397,9 @@ opposed to how they are configured with the Compute Instance).
 
     <dt class="property-optional"
             title="Optional">
-        <span>tenant<wbr>Id</span>
+        <span id="state_tenantid_nodejs">
+<a href="#state_tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1239,7 +1410,9 @@ other than their own.  Changing this creates a new loadbalancer.
 
     <dt class="property-optional"
             title="Optional">
-        <span>vip<wbr>Address</span>
+        <span id="state_vipaddress_nodejs">
+<a href="#state_vipaddress_nodejs" style="color: inherit; text-decoration: inherit;">vip<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1249,7 +1422,9 @@ Changing this creates a new loadbalancer.
 
     <dt class="property-optional"
             title="Optional">
-        <span>vip<wbr>Port<wbr>Id</span>
+        <span id="state_vipportid_nodejs">
+<a href="#state_vipportid_nodejs" style="color: inherit; text-decoration: inherit;">vip<wbr>Port<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1258,7 +1433,9 @@ Changing this creates a new loadbalancer.
 
     <dt class="property-optional"
             title="Optional">
-        <span>vip<wbr>Subnet<wbr>Id</span>
+        <span id="state_vipsubnetid_nodejs">
+<a href="#state_vipsubnetid_nodejs" style="color: inherit; text-decoration: inherit;">vip<wbr>Subnet<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1277,7 +1454,9 @@ are shared).  Changing this creates a new loadbalancer.
 
     <dt class="property-optional"
             title="Optional">
-        <span>admin_<wbr>state_<wbr>up</span>
+        <span id="state_admin_state_up_python">
+<a href="#state_admin_state_up_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>state_<wbr>up</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1287,7 +1466,9 @@ A valid value is true (UP) or false (DOWN).
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="state_description_python">
+<a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1296,7 +1477,9 @@ A valid value is true (UP) or false (DOWN).
 
     <dt class="property-optional"
             title="Optional">
-        <span>flavor_<wbr>id</span>
+        <span id="state_flavor_id_python">
+<a href="#state_flavor_id_python" style="color: inherit; text-decoration: inherit;">flavor_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1306,7 +1489,9 @@ loadbalancer.
 
     <dt class="property-optional"
             title="Optional">
-        <span>loadbalancer_<wbr>provider</span>
+        <span id="state_loadbalancer_provider_python">
+<a href="#state_loadbalancer_provider_python" style="color: inherit; text-decoration: inherit;">loadbalancer_<wbr>provider</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1316,7 +1501,9 @@ creates a new loadbalancer.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1326,7 +1513,9 @@ to be unique.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="state_region_python">
+<a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1338,7 +1527,9 @@ LB member.
 
     <dt class="property-optional"
             title="Optional">
-        <span>security_<wbr>group_<wbr>ids</span>
+        <span id="state_security_group_ids_python">
+<a href="#state_security_group_ids_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group_<wbr>ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1349,7 +1540,9 @@ opposed to how they are configured with the Compute Instance).
 
     <dt class="property-optional"
             title="Optional">
-        <span>tenant_<wbr>id</span>
+        <span id="state_tenant_id_python">
+<a href="#state_tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1360,7 +1553,9 @@ other than their own.  Changing this creates a new loadbalancer.
 
     <dt class="property-optional"
             title="Optional">
-        <span>vip_<wbr>address</span>
+        <span id="state_vip_address_python">
+<a href="#state_vip_address_python" style="color: inherit; text-decoration: inherit;">vip_<wbr>address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1370,7 +1565,9 @@ Changing this creates a new loadbalancer.
 
     <dt class="property-optional"
             title="Optional">
-        <span>vip_<wbr>port_<wbr>id</span>
+        <span id="state_vip_port_id_python">
+<a href="#state_vip_port_id_python" style="color: inherit; text-decoration: inherit;">vip_<wbr>port_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1379,7 +1576,9 @@ Changing this creates a new loadbalancer.
 
     <dt class="property-optional"
             title="Optional">
-        <span>vip_<wbr>subnet_<wbr>id</span>
+        <span id="state_vip_subnet_id_python">
+<a href="#state_vip_subnet_id_python" style="color: inherit; text-decoration: inherit;">vip_<wbr>subnet_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

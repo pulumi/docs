@@ -20,7 +20,74 @@ Manages a V1 Barbican container resource within OpenStack.
 {{< chooser language "typescript,python,go,csharp" / >}}
 ### Simple secret
 {{% example csharp %}}
-Coming soon!
+```csharp
+using System.IO;
+using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var certificate1 = new OpenStack.KeyManager.SecretV1("certificate1", new OpenStack.KeyManager.SecretV1Args
+        {
+            Payload = File.ReadAllText("cert.pem"),
+            PayloadContentType = "text/plain",
+            SecretType = "certificate",
+        });
+        var privateKey1 = new OpenStack.KeyManager.SecretV1("privateKey1", new OpenStack.KeyManager.SecretV1Args
+        {
+            Payload = File.ReadAllText("cert-key.pem"),
+            PayloadContentType = "text/plain",
+            SecretType = "private",
+        });
+        var intermediate1 = new OpenStack.KeyManager.SecretV1("intermediate1", new OpenStack.KeyManager.SecretV1Args
+        {
+            Payload = File.ReadAllText("intermediate-ca.pem"),
+            PayloadContentType = "text/plain",
+            SecretType = "certificate",
+        });
+        var tls1 = new OpenStack.KeyManager.ContainerV1("tls1", new OpenStack.KeyManager.ContainerV1Args
+        {
+            SecretRefs = 
+            {
+                new OpenStack.KeyManager.Inputs.ContainerV1SecretRefArgs
+                {
+                    Name = "certificate",
+                    SecretRef = certificate1.SecretRef,
+                },
+                new OpenStack.KeyManager.Inputs.ContainerV1SecretRefArgs
+                {
+                    Name = "private_key",
+                    SecretRef = privateKey1.SecretRef,
+                },
+                new OpenStack.KeyManager.Inputs.ContainerV1SecretRefArgs
+                {
+                    Name = "intermediates",
+                    SecretRef = intermediate1.SecretRef,
+                },
+            },
+            Type = "certificate",
+        });
+        var subnet1 = Output.Create(OpenStack.Networking.GetSubnet.InvokeAsync(new OpenStack.Networking.GetSubnetArgs
+        {
+            Name = "my-subnet",
+        }));
+        var lb1 = new OpenStack.LoadBalancer.LoadBalancer("lb1", new OpenStack.LoadBalancer.LoadBalancerArgs
+        {
+            VipSubnetId = subnet1.Apply(subnet1 => subnet1.Id),
+        });
+        var listener1 = new OpenStack.LoadBalancer.Listener("listener1", new OpenStack.LoadBalancer.ListenerArgs
+        {
+            DefaultTlsContainerRef = tls1.ContainerRef,
+            LoadbalancerId = lb1.Id,
+            Protocol = "TERMINATED_HTTPS",
+            ProtocolPort = 443,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -48,15 +115,15 @@ tls1 = openstack.keymanager.ContainerV1("tls1",
     secret_refs=[
         {
             "name": "certificate",
-            "secretRef": certificate1.secret_ref,
+            "secret_ref": certificate1.secret_ref,
         },
         {
             "name": "private_key",
-            "secretRef": private_key1.secret_ref,
+            "secret_ref": private_key1.secret_ref,
         },
         {
             "name": "intermediates",
-            "secretRef": intermediate1.secret_ref,
+            "secret_ref": intermediate1.secret_ref,
         },
     ],
     type="certificate")
@@ -125,7 +192,52 @@ const listener1 = new openstack.loadbalancer.Listener("listener_1", {
 
 ### Container with the ACL
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var tls1 = new OpenStack.KeyManager.ContainerV1("tls1", new OpenStack.KeyManager.ContainerV1Args
+        {
+            Acl = new OpenStack.KeyManager.Inputs.ContainerV1AclArgs
+            {
+                Read = new OpenStack.KeyManager.Inputs.ContainerV1AclReadArgs
+                {
+                    ProjectAccess = false,
+                    Users = 
+                    {
+                        "userid1",
+                        "userid2",
+                    },
+                },
+            },
+            SecretRefs = 
+            {
+                new OpenStack.KeyManager.Inputs.ContainerV1SecretRefArgs
+                {
+                    Name = "certificate",
+                    SecretRef = openstack_keymanager_secret_v1.Certificate_1.Secret_ref,
+                },
+                new OpenStack.KeyManager.Inputs.ContainerV1SecretRefArgs
+                {
+                    Name = "private_key",
+                    SecretRef = openstack_keymanager_secret_v1.Private_key_1.Secret_ref,
+                },
+                new OpenStack.KeyManager.Inputs.ContainerV1SecretRefArgs
+                {
+                    Name = "intermediates",
+                    SecretRef = openstack_keymanager_secret_v1.Intermediate_1.Secret_ref,
+                },
+            },
+            Type = "certificate",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -150,15 +262,15 @@ tls1 = openstack.keymanager.ContainerV1("tls1",
     secret_refs=[
         {
             "name": "certificate",
-            "secretRef": openstack_keymanager_secret_v1["certificate_1"]["secret_ref"],
+            "secret_ref": openstack_keymanager_secret_v1["certificate_1"]["secret_ref"],
         },
         {
             "name": "private_key",
-            "secretRef": openstack_keymanager_secret_v1["private_key_1"]["secret_ref"],
+            "secret_ref": openstack_keymanager_secret_v1["private_key_1"]["secret_ref"],
         },
         {
             "name": "intermediates",
-            "secretRef": openstack_keymanager_secret_v1["intermediate_1"]["secret_ref"],
+            "secret_ref": openstack_keymanager_secret_v1["intermediate_1"]["secret_ref"],
         },
     ],
     type="certificate")
@@ -385,7 +497,9 @@ The ContainerV1 resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-required"
             title="Required">
-        <span>Type</span>
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -394,7 +508,9 @@ The ContainerV1 resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>Acl</span>
+        <span id="acl_csharp">
+<a href="#acl_csharp" style="color: inherit; text-decoration: inherit;">Acl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerv1acl">Pulumi.<wbr>Open<wbr>Stack.<wbr>Key<wbr>Manager.<wbr>Inputs.<wbr>Container<wbr>V1Acl<wbr>Args</a></span>
     </dt>
@@ -405,7 +521,9 @@ accessible project wide. The `read` structure is described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -414,7 +532,9 @@ accessible project wide. The `read` structure is described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="region_csharp">
+<a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -426,7 +546,9 @@ V1 container.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Secret<wbr>Refs</span>
+        <span id="secretrefs_csharp">
+<a href="#secretrefs_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Refs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerv1secretref">List&lt;Pulumi.<wbr>Open<wbr>Stack.<wbr>Key<wbr>Manager.<wbr>Inputs.<wbr>Container<wbr>V1Secret<wbr>Ref<wbr>Args&gt;</a></span>
     </dt>
@@ -443,7 +565,9 @@ below.
 
     <dt class="property-required"
             title="Required">
-        <span>Type</span>
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -452,7 +576,9 @@ below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Acl</span>
+        <span id="acl_go">
+<a href="#acl_go" style="color: inherit; text-decoration: inherit;">Acl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerv1acl">Container<wbr>V1Acl</a></span>
     </dt>
@@ -463,7 +589,9 @@ accessible project wide. The `read` structure is described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -472,7 +600,9 @@ accessible project wide. The `read` structure is described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="region_go">
+<a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -484,7 +614,9 @@ V1 container.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Secret<wbr>Refs</span>
+        <span id="secretrefs_go">
+<a href="#secretrefs_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Refs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerv1secretref">[]Container<wbr>V1Secret<wbr>Ref</a></span>
     </dt>
@@ -501,7 +633,9 @@ below.
 
     <dt class="property-required"
             title="Required">
-        <span>type</span>
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -510,7 +644,9 @@ below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>acl</span>
+        <span id="acl_nodejs">
+<a href="#acl_nodejs" style="color: inherit; text-decoration: inherit;">acl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerv1acl">Container<wbr>V1Acl</a></span>
     </dt>
@@ -521,7 +657,9 @@ accessible project wide. The `read` structure is described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -530,7 +668,9 @@ accessible project wide. The `read` structure is described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="region_nodejs">
+<a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -542,7 +682,9 @@ V1 container.
 
     <dt class="property-optional"
             title="Optional">
-        <span>secret<wbr>Refs</span>
+        <span id="secretrefs_nodejs">
+<a href="#secretrefs_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Refs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerv1secretref">Container<wbr>V1Secret<wbr>Ref[]</a></span>
     </dt>
@@ -559,7 +701,9 @@ below.
 
     <dt class="property-required"
             title="Required">
-        <span>type</span>
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -568,7 +712,9 @@ below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>acl</span>
+        <span id="acl_python">
+<a href="#acl_python" style="color: inherit; text-decoration: inherit;">acl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerv1acl">Dict[Container<wbr>V1Acl]</a></span>
     </dt>
@@ -579,7 +725,9 @@ accessible project wide. The `read` structure is described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -588,7 +736,9 @@ accessible project wide. The `read` structure is described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="region_python">
+<a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -600,7 +750,9 @@ V1 container.
 
     <dt class="property-optional"
             title="Optional">
-        <span>secret_<wbr>refs</span>
+        <span id="secret_refs_python">
+<a href="#secret_refs_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>refs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerv1secretref">List[Container<wbr>V1Secret<wbr>Ref]</a></span>
     </dt>
@@ -628,7 +780,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Consumers</span>
+        <span id="consumers_csharp">
+<a href="#consumers_csharp" style="color: inherit; text-decoration: inherit;">Consumers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerv1consumer">List&lt;Pulumi.<wbr>Open<wbr>Stack.<wbr>Key<wbr>Manager.<wbr>Outputs.<wbr>Container<wbr>V1Consumer&gt;</a></span>
     </dt>
@@ -637,7 +791,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Container<wbr>Ref</span>
+        <span id="containerref_csharp">
+<a href="#containerref_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Ref</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -646,7 +802,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Created<wbr>At</span>
+        <span id="createdat_csharp">
+<a href="#createdat_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -655,7 +813,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Creator<wbr>Id</span>
+        <span id="creatorid_csharp">
+<a href="#creatorid_csharp" style="color: inherit; text-decoration: inherit;">Creator<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -664,7 +824,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -672,7 +834,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Status</span>
+        <span id="status_csharp">
+<a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -681,7 +845,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Updated<wbr>At</span>
+        <span id="updatedat_csharp">
+<a href="#updatedat_csharp" style="color: inherit; text-decoration: inherit;">Updated<wbr>At</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -697,7 +863,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Consumers</span>
+        <span id="consumers_go">
+<a href="#consumers_go" style="color: inherit; text-decoration: inherit;">Consumers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerv1consumer">[]Container<wbr>V1Consumer</a></span>
     </dt>
@@ -706,7 +874,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Container<wbr>Ref</span>
+        <span id="containerref_go">
+<a href="#containerref_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Ref</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -715,7 +885,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Created<wbr>At</span>
+        <span id="createdat_go">
+<a href="#createdat_go" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -724,7 +896,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Creator<wbr>Id</span>
+        <span id="creatorid_go">
+<a href="#creatorid_go" style="color: inherit; text-decoration: inherit;">Creator<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -733,7 +907,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -741,7 +917,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Status</span>
+        <span id="status_go">
+<a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -750,7 +928,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Updated<wbr>At</span>
+        <span id="updatedat_go">
+<a href="#updatedat_go" style="color: inherit; text-decoration: inherit;">Updated<wbr>At</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -766,7 +946,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>consumers</span>
+        <span id="consumers_nodejs">
+<a href="#consumers_nodejs" style="color: inherit; text-decoration: inherit;">consumers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerv1consumer">Container<wbr>V1Consumer[]</a></span>
     </dt>
@@ -775,7 +957,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>container<wbr>Ref</span>
+        <span id="containerref_nodejs">
+<a href="#containerref_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Ref</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -784,7 +968,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>created<wbr>At</span>
+        <span id="createdat_nodejs">
+<a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -793,7 +979,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>creator<wbr>Id</span>
+        <span id="creatorid_nodejs">
+<a href="#creatorid_nodejs" style="color: inherit; text-decoration: inherit;">creator<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -802,7 +990,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -810,7 +1000,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>status</span>
+        <span id="status_nodejs">
+<a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -819,7 +1011,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>updated<wbr>At</span>
+        <span id="updatedat_nodejs">
+<a href="#updatedat_nodejs" style="color: inherit; text-decoration: inherit;">updated<wbr>At</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -835,7 +1029,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>consumers</span>
+        <span id="consumers_python">
+<a href="#consumers_python" style="color: inherit; text-decoration: inherit;">consumers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerv1consumer">List[Container<wbr>V1Consumer]</a></span>
     </dt>
@@ -844,7 +1040,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>container_<wbr>ref</span>
+        <span id="container_ref_python">
+<a href="#container_ref_python" style="color: inherit; text-decoration: inherit;">container_<wbr>ref</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -853,7 +1051,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>created_<wbr>at</span>
+        <span id="created_at_python">
+<a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -862,7 +1062,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>creator_<wbr>id</span>
+        <span id="creator_id_python">
+<a href="#creator_id_python" style="color: inherit; text-decoration: inherit;">creator_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -871,7 +1073,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -879,7 +1083,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>status</span>
+        <span id="status_python">
+<a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -888,7 +1094,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>updated_<wbr>at</span>
+        <span id="updated_at_python">
+<a href="#updated_at_python" style="color: inherit; text-decoration: inherit;">updated_<wbr>at</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1030,7 +1238,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Acl</span>
+        <span id="state_acl_csharp">
+<a href="#state_acl_csharp" style="color: inherit; text-decoration: inherit;">Acl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerv1acl">Pulumi.<wbr>Open<wbr>Stack.<wbr>Key<wbr>Manager.<wbr>Inputs.<wbr>Container<wbr>V1Acl<wbr>Args</a></span>
     </dt>
@@ -1041,7 +1251,9 @@ accessible project wide. The `read` structure is described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Consumers</span>
+        <span id="state_consumers_csharp">
+<a href="#state_consumers_csharp" style="color: inherit; text-decoration: inherit;">Consumers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerv1consumer">List&lt;Pulumi.<wbr>Open<wbr>Stack.<wbr>Key<wbr>Manager.<wbr>Inputs.<wbr>Container<wbr>V1Consumer<wbr>Args&gt;</a></span>
     </dt>
@@ -1050,7 +1262,9 @@ accessible project wide. The `read` structure is described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Container<wbr>Ref</span>
+        <span id="state_containerref_csharp">
+<a href="#state_containerref_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Ref</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1059,7 +1273,9 @@ accessible project wide. The `read` structure is described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Created<wbr>At</span>
+        <span id="state_createdat_csharp">
+<a href="#state_createdat_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1068,7 +1284,9 @@ accessible project wide. The `read` structure is described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Creator<wbr>Id</span>
+        <span id="state_creatorid_csharp">
+<a href="#state_creatorid_csharp" style="color: inherit; text-decoration: inherit;">Creator<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1077,7 +1295,9 @@ accessible project wide. The `read` structure is described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1086,7 +1306,9 @@ accessible project wide. The `read` structure is described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="state_region_csharp">
+<a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1098,7 +1320,9 @@ V1 container.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Secret<wbr>Refs</span>
+        <span id="state_secretrefs_csharp">
+<a href="#state_secretrefs_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Refs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerv1secretref">List&lt;Pulumi.<wbr>Open<wbr>Stack.<wbr>Key<wbr>Manager.<wbr>Inputs.<wbr>Container<wbr>V1Secret<wbr>Ref<wbr>Args&gt;</a></span>
     </dt>
@@ -1108,7 +1332,9 @@ below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Status</span>
+        <span id="state_status_csharp">
+<a href="#state_status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1117,7 +1343,9 @@ below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Type</span>
+        <span id="state_type_csharp">
+<a href="#state_type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1126,7 +1354,9 @@ below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Updated<wbr>At</span>
+        <span id="state_updatedat_csharp">
+<a href="#state_updatedat_csharp" style="color: inherit; text-decoration: inherit;">Updated<wbr>At</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1142,7 +1372,9 @@ below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Acl</span>
+        <span id="state_acl_go">
+<a href="#state_acl_go" style="color: inherit; text-decoration: inherit;">Acl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerv1acl">Container<wbr>V1Acl</a></span>
     </dt>
@@ -1153,7 +1385,9 @@ accessible project wide. The `read` structure is described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Consumers</span>
+        <span id="state_consumers_go">
+<a href="#state_consumers_go" style="color: inherit; text-decoration: inherit;">Consumers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerv1consumer">[]Container<wbr>V1Consumer</a></span>
     </dt>
@@ -1162,7 +1396,9 @@ accessible project wide. The `read` structure is described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Container<wbr>Ref</span>
+        <span id="state_containerref_go">
+<a href="#state_containerref_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Ref</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1171,7 +1407,9 @@ accessible project wide. The `read` structure is described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Created<wbr>At</span>
+        <span id="state_createdat_go">
+<a href="#state_createdat_go" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1180,7 +1418,9 @@ accessible project wide. The `read` structure is described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Creator<wbr>Id</span>
+        <span id="state_creatorid_go">
+<a href="#state_creatorid_go" style="color: inherit; text-decoration: inherit;">Creator<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1189,7 +1429,9 @@ accessible project wide. The `read` structure is described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1198,7 +1440,9 @@ accessible project wide. The `read` structure is described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="state_region_go">
+<a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1210,7 +1454,9 @@ V1 container.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Secret<wbr>Refs</span>
+        <span id="state_secretrefs_go">
+<a href="#state_secretrefs_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Refs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerv1secretref">[]Container<wbr>V1Secret<wbr>Ref</a></span>
     </dt>
@@ -1220,7 +1466,9 @@ below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Status</span>
+        <span id="state_status_go">
+<a href="#state_status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1229,7 +1477,9 @@ below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Type</span>
+        <span id="state_type_go">
+<a href="#state_type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1238,7 +1488,9 @@ below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Updated<wbr>At</span>
+        <span id="state_updatedat_go">
+<a href="#state_updatedat_go" style="color: inherit; text-decoration: inherit;">Updated<wbr>At</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1254,7 +1506,9 @@ below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>acl</span>
+        <span id="state_acl_nodejs">
+<a href="#state_acl_nodejs" style="color: inherit; text-decoration: inherit;">acl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerv1acl">Container<wbr>V1Acl</a></span>
     </dt>
@@ -1265,7 +1519,9 @@ accessible project wide. The `read` structure is described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>consumers</span>
+        <span id="state_consumers_nodejs">
+<a href="#state_consumers_nodejs" style="color: inherit; text-decoration: inherit;">consumers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerv1consumer">Container<wbr>V1Consumer[]</a></span>
     </dt>
@@ -1274,7 +1530,9 @@ accessible project wide. The `read` structure is described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>container<wbr>Ref</span>
+        <span id="state_containerref_nodejs">
+<a href="#state_containerref_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Ref</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1283,7 +1541,9 @@ accessible project wide. The `read` structure is described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>created<wbr>At</span>
+        <span id="state_createdat_nodejs">
+<a href="#state_createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1292,7 +1552,9 @@ accessible project wide. The `read` structure is described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>creator<wbr>Id</span>
+        <span id="state_creatorid_nodejs">
+<a href="#state_creatorid_nodejs" style="color: inherit; text-decoration: inherit;">creator<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1301,7 +1563,9 @@ accessible project wide. The `read` structure is described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1310,7 +1574,9 @@ accessible project wide. The `read` structure is described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="state_region_nodejs">
+<a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1322,7 +1588,9 @@ V1 container.
 
     <dt class="property-optional"
             title="Optional">
-        <span>secret<wbr>Refs</span>
+        <span id="state_secretrefs_nodejs">
+<a href="#state_secretrefs_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Refs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerv1secretref">Container<wbr>V1Secret<wbr>Ref[]</a></span>
     </dt>
@@ -1332,7 +1600,9 @@ below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>status</span>
+        <span id="state_status_nodejs">
+<a href="#state_status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1341,7 +1611,9 @@ below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>type</span>
+        <span id="state_type_nodejs">
+<a href="#state_type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1350,7 +1622,9 @@ below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>updated<wbr>At</span>
+        <span id="state_updatedat_nodejs">
+<a href="#state_updatedat_nodejs" style="color: inherit; text-decoration: inherit;">updated<wbr>At</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1366,7 +1640,9 @@ below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>acl</span>
+        <span id="state_acl_python">
+<a href="#state_acl_python" style="color: inherit; text-decoration: inherit;">acl</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerv1acl">Dict[Container<wbr>V1Acl]</a></span>
     </dt>
@@ -1377,7 +1653,9 @@ accessible project wide. The `read` structure is described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>consumers</span>
+        <span id="state_consumers_python">
+<a href="#state_consumers_python" style="color: inherit; text-decoration: inherit;">consumers</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerv1consumer">List[Container<wbr>V1Consumer]</a></span>
     </dt>
@@ -1386,7 +1664,9 @@ accessible project wide. The `read` structure is described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>container_<wbr>ref</span>
+        <span id="state_container_ref_python">
+<a href="#state_container_ref_python" style="color: inherit; text-decoration: inherit;">container_<wbr>ref</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1395,7 +1675,9 @@ accessible project wide. The `read` structure is described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>created_<wbr>at</span>
+        <span id="state_created_at_python">
+<a href="#state_created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1404,7 +1686,9 @@ accessible project wide. The `read` structure is described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>creator_<wbr>id</span>
+        <span id="state_creator_id_python">
+<a href="#state_creator_id_python" style="color: inherit; text-decoration: inherit;">creator_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1413,7 +1697,9 @@ accessible project wide. The `read` structure is described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1422,7 +1708,9 @@ accessible project wide. The `read` structure is described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="state_region_python">
+<a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1434,7 +1722,9 @@ V1 container.
 
     <dt class="property-optional"
             title="Optional">
-        <span>secret_<wbr>refs</span>
+        <span id="state_secret_refs_python">
+<a href="#state_secret_refs_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>refs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerv1secretref">List[Container<wbr>V1Secret<wbr>Ref]</a></span>
     </dt>
@@ -1444,7 +1734,9 @@ below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>status</span>
+        <span id="state_status_python">
+<a href="#state_status_python" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1453,7 +1745,9 @@ below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>type</span>
+        <span id="state_type_python">
+<a href="#state_type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1462,7 +1756,9 @@ below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>updated_<wbr>at</span>
+        <span id="state_updated_at_python">
+<a href="#state_updated_at_python" style="color: inherit; text-decoration: inherit;">updated_<wbr>at</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1504,7 +1800,9 @@ below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Read</span>
+        <span id="read_csharp">
+<a href="#read_csharp" style="color: inherit; text-decoration: inherit;">Read</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerv1aclread">Pulumi.<wbr>Open<wbr>Stack.<wbr>Key<wbr>Manager.<wbr>Inputs.<wbr>Container<wbr>V1Acl<wbr>Read<wbr>Args</a></span>
     </dt>
@@ -1519,7 +1817,9 @@ below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Read</span>
+        <span id="read_go">
+<a href="#read_go" style="color: inherit; text-decoration: inherit;">Read</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerv1aclread">Container<wbr>V1Acl<wbr>Read</a></span>
     </dt>
@@ -1534,7 +1834,9 @@ below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>read</span>
+        <span id="read_nodejs">
+<a href="#read_nodejs" style="color: inherit; text-decoration: inherit;">read</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerv1aclread">Container<wbr>V1Acl<wbr>Read</a></span>
     </dt>
@@ -1549,7 +1851,9 @@ below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>read</span>
+        <span id="read_python">
+<a href="#read_python" style="color: inherit; text-decoration: inherit;">read</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerv1aclread">Dict[Container<wbr>V1Acl<wbr>Read]</a></span>
     </dt>
@@ -1582,7 +1886,9 @@ below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Created<wbr>At</span>
+        <span id="createdat_csharp">
+<a href="#createdat_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1591,7 +1897,9 @@ below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project<wbr>Access</span>
+        <span id="projectaccess_csharp">
+<a href="#projectaccess_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Access</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1601,7 +1909,9 @@ Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Updated<wbr>At</span>
+        <span id="updatedat_csharp">
+<a href="#updatedat_csharp" style="color: inherit; text-decoration: inherit;">Updated<wbr>At</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1610,7 +1920,9 @@ Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Users</span>
+        <span id="users_csharp">
+<a href="#users_csharp" style="color: inherit; text-decoration: inherit;">Users</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1627,7 +1939,9 @@ container, when `project_access` is set to `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Created<wbr>At</span>
+        <span id="createdat_go">
+<a href="#createdat_go" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1636,7 +1950,9 @@ container, when `project_access` is set to `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project<wbr>Access</span>
+        <span id="projectaccess_go">
+<a href="#projectaccess_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Access</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1646,7 +1962,9 @@ Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Updated<wbr>At</span>
+        <span id="updatedat_go">
+<a href="#updatedat_go" style="color: inherit; text-decoration: inherit;">Updated<wbr>At</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1655,7 +1973,9 @@ Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Users</span>
+        <span id="users_go">
+<a href="#users_go" style="color: inherit; text-decoration: inherit;">Users</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1672,7 +1992,9 @@ container, when `project_access` is set to `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>created<wbr>At</span>
+        <span id="createdat_nodejs">
+<a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1681,7 +2003,9 @@ container, when `project_access` is set to `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>project<wbr>Access</span>
+        <span id="projectaccess_nodejs">
+<a href="#projectaccess_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Access</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1691,7 +2015,9 @@ Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>updated<wbr>At</span>
+        <span id="updatedat_nodejs">
+<a href="#updatedat_nodejs" style="color: inherit; text-decoration: inherit;">updated<wbr>At</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1700,7 +2026,9 @@ Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>users</span>
+        <span id="users_nodejs">
+<a href="#users_nodejs" style="color: inherit; text-decoration: inherit;">users</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1717,7 +2045,9 @@ container, when `project_access` is set to `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>created_<wbr>at</span>
+        <span id="created_at_python">
+<a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1726,7 +2056,9 @@ container, when `project_access` is set to `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>project<wbr>Access</span>
+        <span id="projectaccess_python">
+<a href="#projectaccess_python" style="color: inherit; text-decoration: inherit;">project<wbr>Access</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1736,7 +2068,9 @@ Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>updated_<wbr>at</span>
+        <span id="updated_at_python">
+<a href="#updated_at_python" style="color: inherit; text-decoration: inherit;">updated_<wbr>at</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1745,7 +2079,9 @@ Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>users</span>
+        <span id="users_python">
+<a href="#users_python" style="color: inherit; text-decoration: inherit;">users</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1780,7 +2116,9 @@ container, when `project_access` is set to `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1789,7 +2127,9 @@ container, when `project_access` is set to `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Url</span>
+        <span id="url_csharp">
+<a href="#url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1805,7 +2145,9 @@ container, when `project_access` is set to `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1814,7 +2156,9 @@ container, when `project_access` is set to `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Url</span>
+        <span id="url_go">
+<a href="#url_go" style="color: inherit; text-decoration: inherit;">Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1830,7 +2174,9 @@ container, when `project_access` is set to `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1839,7 +2185,9 @@ container, when `project_access` is set to `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>url</span>
+        <span id="url_nodejs">
+<a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1855,7 +2203,9 @@ container, when `project_access` is set to `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1864,7 +2214,9 @@ container, when `project_access` is set to `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>url</span>
+        <span id="url_python">
+<a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1898,7 +2250,9 @@ container, when `project_access` is set to `false`.
 
     <dt class="property-required"
             title="Required">
-        <span>Secret<wbr>Ref</span>
+        <span id="secretref_csharp">
+<a href="#secretref_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Ref</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1907,7 +2261,9 @@ container, when `project_access` is set to `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1923,7 +2279,9 @@ container, when `project_access` is set to `false`.
 
     <dt class="property-required"
             title="Required">
-        <span>Secret<wbr>Ref</span>
+        <span id="secretref_go">
+<a href="#secretref_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Ref</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1932,7 +2290,9 @@ container, when `project_access` is set to `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1948,7 +2308,9 @@ container, when `project_access` is set to `false`.
 
     <dt class="property-required"
             title="Required">
-        <span>secret<wbr>Ref</span>
+        <span id="secretref_nodejs">
+<a href="#secretref_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Ref</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1957,7 +2319,9 @@ container, when `project_access` is set to `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1973,7 +2337,9 @@ container, when `project_access` is set to `false`.
 
     <dt class="property-required"
             title="Required">
-        <span>secret_<wbr>ref</span>
+        <span id="secret_ref_python">
+<a href="#secret_ref_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>ref</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1982,7 +2348,9 @@ container, when `project_access` is set to `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

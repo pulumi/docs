@@ -20,7 +20,52 @@ Manages a Load Balancer L7 Policy resource within OpenStack.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var network1 = new OpenStack.Networking.Network("network1", new OpenStack.Networking.NetworkArgs
+        {
+            AdminStateUp = "true",
+        });
+        var subnet1 = new OpenStack.Networking.Subnet("subnet1", new OpenStack.Networking.SubnetArgs
+        {
+            Cidr = "192.168.199.0/24",
+            IpVersion = 4,
+            NetworkId = network1.Id,
+        });
+        var loadbalancer1 = new OpenStack.LoadBalancer.LoadBalancer("loadbalancer1", new OpenStack.LoadBalancer.LoadBalancerArgs
+        {
+            VipSubnetId = subnet1.Id,
+        });
+        var listener1 = new OpenStack.LoadBalancer.Listener("listener1", new OpenStack.LoadBalancer.ListenerArgs
+        {
+            LoadbalancerId = loadbalancer1.Id,
+            Protocol = "HTTP",
+            ProtocolPort = 8080,
+        });
+        var pool1 = new OpenStack.LoadBalancer.Pool("pool1", new OpenStack.LoadBalancer.PoolArgs
+        {
+            LbMethod = "ROUND_ROBIN",
+            LoadbalancerId = loadbalancer1.Id,
+            Protocol = "HTTP",
+        });
+        var l7policy1 = new OpenStack.LoadBalancer.L7PolicyV2("l7policy1", new OpenStack.LoadBalancer.L7PolicyV2Args
+        {
+            Action = "REDIRECT_TO_POOL",
+            Description = "test l7 policy",
+            ListenerId = listener1.Id,
+            Position = 1,
+            RedirectPoolId = pool1.Id,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -277,7 +322,9 @@ The L7PolicyV2 resource accepts the following [input]({{< relref "/docs/intro/co
 
     <dt class="property-required"
             title="Required">
-        <span>Action</span>
+        <span id="action_csharp">
+<a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -287,7 +334,9 @@ REDIRECT\_TO\_URL or REJECT.
 
     <dt class="property-required"
             title="Required">
-        <span>Listener<wbr>Id</span>
+        <span id="listenerid_csharp">
+<a href="#listenerid_csharp" style="color: inherit; text-decoration: inherit;">Listener<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -297,7 +346,9 @@ Changing this creates a new L7 Policy.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Admin<wbr>State<wbr>Up</span>
+        <span id="adminstateup_csharp">
+<a href="#adminstateup_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>State<wbr>Up</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -307,7 +358,9 @@ A valid value is true (UP) or false (DOWN).
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -316,7 +369,9 @@ A valid value is true (UP) or false (DOWN).
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -326,7 +381,9 @@ to be unique.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Position</span>
+        <span id="position_csharp">
+<a href="#position_csharp" style="color: inherit; text-decoration: inherit;">Position</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -335,7 +392,9 @@ to be unique.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Redirect<wbr>Pool<wbr>Id</span>
+        <span id="redirectpoolid_csharp">
+<a href="#redirectpoolid_csharp" style="color: inherit; text-decoration: inherit;">Redirect<wbr>Pool<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -345,7 +404,9 @@ pool with this ID. Only valid if action is REDIRECT\_TO\_POOL.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Redirect<wbr>Url</span>
+        <span id="redirecturl_csharp">
+<a href="#redirecturl_csharp" style="color: inherit; text-decoration: inherit;">Redirect<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -355,7 +416,9 @@ Only valid if action is REDIRECT\_TO\_URL.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="region_csharp">
+<a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -367,7 +430,9 @@ L7 Policy.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tenant<wbr>Id</span>
+        <span id="tenantid_csharp">
+<a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -385,7 +450,9 @@ other than their own. Changing this creates a new L7 Policy.
 
     <dt class="property-required"
             title="Required">
-        <span>Action</span>
+        <span id="action_go">
+<a href="#action_go" style="color: inherit; text-decoration: inherit;">Action</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -395,7 +462,9 @@ REDIRECT\_TO\_URL or REJECT.
 
     <dt class="property-required"
             title="Required">
-        <span>Listener<wbr>Id</span>
+        <span id="listenerid_go">
+<a href="#listenerid_go" style="color: inherit; text-decoration: inherit;">Listener<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -405,7 +474,9 @@ Changing this creates a new L7 Policy.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Admin<wbr>State<wbr>Up</span>
+        <span id="adminstateup_go">
+<a href="#adminstateup_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>State<wbr>Up</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -415,7 +486,9 @@ A valid value is true (UP) or false (DOWN).
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -424,7 +497,9 @@ A valid value is true (UP) or false (DOWN).
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -434,7 +509,9 @@ to be unique.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Position</span>
+        <span id="position_go">
+<a href="#position_go" style="color: inherit; text-decoration: inherit;">Position</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -443,7 +520,9 @@ to be unique.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Redirect<wbr>Pool<wbr>Id</span>
+        <span id="redirectpoolid_go">
+<a href="#redirectpoolid_go" style="color: inherit; text-decoration: inherit;">Redirect<wbr>Pool<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -453,7 +532,9 @@ pool with this ID. Only valid if action is REDIRECT\_TO\_POOL.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Redirect<wbr>Url</span>
+        <span id="redirecturl_go">
+<a href="#redirecturl_go" style="color: inherit; text-decoration: inherit;">Redirect<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -463,7 +544,9 @@ Only valid if action is REDIRECT\_TO\_URL.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="region_go">
+<a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -475,7 +558,9 @@ L7 Policy.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tenant<wbr>Id</span>
+        <span id="tenantid_go">
+<a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -493,7 +578,9 @@ other than their own. Changing this creates a new L7 Policy.
 
     <dt class="property-required"
             title="Required">
-        <span>action</span>
+        <span id="action_nodejs">
+<a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -503,7 +590,9 @@ REDIRECT\_TO\_URL or REJECT.
 
     <dt class="property-required"
             title="Required">
-        <span>listener<wbr>Id</span>
+        <span id="listenerid_nodejs">
+<a href="#listenerid_nodejs" style="color: inherit; text-decoration: inherit;">listener<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -513,7 +602,9 @@ Changing this creates a new L7 Policy.
 
     <dt class="property-optional"
             title="Optional">
-        <span>admin<wbr>State<wbr>Up</span>
+        <span id="adminstateup_nodejs">
+<a href="#adminstateup_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>State<wbr>Up</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -523,7 +614,9 @@ A valid value is true (UP) or false (DOWN).
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -532,7 +625,9 @@ A valid value is true (UP) or false (DOWN).
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -542,7 +637,9 @@ to be unique.
 
     <dt class="property-optional"
             title="Optional">
-        <span>position</span>
+        <span id="position_nodejs">
+<a href="#position_nodejs" style="color: inherit; text-decoration: inherit;">position</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -551,7 +648,9 @@ to be unique.
 
     <dt class="property-optional"
             title="Optional">
-        <span>redirect<wbr>Pool<wbr>Id</span>
+        <span id="redirectpoolid_nodejs">
+<a href="#redirectpoolid_nodejs" style="color: inherit; text-decoration: inherit;">redirect<wbr>Pool<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -561,7 +660,9 @@ pool with this ID. Only valid if action is REDIRECT\_TO\_POOL.
 
     <dt class="property-optional"
             title="Optional">
-        <span>redirect<wbr>Url</span>
+        <span id="redirecturl_nodejs">
+<a href="#redirecturl_nodejs" style="color: inherit; text-decoration: inherit;">redirect<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -571,7 +672,9 @@ Only valid if action is REDIRECT\_TO\_URL.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="region_nodejs">
+<a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -583,7 +686,9 @@ L7 Policy.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tenant<wbr>Id</span>
+        <span id="tenantid_nodejs">
+<a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -601,7 +706,9 @@ other than their own. Changing this creates a new L7 Policy.
 
     <dt class="property-required"
             title="Required">
-        <span>action</span>
+        <span id="action_python">
+<a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -611,7 +718,9 @@ REDIRECT\_TO\_URL or REJECT.
 
     <dt class="property-required"
             title="Required">
-        <span>listener_<wbr>id</span>
+        <span id="listener_id_python">
+<a href="#listener_id_python" style="color: inherit; text-decoration: inherit;">listener_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -621,7 +730,9 @@ Changing this creates a new L7 Policy.
 
     <dt class="property-optional"
             title="Optional">
-        <span>admin_<wbr>state_<wbr>up</span>
+        <span id="admin_state_up_python">
+<a href="#admin_state_up_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>state_<wbr>up</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -631,7 +742,9 @@ A valid value is true (UP) or false (DOWN).
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -640,7 +753,9 @@ A valid value is true (UP) or false (DOWN).
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -650,7 +765,9 @@ to be unique.
 
     <dt class="property-optional"
             title="Optional">
-        <span>position</span>
+        <span id="position_python">
+<a href="#position_python" style="color: inherit; text-decoration: inherit;">position</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -659,7 +776,9 @@ to be unique.
 
     <dt class="property-optional"
             title="Optional">
-        <span>redirect_<wbr>pool_<wbr>id</span>
+        <span id="redirect_pool_id_python">
+<a href="#redirect_pool_id_python" style="color: inherit; text-decoration: inherit;">redirect_<wbr>pool_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -669,7 +788,9 @@ pool with this ID. Only valid if action is REDIRECT\_TO\_POOL.
 
     <dt class="property-optional"
             title="Optional">
-        <span>redirect_<wbr>url</span>
+        <span id="redirect_url_python">
+<a href="#redirect_url_python" style="color: inherit; text-decoration: inherit;">redirect_<wbr>url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -679,7 +800,9 @@ Only valid if action is REDIRECT\_TO\_URL.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="region_python">
+<a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -691,7 +814,9 @@ L7 Policy.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tenant_<wbr>id</span>
+        <span id="tenant_id_python">
+<a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -720,7 +845,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -735,7 +862,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -750,7 +879,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -765,7 +896,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -906,7 +1039,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Action</span>
+        <span id="state_action_csharp">
+<a href="#state_action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -916,7 +1051,9 @@ REDIRECT\_TO\_URL or REJECT.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Admin<wbr>State<wbr>Up</span>
+        <span id="state_adminstateup_csharp">
+<a href="#state_adminstateup_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>State<wbr>Up</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -926,7 +1063,9 @@ A valid value is true (UP) or false (DOWN).
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="state_description_csharp">
+<a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -935,7 +1074,9 @@ A valid value is true (UP) or false (DOWN).
 
     <dt class="property-optional"
             title="Optional">
-        <span>Listener<wbr>Id</span>
+        <span id="state_listenerid_csharp">
+<a href="#state_listenerid_csharp" style="color: inherit; text-decoration: inherit;">Listener<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -945,7 +1086,9 @@ Changing this creates a new L7 Policy.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -955,7 +1098,9 @@ to be unique.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Position</span>
+        <span id="state_position_csharp">
+<a href="#state_position_csharp" style="color: inherit; text-decoration: inherit;">Position</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -964,7 +1109,9 @@ to be unique.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Redirect<wbr>Pool<wbr>Id</span>
+        <span id="state_redirectpoolid_csharp">
+<a href="#state_redirectpoolid_csharp" style="color: inherit; text-decoration: inherit;">Redirect<wbr>Pool<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -974,7 +1121,9 @@ pool with this ID. Only valid if action is REDIRECT\_TO\_POOL.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Redirect<wbr>Url</span>
+        <span id="state_redirecturl_csharp">
+<a href="#state_redirecturl_csharp" style="color: inherit; text-decoration: inherit;">Redirect<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -984,7 +1133,9 @@ Only valid if action is REDIRECT\_TO\_URL.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="state_region_csharp">
+<a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -996,7 +1147,9 @@ L7 Policy.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tenant<wbr>Id</span>
+        <span id="state_tenantid_csharp">
+<a href="#state_tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1014,7 +1167,9 @@ other than their own. Changing this creates a new L7 Policy.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Action</span>
+        <span id="state_action_go">
+<a href="#state_action_go" style="color: inherit; text-decoration: inherit;">Action</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1024,7 +1179,9 @@ REDIRECT\_TO\_URL or REJECT.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Admin<wbr>State<wbr>Up</span>
+        <span id="state_adminstateup_go">
+<a href="#state_adminstateup_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>State<wbr>Up</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1034,7 +1191,9 @@ A valid value is true (UP) or false (DOWN).
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="state_description_go">
+<a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1043,7 +1202,9 @@ A valid value is true (UP) or false (DOWN).
 
     <dt class="property-optional"
             title="Optional">
-        <span>Listener<wbr>Id</span>
+        <span id="state_listenerid_go">
+<a href="#state_listenerid_go" style="color: inherit; text-decoration: inherit;">Listener<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1053,7 +1214,9 @@ Changing this creates a new L7 Policy.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1063,7 +1226,9 @@ to be unique.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Position</span>
+        <span id="state_position_go">
+<a href="#state_position_go" style="color: inherit; text-decoration: inherit;">Position</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1072,7 +1237,9 @@ to be unique.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Redirect<wbr>Pool<wbr>Id</span>
+        <span id="state_redirectpoolid_go">
+<a href="#state_redirectpoolid_go" style="color: inherit; text-decoration: inherit;">Redirect<wbr>Pool<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1082,7 +1249,9 @@ pool with this ID. Only valid if action is REDIRECT\_TO\_POOL.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Redirect<wbr>Url</span>
+        <span id="state_redirecturl_go">
+<a href="#state_redirecturl_go" style="color: inherit; text-decoration: inherit;">Redirect<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1092,7 +1261,9 @@ Only valid if action is REDIRECT\_TO\_URL.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="state_region_go">
+<a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1104,7 +1275,9 @@ L7 Policy.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tenant<wbr>Id</span>
+        <span id="state_tenantid_go">
+<a href="#state_tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1122,7 +1295,9 @@ other than their own. Changing this creates a new L7 Policy.
 
     <dt class="property-optional"
             title="Optional">
-        <span>action</span>
+        <span id="state_action_nodejs">
+<a href="#state_action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1132,7 +1307,9 @@ REDIRECT\_TO\_URL or REJECT.
 
     <dt class="property-optional"
             title="Optional">
-        <span>admin<wbr>State<wbr>Up</span>
+        <span id="state_adminstateup_nodejs">
+<a href="#state_adminstateup_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>State<wbr>Up</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1142,7 +1319,9 @@ A valid value is true (UP) or false (DOWN).
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="state_description_nodejs">
+<a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1151,7 +1330,9 @@ A valid value is true (UP) or false (DOWN).
 
     <dt class="property-optional"
             title="Optional">
-        <span>listener<wbr>Id</span>
+        <span id="state_listenerid_nodejs">
+<a href="#state_listenerid_nodejs" style="color: inherit; text-decoration: inherit;">listener<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1161,7 +1342,9 @@ Changing this creates a new L7 Policy.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1171,7 +1354,9 @@ to be unique.
 
     <dt class="property-optional"
             title="Optional">
-        <span>position</span>
+        <span id="state_position_nodejs">
+<a href="#state_position_nodejs" style="color: inherit; text-decoration: inherit;">position</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1180,7 +1365,9 @@ to be unique.
 
     <dt class="property-optional"
             title="Optional">
-        <span>redirect<wbr>Pool<wbr>Id</span>
+        <span id="state_redirectpoolid_nodejs">
+<a href="#state_redirectpoolid_nodejs" style="color: inherit; text-decoration: inherit;">redirect<wbr>Pool<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1190,7 +1377,9 @@ pool with this ID. Only valid if action is REDIRECT\_TO\_POOL.
 
     <dt class="property-optional"
             title="Optional">
-        <span>redirect<wbr>Url</span>
+        <span id="state_redirecturl_nodejs">
+<a href="#state_redirecturl_nodejs" style="color: inherit; text-decoration: inherit;">redirect<wbr>Url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1200,7 +1389,9 @@ Only valid if action is REDIRECT\_TO\_URL.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="state_region_nodejs">
+<a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1212,7 +1403,9 @@ L7 Policy.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tenant<wbr>Id</span>
+        <span id="state_tenantid_nodejs">
+<a href="#state_tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1230,7 +1423,9 @@ other than their own. Changing this creates a new L7 Policy.
 
     <dt class="property-optional"
             title="Optional">
-        <span>action</span>
+        <span id="state_action_python">
+<a href="#state_action_python" style="color: inherit; text-decoration: inherit;">action</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1240,7 +1435,9 @@ REDIRECT\_TO\_URL or REJECT.
 
     <dt class="property-optional"
             title="Optional">
-        <span>admin_<wbr>state_<wbr>up</span>
+        <span id="state_admin_state_up_python">
+<a href="#state_admin_state_up_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>state_<wbr>up</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1250,7 +1447,9 @@ A valid value is true (UP) or false (DOWN).
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="state_description_python">
+<a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1259,7 +1458,9 @@ A valid value is true (UP) or false (DOWN).
 
     <dt class="property-optional"
             title="Optional">
-        <span>listener_<wbr>id</span>
+        <span id="state_listener_id_python">
+<a href="#state_listener_id_python" style="color: inherit; text-decoration: inherit;">listener_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1269,7 +1470,9 @@ Changing this creates a new L7 Policy.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1279,7 +1482,9 @@ to be unique.
 
     <dt class="property-optional"
             title="Optional">
-        <span>position</span>
+        <span id="state_position_python">
+<a href="#state_position_python" style="color: inherit; text-decoration: inherit;">position</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1288,7 +1493,9 @@ to be unique.
 
     <dt class="property-optional"
             title="Optional">
-        <span>redirect_<wbr>pool_<wbr>id</span>
+        <span id="state_redirect_pool_id_python">
+<a href="#state_redirect_pool_id_python" style="color: inherit; text-decoration: inherit;">redirect_<wbr>pool_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1298,7 +1505,9 @@ pool with this ID. Only valid if action is REDIRECT\_TO\_POOL.
 
     <dt class="property-optional"
             title="Optional">
-        <span>redirect_<wbr>url</span>
+        <span id="state_redirect_url_python">
+<a href="#state_redirect_url_python" style="color: inherit; text-decoration: inherit;">redirect_<wbr>url</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1308,7 +1517,9 @@ Only valid if action is REDIRECT\_TO\_URL.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="state_region_python">
+<a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1320,7 +1531,9 @@ L7 Policy.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tenant_<wbr>id</span>
+        <span id="state_tenant_id_python">
+<a href="#state_tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

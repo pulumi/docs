@@ -27,7 +27,27 @@ documentation.
 {{< chooser language "typescript,python,go,csharp" / >}}
 ### Simple port
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var network1 = new OpenStack.Networking.Network("network1", new OpenStack.Networking.NetworkArgs
+        {
+            AdminStateUp = "true",
+        });
+        var port1 = new OpenStack.Networking.Port("port1", new OpenStack.Networking.PortArgs
+        {
+            AdminStateUp = "true",
+            NetworkId = network1.Id,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -63,7 +83,51 @@ const port1 = new openstack.networking.Port("port_1", {
 
 ### Port with physical binding information
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var network1 = new OpenStack.Networking.Network("network1", new OpenStack.Networking.NetworkArgs
+        {
+            AdminStateUp = "true",
+        });
+        var port1 = new OpenStack.Networking.Port("port1", new OpenStack.Networking.PortArgs
+        {
+            AdminStateUp = "true",
+            Binding = new OpenStack.Networking.Inputs.PortBindingArgs
+            {
+                HostId = "b080b9cf-46e0-4ce8-ad47-0fd4accc872b",
+                Profile = @"{
+  ""local_link_information"": [
+    {
+      ""switch_info"": ""info1"",
+      ""port_id"": ""Ethernet3/4"",
+      ""switch_id"": ""12:34:56:78:9A:BC""
+    },
+    {
+      ""switch_info"": ""info2"",
+      ""port_id"": ""Ethernet3/4"",
+      ""switch_id"": ""12:34:56:78:9A:BD""
+    }
+  ],
+  ""vlan_type"": ""allowed""
+}
+
+",
+                VnicType = "baremetal",
+            },
+            DeviceId = "cdf70fcf-c161-4f24-9c70-96b3f5a54b71",
+            DeviceOwner = "baremetal:none",
+            NetworkId = network1.Id,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -328,7 +392,9 @@ The Port resource accepts the following [input]({{< relref "/docs/intro/concepts
 
     <dt class="property-required"
             title="Required">
-        <span>Network<wbr>Id</span>
+        <span id="networkid_csharp">
+<a href="#networkid_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -338,7 +404,9 @@ this creates a new port.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Admin<wbr>State<wbr>Up</span>
+        <span id="adminstateup_csharp">
+<a href="#adminstateup_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>State<wbr>Up</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -349,7 +417,9 @@ this creates a new port.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Allowed<wbr>Address<wbr>Pairs</span>
+        <span id="allowedaddresspairs_csharp">
+<a href="#allowedaddresspairs_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Address<wbr>Pairs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#portallowedaddresspair">List&lt;Pulumi.<wbr>Open<wbr>Stack.<wbr>Networking.<wbr>Inputs.<wbr>Port<wbr>Allowed<wbr>Address<wbr>Pair<wbr>Args&gt;</a></span>
     </dt>
@@ -360,7 +430,9 @@ below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Binding</span>
+        <span id="binding_csharp">
+<a href="#binding_csharp" style="color: inherit; text-decoration: inherit;">Binding</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#portbinding">Pulumi.<wbr>Open<wbr>Stack.<wbr>Networking.<wbr>Inputs.<wbr>Port<wbr>Binding<wbr>Args</a></span>
     </dt>
@@ -370,7 +442,9 @@ for the port. The structure is described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -380,7 +454,9 @@ this updates the `description` of an existing port.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Device<wbr>Id</span>
+        <span id="deviceid_csharp">
+<a href="#deviceid_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -390,7 +466,9 @@ creates a new port.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Device<wbr>Owner</span>
+        <span id="deviceowner_csharp">
+<a href="#deviceowner_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Owner</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -400,7 +478,9 @@ a new port.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Dns<wbr>Name</span>
+        <span id="dnsname_csharp">
+<a href="#dnsname_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -410,7 +490,9 @@ is enabled.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Extra<wbr>Dhcp<wbr>Options</span>
+        <span id="extradhcpoptions_csharp">
+<a href="#extradhcpoptions_csharp" style="color: inherit; text-decoration: inherit;">Extra<wbr>Dhcp<wbr>Options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#portextradhcpoption">List&lt;Pulumi.<wbr>Open<wbr>Stack.<wbr>Networking.<wbr>Inputs.<wbr>Port<wbr>Extra<wbr>Dhcp<wbr>Option<wbr>Args&gt;</a></span>
     </dt>
@@ -421,7 +503,9 @@ times.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Fixed<wbr>Ips</span>
+        <span id="fixedips_csharp">
+<a href="#fixedips_csharp" style="color: inherit; text-decoration: inherit;">Fixed<wbr>Ips</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#portfixedip">List&lt;Pulumi.<wbr>Open<wbr>Stack.<wbr>Networking.<wbr>Inputs.<wbr>Port<wbr>Fixed<wbr>Ip<wbr>Args&gt;</a></span>
     </dt>
@@ -431,7 +515,9 @@ this port. The structure is described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Mac<wbr>Address</span>
+        <span id="macaddress_csharp">
+<a href="#macaddress_csharp" style="color: inherit; text-decoration: inherit;">Mac<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -440,7 +526,9 @@ this port. The structure is described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -449,7 +537,9 @@ this port. The structure is described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>No<wbr>Fixed<wbr>Ip</span>
+        <span id="nofixedip_csharp">
+<a href="#nofixedip_csharp" style="color: inherit; text-decoration: inherit;">No<wbr>Fixed<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -460,7 +550,9 @@ is the only valid value for this argument.
 
     <dt class="property-optional"
             title="Optional">
-        <span>No<wbr>Security<wbr>Groups</span>
+        <span id="nosecuritygroups_csharp">
+<a href="#nosecuritygroups_csharp" style="color: inherit; text-decoration: inherit;">No<wbr>Security<wbr>Groups</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -473,7 +565,9 @@ security group.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Port<wbr>Security<wbr>Enabled</span>
+        <span id="portsecurityenabled_csharp">
+<a href="#portsecurityenabled_csharp" style="color: inherit; text-decoration: inherit;">Port<wbr>Security<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -487,7 +581,9 @@ and `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Qos<wbr>Policy<wbr>Id</span>
+        <span id="qospolicyid_csharp">
+<a href="#qospolicyid_csharp" style="color: inherit; text-decoration: inherit;">Qos<wbr>Policy<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -496,7 +592,9 @@ and `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="region_csharp">
+<a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -508,7 +606,9 @@ port.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Security<wbr>Group<wbr>Ids</span>
+        <span id="securitygroupids_csharp">
+<a href="#securitygroupids_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -520,7 +620,9 @@ the Compute Instance).
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -529,7 +631,9 @@ the Compute Instance).
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tenant<wbr>Id</span>
+        <span id="tenantid_csharp">
+<a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -539,7 +643,9 @@ to create a port for another tenant. Changing this creates a new port.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Value<wbr>Specs</span>
+        <span id="valuespecs_csharp">
+<a href="#valuespecs_csharp" style="color: inherit; text-decoration: inherit;">Value<wbr>Specs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -555,7 +661,9 @@ to create a port for another tenant. Changing this creates a new port.
 
     <dt class="property-required"
             title="Required">
-        <span>Network<wbr>Id</span>
+        <span id="networkid_go">
+<a href="#networkid_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -565,7 +673,9 @@ this creates a new port.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Admin<wbr>State<wbr>Up</span>
+        <span id="adminstateup_go">
+<a href="#adminstateup_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>State<wbr>Up</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -576,7 +686,9 @@ this creates a new port.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Allowed<wbr>Address<wbr>Pairs</span>
+        <span id="allowedaddresspairs_go">
+<a href="#allowedaddresspairs_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Address<wbr>Pairs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#portallowedaddresspair">[]Port<wbr>Allowed<wbr>Address<wbr>Pair</a></span>
     </dt>
@@ -587,7 +699,9 @@ below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Binding</span>
+        <span id="binding_go">
+<a href="#binding_go" style="color: inherit; text-decoration: inherit;">Binding</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#portbinding">Port<wbr>Binding</a></span>
     </dt>
@@ -597,7 +711,9 @@ for the port. The structure is described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -607,7 +723,9 @@ this updates the `description` of an existing port.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Device<wbr>Id</span>
+        <span id="deviceid_go">
+<a href="#deviceid_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -617,7 +735,9 @@ creates a new port.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Device<wbr>Owner</span>
+        <span id="deviceowner_go">
+<a href="#deviceowner_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Owner</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -627,7 +747,9 @@ a new port.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Dns<wbr>Name</span>
+        <span id="dnsname_go">
+<a href="#dnsname_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -637,7 +759,9 @@ is enabled.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Extra<wbr>Dhcp<wbr>Options</span>
+        <span id="extradhcpoptions_go">
+<a href="#extradhcpoptions_go" style="color: inherit; text-decoration: inherit;">Extra<wbr>Dhcp<wbr>Options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#portextradhcpoption">[]Port<wbr>Extra<wbr>Dhcp<wbr>Option</a></span>
     </dt>
@@ -648,7 +772,9 @@ times.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Fixed<wbr>Ips</span>
+        <span id="fixedips_go">
+<a href="#fixedips_go" style="color: inherit; text-decoration: inherit;">Fixed<wbr>Ips</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#portfixedip">[]Port<wbr>Fixed<wbr>Ip</a></span>
     </dt>
@@ -658,7 +784,9 @@ this port. The structure is described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Mac<wbr>Address</span>
+        <span id="macaddress_go">
+<a href="#macaddress_go" style="color: inherit; text-decoration: inherit;">Mac<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -667,7 +795,9 @@ this port. The structure is described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -676,7 +806,9 @@ this port. The structure is described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>No<wbr>Fixed<wbr>Ip</span>
+        <span id="nofixedip_go">
+<a href="#nofixedip_go" style="color: inherit; text-decoration: inherit;">No<wbr>Fixed<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -687,7 +819,9 @@ is the only valid value for this argument.
 
     <dt class="property-optional"
             title="Optional">
-        <span>No<wbr>Security<wbr>Groups</span>
+        <span id="nosecuritygroups_go">
+<a href="#nosecuritygroups_go" style="color: inherit; text-decoration: inherit;">No<wbr>Security<wbr>Groups</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -700,7 +834,9 @@ security group.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Port<wbr>Security<wbr>Enabled</span>
+        <span id="portsecurityenabled_go">
+<a href="#portsecurityenabled_go" style="color: inherit; text-decoration: inherit;">Port<wbr>Security<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -714,7 +850,9 @@ and `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Qos<wbr>Policy<wbr>Id</span>
+        <span id="qospolicyid_go">
+<a href="#qospolicyid_go" style="color: inherit; text-decoration: inherit;">Qos<wbr>Policy<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -723,7 +861,9 @@ and `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="region_go">
+<a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -735,7 +875,9 @@ port.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Security<wbr>Group<wbr>Ids</span>
+        <span id="securitygroupids_go">
+<a href="#securitygroupids_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -747,7 +889,9 @@ the Compute Instance).
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -756,7 +900,9 @@ the Compute Instance).
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tenant<wbr>Id</span>
+        <span id="tenantid_go">
+<a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -766,7 +912,9 @@ to create a port for another tenant. Changing this creates a new port.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Value<wbr>Specs</span>
+        <span id="valuespecs_go">
+<a href="#valuespecs_go" style="color: inherit; text-decoration: inherit;">Value<wbr>Specs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -782,7 +930,9 @@ to create a port for another tenant. Changing this creates a new port.
 
     <dt class="property-required"
             title="Required">
-        <span>network<wbr>Id</span>
+        <span id="networkid_nodejs">
+<a href="#networkid_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -792,7 +942,9 @@ this creates a new port.
 
     <dt class="property-optional"
             title="Optional">
-        <span>admin<wbr>State<wbr>Up</span>
+        <span id="adminstateup_nodejs">
+<a href="#adminstateup_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>State<wbr>Up</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -803,7 +955,9 @@ this creates a new port.
 
     <dt class="property-optional"
             title="Optional">
-        <span>allowed<wbr>Address<wbr>Pairs</span>
+        <span id="allowedaddresspairs_nodejs">
+<a href="#allowedaddresspairs_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Address<wbr>Pairs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#portallowedaddresspair">Port<wbr>Allowed<wbr>Address<wbr>Pair[]</a></span>
     </dt>
@@ -814,7 +968,9 @@ below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>binding</span>
+        <span id="binding_nodejs">
+<a href="#binding_nodejs" style="color: inherit; text-decoration: inherit;">binding</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#portbinding">Port<wbr>Binding</a></span>
     </dt>
@@ -824,7 +980,9 @@ for the port. The structure is described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -834,7 +992,9 @@ this updates the `description` of an existing port.
 
     <dt class="property-optional"
             title="Optional">
-        <span>device<wbr>Id</span>
+        <span id="deviceid_nodejs">
+<a href="#deviceid_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -844,7 +1004,9 @@ creates a new port.
 
     <dt class="property-optional"
             title="Optional">
-        <span>device<wbr>Owner</span>
+        <span id="deviceowner_nodejs">
+<a href="#deviceowner_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Owner</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -854,7 +1016,9 @@ a new port.
 
     <dt class="property-optional"
             title="Optional">
-        <span>dns<wbr>Name</span>
+        <span id="dnsname_nodejs">
+<a href="#dnsname_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -864,7 +1028,9 @@ is enabled.
 
     <dt class="property-optional"
             title="Optional">
-        <span>extra<wbr>Dhcp<wbr>Options</span>
+        <span id="extradhcpoptions_nodejs">
+<a href="#extradhcpoptions_nodejs" style="color: inherit; text-decoration: inherit;">extra<wbr>Dhcp<wbr>Options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#portextradhcpoption">Port<wbr>Extra<wbr>Dhcp<wbr>Option[]</a></span>
     </dt>
@@ -875,7 +1041,9 @@ times.
 
     <dt class="property-optional"
             title="Optional">
-        <span>fixed<wbr>Ips</span>
+        <span id="fixedips_nodejs">
+<a href="#fixedips_nodejs" style="color: inherit; text-decoration: inherit;">fixed<wbr>Ips</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#portfixedip">Port<wbr>Fixed<wbr>Ip[]</a></span>
     </dt>
@@ -885,7 +1053,9 @@ this port. The structure is described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>mac<wbr>Address</span>
+        <span id="macaddress_nodejs">
+<a href="#macaddress_nodejs" style="color: inherit; text-decoration: inherit;">mac<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -894,7 +1064,9 @@ this port. The structure is described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -903,7 +1075,9 @@ this port. The structure is described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>no<wbr>Fixed<wbr>Ip</span>
+        <span id="nofixedip_nodejs">
+<a href="#nofixedip_nodejs" style="color: inherit; text-decoration: inherit;">no<wbr>Fixed<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -914,7 +1088,9 @@ is the only valid value for this argument.
 
     <dt class="property-optional"
             title="Optional">
-        <span>no<wbr>Security<wbr>Groups</span>
+        <span id="nosecuritygroups_nodejs">
+<a href="#nosecuritygroups_nodejs" style="color: inherit; text-decoration: inherit;">no<wbr>Security<wbr>Groups</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -927,7 +1103,9 @@ security group.
 
     <dt class="property-optional"
             title="Optional">
-        <span>port<wbr>Security<wbr>Enabled</span>
+        <span id="portsecurityenabled_nodejs">
+<a href="#portsecurityenabled_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Security<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -941,7 +1119,9 @@ and `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>qos<wbr>Policy<wbr>Id</span>
+        <span id="qospolicyid_nodejs">
+<a href="#qospolicyid_nodejs" style="color: inherit; text-decoration: inherit;">qos<wbr>Policy<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -950,7 +1130,9 @@ and `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="region_nodejs">
+<a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -962,7 +1144,9 @@ port.
 
     <dt class="property-optional"
             title="Optional">
-        <span>security<wbr>Group<wbr>Ids</span>
+        <span id="securitygroupids_nodejs">
+<a href="#securitygroupids_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Group<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -974,7 +1158,9 @@ the Compute Instance).
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -983,7 +1169,9 @@ the Compute Instance).
 
     <dt class="property-optional"
             title="Optional">
-        <span>tenant<wbr>Id</span>
+        <span id="tenantid_nodejs">
+<a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -993,7 +1181,9 @@ to create a port for another tenant. Changing this creates a new port.
 
     <dt class="property-optional"
             title="Optional">
-        <span>value<wbr>Specs</span>
+        <span id="valuespecs_nodejs">
+<a href="#valuespecs_nodejs" style="color: inherit; text-decoration: inherit;">value<wbr>Specs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -1009,7 +1199,9 @@ to create a port for another tenant. Changing this creates a new port.
 
     <dt class="property-required"
             title="Required">
-        <span>network_<wbr>id</span>
+        <span id="network_id_python">
+<a href="#network_id_python" style="color: inherit; text-decoration: inherit;">network_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1019,7 +1211,9 @@ this creates a new port.
 
     <dt class="property-optional"
             title="Optional">
-        <span>admin_<wbr>state_<wbr>up</span>
+        <span id="admin_state_up_python">
+<a href="#admin_state_up_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>state_<wbr>up</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1030,7 +1224,9 @@ this creates a new port.
 
     <dt class="property-optional"
             title="Optional">
-        <span>allowed_<wbr>address_<wbr>pairs</span>
+        <span id="allowed_address_pairs_python">
+<a href="#allowed_address_pairs_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>address_<wbr>pairs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#portallowedaddresspair">List[Port<wbr>Allowed<wbr>Address<wbr>Pair]</a></span>
     </dt>
@@ -1041,7 +1237,9 @@ below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>binding</span>
+        <span id="binding_python">
+<a href="#binding_python" style="color: inherit; text-decoration: inherit;">binding</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#portbinding">Dict[Port<wbr>Binding]</a></span>
     </dt>
@@ -1051,7 +1249,9 @@ for the port. The structure is described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1061,7 +1261,9 @@ this updates the `description` of an existing port.
 
     <dt class="property-optional"
             title="Optional">
-        <span>device_<wbr>id</span>
+        <span id="device_id_python">
+<a href="#device_id_python" style="color: inherit; text-decoration: inherit;">device_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1071,7 +1273,9 @@ creates a new port.
 
     <dt class="property-optional"
             title="Optional">
-        <span>device_<wbr>owner</span>
+        <span id="device_owner_python">
+<a href="#device_owner_python" style="color: inherit; text-decoration: inherit;">device_<wbr>owner</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1081,7 +1285,9 @@ a new port.
 
     <dt class="property-optional"
             title="Optional">
-        <span>dns_<wbr>name</span>
+        <span id="dns_name_python">
+<a href="#dns_name_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1091,7 +1297,9 @@ is enabled.
 
     <dt class="property-optional"
             title="Optional">
-        <span>extra_<wbr>dhcp_<wbr>options</span>
+        <span id="extra_dhcp_options_python">
+<a href="#extra_dhcp_options_python" style="color: inherit; text-decoration: inherit;">extra_<wbr>dhcp_<wbr>options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#portextradhcpoption">List[Port<wbr>Extra<wbr>Dhcp<wbr>Option]</a></span>
     </dt>
@@ -1102,7 +1310,9 @@ times.
 
     <dt class="property-optional"
             title="Optional">
-        <span>fixed_<wbr>ips</span>
+        <span id="fixed_ips_python">
+<a href="#fixed_ips_python" style="color: inherit; text-decoration: inherit;">fixed_<wbr>ips</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#portfixedip">List[Port<wbr>Fixed<wbr>Ip]</a></span>
     </dt>
@@ -1112,7 +1322,9 @@ this port. The structure is described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>mac_<wbr>address</span>
+        <span id="mac_address_python">
+<a href="#mac_address_python" style="color: inherit; text-decoration: inherit;">mac_<wbr>address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1121,7 +1333,9 @@ this port. The structure is described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1130,7 +1344,9 @@ this port. The structure is described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>no_<wbr>fixed_<wbr>ip</span>
+        <span id="no_fixed_ip_python">
+<a href="#no_fixed_ip_python" style="color: inherit; text-decoration: inherit;">no_<wbr>fixed_<wbr>ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1141,7 +1357,9 @@ is the only valid value for this argument.
 
     <dt class="property-optional"
             title="Optional">
-        <span>no_<wbr>security_<wbr>groups</span>
+        <span id="no_security_groups_python">
+<a href="#no_security_groups_python" style="color: inherit; text-decoration: inherit;">no_<wbr>security_<wbr>groups</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1154,7 +1372,9 @@ security group.
 
     <dt class="property-optional"
             title="Optional">
-        <span>port_<wbr>security_<wbr>enabled</span>
+        <span id="port_security_enabled_python">
+<a href="#port_security_enabled_python" style="color: inherit; text-decoration: inherit;">port_<wbr>security_<wbr>enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1168,7 +1388,9 @@ and `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>qos_<wbr>policy_<wbr>id</span>
+        <span id="qos_policy_id_python">
+<a href="#qos_policy_id_python" style="color: inherit; text-decoration: inherit;">qos_<wbr>policy_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1177,7 +1399,9 @@ and `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="region_python">
+<a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1189,7 +1413,9 @@ port.
 
     <dt class="property-optional"
             title="Optional">
-        <span>security_<wbr>group_<wbr>ids</span>
+        <span id="security_group_ids_python">
+<a href="#security_group_ids_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group_<wbr>ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1201,7 +1427,9 @@ the Compute Instance).
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1210,7 +1438,9 @@ the Compute Instance).
 
     <dt class="property-optional"
             title="Optional">
-        <span>tenant_<wbr>id</span>
+        <span id="tenant_id_python">
+<a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1220,7 +1450,9 @@ to create a port for another tenant. Changing this creates a new port.
 
     <dt class="property-optional"
             title="Optional">
-        <span>value_<wbr>specs</span>
+        <span id="value_specs_python">
+<a href="#value_specs_python" style="color: inherit; text-decoration: inherit;">value_<wbr>specs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -1247,7 +1479,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>All<wbr>Fixed<wbr>Ips</span>
+        <span id="allfixedips_csharp">
+<a href="#allfixedips_csharp" style="color: inherit; text-decoration: inherit;">All<wbr>Fixed<wbr>Ips</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1257,7 +1491,9 @@ order returned by the Network v2 API.
 
     <dt class="property-"
             title="">
-        <span>All<wbr>Security<wbr>Group<wbr>Ids</span>
+        <span id="allsecuritygroupids_csharp">
+<a href="#allsecuritygroupids_csharp" style="color: inherit; text-decoration: inherit;">All<wbr>Security<wbr>Group<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1267,7 +1503,9 @@ which have been explicitly and implicitly added.
 
     <dt class="property-"
             title="">
-        <span>All<wbr>Tags</span>
+        <span id="alltags_csharp">
+<a href="#alltags_csharp" style="color: inherit; text-decoration: inherit;">All<wbr>Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1277,7 +1515,9 @@ explicitly and implicitly added.
 
     <dt class="property-"
             title="">
-        <span>Dns<wbr>Assignments</span>
+        <span id="dnsassignments_csharp">
+<a href="#dnsassignments_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Assignments</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;Immutable<wbr>Dictionary&lt;string, object&gt;&gt;</span>
     </dt>
@@ -1286,7 +1526,9 @@ explicitly and implicitly added.
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1301,7 +1543,9 @@ explicitly and implicitly added.
 
     <dt class="property-"
             title="">
-        <span>All<wbr>Fixed<wbr>Ips</span>
+        <span id="allfixedips_go">
+<a href="#allfixedips_go" style="color: inherit; text-decoration: inherit;">All<wbr>Fixed<wbr>Ips</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1311,7 +1555,9 @@ order returned by the Network v2 API.
 
     <dt class="property-"
             title="">
-        <span>All<wbr>Security<wbr>Group<wbr>Ids</span>
+        <span id="allsecuritygroupids_go">
+<a href="#allsecuritygroupids_go" style="color: inherit; text-decoration: inherit;">All<wbr>Security<wbr>Group<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1321,7 +1567,9 @@ which have been explicitly and implicitly added.
 
     <dt class="property-"
             title="">
-        <span>All<wbr>Tags</span>
+        <span id="alltags_go">
+<a href="#alltags_go" style="color: inherit; text-decoration: inherit;">All<wbr>Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1331,7 +1579,9 @@ explicitly and implicitly added.
 
     <dt class="property-"
             title="">
-        <span>Dns<wbr>Assignments</span>
+        <span id="dnsassignments_go">
+<a href="#dnsassignments_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Assignments</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">[]map[string]interface{}</span>
     </dt>
@@ -1340,7 +1590,9 @@ explicitly and implicitly added.
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1355,7 +1607,9 @@ explicitly and implicitly added.
 
     <dt class="property-"
             title="">
-        <span>all<wbr>Fixed<wbr>Ips</span>
+        <span id="allfixedips_nodejs">
+<a href="#allfixedips_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Fixed<wbr>Ips</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1365,7 +1619,9 @@ order returned by the Network v2 API.
 
     <dt class="property-"
             title="">
-        <span>all<wbr>Security<wbr>Group<wbr>Ids</span>
+        <span id="allsecuritygroupids_nodejs">
+<a href="#allsecuritygroupids_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Security<wbr>Group<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1375,7 +1631,9 @@ which have been explicitly and implicitly added.
 
     <dt class="property-"
             title="">
-        <span>all<wbr>Tags</span>
+        <span id="alltags_nodejs">
+<a href="#alltags_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1385,7 +1643,9 @@ explicitly and implicitly added.
 
     <dt class="property-"
             title="">
-        <span>dns<wbr>Assignments</span>
+        <span id="dnsassignments_nodejs">
+<a href="#dnsassignments_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Assignments</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}[]</span>
     </dt>
@@ -1394,7 +1654,9 @@ explicitly and implicitly added.
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1409,7 +1671,9 @@ explicitly and implicitly added.
 
     <dt class="property-"
             title="">
-        <span>all_<wbr>fixed_<wbr>ips</span>
+        <span id="all_fixed_ips_python">
+<a href="#all_fixed_ips_python" style="color: inherit; text-decoration: inherit;">all_<wbr>fixed_<wbr>ips</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1419,7 +1683,9 @@ order returned by the Network v2 API.
 
     <dt class="property-"
             title="">
-        <span>all_<wbr>security_<wbr>group_<wbr>ids</span>
+        <span id="all_security_group_ids_python">
+<a href="#all_security_group_ids_python" style="color: inherit; text-decoration: inherit;">all_<wbr>security_<wbr>group_<wbr>ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1429,7 +1695,9 @@ which have been explicitly and implicitly added.
 
     <dt class="property-"
             title="">
-        <span>all_<wbr>tags</span>
+        <span id="all_tags_python">
+<a href="#all_tags_python" style="color: inherit; text-decoration: inherit;">all_<wbr>tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1439,7 +1707,9 @@ explicitly and implicitly added.
 
     <dt class="property-"
             title="">
-        <span>dns_<wbr>assignments</span>
+        <span id="dns_assignments_python">
+<a href="#dns_assignments_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>assignments</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">List[Any>]</span>
     </dt>
@@ -1448,7 +1718,9 @@ explicitly and implicitly added.
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1589,7 +1861,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Admin<wbr>State<wbr>Up</span>
+        <span id="state_adminstateup_csharp">
+<a href="#state_adminstateup_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>State<wbr>Up</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1600,7 +1874,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>All<wbr>Fixed<wbr>Ips</span>
+        <span id="state_allfixedips_csharp">
+<a href="#state_allfixedips_csharp" style="color: inherit; text-decoration: inherit;">All<wbr>Fixed<wbr>Ips</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1610,7 +1886,9 @@ order returned by the Network v2 API.
 
     <dt class="property-optional"
             title="Optional">
-        <span>All<wbr>Security<wbr>Group<wbr>Ids</span>
+        <span id="state_allsecuritygroupids_csharp">
+<a href="#state_allsecuritygroupids_csharp" style="color: inherit; text-decoration: inherit;">All<wbr>Security<wbr>Group<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1620,7 +1898,9 @@ which have been explicitly and implicitly added.
 
     <dt class="property-optional"
             title="Optional">
-        <span>All<wbr>Tags</span>
+        <span id="state_alltags_csharp">
+<a href="#state_alltags_csharp" style="color: inherit; text-decoration: inherit;">All<wbr>Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1630,7 +1910,9 @@ explicitly and implicitly added.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Allowed<wbr>Address<wbr>Pairs</span>
+        <span id="state_allowedaddresspairs_csharp">
+<a href="#state_allowedaddresspairs_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Address<wbr>Pairs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#portallowedaddresspair">List&lt;Pulumi.<wbr>Open<wbr>Stack.<wbr>Networking.<wbr>Inputs.<wbr>Port<wbr>Allowed<wbr>Address<wbr>Pair<wbr>Args&gt;</a></span>
     </dt>
@@ -1641,7 +1923,9 @@ below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Binding</span>
+        <span id="state_binding_csharp">
+<a href="#state_binding_csharp" style="color: inherit; text-decoration: inherit;">Binding</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#portbinding">Pulumi.<wbr>Open<wbr>Stack.<wbr>Networking.<wbr>Inputs.<wbr>Port<wbr>Binding<wbr>Args</a></span>
     </dt>
@@ -1651,7 +1935,9 @@ for the port. The structure is described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="state_description_csharp">
+<a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1661,7 +1947,9 @@ this updates the `description` of an existing port.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Device<wbr>Id</span>
+        <span id="state_deviceid_csharp">
+<a href="#state_deviceid_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1671,7 +1959,9 @@ creates a new port.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Device<wbr>Owner</span>
+        <span id="state_deviceowner_csharp">
+<a href="#state_deviceowner_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Owner</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1681,7 +1971,9 @@ a new port.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Dns<wbr>Assignments</span>
+        <span id="state_dnsassignments_csharp">
+<a href="#state_dnsassignments_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Assignments</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;Immutable<wbr>Dictionary&lt;string, object&gt;&gt;</span>
     </dt>
@@ -1690,7 +1982,9 @@ a new port.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Dns<wbr>Name</span>
+        <span id="state_dnsname_csharp">
+<a href="#state_dnsname_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1700,7 +1994,9 @@ is enabled.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Extra<wbr>Dhcp<wbr>Options</span>
+        <span id="state_extradhcpoptions_csharp">
+<a href="#state_extradhcpoptions_csharp" style="color: inherit; text-decoration: inherit;">Extra<wbr>Dhcp<wbr>Options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#portextradhcpoption">List&lt;Pulumi.<wbr>Open<wbr>Stack.<wbr>Networking.<wbr>Inputs.<wbr>Port<wbr>Extra<wbr>Dhcp<wbr>Option<wbr>Args&gt;</a></span>
     </dt>
@@ -1711,7 +2007,9 @@ times.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Fixed<wbr>Ips</span>
+        <span id="state_fixedips_csharp">
+<a href="#state_fixedips_csharp" style="color: inherit; text-decoration: inherit;">Fixed<wbr>Ips</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#portfixedip">List&lt;Pulumi.<wbr>Open<wbr>Stack.<wbr>Networking.<wbr>Inputs.<wbr>Port<wbr>Fixed<wbr>Ip<wbr>Args&gt;</a></span>
     </dt>
@@ -1721,7 +2019,9 @@ this port. The structure is described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Mac<wbr>Address</span>
+        <span id="state_macaddress_csharp">
+<a href="#state_macaddress_csharp" style="color: inherit; text-decoration: inherit;">Mac<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1730,7 +2030,9 @@ this port. The structure is described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1739,7 +2041,9 @@ this port. The structure is described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Network<wbr>Id</span>
+        <span id="state_networkid_csharp">
+<a href="#state_networkid_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1749,7 +2053,9 @@ this creates a new port.
 
     <dt class="property-optional"
             title="Optional">
-        <span>No<wbr>Fixed<wbr>Ip</span>
+        <span id="state_nofixedip_csharp">
+<a href="#state_nofixedip_csharp" style="color: inherit; text-decoration: inherit;">No<wbr>Fixed<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1760,7 +2066,9 @@ is the only valid value for this argument.
 
     <dt class="property-optional"
             title="Optional">
-        <span>No<wbr>Security<wbr>Groups</span>
+        <span id="state_nosecuritygroups_csharp">
+<a href="#state_nosecuritygroups_csharp" style="color: inherit; text-decoration: inherit;">No<wbr>Security<wbr>Groups</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1773,7 +2081,9 @@ security group.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Port<wbr>Security<wbr>Enabled</span>
+        <span id="state_portsecurityenabled_csharp">
+<a href="#state_portsecurityenabled_csharp" style="color: inherit; text-decoration: inherit;">Port<wbr>Security<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1787,7 +2097,9 @@ and `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Qos<wbr>Policy<wbr>Id</span>
+        <span id="state_qospolicyid_csharp">
+<a href="#state_qospolicyid_csharp" style="color: inherit; text-decoration: inherit;">Qos<wbr>Policy<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1796,7 +2108,9 @@ and `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="state_region_csharp">
+<a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1808,7 +2122,9 @@ port.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Security<wbr>Group<wbr>Ids</span>
+        <span id="state_securitygroupids_csharp">
+<a href="#state_securitygroupids_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1820,7 +2136,9 @@ the Compute Instance).
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="state_tags_csharp">
+<a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1829,7 +2147,9 @@ the Compute Instance).
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tenant<wbr>Id</span>
+        <span id="state_tenantid_csharp">
+<a href="#state_tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1839,7 +2159,9 @@ to create a port for another tenant. Changing this creates a new port.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Value<wbr>Specs</span>
+        <span id="state_valuespecs_csharp">
+<a href="#state_valuespecs_csharp" style="color: inherit; text-decoration: inherit;">Value<wbr>Specs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -1855,7 +2177,9 @@ to create a port for another tenant. Changing this creates a new port.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Admin<wbr>State<wbr>Up</span>
+        <span id="state_adminstateup_go">
+<a href="#state_adminstateup_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>State<wbr>Up</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1866,7 +2190,9 @@ to create a port for another tenant. Changing this creates a new port.
 
     <dt class="property-optional"
             title="Optional">
-        <span>All<wbr>Fixed<wbr>Ips</span>
+        <span id="state_allfixedips_go">
+<a href="#state_allfixedips_go" style="color: inherit; text-decoration: inherit;">All<wbr>Fixed<wbr>Ips</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1876,7 +2202,9 @@ order returned by the Network v2 API.
 
     <dt class="property-optional"
             title="Optional">
-        <span>All<wbr>Security<wbr>Group<wbr>Ids</span>
+        <span id="state_allsecuritygroupids_go">
+<a href="#state_allsecuritygroupids_go" style="color: inherit; text-decoration: inherit;">All<wbr>Security<wbr>Group<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1886,7 +2214,9 @@ which have been explicitly and implicitly added.
 
     <dt class="property-optional"
             title="Optional">
-        <span>All<wbr>Tags</span>
+        <span id="state_alltags_go">
+<a href="#state_alltags_go" style="color: inherit; text-decoration: inherit;">All<wbr>Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1896,7 +2226,9 @@ explicitly and implicitly added.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Allowed<wbr>Address<wbr>Pairs</span>
+        <span id="state_allowedaddresspairs_go">
+<a href="#state_allowedaddresspairs_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Address<wbr>Pairs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#portallowedaddresspair">[]Port<wbr>Allowed<wbr>Address<wbr>Pair</a></span>
     </dt>
@@ -1907,7 +2239,9 @@ below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Binding</span>
+        <span id="state_binding_go">
+<a href="#state_binding_go" style="color: inherit; text-decoration: inherit;">Binding</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#portbinding">Port<wbr>Binding</a></span>
     </dt>
@@ -1917,7 +2251,9 @@ for the port. The structure is described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="state_description_go">
+<a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1927,7 +2263,9 @@ this updates the `description` of an existing port.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Device<wbr>Id</span>
+        <span id="state_deviceid_go">
+<a href="#state_deviceid_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1937,7 +2275,9 @@ creates a new port.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Device<wbr>Owner</span>
+        <span id="state_deviceowner_go">
+<a href="#state_deviceowner_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Owner</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1947,7 +2287,9 @@ a new port.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Dns<wbr>Assignments</span>
+        <span id="state_dnsassignments_go">
+<a href="#state_dnsassignments_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Assignments</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">[]map[string]interface{}</span>
     </dt>
@@ -1956,7 +2298,9 @@ a new port.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Dns<wbr>Name</span>
+        <span id="state_dnsname_go">
+<a href="#state_dnsname_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1966,7 +2310,9 @@ is enabled.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Extra<wbr>Dhcp<wbr>Options</span>
+        <span id="state_extradhcpoptions_go">
+<a href="#state_extradhcpoptions_go" style="color: inherit; text-decoration: inherit;">Extra<wbr>Dhcp<wbr>Options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#portextradhcpoption">[]Port<wbr>Extra<wbr>Dhcp<wbr>Option</a></span>
     </dt>
@@ -1977,7 +2323,9 @@ times.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Fixed<wbr>Ips</span>
+        <span id="state_fixedips_go">
+<a href="#state_fixedips_go" style="color: inherit; text-decoration: inherit;">Fixed<wbr>Ips</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#portfixedip">[]Port<wbr>Fixed<wbr>Ip</a></span>
     </dt>
@@ -1987,7 +2335,9 @@ this port. The structure is described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Mac<wbr>Address</span>
+        <span id="state_macaddress_go">
+<a href="#state_macaddress_go" style="color: inherit; text-decoration: inherit;">Mac<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1996,7 +2346,9 @@ this port. The structure is described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2005,7 +2357,9 @@ this port. The structure is described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Network<wbr>Id</span>
+        <span id="state_networkid_go">
+<a href="#state_networkid_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2015,7 +2369,9 @@ this creates a new port.
 
     <dt class="property-optional"
             title="Optional">
-        <span>No<wbr>Fixed<wbr>Ip</span>
+        <span id="state_nofixedip_go">
+<a href="#state_nofixedip_go" style="color: inherit; text-decoration: inherit;">No<wbr>Fixed<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -2026,7 +2382,9 @@ is the only valid value for this argument.
 
     <dt class="property-optional"
             title="Optional">
-        <span>No<wbr>Security<wbr>Groups</span>
+        <span id="state_nosecuritygroups_go">
+<a href="#state_nosecuritygroups_go" style="color: inherit; text-decoration: inherit;">No<wbr>Security<wbr>Groups</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -2039,7 +2397,9 @@ security group.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Port<wbr>Security<wbr>Enabled</span>
+        <span id="state_portsecurityenabled_go">
+<a href="#state_portsecurityenabled_go" style="color: inherit; text-decoration: inherit;">Port<wbr>Security<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -2053,7 +2413,9 @@ and `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Qos<wbr>Policy<wbr>Id</span>
+        <span id="state_qospolicyid_go">
+<a href="#state_qospolicyid_go" style="color: inherit; text-decoration: inherit;">Qos<wbr>Policy<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2062,7 +2424,9 @@ and `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="state_region_go">
+<a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2074,7 +2438,9 @@ port.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Security<wbr>Group<wbr>Ids</span>
+        <span id="state_securitygroupids_go">
+<a href="#state_securitygroupids_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -2086,7 +2452,9 @@ the Compute Instance).
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="state_tags_go">
+<a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -2095,7 +2463,9 @@ the Compute Instance).
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tenant<wbr>Id</span>
+        <span id="state_tenantid_go">
+<a href="#state_tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2105,7 +2475,9 @@ to create a port for another tenant. Changing this creates a new port.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Value<wbr>Specs</span>
+        <span id="state_valuespecs_go">
+<a href="#state_valuespecs_go" style="color: inherit; text-decoration: inherit;">Value<wbr>Specs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -2121,7 +2493,9 @@ to create a port for another tenant. Changing this creates a new port.
 
     <dt class="property-optional"
             title="Optional">
-        <span>admin<wbr>State<wbr>Up</span>
+        <span id="state_adminstateup_nodejs">
+<a href="#state_adminstateup_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>State<wbr>Up</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -2132,7 +2506,9 @@ to create a port for another tenant. Changing this creates a new port.
 
     <dt class="property-optional"
             title="Optional">
-        <span>all<wbr>Fixed<wbr>Ips</span>
+        <span id="state_allfixedips_nodejs">
+<a href="#state_allfixedips_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Fixed<wbr>Ips</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -2142,7 +2518,9 @@ order returned by the Network v2 API.
 
     <dt class="property-optional"
             title="Optional">
-        <span>all<wbr>Security<wbr>Group<wbr>Ids</span>
+        <span id="state_allsecuritygroupids_nodejs">
+<a href="#state_allsecuritygroupids_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Security<wbr>Group<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -2152,7 +2530,9 @@ which have been explicitly and implicitly added.
 
     <dt class="property-optional"
             title="Optional">
-        <span>all<wbr>Tags</span>
+        <span id="state_alltags_nodejs">
+<a href="#state_alltags_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -2162,7 +2542,9 @@ explicitly and implicitly added.
 
     <dt class="property-optional"
             title="Optional">
-        <span>allowed<wbr>Address<wbr>Pairs</span>
+        <span id="state_allowedaddresspairs_nodejs">
+<a href="#state_allowedaddresspairs_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Address<wbr>Pairs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#portallowedaddresspair">Port<wbr>Allowed<wbr>Address<wbr>Pair[]</a></span>
     </dt>
@@ -2173,7 +2555,9 @@ below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>binding</span>
+        <span id="state_binding_nodejs">
+<a href="#state_binding_nodejs" style="color: inherit; text-decoration: inherit;">binding</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#portbinding">Port<wbr>Binding</a></span>
     </dt>
@@ -2183,7 +2567,9 @@ for the port. The structure is described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="state_description_nodejs">
+<a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2193,7 +2579,9 @@ this updates the `description` of an existing port.
 
     <dt class="property-optional"
             title="Optional">
-        <span>device<wbr>Id</span>
+        <span id="state_deviceid_nodejs">
+<a href="#state_deviceid_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2203,7 +2591,9 @@ creates a new port.
 
     <dt class="property-optional"
             title="Optional">
-        <span>device<wbr>Owner</span>
+        <span id="state_deviceowner_nodejs">
+<a href="#state_deviceowner_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Owner</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2213,7 +2603,9 @@ a new port.
 
     <dt class="property-optional"
             title="Optional">
-        <span>dns<wbr>Assignments</span>
+        <span id="state_dnsassignments_nodejs">
+<a href="#state_dnsassignments_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Assignments</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}[]</span>
     </dt>
@@ -2222,7 +2614,9 @@ a new port.
 
     <dt class="property-optional"
             title="Optional">
-        <span>dns<wbr>Name</span>
+        <span id="state_dnsname_nodejs">
+<a href="#state_dnsname_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2232,7 +2626,9 @@ is enabled.
 
     <dt class="property-optional"
             title="Optional">
-        <span>extra<wbr>Dhcp<wbr>Options</span>
+        <span id="state_extradhcpoptions_nodejs">
+<a href="#state_extradhcpoptions_nodejs" style="color: inherit; text-decoration: inherit;">extra<wbr>Dhcp<wbr>Options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#portextradhcpoption">Port<wbr>Extra<wbr>Dhcp<wbr>Option[]</a></span>
     </dt>
@@ -2243,7 +2639,9 @@ times.
 
     <dt class="property-optional"
             title="Optional">
-        <span>fixed<wbr>Ips</span>
+        <span id="state_fixedips_nodejs">
+<a href="#state_fixedips_nodejs" style="color: inherit; text-decoration: inherit;">fixed<wbr>Ips</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#portfixedip">Port<wbr>Fixed<wbr>Ip[]</a></span>
     </dt>
@@ -2253,7 +2651,9 @@ this port. The structure is described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>mac<wbr>Address</span>
+        <span id="state_macaddress_nodejs">
+<a href="#state_macaddress_nodejs" style="color: inherit; text-decoration: inherit;">mac<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2262,7 +2662,9 @@ this port. The structure is described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2271,7 +2673,9 @@ this port. The structure is described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>network<wbr>Id</span>
+        <span id="state_networkid_nodejs">
+<a href="#state_networkid_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2281,7 +2685,9 @@ this creates a new port.
 
     <dt class="property-optional"
             title="Optional">
-        <span>no<wbr>Fixed<wbr>Ip</span>
+        <span id="state_nofixedip_nodejs">
+<a href="#state_nofixedip_nodejs" style="color: inherit; text-decoration: inherit;">no<wbr>Fixed<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -2292,7 +2698,9 @@ is the only valid value for this argument.
 
     <dt class="property-optional"
             title="Optional">
-        <span>no<wbr>Security<wbr>Groups</span>
+        <span id="state_nosecuritygroups_nodejs">
+<a href="#state_nosecuritygroups_nodejs" style="color: inherit; text-decoration: inherit;">no<wbr>Security<wbr>Groups</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -2305,7 +2713,9 @@ security group.
 
     <dt class="property-optional"
             title="Optional">
-        <span>port<wbr>Security<wbr>Enabled</span>
+        <span id="state_portsecurityenabled_nodejs">
+<a href="#state_portsecurityenabled_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Security<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -2319,7 +2729,9 @@ and `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>qos<wbr>Policy<wbr>Id</span>
+        <span id="state_qospolicyid_nodejs">
+<a href="#state_qospolicyid_nodejs" style="color: inherit; text-decoration: inherit;">qos<wbr>Policy<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2328,7 +2740,9 @@ and `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="state_region_nodejs">
+<a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2340,7 +2754,9 @@ port.
 
     <dt class="property-optional"
             title="Optional">
-        <span>security<wbr>Group<wbr>Ids</span>
+        <span id="state_securitygroupids_nodejs">
+<a href="#state_securitygroupids_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Group<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -2352,7 +2768,9 @@ the Compute Instance).
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="state_tags_nodejs">
+<a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -2361,7 +2779,9 @@ the Compute Instance).
 
     <dt class="property-optional"
             title="Optional">
-        <span>tenant<wbr>Id</span>
+        <span id="state_tenantid_nodejs">
+<a href="#state_tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2371,7 +2791,9 @@ to create a port for another tenant. Changing this creates a new port.
 
     <dt class="property-optional"
             title="Optional">
-        <span>value<wbr>Specs</span>
+        <span id="state_valuespecs_nodejs">
+<a href="#state_valuespecs_nodejs" style="color: inherit; text-decoration: inherit;">value<wbr>Specs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -2387,7 +2809,9 @@ to create a port for another tenant. Changing this creates a new port.
 
     <dt class="property-optional"
             title="Optional">
-        <span>admin_<wbr>state_<wbr>up</span>
+        <span id="state_admin_state_up_python">
+<a href="#state_admin_state_up_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>state_<wbr>up</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2398,7 +2822,9 @@ to create a port for another tenant. Changing this creates a new port.
 
     <dt class="property-optional"
             title="Optional">
-        <span>all_<wbr>fixed_<wbr>ips</span>
+        <span id="state_all_fixed_ips_python">
+<a href="#state_all_fixed_ips_python" style="color: inherit; text-decoration: inherit;">all_<wbr>fixed_<wbr>ips</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -2408,7 +2834,9 @@ order returned by the Network v2 API.
 
     <dt class="property-optional"
             title="Optional">
-        <span>all_<wbr>security_<wbr>group_<wbr>ids</span>
+        <span id="state_all_security_group_ids_python">
+<a href="#state_all_security_group_ids_python" style="color: inherit; text-decoration: inherit;">all_<wbr>security_<wbr>group_<wbr>ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -2418,7 +2846,9 @@ which have been explicitly and implicitly added.
 
     <dt class="property-optional"
             title="Optional">
-        <span>all_<wbr>tags</span>
+        <span id="state_all_tags_python">
+<a href="#state_all_tags_python" style="color: inherit; text-decoration: inherit;">all_<wbr>tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -2428,7 +2858,9 @@ explicitly and implicitly added.
 
     <dt class="property-optional"
             title="Optional">
-        <span>allowed_<wbr>address_<wbr>pairs</span>
+        <span id="state_allowed_address_pairs_python">
+<a href="#state_allowed_address_pairs_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>address_<wbr>pairs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#portallowedaddresspair">List[Port<wbr>Allowed<wbr>Address<wbr>Pair]</a></span>
     </dt>
@@ -2439,7 +2871,9 @@ below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>binding</span>
+        <span id="state_binding_python">
+<a href="#state_binding_python" style="color: inherit; text-decoration: inherit;">binding</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#portbinding">Dict[Port<wbr>Binding]</a></span>
     </dt>
@@ -2449,7 +2883,9 @@ for the port. The structure is described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="state_description_python">
+<a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2459,7 +2895,9 @@ this updates the `description` of an existing port.
 
     <dt class="property-optional"
             title="Optional">
-        <span>device_<wbr>id</span>
+        <span id="state_device_id_python">
+<a href="#state_device_id_python" style="color: inherit; text-decoration: inherit;">device_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2469,7 +2907,9 @@ creates a new port.
 
     <dt class="property-optional"
             title="Optional">
-        <span>device_<wbr>owner</span>
+        <span id="state_device_owner_python">
+<a href="#state_device_owner_python" style="color: inherit; text-decoration: inherit;">device_<wbr>owner</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2479,7 +2919,9 @@ a new port.
 
     <dt class="property-optional"
             title="Optional">
-        <span>dns_<wbr>assignments</span>
+        <span id="state_dns_assignments_python">
+<a href="#state_dns_assignments_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>assignments</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">List[Any>]</span>
     </dt>
@@ -2488,7 +2930,9 @@ a new port.
 
     <dt class="property-optional"
             title="Optional">
-        <span>dns_<wbr>name</span>
+        <span id="state_dns_name_python">
+<a href="#state_dns_name_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2498,7 +2942,9 @@ is enabled.
 
     <dt class="property-optional"
             title="Optional">
-        <span>extra_<wbr>dhcp_<wbr>options</span>
+        <span id="state_extra_dhcp_options_python">
+<a href="#state_extra_dhcp_options_python" style="color: inherit; text-decoration: inherit;">extra_<wbr>dhcp_<wbr>options</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#portextradhcpoption">List[Port<wbr>Extra<wbr>Dhcp<wbr>Option]</a></span>
     </dt>
@@ -2509,7 +2955,9 @@ times.
 
     <dt class="property-optional"
             title="Optional">
-        <span>fixed_<wbr>ips</span>
+        <span id="state_fixed_ips_python">
+<a href="#state_fixed_ips_python" style="color: inherit; text-decoration: inherit;">fixed_<wbr>ips</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#portfixedip">List[Port<wbr>Fixed<wbr>Ip]</a></span>
     </dt>
@@ -2519,7 +2967,9 @@ this port. The structure is described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>mac_<wbr>address</span>
+        <span id="state_mac_address_python">
+<a href="#state_mac_address_python" style="color: inherit; text-decoration: inherit;">mac_<wbr>address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2528,7 +2978,9 @@ this port. The structure is described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2537,7 +2989,9 @@ this port. The structure is described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>network_<wbr>id</span>
+        <span id="state_network_id_python">
+<a href="#state_network_id_python" style="color: inherit; text-decoration: inherit;">network_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2547,7 +3001,9 @@ this creates a new port.
 
     <dt class="property-optional"
             title="Optional">
-        <span>no_<wbr>fixed_<wbr>ip</span>
+        <span id="state_no_fixed_ip_python">
+<a href="#state_no_fixed_ip_python" style="color: inherit; text-decoration: inherit;">no_<wbr>fixed_<wbr>ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2558,7 +3014,9 @@ is the only valid value for this argument.
 
     <dt class="property-optional"
             title="Optional">
-        <span>no_<wbr>security_<wbr>groups</span>
+        <span id="state_no_security_groups_python">
+<a href="#state_no_security_groups_python" style="color: inherit; text-decoration: inherit;">no_<wbr>security_<wbr>groups</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2571,7 +3029,9 @@ security group.
 
     <dt class="property-optional"
             title="Optional">
-        <span>port_<wbr>security_<wbr>enabled</span>
+        <span id="state_port_security_enabled_python">
+<a href="#state_port_security_enabled_python" style="color: inherit; text-decoration: inherit;">port_<wbr>security_<wbr>enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -2585,7 +3045,9 @@ and `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>qos_<wbr>policy_<wbr>id</span>
+        <span id="state_qos_policy_id_python">
+<a href="#state_qos_policy_id_python" style="color: inherit; text-decoration: inherit;">qos_<wbr>policy_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2594,7 +3056,9 @@ and `false`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="state_region_python">
+<a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2606,7 +3070,9 @@ port.
 
     <dt class="property-optional"
             title="Optional">
-        <span>security_<wbr>group_<wbr>ids</span>
+        <span id="state_security_group_ids_python">
+<a href="#state_security_group_ids_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group_<wbr>ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -2618,7 +3084,9 @@ the Compute Instance).
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="state_tags_python">
+<a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -2627,7 +3095,9 @@ the Compute Instance).
 
     <dt class="property-optional"
             title="Optional">
-        <span>tenant_<wbr>id</span>
+        <span id="state_tenant_id_python">
+<a href="#state_tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2637,7 +3107,9 @@ to create a port for another tenant. Changing this creates a new port.
 
     <dt class="property-optional"
             title="Optional">
-        <span>value_<wbr>specs</span>
+        <span id="state_value_specs_python">
+<a href="#state_value_specs_python" style="color: inherit; text-decoration: inherit;">value_<wbr>specs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -2679,7 +3151,9 @@ to create a port for another tenant. Changing this creates a new port.
 
     <dt class="property-required"
             title="Required">
-        <span>Ip<wbr>Address</span>
+        <span id="ipaddress_csharp">
+<a href="#ipaddress_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2688,7 +3162,9 @@ to create a port for another tenant. Changing this creates a new port.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Mac<wbr>Address</span>
+        <span id="macaddress_csharp">
+<a href="#macaddress_csharp" style="color: inherit; text-decoration: inherit;">Mac<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2704,7 +3180,9 @@ to create a port for another tenant. Changing this creates a new port.
 
     <dt class="property-required"
             title="Required">
-        <span>Ip<wbr>Address</span>
+        <span id="ipaddress_go">
+<a href="#ipaddress_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2713,7 +3191,9 @@ to create a port for another tenant. Changing this creates a new port.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Mac<wbr>Address</span>
+        <span id="macaddress_go">
+<a href="#macaddress_go" style="color: inherit; text-decoration: inherit;">Mac<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2729,7 +3209,9 @@ to create a port for another tenant. Changing this creates a new port.
 
     <dt class="property-required"
             title="Required">
-        <span>ip<wbr>Address</span>
+        <span id="ipaddress_nodejs">
+<a href="#ipaddress_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2738,7 +3220,9 @@ to create a port for another tenant. Changing this creates a new port.
 
     <dt class="property-optional"
             title="Optional">
-        <span>mac<wbr>Address</span>
+        <span id="macaddress_nodejs">
+<a href="#macaddress_nodejs" style="color: inherit; text-decoration: inherit;">mac<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2754,7 +3238,9 @@ to create a port for another tenant. Changing this creates a new port.
 
     <dt class="property-required"
             title="Required">
-        <span>ip_<wbr>address</span>
+        <span id="ip_address_python">
+<a href="#ip_address_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2763,7 +3249,9 @@ to create a port for another tenant. Changing this creates a new port.
 
     <dt class="property-optional"
             title="Optional">
-        <span>mac_<wbr>address</span>
+        <span id="mac_address_python">
+<a href="#mac_address_python" style="color: inherit; text-decoration: inherit;">mac_<wbr>address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2797,7 +3285,9 @@ to create a port for another tenant. Changing this creates a new port.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Host<wbr>Id</span>
+        <span id="hostid_csharp">
+<a href="#hostid_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2806,7 +3296,9 @@ to create a port for another tenant. Changing this creates a new port.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Profile</span>
+        <span id="profile_csharp">
+<a href="#profile_csharp" style="color: inherit; text-decoration: inherit;">Profile</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2816,7 +3308,9 @@ must be passed as JSON.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vif<wbr>Details</span>
+        <span id="vifdetails_csharp">
+<a href="#vifdetails_csharp" style="color: inherit; text-decoration: inherit;">Vif<wbr>Details</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -2826,7 +3320,9 @@ details for this specific binding.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vif<wbr>Type</span>
+        <span id="viftype_csharp">
+<a href="#viftype_csharp" style="color: inherit; text-decoration: inherit;">Vif<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2835,7 +3331,9 @@ details for this specific binding.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vnic<wbr>Type</span>
+        <span id="vnictype_csharp">
+<a href="#vnictype_csharp" style="color: inherit; text-decoration: inherit;">Vnic<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2853,7 +3351,9 @@ Default value is `normal`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Host<wbr>Id</span>
+        <span id="hostid_go">
+<a href="#hostid_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2862,7 +3362,9 @@ Default value is `normal`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Profile</span>
+        <span id="profile_go">
+<a href="#profile_go" style="color: inherit; text-decoration: inherit;">Profile</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2872,7 +3374,9 @@ must be passed as JSON.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vif<wbr>Details</span>
+        <span id="vifdetails_go">
+<a href="#vifdetails_go" style="color: inherit; text-decoration: inherit;">Vif<wbr>Details</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -2882,7 +3386,9 @@ details for this specific binding.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vif<wbr>Type</span>
+        <span id="viftype_go">
+<a href="#viftype_go" style="color: inherit; text-decoration: inherit;">Vif<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2891,7 +3397,9 @@ details for this specific binding.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vnic<wbr>Type</span>
+        <span id="vnictype_go">
+<a href="#vnictype_go" style="color: inherit; text-decoration: inherit;">Vnic<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2909,7 +3417,9 @@ Default value is `normal`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>host<wbr>Id</span>
+        <span id="hostid_nodejs">
+<a href="#hostid_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2918,7 +3428,9 @@ Default value is `normal`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>profile</span>
+        <span id="profile_nodejs">
+<a href="#profile_nodejs" style="color: inherit; text-decoration: inherit;">profile</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2928,7 +3440,9 @@ must be passed as JSON.
 
     <dt class="property-optional"
             title="Optional">
-        <span>vif<wbr>Details</span>
+        <span id="vifdetails_nodejs">
+<a href="#vifdetails_nodejs" style="color: inherit; text-decoration: inherit;">vif<wbr>Details</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -2938,7 +3452,9 @@ details for this specific binding.
 
     <dt class="property-optional"
             title="Optional">
-        <span>vif<wbr>Type</span>
+        <span id="viftype_nodejs">
+<a href="#viftype_nodejs" style="color: inherit; text-decoration: inherit;">vif<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2947,7 +3463,9 @@ details for this specific binding.
 
     <dt class="property-optional"
             title="Optional">
-        <span>vnic<wbr>Type</span>
+        <span id="vnictype_nodejs">
+<a href="#vnictype_nodejs" style="color: inherit; text-decoration: inherit;">vnic<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2965,7 +3483,9 @@ Default value is `normal`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>host<wbr>Id</span>
+        <span id="hostid_python">
+<a href="#hostid_python" style="color: inherit; text-decoration: inherit;">host<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2974,7 +3494,9 @@ Default value is `normal`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>profile</span>
+        <span id="profile_python">
+<a href="#profile_python" style="color: inherit; text-decoration: inherit;">profile</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2984,7 +3506,9 @@ must be passed as JSON.
 
     <dt class="property-optional"
             title="Optional">
-        <span>vif<wbr>Details</span>
+        <span id="vifdetails_python">
+<a href="#vifdetails_python" style="color: inherit; text-decoration: inherit;">vif<wbr>Details</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -2994,7 +3518,9 @@ details for this specific binding.
 
     <dt class="property-optional"
             title="Optional">
-        <span>vif<wbr>Type</span>
+        <span id="viftype_python">
+<a href="#viftype_python" style="color: inherit; text-decoration: inherit;">vif<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3003,7 +3529,9 @@ details for this specific binding.
 
     <dt class="property-optional"
             title="Optional">
-        <span>vnic<wbr>Type</span>
+        <span id="vnictype_python">
+<a href="#vnictype_python" style="color: inherit; text-decoration: inherit;">vnic<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3039,7 +3567,9 @@ Default value is `normal`.
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3048,7 +3578,9 @@ Default value is `normal`.
 
     <dt class="property-required"
             title="Required">
-        <span>Value</span>
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3057,7 +3589,9 @@ Default value is `normal`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ip<wbr>Version</span>
+        <span id="ipversion_csharp">
+<a href="#ipversion_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -3073,7 +3607,9 @@ Default value is `normal`.
 
     <dt class="property-required"
             title="Required">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3082,7 +3618,9 @@ Default value is `normal`.
 
     <dt class="property-required"
             title="Required">
-        <span>Value</span>
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3091,7 +3629,9 @@ Default value is `normal`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ip<wbr>Version</span>
+        <span id="ipversion_go">
+<a href="#ipversion_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -3107,7 +3647,9 @@ Default value is `normal`.
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3116,7 +3658,9 @@ Default value is `normal`.
 
     <dt class="property-required"
             title="Required">
-        <span>value</span>
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3125,7 +3669,9 @@ Default value is `normal`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ip<wbr>Version</span>
+        <span id="ipversion_nodejs">
+<a href="#ipversion_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -3141,7 +3687,9 @@ Default value is `normal`.
 
     <dt class="property-required"
             title="Required">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3150,7 +3698,9 @@ Default value is `normal`.
 
     <dt class="property-required"
             title="Required">
-        <span>value</span>
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3159,7 +3709,9 @@ Default value is `normal`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ip_<wbr>version</span>
+        <span id="ip_version_python">
+<a href="#ip_version_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -3193,7 +3745,9 @@ Default value is `normal`.
 
     <dt class="property-required"
             title="Required">
-        <span>Subnet<wbr>Id</span>
+        <span id="subnetid_csharp">
+<a href="#subnetid_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3203,7 +3757,9 @@ this port.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ip<wbr>Address</span>
+        <span id="ipaddress_csharp">
+<a href="#ipaddress_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -3219,7 +3775,9 @@ this port.
 
     <dt class="property-required"
             title="Required">
-        <span>Subnet<wbr>Id</span>
+        <span id="subnetid_go">
+<a href="#subnetid_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3229,7 +3787,9 @@ this port.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ip<wbr>Address</span>
+        <span id="ipaddress_go">
+<a href="#ipaddress_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -3245,7 +3805,9 @@ this port.
 
     <dt class="property-required"
             title="Required">
-        <span>subnet<wbr>Id</span>
+        <span id="subnetid_nodejs">
+<a href="#subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3255,7 +3817,9 @@ this port.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ip<wbr>Address</span>
+        <span id="ipaddress_nodejs">
+<a href="#ipaddress_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -3271,7 +3835,9 @@ this port.
 
     <dt class="property-required"
             title="Required">
-        <span>subnet_<wbr>id</span>
+        <span id="subnet_id_python">
+<a href="#subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3281,7 +3847,9 @@ this port.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ip_<wbr>address</span>
+        <span id="ip_address_python">
+<a href="#ip_address_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

@@ -20,7 +20,26 @@ Manages a v1 firewall rule resource within OpenStack.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var rule1 = new OpenStack.Firewall.Rule("rule1", new OpenStack.Firewall.RuleArgs
+        {
+            Action = "deny",
+            Description = "drop TELNET traffic",
+            DestinationPort = "23",
+            Enabled = "true",
+            Protocol = "tcp",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -242,7 +261,9 @@ The Rule resource accepts the following [input]({{< relref "/docs/intro/concepts
 
     <dt class="property-required"
             title="Required">
-        <span>Action</span>
+        <span id="action_csharp">
+<a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -253,7 +274,9 @@ firewall rule.
 
     <dt class="property-required"
             title="Required">
-        <span>Protocol</span>
+        <span id="protocol_csharp">
+<a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -264,7 +287,9 @@ Valid values are: `tcp`, `udp`, `icmp`, and `any`. Changing this updates the
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -274,7 +299,9 @@ updates the `description` of an existing firewall rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Destination<wbr>Ip<wbr>Address</span>
+        <span id="destinationipaddress_csharp">
+<a href="#destinationipaddress_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Ip<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -285,7 +312,9 @@ of an existing firewall rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Destination<wbr>Port</span>
+        <span id="destinationport_csharp">
+<a href="#destinationport_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -296,7 +325,9 @@ firewall rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enabled</span>
+        <span id="enabled_csharp">
+<a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -307,7 +338,9 @@ or "false" if provided - defaults to "true"). Changing this updates the
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ip<wbr>Version</span>
+        <span id="ipversion_csharp">
+<a href="#ipversion_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -317,7 +350,9 @@ updates the `ip_version` of an existing firewall rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -327,7 +362,9 @@ updates the `name` of an existing firewall rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="region_csharp">
+<a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -339,7 +376,9 @@ firewall rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Source<wbr>Ip<wbr>Address</span>
+        <span id="sourceipaddress_csharp">
+<a href="#sourceipaddress_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Ip<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -350,7 +389,9 @@ firewall rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Source<wbr>Port</span>
+        <span id="sourceport_csharp">
+<a href="#sourceport_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -361,7 +402,9 @@ firewall rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tenant<wbr>Id</span>
+        <span id="tenantid_csharp">
+<a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -372,7 +415,9 @@ new firewall rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Value<wbr>Specs</span>
+        <span id="valuespecs_csharp">
+<a href="#valuespecs_csharp" style="color: inherit; text-decoration: inherit;">Value<wbr>Specs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -388,7 +433,9 @@ new firewall rule.
 
     <dt class="property-required"
             title="Required">
-        <span>Action</span>
+        <span id="action_go">
+<a href="#action_go" style="color: inherit; text-decoration: inherit;">Action</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -399,7 +446,9 @@ firewall rule.
 
     <dt class="property-required"
             title="Required">
-        <span>Protocol</span>
+        <span id="protocol_go">
+<a href="#protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -410,7 +459,9 @@ Valid values are: `tcp`, `udp`, `icmp`, and `any`. Changing this updates the
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -420,7 +471,9 @@ updates the `description` of an existing firewall rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Destination<wbr>Ip<wbr>Address</span>
+        <span id="destinationipaddress_go">
+<a href="#destinationipaddress_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Ip<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -431,7 +484,9 @@ of an existing firewall rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Destination<wbr>Port</span>
+        <span id="destinationport_go">
+<a href="#destinationport_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -442,7 +497,9 @@ firewall rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enabled</span>
+        <span id="enabled_go">
+<a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -453,7 +510,9 @@ or "false" if provided - defaults to "true"). Changing this updates the
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ip<wbr>Version</span>
+        <span id="ipversion_go">
+<a href="#ipversion_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -463,7 +522,9 @@ updates the `ip_version` of an existing firewall rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -473,7 +534,9 @@ updates the `name` of an existing firewall rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="region_go">
+<a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -485,7 +548,9 @@ firewall rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Source<wbr>Ip<wbr>Address</span>
+        <span id="sourceipaddress_go">
+<a href="#sourceipaddress_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Ip<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -496,7 +561,9 @@ firewall rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Source<wbr>Port</span>
+        <span id="sourceport_go">
+<a href="#sourceport_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -507,7 +574,9 @@ firewall rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tenant<wbr>Id</span>
+        <span id="tenantid_go">
+<a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -518,7 +587,9 @@ new firewall rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Value<wbr>Specs</span>
+        <span id="valuespecs_go">
+<a href="#valuespecs_go" style="color: inherit; text-decoration: inherit;">Value<wbr>Specs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -534,7 +605,9 @@ new firewall rule.
 
     <dt class="property-required"
             title="Required">
-        <span>action</span>
+        <span id="action_nodejs">
+<a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -545,7 +618,9 @@ firewall rule.
 
     <dt class="property-required"
             title="Required">
-        <span>protocol</span>
+        <span id="protocol_nodejs">
+<a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -556,7 +631,9 @@ Valid values are: `tcp`, `udp`, `icmp`, and `any`. Changing this updates the
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -566,7 +643,9 @@ updates the `description` of an existing firewall rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>destination<wbr>Ip<wbr>Address</span>
+        <span id="destinationipaddress_nodejs">
+<a href="#destinationipaddress_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Ip<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -577,7 +656,9 @@ of an existing firewall rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>destination<wbr>Port</span>
+        <span id="destinationport_nodejs">
+<a href="#destinationport_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -588,7 +669,9 @@ firewall rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>enabled</span>
+        <span id="enabled_nodejs">
+<a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -599,7 +682,9 @@ or "false" if provided - defaults to "true"). Changing this updates the
 
     <dt class="property-optional"
             title="Optional">
-        <span>ip<wbr>Version</span>
+        <span id="ipversion_nodejs">
+<a href="#ipversion_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -609,7 +694,9 @@ updates the `ip_version` of an existing firewall rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -619,7 +706,9 @@ updates the `name` of an existing firewall rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="region_nodejs">
+<a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -631,7 +720,9 @@ firewall rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>source<wbr>Ip<wbr>Address</span>
+        <span id="sourceipaddress_nodejs">
+<a href="#sourceipaddress_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Ip<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -642,7 +733,9 @@ firewall rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>source<wbr>Port</span>
+        <span id="sourceport_nodejs">
+<a href="#sourceport_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -653,7 +746,9 @@ firewall rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tenant<wbr>Id</span>
+        <span id="tenantid_nodejs">
+<a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -664,7 +759,9 @@ new firewall rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>value<wbr>Specs</span>
+        <span id="valuespecs_nodejs">
+<a href="#valuespecs_nodejs" style="color: inherit; text-decoration: inherit;">value<wbr>Specs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -680,7 +777,9 @@ new firewall rule.
 
     <dt class="property-required"
             title="Required">
-        <span>action</span>
+        <span id="action_python">
+<a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -691,7 +790,9 @@ firewall rule.
 
     <dt class="property-required"
             title="Required">
-        <span>protocol</span>
+        <span id="protocol_python">
+<a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -702,7 +803,9 @@ Valid values are: `tcp`, `udp`, `icmp`, and `any`. Changing this updates the
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -712,7 +815,9 @@ updates the `description` of an existing firewall rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>destination_<wbr>ip_<wbr>address</span>
+        <span id="destination_ip_address_python">
+<a href="#destination_ip_address_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>ip_<wbr>address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -723,7 +828,9 @@ of an existing firewall rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>destination_<wbr>port</span>
+        <span id="destination_port_python">
+<a href="#destination_port_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -734,7 +841,9 @@ firewall rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>enabled</span>
+        <span id="enabled_python">
+<a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -745,7 +854,9 @@ or "false" if provided - defaults to "true"). Changing this updates the
 
     <dt class="property-optional"
             title="Optional">
-        <span>ip_<wbr>version</span>
+        <span id="ip_version_python">
+<a href="#ip_version_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -755,7 +866,9 @@ updates the `ip_version` of an existing firewall rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -765,7 +878,9 @@ updates the `name` of an existing firewall rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="region_python">
+<a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -777,7 +892,9 @@ firewall rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>source_<wbr>ip_<wbr>address</span>
+        <span id="source_ip_address_python">
+<a href="#source_ip_address_python" style="color: inherit; text-decoration: inherit;">source_<wbr>ip_<wbr>address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -788,7 +905,9 @@ firewall rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>source_<wbr>port</span>
+        <span id="source_port_python">
+<a href="#source_port_python" style="color: inherit; text-decoration: inherit;">source_<wbr>port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -799,7 +918,9 @@ firewall rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tenant_<wbr>id</span>
+        <span id="tenant_id_python">
+<a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -810,7 +931,9 @@ new firewall rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>value_<wbr>specs</span>
+        <span id="value_specs_python">
+<a href="#value_specs_python" style="color: inherit; text-decoration: inherit;">value_<wbr>specs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -837,7 +960,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -852,7 +977,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -867,7 +994,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -882,7 +1011,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1023,7 +1154,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Action</span>
+        <span id="state_action_csharp">
+<a href="#state_action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1034,7 +1167,9 @@ firewall rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="state_description_csharp">
+<a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1044,7 +1179,9 @@ updates the `description` of an existing firewall rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Destination<wbr>Ip<wbr>Address</span>
+        <span id="state_destinationipaddress_csharp">
+<a href="#state_destinationipaddress_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Ip<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1055,7 +1192,9 @@ of an existing firewall rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Destination<wbr>Port</span>
+        <span id="state_destinationport_csharp">
+<a href="#state_destinationport_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1066,7 +1205,9 @@ firewall rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enabled</span>
+        <span id="state_enabled_csharp">
+<a href="#state_enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1077,7 +1218,9 @@ or "false" if provided - defaults to "true"). Changing this updates the
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ip<wbr>Version</span>
+        <span id="state_ipversion_csharp">
+<a href="#state_ipversion_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1087,7 +1230,9 @@ updates the `ip_version` of an existing firewall rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1097,7 +1242,9 @@ updates the `name` of an existing firewall rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Protocol</span>
+        <span id="state_protocol_csharp">
+<a href="#state_protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1108,7 +1255,9 @@ Valid values are: `tcp`, `udp`, `icmp`, and `any`. Changing this updates the
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="state_region_csharp">
+<a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1120,7 +1269,9 @@ firewall rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Source<wbr>Ip<wbr>Address</span>
+        <span id="state_sourceipaddress_csharp">
+<a href="#state_sourceipaddress_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Ip<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1131,7 +1282,9 @@ firewall rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Source<wbr>Port</span>
+        <span id="state_sourceport_csharp">
+<a href="#state_sourceport_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1142,7 +1295,9 @@ firewall rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tenant<wbr>Id</span>
+        <span id="state_tenantid_csharp">
+<a href="#state_tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1153,7 +1308,9 @@ new firewall rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Value<wbr>Specs</span>
+        <span id="state_valuespecs_csharp">
+<a href="#state_valuespecs_csharp" style="color: inherit; text-decoration: inherit;">Value<wbr>Specs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -1169,7 +1326,9 @@ new firewall rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Action</span>
+        <span id="state_action_go">
+<a href="#state_action_go" style="color: inherit; text-decoration: inherit;">Action</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1180,7 +1339,9 @@ firewall rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="state_description_go">
+<a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1190,7 +1351,9 @@ updates the `description` of an existing firewall rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Destination<wbr>Ip<wbr>Address</span>
+        <span id="state_destinationipaddress_go">
+<a href="#state_destinationipaddress_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Ip<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1201,7 +1364,9 @@ of an existing firewall rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Destination<wbr>Port</span>
+        <span id="state_destinationport_go">
+<a href="#state_destinationport_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1212,7 +1377,9 @@ firewall rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Enabled</span>
+        <span id="state_enabled_go">
+<a href="#state_enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1223,7 +1390,9 @@ or "false" if provided - defaults to "true"). Changing this updates the
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ip<wbr>Version</span>
+        <span id="state_ipversion_go">
+<a href="#state_ipversion_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1233,7 +1402,9 @@ updates the `ip_version` of an existing firewall rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1243,7 +1414,9 @@ updates the `name` of an existing firewall rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Protocol</span>
+        <span id="state_protocol_go">
+<a href="#state_protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1254,7 +1427,9 @@ Valid values are: `tcp`, `udp`, `icmp`, and `any`. Changing this updates the
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="state_region_go">
+<a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1266,7 +1441,9 @@ firewall rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Source<wbr>Ip<wbr>Address</span>
+        <span id="state_sourceipaddress_go">
+<a href="#state_sourceipaddress_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Ip<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1277,7 +1454,9 @@ firewall rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Source<wbr>Port</span>
+        <span id="state_sourceport_go">
+<a href="#state_sourceport_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1288,7 +1467,9 @@ firewall rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tenant<wbr>Id</span>
+        <span id="state_tenantid_go">
+<a href="#state_tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1299,7 +1480,9 @@ new firewall rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Value<wbr>Specs</span>
+        <span id="state_valuespecs_go">
+<a href="#state_valuespecs_go" style="color: inherit; text-decoration: inherit;">Value<wbr>Specs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -1315,7 +1498,9 @@ new firewall rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>action</span>
+        <span id="state_action_nodejs">
+<a href="#state_action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1326,7 +1511,9 @@ firewall rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="state_description_nodejs">
+<a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1336,7 +1523,9 @@ updates the `description` of an existing firewall rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>destination<wbr>Ip<wbr>Address</span>
+        <span id="state_destinationipaddress_nodejs">
+<a href="#state_destinationipaddress_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Ip<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1347,7 +1536,9 @@ of an existing firewall rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>destination<wbr>Port</span>
+        <span id="state_destinationport_nodejs">
+<a href="#state_destinationport_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1358,7 +1549,9 @@ firewall rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>enabled</span>
+        <span id="state_enabled_nodejs">
+<a href="#state_enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1369,7 +1562,9 @@ or "false" if provided - defaults to "true"). Changing this updates the
 
     <dt class="property-optional"
             title="Optional">
-        <span>ip<wbr>Version</span>
+        <span id="state_ipversion_nodejs">
+<a href="#state_ipversion_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1379,7 +1574,9 @@ updates the `ip_version` of an existing firewall rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1389,7 +1586,9 @@ updates the `name` of an existing firewall rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>protocol</span>
+        <span id="state_protocol_nodejs">
+<a href="#state_protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1400,7 +1599,9 @@ Valid values are: `tcp`, `udp`, `icmp`, and `any`. Changing this updates the
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="state_region_nodejs">
+<a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1412,7 +1613,9 @@ firewall rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>source<wbr>Ip<wbr>Address</span>
+        <span id="state_sourceipaddress_nodejs">
+<a href="#state_sourceipaddress_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Ip<wbr>Address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1423,7 +1626,9 @@ firewall rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>source<wbr>Port</span>
+        <span id="state_sourceport_nodejs">
+<a href="#state_sourceport_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1434,7 +1639,9 @@ firewall rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tenant<wbr>Id</span>
+        <span id="state_tenantid_nodejs">
+<a href="#state_tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1445,7 +1652,9 @@ new firewall rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>value<wbr>Specs</span>
+        <span id="state_valuespecs_nodejs">
+<a href="#state_valuespecs_nodejs" style="color: inherit; text-decoration: inherit;">value<wbr>Specs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -1461,7 +1670,9 @@ new firewall rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>action</span>
+        <span id="state_action_python">
+<a href="#state_action_python" style="color: inherit; text-decoration: inherit;">action</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1472,7 +1683,9 @@ firewall rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="state_description_python">
+<a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1482,7 +1695,9 @@ updates the `description` of an existing firewall rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>destination_<wbr>ip_<wbr>address</span>
+        <span id="state_destination_ip_address_python">
+<a href="#state_destination_ip_address_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>ip_<wbr>address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1493,7 +1708,9 @@ of an existing firewall rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>destination_<wbr>port</span>
+        <span id="state_destination_port_python">
+<a href="#state_destination_port_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1504,7 +1721,9 @@ firewall rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>enabled</span>
+        <span id="state_enabled_python">
+<a href="#state_enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1515,7 +1734,9 @@ or "false" if provided - defaults to "true"). Changing this updates the
 
     <dt class="property-optional"
             title="Optional">
-        <span>ip_<wbr>version</span>
+        <span id="state_ip_version_python">
+<a href="#state_ip_version_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>version</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1525,7 +1746,9 @@ updates the `ip_version` of an existing firewall rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1535,7 +1758,9 @@ updates the `name` of an existing firewall rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>protocol</span>
+        <span id="state_protocol_python">
+<a href="#state_protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1546,7 +1771,9 @@ Valid values are: `tcp`, `udp`, `icmp`, and `any`. Changing this updates the
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="state_region_python">
+<a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1558,7 +1785,9 @@ firewall rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>source_<wbr>ip_<wbr>address</span>
+        <span id="state_source_ip_address_python">
+<a href="#state_source_ip_address_python" style="color: inherit; text-decoration: inherit;">source_<wbr>ip_<wbr>address</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1569,7 +1798,9 @@ firewall rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>source_<wbr>port</span>
+        <span id="state_source_port_python">
+<a href="#state_source_port_python" style="color: inherit; text-decoration: inherit;">source_<wbr>port</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1580,7 +1811,9 @@ firewall rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tenant_<wbr>id</span>
+        <span id="state_tenant_id_python">
+<a href="#state_tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1591,7 +1824,9 @@ new firewall rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>value_<wbr>specs</span>
+        <span id="state_value_specs_python">
+<a href="#state_value_specs_python" style="color: inherit; text-decoration: inherit;">value_<wbr>specs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>

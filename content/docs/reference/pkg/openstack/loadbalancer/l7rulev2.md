@@ -20,7 +20,59 @@ Manages a V2 L7 Rule resource within OpenStack.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var network1 = new OpenStack.Networking.Network("network1", new OpenStack.Networking.NetworkArgs
+        {
+            AdminStateUp = "true",
+        });
+        var subnet1 = new OpenStack.Networking.Subnet("subnet1", new OpenStack.Networking.SubnetArgs
+        {
+            Cidr = "192.168.199.0/24",
+            IpVersion = 4,
+            NetworkId = network1.Id,
+        });
+        var loadbalancer1 = new OpenStack.LoadBalancer.LoadBalancer("loadbalancer1", new OpenStack.LoadBalancer.LoadBalancerArgs
+        {
+            VipSubnetId = subnet1.Id,
+        });
+        var listener1 = new OpenStack.LoadBalancer.Listener("listener1", new OpenStack.LoadBalancer.ListenerArgs
+        {
+            LoadbalancerId = loadbalancer1.Id,
+            Protocol = "HTTP",
+            ProtocolPort = 8080,
+        });
+        var pool1 = new OpenStack.LoadBalancer.Pool("pool1", new OpenStack.LoadBalancer.PoolArgs
+        {
+            LbMethod = "ROUND_ROBIN",
+            LoadbalancerId = loadbalancer1.Id,
+            Protocol = "HTTP",
+        });
+        var l7policy1 = new OpenStack.LoadBalancer.L7PolicyV2("l7policy1", new OpenStack.LoadBalancer.L7PolicyV2Args
+        {
+            Action = "REDIRECT_TO_URL",
+            Description = "test description",
+            ListenerId = listener1.Id,
+            Position = 1,
+            RedirectUrl = "http://www.example.com",
+        });
+        var l7rule1 = new OpenStack.LoadBalancer.L7RuleV2("l7rule1", new OpenStack.LoadBalancer.L7RuleV2Args
+        {
+            CompareType = "EQUAL_TO",
+            L7policyId = l7policy1.Id,
+            Type = "PATH",
+            Value = "/api",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -288,7 +340,9 @@ The L7RuleV2 resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-required"
             title="Required">
-        <span>Compare<wbr>Type</span>
+        <span id="comparetype_csharp">
+<a href="#comparetype_csharp" style="color: inherit; text-decoration: inherit;">Compare<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -298,7 +352,9 @@ CONTAINS, STARTS\_WITH, ENDS_WITH, EQUAL_TO or REGEX
 
     <dt class="property-required"
             title="Required">
-        <span>L7policy<wbr>Id</span>
+        <span id="l7policyid_csharp">
+<a href="#l7policyid_csharp" style="color: inherit; text-decoration: inherit;">L7policy<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -308,7 +364,9 @@ L7 Rule.
 
     <dt class="property-required"
             title="Required">
-        <span>Type</span>
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -318,7 +376,9 @@ HOST\_NAME or PATH.
 
     <dt class="property-required"
             title="Required">
-        <span>Value</span>
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -328,7 +388,9 @@ compare.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Admin<wbr>State<wbr>Up</span>
+        <span id="adminstateup_csharp">
+<a href="#adminstateup_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>State<wbr>Up</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -338,7 +400,9 @@ A valid value is true (UP) or false (DOWN).
 
     <dt class="property-optional"
             title="Optional">
-        <span>Invert</span>
+        <span id="invert_csharp">
+<a href="#invert_csharp" style="color: inherit; text-decoration: inherit;">Invert</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -348,7 +412,9 @@ true, equal to would become not equal to. Default is false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Key</span>
+        <span id="key_csharp">
+<a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -358,7 +424,9 @@ evaluate. Valid when `type` is set to COOKIE or HEADER.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="region_csharp">
+<a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -370,7 +438,9 @@ L7 Rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tenant<wbr>Id</span>
+        <span id="tenantid_csharp">
+<a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -388,7 +458,9 @@ other than their own. Changing this creates a new L7 Rule.
 
     <dt class="property-required"
             title="Required">
-        <span>Compare<wbr>Type</span>
+        <span id="comparetype_go">
+<a href="#comparetype_go" style="color: inherit; text-decoration: inherit;">Compare<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -398,7 +470,9 @@ CONTAINS, STARTS\_WITH, ENDS_WITH, EQUAL_TO or REGEX
 
     <dt class="property-required"
             title="Required">
-        <span>L7policy<wbr>Id</span>
+        <span id="l7policyid_go">
+<a href="#l7policyid_go" style="color: inherit; text-decoration: inherit;">L7policy<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -408,7 +482,9 @@ L7 Rule.
 
     <dt class="property-required"
             title="Required">
-        <span>Type</span>
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -418,7 +494,9 @@ HOST\_NAME or PATH.
 
     <dt class="property-required"
             title="Required">
-        <span>Value</span>
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -428,7 +506,9 @@ compare.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Admin<wbr>State<wbr>Up</span>
+        <span id="adminstateup_go">
+<a href="#adminstateup_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>State<wbr>Up</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -438,7 +518,9 @@ A valid value is true (UP) or false (DOWN).
 
     <dt class="property-optional"
             title="Optional">
-        <span>Invert</span>
+        <span id="invert_go">
+<a href="#invert_go" style="color: inherit; text-decoration: inherit;">Invert</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -448,7 +530,9 @@ true, equal to would become not equal to. Default is false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Key</span>
+        <span id="key_go">
+<a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -458,7 +542,9 @@ evaluate. Valid when `type` is set to COOKIE or HEADER.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="region_go">
+<a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -470,7 +556,9 @@ L7 Rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tenant<wbr>Id</span>
+        <span id="tenantid_go">
+<a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -488,7 +576,9 @@ other than their own. Changing this creates a new L7 Rule.
 
     <dt class="property-required"
             title="Required">
-        <span>compare<wbr>Type</span>
+        <span id="comparetype_nodejs">
+<a href="#comparetype_nodejs" style="color: inherit; text-decoration: inherit;">compare<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -498,7 +588,9 @@ CONTAINS, STARTS\_WITH, ENDS_WITH, EQUAL_TO or REGEX
 
     <dt class="property-required"
             title="Required">
-        <span>l7policy<wbr>Id</span>
+        <span id="l7policyid_nodejs">
+<a href="#l7policyid_nodejs" style="color: inherit; text-decoration: inherit;">l7policy<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -508,7 +600,9 @@ L7 Rule.
 
     <dt class="property-required"
             title="Required">
-        <span>type</span>
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -518,7 +612,9 @@ HOST\_NAME or PATH.
 
     <dt class="property-required"
             title="Required">
-        <span>value</span>
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -528,7 +624,9 @@ compare.
 
     <dt class="property-optional"
             title="Optional">
-        <span>admin<wbr>State<wbr>Up</span>
+        <span id="adminstateup_nodejs">
+<a href="#adminstateup_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>State<wbr>Up</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -538,7 +636,9 @@ A valid value is true (UP) or false (DOWN).
 
     <dt class="property-optional"
             title="Optional">
-        <span>invert</span>
+        <span id="invert_nodejs">
+<a href="#invert_nodejs" style="color: inherit; text-decoration: inherit;">invert</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -548,7 +648,9 @@ true, equal to would become not equal to. Default is false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>key</span>
+        <span id="key_nodejs">
+<a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -558,7 +660,9 @@ evaluate. Valid when `type` is set to COOKIE or HEADER.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="region_nodejs">
+<a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -570,7 +674,9 @@ L7 Rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tenant<wbr>Id</span>
+        <span id="tenantid_nodejs">
+<a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -588,7 +694,9 @@ other than their own. Changing this creates a new L7 Rule.
 
     <dt class="property-required"
             title="Required">
-        <span>compare_<wbr>type</span>
+        <span id="compare_type_python">
+<a href="#compare_type_python" style="color: inherit; text-decoration: inherit;">compare_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -598,7 +706,9 @@ CONTAINS, STARTS\_WITH, ENDS_WITH, EQUAL_TO or REGEX
 
     <dt class="property-required"
             title="Required">
-        <span>l7policy_<wbr>id</span>
+        <span id="l7policy_id_python">
+<a href="#l7policy_id_python" style="color: inherit; text-decoration: inherit;">l7policy_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -608,7 +718,9 @@ L7 Rule.
 
     <dt class="property-required"
             title="Required">
-        <span>type</span>
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -618,7 +730,9 @@ HOST\_NAME or PATH.
 
     <dt class="property-required"
             title="Required">
-        <span>value</span>
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -628,7 +742,9 @@ compare.
 
     <dt class="property-optional"
             title="Optional">
-        <span>admin_<wbr>state_<wbr>up</span>
+        <span id="admin_state_up_python">
+<a href="#admin_state_up_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>state_<wbr>up</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -638,7 +754,9 @@ A valid value is true (UP) or false (DOWN).
 
     <dt class="property-optional"
             title="Optional">
-        <span>invert</span>
+        <span id="invert_python">
+<a href="#invert_python" style="color: inherit; text-decoration: inherit;">invert</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -648,7 +766,9 @@ true, equal to would become not equal to. Default is false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>key</span>
+        <span id="key_python">
+<a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -658,7 +778,9 @@ evaluate. Valid when `type` is set to COOKIE or HEADER.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="region_python">
+<a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -670,7 +792,9 @@ L7 Rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tenant_<wbr>id</span>
+        <span id="tenant_id_python">
+<a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -699,7 +823,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -707,7 +833,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Listener<wbr>Id</span>
+        <span id="listenerid_csharp">
+<a href="#listenerid_csharp" style="color: inherit; text-decoration: inherit;">Listener<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -723,7 +851,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -731,7 +861,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Listener<wbr>Id</span>
+        <span id="listenerid_go">
+<a href="#listenerid_go" style="color: inherit; text-decoration: inherit;">Listener<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -747,7 +879,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -755,7 +889,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>listener<wbr>Id</span>
+        <span id="listenerid_nodejs">
+<a href="#listenerid_nodejs" style="color: inherit; text-decoration: inherit;">listener<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -771,7 +907,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -779,7 +917,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>listener_<wbr>id</span>
+        <span id="listener_id_python">
+<a href="#listener_id_python" style="color: inherit; text-decoration: inherit;">listener_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -921,7 +1061,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Admin<wbr>State<wbr>Up</span>
+        <span id="state_adminstateup_csharp">
+<a href="#state_adminstateup_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>State<wbr>Up</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -931,7 +1073,9 @@ A valid value is true (UP) or false (DOWN).
 
     <dt class="property-optional"
             title="Optional">
-        <span>Compare<wbr>Type</span>
+        <span id="state_comparetype_csharp">
+<a href="#state_comparetype_csharp" style="color: inherit; text-decoration: inherit;">Compare<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -941,7 +1085,9 @@ CONTAINS, STARTS\_WITH, ENDS_WITH, EQUAL_TO or REGEX
 
     <dt class="property-optional"
             title="Optional">
-        <span>Invert</span>
+        <span id="state_invert_csharp">
+<a href="#state_invert_csharp" style="color: inherit; text-decoration: inherit;">Invert</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -951,7 +1097,9 @@ true, equal to would become not equal to. Default is false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Key</span>
+        <span id="state_key_csharp">
+<a href="#state_key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -961,7 +1109,9 @@ evaluate. Valid when `type` is set to COOKIE or HEADER.
 
     <dt class="property-optional"
             title="Optional">
-        <span>L7policy<wbr>Id</span>
+        <span id="state_l7policyid_csharp">
+<a href="#state_l7policyid_csharp" style="color: inherit; text-decoration: inherit;">L7policy<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -971,7 +1121,9 @@ L7 Rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Listener<wbr>Id</span>
+        <span id="state_listenerid_csharp">
+<a href="#state_listenerid_csharp" style="color: inherit; text-decoration: inherit;">Listener<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -980,7 +1132,9 @@ L7 Rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="state_region_csharp">
+<a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -992,7 +1146,9 @@ L7 Rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tenant<wbr>Id</span>
+        <span id="state_tenantid_csharp">
+<a href="#state_tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1003,7 +1159,9 @@ other than their own. Changing this creates a new L7 Rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Type</span>
+        <span id="state_type_csharp">
+<a href="#state_type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1013,7 +1171,9 @@ HOST\_NAME or PATH.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Value</span>
+        <span id="state_value_csharp">
+<a href="#state_value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1030,7 +1190,9 @@ compare.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Admin<wbr>State<wbr>Up</span>
+        <span id="state_adminstateup_go">
+<a href="#state_adminstateup_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>State<wbr>Up</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1040,7 +1202,9 @@ A valid value is true (UP) or false (DOWN).
 
     <dt class="property-optional"
             title="Optional">
-        <span>Compare<wbr>Type</span>
+        <span id="state_comparetype_go">
+<a href="#state_comparetype_go" style="color: inherit; text-decoration: inherit;">Compare<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1050,7 +1214,9 @@ CONTAINS, STARTS\_WITH, ENDS_WITH, EQUAL_TO or REGEX
 
     <dt class="property-optional"
             title="Optional">
-        <span>Invert</span>
+        <span id="state_invert_go">
+<a href="#state_invert_go" style="color: inherit; text-decoration: inherit;">Invert</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1060,7 +1226,9 @@ true, equal to would become not equal to. Default is false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Key</span>
+        <span id="state_key_go">
+<a href="#state_key_go" style="color: inherit; text-decoration: inherit;">Key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1070,7 +1238,9 @@ evaluate. Valid when `type` is set to COOKIE or HEADER.
 
     <dt class="property-optional"
             title="Optional">
-        <span>L7policy<wbr>Id</span>
+        <span id="state_l7policyid_go">
+<a href="#state_l7policyid_go" style="color: inherit; text-decoration: inherit;">L7policy<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1080,7 +1250,9 @@ L7 Rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Listener<wbr>Id</span>
+        <span id="state_listenerid_go">
+<a href="#state_listenerid_go" style="color: inherit; text-decoration: inherit;">Listener<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1089,7 +1261,9 @@ L7 Rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="state_region_go">
+<a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1101,7 +1275,9 @@ L7 Rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tenant<wbr>Id</span>
+        <span id="state_tenantid_go">
+<a href="#state_tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1112,7 +1288,9 @@ other than their own. Changing this creates a new L7 Rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Type</span>
+        <span id="state_type_go">
+<a href="#state_type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1122,7 +1300,9 @@ HOST\_NAME or PATH.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Value</span>
+        <span id="state_value_go">
+<a href="#state_value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1139,7 +1319,9 @@ compare.
 
     <dt class="property-optional"
             title="Optional">
-        <span>admin<wbr>State<wbr>Up</span>
+        <span id="state_adminstateup_nodejs">
+<a href="#state_adminstateup_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>State<wbr>Up</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1149,7 +1331,9 @@ A valid value is true (UP) or false (DOWN).
 
     <dt class="property-optional"
             title="Optional">
-        <span>compare<wbr>Type</span>
+        <span id="state_comparetype_nodejs">
+<a href="#state_comparetype_nodejs" style="color: inherit; text-decoration: inherit;">compare<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1159,7 +1343,9 @@ CONTAINS, STARTS\_WITH, ENDS_WITH, EQUAL_TO or REGEX
 
     <dt class="property-optional"
             title="Optional">
-        <span>invert</span>
+        <span id="state_invert_nodejs">
+<a href="#state_invert_nodejs" style="color: inherit; text-decoration: inherit;">invert</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1169,7 +1355,9 @@ true, equal to would become not equal to. Default is false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>key</span>
+        <span id="state_key_nodejs">
+<a href="#state_key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1179,7 +1367,9 @@ evaluate. Valid when `type` is set to COOKIE or HEADER.
 
     <dt class="property-optional"
             title="Optional">
-        <span>l7policy<wbr>Id</span>
+        <span id="state_l7policyid_nodejs">
+<a href="#state_l7policyid_nodejs" style="color: inherit; text-decoration: inherit;">l7policy<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1189,7 +1379,9 @@ L7 Rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>listener<wbr>Id</span>
+        <span id="state_listenerid_nodejs">
+<a href="#state_listenerid_nodejs" style="color: inherit; text-decoration: inherit;">listener<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1198,7 +1390,9 @@ L7 Rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="state_region_nodejs">
+<a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1210,7 +1404,9 @@ L7 Rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tenant<wbr>Id</span>
+        <span id="state_tenantid_nodejs">
+<a href="#state_tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1221,7 +1417,9 @@ other than their own. Changing this creates a new L7 Rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>type</span>
+        <span id="state_type_nodejs">
+<a href="#state_type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1231,7 +1429,9 @@ HOST\_NAME or PATH.
 
     <dt class="property-optional"
             title="Optional">
-        <span>value</span>
+        <span id="state_value_nodejs">
+<a href="#state_value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1248,7 +1448,9 @@ compare.
 
     <dt class="property-optional"
             title="Optional">
-        <span>admin_<wbr>state_<wbr>up</span>
+        <span id="state_admin_state_up_python">
+<a href="#state_admin_state_up_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>state_<wbr>up</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1258,7 +1460,9 @@ A valid value is true (UP) or false (DOWN).
 
     <dt class="property-optional"
             title="Optional">
-        <span>compare_<wbr>type</span>
+        <span id="state_compare_type_python">
+<a href="#state_compare_type_python" style="color: inherit; text-decoration: inherit;">compare_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1268,7 +1472,9 @@ CONTAINS, STARTS\_WITH, ENDS_WITH, EQUAL_TO or REGEX
 
     <dt class="property-optional"
             title="Optional">
-        <span>invert</span>
+        <span id="state_invert_python">
+<a href="#state_invert_python" style="color: inherit; text-decoration: inherit;">invert</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1278,7 +1484,9 @@ true, equal to would become not equal to. Default is false.
 
     <dt class="property-optional"
             title="Optional">
-        <span>key</span>
+        <span id="state_key_python">
+<a href="#state_key_python" style="color: inherit; text-decoration: inherit;">key</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1288,7 +1496,9 @@ evaluate. Valid when `type` is set to COOKIE or HEADER.
 
     <dt class="property-optional"
             title="Optional">
-        <span>l7policy_<wbr>id</span>
+        <span id="state_l7policy_id_python">
+<a href="#state_l7policy_id_python" style="color: inherit; text-decoration: inherit;">l7policy_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1298,7 +1508,9 @@ L7 Rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>listener_<wbr>id</span>
+        <span id="state_listener_id_python">
+<a href="#state_listener_id_python" style="color: inherit; text-decoration: inherit;">listener_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1307,7 +1519,9 @@ L7 Rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="state_region_python">
+<a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1319,7 +1533,9 @@ L7 Rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tenant_<wbr>id</span>
+        <span id="state_tenant_id_python">
+<a href="#state_tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1330,7 +1546,9 @@ other than their own. Changing this creates a new L7 Rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span>type</span>
+        <span id="state_type_python">
+<a href="#state_type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1340,7 +1558,9 @@ HOST\_NAME or PATH.
 
     <dt class="property-optional"
             title="Optional">
-        <span>value</span>
+        <span id="state_value_python">
+<a href="#state_value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

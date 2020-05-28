@@ -25,7 +25,43 @@ resource that connects the next hop to the router, as in the example above.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var router1 = new OpenStack.Networking.Router("router1", new OpenStack.Networking.RouterArgs
+        {
+            AdminStateUp = "true",
+        });
+        var network1 = new OpenStack.Networking.Network("network1", new OpenStack.Networking.NetworkArgs
+        {
+            AdminStateUp = "true",
+        });
+        var subnet1 = new OpenStack.Networking.Subnet("subnet1", new OpenStack.Networking.SubnetArgs
+        {
+            Cidr = "192.168.199.0/24",
+            IpVersion = 4,
+            NetworkId = network1.Id,
+        });
+        var int1 = new OpenStack.Networking.RouterInterface("int1", new OpenStack.Networking.RouterInterfaceArgs
+        {
+            RouterId = router1.Id,
+            SubnetId = subnet1.Id,
+        });
+        var routerRoute1 = new OpenStack.Networking.RouterRoute("routerRoute1", new OpenStack.Networking.RouterRouteArgs
+        {
+            DestinationCidr = "10.0.1.0/24",
+            NextHop = "192.168.199.254",
+            RouterId = router1.Id,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -267,7 +303,9 @@ The RouterRoute resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-required"
             title="Required">
-        <span>Destination<wbr>Cidr</span>
+        <span id="destinationcidr_csharp">
+<a href="#destinationcidr_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Cidr</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -277,7 +315,9 @@ this creates a new routing entry.
 
     <dt class="property-required"
             title="Required">
-        <span>Next<wbr>Hop</span>
+        <span id="nexthop_csharp">
+<a href="#nexthop_csharp" style="color: inherit; text-decoration: inherit;">Next<wbr>Hop</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -287,7 +327,9 @@ this creates a new routing entry.
 
     <dt class="property-required"
             title="Required">
-        <span>Router<wbr>Id</span>
+        <span id="routerid_csharp">
+<a href="#routerid_csharp" style="color: inherit; text-decoration: inherit;">Router<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -297,7 +339,9 @@ this creates a new routing entry.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="region_csharp">
+<a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -316,7 +360,9 @@ routing entry.
 
     <dt class="property-required"
             title="Required">
-        <span>Destination<wbr>Cidr</span>
+        <span id="destinationcidr_go">
+<a href="#destinationcidr_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Cidr</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -326,7 +372,9 @@ this creates a new routing entry.
 
     <dt class="property-required"
             title="Required">
-        <span>Next<wbr>Hop</span>
+        <span id="nexthop_go">
+<a href="#nexthop_go" style="color: inherit; text-decoration: inherit;">Next<wbr>Hop</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -336,7 +384,9 @@ this creates a new routing entry.
 
     <dt class="property-required"
             title="Required">
-        <span>Router<wbr>Id</span>
+        <span id="routerid_go">
+<a href="#routerid_go" style="color: inherit; text-decoration: inherit;">Router<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -346,7 +396,9 @@ this creates a new routing entry.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="region_go">
+<a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -365,7 +417,9 @@ routing entry.
 
     <dt class="property-required"
             title="Required">
-        <span>destination<wbr>Cidr</span>
+        <span id="destinationcidr_nodejs">
+<a href="#destinationcidr_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Cidr</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -375,7 +429,9 @@ this creates a new routing entry.
 
     <dt class="property-required"
             title="Required">
-        <span>next<wbr>Hop</span>
+        <span id="nexthop_nodejs">
+<a href="#nexthop_nodejs" style="color: inherit; text-decoration: inherit;">next<wbr>Hop</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -385,7 +441,9 @@ this creates a new routing entry.
 
     <dt class="property-required"
             title="Required">
-        <span>router<wbr>Id</span>
+        <span id="routerid_nodejs">
+<a href="#routerid_nodejs" style="color: inherit; text-decoration: inherit;">router<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -395,7 +453,9 @@ this creates a new routing entry.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="region_nodejs">
+<a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -414,7 +474,9 @@ routing entry.
 
     <dt class="property-required"
             title="Required">
-        <span>destination_<wbr>cidr</span>
+        <span id="destination_cidr_python">
+<a href="#destination_cidr_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>cidr</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -424,7 +486,9 @@ this creates a new routing entry.
 
     <dt class="property-required"
             title="Required">
-        <span>next_<wbr>hop</span>
+        <span id="next_hop_python">
+<a href="#next_hop_python" style="color: inherit; text-decoration: inherit;">next_<wbr>hop</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -434,7 +498,9 @@ this creates a new routing entry.
 
     <dt class="property-required"
             title="Required">
-        <span>router_<wbr>id</span>
+        <span id="router_id_python">
+<a href="#router_id_python" style="color: inherit; text-decoration: inherit;">router_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -444,7 +510,9 @@ this creates a new routing entry.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="region_python">
+<a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -474,7 +542,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -489,7 +559,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -504,7 +576,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -519,7 +593,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -660,7 +736,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Destination<wbr>Cidr</span>
+        <span id="state_destinationcidr_csharp">
+<a href="#state_destinationcidr_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Cidr</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -670,7 +748,9 @@ this creates a new routing entry.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Next<wbr>Hop</span>
+        <span id="state_nexthop_csharp">
+<a href="#state_nexthop_csharp" style="color: inherit; text-decoration: inherit;">Next<wbr>Hop</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -680,7 +760,9 @@ this creates a new routing entry.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="state_region_csharp">
+<a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -692,7 +774,9 @@ routing entry.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Router<wbr>Id</span>
+        <span id="state_routerid_csharp">
+<a href="#state_routerid_csharp" style="color: inherit; text-decoration: inherit;">Router<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -709,7 +793,9 @@ this creates a new routing entry.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Destination<wbr>Cidr</span>
+        <span id="state_destinationcidr_go">
+<a href="#state_destinationcidr_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Cidr</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -719,7 +805,9 @@ this creates a new routing entry.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Next<wbr>Hop</span>
+        <span id="state_nexthop_go">
+<a href="#state_nexthop_go" style="color: inherit; text-decoration: inherit;">Next<wbr>Hop</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -729,7 +817,9 @@ this creates a new routing entry.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="state_region_go">
+<a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -741,7 +831,9 @@ routing entry.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Router<wbr>Id</span>
+        <span id="state_routerid_go">
+<a href="#state_routerid_go" style="color: inherit; text-decoration: inherit;">Router<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -758,7 +850,9 @@ this creates a new routing entry.
 
     <dt class="property-optional"
             title="Optional">
-        <span>destination<wbr>Cidr</span>
+        <span id="state_destinationcidr_nodejs">
+<a href="#state_destinationcidr_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Cidr</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -768,7 +862,9 @@ this creates a new routing entry.
 
     <dt class="property-optional"
             title="Optional">
-        <span>next<wbr>Hop</span>
+        <span id="state_nexthop_nodejs">
+<a href="#state_nexthop_nodejs" style="color: inherit; text-decoration: inherit;">next<wbr>Hop</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -778,7 +874,9 @@ this creates a new routing entry.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="state_region_nodejs">
+<a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -790,7 +888,9 @@ routing entry.
 
     <dt class="property-optional"
             title="Optional">
-        <span>router<wbr>Id</span>
+        <span id="state_routerid_nodejs">
+<a href="#state_routerid_nodejs" style="color: inherit; text-decoration: inherit;">router<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -807,7 +907,9 @@ this creates a new routing entry.
 
     <dt class="property-optional"
             title="Optional">
-        <span>destination_<wbr>cidr</span>
+        <span id="state_destination_cidr_python">
+<a href="#state_destination_cidr_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>cidr</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -817,7 +919,9 @@ this creates a new routing entry.
 
     <dt class="property-optional"
             title="Optional">
-        <span>next_<wbr>hop</span>
+        <span id="state_next_hop_python">
+<a href="#state_next_hop_python" style="color: inherit; text-decoration: inherit;">next_<wbr>hop</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -827,7 +931,9 @@ this creates a new routing entry.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="state_region_python">
+<a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -839,7 +945,9 @@ routing entry.
 
     <dt class="property-optional"
             title="Optional">
-        <span>router_<wbr>id</span>
+        <span id="state_router_id_python">
+<a href="#state_router_id_python" style="color: inherit; text-decoration: inherit;">router_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

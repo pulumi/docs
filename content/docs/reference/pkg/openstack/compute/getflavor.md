@@ -20,7 +20,23 @@ Use this data source to get the ID of an available OpenStack flavor.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var small = Output.Create(OpenStack.Compute.GetFlavor.InvokeAsync(new OpenStack.Compute.GetFlavorArgs
+        {
+            Ram = 512,
+            Vcpus = 1,
+        }));
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -92,7 +108,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Disk</span>
+        <span id="disk_csharp">
+<a href="#disk_csharp" style="color: inherit; text-decoration: inherit;">Disk</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -101,7 +119,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Flavor<wbr>Id</span>
+        <span id="flavorid_csharp">
+<a href="#flavorid_csharp" style="color: inherit; text-decoration: inherit;">Flavor<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -111,7 +131,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Min<wbr>Disk</span>
+        <span id="mindisk_csharp">
+<a href="#mindisk_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Disk</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -121,7 +143,9 @@ with the `flavor_id`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Min<wbr>Ram</span>
+        <span id="minram_csharp">
+<a href="#minram_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Ram</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -131,7 +155,9 @@ with the `flavor_id`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -140,7 +166,9 @@ with the `flavor_id`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ram</span>
+        <span id="ram_csharp">
+<a href="#ram_csharp" style="color: inherit; text-decoration: inherit;">Ram</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -149,7 +177,9 @@ with the `flavor_id`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="region_csharp">
+<a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -159,7 +189,9 @@ If omitted, the `region` argument of the provider is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Rx<wbr>Tx<wbr>Factor</span>
+        <span id="rxtxfactor_csharp">
+<a href="#rxtxfactor_csharp" style="color: inherit; text-decoration: inherit;">Rx<wbr>Tx<wbr>Factor</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
@@ -168,7 +200,9 @@ If omitted, the `region` argument of the provider is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Swap</span>
+        <span id="swap_csharp">
+<a href="#swap_csharp" style="color: inherit; text-decoration: inherit;">Swap</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -177,7 +211,9 @@ If omitted, the `region` argument of the provider is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vcpus</span>
+        <span id="vcpus_csharp">
+<a href="#vcpus_csharp" style="color: inherit; text-decoration: inherit;">Vcpus</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -193,7 +229,9 @@ If omitted, the `region` argument of the provider is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Disk</span>
+        <span id="disk_go">
+<a href="#disk_go" style="color: inherit; text-decoration: inherit;">Disk</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -202,7 +240,9 @@ If omitted, the `region` argument of the provider is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Flavor<wbr>Id</span>
+        <span id="flavorid_go">
+<a href="#flavorid_go" style="color: inherit; text-decoration: inherit;">Flavor<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -212,7 +252,9 @@ If omitted, the `region` argument of the provider is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Min<wbr>Disk</span>
+        <span id="mindisk_go">
+<a href="#mindisk_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Disk</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -222,7 +264,9 @@ with the `flavor_id`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Min<wbr>Ram</span>
+        <span id="minram_go">
+<a href="#minram_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Ram</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -232,7 +276,9 @@ with the `flavor_id`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -241,7 +287,9 @@ with the `flavor_id`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Ram</span>
+        <span id="ram_go">
+<a href="#ram_go" style="color: inherit; text-decoration: inherit;">Ram</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -250,7 +298,9 @@ with the `flavor_id`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="region_go">
+<a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -260,7 +310,9 @@ If omitted, the `region` argument of the provider is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Rx<wbr>Tx<wbr>Factor</span>
+        <span id="rxtxfactor_go">
+<a href="#rxtxfactor_go" style="color: inherit; text-decoration: inherit;">Rx<wbr>Tx<wbr>Factor</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
@@ -269,7 +321,9 @@ If omitted, the `region` argument of the provider is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Swap</span>
+        <span id="swap_go">
+<a href="#swap_go" style="color: inherit; text-decoration: inherit;">Swap</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -278,7 +332,9 @@ If omitted, the `region` argument of the provider is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vcpus</span>
+        <span id="vcpus_go">
+<a href="#vcpus_go" style="color: inherit; text-decoration: inherit;">Vcpus</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -294,7 +350,9 @@ If omitted, the `region` argument of the provider is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>disk</span>
+        <span id="disk_nodejs">
+<a href="#disk_nodejs" style="color: inherit; text-decoration: inherit;">disk</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -303,7 +361,9 @@ If omitted, the `region` argument of the provider is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>flavor<wbr>Id</span>
+        <span id="flavorid_nodejs">
+<a href="#flavorid_nodejs" style="color: inherit; text-decoration: inherit;">flavor<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -313,7 +373,9 @@ If omitted, the `region` argument of the provider is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>min<wbr>Disk</span>
+        <span id="mindisk_nodejs">
+<a href="#mindisk_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Disk</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -323,7 +385,9 @@ with the `flavor_id`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>min<wbr>Ram</span>
+        <span id="minram_nodejs">
+<a href="#minram_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Ram</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -333,7 +397,9 @@ with the `flavor_id`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -342,7 +408,9 @@ with the `flavor_id`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ram</span>
+        <span id="ram_nodejs">
+<a href="#ram_nodejs" style="color: inherit; text-decoration: inherit;">ram</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -351,7 +419,9 @@ with the `flavor_id`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="region_nodejs">
+<a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -361,7 +431,9 @@ If omitted, the `region` argument of the provider is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>rx<wbr>Tx<wbr>Factor</span>
+        <span id="rxtxfactor_nodejs">
+<a href="#rxtxfactor_nodejs" style="color: inherit; text-decoration: inherit;">rx<wbr>Tx<wbr>Factor</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
@@ -370,7 +442,9 @@ If omitted, the `region` argument of the provider is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>swap</span>
+        <span id="swap_nodejs">
+<a href="#swap_nodejs" style="color: inherit; text-decoration: inherit;">swap</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -379,7 +453,9 @@ If omitted, the `region` argument of the provider is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>vcpus</span>
+        <span id="vcpus_nodejs">
+<a href="#vcpus_nodejs" style="color: inherit; text-decoration: inherit;">vcpus</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -395,7 +471,9 @@ If omitted, the `region` argument of the provider is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>disk</span>
+        <span id="disk_python">
+<a href="#disk_python" style="color: inherit; text-decoration: inherit;">disk</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -404,7 +482,9 @@ If omitted, the `region` argument of the provider is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>flavor_<wbr>id</span>
+        <span id="flavor_id_python">
+<a href="#flavor_id_python" style="color: inherit; text-decoration: inherit;">flavor_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -414,7 +494,9 @@ If omitted, the `region` argument of the provider is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>min_<wbr>disk</span>
+        <span id="min_disk_python">
+<a href="#min_disk_python" style="color: inherit; text-decoration: inherit;">min_<wbr>disk</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -424,7 +506,9 @@ with the `flavor_id`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>min_<wbr>ram</span>
+        <span id="min_ram_python">
+<a href="#min_ram_python" style="color: inherit; text-decoration: inherit;">min_<wbr>ram</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -434,7 +518,9 @@ with the `flavor_id`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -443,7 +529,9 @@ with the `flavor_id`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ram</span>
+        <span id="ram_python">
+<a href="#ram_python" style="color: inherit; text-decoration: inherit;">ram</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -452,7 +540,9 @@ with the `flavor_id`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="region_python">
+<a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -462,7 +552,9 @@ If omitted, the `region` argument of the provider is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>rx_<wbr>tx_<wbr>factor</span>
+        <span id="rx_tx_factor_python">
+<a href="#rx_tx_factor_python" style="color: inherit; text-decoration: inherit;">rx_<wbr>tx_<wbr>factor</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -471,7 +563,9 @@ If omitted, the `region` argument of the provider is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>swap</span>
+        <span id="swap_python">
+<a href="#swap_python" style="color: inherit; text-decoration: inherit;">swap</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -480,7 +574,9 @@ If omitted, the `region` argument of the provider is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>vcpus</span>
+        <span id="vcpus_python">
+<a href="#vcpus_python" style="color: inherit; text-decoration: inherit;">vcpus</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -509,7 +605,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Extra<wbr>Specs</span>
+        <span id="extraspecs_csharp">
+<a href="#extraspecs_csharp" style="color: inherit; text-decoration: inherit;">Extra<wbr>Specs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -518,7 +616,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -527,7 +627,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Is<wbr>Public</span>
+        <span id="ispublic_csharp">
+<a href="#ispublic_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Public</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -536,7 +638,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Region</span>
+        <span id="region_csharp">
+<a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -544,7 +648,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Disk</span>
+        <span id="disk_csharp">
+<a href="#disk_csharp" style="color: inherit; text-decoration: inherit;">Disk</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -552,7 +658,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Flavor<wbr>Id</span>
+        <span id="flavorid_csharp">
+<a href="#flavorid_csharp" style="color: inherit; text-decoration: inherit;">Flavor<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -560,7 +668,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Min<wbr>Disk</span>
+        <span id="mindisk_csharp">
+<a href="#mindisk_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Disk</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -568,7 +678,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Min<wbr>Ram</span>
+        <span id="minram_csharp">
+<a href="#minram_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Ram</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -576,7 +688,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -584,7 +698,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Ram</span>
+        <span id="ram_csharp">
+<a href="#ram_csharp" style="color: inherit; text-decoration: inherit;">Ram</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -592,7 +708,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Rx<wbr>Tx<wbr>Factor</span>
+        <span id="rxtxfactor_csharp">
+<a href="#rxtxfactor_csharp" style="color: inherit; text-decoration: inherit;">Rx<wbr>Tx<wbr>Factor</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
@@ -600,7 +718,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Swap</span>
+        <span id="swap_csharp">
+<a href="#swap_csharp" style="color: inherit; text-decoration: inherit;">Swap</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -608,7 +728,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Vcpus</span>
+        <span id="vcpus_csharp">
+<a href="#vcpus_csharp" style="color: inherit; text-decoration: inherit;">Vcpus</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -623,7 +745,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Extra<wbr>Specs</span>
+        <span id="extraspecs_go">
+<a href="#extraspecs_go" style="color: inherit; text-decoration: inherit;">Extra<wbr>Specs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -632,7 +756,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -641,7 +767,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Is<wbr>Public</span>
+        <span id="ispublic_go">
+<a href="#ispublic_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Public</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -650,7 +778,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Region</span>
+        <span id="region_go">
+<a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -658,7 +788,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Disk</span>
+        <span id="disk_go">
+<a href="#disk_go" style="color: inherit; text-decoration: inherit;">Disk</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -666,7 +798,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Flavor<wbr>Id</span>
+        <span id="flavorid_go">
+<a href="#flavorid_go" style="color: inherit; text-decoration: inherit;">Flavor<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -674,7 +808,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Min<wbr>Disk</span>
+        <span id="mindisk_go">
+<a href="#mindisk_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Disk</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -682,7 +818,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Min<wbr>Ram</span>
+        <span id="minram_go">
+<a href="#minram_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Ram</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -690,7 +828,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -698,7 +838,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Ram</span>
+        <span id="ram_go">
+<a href="#ram_go" style="color: inherit; text-decoration: inherit;">Ram</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -706,7 +848,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Rx<wbr>Tx<wbr>Factor</span>
+        <span id="rxtxfactor_go">
+<a href="#rxtxfactor_go" style="color: inherit; text-decoration: inherit;">Rx<wbr>Tx<wbr>Factor</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
@@ -714,7 +858,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Swap</span>
+        <span id="swap_go">
+<a href="#swap_go" style="color: inherit; text-decoration: inherit;">Swap</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -722,7 +868,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Vcpus</span>
+        <span id="vcpus_go">
+<a href="#vcpus_go" style="color: inherit; text-decoration: inherit;">Vcpus</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -737,7 +885,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>extra<wbr>Specs</span>
+        <span id="extraspecs_nodejs">
+<a href="#extraspecs_nodejs" style="color: inherit; text-decoration: inherit;">extra<wbr>Specs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -746,7 +896,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -755,7 +907,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>is<wbr>Public</span>
+        <span id="ispublic_nodejs">
+<a href="#ispublic_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Public</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -764,7 +918,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>region</span>
+        <span id="region_nodejs">
+<a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -772,7 +928,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>disk</span>
+        <span id="disk_nodejs">
+<a href="#disk_nodejs" style="color: inherit; text-decoration: inherit;">disk</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -780,7 +938,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>flavor<wbr>Id</span>
+        <span id="flavorid_nodejs">
+<a href="#flavorid_nodejs" style="color: inherit; text-decoration: inherit;">flavor<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -788,7 +948,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>min<wbr>Disk</span>
+        <span id="mindisk_nodejs">
+<a href="#mindisk_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Disk</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -796,7 +958,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>min<wbr>Ram</span>
+        <span id="minram_nodejs">
+<a href="#minram_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Ram</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -804,7 +968,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -812,7 +978,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>ram</span>
+        <span id="ram_nodejs">
+<a href="#ram_nodejs" style="color: inherit; text-decoration: inherit;">ram</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -820,7 +988,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>rx<wbr>Tx<wbr>Factor</span>
+        <span id="rxtxfactor_nodejs">
+<a href="#rxtxfactor_nodejs" style="color: inherit; text-decoration: inherit;">rx<wbr>Tx<wbr>Factor</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
@@ -828,7 +998,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>swap</span>
+        <span id="swap_nodejs">
+<a href="#swap_nodejs" style="color: inherit; text-decoration: inherit;">swap</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -836,7 +1008,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>vcpus</span>
+        <span id="vcpus_nodejs">
+<a href="#vcpus_nodejs" style="color: inherit; text-decoration: inherit;">vcpus</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -851,7 +1025,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>extra_<wbr>specs</span>
+        <span id="extra_specs_python">
+<a href="#extra_specs_python" style="color: inherit; text-decoration: inherit;">extra_<wbr>specs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -860,7 +1036,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -869,7 +1047,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>is_<wbr>public</span>
+        <span id="is_public_python">
+<a href="#is_public_python" style="color: inherit; text-decoration: inherit;">is_<wbr>public</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -878,7 +1058,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>region</span>
+        <span id="region_python">
+<a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -886,7 +1068,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>disk</span>
+        <span id="disk_python">
+<a href="#disk_python" style="color: inherit; text-decoration: inherit;">disk</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -894,7 +1078,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>flavor_<wbr>id</span>
+        <span id="flavor_id_python">
+<a href="#flavor_id_python" style="color: inherit; text-decoration: inherit;">flavor_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -902,7 +1088,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>min_<wbr>disk</span>
+        <span id="min_disk_python">
+<a href="#min_disk_python" style="color: inherit; text-decoration: inherit;">min_<wbr>disk</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -910,7 +1098,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>min_<wbr>ram</span>
+        <span id="min_ram_python">
+<a href="#min_ram_python" style="color: inherit; text-decoration: inherit;">min_<wbr>ram</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -918,7 +1108,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -926,7 +1118,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>ram</span>
+        <span id="ram_python">
+<a href="#ram_python" style="color: inherit; text-decoration: inherit;">ram</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -934,7 +1128,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>rx_<wbr>tx_<wbr>factor</span>
+        <span id="rx_tx_factor_python">
+<a href="#rx_tx_factor_python" style="color: inherit; text-decoration: inherit;">rx_<wbr>tx_<wbr>factor</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -942,7 +1138,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>swap</span>
+        <span id="swap_python">
+<a href="#swap_python" style="color: inherit; text-decoration: inherit;">swap</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -950,7 +1148,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>vcpus</span>
+        <span id="vcpus_python">
+<a href="#vcpus_python" style="color: inherit; text-decoration: inherit;">vcpus</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>

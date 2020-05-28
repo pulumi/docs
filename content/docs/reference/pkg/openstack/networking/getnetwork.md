@@ -20,7 +20,22 @@ Use this data source to get the ID of an available OpenStack network.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var network = Output.Create(OpenStack.Networking.GetNetwork.InvokeAsync(new OpenStack.Networking.GetNetworkArgs
+        {
+            Name = "tf_test_network",
+        }));
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -90,7 +105,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -99,7 +116,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>External</span>
+        <span id="external_csharp">
+<a href="#external_csharp" style="color: inherit; text-decoration: inherit;">External</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -108,7 +127,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Matching<wbr>Subnet<wbr>Cidr</span>
+        <span id="matchingsubnetcidr_csharp">
+<a href="#matchingsubnetcidr_csharp" style="color: inherit; text-decoration: inherit;">Matching<wbr>Subnet<wbr>Cidr</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -117,7 +138,9 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Mtu</span>
+        <span id="mtu_csharp">
+<a href="#mtu_csharp" style="color: inherit; text-decoration: inherit;">Mtu</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -127,7 +150,9 @@ extension is enabled.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -136,7 +161,9 @@ extension is enabled.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Network<wbr>Id</span>
+        <span id="networkid_csharp">
+<a href="#networkid_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -145,7 +172,9 @@ extension is enabled.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="region_csharp">
+<a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -156,7 +185,9 @@ A Neutron client is needed to retrieve networks ids. If omitted, the
 
     <dt class="property-optional"
             title="Optional">
-        <span>Status</span>
+        <span id="status_csharp">
+<a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -165,7 +196,9 @@ A Neutron client is needed to retrieve networks ids. If omitted, the
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -174,7 +207,9 @@ A Neutron client is needed to retrieve networks ids. If omitted, the
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tenant<wbr>Id</span>
+        <span id="tenantid_csharp">
+<a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -183,7 +218,9 @@ A Neutron client is needed to retrieve networks ids. If omitted, the
 
     <dt class="property-optional"
             title="Optional">
-        <span>Transparent<wbr>Vlan</span>
+        <span id="transparentvlan_csharp">
+<a href="#transparentvlan_csharp" style="color: inherit; text-decoration: inherit;">Transparent<wbr>Vlan</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -200,7 +237,9 @@ network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -209,7 +248,9 @@ network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>External</span>
+        <span id="external_go">
+<a href="#external_go" style="color: inherit; text-decoration: inherit;">External</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -218,7 +259,9 @@ network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Matching<wbr>Subnet<wbr>Cidr</span>
+        <span id="matchingsubnetcidr_go">
+<a href="#matchingsubnetcidr_go" style="color: inherit; text-decoration: inherit;">Matching<wbr>Subnet<wbr>Cidr</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -227,7 +270,9 @@ network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Mtu</span>
+        <span id="mtu_go">
+<a href="#mtu_go" style="color: inherit; text-decoration: inherit;">Mtu</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -237,7 +282,9 @@ extension is enabled.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -246,7 +293,9 @@ extension is enabled.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Network<wbr>Id</span>
+        <span id="networkid_go">
+<a href="#networkid_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -255,7 +304,9 @@ extension is enabled.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="region_go">
+<a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -266,7 +317,9 @@ A Neutron client is needed to retrieve networks ids. If omitted, the
 
     <dt class="property-optional"
             title="Optional">
-        <span>Status</span>
+        <span id="status_go">
+<a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -275,7 +328,9 @@ A Neutron client is needed to retrieve networks ids. If omitted, the
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -284,7 +339,9 @@ A Neutron client is needed to retrieve networks ids. If omitted, the
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tenant<wbr>Id</span>
+        <span id="tenantid_go">
+<a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -293,7 +350,9 @@ A Neutron client is needed to retrieve networks ids. If omitted, the
 
     <dt class="property-optional"
             title="Optional">
-        <span>Transparent<wbr>Vlan</span>
+        <span id="transparentvlan_go">
+<a href="#transparentvlan_go" style="color: inherit; text-decoration: inherit;">Transparent<wbr>Vlan</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -310,7 +369,9 @@ network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -319,7 +380,9 @@ network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>external</span>
+        <span id="external_nodejs">
+<a href="#external_nodejs" style="color: inherit; text-decoration: inherit;">external</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -328,7 +391,9 @@ network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>matching<wbr>Subnet<wbr>Cidr</span>
+        <span id="matchingsubnetcidr_nodejs">
+<a href="#matchingsubnetcidr_nodejs" style="color: inherit; text-decoration: inherit;">matching<wbr>Subnet<wbr>Cidr</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -337,7 +402,9 @@ network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>mtu</span>
+        <span id="mtu_nodejs">
+<a href="#mtu_nodejs" style="color: inherit; text-decoration: inherit;">mtu</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -347,7 +414,9 @@ extension is enabled.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -356,7 +425,9 @@ extension is enabled.
 
     <dt class="property-optional"
             title="Optional">
-        <span>network<wbr>Id</span>
+        <span id="networkid_nodejs">
+<a href="#networkid_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -365,7 +436,9 @@ extension is enabled.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="region_nodejs">
+<a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -376,7 +449,9 @@ A Neutron client is needed to retrieve networks ids. If omitted, the
 
     <dt class="property-optional"
             title="Optional">
-        <span>status</span>
+        <span id="status_nodejs">
+<a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -385,7 +460,9 @@ A Neutron client is needed to retrieve networks ids. If omitted, the
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -394,7 +471,9 @@ A Neutron client is needed to retrieve networks ids. If omitted, the
 
     <dt class="property-optional"
             title="Optional">
-        <span>tenant<wbr>Id</span>
+        <span id="tenantid_nodejs">
+<a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -403,7 +482,9 @@ A Neutron client is needed to retrieve networks ids. If omitted, the
 
     <dt class="property-optional"
             title="Optional">
-        <span>transparent<wbr>Vlan</span>
+        <span id="transparentvlan_nodejs">
+<a href="#transparentvlan_nodejs" style="color: inherit; text-decoration: inherit;">transparent<wbr>Vlan</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -420,7 +501,9 @@ network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -429,7 +512,9 @@ network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>external</span>
+        <span id="external_python">
+<a href="#external_python" style="color: inherit; text-decoration: inherit;">external</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -438,7 +523,9 @@ network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>matching_<wbr>subnet_<wbr>cidr</span>
+        <span id="matching_subnet_cidr_python">
+<a href="#matching_subnet_cidr_python" style="color: inherit; text-decoration: inherit;">matching_<wbr>subnet_<wbr>cidr</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -447,7 +534,9 @@ network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>mtu</span>
+        <span id="mtu_python">
+<a href="#mtu_python" style="color: inherit; text-decoration: inherit;">mtu</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -457,7 +546,9 @@ extension is enabled.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -466,7 +557,9 @@ extension is enabled.
 
     <dt class="property-optional"
             title="Optional">
-        <span>network_<wbr>id</span>
+        <span id="network_id_python">
+<a href="#network_id_python" style="color: inherit; text-decoration: inherit;">network_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -475,7 +568,9 @@ extension is enabled.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="region_python">
+<a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -486,7 +581,9 @@ A Neutron client is needed to retrieve networks ids. If omitted, the
 
     <dt class="property-optional"
             title="Optional">
-        <span>status</span>
+        <span id="status_python">
+<a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -495,7 +592,9 @@ A Neutron client is needed to retrieve networks ids. If omitted, the
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -504,7 +603,9 @@ A Neutron client is needed to retrieve networks ids. If omitted, the
 
     <dt class="property-optional"
             title="Optional">
-        <span>tenant_<wbr>id</span>
+        <span id="tenant_id_python">
+<a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -513,7 +614,9 @@ A Neutron client is needed to retrieve networks ids. If omitted, the
 
     <dt class="property-optional"
             title="Optional">
-        <span>transparent_<wbr>vlan</span>
+        <span id="transparent_vlan_python">
+<a href="#transparent_vlan_python" style="color: inherit; text-decoration: inherit;">transparent_<wbr>vlan</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -543,7 +646,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Admin<wbr>State<wbr>Up</span>
+        <span id="adminstateup_csharp">
+<a href="#adminstateup_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>State<wbr>Up</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -552,7 +657,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>All<wbr>Tags</span>
+        <span id="alltags_csharp">
+<a href="#alltags_csharp" style="color: inherit; text-decoration: inherit;">All<wbr>Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -561,7 +668,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Availability<wbr>Zone<wbr>Hints</span>
+        <span id="availabilityzonehints_csharp">
+<a href="#availabilityzonehints_csharp" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone<wbr>Hints</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -570,7 +679,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Dns<wbr>Domain</span>
+        <span id="dnsdomain_csharp">
+<a href="#dnsdomain_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Domain</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -580,7 +691,9 @@ is enabled
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -589,7 +702,9 @@ is enabled
 
     <dt class="property-"
             title="">
-        <span>Region</span>
+        <span id="region_csharp">
+<a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -598,7 +713,9 @@ is enabled
 
     <dt class="property-"
             title="">
-        <span>Shared</span>
+        <span id="shared_csharp">
+<a href="#shared_csharp" style="color: inherit; text-decoration: inherit;">Shared</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -608,7 +725,9 @@ tenant or not.
 
     <dt class="property-"
             title="">
-        <span>Description</span>
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -617,7 +736,9 @@ tenant or not.
 
     <dt class="property-"
             title="">
-        <span>External</span>
+        <span id="external_csharp">
+<a href="#external_csharp" style="color: inherit; text-decoration: inherit;">External</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -626,7 +747,9 @@ tenant or not.
 
     <dt class="property-"
             title="">
-        <span>Matching<wbr>Subnet<wbr>Cidr</span>
+        <span id="matchingsubnetcidr_csharp">
+<a href="#matchingsubnetcidr_csharp" style="color: inherit; text-decoration: inherit;">Matching<wbr>Subnet<wbr>Cidr</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -634,7 +757,9 @@ tenant or not.
 
     <dt class="property-"
             title="">
-        <span>Mtu</span>
+        <span id="mtu_csharp">
+<a href="#mtu_csharp" style="color: inherit; text-decoration: inherit;">Mtu</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -643,7 +768,9 @@ tenant or not.
 
     <dt class="property-"
             title="">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -652,7 +779,9 @@ tenant or not.
 
     <dt class="property-"
             title="">
-        <span>Network<wbr>Id</span>
+        <span id="networkid_csharp">
+<a href="#networkid_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -660,7 +789,9 @@ tenant or not.
 
     <dt class="property-"
             title="">
-        <span>Status</span>
+        <span id="status_csharp">
+<a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -668,7 +799,9 @@ tenant or not.
 
     <dt class="property-"
             title="">
-        <span>Tags</span>
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -676,7 +809,9 @@ tenant or not.
 
     <dt class="property-"
             title="">
-        <span>Tenant<wbr>Id</span>
+        <span id="tenantid_csharp">
+<a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -684,7 +819,9 @@ tenant or not.
 
     <dt class="property-"
             title="">
-        <span>Transparent<wbr>Vlan</span>
+        <span id="transparentvlan_csharp">
+<a href="#transparentvlan_csharp" style="color: inherit; text-decoration: inherit;">Transparent<wbr>Vlan</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -700,7 +837,9 @@ tenant or not.
 
     <dt class="property-"
             title="">
-        <span>Admin<wbr>State<wbr>Up</span>
+        <span id="adminstateup_go">
+<a href="#adminstateup_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>State<wbr>Up</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -709,7 +848,9 @@ tenant or not.
 
     <dt class="property-"
             title="">
-        <span>All<wbr>Tags</span>
+        <span id="alltags_go">
+<a href="#alltags_go" style="color: inherit; text-decoration: inherit;">All<wbr>Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -718,7 +859,9 @@ tenant or not.
 
     <dt class="property-"
             title="">
-        <span>Availability<wbr>Zone<wbr>Hints</span>
+        <span id="availabilityzonehints_go">
+<a href="#availabilityzonehints_go" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone<wbr>Hints</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -727,7 +870,9 @@ tenant or not.
 
     <dt class="property-"
             title="">
-        <span>Dns<wbr>Domain</span>
+        <span id="dnsdomain_go">
+<a href="#dnsdomain_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Domain</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -737,7 +882,9 @@ is enabled
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -746,7 +893,9 @@ is enabled
 
     <dt class="property-"
             title="">
-        <span>Region</span>
+        <span id="region_go">
+<a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -755,7 +904,9 @@ is enabled
 
     <dt class="property-"
             title="">
-        <span>Shared</span>
+        <span id="shared_go">
+<a href="#shared_go" style="color: inherit; text-decoration: inherit;">Shared</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -765,7 +916,9 @@ tenant or not.
 
     <dt class="property-"
             title="">
-        <span>Description</span>
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -774,7 +927,9 @@ tenant or not.
 
     <dt class="property-"
             title="">
-        <span>External</span>
+        <span id="external_go">
+<a href="#external_go" style="color: inherit; text-decoration: inherit;">External</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -783,7 +938,9 @@ tenant or not.
 
     <dt class="property-"
             title="">
-        <span>Matching<wbr>Subnet<wbr>Cidr</span>
+        <span id="matchingsubnetcidr_go">
+<a href="#matchingsubnetcidr_go" style="color: inherit; text-decoration: inherit;">Matching<wbr>Subnet<wbr>Cidr</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -791,7 +948,9 @@ tenant or not.
 
     <dt class="property-"
             title="">
-        <span>Mtu</span>
+        <span id="mtu_go">
+<a href="#mtu_go" style="color: inherit; text-decoration: inherit;">Mtu</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -800,7 +959,9 @@ tenant or not.
 
     <dt class="property-"
             title="">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -809,7 +970,9 @@ tenant or not.
 
     <dt class="property-"
             title="">
-        <span>Network<wbr>Id</span>
+        <span id="networkid_go">
+<a href="#networkid_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -817,7 +980,9 @@ tenant or not.
 
     <dt class="property-"
             title="">
-        <span>Status</span>
+        <span id="status_go">
+<a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -825,7 +990,9 @@ tenant or not.
 
     <dt class="property-"
             title="">
-        <span>Tags</span>
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -833,7 +1000,9 @@ tenant or not.
 
     <dt class="property-"
             title="">
-        <span>Tenant<wbr>Id</span>
+        <span id="tenantid_go">
+<a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -841,7 +1010,9 @@ tenant or not.
 
     <dt class="property-"
             title="">
-        <span>Transparent<wbr>Vlan</span>
+        <span id="transparentvlan_go">
+<a href="#transparentvlan_go" style="color: inherit; text-decoration: inherit;">Transparent<wbr>Vlan</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -857,7 +1028,9 @@ tenant or not.
 
     <dt class="property-"
             title="">
-        <span>admin<wbr>State<wbr>Up</span>
+        <span id="adminstateup_nodejs">
+<a href="#adminstateup_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>State<wbr>Up</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -866,7 +1039,9 @@ tenant or not.
 
     <dt class="property-"
             title="">
-        <span>all<wbr>Tags</span>
+        <span id="alltags_nodejs">
+<a href="#alltags_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -875,7 +1050,9 @@ tenant or not.
 
     <dt class="property-"
             title="">
-        <span>availability<wbr>Zone<wbr>Hints</span>
+        <span id="availabilityzonehints_nodejs">
+<a href="#availabilityzonehints_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Zone<wbr>Hints</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -884,7 +1061,9 @@ tenant or not.
 
     <dt class="property-"
             title="">
-        <span>dns<wbr>Domain</span>
+        <span id="dnsdomain_nodejs">
+<a href="#dnsdomain_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Domain</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -894,7 +1073,9 @@ is enabled
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -903,7 +1084,9 @@ is enabled
 
     <dt class="property-"
             title="">
-        <span>region</span>
+        <span id="region_nodejs">
+<a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -912,7 +1095,9 @@ is enabled
 
     <dt class="property-"
             title="">
-        <span>shared</span>
+        <span id="shared_nodejs">
+<a href="#shared_nodejs" style="color: inherit; text-decoration: inherit;">shared</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -922,7 +1107,9 @@ tenant or not.
 
     <dt class="property-"
             title="">
-        <span>description</span>
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -931,7 +1118,9 @@ tenant or not.
 
     <dt class="property-"
             title="">
-        <span>external</span>
+        <span id="external_nodejs">
+<a href="#external_nodejs" style="color: inherit; text-decoration: inherit;">external</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -940,7 +1129,9 @@ tenant or not.
 
     <dt class="property-"
             title="">
-        <span>matching<wbr>Subnet<wbr>Cidr</span>
+        <span id="matchingsubnetcidr_nodejs">
+<a href="#matchingsubnetcidr_nodejs" style="color: inherit; text-decoration: inherit;">matching<wbr>Subnet<wbr>Cidr</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -948,7 +1139,9 @@ tenant or not.
 
     <dt class="property-"
             title="">
-        <span>mtu</span>
+        <span id="mtu_nodejs">
+<a href="#mtu_nodejs" style="color: inherit; text-decoration: inherit;">mtu</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -957,7 +1150,9 @@ tenant or not.
 
     <dt class="property-"
             title="">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -966,7 +1161,9 @@ tenant or not.
 
     <dt class="property-"
             title="">
-        <span>network<wbr>Id</span>
+        <span id="networkid_nodejs">
+<a href="#networkid_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -974,7 +1171,9 @@ tenant or not.
 
     <dt class="property-"
             title="">
-        <span>status</span>
+        <span id="status_nodejs">
+<a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -982,7 +1181,9 @@ tenant or not.
 
     <dt class="property-"
             title="">
-        <span>tags</span>
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -990,7 +1191,9 @@ tenant or not.
 
     <dt class="property-"
             title="">
-        <span>tenant<wbr>Id</span>
+        <span id="tenantid_nodejs">
+<a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -998,7 +1201,9 @@ tenant or not.
 
     <dt class="property-"
             title="">
-        <span>transparent<wbr>Vlan</span>
+        <span id="transparentvlan_nodejs">
+<a href="#transparentvlan_nodejs" style="color: inherit; text-decoration: inherit;">transparent<wbr>Vlan</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1014,7 +1219,9 @@ tenant or not.
 
     <dt class="property-"
             title="">
-        <span>admin_<wbr>state_<wbr>up</span>
+        <span id="admin_state_up_python">
+<a href="#admin_state_up_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>state_<wbr>up</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1023,7 +1230,9 @@ tenant or not.
 
     <dt class="property-"
             title="">
-        <span>all_<wbr>tags</span>
+        <span id="all_tags_python">
+<a href="#all_tags_python" style="color: inherit; text-decoration: inherit;">all_<wbr>tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1032,7 +1241,9 @@ tenant or not.
 
     <dt class="property-"
             title="">
-        <span>availability_<wbr>zone_<wbr>hints</span>
+        <span id="availability_zone_hints_python">
+<a href="#availability_zone_hints_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zone_<wbr>hints</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1041,7 +1252,9 @@ tenant or not.
 
     <dt class="property-"
             title="">
-        <span>dns_<wbr>domain</span>
+        <span id="dns_domain_python">
+<a href="#dns_domain_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>domain</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1051,7 +1264,9 @@ is enabled
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1060,7 +1275,9 @@ is enabled
 
     <dt class="property-"
             title="">
-        <span>region</span>
+        <span id="region_python">
+<a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1069,7 +1286,9 @@ is enabled
 
     <dt class="property-"
             title="">
-        <span>shared</span>
+        <span id="shared_python">
+<a href="#shared_python" style="color: inherit; text-decoration: inherit;">shared</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1079,7 +1298,9 @@ tenant or not.
 
     <dt class="property-"
             title="">
-        <span>description</span>
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1088,7 +1309,9 @@ tenant or not.
 
     <dt class="property-"
             title="">
-        <span>external</span>
+        <span id="external_python">
+<a href="#external_python" style="color: inherit; text-decoration: inherit;">external</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1097,7 +1320,9 @@ tenant or not.
 
     <dt class="property-"
             title="">
-        <span>matching_<wbr>subnet_<wbr>cidr</span>
+        <span id="matching_subnet_cidr_python">
+<a href="#matching_subnet_cidr_python" style="color: inherit; text-decoration: inherit;">matching_<wbr>subnet_<wbr>cidr</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1105,7 +1330,9 @@ tenant or not.
 
     <dt class="property-"
             title="">
-        <span>mtu</span>
+        <span id="mtu_python">
+<a href="#mtu_python" style="color: inherit; text-decoration: inherit;">mtu</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1114,7 +1341,9 @@ tenant or not.
 
     <dt class="property-"
             title="">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1123,7 +1352,9 @@ tenant or not.
 
     <dt class="property-"
             title="">
-        <span>network_<wbr>id</span>
+        <span id="network_id_python">
+<a href="#network_id_python" style="color: inherit; text-decoration: inherit;">network_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1131,7 +1362,9 @@ tenant or not.
 
     <dt class="property-"
             title="">
-        <span>status</span>
+        <span id="status_python">
+<a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1139,7 +1372,9 @@ tenant or not.
 
     <dt class="property-"
             title="">
-        <span>tags</span>
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1147,7 +1382,9 @@ tenant or not.
 
     <dt class="property-"
             title="">
-        <span>tenant_<wbr>id</span>
+        <span id="tenant_id_python">
+<a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1155,7 +1392,9 @@ tenant or not.
 
     <dt class="property-"
             title="">
-        <span>transparent_<wbr>vlan</span>
+        <span id="transparent_vlan_python">
+<a href="#transparent_vlan_python" style="color: inherit; text-decoration: inherit;">transparent_<wbr>vlan</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>

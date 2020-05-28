@@ -21,7 +21,37 @@ Associate a floating IP to an instance. This can be used instead of the
 {{< chooser language "typescript,python,go,csharp" / >}}
 ### Automatically detect the correct network
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var instance1 = new OpenStack.Compute.Instance("instance1", new OpenStack.Compute.InstanceArgs
+        {
+            FlavorId = 3,
+            ImageId = "ad091b52-742f-469e-8f3c-fd81cadf0743",
+            KeyPair = "my_key_pair_name",
+            SecurityGroups = 
+            {
+                "default",
+            },
+        });
+        var fip1FloatingIp = new OpenStack.Networking.FloatingIp("fip1FloatingIp", new OpenStack.Networking.FloatingIpArgs
+        {
+            Pool = "my_pool",
+        });
+        var fip1FloatingIpAssociate = new OpenStack.Compute.FloatingIpAssociate("fip1FloatingIpAssociate", new OpenStack.Compute.FloatingIpAssociateArgs
+        {
+            FloatingIp = fip1FloatingIp.Address,
+            InstanceId = instance1.Id,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -68,7 +98,49 @@ const fip1FloatingIpAssociate = new openstack.compute.FloatingIpAssociate("fip_1
 
 ### Explicitly set the network to attach to
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var instance1 = new OpenStack.Compute.Instance("instance1", new OpenStack.Compute.InstanceArgs
+        {
+            FlavorId = 3,
+            ImageId = "ad091b52-742f-469e-8f3c-fd81cadf0743",
+            KeyPair = "my_key_pair_name",
+            Networks = 
+            {
+                new OpenStack.Compute.Inputs.InstanceNetworkArgs
+                {
+                    Name = "my_network",
+                },
+                new OpenStack.Compute.Inputs.InstanceNetworkArgs
+                {
+                    Name = "default",
+                },
+            },
+            SecurityGroups = 
+            {
+                "default",
+            },
+        });
+        var fip1FloatingIp = new OpenStack.Networking.FloatingIp("fip1FloatingIp", new OpenStack.Networking.FloatingIpArgs
+        {
+            Pool = "my_pool",
+        });
+        var fip1FloatingIpAssociate = new OpenStack.Compute.FloatingIpAssociate("fip1FloatingIpAssociate", new OpenStack.Compute.FloatingIpAssociateArgs
+        {
+            FixedIp = instance1.Networks.Apply(networks => networks[1].FixedIpV4),
+            FloatingIp = fip1FloatingIp.Address,
+            InstanceId = instance1.Id,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -95,7 +167,7 @@ instance1 = openstack.compute.Instance("instance1",
     security_groups=["default"])
 fip1_floating_ip = openstack.networking.FloatingIp("fip1FloatingIp", pool="my_pool")
 fip1_floating_ip_associate = openstack.compute.FloatingIpAssociate("fip1FloatingIpAssociate",
-    fixed_ip=instance1.networks[1].fixed_ip_v4,
+    fixed_ip=instance1.networks[1]["fixedIpV4"],
     floating_ip=fip1_floating_ip.address,
     instance_id=instance1.id)
 ```
@@ -317,7 +389,9 @@ The FloatingIpAssociate resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-required"
             title="Required">
-        <span>Floating<wbr>Ip</span>
+        <span id="floatingip_csharp">
+<a href="#floatingip_csharp" style="color: inherit; text-decoration: inherit;">Floating<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -326,7 +400,9 @@ The FloatingIpAssociate resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-required"
             title="Required">
-        <span>Instance<wbr>Id</span>
+        <span id="instanceid_csharp">
+<a href="#instanceid_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -335,7 +411,9 @@ The FloatingIpAssociate resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>Fixed<wbr>Ip</span>
+        <span id="fixedip_csharp">
+<a href="#fixedip_csharp" style="color: inherit; text-decoration: inherit;">Fixed<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -344,7 +422,9 @@ The FloatingIpAssociate resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="region_csharp">
+<a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -356,7 +436,9 @@ Changing this creates a new floatingip_associate.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Wait<wbr>Until<wbr>Associated</span>
+        <span id="waituntilassociated_csharp">
+<a href="#waituntilassociated_csharp" style="color: inherit; text-decoration: inherit;">Wait<wbr>Until<wbr>Associated</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -371,7 +453,9 @@ Changing this creates a new floatingip_associate.
 
     <dt class="property-required"
             title="Required">
-        <span>Floating<wbr>Ip</span>
+        <span id="floatingip_go">
+<a href="#floatingip_go" style="color: inherit; text-decoration: inherit;">Floating<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -380,7 +464,9 @@ Changing this creates a new floatingip_associate.
 
     <dt class="property-required"
             title="Required">
-        <span>Instance<wbr>Id</span>
+        <span id="instanceid_go">
+<a href="#instanceid_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -389,7 +475,9 @@ Changing this creates a new floatingip_associate.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Fixed<wbr>Ip</span>
+        <span id="fixedip_go">
+<a href="#fixedip_go" style="color: inherit; text-decoration: inherit;">Fixed<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -398,7 +486,9 @@ Changing this creates a new floatingip_associate.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="region_go">
+<a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -410,7 +500,9 @@ Changing this creates a new floatingip_associate.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Wait<wbr>Until<wbr>Associated</span>
+        <span id="waituntilassociated_go">
+<a href="#waituntilassociated_go" style="color: inherit; text-decoration: inherit;">Wait<wbr>Until<wbr>Associated</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -425,7 +517,9 @@ Changing this creates a new floatingip_associate.
 
     <dt class="property-required"
             title="Required">
-        <span>floating<wbr>Ip</span>
+        <span id="floatingip_nodejs">
+<a href="#floatingip_nodejs" style="color: inherit; text-decoration: inherit;">floating<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -434,7 +528,9 @@ Changing this creates a new floatingip_associate.
 
     <dt class="property-required"
             title="Required">
-        <span>instance<wbr>Id</span>
+        <span id="instanceid_nodejs">
+<a href="#instanceid_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -443,7 +539,9 @@ Changing this creates a new floatingip_associate.
 
     <dt class="property-optional"
             title="Optional">
-        <span>fixed<wbr>Ip</span>
+        <span id="fixedip_nodejs">
+<a href="#fixedip_nodejs" style="color: inherit; text-decoration: inherit;">fixed<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -452,7 +550,9 @@ Changing this creates a new floatingip_associate.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="region_nodejs">
+<a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -464,7 +564,9 @@ Changing this creates a new floatingip_associate.
 
     <dt class="property-optional"
             title="Optional">
-        <span>wait<wbr>Until<wbr>Associated</span>
+        <span id="waituntilassociated_nodejs">
+<a href="#waituntilassociated_nodejs" style="color: inherit; text-decoration: inherit;">wait<wbr>Until<wbr>Associated</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -479,7 +581,9 @@ Changing this creates a new floatingip_associate.
 
     <dt class="property-required"
             title="Required">
-        <span>floating_<wbr>ip</span>
+        <span id="floating_ip_python">
+<a href="#floating_ip_python" style="color: inherit; text-decoration: inherit;">floating_<wbr>ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -488,7 +592,9 @@ Changing this creates a new floatingip_associate.
 
     <dt class="property-required"
             title="Required">
-        <span>instance_<wbr>id</span>
+        <span id="instance_id_python">
+<a href="#instance_id_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -497,7 +603,9 @@ Changing this creates a new floatingip_associate.
 
     <dt class="property-optional"
             title="Optional">
-        <span>fixed_<wbr>ip</span>
+        <span id="fixed_ip_python">
+<a href="#fixed_ip_python" style="color: inherit; text-decoration: inherit;">fixed_<wbr>ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -506,7 +614,9 @@ Changing this creates a new floatingip_associate.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="region_python">
+<a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -518,7 +628,9 @@ Changing this creates a new floatingip_associate.
 
     <dt class="property-optional"
             title="Optional">
-        <span>wait_<wbr>until_<wbr>associated</span>
+        <span id="wait_until_associated_python">
+<a href="#wait_until_associated_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>until_<wbr>associated</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -544,7 +656,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -559,7 +673,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -574,7 +690,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -589,7 +707,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -730,7 +850,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Fixed<wbr>Ip</span>
+        <span id="state_fixedip_csharp">
+<a href="#state_fixedip_csharp" style="color: inherit; text-decoration: inherit;">Fixed<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -739,7 +861,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Floating<wbr>Ip</span>
+        <span id="state_floatingip_csharp">
+<a href="#state_floatingip_csharp" style="color: inherit; text-decoration: inherit;">Floating<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -748,7 +872,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Instance<wbr>Id</span>
+        <span id="state_instanceid_csharp">
+<a href="#state_instanceid_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -757,7 +883,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="state_region_csharp">
+<a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -769,7 +897,9 @@ Changing this creates a new floatingip_associate.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Wait<wbr>Until<wbr>Associated</span>
+        <span id="state_waituntilassociated_csharp">
+<a href="#state_waituntilassociated_csharp" style="color: inherit; text-decoration: inherit;">Wait<wbr>Until<wbr>Associated</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -784,7 +914,9 @@ Changing this creates a new floatingip_associate.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Fixed<wbr>Ip</span>
+        <span id="state_fixedip_go">
+<a href="#state_fixedip_go" style="color: inherit; text-decoration: inherit;">Fixed<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -793,7 +925,9 @@ Changing this creates a new floatingip_associate.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Floating<wbr>Ip</span>
+        <span id="state_floatingip_go">
+<a href="#state_floatingip_go" style="color: inherit; text-decoration: inherit;">Floating<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -802,7 +936,9 @@ Changing this creates a new floatingip_associate.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Instance<wbr>Id</span>
+        <span id="state_instanceid_go">
+<a href="#state_instanceid_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -811,7 +947,9 @@ Changing this creates a new floatingip_associate.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="state_region_go">
+<a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -823,7 +961,9 @@ Changing this creates a new floatingip_associate.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Wait<wbr>Until<wbr>Associated</span>
+        <span id="state_waituntilassociated_go">
+<a href="#state_waituntilassociated_go" style="color: inherit; text-decoration: inherit;">Wait<wbr>Until<wbr>Associated</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -838,7 +978,9 @@ Changing this creates a new floatingip_associate.
 
     <dt class="property-optional"
             title="Optional">
-        <span>fixed<wbr>Ip</span>
+        <span id="state_fixedip_nodejs">
+<a href="#state_fixedip_nodejs" style="color: inherit; text-decoration: inherit;">fixed<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -847,7 +989,9 @@ Changing this creates a new floatingip_associate.
 
     <dt class="property-optional"
             title="Optional">
-        <span>floating<wbr>Ip</span>
+        <span id="state_floatingip_nodejs">
+<a href="#state_floatingip_nodejs" style="color: inherit; text-decoration: inherit;">floating<wbr>Ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -856,7 +1000,9 @@ Changing this creates a new floatingip_associate.
 
     <dt class="property-optional"
             title="Optional">
-        <span>instance<wbr>Id</span>
+        <span id="state_instanceid_nodejs">
+<a href="#state_instanceid_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -865,7 +1011,9 @@ Changing this creates a new floatingip_associate.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="state_region_nodejs">
+<a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -877,7 +1025,9 @@ Changing this creates a new floatingip_associate.
 
     <dt class="property-optional"
             title="Optional">
-        <span>wait<wbr>Until<wbr>Associated</span>
+        <span id="state_waituntilassociated_nodejs">
+<a href="#state_waituntilassociated_nodejs" style="color: inherit; text-decoration: inherit;">wait<wbr>Until<wbr>Associated</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -892,7 +1042,9 @@ Changing this creates a new floatingip_associate.
 
     <dt class="property-optional"
             title="Optional">
-        <span>fixed_<wbr>ip</span>
+        <span id="state_fixed_ip_python">
+<a href="#state_fixed_ip_python" style="color: inherit; text-decoration: inherit;">fixed_<wbr>ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -901,7 +1053,9 @@ Changing this creates a new floatingip_associate.
 
     <dt class="property-optional"
             title="Optional">
-        <span>floating_<wbr>ip</span>
+        <span id="state_floating_ip_python">
+<a href="#state_floating_ip_python" style="color: inherit; text-decoration: inherit;">floating_<wbr>ip</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -910,7 +1064,9 @@ Changing this creates a new floatingip_associate.
 
     <dt class="property-optional"
             title="Optional">
-        <span>instance_<wbr>id</span>
+        <span id="state_instance_id_python">
+<a href="#state_instance_id_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -919,7 +1075,9 @@ Changing this creates a new floatingip_associate.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="state_region_python">
+<a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -931,7 +1089,9 @@ Changing this creates a new floatingip_associate.
 
     <dt class="property-optional"
             title="Optional">
-        <span>wait_<wbr>until_<wbr>associated</span>
+        <span id="state_wait_until_associated_python">
+<a href="#state_wait_until_associated_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>until_<wbr>associated</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>

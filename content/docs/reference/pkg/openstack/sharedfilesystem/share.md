@@ -20,7 +20,41 @@ Use this resource to configure a share.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var network1 = new OpenStack.Networking.Network("network1", new OpenStack.Networking.NetworkArgs
+        {
+            AdminStateUp = "true",
+        });
+        var subnet1 = new OpenStack.Networking.Subnet("subnet1", new OpenStack.Networking.SubnetArgs
+        {
+            Cidr = "192.168.199.0/24",
+            IpVersion = 4,
+            NetworkId = network1.Id,
+        });
+        var sharenetwork1 = new OpenStack.SharedFileSystem.ShareNetwork("sharenetwork1", new OpenStack.SharedFileSystem.ShareNetworkArgs
+        {
+            Description = "test share network with security services",
+            NeutronNetId = network1.Id,
+            NeutronSubnetId = subnet1.Id,
+        });
+        var share1 = new OpenStack.SharedFileSystem.Share("share1", new OpenStack.SharedFileSystem.ShareArgs
+        {
+            Description = "test share description",
+            ShareNetworkId = sharenetwork1.Id,
+            ShareProto = "NFS",
+            Size = 1,
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -262,7 +296,9 @@ The Share resource accepts the following [input]({{< relref "/docs/intro/concept
 
     <dt class="property-required"
             title="Required">
-        <span>Share<wbr>Proto</span>
+        <span id="shareproto_csharp">
+<a href="#shareproto_csharp" style="color: inherit; text-decoration: inherit;">Share<wbr>Proto</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -272,7 +308,9 @@ CEPHFS, GLUSTERFS, HDFS or MAPRFS. Changing this creates a new share.
 
     <dt class="property-required"
             title="Required">
-        <span>Size</span>
+        <span id="size_csharp">
+<a href="#size_csharp" style="color: inherit; text-decoration: inherit;">Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -282,7 +320,9 @@ than the allowed GB quota. Changing this resizes the existing share.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Availability<wbr>Zone</span>
+        <span id="availabilityzone_csharp">
+<a href="#availabilityzone_csharp" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -292,7 +332,9 @@ new share.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -302,7 +344,9 @@ Changing this updates the description of the existing share.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Is<wbr>Public</span>
+        <span id="ispublic_csharp">
+<a href="#ispublic_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Public</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -313,7 +357,9 @@ updates the existing share.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Metadata</span>
+        <span id="metadata_csharp">
+<a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -323,7 +369,9 @@ strings.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -333,7 +381,9 @@ of the existing share.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="region_csharp">
+<a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -344,7 +394,9 @@ creates a new share.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Share<wbr>Network<wbr>Id</span>
+        <span id="sharenetworkid_csharp">
+<a href="#sharenetworkid_csharp" style="color: inherit; text-decoration: inherit;">Share<wbr>Network<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -355,7 +407,9 @@ the share_network_id value from the snapshot is used. Changing this creates a ne
 
     <dt class="property-optional"
             title="Optional">
-        <span>Share<wbr>Type</span>
+        <span id="sharetype_csharp">
+<a href="#sharetype_csharp" style="color: inherit; text-decoration: inherit;">Share<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -365,7 +419,9 @@ share type is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Snapshot<wbr>Id</span>
+        <span id="snapshotid_csharp">
+<a href="#snapshotid_csharp" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -382,7 +438,9 @@ a new share.
 
     <dt class="property-required"
             title="Required">
-        <span>Share<wbr>Proto</span>
+        <span id="shareproto_go">
+<a href="#shareproto_go" style="color: inherit; text-decoration: inherit;">Share<wbr>Proto</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -392,7 +450,9 @@ CEPHFS, GLUSTERFS, HDFS or MAPRFS. Changing this creates a new share.
 
     <dt class="property-required"
             title="Required">
-        <span>Size</span>
+        <span id="size_go">
+<a href="#size_go" style="color: inherit; text-decoration: inherit;">Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -402,7 +462,9 @@ than the allowed GB quota. Changing this resizes the existing share.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Availability<wbr>Zone</span>
+        <span id="availabilityzone_go">
+<a href="#availabilityzone_go" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -412,7 +474,9 @@ new share.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -422,7 +486,9 @@ Changing this updates the description of the existing share.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Is<wbr>Public</span>
+        <span id="ispublic_go">
+<a href="#ispublic_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Public</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -433,7 +499,9 @@ updates the existing share.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Metadata</span>
+        <span id="metadata_go">
+<a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -443,7 +511,9 @@ strings.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -453,7 +523,9 @@ of the existing share.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="region_go">
+<a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -464,7 +536,9 @@ creates a new share.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Share<wbr>Network<wbr>Id</span>
+        <span id="sharenetworkid_go">
+<a href="#sharenetworkid_go" style="color: inherit; text-decoration: inherit;">Share<wbr>Network<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -475,7 +549,9 @@ the share_network_id value from the snapshot is used. Changing this creates a ne
 
     <dt class="property-optional"
             title="Optional">
-        <span>Share<wbr>Type</span>
+        <span id="sharetype_go">
+<a href="#sharetype_go" style="color: inherit; text-decoration: inherit;">Share<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -485,7 +561,9 @@ share type is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Snapshot<wbr>Id</span>
+        <span id="snapshotid_go">
+<a href="#snapshotid_go" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -502,7 +580,9 @@ a new share.
 
     <dt class="property-required"
             title="Required">
-        <span>share<wbr>Proto</span>
+        <span id="shareproto_nodejs">
+<a href="#shareproto_nodejs" style="color: inherit; text-decoration: inherit;">share<wbr>Proto</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -512,7 +592,9 @@ CEPHFS, GLUSTERFS, HDFS or MAPRFS. Changing this creates a new share.
 
     <dt class="property-required"
             title="Required">
-        <span>size</span>
+        <span id="size_nodejs">
+<a href="#size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -522,7 +604,9 @@ than the allowed GB quota. Changing this resizes the existing share.
 
     <dt class="property-optional"
             title="Optional">
-        <span>availability<wbr>Zone</span>
+        <span id="availabilityzone_nodejs">
+<a href="#availabilityzone_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Zone</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -532,7 +616,9 @@ new share.
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -542,7 +628,9 @@ Changing this updates the description of the existing share.
 
     <dt class="property-optional"
             title="Optional">
-        <span>is<wbr>Public</span>
+        <span id="ispublic_nodejs">
+<a href="#ispublic_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Public</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -553,7 +641,9 @@ updates the existing share.
 
     <dt class="property-optional"
             title="Optional">
-        <span>metadata</span>
+        <span id="metadata_nodejs">
+<a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -563,7 +653,9 @@ strings.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -573,7 +665,9 @@ of the existing share.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="region_nodejs">
+<a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -584,7 +678,9 @@ creates a new share.
 
     <dt class="property-optional"
             title="Optional">
-        <span>share<wbr>Network<wbr>Id</span>
+        <span id="sharenetworkid_nodejs">
+<a href="#sharenetworkid_nodejs" style="color: inherit; text-decoration: inherit;">share<wbr>Network<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -595,7 +691,9 @@ the share_network_id value from the snapshot is used. Changing this creates a ne
 
     <dt class="property-optional"
             title="Optional">
-        <span>share<wbr>Type</span>
+        <span id="sharetype_nodejs">
+<a href="#sharetype_nodejs" style="color: inherit; text-decoration: inherit;">share<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -605,7 +703,9 @@ share type is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>snapshot<wbr>Id</span>
+        <span id="snapshotid_nodejs">
+<a href="#snapshotid_nodejs" style="color: inherit; text-decoration: inherit;">snapshot<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -622,7 +722,9 @@ a new share.
 
     <dt class="property-required"
             title="Required">
-        <span>share_<wbr>proto</span>
+        <span id="share_proto_python">
+<a href="#share_proto_python" style="color: inherit; text-decoration: inherit;">share_<wbr>proto</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -632,7 +734,9 @@ CEPHFS, GLUSTERFS, HDFS or MAPRFS. Changing this creates a new share.
 
     <dt class="property-required"
             title="Required">
-        <span>size</span>
+        <span id="size_python">
+<a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -642,7 +746,9 @@ than the allowed GB quota. Changing this resizes the existing share.
 
     <dt class="property-optional"
             title="Optional">
-        <span>availability_<wbr>zone</span>
+        <span id="availability_zone_python">
+<a href="#availability_zone_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zone</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -652,7 +758,9 @@ new share.
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -662,7 +770,9 @@ Changing this updates the description of the existing share.
 
     <dt class="property-optional"
             title="Optional">
-        <span>is_<wbr>public</span>
+        <span id="is_public_python">
+<a href="#is_public_python" style="color: inherit; text-decoration: inherit;">is_<wbr>public</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -673,7 +783,9 @@ updates the existing share.
 
     <dt class="property-optional"
             title="Optional">
-        <span>metadata</span>
+        <span id="metadata_python">
+<a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -683,7 +795,9 @@ strings.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -693,7 +807,9 @@ of the existing share.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="region_python">
+<a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -704,7 +820,9 @@ creates a new share.
 
     <dt class="property-optional"
             title="Optional">
-        <span>share_<wbr>network_<wbr>id</span>
+        <span id="share_network_id_python">
+<a href="#share_network_id_python" style="color: inherit; text-decoration: inherit;">share_<wbr>network_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -715,7 +833,9 @@ the share_network_id value from the snapshot is used. Changing this creates a ne
 
     <dt class="property-optional"
             title="Optional">
-        <span>share_<wbr>type</span>
+        <span id="share_type_python">
+<a href="#share_type_python" style="color: inherit; text-decoration: inherit;">share_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -725,7 +845,9 @@ share type is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>snapshot_<wbr>id</span>
+        <span id="snapshot_id_python">
+<a href="#snapshot_id_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -753,7 +875,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>All<wbr>Metadata</span>
+        <span id="allmetadata_csharp">
+<a href="#allmetadata_csharp" style="color: inherit; text-decoration: inherit;">All<wbr>Metadata</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -763,7 +887,9 @@ explicitly and implicitly added.
 
     <dt class="property-"
             title="">
-        <span>Export<wbr>Locations</span>
+        <span id="exportlocations_csharp">
+<a href="#exportlocations_csharp" style="color: inherit; text-decoration: inherit;">Export<wbr>Locations</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#shareexportlocation">List&lt;Pulumi.<wbr>Open<wbr>Stack.<wbr>Shared<wbr>File<wbr>System.<wbr>Outputs.<wbr>Share<wbr>Export<wbr>Location&gt;</a></span>
     </dt>
@@ -773,7 +899,9 @@ has more than one network interface, it can have multiple export locations.
 
     <dt class="property-"
             title="">
-        <span>Has<wbr>Replicas</span>
+        <span id="hasreplicas_csharp">
+<a href="#hasreplicas_csharp" style="color: inherit; text-decoration: inherit;">Has<wbr>Replicas</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -782,7 +910,9 @@ has more than one network interface, it can have multiple export locations.
 
     <dt class="property-"
             title="">
-        <span>Host</span>
+        <span id="host_csharp">
+<a href="#host_csharp" style="color: inherit; text-decoration: inherit;">Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -791,7 +921,9 @@ has more than one network interface, it can have multiple export locations.
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -799,7 +931,9 @@ has more than one network interface, it can have multiple export locations.
 
     <dt class="property-"
             title="">
-        <span>Project<wbr>Id</span>
+        <span id="projectid_csharp">
+<a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -808,7 +942,9 @@ has more than one network interface, it can have multiple export locations.
 
     <dt class="property-"
             title="">
-        <span>Replication<wbr>Type</span>
+        <span id="replicationtype_csharp">
+<a href="#replicationtype_csharp" style="color: inherit; text-decoration: inherit;">Replication<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -817,7 +953,9 @@ has more than one network interface, it can have multiple export locations.
 
     <dt class="property-"
             title="">
-        <span>Share<wbr>Server<wbr>Id</span>
+        <span id="shareserverid_csharp">
+<a href="#shareserverid_csharp" style="color: inherit; text-decoration: inherit;">Share<wbr>Server<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -833,7 +971,9 @@ has more than one network interface, it can have multiple export locations.
 
     <dt class="property-"
             title="">
-        <span>All<wbr>Metadata</span>
+        <span id="allmetadata_go">
+<a href="#allmetadata_go" style="color: inherit; text-decoration: inherit;">All<wbr>Metadata</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -843,7 +983,9 @@ explicitly and implicitly added.
 
     <dt class="property-"
             title="">
-        <span>Export<wbr>Locations</span>
+        <span id="exportlocations_go">
+<a href="#exportlocations_go" style="color: inherit; text-decoration: inherit;">Export<wbr>Locations</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#shareexportlocation">[]Share<wbr>Export<wbr>Location</a></span>
     </dt>
@@ -853,7 +995,9 @@ has more than one network interface, it can have multiple export locations.
 
     <dt class="property-"
             title="">
-        <span>Has<wbr>Replicas</span>
+        <span id="hasreplicas_go">
+<a href="#hasreplicas_go" style="color: inherit; text-decoration: inherit;">Has<wbr>Replicas</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -862,7 +1006,9 @@ has more than one network interface, it can have multiple export locations.
 
     <dt class="property-"
             title="">
-        <span>Host</span>
+        <span id="host_go">
+<a href="#host_go" style="color: inherit; text-decoration: inherit;">Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -871,7 +1017,9 @@ has more than one network interface, it can have multiple export locations.
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -879,7 +1027,9 @@ has more than one network interface, it can have multiple export locations.
 
     <dt class="property-"
             title="">
-        <span>Project<wbr>Id</span>
+        <span id="projectid_go">
+<a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -888,7 +1038,9 @@ has more than one network interface, it can have multiple export locations.
 
     <dt class="property-"
             title="">
-        <span>Replication<wbr>Type</span>
+        <span id="replicationtype_go">
+<a href="#replicationtype_go" style="color: inherit; text-decoration: inherit;">Replication<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -897,7 +1049,9 @@ has more than one network interface, it can have multiple export locations.
 
     <dt class="property-"
             title="">
-        <span>Share<wbr>Server<wbr>Id</span>
+        <span id="shareserverid_go">
+<a href="#shareserverid_go" style="color: inherit; text-decoration: inherit;">Share<wbr>Server<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -913,7 +1067,9 @@ has more than one network interface, it can have multiple export locations.
 
     <dt class="property-"
             title="">
-        <span>all<wbr>Metadata</span>
+        <span id="allmetadata_nodejs">
+<a href="#allmetadata_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Metadata</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -923,7 +1079,9 @@ explicitly and implicitly added.
 
     <dt class="property-"
             title="">
-        <span>export<wbr>Locations</span>
+        <span id="exportlocations_nodejs">
+<a href="#exportlocations_nodejs" style="color: inherit; text-decoration: inherit;">export<wbr>Locations</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#shareexportlocation">Share<wbr>Export<wbr>Location[]</a></span>
     </dt>
@@ -933,7 +1091,9 @@ has more than one network interface, it can have multiple export locations.
 
     <dt class="property-"
             title="">
-        <span>has<wbr>Replicas</span>
+        <span id="hasreplicas_nodejs">
+<a href="#hasreplicas_nodejs" style="color: inherit; text-decoration: inherit;">has<wbr>Replicas</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -942,7 +1102,9 @@ has more than one network interface, it can have multiple export locations.
 
     <dt class="property-"
             title="">
-        <span>host</span>
+        <span id="host_nodejs">
+<a href="#host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -951,7 +1113,9 @@ has more than one network interface, it can have multiple export locations.
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -959,7 +1123,9 @@ has more than one network interface, it can have multiple export locations.
 
     <dt class="property-"
             title="">
-        <span>project<wbr>Id</span>
+        <span id="projectid_nodejs">
+<a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -968,7 +1134,9 @@ has more than one network interface, it can have multiple export locations.
 
     <dt class="property-"
             title="">
-        <span>replication<wbr>Type</span>
+        <span id="replicationtype_nodejs">
+<a href="#replicationtype_nodejs" style="color: inherit; text-decoration: inherit;">replication<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -977,7 +1145,9 @@ has more than one network interface, it can have multiple export locations.
 
     <dt class="property-"
             title="">
-        <span>share<wbr>Server<wbr>Id</span>
+        <span id="shareserverid_nodejs">
+<a href="#shareserverid_nodejs" style="color: inherit; text-decoration: inherit;">share<wbr>Server<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -993,7 +1163,9 @@ has more than one network interface, it can have multiple export locations.
 
     <dt class="property-"
             title="">
-        <span>all_<wbr>metadata</span>
+        <span id="all_metadata_python">
+<a href="#all_metadata_python" style="color: inherit; text-decoration: inherit;">all_<wbr>metadata</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -1003,7 +1175,9 @@ explicitly and implicitly added.
 
     <dt class="property-"
             title="">
-        <span>export_<wbr>locations</span>
+        <span id="export_locations_python">
+<a href="#export_locations_python" style="color: inherit; text-decoration: inherit;">export_<wbr>locations</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#shareexportlocation">List[Share<wbr>Export<wbr>Location]</a></span>
     </dt>
@@ -1013,7 +1187,9 @@ has more than one network interface, it can have multiple export locations.
 
     <dt class="property-"
             title="">
-        <span>has_<wbr>replicas</span>
+        <span id="has_replicas_python">
+<a href="#has_replicas_python" style="color: inherit; text-decoration: inherit;">has_<wbr>replicas</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1022,7 +1198,9 @@ has more than one network interface, it can have multiple export locations.
 
     <dt class="property-"
             title="">
-        <span>host</span>
+        <span id="host_python">
+<a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1031,7 +1209,9 @@ has more than one network interface, it can have multiple export locations.
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1039,7 +1219,9 @@ has more than one network interface, it can have multiple export locations.
 
     <dt class="property-"
             title="">
-        <span>project_<wbr>id</span>
+        <span id="project_id_python">
+<a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1048,7 +1230,9 @@ has more than one network interface, it can have multiple export locations.
 
     <dt class="property-"
             title="">
-        <span>replication_<wbr>type</span>
+        <span id="replication_type_python">
+<a href="#replication_type_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1057,7 +1241,9 @@ has more than one network interface, it can have multiple export locations.
 
     <dt class="property-"
             title="">
-        <span>share_<wbr>server_<wbr>id</span>
+        <span id="share_server_id_python">
+<a href="#share_server_id_python" style="color: inherit; text-decoration: inherit;">share_<wbr>server_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1199,7 +1385,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>All<wbr>Metadata</span>
+        <span id="state_allmetadata_csharp">
+<a href="#state_allmetadata_csharp" style="color: inherit; text-decoration: inherit;">All<wbr>Metadata</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -1209,7 +1397,9 @@ explicitly and implicitly added.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Availability<wbr>Zone</span>
+        <span id="state_availabilityzone_csharp">
+<a href="#state_availabilityzone_csharp" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1219,7 +1409,9 @@ new share.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="state_description_csharp">
+<a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1229,7 +1421,9 @@ Changing this updates the description of the existing share.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Export<wbr>Locations</span>
+        <span id="state_exportlocations_csharp">
+<a href="#state_exportlocations_csharp" style="color: inherit; text-decoration: inherit;">Export<wbr>Locations</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#shareexportlocation">List&lt;Pulumi.<wbr>Open<wbr>Stack.<wbr>Shared<wbr>File<wbr>System.<wbr>Inputs.<wbr>Share<wbr>Export<wbr>Location<wbr>Args&gt;</a></span>
     </dt>
@@ -1239,7 +1433,9 @@ has more than one network interface, it can have multiple export locations.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Has<wbr>Replicas</span>
+        <span id="state_hasreplicas_csharp">
+<a href="#state_hasreplicas_csharp" style="color: inherit; text-decoration: inherit;">Has<wbr>Replicas</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1248,7 +1444,9 @@ has more than one network interface, it can have multiple export locations.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Host</span>
+        <span id="state_host_csharp">
+<a href="#state_host_csharp" style="color: inherit; text-decoration: inherit;">Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1257,7 +1455,9 @@ has more than one network interface, it can have multiple export locations.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Is<wbr>Public</span>
+        <span id="state_ispublic_csharp">
+<a href="#state_ispublic_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Public</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1268,7 +1468,9 @@ updates the existing share.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Metadata</span>
+        <span id="state_metadata_csharp">
+<a href="#state_metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -1278,7 +1480,9 @@ strings.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1288,7 +1492,9 @@ of the existing share.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project<wbr>Id</span>
+        <span id="state_projectid_csharp">
+<a href="#state_projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1297,7 +1503,9 @@ of the existing share.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="state_region_csharp">
+<a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1308,7 +1516,9 @@ creates a new share.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Replication<wbr>Type</span>
+        <span id="state_replicationtype_csharp">
+<a href="#state_replicationtype_csharp" style="color: inherit; text-decoration: inherit;">Replication<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1317,7 +1527,9 @@ creates a new share.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Share<wbr>Network<wbr>Id</span>
+        <span id="state_sharenetworkid_csharp">
+<a href="#state_sharenetworkid_csharp" style="color: inherit; text-decoration: inherit;">Share<wbr>Network<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1328,7 +1540,9 @@ the share_network_id value from the snapshot is used. Changing this creates a ne
 
     <dt class="property-optional"
             title="Optional">
-        <span>Share<wbr>Proto</span>
+        <span id="state_shareproto_csharp">
+<a href="#state_shareproto_csharp" style="color: inherit; text-decoration: inherit;">Share<wbr>Proto</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1338,7 +1552,9 @@ CEPHFS, GLUSTERFS, HDFS or MAPRFS. Changing this creates a new share.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Share<wbr>Server<wbr>Id</span>
+        <span id="state_shareserverid_csharp">
+<a href="#state_shareserverid_csharp" style="color: inherit; text-decoration: inherit;">Share<wbr>Server<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1347,7 +1563,9 @@ CEPHFS, GLUSTERFS, HDFS or MAPRFS. Changing this creates a new share.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Share<wbr>Type</span>
+        <span id="state_sharetype_csharp">
+<a href="#state_sharetype_csharp" style="color: inherit; text-decoration: inherit;">Share<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1357,7 +1575,9 @@ share type is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Size</span>
+        <span id="state_size_csharp">
+<a href="#state_size_csharp" style="color: inherit; text-decoration: inherit;">Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1367,7 +1587,9 @@ than the allowed GB quota. Changing this resizes the existing share.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Snapshot<wbr>Id</span>
+        <span id="state_snapshotid_csharp">
+<a href="#state_snapshotid_csharp" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1384,7 +1606,9 @@ a new share.
 
     <dt class="property-optional"
             title="Optional">
-        <span>All<wbr>Metadata</span>
+        <span id="state_allmetadata_go">
+<a href="#state_allmetadata_go" style="color: inherit; text-decoration: inherit;">All<wbr>Metadata</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -1394,7 +1618,9 @@ explicitly and implicitly added.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Availability<wbr>Zone</span>
+        <span id="state_availabilityzone_go">
+<a href="#state_availabilityzone_go" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1404,7 +1630,9 @@ new share.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="state_description_go">
+<a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1414,7 +1642,9 @@ Changing this updates the description of the existing share.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Export<wbr>Locations</span>
+        <span id="state_exportlocations_go">
+<a href="#state_exportlocations_go" style="color: inherit; text-decoration: inherit;">Export<wbr>Locations</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#shareexportlocation">[]Share<wbr>Export<wbr>Location</a></span>
     </dt>
@@ -1424,7 +1654,9 @@ has more than one network interface, it can have multiple export locations.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Has<wbr>Replicas</span>
+        <span id="state_hasreplicas_go">
+<a href="#state_hasreplicas_go" style="color: inherit; text-decoration: inherit;">Has<wbr>Replicas</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1433,7 +1665,9 @@ has more than one network interface, it can have multiple export locations.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Host</span>
+        <span id="state_host_go">
+<a href="#state_host_go" style="color: inherit; text-decoration: inherit;">Host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1442,7 +1676,9 @@ has more than one network interface, it can have multiple export locations.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Is<wbr>Public</span>
+        <span id="state_ispublic_go">
+<a href="#state_ispublic_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Public</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1453,7 +1689,9 @@ updates the existing share.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Metadata</span>
+        <span id="state_metadata_go">
+<a href="#state_metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -1463,7 +1701,9 @@ strings.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1473,7 +1713,9 @@ of the existing share.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Project<wbr>Id</span>
+        <span id="state_projectid_go">
+<a href="#state_projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1482,7 +1724,9 @@ of the existing share.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="state_region_go">
+<a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1493,7 +1737,9 @@ creates a new share.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Replication<wbr>Type</span>
+        <span id="state_replicationtype_go">
+<a href="#state_replicationtype_go" style="color: inherit; text-decoration: inherit;">Replication<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1502,7 +1748,9 @@ creates a new share.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Share<wbr>Network<wbr>Id</span>
+        <span id="state_sharenetworkid_go">
+<a href="#state_sharenetworkid_go" style="color: inherit; text-decoration: inherit;">Share<wbr>Network<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1513,7 +1761,9 @@ the share_network_id value from the snapshot is used. Changing this creates a ne
 
     <dt class="property-optional"
             title="Optional">
-        <span>Share<wbr>Proto</span>
+        <span id="state_shareproto_go">
+<a href="#state_shareproto_go" style="color: inherit; text-decoration: inherit;">Share<wbr>Proto</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1523,7 +1773,9 @@ CEPHFS, GLUSTERFS, HDFS or MAPRFS. Changing this creates a new share.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Share<wbr>Server<wbr>Id</span>
+        <span id="state_shareserverid_go">
+<a href="#state_shareserverid_go" style="color: inherit; text-decoration: inherit;">Share<wbr>Server<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1532,7 +1784,9 @@ CEPHFS, GLUSTERFS, HDFS or MAPRFS. Changing this creates a new share.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Share<wbr>Type</span>
+        <span id="state_sharetype_go">
+<a href="#state_sharetype_go" style="color: inherit; text-decoration: inherit;">Share<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1542,7 +1796,9 @@ share type is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Size</span>
+        <span id="state_size_go">
+<a href="#state_size_go" style="color: inherit; text-decoration: inherit;">Size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1552,7 +1808,9 @@ than the allowed GB quota. Changing this resizes the existing share.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Snapshot<wbr>Id</span>
+        <span id="state_snapshotid_go">
+<a href="#state_snapshotid_go" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1569,7 +1827,9 @@ a new share.
 
     <dt class="property-optional"
             title="Optional">
-        <span>all<wbr>Metadata</span>
+        <span id="state_allmetadata_nodejs">
+<a href="#state_allmetadata_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Metadata</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -1579,7 +1839,9 @@ explicitly and implicitly added.
 
     <dt class="property-optional"
             title="Optional">
-        <span>availability<wbr>Zone</span>
+        <span id="state_availabilityzone_nodejs">
+<a href="#state_availabilityzone_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Zone</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1589,7 +1851,9 @@ new share.
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="state_description_nodejs">
+<a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1599,7 +1863,9 @@ Changing this updates the description of the existing share.
 
     <dt class="property-optional"
             title="Optional">
-        <span>export<wbr>Locations</span>
+        <span id="state_exportlocations_nodejs">
+<a href="#state_exportlocations_nodejs" style="color: inherit; text-decoration: inherit;">export<wbr>Locations</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#shareexportlocation">Share<wbr>Export<wbr>Location[]</a></span>
     </dt>
@@ -1609,7 +1875,9 @@ has more than one network interface, it can have multiple export locations.
 
     <dt class="property-optional"
             title="Optional">
-        <span>has<wbr>Replicas</span>
+        <span id="state_hasreplicas_nodejs">
+<a href="#state_hasreplicas_nodejs" style="color: inherit; text-decoration: inherit;">has<wbr>Replicas</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1618,7 +1886,9 @@ has more than one network interface, it can have multiple export locations.
 
     <dt class="property-optional"
             title="Optional">
-        <span>host</span>
+        <span id="state_host_nodejs">
+<a href="#state_host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1627,7 +1897,9 @@ has more than one network interface, it can have multiple export locations.
 
     <dt class="property-optional"
             title="Optional">
-        <span>is<wbr>Public</span>
+        <span id="state_ispublic_nodejs">
+<a href="#state_ispublic_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Public</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1638,7 +1910,9 @@ updates the existing share.
 
     <dt class="property-optional"
             title="Optional">
-        <span>metadata</span>
+        <span id="state_metadata_nodejs">
+<a href="#state_metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -1648,7 +1922,9 @@ strings.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1658,7 +1934,9 @@ of the existing share.
 
     <dt class="property-optional"
             title="Optional">
-        <span>project<wbr>Id</span>
+        <span id="state_projectid_nodejs">
+<a href="#state_projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1667,7 +1945,9 @@ of the existing share.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="state_region_nodejs">
+<a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1678,7 +1958,9 @@ creates a new share.
 
     <dt class="property-optional"
             title="Optional">
-        <span>replication<wbr>Type</span>
+        <span id="state_replicationtype_nodejs">
+<a href="#state_replicationtype_nodejs" style="color: inherit; text-decoration: inherit;">replication<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1687,7 +1969,9 @@ creates a new share.
 
     <dt class="property-optional"
             title="Optional">
-        <span>share<wbr>Network<wbr>Id</span>
+        <span id="state_sharenetworkid_nodejs">
+<a href="#state_sharenetworkid_nodejs" style="color: inherit; text-decoration: inherit;">share<wbr>Network<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1698,7 +1982,9 @@ the share_network_id value from the snapshot is used. Changing this creates a ne
 
     <dt class="property-optional"
             title="Optional">
-        <span>share<wbr>Proto</span>
+        <span id="state_shareproto_nodejs">
+<a href="#state_shareproto_nodejs" style="color: inherit; text-decoration: inherit;">share<wbr>Proto</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1708,7 +1994,9 @@ CEPHFS, GLUSTERFS, HDFS or MAPRFS. Changing this creates a new share.
 
     <dt class="property-optional"
             title="Optional">
-        <span>share<wbr>Server<wbr>Id</span>
+        <span id="state_shareserverid_nodejs">
+<a href="#state_shareserverid_nodejs" style="color: inherit; text-decoration: inherit;">share<wbr>Server<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1717,7 +2005,9 @@ CEPHFS, GLUSTERFS, HDFS or MAPRFS. Changing this creates a new share.
 
     <dt class="property-optional"
             title="Optional">
-        <span>share<wbr>Type</span>
+        <span id="state_sharetype_nodejs">
+<a href="#state_sharetype_nodejs" style="color: inherit; text-decoration: inherit;">share<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1727,7 +2017,9 @@ share type is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>size</span>
+        <span id="state_size_nodejs">
+<a href="#state_size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1737,7 +2029,9 @@ than the allowed GB quota. Changing this resizes the existing share.
 
     <dt class="property-optional"
             title="Optional">
-        <span>snapshot<wbr>Id</span>
+        <span id="state_snapshotid_nodejs">
+<a href="#state_snapshotid_nodejs" style="color: inherit; text-decoration: inherit;">snapshot<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1754,7 +2048,9 @@ a new share.
 
     <dt class="property-optional"
             title="Optional">
-        <span>all_<wbr>metadata</span>
+        <span id="state_all_metadata_python">
+<a href="#state_all_metadata_python" style="color: inherit; text-decoration: inherit;">all_<wbr>metadata</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -1764,7 +2060,9 @@ explicitly and implicitly added.
 
     <dt class="property-optional"
             title="Optional">
-        <span>availability_<wbr>zone</span>
+        <span id="state_availability_zone_python">
+<a href="#state_availability_zone_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zone</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1774,7 +2072,9 @@ new share.
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="state_description_python">
+<a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1784,7 +2084,9 @@ Changing this updates the description of the existing share.
 
     <dt class="property-optional"
             title="Optional">
-        <span>export_<wbr>locations</span>
+        <span id="state_export_locations_python">
+<a href="#state_export_locations_python" style="color: inherit; text-decoration: inherit;">export_<wbr>locations</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#shareexportlocation">List[Share<wbr>Export<wbr>Location]</a></span>
     </dt>
@@ -1794,7 +2096,9 @@ has more than one network interface, it can have multiple export locations.
 
     <dt class="property-optional"
             title="Optional">
-        <span>has_<wbr>replicas</span>
+        <span id="state_has_replicas_python">
+<a href="#state_has_replicas_python" style="color: inherit; text-decoration: inherit;">has_<wbr>replicas</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1803,7 +2107,9 @@ has more than one network interface, it can have multiple export locations.
 
     <dt class="property-optional"
             title="Optional">
-        <span>host</span>
+        <span id="state_host_python">
+<a href="#state_host_python" style="color: inherit; text-decoration: inherit;">host</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1812,7 +2118,9 @@ has more than one network interface, it can have multiple export locations.
 
     <dt class="property-optional"
             title="Optional">
-        <span>is_<wbr>public</span>
+        <span id="state_is_public_python">
+<a href="#state_is_public_python" style="color: inherit; text-decoration: inherit;">is_<wbr>public</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1823,7 +2131,9 @@ updates the existing share.
 
     <dt class="property-optional"
             title="Optional">
-        <span>metadata</span>
+        <span id="state_metadata_python">
+<a href="#state_metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -1833,7 +2143,9 @@ strings.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1843,7 +2155,9 @@ of the existing share.
 
     <dt class="property-optional"
             title="Optional">
-        <span>project_<wbr>id</span>
+        <span id="state_project_id_python">
+<a href="#state_project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1852,7 +2166,9 @@ of the existing share.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="state_region_python">
+<a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1863,7 +2179,9 @@ creates a new share.
 
     <dt class="property-optional"
             title="Optional">
-        <span>replication_<wbr>type</span>
+        <span id="state_replication_type_python">
+<a href="#state_replication_type_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1872,7 +2190,9 @@ creates a new share.
 
     <dt class="property-optional"
             title="Optional">
-        <span>share_<wbr>network_<wbr>id</span>
+        <span id="state_share_network_id_python">
+<a href="#state_share_network_id_python" style="color: inherit; text-decoration: inherit;">share_<wbr>network_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1883,7 +2203,9 @@ the share_network_id value from the snapshot is used. Changing this creates a ne
 
     <dt class="property-optional"
             title="Optional">
-        <span>share_<wbr>proto</span>
+        <span id="state_share_proto_python">
+<a href="#state_share_proto_python" style="color: inherit; text-decoration: inherit;">share_<wbr>proto</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1893,7 +2215,9 @@ CEPHFS, GLUSTERFS, HDFS or MAPRFS. Changing this creates a new share.
 
     <dt class="property-optional"
             title="Optional">
-        <span>share_<wbr>server_<wbr>id</span>
+        <span id="state_share_server_id_python">
+<a href="#state_share_server_id_python" style="color: inherit; text-decoration: inherit;">share_<wbr>server_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1902,7 +2226,9 @@ CEPHFS, GLUSTERFS, HDFS or MAPRFS. Changing this creates a new share.
 
     <dt class="property-optional"
             title="Optional">
-        <span>share_<wbr>type</span>
+        <span id="state_share_type_python">
+<a href="#state_share_type_python" style="color: inherit; text-decoration: inherit;">share_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1912,7 +2238,9 @@ share type is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>size</span>
+        <span id="state_size_python">
+<a href="#state_size_python" style="color: inherit; text-decoration: inherit;">size</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1922,7 +2250,9 @@ than the allowed GB quota. Changing this resizes the existing share.
 
     <dt class="property-optional"
             title="Optional">
-        <span>snapshot_<wbr>id</span>
+        <span id="state_snapshot_id_python">
+<a href="#state_snapshot_id_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1965,7 +2295,9 @@ a new share.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Path</span>
+        <span id="path_csharp">
+<a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1973,7 +2305,9 @@ a new share.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Preferred</span>
+        <span id="preferred_csharp">
+<a href="#preferred_csharp" style="color: inherit; text-decoration: inherit;">Preferred</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1988,7 +2322,9 @@ a new share.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Path</span>
+        <span id="path_go">
+<a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1996,7 +2332,9 @@ a new share.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Preferred</span>
+        <span id="preferred_go">
+<a href="#preferred_go" style="color: inherit; text-decoration: inherit;">Preferred</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2011,7 +2349,9 @@ a new share.
 
     <dt class="property-optional"
             title="Optional">
-        <span>path</span>
+        <span id="path_nodejs">
+<a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2019,7 +2359,9 @@ a new share.
 
     <dt class="property-optional"
             title="Optional">
-        <span>preferred</span>
+        <span id="preferred_nodejs">
+<a href="#preferred_nodejs" style="color: inherit; text-decoration: inherit;">preferred</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2034,7 +2376,9 @@ a new share.
 
     <dt class="property-optional"
             title="Optional">
-        <span>path</span>
+        <span id="path_python">
+<a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2042,7 +2386,9 @@ a new share.
 
     <dt class="property-optional"
             title="Optional">
-        <span>preferred</span>
+        <span id="preferred_python">
+<a href="#preferred_python" style="color: inherit; text-decoration: inherit;">preferred</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

@@ -20,7 +20,73 @@ Manages a V2 Neutron network resource within OpenStack.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var network1 = new OpenStack.Networking.Network("network1", new OpenStack.Networking.NetworkArgs
+        {
+            AdminStateUp = "true",
+        });
+        var subnet1 = new OpenStack.Networking.Subnet("subnet1", new OpenStack.Networking.SubnetArgs
+        {
+            Cidr = "192.168.199.0/24",
+            IpVersion = 4,
+            NetworkId = network1.Id,
+        });
+        var secgroup1 = new OpenStack.Compute.SecGroup("secgroup1", new OpenStack.Compute.SecGroupArgs
+        {
+            Description = "a security group",
+            Rules = 
+            {
+                new OpenStack.Compute.Inputs.SecGroupRuleArgs
+                {
+                    Cidr = "0.0.0.0/0",
+                    FromPort = 22,
+                    IpProtocol = "tcp",
+                    ToPort = 22,
+                },
+            },
+        });
+        var port1 = new OpenStack.Networking.Port("port1", new OpenStack.Networking.PortArgs
+        {
+            AdminStateUp = "true",
+            FixedIps = 
+            {
+                new OpenStack.Networking.Inputs.PortFixedIpArgs
+                {
+                    IpAddress = "192.168.199.10",
+                    SubnetId = subnet1.Id,
+                },
+            },
+            NetworkId = network1.Id,
+            SecurityGroupIds = 
+            {
+                secgroup1.Id,
+            },
+        });
+        var instance1 = new OpenStack.Compute.Instance("instance1", new OpenStack.Compute.InstanceArgs
+        {
+            Networks = 
+            {
+                new OpenStack.Compute.Inputs.InstanceNetworkArgs
+                {
+                    Port = port1.Id,
+                },
+            },
+            SecurityGroups = 
+            {
+                secgroup1.Name,
+            },
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -48,8 +114,8 @@ secgroup1 = openstack.compute.SecGroup("secgroup1",
 port1 = openstack.networking.Port("port1",
     admin_state_up="true",
     fixed_ips=[{
-        "ipAddress": "192.168.199.10",
-        "subnetId": subnet1.id,
+        "ip_address": "192.168.199.10",
+        "subnet_id": subnet1.id,
     }],
     network_id=network1.id,
     security_group_ids=[secgroup1.id])
@@ -287,7 +353,9 @@ The Network resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
-        <span>Admin<wbr>State<wbr>Up</span>
+        <span id="adminstateup_csharp">
+<a href="#adminstateup_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>State<wbr>Up</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -298,7 +366,9 @@ state of the existing network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Availability<wbr>Zone<wbr>Hints</span>
+        <span id="availabilityzonehints_csharp">
+<a href="#availabilityzonehints_csharp" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone<wbr>Hints</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -310,7 +380,9 @@ creates a new network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -320,7 +392,9 @@ updates the name of the existing network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Dns<wbr>Domain</span>
+        <span id="dnsdomain_csharp">
+<a href="#dnsdomain_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Domain</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -332,7 +406,9 @@ service when Neutron is configured to integrate with such a service.
 
     <dt class="property-optional"
             title="Optional">
-        <span>External</span>
+        <span id="external_csharp">
+<a href="#external_csharp" style="color: inherit; text-decoration: inherit;">External</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -343,7 +419,9 @@ false. Changing this updates the external attribute of the existing network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Mtu</span>
+        <span id="mtu_csharp">
+<a href="#mtu_csharp" style="color: inherit; text-decoration: inherit;">Mtu</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -354,7 +432,9 @@ Neutron `net-mtu-writable` extension is enabled.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -364,7 +444,9 @@ the existing network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Port<wbr>Security<wbr>Enabled</span>
+        <span id="portsecurityenabled_csharp">
+<a href="#portsecurityenabled_csharp" style="color: inherit; text-decoration: inherit;">Port<wbr>Security<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -377,7 +459,9 @@ explicitly to `false` will disable port security. Valid values are `true` and
 
     <dt class="property-optional"
             title="Optional">
-        <span>Qos<wbr>Policy<wbr>Id</span>
+        <span id="qospolicyid_csharp">
+<a href="#qospolicyid_csharp" style="color: inherit; text-decoration: inherit;">Qos<wbr>Policy<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -386,7 +470,9 @@ explicitly to `false` will disable port security. Valid values are `true` and
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="region_csharp">
+<a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -398,7 +484,9 @@ network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Segments</span>
+        <span id="segments_csharp">
+<a href="#segments_csharp" style="color: inherit; text-decoration: inherit;">Segments</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networksegment">List&lt;Pulumi.<wbr>Open<wbr>Stack.<wbr>Networking.<wbr>Inputs.<wbr>Network<wbr>Segment<wbr>Args&gt;</a></span>
     </dt>
@@ -407,7 +495,9 @@ network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Shared</span>
+        <span id="shared_csharp">
+<a href="#shared_csharp" style="color: inherit; text-decoration: inherit;">Shared</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -418,7 +508,9 @@ existing network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -427,7 +519,9 @@ existing network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tenant<wbr>Id</span>
+        <span id="tenantid_csharp">
+<a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -437,7 +531,9 @@ create a network for another tenant. Changing this creates a new network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Transparent<wbr>Vlan</span>
+        <span id="transparentvlan_csharp">
+<a href="#transparentvlan_csharp" style="color: inherit; text-decoration: inherit;">Transparent<wbr>Vlan</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -449,7 +545,9 @@ network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Value<wbr>Specs</span>
+        <span id="valuespecs_csharp">
+<a href="#valuespecs_csharp" style="color: inherit; text-decoration: inherit;">Value<wbr>Specs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -465,7 +563,9 @@ network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Admin<wbr>State<wbr>Up</span>
+        <span id="adminstateup_go">
+<a href="#adminstateup_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>State<wbr>Up</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -476,7 +576,9 @@ state of the existing network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Availability<wbr>Zone<wbr>Hints</span>
+        <span id="availabilityzonehints_go">
+<a href="#availabilityzonehints_go" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone<wbr>Hints</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -488,7 +590,9 @@ creates a new network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -498,7 +602,9 @@ updates the name of the existing network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Dns<wbr>Domain</span>
+        <span id="dnsdomain_go">
+<a href="#dnsdomain_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Domain</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -510,7 +616,9 @@ service when Neutron is configured to integrate with such a service.
 
     <dt class="property-optional"
             title="Optional">
-        <span>External</span>
+        <span id="external_go">
+<a href="#external_go" style="color: inherit; text-decoration: inherit;">External</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -521,7 +629,9 @@ false. Changing this updates the external attribute of the existing network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Mtu</span>
+        <span id="mtu_go">
+<a href="#mtu_go" style="color: inherit; text-decoration: inherit;">Mtu</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -532,7 +642,9 @@ Neutron `net-mtu-writable` extension is enabled.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -542,7 +654,9 @@ the existing network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Port<wbr>Security<wbr>Enabled</span>
+        <span id="portsecurityenabled_go">
+<a href="#portsecurityenabled_go" style="color: inherit; text-decoration: inherit;">Port<wbr>Security<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -555,7 +669,9 @@ explicitly to `false` will disable port security. Valid values are `true` and
 
     <dt class="property-optional"
             title="Optional">
-        <span>Qos<wbr>Policy<wbr>Id</span>
+        <span id="qospolicyid_go">
+<a href="#qospolicyid_go" style="color: inherit; text-decoration: inherit;">Qos<wbr>Policy<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -564,7 +680,9 @@ explicitly to `false` will disable port security. Valid values are `true` and
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="region_go">
+<a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -576,7 +694,9 @@ network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Segments</span>
+        <span id="segments_go">
+<a href="#segments_go" style="color: inherit; text-decoration: inherit;">Segments</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networksegment">[]Network<wbr>Segment</a></span>
     </dt>
@@ -585,7 +705,9 @@ network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Shared</span>
+        <span id="shared_go">
+<a href="#shared_go" style="color: inherit; text-decoration: inherit;">Shared</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -596,7 +718,9 @@ existing network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -605,7 +729,9 @@ existing network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tenant<wbr>Id</span>
+        <span id="tenantid_go">
+<a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -615,7 +741,9 @@ create a network for another tenant. Changing this creates a new network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Transparent<wbr>Vlan</span>
+        <span id="transparentvlan_go">
+<a href="#transparentvlan_go" style="color: inherit; text-decoration: inherit;">Transparent<wbr>Vlan</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -627,7 +755,9 @@ network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Value<wbr>Specs</span>
+        <span id="valuespecs_go">
+<a href="#valuespecs_go" style="color: inherit; text-decoration: inherit;">Value<wbr>Specs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -643,7 +773,9 @@ network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>admin<wbr>State<wbr>Up</span>
+        <span id="adminstateup_nodejs">
+<a href="#adminstateup_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>State<wbr>Up</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -654,7 +786,9 @@ state of the existing network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>availability<wbr>Zone<wbr>Hints</span>
+        <span id="availabilityzonehints_nodejs">
+<a href="#availabilityzonehints_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Zone<wbr>Hints</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -666,7 +800,9 @@ creates a new network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -676,7 +812,9 @@ updates the name of the existing network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>dns<wbr>Domain</span>
+        <span id="dnsdomain_nodejs">
+<a href="#dnsdomain_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Domain</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -688,7 +826,9 @@ service when Neutron is configured to integrate with such a service.
 
     <dt class="property-optional"
             title="Optional">
-        <span>external</span>
+        <span id="external_nodejs">
+<a href="#external_nodejs" style="color: inherit; text-decoration: inherit;">external</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -699,7 +839,9 @@ false. Changing this updates the external attribute of the existing network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>mtu</span>
+        <span id="mtu_nodejs">
+<a href="#mtu_nodejs" style="color: inherit; text-decoration: inherit;">mtu</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -710,7 +852,9 @@ Neutron `net-mtu-writable` extension is enabled.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -720,7 +864,9 @@ the existing network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>port<wbr>Security<wbr>Enabled</span>
+        <span id="portsecurityenabled_nodejs">
+<a href="#portsecurityenabled_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Security<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -733,7 +879,9 @@ explicitly to `false` will disable port security. Valid values are `true` and
 
     <dt class="property-optional"
             title="Optional">
-        <span>qos<wbr>Policy<wbr>Id</span>
+        <span id="qospolicyid_nodejs">
+<a href="#qospolicyid_nodejs" style="color: inherit; text-decoration: inherit;">qos<wbr>Policy<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -742,7 +890,9 @@ explicitly to `false` will disable port security. Valid values are `true` and
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="region_nodejs">
+<a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -754,7 +904,9 @@ network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>segments</span>
+        <span id="segments_nodejs">
+<a href="#segments_nodejs" style="color: inherit; text-decoration: inherit;">segments</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networksegment">Network<wbr>Segment[]</a></span>
     </dt>
@@ -763,7 +915,9 @@ network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>shared</span>
+        <span id="shared_nodejs">
+<a href="#shared_nodejs" style="color: inherit; text-decoration: inherit;">shared</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -774,7 +928,9 @@ existing network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -783,7 +939,9 @@ existing network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tenant<wbr>Id</span>
+        <span id="tenantid_nodejs">
+<a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -793,7 +951,9 @@ create a network for another tenant. Changing this creates a new network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>transparent<wbr>Vlan</span>
+        <span id="transparentvlan_nodejs">
+<a href="#transparentvlan_nodejs" style="color: inherit; text-decoration: inherit;">transparent<wbr>Vlan</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -805,7 +965,9 @@ network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>value<wbr>Specs</span>
+        <span id="valuespecs_nodejs">
+<a href="#valuespecs_nodejs" style="color: inherit; text-decoration: inherit;">value<wbr>Specs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -821,7 +983,9 @@ network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>admin_<wbr>state_<wbr>up</span>
+        <span id="admin_state_up_python">
+<a href="#admin_state_up_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>state_<wbr>up</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -832,7 +996,9 @@ state of the existing network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>availability_<wbr>zone_<wbr>hints</span>
+        <span id="availability_zone_hints_python">
+<a href="#availability_zone_hints_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zone_<wbr>hints</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -844,7 +1010,9 @@ creates a new network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -854,7 +1022,9 @@ updates the name of the existing network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>dns_<wbr>domain</span>
+        <span id="dns_domain_python">
+<a href="#dns_domain_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>domain</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -866,7 +1036,9 @@ service when Neutron is configured to integrate with such a service.
 
     <dt class="property-optional"
             title="Optional">
-        <span>external</span>
+        <span id="external_python">
+<a href="#external_python" style="color: inherit; text-decoration: inherit;">external</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -877,7 +1049,9 @@ false. Changing this updates the external attribute of the existing network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>mtu</span>
+        <span id="mtu_python">
+<a href="#mtu_python" style="color: inherit; text-decoration: inherit;">mtu</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -888,7 +1062,9 @@ Neutron `net-mtu-writable` extension is enabled.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -898,7 +1074,9 @@ the existing network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>port_<wbr>security_<wbr>enabled</span>
+        <span id="port_security_enabled_python">
+<a href="#port_security_enabled_python" style="color: inherit; text-decoration: inherit;">port_<wbr>security_<wbr>enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -911,7 +1089,9 @@ explicitly to `false` will disable port security. Valid values are `true` and
 
     <dt class="property-optional"
             title="Optional">
-        <span>qos_<wbr>policy_<wbr>id</span>
+        <span id="qos_policy_id_python">
+<a href="#qos_policy_id_python" style="color: inherit; text-decoration: inherit;">qos_<wbr>policy_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -920,7 +1100,9 @@ explicitly to `false` will disable port security. Valid values are `true` and
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="region_python">
+<a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -932,7 +1114,9 @@ network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>segments</span>
+        <span id="segments_python">
+<a href="#segments_python" style="color: inherit; text-decoration: inherit;">segments</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networksegment">List[Network<wbr>Segment]</a></span>
     </dt>
@@ -941,7 +1125,9 @@ network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>shared</span>
+        <span id="shared_python">
+<a href="#shared_python" style="color: inherit; text-decoration: inherit;">shared</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -952,7 +1138,9 @@ existing network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -961,7 +1149,9 @@ existing network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tenant_<wbr>id</span>
+        <span id="tenant_id_python">
+<a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -971,7 +1161,9 @@ create a network for another tenant. Changing this creates a new network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>transparent_<wbr>vlan</span>
+        <span id="transparent_vlan_python">
+<a href="#transparent_vlan_python" style="color: inherit; text-decoration: inherit;">transparent_<wbr>vlan</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -983,7 +1175,9 @@ network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>value_<wbr>specs</span>
+        <span id="value_specs_python">
+<a href="#value_specs_python" style="color: inherit; text-decoration: inherit;">value_<wbr>specs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -1010,7 +1204,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>All<wbr>Tags</span>
+        <span id="alltags_csharp">
+<a href="#alltags_csharp" style="color: inherit; text-decoration: inherit;">All<wbr>Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1020,7 +1216,9 @@ explicitly and implicitly added.
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1035,7 +1233,9 @@ explicitly and implicitly added.
 
     <dt class="property-"
             title="">
-        <span>All<wbr>Tags</span>
+        <span id="alltags_go">
+<a href="#alltags_go" style="color: inherit; text-decoration: inherit;">All<wbr>Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1045,7 +1245,9 @@ explicitly and implicitly added.
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1060,7 +1262,9 @@ explicitly and implicitly added.
 
     <dt class="property-"
             title="">
-        <span>all<wbr>Tags</span>
+        <span id="alltags_nodejs">
+<a href="#alltags_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1070,7 +1274,9 @@ explicitly and implicitly added.
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1085,7 +1291,9 @@ explicitly and implicitly added.
 
     <dt class="property-"
             title="">
-        <span>all_<wbr>tags</span>
+        <span id="all_tags_python">
+<a href="#all_tags_python" style="color: inherit; text-decoration: inherit;">all_<wbr>tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1095,7 +1303,9 @@ explicitly and implicitly added.
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1236,7 +1446,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Admin<wbr>State<wbr>Up</span>
+        <span id="state_adminstateup_csharp">
+<a href="#state_adminstateup_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>State<wbr>Up</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1247,7 +1459,9 @@ state of the existing network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>All<wbr>Tags</span>
+        <span id="state_alltags_csharp">
+<a href="#state_alltags_csharp" style="color: inherit; text-decoration: inherit;">All<wbr>Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1257,7 +1471,9 @@ explicitly and implicitly added.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Availability<wbr>Zone<wbr>Hints</span>
+        <span id="state_availabilityzonehints_csharp">
+<a href="#state_availabilityzonehints_csharp" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone<wbr>Hints</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1269,7 +1485,9 @@ creates a new network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="state_description_csharp">
+<a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1279,7 +1497,9 @@ updates the name of the existing network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Dns<wbr>Domain</span>
+        <span id="state_dnsdomain_csharp">
+<a href="#state_dnsdomain_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Domain</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1291,7 +1511,9 @@ service when Neutron is configured to integrate with such a service.
 
     <dt class="property-optional"
             title="Optional">
-        <span>External</span>
+        <span id="state_external_csharp">
+<a href="#state_external_csharp" style="color: inherit; text-decoration: inherit;">External</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1302,7 +1524,9 @@ false. Changing this updates the external attribute of the existing network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Mtu</span>
+        <span id="state_mtu_csharp">
+<a href="#state_mtu_csharp" style="color: inherit; text-decoration: inherit;">Mtu</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -1313,7 +1537,9 @@ Neutron `net-mtu-writable` extension is enabled.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1323,7 +1549,9 @@ the existing network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Port<wbr>Security<wbr>Enabled</span>
+        <span id="state_portsecurityenabled_csharp">
+<a href="#state_portsecurityenabled_csharp" style="color: inherit; text-decoration: inherit;">Port<wbr>Security<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1336,7 +1564,9 @@ explicitly to `false` will disable port security. Valid values are `true` and
 
     <dt class="property-optional"
             title="Optional">
-        <span>Qos<wbr>Policy<wbr>Id</span>
+        <span id="state_qospolicyid_csharp">
+<a href="#state_qospolicyid_csharp" style="color: inherit; text-decoration: inherit;">Qos<wbr>Policy<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1345,7 +1575,9 @@ explicitly to `false` will disable port security. Valid values are `true` and
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="state_region_csharp">
+<a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1357,7 +1589,9 @@ network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Segments</span>
+        <span id="state_segments_csharp">
+<a href="#state_segments_csharp" style="color: inherit; text-decoration: inherit;">Segments</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networksegment">List&lt;Pulumi.<wbr>Open<wbr>Stack.<wbr>Networking.<wbr>Inputs.<wbr>Network<wbr>Segment<wbr>Args&gt;</a></span>
     </dt>
@@ -1366,7 +1600,9 @@ network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Shared</span>
+        <span id="state_shared_csharp">
+<a href="#state_shared_csharp" style="color: inherit; text-decoration: inherit;">Shared</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1377,7 +1613,9 @@ existing network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="state_tags_csharp">
+<a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -1386,7 +1624,9 @@ existing network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tenant<wbr>Id</span>
+        <span id="state_tenantid_csharp">
+<a href="#state_tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1396,7 +1636,9 @@ create a network for another tenant. Changing this creates a new network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Transparent<wbr>Vlan</span>
+        <span id="state_transparentvlan_csharp">
+<a href="#state_transparentvlan_csharp" style="color: inherit; text-decoration: inherit;">Transparent<wbr>Vlan</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -1408,7 +1650,9 @@ network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Value<wbr>Specs</span>
+        <span id="state_valuespecs_csharp">
+<a href="#state_valuespecs_csharp" style="color: inherit; text-decoration: inherit;">Value<wbr>Specs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -1424,7 +1668,9 @@ network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Admin<wbr>State<wbr>Up</span>
+        <span id="state_adminstateup_go">
+<a href="#state_adminstateup_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>State<wbr>Up</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1435,7 +1681,9 @@ state of the existing network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>All<wbr>Tags</span>
+        <span id="state_alltags_go">
+<a href="#state_alltags_go" style="color: inherit; text-decoration: inherit;">All<wbr>Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1445,7 +1693,9 @@ explicitly and implicitly added.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Availability<wbr>Zone<wbr>Hints</span>
+        <span id="state_availabilityzonehints_go">
+<a href="#state_availabilityzonehints_go" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone<wbr>Hints</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1457,7 +1707,9 @@ creates a new network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span id="state_description_go">
+<a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1467,7 +1719,9 @@ updates the name of the existing network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Dns<wbr>Domain</span>
+        <span id="state_dnsdomain_go">
+<a href="#state_dnsdomain_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Domain</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1479,7 +1733,9 @@ service when Neutron is configured to integrate with such a service.
 
     <dt class="property-optional"
             title="Optional">
-        <span>External</span>
+        <span id="state_external_go">
+<a href="#state_external_go" style="color: inherit; text-decoration: inherit;">External</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1490,7 +1746,9 @@ false. Changing this updates the external attribute of the existing network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Mtu</span>
+        <span id="state_mtu_go">
+<a href="#state_mtu_go" style="color: inherit; text-decoration: inherit;">Mtu</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -1501,7 +1759,9 @@ Neutron `net-mtu-writable` extension is enabled.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1511,7 +1771,9 @@ the existing network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Port<wbr>Security<wbr>Enabled</span>
+        <span id="state_portsecurityenabled_go">
+<a href="#state_portsecurityenabled_go" style="color: inherit; text-decoration: inherit;">Port<wbr>Security<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1524,7 +1786,9 @@ explicitly to `false` will disable port security. Valid values are `true` and
 
     <dt class="property-optional"
             title="Optional">
-        <span>Qos<wbr>Policy<wbr>Id</span>
+        <span id="state_qospolicyid_go">
+<a href="#state_qospolicyid_go" style="color: inherit; text-decoration: inherit;">Qos<wbr>Policy<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1533,7 +1797,9 @@ explicitly to `false` will disable port security. Valid values are `true` and
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="state_region_go">
+<a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1545,7 +1811,9 @@ network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Segments</span>
+        <span id="state_segments_go">
+<a href="#state_segments_go" style="color: inherit; text-decoration: inherit;">Segments</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networksegment">[]Network<wbr>Segment</a></span>
     </dt>
@@ -1554,7 +1822,9 @@ network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Shared</span>
+        <span id="state_shared_go">
+<a href="#state_shared_go" style="color: inherit; text-decoration: inherit;">Shared</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1565,7 +1835,9 @@ existing network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tags</span>
+        <span id="state_tags_go">
+<a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1574,7 +1846,9 @@ existing network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tenant<wbr>Id</span>
+        <span id="state_tenantid_go">
+<a href="#state_tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1584,7 +1858,9 @@ create a network for another tenant. Changing this creates a new network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Transparent<wbr>Vlan</span>
+        <span id="state_transparentvlan_go">
+<a href="#state_transparentvlan_go" style="color: inherit; text-decoration: inherit;">Transparent<wbr>Vlan</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1596,7 +1872,9 @@ network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Value<wbr>Specs</span>
+        <span id="state_valuespecs_go">
+<a href="#state_valuespecs_go" style="color: inherit; text-decoration: inherit;">Value<wbr>Specs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -1612,7 +1890,9 @@ network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>admin<wbr>State<wbr>Up</span>
+        <span id="state_adminstateup_nodejs">
+<a href="#state_adminstateup_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>State<wbr>Up</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1623,7 +1903,9 @@ state of the existing network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>all<wbr>Tags</span>
+        <span id="state_alltags_nodejs">
+<a href="#state_alltags_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1633,7 +1915,9 @@ explicitly and implicitly added.
 
     <dt class="property-optional"
             title="Optional">
-        <span>availability<wbr>Zone<wbr>Hints</span>
+        <span id="state_availabilityzonehints_nodejs">
+<a href="#state_availabilityzonehints_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Zone<wbr>Hints</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1645,7 +1929,9 @@ creates a new network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="state_description_nodejs">
+<a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1655,7 +1941,9 @@ updates the name of the existing network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>dns<wbr>Domain</span>
+        <span id="state_dnsdomain_nodejs">
+<a href="#state_dnsdomain_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Domain</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1667,7 +1955,9 @@ service when Neutron is configured to integrate with such a service.
 
     <dt class="property-optional"
             title="Optional">
-        <span>external</span>
+        <span id="state_external_nodejs">
+<a href="#state_external_nodejs" style="color: inherit; text-decoration: inherit;">external</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1678,7 +1968,9 @@ false. Changing this updates the external attribute of the existing network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>mtu</span>
+        <span id="state_mtu_nodejs">
+<a href="#state_mtu_nodejs" style="color: inherit; text-decoration: inherit;">mtu</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -1689,7 +1981,9 @@ Neutron `net-mtu-writable` extension is enabled.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1699,7 +1993,9 @@ the existing network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>port<wbr>Security<wbr>Enabled</span>
+        <span id="state_portsecurityenabled_nodejs">
+<a href="#state_portsecurityenabled_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Security<wbr>Enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1712,7 +2008,9 @@ explicitly to `false` will disable port security. Valid values are `true` and
 
     <dt class="property-optional"
             title="Optional">
-        <span>qos<wbr>Policy<wbr>Id</span>
+        <span id="state_qospolicyid_nodejs">
+<a href="#state_qospolicyid_nodejs" style="color: inherit; text-decoration: inherit;">qos<wbr>Policy<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1721,7 +2019,9 @@ explicitly to `false` will disable port security. Valid values are `true` and
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="state_region_nodejs">
+<a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1733,7 +2033,9 @@ network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>segments</span>
+        <span id="state_segments_nodejs">
+<a href="#state_segments_nodejs" style="color: inherit; text-decoration: inherit;">segments</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networksegment">Network<wbr>Segment[]</a></span>
     </dt>
@@ -1742,7 +2044,9 @@ network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>shared</span>
+        <span id="state_shared_nodejs">
+<a href="#state_shared_nodejs" style="color: inherit; text-decoration: inherit;">shared</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1753,7 +2057,9 @@ existing network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="state_tags_nodejs">
+<a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1762,7 +2068,9 @@ existing network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tenant<wbr>Id</span>
+        <span id="state_tenantid_nodejs">
+<a href="#state_tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1772,7 +2080,9 @@ create a network for another tenant. Changing this creates a new network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>transparent<wbr>Vlan</span>
+        <span id="state_transparentvlan_nodejs">
+<a href="#state_transparentvlan_nodejs" style="color: inherit; text-decoration: inherit;">transparent<wbr>Vlan</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -1784,7 +2094,9 @@ network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>value<wbr>Specs</span>
+        <span id="state_valuespecs_nodejs">
+<a href="#state_valuespecs_nodejs" style="color: inherit; text-decoration: inherit;">value<wbr>Specs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -1800,7 +2112,9 @@ network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>admin_<wbr>state_<wbr>up</span>
+        <span id="state_admin_state_up_python">
+<a href="#state_admin_state_up_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>state_<wbr>up</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1811,7 +2125,9 @@ state of the existing network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>all_<wbr>tags</span>
+        <span id="state_all_tags_python">
+<a href="#state_all_tags_python" style="color: inherit; text-decoration: inherit;">all_<wbr>tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1821,7 +2137,9 @@ explicitly and implicitly added.
 
     <dt class="property-optional"
             title="Optional">
-        <span>availability_<wbr>zone_<wbr>hints</span>
+        <span id="state_availability_zone_hints_python">
+<a href="#state_availability_zone_hints_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zone_<wbr>hints</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1833,7 +2151,9 @@ creates a new network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span id="state_description_python">
+<a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1843,7 +2163,9 @@ updates the name of the existing network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>dns_<wbr>domain</span>
+        <span id="state_dns_domain_python">
+<a href="#state_dns_domain_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>domain</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1855,7 +2177,9 @@ service when Neutron is configured to integrate with such a service.
 
     <dt class="property-optional"
             title="Optional">
-        <span>external</span>
+        <span id="state_external_python">
+<a href="#state_external_python" style="color: inherit; text-decoration: inherit;">external</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1866,7 +2190,9 @@ false. Changing this updates the external attribute of the existing network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>mtu</span>
+        <span id="state_mtu_python">
+<a href="#state_mtu_python" style="color: inherit; text-decoration: inherit;">mtu</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1877,7 +2203,9 @@ Neutron `net-mtu-writable` extension is enabled.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1887,7 +2215,9 @@ the existing network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>port_<wbr>security_<wbr>enabled</span>
+        <span id="state_port_security_enabled_python">
+<a href="#state_port_security_enabled_python" style="color: inherit; text-decoration: inherit;">port_<wbr>security_<wbr>enabled</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1900,7 +2230,9 @@ explicitly to `false` will disable port security. Valid values are `true` and
 
     <dt class="property-optional"
             title="Optional">
-        <span>qos_<wbr>policy_<wbr>id</span>
+        <span id="state_qos_policy_id_python">
+<a href="#state_qos_policy_id_python" style="color: inherit; text-decoration: inherit;">qos_<wbr>policy_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1909,7 +2241,9 @@ explicitly to `false` will disable port security. Valid values are `true` and
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="state_region_python">
+<a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1921,7 +2255,9 @@ network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>segments</span>
+        <span id="state_segments_python">
+<a href="#state_segments_python" style="color: inherit; text-decoration: inherit;">segments</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networksegment">List[Network<wbr>Segment]</a></span>
     </dt>
@@ -1930,7 +2266,9 @@ network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>shared</span>
+        <span id="state_shared_python">
+<a href="#state_shared_python" style="color: inherit; text-decoration: inherit;">shared</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1941,7 +2279,9 @@ existing network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tags</span>
+        <span id="state_tags_python">
+<a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1950,7 +2290,9 @@ existing network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tenant_<wbr>id</span>
+        <span id="state_tenant_id_python">
+<a href="#state_tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1960,7 +2302,9 @@ create a network for another tenant. Changing this creates a new network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>transparent_<wbr>vlan</span>
+        <span id="state_transparent_vlan_python">
+<a href="#state_transparent_vlan_python" style="color: inherit; text-decoration: inherit;">transparent_<wbr>vlan</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
@@ -1972,7 +2316,9 @@ network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>value_<wbr>specs</span>
+        <span id="state_value_specs_python">
+<a href="#state_value_specs_python" style="color: inherit; text-decoration: inherit;">value_<wbr>specs</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -2014,7 +2360,9 @@ network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Network<wbr>Type</span>
+        <span id="networktype_csharp">
+<a href="#networktype_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2023,7 +2371,9 @@ network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Physical<wbr>Network</span>
+        <span id="physicalnetwork_csharp">
+<a href="#physicalnetwork_csharp" style="color: inherit; text-decoration: inherit;">Physical<wbr>Network</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -2032,7 +2382,9 @@ network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Segmentation<wbr>Id</span>
+        <span id="segmentationid_csharp">
+<a href="#segmentationid_csharp" style="color: inherit; text-decoration: inherit;">Segmentation<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
@@ -2048,7 +2400,9 @@ network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Network<wbr>Type</span>
+        <span id="networktype_go">
+<a href="#networktype_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2057,7 +2411,9 @@ network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Physical<wbr>Network</span>
+        <span id="physicalnetwork_go">
+<a href="#physicalnetwork_go" style="color: inherit; text-decoration: inherit;">Physical<wbr>Network</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -2066,7 +2422,9 @@ network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Segmentation<wbr>Id</span>
+        <span id="segmentationid_go">
+<a href="#segmentationid_go" style="color: inherit; text-decoration: inherit;">Segmentation<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
@@ -2082,7 +2440,9 @@ network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>network<wbr>Type</span>
+        <span id="networktype_nodejs">
+<a href="#networktype_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2091,7 +2451,9 @@ network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>physical<wbr>Network</span>
+        <span id="physicalnetwork_nodejs">
+<a href="#physicalnetwork_nodejs" style="color: inherit; text-decoration: inherit;">physical<wbr>Network</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -2100,7 +2462,9 @@ network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>segmentation<wbr>Id</span>
+        <span id="segmentationid_nodejs">
+<a href="#segmentationid_nodejs" style="color: inherit; text-decoration: inherit;">segmentation<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
@@ -2116,7 +2480,9 @@ network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>network_<wbr>type</span>
+        <span id="network_type_python">
+<a href="#network_type_python" style="color: inherit; text-decoration: inherit;">network_<wbr>type</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2125,7 +2491,9 @@ network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>physical<wbr>Network</span>
+        <span id="physicalnetwork_python">
+<a href="#physicalnetwork_python" style="color: inherit; text-decoration: inherit;">physical<wbr>Network</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2134,7 +2502,9 @@ network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>segmentation_<wbr>id</span>
+        <span id="segmentation_id_python">
+<a href="#segmentation_id_python" style="color: inherit; text-decoration: inherit;">segmentation_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>

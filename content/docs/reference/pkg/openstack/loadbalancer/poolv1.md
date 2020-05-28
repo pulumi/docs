@@ -158,6 +158,116 @@ vip1 = openstack.loadbalancer.Vip("vip1",
     protocol="TCP",
     subnet_id=subnet1.id)
 ```
+```csharp
+using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var network1 = new OpenStack.Networking.Network("network1", new OpenStack.Networking.NetworkArgs
+        {
+            AdminStateUp = "true",
+        });
+        var subnet1 = new OpenStack.Networking.Subnet("subnet1", new OpenStack.Networking.SubnetArgs
+        {
+            Cidr = "192.168.199.0/24",
+            IpVersion = 4,
+            NetworkId = network1.Id,
+        });
+        var secgroup1 = new OpenStack.Compute.SecGroup("secgroup1", new OpenStack.Compute.SecGroupArgs
+        {
+            Description = "Rules for secgroup_1",
+            Rules = 
+            {
+                new OpenStack.Compute.Inputs.SecGroupRuleArgs
+                {
+                    Cidr = "0.0.0.0/0",
+                    FromPort = -1,
+                    IpProtocol = "icmp",
+                    ToPort = -1,
+                },
+                new OpenStack.Compute.Inputs.SecGroupRuleArgs
+                {
+                    Cidr = "0.0.0.0/0",
+                    FromPort = 80,
+                    IpProtocol = "tcp",
+                    ToPort = 80,
+                },
+            },
+        });
+        var instance1 = new OpenStack.Compute.Instance("instance1", new OpenStack.Compute.InstanceArgs
+        {
+            Networks = 
+            {
+                new OpenStack.Compute.Inputs.InstanceNetworkArgs
+                {
+                    Uuid = network1.Id,
+                },
+            },
+            SecurityGroups = 
+            {
+                "default",
+                secgroup1.Name,
+            },
+        });
+        var instance2 = new OpenStack.Compute.Instance("instance2", new OpenStack.Compute.InstanceArgs
+        {
+            Networks = 
+            {
+                new OpenStack.Compute.Inputs.InstanceNetworkArgs
+                {
+                    Uuid = network1.Id,
+                },
+            },
+            SecurityGroups = 
+            {
+                "default",
+                secgroup1.Name,
+            },
+        });
+        var monitor1 = new OpenStack.LoadBalancer.MonitorV1("monitor1", new OpenStack.LoadBalancer.MonitorV1Args
+        {
+            AdminStateUp = "true",
+            Delay = 30,
+            MaxRetries = 3,
+            Timeout = 5,
+            Type = "TCP",
+        });
+        var pool1 = new OpenStack.LoadBalancer.PoolV1("pool1", new OpenStack.LoadBalancer.PoolV1Args
+        {
+            LbMethod = "ROUND_ROBIN",
+            MonitorIds = 
+            {
+                monitor1.Id,
+            },
+            Protocol = "TCP",
+            SubnetId = subnet1.Id,
+        });
+        var member1 = new OpenStack.LoadBalancer.MemberV1("member1", new OpenStack.LoadBalancer.MemberV1Args
+        {
+            Address = instance1.AccessIpV4,
+            PoolId = pool1.Id,
+            Port = 80,
+        });
+        var member2 = new OpenStack.LoadBalancer.MemberV1("member2", new OpenStack.LoadBalancer.MemberV1Args
+        {
+            Address = instance2.AccessIpV4,
+            PoolId = pool1.Id,
+            Port = 80,
+        });
+        var vip1 = new OpenStack.LoadBalancer.Vip("vip1", new OpenStack.LoadBalancer.VipArgs
+        {
+            PoolId = pool1.Id,
+            Port = 80,
+            Protocol = "TCP",
+            SubnetId = subnet1.Id,
+        });
+    }
+
+}
+```
 
 ## Notes
 
@@ -169,7 +279,29 @@ The `member` block is deprecated in favor of the `openstack.loadbalancer.MemberV
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using OpenStack = Pulumi.OpenStack;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var pool1 = new OpenStack.LoadBalancer.PoolV1("pool1", new OpenStack.LoadBalancer.PoolV1Args
+        {
+            LbMethod = "ROUND_ROBIN",
+            LbProvider = "haproxy",
+            MonitorIds = 
+            {
+                "67890",
+            },
+            Protocol = "HTTP",
+            SubnetId = "12345",
+        });
+    }
+
+}
+```
 {{% /example %}}
 
 {{% example go %}}
@@ -391,7 +523,9 @@ The PoolV1 resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-required"
             title="Required">
-        <span>Lb<wbr>Method</span>
+        <span id="lbmethod_csharp">
+<a href="#lbmethod_csharp" style="color: inherit; text-decoration: inherit;">Lb<wbr>Method</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -402,7 +536,9 @@ members of the pool. The current specification supports 'ROUND_ROBIN' and
 
     <dt class="property-required"
             title="Required">
-        <span>Protocol</span>
+        <span id="protocol_csharp">
+<a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -412,7 +548,9 @@ either 'TCP, 'HTTP', or 'HTTPS'. Changing this creates a new pool.
 
     <dt class="property-required"
             title="Required">
-        <span>Subnet<wbr>Id</span>
+        <span id="subnetid_csharp">
+<a href="#subnetid_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -423,7 +561,9 @@ Changing this creates a new pool.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Lb<wbr>Provider</span>
+        <span id="lbprovider_csharp">
+<a href="#lbprovider_csharp" style="color: inherit; text-decoration: inherit;">Lb<wbr>Provider</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -433,7 +573,9 @@ Changing this creates a new pool.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Monitor<wbr>Ids</span>
+        <span id="monitorids_csharp">
+<a href="#monitorids_csharp" style="color: inherit; text-decoration: inherit;">Monitor<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -443,7 +585,9 @@ pool.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -453,7 +597,9 @@ the existing pool.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="region_csharp">
+<a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -465,7 +611,9 @@ LB pool.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tenant<wbr>Id</span>
+        <span id="tenantid_csharp">
+<a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -482,7 +630,9 @@ create a pool member for another tenant. Changing this creates a new member.
 
     <dt class="property-required"
             title="Required">
-        <span>Lb<wbr>Method</span>
+        <span id="lbmethod_go">
+<a href="#lbmethod_go" style="color: inherit; text-decoration: inherit;">Lb<wbr>Method</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -493,7 +643,9 @@ members of the pool. The current specification supports 'ROUND_ROBIN' and
 
     <dt class="property-required"
             title="Required">
-        <span>Protocol</span>
+        <span id="protocol_go">
+<a href="#protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -503,7 +655,9 @@ either 'TCP, 'HTTP', or 'HTTPS'. Changing this creates a new pool.
 
     <dt class="property-required"
             title="Required">
-        <span>Subnet<wbr>Id</span>
+        <span id="subnetid_go">
+<a href="#subnetid_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -514,7 +668,9 @@ Changing this creates a new pool.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Lb<wbr>Provider</span>
+        <span id="lbprovider_go">
+<a href="#lbprovider_go" style="color: inherit; text-decoration: inherit;">Lb<wbr>Provider</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -524,7 +680,9 @@ Changing this creates a new pool.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Monitor<wbr>Ids</span>
+        <span id="monitorids_go">
+<a href="#monitorids_go" style="color: inherit; text-decoration: inherit;">Monitor<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -534,7 +692,9 @@ pool.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -544,7 +704,9 @@ the existing pool.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="region_go">
+<a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -556,7 +718,9 @@ LB pool.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tenant<wbr>Id</span>
+        <span id="tenantid_go">
+<a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -573,7 +737,9 @@ create a pool member for another tenant. Changing this creates a new member.
 
     <dt class="property-required"
             title="Required">
-        <span>lb<wbr>Method</span>
+        <span id="lbmethod_nodejs">
+<a href="#lbmethod_nodejs" style="color: inherit; text-decoration: inherit;">lb<wbr>Method</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -584,7 +750,9 @@ members of the pool. The current specification supports 'ROUND_ROBIN' and
 
     <dt class="property-required"
             title="Required">
-        <span>protocol</span>
+        <span id="protocol_nodejs">
+<a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -594,7 +762,9 @@ either 'TCP, 'HTTP', or 'HTTPS'. Changing this creates a new pool.
 
     <dt class="property-required"
             title="Required">
-        <span>subnet<wbr>Id</span>
+        <span id="subnetid_nodejs">
+<a href="#subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -605,7 +775,9 @@ Changing this creates a new pool.
 
     <dt class="property-optional"
             title="Optional">
-        <span>lb<wbr>Provider</span>
+        <span id="lbprovider_nodejs">
+<a href="#lbprovider_nodejs" style="color: inherit; text-decoration: inherit;">lb<wbr>Provider</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -615,7 +787,9 @@ Changing this creates a new pool.
 
     <dt class="property-optional"
             title="Optional">
-        <span>monitor<wbr>Ids</span>
+        <span id="monitorids_nodejs">
+<a href="#monitorids_nodejs" style="color: inherit; text-decoration: inherit;">monitor<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -625,7 +799,9 @@ pool.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -635,7 +811,9 @@ the existing pool.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="region_nodejs">
+<a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -647,7 +825,9 @@ LB pool.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tenant<wbr>Id</span>
+        <span id="tenantid_nodejs">
+<a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -664,7 +844,9 @@ create a pool member for another tenant. Changing this creates a new member.
 
     <dt class="property-required"
             title="Required">
-        <span>lb_<wbr>method</span>
+        <span id="lb_method_python">
+<a href="#lb_method_python" style="color: inherit; text-decoration: inherit;">lb_<wbr>method</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -675,7 +857,9 @@ members of the pool. The current specification supports 'ROUND_ROBIN' and
 
     <dt class="property-required"
             title="Required">
-        <span>protocol</span>
+        <span id="protocol_python">
+<a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -685,7 +869,9 @@ either 'TCP, 'HTTP', or 'HTTPS'. Changing this creates a new pool.
 
     <dt class="property-required"
             title="Required">
-        <span>subnet_<wbr>id</span>
+        <span id="subnet_id_python">
+<a href="#subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -696,7 +882,9 @@ Changing this creates a new pool.
 
     <dt class="property-optional"
             title="Optional">
-        <span>lb_<wbr>provider</span>
+        <span id="lb_provider_python">
+<a href="#lb_provider_python" style="color: inherit; text-decoration: inherit;">lb_<wbr>provider</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -706,7 +894,9 @@ Changing this creates a new pool.
 
     <dt class="property-optional"
             title="Optional">
-        <span>monitor_<wbr>ids</span>
+        <span id="monitor_ids_python">
+<a href="#monitor_ids_python" style="color: inherit; text-decoration: inherit;">monitor_<wbr>ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -716,7 +906,9 @@ pool.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -726,7 +918,9 @@ the existing pool.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="region_python">
+<a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -738,7 +932,9 @@ LB pool.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tenant_<wbr>id</span>
+        <span id="tenant_id_python">
+<a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -766,7 +962,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -781,7 +979,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -796,7 +996,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -811,7 +1013,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span>id</span>
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -952,7 +1156,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Lb<wbr>Method</span>
+        <span id="state_lbmethod_csharp">
+<a href="#state_lbmethod_csharp" style="color: inherit; text-decoration: inherit;">Lb<wbr>Method</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -963,7 +1169,9 @@ members of the pool. The current specification supports 'ROUND_ROBIN' and
 
     <dt class="property-optional"
             title="Optional">
-        <span>Lb<wbr>Provider</span>
+        <span id="state_lbprovider_csharp">
+<a href="#state_lbprovider_csharp" style="color: inherit; text-decoration: inherit;">Lb<wbr>Provider</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -973,7 +1181,9 @@ members of the pool. The current specification supports 'ROUND_ROBIN' and
 
     <dt class="property-optional"
             title="Optional">
-        <span>Monitor<wbr>Ids</span>
+        <span id="state_monitorids_csharp">
+<a href="#state_monitorids_csharp" style="color: inherit; text-decoration: inherit;">Monitor<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
@@ -983,7 +1193,9 @@ pool.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_csharp">
+<a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -993,7 +1205,9 @@ the existing pool.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Protocol</span>
+        <span id="state_protocol_csharp">
+<a href="#state_protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1003,7 +1217,9 @@ either 'TCP, 'HTTP', or 'HTTPS'. Changing this creates a new pool.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="state_region_csharp">
+<a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1015,7 +1231,9 @@ LB pool.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Subnet<wbr>Id</span>
+        <span id="state_subnetid_csharp">
+<a href="#state_subnetid_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1026,7 +1244,9 @@ Changing this creates a new pool.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tenant<wbr>Id</span>
+        <span id="state_tenantid_csharp">
+<a href="#state_tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -1043,7 +1263,9 @@ create a pool member for another tenant. Changing this creates a new member.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Lb<wbr>Method</span>
+        <span id="state_lbmethod_go">
+<a href="#state_lbmethod_go" style="color: inherit; text-decoration: inherit;">Lb<wbr>Method</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1054,7 +1276,9 @@ members of the pool. The current specification supports 'ROUND_ROBIN' and
 
     <dt class="property-optional"
             title="Optional">
-        <span>Lb<wbr>Provider</span>
+        <span id="state_lbprovider_go">
+<a href="#state_lbprovider_go" style="color: inherit; text-decoration: inherit;">Lb<wbr>Provider</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1064,7 +1288,9 @@ members of the pool. The current specification supports 'ROUND_ROBIN' and
 
     <dt class="property-optional"
             title="Optional">
-        <span>Monitor<wbr>Ids</span>
+        <span id="state_monitorids_go">
+<a href="#state_monitorids_go" style="color: inherit; text-decoration: inherit;">Monitor<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
@@ -1074,7 +1300,9 @@ pool.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
+        <span id="state_name_go">
+<a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1084,7 +1312,9 @@ the existing pool.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Protocol</span>
+        <span id="state_protocol_go">
+<a href="#state_protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1094,7 +1324,9 @@ either 'TCP, 'HTTP', or 'HTTPS'. Changing this creates a new pool.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
+        <span id="state_region_go">
+<a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1106,7 +1338,9 @@ LB pool.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Subnet<wbr>Id</span>
+        <span id="state_subnetid_go">
+<a href="#state_subnetid_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1117,7 +1351,9 @@ Changing this creates a new pool.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Tenant<wbr>Id</span>
+        <span id="state_tenantid_go">
+<a href="#state_tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -1134,7 +1370,9 @@ create a pool member for another tenant. Changing this creates a new member.
 
     <dt class="property-optional"
             title="Optional">
-        <span>lb<wbr>Method</span>
+        <span id="state_lbmethod_nodejs">
+<a href="#state_lbmethod_nodejs" style="color: inherit; text-decoration: inherit;">lb<wbr>Method</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1145,7 +1383,9 @@ members of the pool. The current specification supports 'ROUND_ROBIN' and
 
     <dt class="property-optional"
             title="Optional">
-        <span>lb<wbr>Provider</span>
+        <span id="state_lbprovider_nodejs">
+<a href="#state_lbprovider_nodejs" style="color: inherit; text-decoration: inherit;">lb<wbr>Provider</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1155,7 +1395,9 @@ members of the pool. The current specification supports 'ROUND_ROBIN' and
 
     <dt class="property-optional"
             title="Optional">
-        <span>monitor<wbr>Ids</span>
+        <span id="state_monitorids_nodejs">
+<a href="#state_monitorids_nodejs" style="color: inherit; text-decoration: inherit;">monitor<wbr>Ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
@@ -1165,7 +1407,9 @@ pool.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_nodejs">
+<a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1175,7 +1419,9 @@ the existing pool.
 
     <dt class="property-optional"
             title="Optional">
-        <span>protocol</span>
+        <span id="state_protocol_nodejs">
+<a href="#state_protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1185,7 +1431,9 @@ either 'TCP, 'HTTP', or 'HTTPS'. Changing this creates a new pool.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="state_region_nodejs">
+<a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1197,7 +1445,9 @@ LB pool.
 
     <dt class="property-optional"
             title="Optional">
-        <span>subnet<wbr>Id</span>
+        <span id="state_subnetid_nodejs">
+<a href="#state_subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1208,7 +1458,9 @@ Changing this creates a new pool.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tenant<wbr>Id</span>
+        <span id="state_tenantid_nodejs">
+<a href="#state_tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -1225,7 +1477,9 @@ create a pool member for another tenant. Changing this creates a new member.
 
     <dt class="property-optional"
             title="Optional">
-        <span>lb_<wbr>method</span>
+        <span id="state_lb_method_python">
+<a href="#state_lb_method_python" style="color: inherit; text-decoration: inherit;">lb_<wbr>method</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1236,7 +1490,9 @@ members of the pool. The current specification supports 'ROUND_ROBIN' and
 
     <dt class="property-optional"
             title="Optional">
-        <span>lb_<wbr>provider</span>
+        <span id="state_lb_provider_python">
+<a href="#state_lb_provider_python" style="color: inherit; text-decoration: inherit;">lb_<wbr>provider</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1246,7 +1502,9 @@ members of the pool. The current specification supports 'ROUND_ROBIN' and
 
     <dt class="property-optional"
             title="Optional">
-        <span>monitor_<wbr>ids</span>
+        <span id="state_monitor_ids_python">
+<a href="#state_monitor_ids_python" style="color: inherit; text-decoration: inherit;">monitor_<wbr>ids</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
@@ -1256,7 +1514,9 @@ pool.
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span id="state_name_python">
+<a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1266,7 +1526,9 @@ the existing pool.
 
     <dt class="property-optional"
             title="Optional">
-        <span>protocol</span>
+        <span id="state_protocol_python">
+<a href="#state_protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1276,7 +1538,9 @@ either 'TCP, 'HTTP', or 'HTTPS'. Changing this creates a new pool.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
+        <span id="state_region_python">
+<a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1288,7 +1552,9 @@ LB pool.
 
     <dt class="property-optional"
             title="Optional">
-        <span>subnet_<wbr>id</span>
+        <span id="state_subnet_id_python">
+<a href="#state_subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1299,7 +1565,9 @@ Changing this creates a new pool.
 
     <dt class="property-optional"
             title="Optional">
-        <span>tenant_<wbr>id</span>
+        <span id="state_tenant_id_python">
+<a href="#state_tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
+</span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
