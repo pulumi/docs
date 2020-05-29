@@ -31,4 +31,16 @@ pulumi-tooltip {
             }
         }
     }
+
+    // To prevent a flash of unstyled/understyled slotted content, we hide that content until
+    // it's rendered as a child of the tooltip component.
+    [slot="content"] {
+        @apply hidden;
+    }
+
+    .tooltip-content {
+        [slot="content"] {
+            display: unset;
+        }
+    }
 }
