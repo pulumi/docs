@@ -4,6 +4,10 @@
 pulumi-tooltip {
     @apply relative;
 
+    // Use the currently applied line height and font size.
+    line-height: 1em;
+    font-size: 1em;
+
     .tooltip-content {
         @apply absolute block opacity-0 w-48 py-2 mb-2 px-3 bg-gray-700 rounded shadow font-body font-normal text-center text-xs text-white leading-normal z-50;
         @include transition();
