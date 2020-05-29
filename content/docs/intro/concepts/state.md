@@ -67,11 +67,11 @@ Visit the following links for details on cloud provider
 CLI and storage setup:
 
 - **AWS S3.** _See [AWS Setup]({{< relref "/docs/intro/cloud-providers/aws/setup" >}})
-and [Working with Amazon S3 buckets](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingBucket.html)._
+and [Working with Amazon S3 buckets](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingBucket.html). See [AWS Session](https://docs.aws.amazon.com/sdk-for-go/api/aws/session/) for configuring credentials for this backend._
 - **Azure Blob.** _See [Azure Setup]({{< relref "/docs/intro/cloud-providers/azure/setup" >}})
-and Microsoft's [Storage Blobs Quickstart](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-cli)._
+and Microsoft's [Storage Blobs Quickstart](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-cli). This backend requires setting the environment variables `AZURE_STORAGE_ACCOUNT` and either `AZURE_STORAGE_KEY` or `AZURE_STORAGE_SAS_TOKEN`._
 - **Google Cloud Storage.** _See [GCP Setup]({{< relref "/docs/intro/cloud-providers/gcp/setup" >}})
-and [Google's Cloud Storage Quickstarts](https://cloud.google.com/storage/docs/quickstarts)._
+and [Google's Cloud Storage Quickstarts](https://cloud.google.com/storage/docs/quickstarts). See [Application Default Credentials](https://cloud.google.com/docs/authentication/production) for configuring credentials for this backend._
 
 ### Pulumi Service backend features
 
