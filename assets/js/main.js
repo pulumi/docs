@@ -113,4 +113,15 @@ function getQueryVariable(variable) {
 
             $(list).removeClass("invisible");
         });
+
+    // Wrap "required" asterisks in tooltips.
+    $("dl.resources-properties dt.property-required")
+        .removeAttr("title")
+        .find(".property-indicator")
+        .replaceWith(
+            '<pulumi-tooltip>' +
+            '    <span class="property-indicator"></span>' +
+            '    <span slot="content">This property is required.</span>' +
+            '</pulumi-tooltip>'
+        );
 }(jQuery));

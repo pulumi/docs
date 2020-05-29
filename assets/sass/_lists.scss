@@ -92,7 +92,7 @@ dl {
             }
 
             span {
-                vertical-align: middle;
+                @apply align-middle
             }
         }
     }
