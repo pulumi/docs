@@ -18,10 +18,6 @@ Using Policy as Code, users can express business or security rules as functions 
 
 Policies can be written in TypeScript/JavaScript (Node.js) or Python and can be applied to stacks written in any language.
 
-{{% notes %}}
-Python support is currently in preview.
-{{% /notes %}}
-
 ## Terminology
 
 * **Policy Pack** - a set of related policies - i.e. “Security”, “Cost Optimization”, “Data Location”. The categorization of policies into a policy pack is left up to the user.
