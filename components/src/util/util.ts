@@ -1,3 +1,4 @@
+import * as uuid from "uuid";
 
 // Extracts a query string variable from the browser's location.
 export function getQueryVariable(paramKey) :string {
@@ -12,4 +13,8 @@ export function getQueryVariable(paramKey) :string {
         }
     })
     return paramVal;
+}
+
+export function getUUID() {
+    return uuid.v4();
 }

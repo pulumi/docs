@@ -225,6 +225,51 @@ A few things to note:
 </p>
 ```
 
+### pulumi-tooltip
+
+This component shows a tooltip bubble over its children on mouseover (or touch). The
+content of the bubble is specified using the `content`
+[slot](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/slot).
+
+The component also exposes `show()` and `hide()` methods for programmatic control over the
+bubble's visibility.
+
+#### Usage
+
+##### HTML
+
+```
+<pulumi-tooltip>
+    <i class="fas fa-question-circle"></i>
+    <span slot="content">
+        You hovered over the icon!
+    </span>
+</pulumi-tooltip>
+```
+
+##### JavaScript
+
+```
+<pulumi-tooltip id="my-tooltip">
+    <i class="fas fa-question-circle"></i>
+    <span slot="content">
+        You called the show() method!
+    </span>
+</pulumi-tooltip>
+
+<script>
+    var tooltip = document.querySelector("#my-tooltip");
+
+    tooltip
+        .show()
+        .then(function() { console.log("The tooltip is visible."); });
+
+    tooltip
+        .hide()
+        .then(function() { console.log("The tooltip is not visible."); });
+</script>
+```
+
 ## Questions?
 
 Blame Christian. Also, he's happy to help.
