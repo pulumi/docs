@@ -59,7 +59,8 @@ update_repo() {
     repo=$1
     echo -e "\033[0;95m--- Updating repo pulumi/${repo} ---\033[0m"
     pushd . >/dev/null 2>&1
-    cd "../${repo}"
+    mkdir -p "../${repo}" && cd "../${repo}"
+    git remote -v || git clone "git@github.com:pulumi/${repo}.git" .
     echo -e "\033[0;93mPulling changes\033[0m"
     git checkout master >/dev/null
     git pull origin master >/dev/null
