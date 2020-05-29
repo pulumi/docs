@@ -65,7 +65,18 @@ module.exports = {
 
             // Whitelist custom parent selectors and their children.
             whitelistPatterns: [/^fa-/, /^hs-/, /^highlight$/, /^pagination$/, /^code-/, /^copy-/, /^carousel/],
-            whitelistPatternsChildren: [/^hs-/, /^highlight$/, /^pagination$/, /^code-/, /^copy-/, /^carousel/],
+            whitelistPatternsChildren: [
+                /^hs-/,
+                /^highlight$/,
+                /^pagination$/,
+                /^code-/,
+                /^copy-/,
+                /^carousel/,
+
+                // Whitelist our web components along with any of their descendent selectors.
+                /^pulumi-chooser/,
+                /^pulumi-tooltip/
+            ],
 
             // We need to extract the Tailwind screen size selectors (e.g. sm, md, lg)
             // so that we do not strip them out. As long as a class name appears in the HTML

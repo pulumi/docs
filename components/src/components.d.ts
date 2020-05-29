@@ -37,6 +37,10 @@ export namespace Components {
   interface PulumiExample {}
   interface PulumiExamples {}
   interface PulumiRoot {}
+  interface PulumiTooltip {
+    'hide': () => Promise<unknown>;
+    'show': () => Promise<unknown>;
+  }
   interface PulumiTopButton {}
 }
 
@@ -73,6 +77,12 @@ declare global {
     new (): HTMLPulumiRootElement;
   };
 
+  interface HTMLPulumiTooltipElement extends Components.PulumiTooltip, HTMLStencilElement {}
+  var HTMLPulumiTooltipElement: {
+    prototype: HTMLPulumiTooltipElement;
+    new (): HTMLPulumiTooltipElement;
+  };
+
   interface HTMLPulumiTopButtonElement extends Components.PulumiTopButton, HTMLStencilElement {}
   var HTMLPulumiTopButtonElement: {
     prototype: HTMLPulumiTopButtonElement;
@@ -84,6 +94,7 @@ declare global {
     'pulumi-example': HTMLPulumiExampleElement;
     'pulumi-examples': HTMLPulumiExamplesElement;
     'pulumi-root': HTMLPulumiRootElement;
+    'pulumi-tooltip': HTMLPulumiTooltipElement;
     'pulumi-top-button': HTMLPulumiTopButtonElement;
   }
 }
@@ -108,6 +119,7 @@ declare namespace LocalJSX {
   interface PulumiRoot {
     'onRendered'?: (event: CustomEvent<any>) => void;
   }
+  interface PulumiTooltip {}
   interface PulumiTopButton {}
 
   interface IntrinsicElements {
@@ -116,6 +128,7 @@ declare namespace LocalJSX {
     'pulumi-example': PulumiExample;
     'pulumi-examples': PulumiExamples;
     'pulumi-root': PulumiRoot;
+    'pulumi-tooltip': PulumiTooltip;
     'pulumi-top-button': PulumiTopButton;
   }
 }
@@ -131,6 +144,7 @@ declare module "@stencil/core" {
       'pulumi-example': LocalJSX.PulumiExample & JSXBase.HTMLAttributes<HTMLPulumiExampleElement>;
       'pulumi-examples': LocalJSX.PulumiExamples & JSXBase.HTMLAttributes<HTMLPulumiExamplesElement>;
       'pulumi-root': LocalJSX.PulumiRoot & JSXBase.HTMLAttributes<HTMLPulumiRootElement>;
+      'pulumi-tooltip': LocalJSX.PulumiTooltip & JSXBase.HTMLAttributes<HTMLPulumiTooltipElement>;
       'pulumi-top-button': LocalJSX.PulumiTopButton & JSXBase.HTMLAttributes<HTMLPulumiTopButtonElement>;
     }
   }
