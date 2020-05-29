@@ -39,7 +39,7 @@ export class Tooltip {
         return new Promise(resolve => {
             this.active = true;
 
-            // Wait 100 to allow for the fade-in transition to complete.
+            // Wait 100ms to allow for the fade-in transition to complete.
             setTimeout(() => resolve(), 100);
         });
     }
@@ -50,7 +50,7 @@ export class Tooltip {
         return new Promise(resolve => {
             this.active = false;
 
-            // Wait 100 to allow for the fade-out transition to complete.
+            // Wait 100ms to allow for the fade-out transition to complete.
             setTimeout(() => resolve(), 100);
         });
     }
@@ -69,7 +69,7 @@ export class Tooltip {
 
     render() {
         return (
-            <Host role="tooltip">
+            <Host>
                 <span class={`tooltip-target ${ this.active ? "active" : "" }`} aria-labelledby={ this.id }>
                     <slot></slot>
                 </span>
