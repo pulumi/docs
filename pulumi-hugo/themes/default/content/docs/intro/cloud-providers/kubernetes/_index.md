@@ -59,7 +59,7 @@ The [`pulumi/kubernetes`](https://github.com/pulumi/pulumi-kubernetes) SDK is av
 - JavaScript/TypeScript: [npm](https://www.npmjs.com/package/@pulumi/kubernetes)
 - Python: [PyPI](https://pypi.org/project/pulumi-kubernetes/)
 - Go:
-  - Import package: `github.com/pulumi/pulumi-kubernetes/sdk/go/kubernetes/providers`
+  - Import package: `github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes`
   - [GitHub](https://github.com/pulumi/pulumi-kubernetes/tree/master/sdk/go/kubernetes)
 - .NET: [`Pulumi.Kubernetes`](https://www.nuget.org/packages/Pulumi.Kubernetes)
 
