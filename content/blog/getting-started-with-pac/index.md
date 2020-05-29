@@ -45,10 +45,10 @@ Next, we’ll create a Policy Pack, by creating a directory and making it the cu
 $ mkdir policypack && cd policypack
 ```
 
-CrossGuard is still in *preview*, and we need to set the environmental variable `PULUMI_EXPERIMENTAL` to use it. We can prepend it before creating the policy.
+Then create the Policy Pack using `pulumi policy new`.
 
 ```bash
-$ PULUMI_EXPERIMENTAL=true pulumi policy new aws-typescript
+$ pulumi policy new aws-typescript
 ```
 
 By default, this creates a policy that checks to see if the ACL sets the bucket to be publically accessible.
@@ -75,7 +75,7 @@ A policy consists of a name; a description that is displayed when the policy is 
 We can test this locally using `pulumi preview`
 
 ```bash
-$ PULUMI_EXPERIMENTAL=true pulumi preview --policy-pack <path-to-policy-pack-directory>
+$ pulumi preview --policy-pack <path-to-policy-pack-directory>
 ```
 
 The preview will fail and return this output:
@@ -126,7 +126,7 @@ In this example, we’ll use [AWSGuard]({{< relref "/docs/guides/crossguard/awsg
 
 ```bash
 $ mkdir awsguard && cd awsguard
-$ PULUMI_EXPERIMENTAL=true pulumi policy new awsguard-typescript
+$ pulumi policy new awsguard-typescript
 ```
 
 The default policy enforcement level is `advisory,` but given the frequency of misconfigured Elasticsearch deployments, we’ll set to `mandatory`.
@@ -138,7 +138,7 @@ new AwsGuard({ all: "mandatory" });
 When we run `pulumi preview` with the AWSGuard PolicyPack, we can see how it triggers violations based on best practices that can prevent data exposure.
 
 ```bash
-$ PULUMI_EXPERIMENTAL=true pulumi preview --policy-pack ../awsguard/
+$ pulumi preview --policy-pack ../awsguard/
 Previewing update (dev):
 
      Type                         Name               Plan       Info
