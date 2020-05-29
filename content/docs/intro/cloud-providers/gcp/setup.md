@@ -1,7 +1,7 @@
 ---
-title: Google Cloud Platfrom (GCP) Setup
+title: Google Cloud Platform (GCP) Setup
 meta_desc: This page provides an overview on how to setup the Google Cloud
-           Platfrom Provider with Pulumi.
+           Platform Provider with Pulumi.
 aliases: ["/docs/reference/clouds/gcp/setup/"]
 ---
 
@@ -10,7 +10,7 @@ aliases: ["/docs/reference/clouds/gcp/setup/"]
 The [Pulumi Google Cloud Platform Provider] needs to be configured with Google credentials
 before it can be used to create resources.
 
-When developing locally, we recommend that you use `gcloud login` to configure your account credentials:
+When developing locally, we recommend that you use `gcloud login` to configure your account credentials. First, install the [Google Cloud SDK](https://cloud.google.com/sdk/install), which includes the `gcloud` command line tool. Then, execute the following:
 
 ```bash
 $ gcloud auth login
