@@ -117,19 +117,20 @@ $(function() {
         return text;
     }
 
+    var tooltipText = "Click to copy";
     var buttonHtml =
-        '<div class="copy-button-container">\n' +
-        '    <button class="copy-button">\n' +
-        '        <i class="far fa-copy copy text-xl" title="Copy code snippet"></i>\n' +
-        '    </button>\n' +
-        '    <span class="copy-button-tooltip">Copied!</span>\n'+
+        '<div class="copy-button-container">' +
+        '    <pulumi-tooltip>' +
+        '        <button class="copy-button"><i class="far fa-copy copy text-xl"></i></button>' +
+        '        <span slot="content">' + tooltipText + '</span>' +
+        '    </pulumi-tooltip>' +
         '</div>';
 
     $(":not(.no-copy) > div.highlight")
         .append(buttonHtml)
         .on("click", "button.copy-button", function() {
             var $b = $(this);
-            var $code = $b.parent().siblings("pre").children("code");
+            var $code = $b.parent().parent().parent().siblings("pre").children("code");
 
             // Get the lang and code.
             var lang = $code.attr("data-lang");
@@ -145,10 +146,19 @@ $(function() {
             $b.blur();
 
             // Show a "Copied!" tooltip for a second.
-            var duration = 1000;
-            var $tooltip = $b.siblings(".copy-button-tooltip").fadeIn();
-            setTimeout(function() {
-                $tooltip.fadeOut();
-            }, duration);
+            var $tooltip = $b.closest("pulumi-tooltip");
+            var $tooltipContent = $tooltip.find("[slot='content']");
+            var tooltipEl = $tooltip.get(0);
+
+            $tooltipContent.text("Copied!");
+            tooltipEl
+                .show()
+                .then(() => {
+                    setTimeout(function() {
+                        tooltipEl
+                            .hide()
+                            .then(() => $tooltipContent.text(tooltipText));
+                    }, 1000);
+                });
         });
 });

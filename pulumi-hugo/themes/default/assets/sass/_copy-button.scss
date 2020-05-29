@@ -1,4 +1,3 @@
-@import "colors";
 @import "mixins";
 
 .copy-button-container {
@@ -6,6 +5,13 @@
 
     .code-mode-dark & {
         @apply bg-gray-900;
+    }
+
+    // Use a slightly narrower tooltip for these.
+    pulumi-tooltip {
+        .tooltip-content {
+            @apply w-24;
+        }
     }
 }
 
@@ -24,21 +30,5 @@
         &:hover {
             @apply text-gray-500;
         }
-    }
-}
-
-.copy-button-tooltip {
-    @apply absolute hidden text-white text-xs text-center bg-gray-900 rounded p-2 z-0 opacity-75 top-0 right-0 mt-10 -mr-3;
-
-    // Arrow on top of the tooltip.
-    &::after {
-        @apply absolute border-solid;
-
-        content: " ";
-        bottom: 100%;
-        left: 50%;
-        margin-left: -5px;
-        border-width: 5px;
-        border-color: transparent transparent map-get($gray, 900) transparent;
     }
 }
