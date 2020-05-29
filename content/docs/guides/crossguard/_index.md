@@ -20,7 +20,7 @@ Policies can be written in TypeScript/JavaScript (Node.js) or Python and can be 
 | ------------------------------------------------------ | ----------------------------------------------------------------------- | ----------------------------------------------------------------- |
 | <img src="/logos/tech/logo-ts.png" class="h-10" />     | [TypeScript]({{< relref "/docs/reference/pkg/nodejs/pulumi/policy" >}}) | Stable                                                            |
 | <img src="/logos/tech/logo-js.png" class="h-10" />     | [JavaScript]({{< relref "/docs/reference/pkg/nodejs/pulumi/policy" >}}) | Stable                                                            |
-| <img src="/logos/tech/logo-python.png" class="h-10" /> | [Python]({{< relref "/docs/reference/pkg/python/pulumi_policy" >}})     | Preview                                                           |
+| <img src="/logos/tech/logo-python.png" class="h-10" /> | [Python]({{< relref "/docs/reference/pkg/python/pulumi_policy" >}})     | Stable                                                             |
 | <img src="/logos/tech/dotnet.png" class="h-10" />      | .NET                                                                    | [Coming Soon](https://github.com/pulumi/pulumi-policy/issues/229) |
 | <img src="/logos/tech/logo-golang.png" class="h-10" /> | Go                                                                      | [Coming Soon](https://github.com/pulumi/pulumi-policy/issues/230) |
 
