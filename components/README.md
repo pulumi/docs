@@ -146,48 +146,6 @@ its own, in which case it'll simply honor whatever's in the global store.
         ...
 ```
 
-### pulumi-tooltip
-
-This component can be used to show an accessible tooltip over an element. You can provide
-it with text or markup using the named `content` [slot](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/slot).
-Markup outside of that slot will be treated as the tooltip's corresponding target.
-
-#### Usage
-
-In markup:
-
-```
-<pulumi-tooltip>
-    <i class="fas fa-question-circle"></i>
-    <span slot="content">
-        You hovered over the icon!
-    </span>
-</pulumi-tooltip>
-```
-
-Programmatically:
-
-```
-<pulumi-tooltip id="my-tooltip">
-    <i class="fas fa-question-circle"></i>
-    <span slot="content">
-        You called the show() method!
-    </span>
-</pulumi-tooltip>
-
-<script>
-    var tooltip = document.querySelector("#my-tooltip");
-
-    tooltip
-        .show()
-        .then(function() { console.log("The tooltip is visible."); });
-
-    tooltip
-        .hide()
-        .then(function() { console.log("The tooltip is not visible."); });
-</script>
-```
-
 #### Shortcodes (and some gotchas)
 
 In Markdown files, you can express these choosers either as HTML alone or with
@@ -265,6 +223,51 @@ A few things to note:
     </pulumi-chooser>
     computer. Nice!
 </p>
+```
+
+### pulumi-tooltip
+
+This component shows a tooltip bubble over its children on mouseover (or touch). The
+content of the bubble is specified using the `content`
+[slot](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/slot).
+
+The component also exposes `show()` and `hide()` methods for programmatic control over the
+bubble's visibility.
+
+#### Usage
+
+##### HTML
+
+```
+<pulumi-tooltip>
+    <i class="fas fa-question-circle"></i>
+    <span slot="content">
+        You hovered over the icon!
+    </span>
+</pulumi-tooltip>
+```
+
+##### JavaScript
+
+```
+<pulumi-tooltip id="my-tooltip">
+    <i class="fas fa-question-circle"></i>
+    <span slot="content">
+        You called the show() method!
+    </span>
+</pulumi-tooltip>
+
+<script>
+    var tooltip = document.querySelector("#my-tooltip");
+
+    tooltip
+        .show()
+        .then(function() { console.log("The tooltip is visible."); });
+
+    tooltip
+        .hide()
+        .then(function() { console.log("The tooltip is not visible."); });
+</script>
 ```
 
 ## Questions?
