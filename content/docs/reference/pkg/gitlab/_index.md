@@ -17,6 +17,7 @@ A Pulumi package for creating and managing GitLab resources.
     <li><a href="branchprotection" title="BranchProtection"><span class="symbol resource"></span>BranchProtection</a></li>
     <li><a href="deploykey" title="DeployKey"><span class="symbol resource"></span>DeployKey</a></li>
     <li><a href="deploykeyenable" title="DeployKeyEnable"><span class="symbol resource"></span>DeployKeyEnable</a></li>
+    <li><a href="deploytoken" title="DeployToken"><span class="symbol resource"></span>DeployToken</a></li>
     <li><a href="group" title="Group"><span class="symbol resource"></span>Group</a></li>
     <li><a href="groupcluster" title="GroupCluster"><span class="symbol resource"></span>GroupCluster</a></li>
     <li><a href="grouplabel" title="GroupLabel"><span class="symbol resource"></span>GroupLabel</a></li>
@@ -45,6 +46,7 @@ A Pulumi package for creating and managing GitLab resources.
 <ul class="api">
     <li><a href="getgroup" title="GetGroup"><span class="symbol function"></span>GetGroup</a></li>
     <li><a href="getproject" title="GetProject"><span class="symbol function"></span>GetProject</a></li>
+    <li><a href="getprojects" title="GetProjects"><span class="symbol function"></span>GetProjects</a></li>
     <li><a href="getuser" title="GetUser"><span class="symbol function"></span>GetUser</a></li>
     <li><a href="getusers" title="GetUsers"><span class="symbol function"></span>GetUsers</a></li>
 </ul>
@@ -58,7 +60,7 @@ A Pulumi package for creating and managing GitLab resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`gitlab` Terraform Provider](https://github.com/terraform-providers/terraform-provider-gitlab).</dd>
 	<dt>Version</dt>
-	<dd>2.2.0</dd>
+	<dd>2.3.0</dd>
 </dl>
 
 
