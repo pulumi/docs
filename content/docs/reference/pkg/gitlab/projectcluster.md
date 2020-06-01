@@ -15,87 +15,9 @@ For further information on clusters, consult the [gitlab
 documentation](https://docs.gitlab.com/ce/user/project/clusters/index.html).
 
 
-
-
 {{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using GitLab = Pulumi.GitLab;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var foo = new GitLab.Project("foo", new GitLab.ProjectArgs
-        {
-        });
-        var bar = new GitLab.ProjectCluster("bar", new GitLab.ProjectClusterArgs
-        {
-            Domain = "example.com",
-            Enabled = true,
-            EnvironmentScope = "*",
-            KubernetesApiUrl = "https://124.124.124",
-            KubernetesAuthorizationType = "rbac",
-            KubernetesCaCert = "some-cert",
-            KubernetesNamespace = "namespace",
-            KubernetesToken = "some-token",
-            Project = foo.Id,
-        });
-    }
-
-}
-```
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_gitlab as gitlab
-
-foo = gitlab.Project("foo")
-bar = gitlab.ProjectCluster("bar",
-    domain="example.com",
-    enabled=True,
-    environment_scope="*",
-    kubernetes_api_url="https://124.124.124",
-    kubernetes_authorization_type="rbac",
-    kubernetes_ca_cert="some-cert",
-    kubernetes_namespace="namespace",
-    kubernetes_token="some-token",
-    project=foo.id)
-```
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gitlab from "@pulumi/gitlab";
-
-const foo = new gitlab.Project("foo", {});
-const bar = new gitlab.ProjectCluster("bar", {
-    domain: "example.com",
-    enabled: true,
-    environmentScope: "*",
-    kubernetesApiUrl: "https://124.124.124",
-    kubernetesAuthorizationType: "rbac",
-    kubernetesCaCert: "some-cert",
-    kubernetesNamespace: "namespace",
-    kubernetesToken: "some-token",
-    project: foo.id,
-});
-```
-{{% /example %}}
-
 {{% /examples %}}
+
 
 
 ## Create a ProjectCluster Resource {#create}
@@ -107,7 +29,7 @@ const bar = new gitlab.ProjectCluster("bar", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/gitlab/#ProjectCluster">ProjectCluster</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>domain=None<span class="p">, </span>enabled=None<span class="p">, </span>environment_scope=None<span class="p">, </span>kubernetes_api_url=None<span class="p">, </span>kubernetes_authorization_type=None<span class="p">, </span>kubernetes_ca_cert=None<span class="p">, </span>kubernetes_namespace=None<span class="p">, </span>kubernetes_token=None<span class="p">, </span>managed=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/gitlab/#ProjectCluster">ProjectCluster</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>domain=None<span class="p">, </span>enabled=None<span class="p">, </span>environment_scope=None<span class="p">, </span>kubernetes_api_url=None<span class="p">, </span>kubernetes_authorization_type=None<span class="p">, </span>kubernetes_ca_cert=None<span class="p">, </span>kubernetes_namespace=None<span class="p">, </span>kubernetes_token=None<span class="p">, </span>managed=None<span class="p">, </span>management_project_id=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -391,6 +313,16 @@ The ProjectCluster resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
+        <span id="managementprojectid_csharp">
+<a href="#managementprojectid_csharp" style="color: inherit; text-decoration: inherit;">Management<wbr>Project<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span> 
@@ -516,6 +448,16 @@ The ProjectCluster resource accepts the following [input]({{< relref "/docs/intr
     </dt>
     <dd>{{% md %}}Determines if cluster is managed by gitlab or not. Defaults to `true`. This attribute cannot be read.
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="managementprojectid_go">
+<a href="#managementprojectid_go" style="color: inherit; text-decoration: inherit;">Management<wbr>Project<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -647,6 +589,16 @@ The ProjectCluster resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-optional"
             title="Optional">
+        <span id="managementprojectid_nodejs">
+<a href="#managementprojectid_nodejs" style="color: inherit; text-decoration: inherit;">management<wbr>Project<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span> 
@@ -772,6 +724,16 @@ The ProjectCluster resource accepts the following [input]({{< relref "/docs/intr
     </dt>
     <dd>{{% md %}}Determines if cluster is managed by gitlab or not. Defaults to `true`. This attribute cannot be read.
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="management_project_id_python">
+<a href="#management_project_id_python" style="color: inherit; text-decoration: inherit;">management_<wbr>project_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1042,7 +1004,7 @@ Get an existing ProjectCluster resource's state with the given name, ID, and opt
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>cluster_type=None<span class="p">, </span>created_at=None<span class="p">, </span>domain=None<span class="p">, </span>enabled=None<span class="p">, </span>environment_scope=None<span class="p">, </span>kubernetes_api_url=None<span class="p">, </span>kubernetes_authorization_type=None<span class="p">, </span>kubernetes_ca_cert=None<span class="p">, </span>kubernetes_namespace=None<span class="p">, </span>kubernetes_token=None<span class="p">, </span>managed=None<span class="p">, </span>name=None<span class="p">, </span>platform_type=None<span class="p">, </span>project=None<span class="p">, </span>provider_type=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>cluster_type=None<span class="p">, </span>created_at=None<span class="p">, </span>domain=None<span class="p">, </span>enabled=None<span class="p">, </span>environment_scope=None<span class="p">, </span>kubernetes_api_url=None<span class="p">, </span>kubernetes_authorization_type=None<span class="p">, </span>kubernetes_ca_cert=None<span class="p">, </span>kubernetes_namespace=None<span class="p">, </span>kubernetes_token=None<span class="p">, </span>managed=None<span class="p">, </span>management_project_id=None<span class="p">, </span>name=None<span class="p">, </span>platform_type=None<span class="p">, </span>project=None<span class="p">, </span>provider_type=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1277,6 +1239,16 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_managementprojectid_csharp">
+<a href="#state_managementprojectid_csharp" style="color: inherit; text-decoration: inherit;">Management<wbr>Project<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span> 
@@ -1442,6 +1414,16 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Determines if cluster is managed by gitlab or not. Defaults to `true`. This attribute cannot be read.
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_managementprojectid_go">
+<a href="#state_managementprojectid_go" style="color: inherit; text-decoration: inherit;">Management<wbr>Project<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1613,6 +1595,16 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_managementprojectid_nodejs">
+<a href="#state_managementprojectid_nodejs" style="color: inherit; text-decoration: inherit;">management<wbr>Project<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span> 
@@ -1778,6 +1770,16 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Determines if cluster is managed by gitlab or not. Defaults to `true`. This attribute cannot be read.
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_management_project_id_python">
+<a href="#state_management_project_id_python" style="color: inherit; text-decoration: inherit;">management_<wbr>project_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
