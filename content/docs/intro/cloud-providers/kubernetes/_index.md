@@ -56,12 +56,14 @@ The following SDKs are available to work with IaaS resources, and managed or sel
 
 The [`pulumi/kubernetes`](https://github.com/pulumi/pulumi-kubernetes) SDK is available to work with, and deploy app workloads to running Kubernetes clusters:
 
+<!-- markdownlint-disable ul-indent -->
 - JavaScript/TypeScript: [npm](https://www.npmjs.com/package/@pulumi/kubernetes)
 - Python: [PyPI](https://pypi.org/project/pulumi-kubernetes/)
 - Go:
   - Import package: `github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes`
   - [GitHub](https://github.com/pulumi/pulumi-kubernetes/tree/master/sdk/go/kubernetes)
 - .NET: [`Pulumi.Kubernetes`](https://www.nuget.org/packages/Pulumi.Kubernetes)
+<!-- markdownlint-enable ul-indent -->
 
 [k8s]: https://kubernetes.io
 
