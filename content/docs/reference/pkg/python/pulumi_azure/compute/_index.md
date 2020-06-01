@@ -250,7 +250,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">ip_configuration</span><span class="o">=</span><span class="p">{</span>
         <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;configuration&quot;</span><span class="p">,</span>
         <span class="s2">&quot;subnet_id&quot;</span><span class="p">:</span> <span class="n">example_subnet</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
-        <span class="s2">&quot;publicIpAddressId&quot;</span><span class="p">:</span> <span class="n">example_public_ip</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;public_ip_address_id&quot;</span><span class="p">:</span> <span class="n">example_public_ip</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
     <span class="p">})</span>
 </pre></div>
 </div>
@@ -270,7 +270,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <p>The <strong>ip_configuration</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the IP configuration.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">publicIpAddressId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Reference to a Public IP Address to associate with this Bastion Host.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public_ip_address_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Reference to a Public IP Address to associate with this Bastion Host.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Reference to a subnet in which this Bastion Host has been created.</p></li>
 </ul>
 <dl class="py attribute">
@@ -285,7 +285,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">ip_configuration</span></code> block as defined below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the IP configuration.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">publicIpAddressId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Reference to a Public IP Address to associate with this Bastion Host.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public_ip_address_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Reference to a Public IP Address to associate with this Bastion Host.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Reference to a subnet in which this Bastion Host has been created.</p></li>
 </ul>
 </dd></dl>
@@ -337,7 +337,7 @@ properties used to qualify the lookup.</p>
 <p>The <strong>ip_configuration</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the IP configuration.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">publicIpAddressId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Reference to a Public IP Address to associate with this Bastion Host.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public_ip_address_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Reference to a Public IP Address to associate with this Bastion Host.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Reference to a subnet in which this Bastion Host has been created.</p></li>
 </ul>
 </dd></dl>
@@ -836,8 +836,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">DiskEncryptionSet</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">identity</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key_vault_key_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.DiskEncryptionSet" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Disk Encryption Set.</p>
 <blockquote>
-<div><p><strong>NOTE</strong>: Disk Encryption Sets are in Public Preview and at this time is only available in <code class="docutils literal notranslate"><span class="pre">Canada</span> <span class="pre">Central</span></code>, <code class="docutils literal notranslate"><span class="pre">North</span> <span class="pre">Europe</span></code> and <code class="docutils literal notranslate"><span class="pre">West</span> <span class="pre">Central</span> <span class="pre">US</span></code> regions - <a class="reference external" href="https://docs.microsoft.com/en-us/azure/virtual-machines/linux/disk-encryption">more information can be found in the preview documentation</a>.</p>
-<p><strong>NOTE:</strong> At this time the Key Vault used to store the Active Key for this Disk Encryption Set must have both Soft Delete &amp; Purge Protection enabled - which are not yet supported by this provider.</p>
+<div><p><strong>NOTE:</strong> At this time the Key Vault used to store the Active Key for this Disk Encryption Set must have both Soft Delete &amp; Purge Protection enabled - which are not yet supported by this provider.</p>
 </div></blockquote>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
@@ -3735,7 +3734,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
     <span class="n">frontend_ip_configuration</span><span class="o">=</span><span class="p">[{</span>
         <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;PublicIPAddress&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;publicIpAddressId&quot;</span><span class="p">:</span> <span class="n">example_public_ip</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;public_ip_address_id&quot;</span><span class="p">:</span> <span class="n">example_public_ip</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
     <span class="p">}])</span>
 <span class="n">bpepool</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">lb</span><span class="o">.</span><span class="n">BackendAddressPool</span><span class="p">(</span><span class="s2">&quot;bpepool&quot;</span><span class="p">,</span>
     <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
@@ -4971,7 +4970,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Azure Region in which this Image Version should exist.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">regionalReplicaCount</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of replicas of the Image Version to be created per region.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">storage_account_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The storage account type for the image version, which defaults to <code class="docutils literal notranslate"><span class="pre">Standard_LRS</span></code>. You can store all of your image version replicas in Zone Redundant Storage by specifying <code class="docutils literal notranslate"><span class="pre">Standard_ZRS</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storage_account_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The storage account type for the image version. Possible values are <code class="docutils literal notranslate"><span class="pre">Standard_LRS</span></code> and <code class="docutils literal notranslate"><span class="pre">Standard_ZRS</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">Standard_LRS</span></code>. You can store all of your image version replicas in Zone Redundant Storage by specifying <code class="docutils literal notranslate"><span class="pre">Standard_ZRS</span></code>.</p></li>
 </ul>
 <dl class="py attribute">
 <dt id="pulumi_azure.compute.SharedImageVersion.exclude_from_latest">
@@ -5028,7 +5027,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Azure Region in which this Image Version should exist.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">regionalReplicaCount</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The number of replicas of the Image Version to be created per region.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">storage_account_type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The storage account type for the image version, which defaults to <code class="docutils literal notranslate"><span class="pre">Standard_LRS</span></code>. You can store all of your image version replicas in Zone Redundant Storage by specifying <code class="docutils literal notranslate"><span class="pre">Standard_ZRS</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storage_account_type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The storage account type for the image version. Possible values are <code class="docutils literal notranslate"><span class="pre">Standard_LRS</span></code> and <code class="docutils literal notranslate"><span class="pre">Standard_ZRS</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">Standard_LRS</span></code>. You can store all of your image version replicas in Zone Redundant Storage by specifying <code class="docutils literal notranslate"><span class="pre">Standard_ZRS</span></code>.</p></li>
 </ul>
 </dd></dl>
 
@@ -5059,7 +5058,7 @@ properties used to qualify the lookup.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Azure Region in which this Image Version should exist.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">regionalReplicaCount</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of replicas of the Image Version to be created per region.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">storage_account_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The storage account type for the image version, which defaults to <code class="docutils literal notranslate"><span class="pre">Standard_LRS</span></code>. You can store all of your image version replicas in Zone Redundant Storage by specifying <code class="docutils literal notranslate"><span class="pre">Standard_ZRS</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storage_account_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The storage account type for the image version. Possible values are <code class="docutils literal notranslate"><span class="pre">Standard_LRS</span></code> and <code class="docutils literal notranslate"><span class="pre">Standard_ZRS</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">Standard_LRS</span></code>. You can store all of your image version replicas in Zone Redundant Storage by specifying <code class="docutils literal notranslate"><span class="pre">Standard_ZRS</span></code>.</p></li>
 </ul>
 </dd></dl>
 

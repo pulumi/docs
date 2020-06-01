@@ -99,7 +99,7 @@ const exampleActionHttp = new azure.logicapps.ActionHttp("exampleActionHttp", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/logicapps/#ActionHttp">ActionHttp</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>body=None<span class="p">, </span>headers=None<span class="p">, </span>logic_app_id=None<span class="p">, </span>method=None<span class="p">, </span>name=None<span class="p">, </span>uri=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/logicapps/#ActionHttp">ActionHttp</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>body=None<span class="p">, </span>headers=None<span class="p">, </span>logic_app_id=None<span class="p">, </span>method=None<span class="p">, </span>name=None<span class="p">, </span>run_afters=None<span class="p">, </span>uri=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -337,6 +337,17 @@ The ActionHttp resource accepts the following [input]({{< relref "/docs/intro/co
     <dd>{{% md %}}Specifies the name of the HTTP Action to be created within the Logic App Workflow. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="runafters_csharp">
+<a href="#runafters_csharp" style="color: inherit; text-decoration: inherit;">Run<wbr>Afters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#actionhttprunafter">List&lt;Action<wbr>Http<wbr>Run<wbr>After<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the place of the HTTP Action in the Logic App Workflow. If not specified, the HTTP Action is right after the Trigger. A `run_after` block is as defined below.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -408,6 +419,17 @@ The ActionHttp resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the name of the HTTP Action to be created within the Logic App Workflow. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="runafters_go">
+<a href="#runafters_go" style="color: inherit; text-decoration: inherit;">Run<wbr>Afters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#actionhttprunafter">[]Action<wbr>Http<wbr>Run<wbr>After</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the place of the HTTP Action in the Logic App Workflow. If not specified, the HTTP Action is right after the Trigger. A `run_after` block is as defined below.
 {{% /md %}}</dd>
 
 </dl>
@@ -483,6 +505,17 @@ The ActionHttp resource accepts the following [input]({{< relref "/docs/intro/co
     <dd>{{% md %}}Specifies the name of the HTTP Action to be created within the Logic App Workflow. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="runafters_nodejs">
+<a href="#runafters_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>Afters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#actionhttprunafter">Action<wbr>Http<wbr>Run<wbr>After[]</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the place of the HTTP Action in the Logic App Workflow. If not specified, the HTTP Action is right after the Trigger. A `run_after` block is as defined below.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -554,6 +587,17 @@ The ActionHttp resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Specifies the name of the HTTP Action to be created within the Logic App Workflow. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="run_afters_python">
+<a href="#run_afters_python" style="color: inherit; text-decoration: inherit;">run_<wbr>afters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#actionhttprunafter">List[Action<wbr>Http<wbr>Run<wbr>After]</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the place of the HTTP Action in the Logic App Workflow. If not specified, the HTTP Action is right after the Trigger. A `run_after` block is as defined below.
 {{% /md %}}</dd>
 
 </dl>
@@ -654,7 +698,7 @@ Get an existing ActionHttp resource's state with the given name, ID, and optiona
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>body=None<span class="p">, </span>headers=None<span class="p">, </span>logic_app_id=None<span class="p">, </span>method=None<span class="p">, </span>name=None<span class="p">, </span>uri=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>body=None<span class="p">, </span>headers=None<span class="p">, </span>logic_app_id=None<span class="p">, </span>method=None<span class="p">, </span>name=None<span class="p">, </span>run_afters=None<span class="p">, </span>uri=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -825,6 +869,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_runafters_csharp">
+<a href="#state_runafters_csharp" style="color: inherit; text-decoration: inherit;">Run<wbr>Afters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#actionhttprunafter">List&lt;Action<wbr>Http<wbr>Run<wbr>After<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the place of the HTTP Action in the Logic App Workflow. If not specified, the HTTP Action is right after the Trigger. A `run_after` block is as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_uri_csharp">
 <a href="#state_uri_csharp" style="color: inherit; text-decoration: inherit;">Uri</a>
 </span> 
@@ -894,6 +949,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the name of the HTTP Action to be created within the Logic App Workflow. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_runafters_go">
+<a href="#state_runafters_go" style="color: inherit; text-decoration: inherit;">Run<wbr>Afters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#actionhttprunafter">[]Action<wbr>Http<wbr>Run<wbr>After</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the place of the HTTP Action in the Logic App Workflow. If not specified, the HTTP Action is right after the Trigger. A `run_after` block is as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -971,6 +1037,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_runafters_nodejs">
+<a href="#state_runafters_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>Afters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#actionhttprunafter">Action<wbr>Http<wbr>Run<wbr>After[]</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the place of the HTTP Action in the Logic App Workflow. If not specified, the HTTP Action is right after the Trigger. A `run_after` block is as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_uri_nodejs">
 <a href="#state_uri_nodejs" style="color: inherit; text-decoration: inherit;">uri</a>
 </span> 
@@ -1044,6 +1121,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_run_afters_python">
+<a href="#state_run_afters_python" style="color: inherit; text-decoration: inherit;">run_<wbr>afters</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#actionhttprunafter">List[Action<wbr>Http<wbr>Run<wbr>After]</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the place of the HTTP Action in the Logic App Workflow. If not specified, the HTTP Action is right after the Trigger. A `run_after` block is as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_uri_python">
 <a href="#state_uri_python" style="color: inherit; text-decoration: inherit;">uri</a>
 </span> 
@@ -1057,6 +1145,146 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 
+
+
+
+
+
+
+
+
+## Supporting Types
+
+
+<h4 id="actionhttprunafter">Action<wbr>Http<wbr>Run<wbr>After</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ActionHttpRunAfter">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ActionHttpRunAfter">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/logicapps?tab=doc#ActionHttpRunAfterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/logicapps?tab=doc#ActionHttpRunAfterOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.LogicApps.Inputs.ActionHttpRunAfterArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.LogicApps.Outputs.ActionHttpRunAfter.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="actionname_csharp">
+<a href="#actionname_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the name of the precedent HTTP Action.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="actionresult_csharp">
+<a href="#actionresult_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Result</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the expected result of the precedent HTTP Action, only after which the current HTTP Action will be triggered.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="actionname_go">
+<a href="#actionname_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the name of the precedent HTTP Action.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="actionresult_go">
+<a href="#actionresult_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Result</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the expected result of the precedent HTTP Action, only after which the current HTTP Action will be triggered.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="actionname_nodejs">
+<a href="#actionname_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the name of the precedent HTTP Action.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="actionresult_nodejs">
+<a href="#actionresult_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Result</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the expected result of the precedent HTTP Action, only after which the current HTTP Action will be triggered.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="actionname_python">
+<a href="#actionname_python" style="color: inherit; text-decoration: inherit;">action<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the name of the precedent HTTP Action.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="actionresult_python">
+<a href="#actionresult_python" style="color: inherit; text-decoration: inherit;">action<wbr>Result</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the expected result of the precedent HTTP Action, only after which the current HTTP Action will be triggered.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
 

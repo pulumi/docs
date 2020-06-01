@@ -96,7 +96,7 @@ const exampleTopic = new azure.eventgrid.Topic("exampleTopic", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/eventgrid/#Topic">Topic</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/eventgrid/#Topic">Topic</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>input_mapping_default_values=None<span class="p">, </span>input_mapping_fields=None<span class="p">, </span>input_schema=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -281,6 +281,39 @@ The Topic resource accepts the following [input]({{< relref "/docs/intro/concept
 
     <dt class="property-optional"
             title="Optional">
+        <span id="inputmappingdefaultvalues_csharp">
+<a href="#inputmappingdefaultvalues_csharp" style="color: inherit; text-decoration: inherit;">Input<wbr>Mapping<wbr>Default<wbr>Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicinputmappingdefaultvalues">Topic<wbr>Input<wbr>Mapping<wbr>Default<wbr>Values<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `input_mapping_default_values` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="inputmappingfields_csharp">
+<a href="#inputmappingfields_csharp" style="color: inherit; text-decoration: inherit;">Input<wbr>Mapping<wbr>Fields</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicinputmappingfields">Topic<wbr>Input<wbr>Mapping<wbr>Fields<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `input_mapping_fields` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="inputschema_csharp">
+<a href="#inputschema_csharp" style="color: inherit; text-decoration: inherit;">Input<wbr>Schema</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the schema in which incoming events will be published to this domain. Allowed values are `CloudEventSchemaV1_0`, `CustomEventSchema`, or `EventGridSchema`. Defaults to `EventGridSchema`. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
 </span> 
@@ -310,6 +343,7 @@ The Topic resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
+---
 {{% /md %}}</dd>
 
 </dl>
@@ -328,6 +362,39 @@ The Topic resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which the EventGrid Topic exists. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="inputmappingdefaultvalues_go">
+<a href="#inputmappingdefaultvalues_go" style="color: inherit; text-decoration: inherit;">Input<wbr>Mapping<wbr>Default<wbr>Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicinputmappingdefaultvalues">Topic<wbr>Input<wbr>Mapping<wbr>Default<wbr>Values</a></span>
+    </dt>
+    <dd>{{% md %}}A `input_mapping_default_values` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="inputmappingfields_go">
+<a href="#inputmappingfields_go" style="color: inherit; text-decoration: inherit;">Input<wbr>Mapping<wbr>Fields</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicinputmappingfields">Topic<wbr>Input<wbr>Mapping<wbr>Fields</a></span>
+    </dt>
+    <dd>{{% md %}}A `input_mapping_fields` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="inputschema_go">
+<a href="#inputschema_go" style="color: inherit; text-decoration: inherit;">Input<wbr>Schema</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the schema in which incoming events will be published to this domain. Allowed values are `CloudEventSchemaV1_0`, `CustomEventSchema`, or `EventGridSchema`. Defaults to `EventGridSchema`. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -361,6 +428,7 @@ The Topic resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
+---
 {{% /md %}}</dd>
 
 </dl>
@@ -379,6 +447,39 @@ The Topic resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which the EventGrid Topic exists. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="inputmappingdefaultvalues_nodejs">
+<a href="#inputmappingdefaultvalues_nodejs" style="color: inherit; text-decoration: inherit;">input<wbr>Mapping<wbr>Default<wbr>Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicinputmappingdefaultvalues">Topic<wbr>Input<wbr>Mapping<wbr>Default<wbr>Values</a></span>
+    </dt>
+    <dd>{{% md %}}A `input_mapping_default_values` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="inputmappingfields_nodejs">
+<a href="#inputmappingfields_nodejs" style="color: inherit; text-decoration: inherit;">input<wbr>Mapping<wbr>Fields</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicinputmappingfields">Topic<wbr>Input<wbr>Mapping<wbr>Fields</a></span>
+    </dt>
+    <dd>{{% md %}}A `input_mapping_fields` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="inputschema_nodejs">
+<a href="#inputschema_nodejs" style="color: inherit; text-decoration: inherit;">input<wbr>Schema</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the schema in which incoming events will be published to this domain. Allowed values are `CloudEventSchemaV1_0`, `CustomEventSchema`, or `EventGridSchema`. Defaults to `EventGridSchema`. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -412,6 +513,7 @@ The Topic resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
+---
 {{% /md %}}</dd>
 
 </dl>
@@ -430,6 +532,39 @@ The Topic resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which the EventGrid Topic exists. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="input_mapping_default_values_python">
+<a href="#input_mapping_default_values_python" style="color: inherit; text-decoration: inherit;">input_<wbr>mapping_<wbr>default_<wbr>values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicinputmappingdefaultvalues">Dict[Topic<wbr>Input<wbr>Mapping<wbr>Default<wbr>Values]</a></span>
+    </dt>
+    <dd>{{% md %}}A `input_mapping_default_values` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="input_mapping_fields_python">
+<a href="#input_mapping_fields_python" style="color: inherit; text-decoration: inherit;">input_<wbr>mapping_<wbr>fields</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicinputmappingfields">Dict[Topic<wbr>Input<wbr>Mapping<wbr>Fields]</a></span>
+    </dt>
+    <dd>{{% md %}}A `input_mapping_fields` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="input_schema_python">
+<a href="#input_schema_python" style="color: inherit; text-decoration: inherit;">input_<wbr>schema</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the schema in which incoming events will be published to this domain. Allowed values are `CloudEventSchemaV1_0`, `CustomEventSchema`, or `EventGridSchema`. Defaults to `EventGridSchema`. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -463,6 +598,7 @@ The Topic resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
+---
 {{% /md %}}</dd>
 
 </dl>
@@ -695,7 +831,7 @@ Get an existing Topic resource's state with the given name, ID, and optional ext
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>endpoint=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>primary_access_key=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>secondary_access_key=None<span class="p">, </span>tags=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>endpoint=None<span class="p">, </span>input_mapping_default_values=None<span class="p">, </span>input_mapping_fields=None<span class="p">, </span>input_schema=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>primary_access_key=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>secondary_access_key=None<span class="p">, </span>tags=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -822,6 +958,39 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_inputmappingdefaultvalues_csharp">
+<a href="#state_inputmappingdefaultvalues_csharp" style="color: inherit; text-decoration: inherit;">Input<wbr>Mapping<wbr>Default<wbr>Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicinputmappingdefaultvalues">Topic<wbr>Input<wbr>Mapping<wbr>Default<wbr>Values<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `input_mapping_default_values` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_inputmappingfields_csharp">
+<a href="#state_inputmappingfields_csharp" style="color: inherit; text-decoration: inherit;">Input<wbr>Mapping<wbr>Fields</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicinputmappingfields">Topic<wbr>Input<wbr>Mapping<wbr>Fields<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `input_mapping_fields` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_inputschema_csharp">
+<a href="#state_inputschema_csharp" style="color: inherit; text-decoration: inherit;">Input<wbr>Schema</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the schema in which incoming events will be published to this domain. Allowed values are `CloudEventSchemaV1_0`, `CustomEventSchema`, or `EventGridSchema`. Defaults to `EventGridSchema`. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_location_csharp">
 <a href="#state_location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
 </span> 
@@ -884,6 +1053,7 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
+---
 {{% /md %}}</dd>
 
 </dl>
@@ -902,6 +1072,39 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Endpoint associated with the EventGrid Topic.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_inputmappingdefaultvalues_go">
+<a href="#state_inputmappingdefaultvalues_go" style="color: inherit; text-decoration: inherit;">Input<wbr>Mapping<wbr>Default<wbr>Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicinputmappingdefaultvalues">Topic<wbr>Input<wbr>Mapping<wbr>Default<wbr>Values</a></span>
+    </dt>
+    <dd>{{% md %}}A `input_mapping_default_values` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_inputmappingfields_go">
+<a href="#state_inputmappingfields_go" style="color: inherit; text-decoration: inherit;">Input<wbr>Mapping<wbr>Fields</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicinputmappingfields">Topic<wbr>Input<wbr>Mapping<wbr>Fields</a></span>
+    </dt>
+    <dd>{{% md %}}A `input_mapping_fields` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_inputschema_go">
+<a href="#state_inputschema_go" style="color: inherit; text-decoration: inherit;">Input<wbr>Schema</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the schema in which incoming events will be published to this domain. Allowed values are `CloudEventSchemaV1_0`, `CustomEventSchema`, or `EventGridSchema`. Defaults to `EventGridSchema`. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -968,6 +1171,7 @@ The following state arguments are supported:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
+---
 {{% /md %}}</dd>
 
 </dl>
@@ -986,6 +1190,39 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Endpoint associated with the EventGrid Topic.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_inputmappingdefaultvalues_nodejs">
+<a href="#state_inputmappingdefaultvalues_nodejs" style="color: inherit; text-decoration: inherit;">input<wbr>Mapping<wbr>Default<wbr>Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicinputmappingdefaultvalues">Topic<wbr>Input<wbr>Mapping<wbr>Default<wbr>Values</a></span>
+    </dt>
+    <dd>{{% md %}}A `input_mapping_default_values` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_inputmappingfields_nodejs">
+<a href="#state_inputmappingfields_nodejs" style="color: inherit; text-decoration: inherit;">input<wbr>Mapping<wbr>Fields</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicinputmappingfields">Topic<wbr>Input<wbr>Mapping<wbr>Fields</a></span>
+    </dt>
+    <dd>{{% md %}}A `input_mapping_fields` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_inputschema_nodejs">
+<a href="#state_inputschema_nodejs" style="color: inherit; text-decoration: inherit;">input<wbr>Schema</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the schema in which incoming events will be published to this domain. Allowed values are `CloudEventSchemaV1_0`, `CustomEventSchema`, or `EventGridSchema`. Defaults to `EventGridSchema`. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1052,6 +1289,7 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
+---
 {{% /md %}}</dd>
 
 </dl>
@@ -1070,6 +1308,39 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Endpoint associated with the EventGrid Topic.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_input_mapping_default_values_python">
+<a href="#state_input_mapping_default_values_python" style="color: inherit; text-decoration: inherit;">input_<wbr>mapping_<wbr>default_<wbr>values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicinputmappingdefaultvalues">Dict[Topic<wbr>Input<wbr>Mapping<wbr>Default<wbr>Values]</a></span>
+    </dt>
+    <dd>{{% md %}}A `input_mapping_default_values` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_input_mapping_fields_python">
+<a href="#state_input_mapping_fields_python" style="color: inherit; text-decoration: inherit;">input_<wbr>mapping_<wbr>fields</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#topicinputmappingfields">Dict[Topic<wbr>Input<wbr>Mapping<wbr>Fields]</a></span>
+    </dt>
+    <dd>{{% md %}}A `input_mapping_fields` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_input_schema_python">
+<a href="#state_input_schema_python" style="color: inherit; text-decoration: inherit;">input_<wbr>schema</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the schema in which incoming events will be published to this domain. Allowed values are `CloudEventSchemaV1_0`, `CustomEventSchema`, or `EventGridSchema`. Defaults to `EventGridSchema`. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1136,12 +1407,507 @@ The following state arguments are supported:
         <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
+---
 {{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
 
 
+
+
+
+
+
+
+
+
+## Supporting Types
+
+
+<h4 id="topicinputmappingdefaultvalues">Topic<wbr>Input<wbr>Mapping<wbr>Default<wbr>Values</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#TopicInputMappingDefaultValues">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#TopicInputMappingDefaultValues">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/eventgrid?tab=doc#TopicInputMappingDefaultValuesArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/eventgrid?tab=doc#TopicInputMappingDefaultValuesOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.EventGrid.Inputs.TopicInputMappingDefaultValuesArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.EventGrid.Outputs.TopicInputMappingDefaultValues.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dataversion_csharp">
+<a href="#dataversion_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the default data version of the EventGrid Event to associate with the domain. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="eventtype_csharp">
+<a href="#eventtype_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the default event type of the EventGrid Event to associate with the domain. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="subject_csharp">
+<a href="#subject_csharp" style="color: inherit; text-decoration: inherit;">Subject</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the default subject of the EventGrid Event to associate with the domain. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dataversion_go">
+<a href="#dataversion_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the default data version of the EventGrid Event to associate with the domain. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="eventtype_go">
+<a href="#eventtype_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the default event type of the EventGrid Event to associate with the domain. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="subject_go">
+<a href="#subject_go" style="color: inherit; text-decoration: inherit;">Subject</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the default subject of the EventGrid Event to associate with the domain. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dataversion_nodejs">
+<a href="#dataversion_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the default data version of the EventGrid Event to associate with the domain. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="eventtype_nodejs">
+<a href="#eventtype_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the default event type of the EventGrid Event to associate with the domain. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="subject_nodejs">
+<a href="#subject_nodejs" style="color: inherit; text-decoration: inherit;">subject</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the default subject of the EventGrid Event to associate with the domain. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dataversion_python">
+<a href="#dataversion_python" style="color: inherit; text-decoration: inherit;">data<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the default data version of the EventGrid Event to associate with the domain. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="eventtype_python">
+<a href="#eventtype_python" style="color: inherit; text-decoration: inherit;">event<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the default event type of the EventGrid Event to associate with the domain. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="subject_python">
+<a href="#subject_python" style="color: inherit; text-decoration: inherit;">subject</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the default subject of the EventGrid Event to associate with the domain. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="topicinputmappingfields">Topic<wbr>Input<wbr>Mapping<wbr>Fields</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#TopicInputMappingFields">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#TopicInputMappingFields">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/eventgrid?tab=doc#TopicInputMappingFieldsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/eventgrid?tab=doc#TopicInputMappingFieldsOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.EventGrid.Inputs.TopicInputMappingFieldsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.EventGrid.Outputs.TopicInputMappingFields.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dataversion_csharp">
+<a href="#dataversion_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the data version of the EventGrid Event to associate with the domain. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="eventtime_csharp">
+<a href="#eventtime_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the event time of the EventGrid Event to associate with the domain. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="eventtype_csharp">
+<a href="#eventtype_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the event type of the EventGrid Event to associate with the domain. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the id of the EventGrid Event to associate with the domain. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="subject_csharp">
+<a href="#subject_csharp" style="color: inherit; text-decoration: inherit;">Subject</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the subject of the EventGrid Event to associate with the domain. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="topic_csharp">
+<a href="#topic_csharp" style="color: inherit; text-decoration: inherit;">Topic</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the topic of the EventGrid Event to associate with the domain. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dataversion_go">
+<a href="#dataversion_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the data version of the EventGrid Event to associate with the domain. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="eventtime_go">
+<a href="#eventtime_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the event time of the EventGrid Event to associate with the domain. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="eventtype_go">
+<a href="#eventtype_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the event type of the EventGrid Event to associate with the domain. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the id of the EventGrid Event to associate with the domain. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="subject_go">
+<a href="#subject_go" style="color: inherit; text-decoration: inherit;">Subject</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the subject of the EventGrid Event to associate with the domain. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="topic_go">
+<a href="#topic_go" style="color: inherit; text-decoration: inherit;">Topic</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the topic of the EventGrid Event to associate with the domain. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dataversion_nodejs">
+<a href="#dataversion_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the data version of the EventGrid Event to associate with the domain. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="eventtime_nodejs">
+<a href="#eventtime_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the event time of the EventGrid Event to associate with the domain. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="eventtype_nodejs">
+<a href="#eventtype_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the event type of the EventGrid Event to associate with the domain. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the id of the EventGrid Event to associate with the domain. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="subject_nodejs">
+<a href="#subject_nodejs" style="color: inherit; text-decoration: inherit;">subject</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the subject of the EventGrid Event to associate with the domain. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="topic_nodejs">
+<a href="#topic_nodejs" style="color: inherit; text-decoration: inherit;">topic</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the topic of the EventGrid Event to associate with the domain. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dataversion_python">
+<a href="#dataversion_python" style="color: inherit; text-decoration: inherit;">data<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the data version of the EventGrid Event to associate with the domain. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="eventtime_python">
+<a href="#eventtime_python" style="color: inherit; text-decoration: inherit;">event<wbr>Time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the event time of the EventGrid Event to associate with the domain. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="eventtype_python">
+<a href="#eventtype_python" style="color: inherit; text-decoration: inherit;">event<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the event type of the EventGrid Event to associate with the domain. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the id of the EventGrid Event to associate with the domain. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="subject_python">
+<a href="#subject_python" style="color: inherit; text-decoration: inherit;">subject</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the subject of the EventGrid Event to associate with the domain. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="topic_python">
+<a href="#topic_python" style="color: inherit; text-decoration: inherit;">topic</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the topic of the EventGrid Event to associate with the domain. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
 

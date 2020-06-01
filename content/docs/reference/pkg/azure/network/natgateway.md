@@ -369,8 +369,8 @@ The NatGateway resource accepts the following [input]({{< relref "/docs/intro/co
     <dd>{{% md %}}Specifies the name of the NAT Gateway. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="publicipaddressids_csharp">
 <a href="#publicipaddressids_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Ip<wbr>Address<wbr>Ids</a>
 </span> 
@@ -378,7 +378,7 @@ The NatGateway resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of Public IP Address ID's which should be associated with the NAT Gateway resource.
-{{% /md %}}</dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Inline Public IP Address ID Deprecations have been deprecated in favour of the `azurerm_nat_gateway_public_ip_association` resource. This field will be removed in the next major version of the Azure Provider.{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -475,8 +475,8 @@ The NatGateway resource accepts the following [input]({{< relref "/docs/intro/co
     <dd>{{% md %}}Specifies the name of the NAT Gateway. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="publicipaddressids_go">
 <a href="#publicipaddressids_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Ip<wbr>Address<wbr>Ids</a>
 </span> 
@@ -484,7 +484,7 @@ The NatGateway resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}A list of Public IP Address ID's which should be associated with the NAT Gateway resource.
-{{% /md %}}</dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Inline Public IP Address ID Deprecations have been deprecated in favour of the `azurerm_nat_gateway_public_ip_association` resource. This field will be removed in the next major version of the Azure Provider.{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -581,8 +581,8 @@ The NatGateway resource accepts the following [input]({{< relref "/docs/intro/co
     <dd>{{% md %}}Specifies the name of the NAT Gateway. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="publicipaddressids_nodejs">
 <a href="#publicipaddressids_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Ip<wbr>Address<wbr>Ids</a>
 </span> 
@@ -590,7 +590,7 @@ The NatGateway resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}A list of Public IP Address ID's which should be associated with the NAT Gateway resource.
-{{% /md %}}</dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Inline Public IP Address ID Deprecations have been deprecated in favour of the `azurerm_nat_gateway_public_ip_association` resource. This field will be removed in the next major version of the Azure Provider.{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -687,8 +687,8 @@ The NatGateway resource accepts the following [input]({{< relref "/docs/intro/co
     <dd>{{% md %}}Specifies the name of the NAT Gateway. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="public_ip_address_ids_python">
 <a href="#public_ip_address_ids_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>address_<wbr>ids</a>
 </span> 
@@ -696,7 +696,7 @@ The NatGateway resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of Public IP Address ID's which should be associated with the NAT Gateway resource.
-{{% /md %}}</dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Inline Public IP Address ID Deprecations have been deprecated in favour of the `azurerm_nat_gateway_public_ip_association` resource. This field will be removed in the next major version of the Azure Provider.{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1031,8 +1031,8 @@ The following state arguments are supported:
     <dd>{{% md %}}Specifies the name of the NAT Gateway. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_publicipaddressids_csharp">
 <a href="#state_publicipaddressids_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Ip<wbr>Address<wbr>Ids</a>
 </span> 
@@ -1040,7 +1040,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of Public IP Address ID's which should be associated with the NAT Gateway resource.
-{{% /md %}}</dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Inline Public IP Address ID Deprecations have been deprecated in favour of the `azurerm_nat_gateway_public_ip_association` resource. This field will be removed in the next major version of the Azure Provider.{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1148,8 +1148,8 @@ The following state arguments are supported:
     <dd>{{% md %}}Specifies the name of the NAT Gateway. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_publicipaddressids_go">
 <a href="#state_publicipaddressids_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Ip<wbr>Address<wbr>Ids</a>
 </span> 
@@ -1157,7 +1157,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}A list of Public IP Address ID's which should be associated with the NAT Gateway resource.
-{{% /md %}}</dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Inline Public IP Address ID Deprecations have been deprecated in favour of the `azurerm_nat_gateway_public_ip_association` resource. This field will be removed in the next major version of the Azure Provider.{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1265,8 +1265,8 @@ The following state arguments are supported:
     <dd>{{% md %}}Specifies the name of the NAT Gateway. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_publicipaddressids_nodejs">
 <a href="#state_publicipaddressids_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Ip<wbr>Address<wbr>Ids</a>
 </span> 
@@ -1274,7 +1274,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}A list of Public IP Address ID's which should be associated with the NAT Gateway resource.
-{{% /md %}}</dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Inline Public IP Address ID Deprecations have been deprecated in favour of the `azurerm_nat_gateway_public_ip_association` resource. This field will be removed in the next major version of the Azure Provider.{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1382,8 +1382,8 @@ The following state arguments are supported:
     <dd>{{% md %}}Specifies the name of the NAT Gateway. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_public_ip_address_ids_python">
 <a href="#state_public_ip_address_ids_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>address_<wbr>ids</a>
 </span> 
@@ -1391,7 +1391,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of Public IP Address ID's which should be associated with the NAT Gateway resource.
-{{% /md %}}</dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Inline Public IP Address ID Deprecations have been deprecated in favour of the `azurerm_nat_gateway_public_ip_association` resource. This field will be removed in the next major version of the Azure Provider.{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">

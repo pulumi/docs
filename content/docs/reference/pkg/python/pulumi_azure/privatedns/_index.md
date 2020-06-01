@@ -469,7 +469,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
     <span class="n">frontend_ip_configuration</span><span class="o">=</span><span class="p">[{</span>
         <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="n">example_public_ip</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
-        <span class="s2">&quot;publicIpAddressId&quot;</span><span class="p">:</span> <span class="n">example_public_ip</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;public_ip_address_id&quot;</span><span class="p">:</span> <span class="n">example_public_ip</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
     <span class="p">}])</span>
 <span class="n">example_link_service</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">privatedns</span><span class="o">.</span><span class="n">LinkService</span><span class="p">(</span><span class="s2">&quot;exampleLinkService&quot;</span><span class="p">,</span>
     <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
