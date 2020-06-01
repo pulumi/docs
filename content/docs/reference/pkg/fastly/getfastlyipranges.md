@@ -38,6 +38,7 @@ class MyStack : Stack
                 {
                     CidrBlocks = fastly.Apply(fastly => fastly.CidrBlocks),
                     FromPort = "443",
+                    Ipv6CidrBlocks = fastly.Apply(fastly => fastly.Ipv6CidrBlocks),
                     Protocol = "tcp",
                     ToPort = "443",
                 },
@@ -63,6 +64,7 @@ fastly = fastly.get_fastly_ip_ranges()
 from_fastly = aws.ec2.SecurityGroup("fromFastly", ingress=[{
     "cidr_blocks": fastly.cidr_blocks,
     "from_port": "443",
+    "ipv6_cidr_blocks": fastly.ipv6_cidr_blocks,
     "protocol": "tcp",
     "to_port": "443",
 }])
@@ -80,6 +82,7 @@ const fromFastly = new aws.ec2.SecurityGroup("from_fastly", {
     ingress: [{
         cidrBlocks: fastlyFastlyIpRanges.cidrBlocks,
         fromPort: 443,
+        ipv6CidrBlocks: fastlyFastlyIpRanges.ipv6CidrBlocks,
         protocol: "tcp",
         toPort: 443,
     }],
@@ -138,7 +141,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The lexically ordered list of CIDR blocks.
+    <dd>{{% md %}}The lexically ordered list of ipv4 CIDR blocks.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -150,6 +153,17 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="ipv6cidrblocks_csharp">
+<a href="#ipv6cidrblocks_csharp" style="color: inherit; text-decoration: inherit;">Ipv6Cidr<wbr>Blocks</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The lexically ordered list of ipv6 CIDR blocks.
 {{% /md %}}</dd>
 
 </dl>
@@ -167,7 +181,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}The lexically ordered list of CIDR blocks.
+    <dd>{{% md %}}The lexically ordered list of ipv4 CIDR blocks.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -179,6 +193,17 @@ The following output properties are available:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="ipv6cidrblocks_go">
+<a href="#ipv6cidrblocks_go" style="color: inherit; text-decoration: inherit;">Ipv6Cidr<wbr>Blocks</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}The lexically ordered list of ipv6 CIDR blocks.
 {{% /md %}}</dd>
 
 </dl>
@@ -196,7 +221,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}The lexically ordered list of CIDR blocks.
+    <dd>{{% md %}}The lexically ordered list of ipv4 CIDR blocks.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -208,6 +233,17 @@ The following output properties are available:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="ipv6cidrblocks_nodejs">
+<a href="#ipv6cidrblocks_nodejs" style="color: inherit; text-decoration: inherit;">ipv6Cidr<wbr>Blocks</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}The lexically ordered list of ipv6 CIDR blocks.
 {{% /md %}}</dd>
 
 </dl>
@@ -225,7 +261,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}The lexically ordered list of CIDR blocks.
+    <dd>{{% md %}}The lexically ordered list of ipv4 CIDR blocks.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -237,6 +273,17 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="ipv6_cidr_blocks_python">
+<a href="#ipv6_cidr_blocks_python" style="color: inherit; text-decoration: inherit;">ipv6_<wbr>cidr_<wbr>blocks</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}The lexically ordered list of ipv6 CIDR blocks.
 {{% /md %}}</dd>
 
 </dl>
