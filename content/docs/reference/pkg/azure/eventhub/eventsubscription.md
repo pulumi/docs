@@ -27,7 +27,7 @@ Manages an EventGrid Event Subscription
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/eventhub/#EventSubscription">EventSubscription</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>event_delivery_schema=None<span class="p">, </span>eventhub_endpoint=None<span class="p">, </span>hybrid_connection_endpoint=None<span class="p">, </span>included_event_types=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>retry_policy=None<span class="p">, </span>scope=None<span class="p">, </span>storage_blob_dead_letter_destination=None<span class="p">, </span>storage_queue_endpoint=None<span class="p">, </span>subject_filter=None<span class="p">, </span>topic_name=None<span class="p">, </span>webhook_endpoint=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/eventhub/#EventSubscription">EventSubscription</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>event_delivery_schema=None<span class="p">, </span>eventhub_endpoint=None<span class="p">, </span>eventhub_endpoint_id=None<span class="p">, </span>expiration_time_utc=None<span class="p">, </span>hybrid_connection_endpoint=None<span class="p">, </span>hybrid_connection_endpoint_id=None<span class="p">, </span>included_event_types=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>retry_policy=None<span class="p">, </span>scope=None<span class="p">, </span>service_bus_queue_endpoint_id=None<span class="p">, </span>service_bus_topic_endpoint_id=None<span class="p">, </span>storage_blob_dead_letter_destination=None<span class="p">, </span>storage_queue_endpoint=None<span class="p">, </span>subject_filter=None<span class="p">, </span>topic_name=None<span class="p">, </span>webhook_endpoint=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -221,8 +221,8 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
     <dd>{{% md %}}Specifies the event delivery schema for the event subscription. Possible values include: `EventGridSchema`, `CloudEventSchemaV1_0`, `CustomInputSchema`. Defaults to `EventGridSchema`. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="eventhubendpoint_csharp">
 <a href="#eventhubendpoint_csharp" style="color: inherit; text-decoration: inherit;">Eventhub<wbr>Endpoint</a>
 </span> 
@@ -230,10 +230,32 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type"><a href="#eventsubscriptioneventhubendpoint">Event<wbr>Subscription<wbr>Eventhub<wbr>Endpoint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `eventhub_endpoint` block as defined below.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `eventhub_endpoint_id`{{% /md %}}</p></dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="eventhubendpointid_csharp">
+<a href="#eventhubendpointid_csharp" style="color: inherit; text-decoration: inherit;">Eventhub<wbr>Endpoint<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the id where the Event Hub is located.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
+        <span id="expirationtimeutc_csharp">
+<a href="#expirationtimeutc_csharp" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Time<wbr>Utc</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the expiration time of the event subscription (Datetime Format `RFC 3339`).
+{{% /md %}}</dd>
+
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="hybridconnectionendpoint_csharp">
 <a href="#hybridconnectionendpoint_csharp" style="color: inherit; text-decoration: inherit;">Hybrid<wbr>Connection<wbr>Endpoint</a>
 </span> 
@@ -241,6 +263,17 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type"><a href="#eventsubscriptionhybridconnectionendpoint">Event<wbr>Subscription<wbr>Hybrid<wbr>Connection<wbr>Endpoint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `hybrid_connection_endpoint` block as defined below.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `hybrid_connection_endpoint_id`{{% /md %}}</p></dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="hybridconnectionendpointid_csharp">
+<a href="#hybridconnectionendpointid_csharp" style="color: inherit; text-decoration: inherit;">Hybrid<wbr>Connection<wbr>Endpoint<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the id where the Hybrid Connection is located.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -285,6 +318,28 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type"><a href="#eventsubscriptionretrypolicy">Event<wbr>Subscription<wbr>Retry<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `retry_policy` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="servicebusqueueendpointid_csharp">
+<a href="#servicebusqueueendpointid_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Bus<wbr>Queue<wbr>Endpoint<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the id where the Service Bus Queue is located.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="servicebustopicendpointid_csharp">
+<a href="#servicebustopicendpointid_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Bus<wbr>Topic<wbr>Endpoint<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the id where the Service Bus Topic is located.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -371,8 +426,8 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
     <dd>{{% md %}}Specifies the event delivery schema for the event subscription. Possible values include: `EventGridSchema`, `CloudEventSchemaV1_0`, `CustomInputSchema`. Defaults to `EventGridSchema`. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="eventhubendpoint_go">
 <a href="#eventhubendpoint_go" style="color: inherit; text-decoration: inherit;">Eventhub<wbr>Endpoint</a>
 </span> 
@@ -380,10 +435,32 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type"><a href="#eventsubscriptioneventhubendpoint">Event<wbr>Subscription<wbr>Eventhub<wbr>Endpoint</a></span>
     </dt>
     <dd>{{% md %}}A `eventhub_endpoint` block as defined below.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `eventhub_endpoint_id`{{% /md %}}</p></dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="eventhubendpointid_go">
+<a href="#eventhubendpointid_go" style="color: inherit; text-decoration: inherit;">Eventhub<wbr>Endpoint<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the id where the Event Hub is located.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
+        <span id="expirationtimeutc_go">
+<a href="#expirationtimeutc_go" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Time<wbr>Utc</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the expiration time of the event subscription (Datetime Format `RFC 3339`).
+{{% /md %}}</dd>
+
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="hybridconnectionendpoint_go">
 <a href="#hybridconnectionendpoint_go" style="color: inherit; text-decoration: inherit;">Hybrid<wbr>Connection<wbr>Endpoint</a>
 </span> 
@@ -391,6 +468,17 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type"><a href="#eventsubscriptionhybridconnectionendpoint">Event<wbr>Subscription<wbr>Hybrid<wbr>Connection<wbr>Endpoint</a></span>
     </dt>
     <dd>{{% md %}}A `hybrid_connection_endpoint` block as defined below.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `hybrid_connection_endpoint_id`{{% /md %}}</p></dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="hybridconnectionendpointid_go">
+<a href="#hybridconnectionendpointid_go" style="color: inherit; text-decoration: inherit;">Hybrid<wbr>Connection<wbr>Endpoint<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the id where the Hybrid Connection is located.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -435,6 +523,28 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type"><a href="#eventsubscriptionretrypolicy">Event<wbr>Subscription<wbr>Retry<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A `retry_policy` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="servicebusqueueendpointid_go">
+<a href="#servicebusqueueendpointid_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Bus<wbr>Queue<wbr>Endpoint<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the id where the Service Bus Queue is located.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="servicebustopicendpointid_go">
+<a href="#servicebustopicendpointid_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Bus<wbr>Topic<wbr>Endpoint<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the id where the Service Bus Topic is located.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -521,8 +631,8 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
     <dd>{{% md %}}Specifies the event delivery schema for the event subscription. Possible values include: `EventGridSchema`, `CloudEventSchemaV1_0`, `CustomInputSchema`. Defaults to `EventGridSchema`. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="eventhubendpoint_nodejs">
 <a href="#eventhubendpoint_nodejs" style="color: inherit; text-decoration: inherit;">eventhub<wbr>Endpoint</a>
 </span> 
@@ -530,10 +640,32 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type"><a href="#eventsubscriptioneventhubendpoint">Event<wbr>Subscription<wbr>Eventhub<wbr>Endpoint</a></span>
     </dt>
     <dd>{{% md %}}A `eventhub_endpoint` block as defined below.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `eventhub_endpoint_id`{{% /md %}}</p></dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="eventhubendpointid_nodejs">
+<a href="#eventhubendpointid_nodejs" style="color: inherit; text-decoration: inherit;">eventhub<wbr>Endpoint<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the id where the Event Hub is located.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
+        <span id="expirationtimeutc_nodejs">
+<a href="#expirationtimeutc_nodejs" style="color: inherit; text-decoration: inherit;">expiration<wbr>Time<wbr>Utc</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the expiration time of the event subscription (Datetime Format `RFC 3339`).
+{{% /md %}}</dd>
+
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="hybridconnectionendpoint_nodejs">
 <a href="#hybridconnectionendpoint_nodejs" style="color: inherit; text-decoration: inherit;">hybrid<wbr>Connection<wbr>Endpoint</a>
 </span> 
@@ -541,6 +673,17 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type"><a href="#eventsubscriptionhybridconnectionendpoint">Event<wbr>Subscription<wbr>Hybrid<wbr>Connection<wbr>Endpoint</a></span>
     </dt>
     <dd>{{% md %}}A `hybrid_connection_endpoint` block as defined below.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `hybrid_connection_endpoint_id`{{% /md %}}</p></dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="hybridconnectionendpointid_nodejs">
+<a href="#hybridconnectionendpointid_nodejs" style="color: inherit; text-decoration: inherit;">hybrid<wbr>Connection<wbr>Endpoint<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the id where the Hybrid Connection is located.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -585,6 +728,28 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type"><a href="#eventsubscriptionretrypolicy">Event<wbr>Subscription<wbr>Retry<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A `retry_policy` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="servicebusqueueendpointid_nodejs">
+<a href="#servicebusqueueendpointid_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Bus<wbr>Queue<wbr>Endpoint<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the id where the Service Bus Queue is located.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="servicebustopicendpointid_nodejs">
+<a href="#servicebustopicendpointid_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Bus<wbr>Topic<wbr>Endpoint<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the id where the Service Bus Topic is located.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -671,8 +836,8 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
     <dd>{{% md %}}Specifies the event delivery schema for the event subscription. Possible values include: `EventGridSchema`, `CloudEventSchemaV1_0`, `CustomInputSchema`. Defaults to `EventGridSchema`. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="eventhub_endpoint_python">
 <a href="#eventhub_endpoint_python" style="color: inherit; text-decoration: inherit;">eventhub_<wbr>endpoint</a>
 </span> 
@@ -680,10 +845,32 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type"><a href="#eventsubscriptioneventhubendpoint">Dict[Event<wbr>Subscription<wbr>Eventhub<wbr>Endpoint]</a></span>
     </dt>
     <dd>{{% md %}}A `eventhub_endpoint` block as defined below.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `eventhub_endpoint_id`{{% /md %}}</p></dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="eventhub_endpoint_id_python">
+<a href="#eventhub_endpoint_id_python" style="color: inherit; text-decoration: inherit;">eventhub_<wbr>endpoint_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the id where the Event Hub is located.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
+        <span id="expiration_time_utc_python">
+<a href="#expiration_time_utc_python" style="color: inherit; text-decoration: inherit;">expiration_<wbr>time_<wbr>utc</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the expiration time of the event subscription (Datetime Format `RFC 3339`).
+{{% /md %}}</dd>
+
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="hybrid_connection_endpoint_python">
 <a href="#hybrid_connection_endpoint_python" style="color: inherit; text-decoration: inherit;">hybrid_<wbr>connection_<wbr>endpoint</a>
 </span> 
@@ -691,6 +878,17 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type"><a href="#eventsubscriptionhybridconnectionendpoint">Dict[Event<wbr>Subscription<wbr>Hybrid<wbr>Connection<wbr>Endpoint]</a></span>
     </dt>
     <dd>{{% md %}}A `hybrid_connection_endpoint` block as defined below.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `hybrid_connection_endpoint_id`{{% /md %}}</p></dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="hybrid_connection_endpoint_id_python">
+<a href="#hybrid_connection_endpoint_id_python" style="color: inherit; text-decoration: inherit;">hybrid_<wbr>connection_<wbr>endpoint_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the id where the Hybrid Connection is located.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -735,6 +933,28 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type"><a href="#eventsubscriptionretrypolicy">Dict[Event<wbr>Subscription<wbr>Retry<wbr>Policy]</a></span>
     </dt>
     <dd>{{% md %}}A `retry_policy` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="service_bus_queue_endpoint_id_python">
+<a href="#service_bus_queue_endpoint_id_python" style="color: inherit; text-decoration: inherit;">service_<wbr>bus_<wbr>queue_<wbr>endpoint_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the id where the Service Bus Queue is located.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="service_bus_topic_endpoint_id_python">
+<a href="#service_bus_topic_endpoint_id_python" style="color: inherit; text-decoration: inherit;">service_<wbr>bus_<wbr>topic_<wbr>endpoint_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the id where the Service Bus Topic is located.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -890,7 +1110,7 @@ Get an existing EventSubscription resource's state with the given name, ID, and 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>event_delivery_schema=None<span class="p">, </span>eventhub_endpoint=None<span class="p">, </span>hybrid_connection_endpoint=None<span class="p">, </span>included_event_types=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>retry_policy=None<span class="p">, </span>scope=None<span class="p">, </span>storage_blob_dead_letter_destination=None<span class="p">, </span>storage_queue_endpoint=None<span class="p">, </span>subject_filter=None<span class="p">, </span>topic_name=None<span class="p">, </span>webhook_endpoint=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>event_delivery_schema=None<span class="p">, </span>eventhub_endpoint=None<span class="p">, </span>eventhub_endpoint_id=None<span class="p">, </span>expiration_time_utc=None<span class="p">, </span>hybrid_connection_endpoint=None<span class="p">, </span>hybrid_connection_endpoint_id=None<span class="p">, </span>included_event_types=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>retry_policy=None<span class="p">, </span>scope=None<span class="p">, </span>service_bus_queue_endpoint_id=None<span class="p">, </span>service_bus_topic_endpoint_id=None<span class="p">, </span>storage_blob_dead_letter_destination=None<span class="p">, </span>storage_queue_endpoint=None<span class="p">, </span>subject_filter=None<span class="p">, </span>topic_name=None<span class="p">, </span>webhook_endpoint=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1015,8 +1235,8 @@ The following state arguments are supported:
     <dd>{{% md %}}Specifies the event delivery schema for the event subscription. Possible values include: `EventGridSchema`, `CloudEventSchemaV1_0`, `CustomInputSchema`. Defaults to `EventGridSchema`. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_eventhubendpoint_csharp">
 <a href="#state_eventhubendpoint_csharp" style="color: inherit; text-decoration: inherit;">Eventhub<wbr>Endpoint</a>
 </span> 
@@ -1024,10 +1244,32 @@ The following state arguments are supported:
         <span class="property-type"><a href="#eventsubscriptioneventhubendpoint">Event<wbr>Subscription<wbr>Eventhub<wbr>Endpoint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `eventhub_endpoint` block as defined below.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `eventhub_endpoint_id`{{% /md %}}</p></dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_eventhubendpointid_csharp">
+<a href="#state_eventhubendpointid_csharp" style="color: inherit; text-decoration: inherit;">Eventhub<wbr>Endpoint<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the id where the Event Hub is located.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_expirationtimeutc_csharp">
+<a href="#state_expirationtimeutc_csharp" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Time<wbr>Utc</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the expiration time of the event subscription (Datetime Format `RFC 3339`).
+{{% /md %}}</dd>
+
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_hybridconnectionendpoint_csharp">
 <a href="#state_hybridconnectionendpoint_csharp" style="color: inherit; text-decoration: inherit;">Hybrid<wbr>Connection<wbr>Endpoint</a>
 </span> 
@@ -1035,6 +1277,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="#eventsubscriptionhybridconnectionendpoint">Event<wbr>Subscription<wbr>Hybrid<wbr>Connection<wbr>Endpoint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `hybrid_connection_endpoint` block as defined below.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `hybrid_connection_endpoint_id`{{% /md %}}</p></dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_hybridconnectionendpointid_csharp">
+<a href="#state_hybridconnectionendpointid_csharp" style="color: inherit; text-decoration: inherit;">Hybrid<wbr>Connection<wbr>Endpoint<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the id where the Hybrid Connection is located.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1090,6 +1343,28 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the scope at which the EventGrid Event Subscription should be created. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_servicebusqueueendpointid_csharp">
+<a href="#state_servicebusqueueendpointid_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Bus<wbr>Queue<wbr>Endpoint<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the id where the Service Bus Queue is located.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_servicebustopicendpointid_csharp">
+<a href="#state_servicebustopicendpointid_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Bus<wbr>Topic<wbr>Endpoint<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the id where the Service Bus Topic is located.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1165,8 +1440,8 @@ The following state arguments are supported:
     <dd>{{% md %}}Specifies the event delivery schema for the event subscription. Possible values include: `EventGridSchema`, `CloudEventSchemaV1_0`, `CustomInputSchema`. Defaults to `EventGridSchema`. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_eventhubendpoint_go">
 <a href="#state_eventhubendpoint_go" style="color: inherit; text-decoration: inherit;">Eventhub<wbr>Endpoint</a>
 </span> 
@@ -1174,10 +1449,32 @@ The following state arguments are supported:
         <span class="property-type"><a href="#eventsubscriptioneventhubendpoint">Event<wbr>Subscription<wbr>Eventhub<wbr>Endpoint</a></span>
     </dt>
     <dd>{{% md %}}A `eventhub_endpoint` block as defined below.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `eventhub_endpoint_id`{{% /md %}}</p></dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_eventhubendpointid_go">
+<a href="#state_eventhubendpointid_go" style="color: inherit; text-decoration: inherit;">Eventhub<wbr>Endpoint<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the id where the Event Hub is located.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_expirationtimeutc_go">
+<a href="#state_expirationtimeutc_go" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Time<wbr>Utc</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the expiration time of the event subscription (Datetime Format `RFC 3339`).
+{{% /md %}}</dd>
+
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_hybridconnectionendpoint_go">
 <a href="#state_hybridconnectionendpoint_go" style="color: inherit; text-decoration: inherit;">Hybrid<wbr>Connection<wbr>Endpoint</a>
 </span> 
@@ -1185,6 +1482,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="#eventsubscriptionhybridconnectionendpoint">Event<wbr>Subscription<wbr>Hybrid<wbr>Connection<wbr>Endpoint</a></span>
     </dt>
     <dd>{{% md %}}A `hybrid_connection_endpoint` block as defined below.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `hybrid_connection_endpoint_id`{{% /md %}}</p></dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_hybridconnectionendpointid_go">
+<a href="#state_hybridconnectionendpointid_go" style="color: inherit; text-decoration: inherit;">Hybrid<wbr>Connection<wbr>Endpoint<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the id where the Hybrid Connection is located.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1240,6 +1548,28 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the scope at which the EventGrid Event Subscription should be created. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_servicebusqueueendpointid_go">
+<a href="#state_servicebusqueueendpointid_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Bus<wbr>Queue<wbr>Endpoint<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the id where the Service Bus Queue is located.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_servicebustopicendpointid_go">
+<a href="#state_servicebustopicendpointid_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Bus<wbr>Topic<wbr>Endpoint<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the id where the Service Bus Topic is located.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1315,8 +1645,8 @@ The following state arguments are supported:
     <dd>{{% md %}}Specifies the event delivery schema for the event subscription. Possible values include: `EventGridSchema`, `CloudEventSchemaV1_0`, `CustomInputSchema`. Defaults to `EventGridSchema`. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_eventhubendpoint_nodejs">
 <a href="#state_eventhubendpoint_nodejs" style="color: inherit; text-decoration: inherit;">eventhub<wbr>Endpoint</a>
 </span> 
@@ -1324,10 +1654,32 @@ The following state arguments are supported:
         <span class="property-type"><a href="#eventsubscriptioneventhubendpoint">Event<wbr>Subscription<wbr>Eventhub<wbr>Endpoint</a></span>
     </dt>
     <dd>{{% md %}}A `eventhub_endpoint` block as defined below.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `eventhub_endpoint_id`{{% /md %}}</p></dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_eventhubendpointid_nodejs">
+<a href="#state_eventhubendpointid_nodejs" style="color: inherit; text-decoration: inherit;">eventhub<wbr>Endpoint<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the id where the Event Hub is located.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_expirationtimeutc_nodejs">
+<a href="#state_expirationtimeutc_nodejs" style="color: inherit; text-decoration: inherit;">expiration<wbr>Time<wbr>Utc</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the expiration time of the event subscription (Datetime Format `RFC 3339`).
+{{% /md %}}</dd>
+
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_hybridconnectionendpoint_nodejs">
 <a href="#state_hybridconnectionendpoint_nodejs" style="color: inherit; text-decoration: inherit;">hybrid<wbr>Connection<wbr>Endpoint</a>
 </span> 
@@ -1335,6 +1687,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="#eventsubscriptionhybridconnectionendpoint">Event<wbr>Subscription<wbr>Hybrid<wbr>Connection<wbr>Endpoint</a></span>
     </dt>
     <dd>{{% md %}}A `hybrid_connection_endpoint` block as defined below.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `hybrid_connection_endpoint_id`{{% /md %}}</p></dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_hybridconnectionendpointid_nodejs">
+<a href="#state_hybridconnectionendpointid_nodejs" style="color: inherit; text-decoration: inherit;">hybrid<wbr>Connection<wbr>Endpoint<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the id where the Hybrid Connection is located.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1390,6 +1753,28 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the scope at which the EventGrid Event Subscription should be created. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_servicebusqueueendpointid_nodejs">
+<a href="#state_servicebusqueueendpointid_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Bus<wbr>Queue<wbr>Endpoint<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the id where the Service Bus Queue is located.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_servicebustopicendpointid_nodejs">
+<a href="#state_servicebustopicendpointid_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Bus<wbr>Topic<wbr>Endpoint<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the id where the Service Bus Topic is located.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1465,8 +1850,8 @@ The following state arguments are supported:
     <dd>{{% md %}}Specifies the event delivery schema for the event subscription. Possible values include: `EventGridSchema`, `CloudEventSchemaV1_0`, `CustomInputSchema`. Defaults to `EventGridSchema`. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_eventhub_endpoint_python">
 <a href="#state_eventhub_endpoint_python" style="color: inherit; text-decoration: inherit;">eventhub_<wbr>endpoint</a>
 </span> 
@@ -1474,10 +1859,32 @@ The following state arguments are supported:
         <span class="property-type"><a href="#eventsubscriptioneventhubendpoint">Dict[Event<wbr>Subscription<wbr>Eventhub<wbr>Endpoint]</a></span>
     </dt>
     <dd>{{% md %}}A `eventhub_endpoint` block as defined below.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `eventhub_endpoint_id`{{% /md %}}</p></dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_eventhub_endpoint_id_python">
+<a href="#state_eventhub_endpoint_id_python" style="color: inherit; text-decoration: inherit;">eventhub_<wbr>endpoint_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the id where the Event Hub is located.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_expiration_time_utc_python">
+<a href="#state_expiration_time_utc_python" style="color: inherit; text-decoration: inherit;">expiration_<wbr>time_<wbr>utc</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the expiration time of the event subscription (Datetime Format `RFC 3339`).
+{{% /md %}}</dd>
+
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_hybrid_connection_endpoint_python">
 <a href="#state_hybrid_connection_endpoint_python" style="color: inherit; text-decoration: inherit;">hybrid_<wbr>connection_<wbr>endpoint</a>
 </span> 
@@ -1485,6 +1892,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="#eventsubscriptionhybridconnectionendpoint">Dict[Event<wbr>Subscription<wbr>Hybrid<wbr>Connection<wbr>Endpoint]</a></span>
     </dt>
     <dd>{{% md %}}A `hybrid_connection_endpoint` block as defined below.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `hybrid_connection_endpoint_id`{{% /md %}}</p></dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_hybrid_connection_endpoint_id_python">
+<a href="#state_hybrid_connection_endpoint_id_python" style="color: inherit; text-decoration: inherit;">hybrid_<wbr>connection_<wbr>endpoint_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the id where the Hybrid Connection is located.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1540,6 +1958,28 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Specifies the scope at which the EventGrid Event Subscription should be created. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_service_bus_queue_endpoint_id_python">
+<a href="#state_service_bus_queue_endpoint_id_python" style="color: inherit; text-decoration: inherit;">service_<wbr>bus_<wbr>queue_<wbr>endpoint_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the id where the Service Bus Queue is located.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_service_bus_topic_endpoint_id_python">
+<a href="#state_service_bus_topic_endpoint_id_python" style="color: inherit; text-decoration: inherit;">service_<wbr>bus_<wbr>topic_<wbr>endpoint_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the id where the Service Bus Topic is located.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1630,8 +2070,8 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="eventhubid_csharp">
 <a href="#eventhubid_csharp" style="color: inherit; text-decoration: inherit;">Eventhub<wbr>Id</a>
 </span> 
@@ -1648,8 +2088,8 @@ The following state arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="eventhubid_go">
 <a href="#eventhubid_go" style="color: inherit; text-decoration: inherit;">Eventhub<wbr>Id</a>
 </span> 
@@ -1666,8 +2106,8 @@ The following state arguments are supported:
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="eventhubid_nodejs">
 <a href="#eventhubid_nodejs" style="color: inherit; text-decoration: inherit;">eventhub<wbr>Id</a>
 </span> 
@@ -1684,8 +2124,8 @@ The following state arguments are supported:
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="eventhub_id_python">
 <a href="#eventhub_id_python" style="color: inherit; text-decoration: inherit;">eventhub_<wbr>id</a>
 </span> 
@@ -1720,8 +2160,8 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="hybridconnectionid_csharp">
 <a href="#hybridconnectionid_csharp" style="color: inherit; text-decoration: inherit;">Hybrid<wbr>Connection<wbr>Id</a>
 </span> 
@@ -1738,8 +2178,8 @@ The following state arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="hybridconnectionid_go">
 <a href="#hybridconnectionid_go" style="color: inherit; text-decoration: inherit;">Hybrid<wbr>Connection<wbr>Id</a>
 </span> 
@@ -1756,8 +2196,8 @@ The following state arguments are supported:
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="hybridconnectionid_nodejs">
 <a href="#hybridconnectionid_nodejs" style="color: inherit; text-decoration: inherit;">hybrid<wbr>Connection<wbr>Id</a>
 </span> 
@@ -1774,8 +2214,8 @@ The following state arguments are supported:
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="hybridconnectionid_python">
 <a href="#hybridconnectionid_python" style="color: inherit; text-decoration: inherit;">hybrid<wbr>Connection<wbr>Id</a>
 </span> 
@@ -1963,7 +2403,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the Storage blob container that is the destination of the deadletter events
+    <dd>{{% md %}}Specifies the name of the Storage blob container that is the destination of the deadletter events.
 {{% /md %}}</dd>
 
 </dl>
@@ -1992,7 +2432,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the Storage blob container that is the destination of the deadletter events
+    <dd>{{% md %}}Specifies the name of the Storage blob container that is the destination of the deadletter events.
 {{% /md %}}</dd>
 
 </dl>
@@ -2021,7 +2461,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the Storage blob container that is the destination of the deadletter events
+    <dd>{{% md %}}Specifies the name of the Storage blob container that is the destination of the deadletter events.
 {{% /md %}}</dd>
 
 </dl>
@@ -2039,7 +2479,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the Storage blob container that is the destination of the deadletter events
+    <dd>{{% md %}}Specifies the name of the Storage blob container that is the destination of the deadletter events.
 {{% /md %}}</dd>
 
     <dt class="property-required"

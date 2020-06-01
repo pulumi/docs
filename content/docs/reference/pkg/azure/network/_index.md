@@ -24,6 +24,7 @@ Explore the resources and functions of the network module in the Azure package.
     <li><a href="firewallnetworkrulecollection" title="FirewallNetworkRuleCollection"><span class="symbol resource"></span>FirewallNetworkRuleCollection</a></li>
     <li><a href="localnetworkgateway" title="LocalNetworkGateway"><span class="symbol resource"></span>LocalNetworkGateway</a></li>
     <li><a href="natgateway" title="NatGateway"><span class="symbol resource"></span>NatGateway</a></li>
+    <li><a href="natgatewaypublicipassociation" title="NatGatewayPublicIpAssociation"><span class="symbol resource"></span>NatGatewayPublicIpAssociation</a></li>
     <li><a href="networkconnectionmonitor" title="NetworkConnectionMonitor"><span class="symbol resource"></span>NetworkConnectionMonitor</a></li>
     <li><a href="networkinterface" title="NetworkInterface"><span class="symbol resource"></span>NetworkInterface</a></li>
     <li><a href="networkinterfaceapplicationgatewaybackendaddresspoolassociation" title="NetworkInterfaceApplicationGatewayBackendAddressPoolAssociation"><span class="symbol resource"></span>NetworkInterfaceApplicationGatewayBackendAddressPoolAssociation</a></li>
@@ -92,7 +93,7 @@ Explore the resources and functions of the network module in the Azure package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
 	<dt>Version</dt>
-	<dd>3.6.1</dd>
+	<dd>3.7.0</dd>
 </dl>
 
 

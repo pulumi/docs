@@ -387,6 +387,17 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="identities_csharp">
+<a href="#identities_csharp" style="color: inherit; text-decoration: inherit;">Identities</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getkubernetesclusteridentity">List&lt;Get<wbr>Kubernetes<wbr>Cluster<wbr>Identity&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A `identity` block as documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="kubeadminconfigraw_csharp">
 <a href="#kubeadminconfigraw_csharp" style="color: inherit; text-decoration: inherit;">Kube<wbr>Admin<wbr>Config<wbr>Raw</a>
 </span> 
@@ -427,6 +438,17 @@ The following output properties are available:
         <span class="property-type"><a href="#getkubernetesclusterkubeconfig">List&lt;Get<wbr>Kubernetes<wbr>Cluster<wbr>Kube<wbr>Config&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `kube_config` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="kubeletidentities_csharp">
+<a href="#kubeletidentities_csharp" style="color: inherit; text-decoration: inherit;">Kubelet<wbr>Identities</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getkubernetesclusterkubeletidentity">List&lt;Get<wbr>Kubernetes<wbr>Cluster<wbr>Kubelet<wbr>Identity&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A `kubelet_identity` block as documented below.  
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -656,6 +678,17 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="identities_go">
+<a href="#identities_go" style="color: inherit; text-decoration: inherit;">Identities</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getkubernetesclusteridentity">[]Get<wbr>Kubernetes<wbr>Cluster<wbr>Identity</a></span>
+    </dt>
+    <dd>{{% md %}}A `identity` block as documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="kubeadminconfigraw_go">
 <a href="#kubeadminconfigraw_go" style="color: inherit; text-decoration: inherit;">Kube<wbr>Admin<wbr>Config<wbr>Raw</a>
 </span> 
@@ -696,6 +729,17 @@ The following output properties are available:
         <span class="property-type"><a href="#getkubernetesclusterkubeconfig">[]Get<wbr>Kubernetes<wbr>Cluster<wbr>Kube<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}A `kube_config` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="kubeletidentities_go">
+<a href="#kubeletidentities_go" style="color: inherit; text-decoration: inherit;">Kubelet<wbr>Identities</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getkubernetesclusterkubeletidentity">[]Get<wbr>Kubernetes<wbr>Cluster<wbr>Kubelet<wbr>Identity</a></span>
+    </dt>
+    <dd>{{% md %}}A `kubelet_identity` block as documented below.  
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -925,6 +969,17 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="identities_nodejs">
+<a href="#identities_nodejs" style="color: inherit; text-decoration: inherit;">identities</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getkubernetesclusteridentity">Get<wbr>Kubernetes<wbr>Cluster<wbr>Identity[]</a></span>
+    </dt>
+    <dd>{{% md %}}A `identity` block as documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="kubeadminconfigraw_nodejs">
 <a href="#kubeadminconfigraw_nodejs" style="color: inherit; text-decoration: inherit;">kube<wbr>Admin<wbr>Config<wbr>Raw</a>
 </span> 
@@ -965,6 +1020,17 @@ The following output properties are available:
         <span class="property-type"><a href="#getkubernetesclusterkubeconfig">Get<wbr>Kubernetes<wbr>Cluster<wbr>Kube<wbr>Config[]</a></span>
     </dt>
     <dd>{{% md %}}A `kube_config` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="kubeletidentities_nodejs">
+<a href="#kubeletidentities_nodejs" style="color: inherit; text-decoration: inherit;">kubelet<wbr>Identities</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getkubernetesclusterkubeletidentity">Get<wbr>Kubernetes<wbr>Cluster<wbr>Kubelet<wbr>Identity[]</a></span>
+    </dt>
+    <dd>{{% md %}}A `kubelet_identity` block as documented below.  
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1194,6 +1260,17 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="identities_python">
+<a href="#identities_python" style="color: inherit; text-decoration: inherit;">identities</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getkubernetesclusteridentity">List[Get<wbr>Kubernetes<wbr>Cluster<wbr>Identity]</a></span>
+    </dt>
+    <dd>{{% md %}}A `identity` block as documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="kube_admin_config_raw_python">
 <a href="#kube_admin_config_raw_python" style="color: inherit; text-decoration: inherit;">kube_<wbr>admin_<wbr>config_<wbr>raw</a>
 </span> 
@@ -1234,6 +1311,17 @@ The following output properties are available:
         <span class="property-type"><a href="#getkubernetesclusterkubeconfig">List[Get<wbr>Kubernetes<wbr>Cluster<wbr>Kube<wbr>Config]</a></span>
     </dt>
     <dd>{{% md %}}A `kube_config` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="kubelet_identities_python">
+<a href="#kubelet_identities_python" style="color: inherit; text-decoration: inherit;">kubelet_<wbr>identities</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getkubernetesclusterkubeletidentity">List[Get<wbr>Kubernetes<wbr>Cluster<wbr>Kubelet<wbr>Identity]</a></span>
+    </dt>
+    <dd>{{% md %}}A `kubelet_identity` block as documented below.  
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1977,6 +2065,17 @@ The following output properties are available:
     <dd>{{% md %}}The ID of the Log Analytics Workspace which the OMS Agent should send data to.
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span id="omsagentidentities_csharp">
+<a href="#omsagentidentities_csharp" style="color: inherit; text-decoration: inherit;">Oms<wbr>Agent<wbr>Identities</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getkubernetesclusteraddonprofileomsagentomsagentidentity">List&lt;Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Oms<wbr>Agent<wbr>Oms<wbr>Agent<wbr>Identity<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}An `oms_agent_identity` block as defined below.  
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -2004,6 +2103,17 @@ The following output properties are available:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Log Analytics Workspace which the OMS Agent should send data to.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="omsagentidentities_go">
+<a href="#omsagentidentities_go" style="color: inherit; text-decoration: inherit;">Oms<wbr>Agent<wbr>Identities</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getkubernetesclusteraddonprofileomsagentomsagentidentity">[]Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Oms<wbr>Agent<wbr>Oms<wbr>Agent<wbr>Identity</a></span>
+    </dt>
+    <dd>{{% md %}}An `oms_agent_identity` block as defined below.  
 {{% /md %}}</dd>
 
 </dl>
@@ -2035,6 +2145,17 @@ The following output properties are available:
     <dd>{{% md %}}The ID of the Log Analytics Workspace which the OMS Agent should send data to.
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span id="omsagentidentities_nodejs">
+<a href="#omsagentidentities_nodejs" style="color: inherit; text-decoration: inherit;">oms<wbr>Agent<wbr>Identities</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getkubernetesclusteraddonprofileomsagentomsagentidentity">Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Oms<wbr>Agent<wbr>Oms<wbr>Agent<wbr>Identity[]</a></span>
+    </dt>
+    <dd>{{% md %}}An `oms_agent_identity` block as defined below.  
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -2062,6 +2183,195 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Log Analytics Workspace which the OMS Agent should send data to.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="omsagentidentities_python">
+<a href="#omsagentidentities_python" style="color: inherit; text-decoration: inherit;">oms<wbr>Agent<wbr>Identities</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getkubernetesclusteraddonprofileomsagentomsagentidentity">List[Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Oms<wbr>Agent<wbr>Oms<wbr>Agent<wbr>Identity]</a></span>
+    </dt>
+    <dd>{{% md %}}An `oms_agent_identity` block as defined below.  
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="getkubernetesclusteraddonprofileomsagentomsagentidentity">Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Oms<wbr>Agent<wbr>Oms<wbr>Agent<wbr>Identity</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetKubernetesClusterAddonProfileOmsAgentOmsAgentIdentity">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/containerservice?tab=doc#GetKubernetesClusterAddonProfileOmsAgentOmsAgentIdentity">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.ContainerService.Outputs.GetKubernetesClusterAddonProfileOmsAgentOmsAgentIdentity.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="clientid_csharp">
+<a href="#clientid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Client ID of the user-defined Managed Identity assigned to the Kubelets.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="objectid_csharp">
+<a href="#objectid_csharp" style="color: inherit; text-decoration: inherit;">Object<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Object ID of the user-defined Managed Identity assigned to the Kubelets.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="userassignedidentityid_csharp">
+<a href="#userassignedidentityid_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identity<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the User Assigned Identity assigned to the Kubelets.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="clientid_go">
+<a href="#clientid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Client ID of the user-defined Managed Identity assigned to the Kubelets.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="objectid_go">
+<a href="#objectid_go" style="color: inherit; text-decoration: inherit;">Object<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Object ID of the user-defined Managed Identity assigned to the Kubelets.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="userassignedidentityid_go">
+<a href="#userassignedidentityid_go" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identity<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the User Assigned Identity assigned to the Kubelets.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="clientid_nodejs">
+<a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Client ID of the user-defined Managed Identity assigned to the Kubelets.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="objectid_nodejs">
+<a href="#objectid_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Object ID of the user-defined Managed Identity assigned to the Kubelets.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="userassignedidentityid_nodejs">
+<a href="#userassignedidentityid_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identity<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the User Assigned Identity assigned to the Kubelets.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="client_id_python">
+<a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The Client ID of the user-defined Managed Identity assigned to the Kubelets.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="object_id_python">
+<a href="#object_id_python" style="color: inherit; text-decoration: inherit;">object_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The Object ID of the user-defined Managed Identity assigned to the Kubelets.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="userassignedidentityid_python">
+<a href="#userassignedidentityid_python" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identity<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the User Assigned Identity assigned to the Kubelets.
 {{% /md %}}</dd>
 
 </dl>
@@ -2217,7 +2527,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the Agent Pool.
+    <dd>{{% md %}}The type of identity used for the managed cluster.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -2398,7 +2708,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the Agent Pool.
+    <dd>{{% md %}}The type of identity used for the managed cluster.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -2579,7 +2889,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the Agent Pool.
+    <dd>{{% md %}}The type of identity used for the managed cluster.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -2760,7 +3070,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The type of the Agent Pool.
+    <dd>{{% md %}}The type of identity used for the managed cluster.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -2804,6 +3114,184 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of Kubernetes taints which are applied to nodes in the agent pool
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="getkubernetesclusteridentity">Get<wbr>Kubernetes<wbr>Cluster<wbr>Identity</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetKubernetesClusterIdentity">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/containerservice?tab=doc#GetKubernetesClusterIdentity">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.ContainerService.Outputs.GetKubernetesClusterIdentity.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="principalid_csharp">
+<a href="#principalid_csharp" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The principal id of the system assigned identity which is used by master components.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="tenantid_csharp">
+<a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The tenant id of the system assigned identity which is used by master components.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of identity used for the managed cluster.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="principalid_go">
+<a href="#principalid_go" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The principal id of the system assigned identity which is used by master components.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="tenantid_go">
+<a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The tenant id of the system assigned identity which is used by master components.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of identity used for the managed cluster.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="principalid_nodejs">
+<a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The principal id of the system assigned identity which is used by master components.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="tenantid_nodejs">
+<a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The tenant id of the system assigned identity which is used by master components.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of identity used for the managed cluster.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="principal_id_python">
+<a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The principal id of the system assigned identity which is used by master components.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="tenant_id_python">
+<a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The tenant id of the system assigned identity which is used by master components.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The type of identity used for the managed cluster.
 {{% /md %}}</dd>
 
 </dl>
@@ -3424,6 +3912,184 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A username used to authenticate to the Kubernetes cluster.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="getkubernetesclusterkubeletidentity">Get<wbr>Kubernetes<wbr>Cluster<wbr>Kubelet<wbr>Identity</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetKubernetesClusterKubeletIdentity">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/containerservice?tab=doc#GetKubernetesClusterKubeletIdentity">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.ContainerService.Outputs.GetKubernetesClusterKubeletIdentity.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="clientid_csharp">
+<a href="#clientid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Client ID of the user-defined Managed Identity assigned to the Kubelets.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="objectid_csharp">
+<a href="#objectid_csharp" style="color: inherit; text-decoration: inherit;">Object<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Object ID of the user-defined Managed Identity assigned to the Kubelets.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="userassignedidentityid_csharp">
+<a href="#userassignedidentityid_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identity<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the User Assigned Identity assigned to the Kubelets.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="clientid_go">
+<a href="#clientid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Client ID of the user-defined Managed Identity assigned to the Kubelets.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="objectid_go">
+<a href="#objectid_go" style="color: inherit; text-decoration: inherit;">Object<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Object ID of the user-defined Managed Identity assigned to the Kubelets.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="userassignedidentityid_go">
+<a href="#userassignedidentityid_go" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identity<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the User Assigned Identity assigned to the Kubelets.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="clientid_nodejs">
+<a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Client ID of the user-defined Managed Identity assigned to the Kubelets.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="objectid_nodejs">
+<a href="#objectid_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Object ID of the user-defined Managed Identity assigned to the Kubelets.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="userassignedidentityid_nodejs">
+<a href="#userassignedidentityid_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identity<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the User Assigned Identity assigned to the Kubelets.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="client_id_python">
+<a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The Client ID of the user-defined Managed Identity assigned to the Kubelets.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="object_id_python">
+<a href="#object_id_python" style="color: inherit; text-decoration: inherit;">object_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The Object ID of the user-defined Managed Identity assigned to the Kubelets.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="userassignedidentityid_python">
+<a href="#userassignedidentityid_python" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identity<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the User Assigned Identity assigned to the Kubelets.
 {{% /md %}}</dd>
 
 </dl>
@@ -4189,7 +4855,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The Tenant ID used for Azure Active Directory Application.
+    <dd>{{% md %}}The tenant id of the system assigned identity which is used by master components.
 {{% /md %}}</dd>
 
 </dl>
@@ -4229,7 +4895,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Tenant ID used for Azure Active Directory Application.
+    <dd>{{% md %}}The tenant id of the system assigned identity which is used by master components.
 {{% /md %}}</dd>
 
 </dl>
@@ -4269,7 +4935,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Tenant ID used for Azure Active Directory Application.
+    <dd>{{% md %}}The tenant id of the system assigned identity which is used by master components.
 {{% /md %}}</dd>
 
 </dl>
@@ -4309,7 +4975,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The Tenant ID used for Azure Active Directory Application.
+    <dd>{{% md %}}The tenant id of the system assigned identity which is used by master components.
 {{% /md %}}</dd>
 
 </dl>
@@ -4345,7 +5011,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The Client ID of the Service Principal used by this Managed Kubernetes Cluster.
+    <dd>{{% md %}}The Client ID of the user-defined Managed Identity assigned to the Kubelets.
 {{% /md %}}</dd>
 
 </dl>
@@ -4363,7 +5029,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Client ID of the Service Principal used by this Managed Kubernetes Cluster.
+    <dd>{{% md %}}The Client ID of the user-defined Managed Identity assigned to the Kubelets.
 {{% /md %}}</dd>
 
 </dl>
@@ -4381,7 +5047,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Client ID of the Service Principal used by this Managed Kubernetes Cluster.
+    <dd>{{% md %}}The Client ID of the user-defined Managed Identity assigned to the Kubelets.
 {{% /md %}}</dd>
 
 </dl>
@@ -4399,7 +5065,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The Client ID of the Service Principal used by this Managed Kubernetes Cluster.
+    <dd>{{% md %}}The Client ID of the user-defined Managed Identity assigned to the Kubelets.
 {{% /md %}}</dd>
 
 </dl>

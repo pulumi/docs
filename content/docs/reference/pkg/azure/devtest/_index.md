@@ -11,6 +11,7 @@ Explore the resources and functions of the devtest module in the Azure package.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
+    <li><a href="globalvmshutdownschedule" title="GlobalVMShutdownSchedule"><span class="symbol resource"></span>GlobalVMShutdownSchedule</a></li>
     <li><a href="lab" title="Lab"><span class="symbol resource"></span>Lab</a></li>
     <li><a href="linuxvirtualmachine" title="LinuxVirtualMachine"><span class="symbol resource"></span>LinuxVirtualMachine</a></li>
     <li><a href="policy" title="Policy"><span class="symbol resource"></span>Policy</a></li>
@@ -34,7 +35,7 @@ Explore the resources and functions of the devtest module in the Azure package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
 	<dt>Version</dt>
-	<dd>3.6.1</dd>
+	<dd>3.7.0</dd>
 </dl>
 
 

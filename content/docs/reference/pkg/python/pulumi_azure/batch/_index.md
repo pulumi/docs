@@ -686,6 +686,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 <p>The <strong>container_configuration</strong> object supports the following:</p>
 <ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">containerImageNames</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of container image names to use, as would be specified by <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">pull</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">containerRegistries</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Additional container registries from which container images can be pulled by the pool’s VMs.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The password to log into the registry server. Changing this forces a new resource to be created.</p></li>
@@ -794,6 +795,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">container_configuration</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.batch.Pool.container_configuration" title="Permalink to this definition">¶</a></dt>
 <dd><p>The container configuration used in the pool’s VMs.</p>
 <ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">containerImageNames</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of container image names to use, as would be specified by <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">pull</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">containerRegistries</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Additional container registries from which container images can be pulled by the pool’s VMs.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The password to log into the registry server. Changing this forces a new resource to be created.</p></li>
@@ -976,6 +978,7 @@ properties used to qualify the lookup.</p>
 </ul>
 <p>The <strong>container_configuration</strong> object supports the following:</p>
 <ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">containerImageNames</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of container image names to use, as would be specified by <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">pull</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">containerRegistries</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Additional container registries from which container images can be pulled by the pool’s VMs.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The password to log into the registry server. Changing this forces a new resource to be created.</p></li>

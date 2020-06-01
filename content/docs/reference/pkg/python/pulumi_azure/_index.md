@@ -15,6 +15,7 @@ anything, please consult the source <a class="reference external" href="https://
 </div></blockquote>
 <div class="toctree-wrapper compound">
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="advisor/">advisor</a></li>
 <li class="toctree-l1"><a class="reference internal" href="analysisservices/">analysisservices</a></li>
 <li class="toctree-l1"><a class="reference internal" href="apimanagement/">apimanagement</a></li>
 <li class="toctree-l1"><a class="reference internal" href="appconfiguration/">appconfiguration</a></li>

@@ -28,11 +28,11 @@ anything, please consult the source <a class="reference external" href="https://
 <span class="n">frontend</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">network</span><span class="o">.</span><span class="n">Subnet</span><span class="p">(</span><span class="s2">&quot;frontend&quot;</span><span class="p">,</span>
     <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
     <span class="n">virtual_network_name</span><span class="o">=</span><span class="n">example_virtual_network</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
-    <span class="n">address_prefix</span><span class="o">=</span><span class="s2">&quot;10.254.0.0/24&quot;</span><span class="p">)</span>
+    <span class="n">address_prefixes</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;10.254.0.0/24&quot;</span><span class="p">])</span>
 <span class="n">backend</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">network</span><span class="o">.</span><span class="n">Subnet</span><span class="p">(</span><span class="s2">&quot;backend&quot;</span><span class="p">,</span>
     <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
     <span class="n">virtual_network_name</span><span class="o">=</span><span class="n">example_virtual_network</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
-    <span class="n">address_prefix</span><span class="o">=</span><span class="s2">&quot;10.254.2.0/24&quot;</span><span class="p">)</span>
+    <span class="n">address_prefixes</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;10.254.2.0/24&quot;</span><span class="p">])</span>
 <span class="n">example_public_ip</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">network</span><span class="o">.</span><span class="n">PublicIp</span><span class="p">(</span><span class="s2">&quot;examplePublicIp&quot;</span><span class="p">,</span>
     <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
     <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
@@ -62,7 +62,7 @@ anything, please consult the source <a class="reference external" href="https://
     <span class="p">}],</span>
     <span class="n">frontend_ip_configuration</span><span class="o">=</span><span class="p">[{</span>
         <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="n">frontend_ip_configuration_name</span><span class="p">,</span>
-        <span class="s2">&quot;publicIpAddressId&quot;</span><span class="p">:</span> <span class="n">example_public_ip</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;public_ip_address_id&quot;</span><span class="p">:</span> <span class="n">example_public_ip</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
     <span class="p">}],</span>
     <span class="n">backend_address_pool</span><span class="o">=</span><span class="p">[{</span>
         <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="n">backend_address_pool_name</span><span class="p">,</span>
@@ -183,7 +183,7 @@ anything, please consult the source <a class="reference external" href="https://
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Frontend IP Configuration.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">private_ip_address</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Private IP Address to use for the Application Gateway.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">privateIpAddressAllocation</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Allocation Method for the Private IP Address. Possible values are <code class="docutils literal notranslate"><span class="pre">Dynamic</span></code> and <code class="docutils literal notranslate"><span class="pre">Static</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">publicIpAddressId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of a Public IP Address which the Application Gateway should use.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public_ip_address_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of a Public IP Address which the Application Gateway should use.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Subnet which the Application Gateway should be connected to.</p></li>
 </ul>
 <p>The <strong>frontend_ports</strong> object supports the following:</p>
@@ -483,7 +483,7 @@ are published here <a class="reference external" href="https://docs.microsoft.co
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the Frontend IP Configuration.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">private_ip_address</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Private IP Address to use for the Application Gateway.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">privateIpAddressAllocation</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Allocation Method for the Private IP Address. Possible values are <code class="docutils literal notranslate"><span class="pre">Dynamic</span></code> and <code class="docutils literal notranslate"><span class="pre">Static</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">publicIpAddressId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of a Public IP Address which the Application Gateway should use.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public_ip_address_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of a Public IP Address which the Application Gateway should use.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the Subnet which the Application Gateway should be connected to.</p></li>
 </ul>
 </dd></dl>
@@ -886,7 +886,7 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Frontend IP Configuration.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">private_ip_address</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Private IP Address to use for the Application Gateway.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">privateIpAddressAllocation</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Allocation Method for the Private IP Address. Possible values are <code class="docutils literal notranslate"><span class="pre">Dynamic</span></code> and <code class="docutils literal notranslate"><span class="pre">Static</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">publicIpAddressId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of a Public IP Address which the Application Gateway should use.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public_ip_address_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of a Public IP Address which the Application Gateway should use.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Subnet which the Application Gateway should be connected to.</p></li>
 </ul>
 <p>The <strong>frontend_ports</strong> object supports the following:</p>
@@ -2141,7 +2141,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">ip_configuration</span><span class="o">=</span><span class="p">[{</span>
         <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;configuration&quot;</span><span class="p">,</span>
         <span class="s2">&quot;subnet_id&quot;</span><span class="p">:</span> <span class="n">example_subnet</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
-        <span class="s2">&quot;publicIpAddressId&quot;</span><span class="p">:</span> <span class="n">example_public_ip</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;public_ip_address_id&quot;</span><span class="p">:</span> <span class="n">example_public_ip</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
     <span class="p">}])</span>
 </pre></div>
 </div>
@@ -2163,7 +2163,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the name of the IP Configuration.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">private_ip_address</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The private IP address of the Azure Firewall.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">publicIpAddressId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Resource ID of the Public IP Address associated with the firewall.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public_ip_address_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Resource ID of the Public IP Address associated with the firewall.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Reference to the subnet associated with the IP Configuration.</p></li>
 </ul>
 <dl class="py attribute">
@@ -2173,7 +2173,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the name of the IP Configuration.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">private_ip_address</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The private IP address of the Azure Firewall.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">publicIpAddressId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Resource ID of the Public IP Address associated with the firewall.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public_ip_address_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Resource ID of the Public IP Address associated with the firewall.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Reference to the subnet associated with the IP Configuration.</p></li>
 </ul>
 </dd></dl>
@@ -2232,7 +2232,7 @@ properties used to qualify the lookup.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the name of the IP Configuration.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">private_ip_address</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The private IP address of the Azure Firewall.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">publicIpAddressId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Resource ID of the Public IP Address associated with the firewall.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public_ip_address_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Resource ID of the Public IP Address associated with the firewall.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Reference to the subnet associated with the IP Configuration.</p></li>
 </ul>
 </dd></dl>
@@ -2302,7 +2302,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">ip_configuration</span><span class="o">=</span><span class="p">[{</span>
         <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;configuration&quot;</span><span class="p">,</span>
         <span class="s2">&quot;subnet_id&quot;</span><span class="p">:</span> <span class="n">example_subnet</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
-        <span class="s2">&quot;publicIpAddressId&quot;</span><span class="p">:</span> <span class="n">example_public_ip</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;public_ip_address_id&quot;</span><span class="p">:</span> <span class="n">example_public_ip</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
     <span class="p">}])</span>
 <span class="n">example_firewall_application_rule_collection</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">network</span><span class="o">.</span><span class="n">FirewallApplicationRuleCollection</span><span class="p">(</span><span class="s2">&quot;exampleFirewallApplicationRuleCollection&quot;</span><span class="p">,</span>
     <span class="n">azure_firewall_name</span><span class="o">=</span><span class="n">example_firewall</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
@@ -2498,7 +2498,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">ip_configuration</span><span class="o">=</span><span class="p">[{</span>
         <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;configuration&quot;</span><span class="p">,</span>
         <span class="s2">&quot;subnet_id&quot;</span><span class="p">:</span> <span class="n">example_subnet</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
-        <span class="s2">&quot;publicIpAddressId&quot;</span><span class="p">:</span> <span class="n">example_public_ip</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;public_ip_address_id&quot;</span><span class="p">:</span> <span class="n">example_public_ip</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
     <span class="p">}])</span>
 <span class="n">example_firewall_nat_rule_collection</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">network</span><span class="o">.</span><span class="n">FirewallNatRuleCollection</span><span class="p">(</span><span class="s2">&quot;exampleFirewallNatRuleCollection&quot;</span><span class="p">,</span>
     <span class="n">azure_firewall_name</span><span class="o">=</span><span class="n">example_firewall</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
@@ -2688,7 +2688,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">ip_configuration</span><span class="o">=</span><span class="p">[{</span>
         <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;configuration&quot;</span><span class="p">,</span>
         <span class="s2">&quot;subnet_id&quot;</span><span class="p">:</span> <span class="n">example_subnet</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
-        <span class="s2">&quot;publicIpAddressId&quot;</span><span class="p">:</span> <span class="n">example_public_ip</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;public_ip_address_id&quot;</span><span class="p">:</span> <span class="n">example_public_ip</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
     <span class="p">}])</span>
 <span class="n">example_firewall_network_rule_collection</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">network</span><span class="o">.</span><span class="n">FirewallNetworkRuleCollection</span><span class="p">(</span><span class="s2">&quot;exampleFirewallNetworkRuleCollection&quot;</span><span class="p">,</span>
     <span class="n">azure_firewall_name</span><span class="o">=</span><span class="n">example_firewall</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
@@ -4041,6 +4041,106 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="py class">
+<dt id="pulumi_azure.network.NatGatewayPublicIpAssociation">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.network.</code><code class="sig-name descname">NatGatewayPublicIpAssociation</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">nat_gateway_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">public_ip_address_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.NatGatewayPublicIpAssociation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Manages the association between a Nat Gateway and a Public IP.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West Europe&quot;</span><span class="p">)</span>
+<span class="n">example_public_ip</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">network</span><span class="o">.</span><span class="n">PublicIp</span><span class="p">(</span><span class="s2">&quot;examplePublicIp&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">allocation_method</span><span class="o">=</span><span class="s2">&quot;Static&quot;</span><span class="p">,</span>
+    <span class="n">sku</span><span class="o">=</span><span class="s2">&quot;Standard&quot;</span><span class="p">)</span>
+<span class="n">example_nat_gateway</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">network</span><span class="o">.</span><span class="n">NatGateway</span><span class="p">(</span><span class="s2">&quot;exampleNatGateway&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">sku_name</span><span class="o">=</span><span class="s2">&quot;Standard&quot;</span><span class="p">)</span>
+<span class="n">example_nat_gateway_public_ip_association</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">network</span><span class="o">.</span><span class="n">NatGatewayPublicIpAssociation</span><span class="p">(</span><span class="s2">&quot;exampleNatGatewayPublicIpAssociation&quot;</span><span class="p">,</span>
+    <span class="n">nat_gateway_id</span><span class="o">=</span><span class="n">example_nat_gateway</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">public_ip_address_id</span><span class="o">=</span><span class="n">example_public_ip</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>nat_gateway_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Nat Gateway. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>public_ip_address_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Public IP which this Nat Gateway which should be connected to. Changing this forces a new resource to be created.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt id="pulumi_azure.network.NatGatewayPublicIpAssociation.nat_gateway_id">
+<code class="sig-name descname">nat_gateway_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.NatGatewayPublicIpAssociation.nat_gateway_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the Nat Gateway. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_azure.network.NatGatewayPublicIpAssociation.public_ip_address_id">
+<code class="sig-name descname">public_ip_address_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.NatGatewayPublicIpAssociation.public_ip_address_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the Public IP which this Nat Gateway which should be connected to. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_azure.network.NatGatewayPublicIpAssociation.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">nat_gateway_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">public_ip_address_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.NatGatewayPublicIpAssociation.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing NatGatewayPublicIpAssociation resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>nat_gateway_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Nat Gateway. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>public_ip_address_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Public IP which this Nat Gateway which should be connected to. Changing this forces a new resource to be created.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_azure.network.NatGatewayPublicIpAssociation.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.NatGatewayPublicIpAssociation.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_azure.network.NatGatewayPublicIpAssociation.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.NatGatewayPublicIpAssociation.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt id="pulumi_azure.network.NetworkConnectionMonitor">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.network.</code><code class="sig-name descname">NetworkConnectionMonitor</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">auto_start</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">destination</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">interval_in_seconds</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network_watcher_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">source</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.NetworkConnectionMonitor" title="Permalink to this definition">¶</a></dt>
 <dd><p>Configures a Network Connection Monitor to monitor communication between a Virtual Machine and an endpoint using a Network Watcher.</p>
@@ -4328,7 +4428,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">private_ip_address</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Static IP Address which should be used.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">privateIpAddressAllocation</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The allocation method used for the Private IP Address. Possible values are <code class="docutils literal notranslate"><span class="pre">Dynamic</span></code> and <code class="docutils literal notranslate"><span class="pre">Static</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">privateIpAddressVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The IP Version to use. Possible values are <code class="docutils literal notranslate"><span class="pre">IPv4</span></code> or <code class="docutils literal notranslate"><span class="pre">IPv6</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">IPv4</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">publicIpAddressId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Reference to a Public IP Address to associate with this NIC</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public_ip_address_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Reference to a Public IP Address to associate with this NIC</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Subnet where this Network Interface should be located in.</p></li>
 </ul>
 <dl class="py attribute">
@@ -4377,7 +4477,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">private_ip_address</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Static IP Address which should be used.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">privateIpAddressAllocation</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The allocation method used for the Private IP Address. Possible values are <code class="docutils literal notranslate"><span class="pre">Dynamic</span></code> and <code class="docutils literal notranslate"><span class="pre">Static</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">privateIpAddressVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The IP Version to use. Possible values are <code class="docutils literal notranslate"><span class="pre">IPv4</span></code> or <code class="docutils literal notranslate"><span class="pre">IPv6</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">IPv4</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">publicIpAddressId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Reference to a Public IP Address to associate with this NIC</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public_ip_address_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Reference to a Public IP Address to associate with this NIC</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the Subnet where this Network Interface should be located in.</p></li>
 </ul>
 </dd></dl>
@@ -4466,7 +4566,7 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">private_ip_address</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Static IP Address which should be used.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">privateIpAddressAllocation</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The allocation method used for the Private IP Address. Possible values are <code class="docutils literal notranslate"><span class="pre">Dynamic</span></code> and <code class="docutils literal notranslate"><span class="pre">Static</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">privateIpAddressVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The IP Version to use. Possible values are <code class="docutils literal notranslate"><span class="pre">IPv4</span></code> or <code class="docutils literal notranslate"><span class="pre">IPv6</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">IPv4</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">publicIpAddressId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Reference to a Public IP Address to associate with this NIC</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public_ip_address_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Reference to a Public IP Address to associate with this NIC</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Subnet where this Network Interface should be located in.</p></li>
 </ul>
 </dd></dl>
@@ -4557,7 +4657,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="p">}],</span>
     <span class="n">frontend_ip_configuration</span><span class="o">=</span><span class="p">[{</span>
         <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="n">frontend_ip_configuration_name</span><span class="p">,</span>
-        <span class="s2">&quot;publicIpAddressId&quot;</span><span class="p">:</span> <span class="n">example_public_ip</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;public_ip_address_id&quot;</span><span class="p">:</span> <span class="n">example_public_ip</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
     <span class="p">}],</span>
     <span class="n">backend_address_pool</span><span class="o">=</span><span class="p">[{</span>
         <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="n">backend_address_pool_name</span><span class="p">,</span>
@@ -4818,7 +4918,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
     <span class="n">frontend_ip_configuration</span><span class="o">=</span><span class="p">[{</span>
         <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;primary&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;publicIpAddressId&quot;</span><span class="p">:</span> <span class="n">example_public_ip</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;public_ip_address_id&quot;</span><span class="p">:</span> <span class="n">example_public_ip</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
     <span class="p">}])</span>
 <span class="n">example_backend_address_pool</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">lb</span><span class="o">.</span><span class="n">BackendAddressPool</span><span class="p">(</span><span class="s2">&quot;exampleBackendAddressPool&quot;</span><span class="p">,</span>
     <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
@@ -4948,7 +5048,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
     <span class="n">frontend_ip_configuration</span><span class="o">=</span><span class="p">[{</span>
         <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;primary&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;publicIpAddressId&quot;</span><span class="p">:</span> <span class="n">example_public_ip</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;public_ip_address_id&quot;</span><span class="p">:</span> <span class="n">example_public_ip</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
     <span class="p">}])</span>
 <span class="n">example_nat_rule</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">lb</span><span class="o">.</span><span class="n">NatRule</span><span class="p">(</span><span class="s2">&quot;exampleNatRule&quot;</span><span class="p">,</span>
     <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
@@ -6754,8 +6854,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West US&quot;</span><span class="p">)</span>
 <span class="n">example_public_ip</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">network</span><span class="o">.</span><span class="n">PublicIp</span><span class="p">(</span><span class="s2">&quot;examplePublicIp&quot;</span><span class="p">,</span>
-    <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West US&quot;</span><span class="p">,</span>
     <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
     <span class="n">allocation_method</span><span class="o">=</span><span class="s2">&quot;Static&quot;</span><span class="p">,</span>
     <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
         <span class="s2">&quot;environment&quot;</span><span class="p">:</span> <span class="s2">&quot;Production&quot;</span><span class="p">,</span>
@@ -7218,15 +7318,43 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_azure.network.RouteTable">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.network.</code><code class="sig-name descname">RouteTable</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">disable_bgp_route_propagation</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">routes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.RouteTable" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a RouteTable resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[bool] disable_bgp_route_propagation: Boolean flag which controls propagation of routes learned by BGP on that route table. True means disable.
-:param pulumi.Input[str] location: Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
-:param pulumi.Input[str] name: The name of the route.
-:param pulumi.Input[str] resource_group_name: The name of the resource group in which to create the route table. Changing this forces a new resource to be created.
-:param pulumi.Input[list] routes: A list of objects representing routes. Each object accepts the arguments documented below.
-:param pulumi.Input[dict] tags: A mapping of tags to assign to the resource.</p>
+<dd><p>Manages a Route Table</p>
+<blockquote>
+<div><p><strong>NOTE on Route Tables and Routes:</strong> There is both a standalone <code class="docutils literal notranslate"><span class="pre">route</span></code> resource, and allows for Routes to be defined in-line within the <code class="docutils literal notranslate"><span class="pre">route_table</span></code> resource.
+At this time you cannot use a Route Table with in-line Routes in conjunction with any Route resources. Doing so will cause a conflict of Route configurations and will overwrite Routes.</p>
+</div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_azure</span> <span class="k">as</span> <span class="nn">azure</span>
+
+<span class="n">example_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;exampleResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;West US&quot;</span><span class="p">)</span>
+<span class="n">example_route_table</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">network</span><span class="o">.</span><span class="n">RouteTable</span><span class="p">(</span><span class="s2">&quot;exampleRouteTable&quot;</span><span class="p">,</span>
+    <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
+    <span class="n">resource_group_name</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">disable_bgp_route_propagation</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">route</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;route1&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;address_prefix&quot;</span><span class="p">:</span> <span class="s2">&quot;10.1.0.0/16&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;next_hop_type&quot;</span><span class="p">:</span> <span class="s2">&quot;vnetlocal&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;environment&quot;</span><span class="p">:</span> <span class="s2">&quot;Production&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>disable_bgp_route_propagation</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Boolean flag which controls propagation of routes learned by BGP on that route table. True means disable.</p></li>
+<li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the route.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to create the route table. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>routes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of objects representing routes. Each object accepts the arguments documented below.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+</ul>
+</dd>
+</dl>
 <p>The <strong>routes</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">address_prefix</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The destination CIDR to which the route applies, such as 10.1.0.0/16</p></li>
@@ -8981,7 +9109,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">sku</span><span class="o">=</span><span class="s2">&quot;Basic&quot;</span><span class="p">,</span>
     <span class="n">ip_configuration</span><span class="o">=</span><span class="p">[{</span>
         <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;vnetGatewayConfig&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;publicIpAddressId&quot;</span><span class="p">:</span> <span class="n">example_public_ip</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;public_ip_address_id&quot;</span><span class="p">:</span> <span class="n">example_public_ip</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
         <span class="s2">&quot;privateIpAddressAllocation&quot;</span><span class="p">:</span> <span class="s2">&quot;Dynamic&quot;</span><span class="p">,</span>
         <span class="s2">&quot;subnet_id&quot;</span><span class="p">:</span> <span class="n">example_subnet</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
     <span class="p">}],</span>
@@ -9078,7 +9206,7 @@ the Virtual Network Gateway. Changing this forces a new resource to be created.<
 <li><p><code class="docutils literal notranslate"><span class="pre">privateIpAddressAllocation</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Defines how the private IP address
 of the gateways virtual interface is assigned. Valid options are <code class="docutils literal notranslate"><span class="pre">Static</span></code> or
 <code class="docutils literal notranslate"><span class="pre">Dynamic</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">Dynamic</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">publicIpAddressId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the public ip address to associate
+<li><p><code class="docutils literal notranslate"><span class="pre">public_ip_address_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the public ip address to associate
 with the Virtual Network Gateway.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the gateway subnet of a virtual network in
 which the virtual network gateway will be created. It is mandatory that
@@ -9158,7 +9286,7 @@ an active-active gateway requires exactly two <code class="docutils literal notr
 <li><p><code class="docutils literal notranslate"><span class="pre">privateIpAddressAllocation</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Defines how the private IP address
 of the gateways virtual interface is assigned. Valid options are <code class="docutils literal notranslate"><span class="pre">Static</span></code> or
 <code class="docutils literal notranslate"><span class="pre">Dynamic</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">Dynamic</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">publicIpAddressId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the public ip address to associate
+<li><p><code class="docutils literal notranslate"><span class="pre">public_ip_address_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the public ip address to associate
 with the Virtual Network Gateway.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the gateway subnet of a virtual network in
 which the virtual network gateway will be created. It is mandatory that
@@ -9324,7 +9452,7 @@ the Virtual Network Gateway. Changing this forces a new resource to be created.<
 <li><p><code class="docutils literal notranslate"><span class="pre">privateIpAddressAllocation</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Defines how the private IP address
 of the gateways virtual interface is assigned. Valid options are <code class="docutils literal notranslate"><span class="pre">Static</span></code> or
 <code class="docutils literal notranslate"><span class="pre">Dynamic</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">Dynamic</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">publicIpAddressId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the public ip address to associate
+<li><p><code class="docutils literal notranslate"><span class="pre">public_ip_address_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the public ip address to associate
 with the Virtual Network Gateway.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the gateway subnet of a virtual network in
 which the virtual network gateway will be created. It is mandatory that
@@ -9435,7 +9563,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">enable_bgp</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
     <span class="n">sku</span><span class="o">=</span><span class="s2">&quot;Basic&quot;</span><span class="p">,</span>
     <span class="n">ip_configuration</span><span class="o">=</span><span class="p">[{</span>
-        <span class="s2">&quot;publicIpAddressId&quot;</span><span class="p">:</span> <span class="n">example_public_ip</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;public_ip_address_id&quot;</span><span class="p">:</span> <span class="n">example_public_ip</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
         <span class="s2">&quot;privateIpAddressAllocation&quot;</span><span class="p">:</span> <span class="s2">&quot;Dynamic&quot;</span><span class="p">,</span>
         <span class="s2">&quot;subnet_id&quot;</span><span class="p">:</span> <span class="n">example_subnet</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
     <span class="p">}])</span>
@@ -9471,7 +9599,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">vpn_type</span><span class="o">=</span><span class="s2">&quot;RouteBased&quot;</span><span class="p">,</span>
     <span class="n">sku</span><span class="o">=</span><span class="s2">&quot;Basic&quot;</span><span class="p">,</span>
     <span class="n">ip_configuration</span><span class="o">=</span><span class="p">[{</span>
-        <span class="s2">&quot;publicIpAddressId&quot;</span><span class="p">:</span> <span class="n">us_public_ip</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;public_ip_address_id&quot;</span><span class="p">:</span> <span class="n">us_public_ip</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
         <span class="s2">&quot;privateIpAddressAllocation&quot;</span><span class="p">:</span> <span class="s2">&quot;Dynamic&quot;</span><span class="p">,</span>
         <span class="s2">&quot;subnet_id&quot;</span><span class="p">:</span> <span class="n">us_gateway</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
     <span class="p">}])</span>
@@ -9495,7 +9623,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">vpn_type</span><span class="o">=</span><span class="s2">&quot;RouteBased&quot;</span><span class="p">,</span>
     <span class="n">sku</span><span class="o">=</span><span class="s2">&quot;Basic&quot;</span><span class="p">,</span>
     <span class="n">ip_configuration</span><span class="o">=</span><span class="p">[{</span>
-        <span class="s2">&quot;publicIpAddressId&quot;</span><span class="p">:</span> <span class="n">europe_public_ip</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;public_ip_address_id&quot;</span><span class="p">:</span> <span class="n">europe_public_ip</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
         <span class="s2">&quot;privateIpAddressAllocation&quot;</span><span class="p">:</span> <span class="s2">&quot;Dynamic&quot;</span><span class="p">,</span>
         <span class="s2">&quot;subnet_id&quot;</span><span class="p">:</span> <span class="n">europe_gateway</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
     <span class="p">}])</span>
@@ -10949,7 +11077,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
         <span class="s2">&quot;subnet_id&quot;</span><span class="p">:</span> <span class="n">example_subnet</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
         <span class="s2">&quot;privateIpAddressAllocation&quot;</span><span class="p">:</span> <span class="s2">&quot;Static&quot;</span><span class="p">,</span>
         <span class="s2">&quot;private_ip_address&quot;</span><span class="p">:</span> <span class="s2">&quot;10.0.2.5&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;publicIpAddressId&quot;</span><span class="p">:</span> <span class="n">example_public_ip</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">&quot;public_ip_address_id&quot;</span><span class="p">:</span> <span class="n">example_public_ip</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
     <span class="p">}])</span>
 <span class="n">example_virtual_machine</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">VirtualMachine</span><span class="p">(</span><span class="s2">&quot;exampleVirtualMachine&quot;</span><span class="p">,</span>
     <span class="n">location</span><span class="o">=</span><span class="n">example_resource_group</span><span class="o">.</span><span class="n">location</span><span class="p">,</span>
