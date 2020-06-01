@@ -114,7 +114,7 @@ const rds = new aws.rds.Instance('sample', {
   availabilityZone: 'us-east-1b',
   instanceClass: 'db.t2.micro',
   allocatedStorage: 20,
-  protect: true,
+  deletionProtection: true,
 
   // For a VPC cluster, you will also need the following:
   // dbSubnetGroupName: 'sg-db01-replication-1',
