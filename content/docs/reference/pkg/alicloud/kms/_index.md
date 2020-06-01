@@ -14,6 +14,7 @@ Explore the resources and functions of the kms module in the AliCloud package.
     <li><a href="alias" title="Alias"><span class="symbol resource"></span>Alias</a></li>
     <li><a href="ciphertext" title="Ciphertext"><span class="symbol resource"></span>Ciphertext</a></li>
     <li><a href="key" title="Key"><span class="symbol resource"></span>Key</a></li>
+    <li><a href="keyversion" title="KeyVersion"><span class="symbol resource"></span>KeyVersion</a></li>
     <li><a href="secret" title="Secret"><span class="symbol resource"></span>Secret</a></li>
 </ul>
 
@@ -21,6 +22,7 @@ Explore the resources and functions of the kms module in the AliCloud package.
 <ul class="api">
     <li><a href="getaliases" title="GetAliases"><span class="symbol function"></span>GetAliases</a></li>
     <li><a href="getciphertext" title="GetCiphertext"><span class="symbol function"></span>GetCiphertext</a></li>
+    <li><a href="getkeyversions" title="GetKeyVersions"><span class="symbol function"></span>GetKeyVersions</a></li>
     <li><a href="getkeys" title="GetKeys"><span class="symbol function"></span>GetKeys</a></li>
     <li><a href="getplaintext" title="GetPlaintext"><span class="symbol function"></span>GetPlaintext</a></li>
 </ul>
@@ -34,7 +36,7 @@ Explore the resources and functions of the kms module in the AliCloud package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
 	<dt>Version</dt>
-	<dd>2.6.0</dd>
+	<dd>2.7.0</dd>
 </dl>
 
 

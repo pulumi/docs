@@ -118,6 +118,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd></dd></dl>
 
 <dl class="py class">
+<dt id="pulumi_alicloud.kms.AwaitableGetKeyVersionsResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.kms.</code><code class="sig-name descname">AwaitableGetKeyVersionsResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">versions</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.kms.AwaitableGetKeyVersionsResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
 <dt id="pulumi_alicloud.kms.AwaitableGetKeysResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.kms.</code><code class="sig-name descname">AwaitableGetKeysResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">description_regex</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">keys</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">status</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.kms.AwaitableGetKeysResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
@@ -283,6 +288,36 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="py class">
+<dt id="pulumi_alicloud.kms.GetKeyVersionsResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.kms.</code><code class="sig-name descname">GetKeyVersionsResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">versions</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.kms.GetKeyVersionsResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getKeyVersions.</p>
+<dl class="py attribute">
+<dt id="pulumi_alicloud.kms.GetKeyVersionsResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.kms.GetKeyVersionsResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.kms.GetKeyVersionsResult.ids">
+<code class="sig-name descname">ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.kms.GetKeyVersionsResult.ids" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of KMS KeyVersion IDs.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.kms.GetKeyVersionsResult.key_id">
+<code class="sig-name descname">key_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.kms.GetKeyVersionsResult.key_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>ID of the key.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.kms.GetKeyVersionsResult.versions">
+<code class="sig-name descname">versions</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.kms.GetKeyVersionsResult.versions" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of KMS KeyVersions. Each element contains the following attributes:</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt id="pulumi_alicloud.kms.GetKeysResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.kms.</code><code class="sig-name descname">GetKeysResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">description_regex</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">keys</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">status</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.kms.GetKeysResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getKeys.</p>
@@ -338,15 +373,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py class">
 <dt id="pulumi_alicloud.kms.Key">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.kms.</code><code class="sig-name descname">Key</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">deletion_window_in_days</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">is_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key_usage</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.kms.Key" title="Permalink to this definition">¶</a></dt>
-<dd><p>A kms key can help user to protect data security in the transmission process.</p>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.kms.</code><code class="sig-name descname">Key</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">automatic_rotation</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">deletion_window_in_days</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">is_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key_spec</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key_state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key_usage</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">origin</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pending_window_in_days</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">protection_level</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">rotation_interval</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.kms.Key" title="Permalink to this definition">¶</a></dt>
+<dd><p>A kms key can help user to protect data security in the transmission process. For information about Alikms Key and how to use it, see <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/28947.htm">What is Resource Alikms Key</a>.</p>
+<blockquote>
+<div><p><strong>NOTE:</strong> Available in v1.85.0+.</p>
+</div></blockquote>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
 
 <span class="n">key</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">kms</span><span class="o">.</span><span class="n">Key</span><span class="p">(</span><span class="s2">&quot;key&quot;</span><span class="p">,</span>
-    <span class="n">deletion_window_in_days</span><span class="o">=</span><span class="s2">&quot;7&quot;</span><span class="p">,</span>
     <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Hello KMS&quot;</span><span class="p">,</span>
-    <span class="n">is_enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">key_state</span><span class="o">=</span><span class="s2">&quot;Enabled&quot;</span><span class="p">,</span>
+    <span class="n">pending_window_in_days</span><span class="o">=</span><span class="s2">&quot;7&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -354,11 +392,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>deletion_window_in_days</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Duration in days after which the key is deleted
-after destruction of the resource, must be between 7 and 30 days. Defaults to 30 days.</p></li>
-<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the key.</p></li>
-<li><p><strong>is_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether the key is enabled. Defaults to true.</p></li>
+<li><p><strong>automatic_rotation</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies whether to enable automatic key rotation. Default:”Disabled”.</p></li>
+<li><p><strong>deletion_window_in_days</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Field ‘deletion_window_in_days’ has been deprecated from provider version 1.85.0. New field ‘pending_window_in_days’ instead.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the key as viewed in Alicloud console.</p></li>
+<li><p><strong>is_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Field ‘is_enabled’ has been deprecated from provider version 1.85.0. New field ‘key_state’ instead.</p></li>
+<li><p><strong>key_spec</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of the CMK.</p></li>
+<li><p><strong>key_state</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The status of CMK. Defaults to Enabled.</p></li>
 <li><p><strong>key_usage</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the usage of CMK. Currently, default to ‘ENCRYPT/DECRYPT’, indicating that CMK is used for encryption and decryption.</p></li>
+<li><p><strong>origin</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The source of the key material for the CMK. Defaults to “Aliyun_KMS”.</p></li>
+<li><p><strong>pending_window_in_days</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Duration in days after which the key is deleted after destruction of the resource, must be between 7 and 30 days. Defaults to 30 days.</p></li>
+<li><p><strong>protection_level</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The protection level of the CMK. Defaults to “SOFTWARE”.</p></li>
+<li><p><strong>rotation_interval</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The period of automatic key rotation. Unit: seconds.</p></li>
 </ul>
 </dd>
 </dl>
@@ -366,25 +410,47 @@ after destruction of the resource, must be between 7 and 30 days. Defaults to 30
 <dt id="pulumi_alicloud.kms.Key.arn">
 <code class="sig-name descname">arn</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.kms.Key.arn" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Alicloud Resource Name (ARN) of the key.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">creation_date</span></code> -The date and time when the CMK was created. The time is displayed in UTC.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">creator</span></code> -The creator of the CMK.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">delete_date</span></code> -The scheduled date to delete CMK. The time is displayed in UTC. This value is returned only when the KeyState value is PendingDeletion.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.kms.Key.automatic_rotation">
+<code class="sig-name descname">automatic_rotation</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.kms.Key.automatic_rotation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies whether to enable automatic key rotation. Default:”Disabled”.</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt id="pulumi_alicloud.kms.Key.deletion_window_in_days">
 <code class="sig-name descname">deletion_window_in_days</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.kms.Key.deletion_window_in_days" title="Permalink to this definition">¶</a></dt>
-<dd><p>Duration in days after which the key is deleted
-after destruction of the resource, must be between 7 and 30 days. Defaults to 30 days.</p>
+<dd><p>Field ‘deletion_window_in_days’ has been deprecated from provider version 1.85.0. New field ‘pending_window_in_days’ instead.</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt id="pulumi_alicloud.kms.Key.description">
 <code class="sig-name descname">description</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.kms.Key.description" title="Permalink to this definition">¶</a></dt>
-<dd><p>The description of the key.</p>
+<dd><p>The description of the key as viewed in Alicloud console.</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt id="pulumi_alicloud.kms.Key.is_enabled">
 <code class="sig-name descname">is_enabled</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.kms.Key.is_enabled" title="Permalink to this definition">¶</a></dt>
-<dd><p>Specifies whether the key is enabled. Defaults to true.</p>
+<dd><p>Field ‘is_enabled’ has been deprecated from provider version 1.85.0. New field ‘key_state’ instead.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.kms.Key.key_spec">
+<code class="sig-name descname">key_spec</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.kms.Key.key_spec" title="Permalink to this definition">¶</a></dt>
+<dd><p>The type of the CMK.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.kms.Key.key_state">
+<code class="sig-name descname">key_state</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.kms.Key.key_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>The status of CMK. Defaults to Enabled.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -393,9 +459,57 @@ after destruction of the resource, must be between 7 and 30 days. Defaults to 30
 <dd><p>Specifies the usage of CMK. Currently, default to ‘ENCRYPT/DECRYPT’, indicating that CMK is used for encryption and decryption.</p>
 </dd></dl>
 
+<dl class="py attribute">
+<dt id="pulumi_alicloud.kms.Key.last_rotation_date">
+<code class="sig-name descname">last_rotation_date</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.kms.Key.last_rotation_date" title="Permalink to this definition">¶</a></dt>
+<dd><p>The date and time the last rotation was performed. The time is displayed in UTC.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.kms.Key.material_expire_time">
+<code class="sig-name descname">material_expire_time</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.kms.Key.material_expire_time" title="Permalink to this definition">¶</a></dt>
+<dd><p>The time and date the key material for the CMK expires. The time is displayed in UTC. If the value is empty, the key material for the CMK does not expire.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.kms.Key.next_rotation_date">
+<code class="sig-name descname">next_rotation_date</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.kms.Key.next_rotation_date" title="Permalink to this definition">¶</a></dt>
+<dd><p>The time the next rotation is scheduled for execution.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.kms.Key.origin">
+<code class="sig-name descname">origin</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.kms.Key.origin" title="Permalink to this definition">¶</a></dt>
+<dd><p>The source of the key material for the CMK. Defaults to “Aliyun_KMS”.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.kms.Key.pending_window_in_days">
+<code class="sig-name descname">pending_window_in_days</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.kms.Key.pending_window_in_days" title="Permalink to this definition">¶</a></dt>
+<dd><p>Duration in days after which the key is deleted after destruction of the resource, must be between 7 and 30 days. Defaults to 30 days.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.kms.Key.primary_key_version">
+<code class="sig-name descname">primary_key_version</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.kms.Key.primary_key_version" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the current primary key version of the symmetric CMK.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.kms.Key.protection_level">
+<code class="sig-name descname">protection_level</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.kms.Key.protection_level" title="Permalink to this definition">¶</a></dt>
+<dd><p>The protection level of the CMK. Defaults to “SOFTWARE”.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.kms.Key.rotation_interval">
+<code class="sig-name descname">rotation_interval</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.kms.Key.rotation_interval" title="Permalink to this definition">¶</a></dt>
+<dd><p>The period of automatic key rotation. Unit: seconds.</p>
+</dd></dl>
+
 <dl class="py method">
 <dt id="pulumi_alicloud.kms.Key.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">deletion_window_in_days</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">is_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key_usage</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.kms.Key.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">automatic_rotation</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">creation_date</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">creator</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">delete_date</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">deletion_window_in_days</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">is_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key_spec</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key_state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key_usage</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">last_rotation_date</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">material_expire_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">next_rotation_date</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">origin</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pending_window_in_days</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">primary_key_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">protection_level</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">rotation_interval</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.kms.Key.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Key resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -405,11 +519,32 @@ properties used to qualify the lookup.</p>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Alicloud Resource Name (ARN) of the key.</p></li>
-<li><p><strong>deletion_window_in_days</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Duration in days after which the key is deleted
-after destruction of the resource, must be between 7 and 30 days. Defaults to 30 days.</p></li>
-<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the key.</p></li>
-<li><p><strong>is_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether the key is enabled. Defaults to true.</p></li>
+</ul>
+</dd>
+</dl>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>* `creation_date` -The date and time when the CMK was created. The time is displayed in UTC.
+* `creator` -The creator of the CMK.
+* `delete_date` -The scheduled date to delete CMK. The time is displayed in UTC. This value is returned only when the KeyState value is PendingDeletion.
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>automatic_rotation</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies whether to enable automatic key rotation. Default:”Disabled”.</p></li>
+<li><p><strong>deletion_window_in_days</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Field ‘deletion_window_in_days’ has been deprecated from provider version 1.85.0. New field ‘pending_window_in_days’ instead.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the key as viewed in Alicloud console.</p></li>
+<li><p><strong>is_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Field ‘is_enabled’ has been deprecated from provider version 1.85.0. New field ‘key_state’ instead.</p></li>
+<li><p><strong>key_spec</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of the CMK.</p></li>
+<li><p><strong>key_state</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The status of CMK. Defaults to Enabled.</p></li>
 <li><p><strong>key_usage</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the usage of CMK. Currently, default to ‘ENCRYPT/DECRYPT’, indicating that CMK is used for encryption and decryption.</p></li>
+<li><p><strong>last_rotation_date</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The date and time the last rotation was performed. The time is displayed in UTC.</p></li>
+<li><p><strong>material_expire_time</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The time and date the key material for the CMK expires. The time is displayed in UTC. If the value is empty, the key material for the CMK does not expire.</p></li>
+<li><p><strong>next_rotation_date</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The time the next rotation is scheduled for execution.</p></li>
+<li><p><strong>origin</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The source of the key material for the CMK. Defaults to “Aliyun_KMS”.</p></li>
+<li><p><strong>pending_window_in_days</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Duration in days after which the key is deleted after destruction of the resource, must be between 7 and 30 days. Defaults to 30 days.</p></li>
+<li><p><strong>primary_key_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the current primary key version of the symmetric CMK.</p></li>
+<li><p><strong>protection_level</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The protection level of the CMK. Defaults to “SOFTWARE”.</p></li>
+<li><p><strong>rotation_interval</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The period of automatic key rotation. Unit: seconds.</p></li>
 </ul>
 </dd>
 </dl>
@@ -436,6 +571,104 @@ into a format of their choosing before writing those properties to the resource 
 <dl class="py method">
 <dt id="pulumi_alicloud.kms.Key.translate_input_property">
 <code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.kms.Key.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_alicloud.kms.KeyVersion">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.kms.</code><code class="sig-name descname">KeyVersion</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.kms.KeyVersion" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides a Alikms Key Version resource. For information about Alikms Key Version and how to use it, see <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/133838.htm">What is Resource Alikms Key Version</a>.</p>
+<blockquote>
+<div><p><strong>NOTE:</strong> Available in v1.85.0+.</p>
+</div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">this</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">kms</span><span class="o">.</span><span class="n">Key</span><span class="p">(</span><span class="s2">&quot;this&quot;</span><span class="p">)</span>
+<span class="n">keyversion</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">kms</span><span class="o">.</span><span class="n">KeyVersion</span><span class="p">(</span><span class="s2">&quot;keyversion&quot;</span><span class="p">,</span> <span class="n">key_id</span><span class="o">=</span><span class="n">this</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>key_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The id of the master key (CMK).</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt id="pulumi_alicloud.kms.KeyVersion.creation_date">
+<code class="sig-name descname">creation_date</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.kms.KeyVersion.creation_date" title="Permalink to this definition">¶</a></dt>
+<dd><p>The date and time (UTC time) when the Alikms key version was created.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.kms.KeyVersion.key_id">
+<code class="sig-name descname">key_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.kms.KeyVersion.key_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The id of the master key (CMK).</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.kms.KeyVersion.key_version_id">
+<code class="sig-name descname">key_version_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.kms.KeyVersion.key_version_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The id of the Alikms key version.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_alicloud.kms.KeyVersion.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">creation_date</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key_version_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.kms.KeyVersion.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing KeyVersion resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>creation_date</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The date and time (UTC time) when the Alikms key version was created.</p></li>
+<li><p><strong>key_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The id of the master key (CMK).</p></li>
+<li><p><strong>key_version_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The id of the Alikms key version.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_alicloud.kms.KeyVersion.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.kms.KeyVersion.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_alicloud.kms.KeyVersion.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.kms.KeyVersion.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -646,6 +879,31 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </p></li>
 <li><p><strong>key_id</strong> (<em>str</em>) – The globally unique ID of the CMK.</p></li>
 <li><p><strong>plaintext</strong> (<em>str</em>) – The plaintext to be encrypted which must be encoded in Base64.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pulumi_alicloud.kms.get_key_versions">
+<code class="sig-prename descclassname">pulumi_alicloud.kms.</code><code class="sig-name descname">get_key_versions</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.kms.get_key_versions" title="Permalink to this definition">¶</a></dt>
+<dd><p>This data source provides a list of KMS KeyVersions in an Alibaba Cloud account according to the specified filters.</p>
+<blockquote>
+<div><p>NOTE: Available in v1.85.0+</p>
+</div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">alicloud_kms_key_versions_ds</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">kms</span><span class="o">.</span><span class="n">get_key_versions</span><span class="p">(</span><span class="n">ids</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;d89e8a53-b708-41aa-8c67-6873axxx&quot;</span><span class="p">],</span>
+    <span class="n">key_id</span><span class="o">=</span><span class="s2">&quot;08438c-b4d5-4d05-928c-07b7xxxx&quot;</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;allVersions&quot;</span><span class="p">,</span> <span class="n">alicloud_kms_key_versions_ds</span><span class="o">.</span><span class="n">versions</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ids</strong> (<em>list</em>) – A list of KMS KeyVersion IDs.</p></li>
+<li><p><strong>key_id</strong> (<em>str</em>) – The id of kms key.</p></li>
 </ul>
 </dd>
 </dl>

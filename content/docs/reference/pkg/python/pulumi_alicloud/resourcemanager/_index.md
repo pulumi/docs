@@ -167,6 +167,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd></dd></dl>
 
 <dl class="py class">
+<dt id="pulumi_alicloud.resourcemanager.AwaitableGetPolicyVersionsResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.resourcemanager.</code><code class="sig-name descname">AwaitableGetPolicyVersionsResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">versions</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.resourcemanager.AwaitableGetPolicyVersionsResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
 <dt id="pulumi_alicloud.resourcemanager.AwaitableGetResourceGroupsResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.resourcemanager.</code><code class="sig-name descname">AwaitableGetResourceGroupsResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">groups</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name_regex</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">names</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">status</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.resourcemanager.AwaitableGetResourceGroupsResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
@@ -292,6 +297,30 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_alicloud.resourcemanager.GetFoldersResult.names">
 <code class="sig-name descname">names</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.resourcemanager.GetFoldersResult.names" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of folder names.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_alicloud.resourcemanager.GetPolicyVersionsResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.resourcemanager.</code><code class="sig-name descname">GetPolicyVersionsResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">versions</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.resourcemanager.GetPolicyVersionsResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getPolicyVersions.</p>
+<dl class="py attribute">
+<dt id="pulumi_alicloud.resourcemanager.GetPolicyVersionsResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.resourcemanager.GetPolicyVersionsResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.resourcemanager.GetPolicyVersionsResult.ids">
+<code class="sig-name descname">ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.resourcemanager.GetPolicyVersionsResult.ids" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of policy version IDs.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.resourcemanager.GetPolicyVersionsResult.versions">
+<code class="sig-name descname">versions</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.resourcemanager.GetPolicyVersionsResult.versions" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of policy versions. Each element contains the following attributes:</p>
 </dd></dl>
 
 </dd></dl>
@@ -1151,6 +1180,32 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>ids</strong> (<em>list</em>) – A list of resource manager folders IDs.</p></li>
 <li><p><strong>name_regex</strong> (<em>str</em>) – A regex string to filter results by folder name.</p></li>
 <li><p><strong>parent_folder_id</strong> (<em>str</em>) – The ID of the parent folder.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pulumi_alicloud.resourcemanager.get_policy_versions">
+<code class="sig-prename descclassname">pulumi_alicloud.resourcemanager.</code><code class="sig-name descname">get_policy_versions</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.resourcemanager.get_policy_versions" title="Permalink to this definition">¶</a></dt>
+<dd><p>This data source provides the Resource Manager Policy Versions of the current Alibaba Cloud user.</p>
+<blockquote>
+<div><p><strong>NOTE:</strong>  Available in 1.85.0+.</p>
+</div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
+
+<span class="n">default</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">resourcemanager</span><span class="o">.</span><span class="n">get_policy_versions</span><span class="p">(</span><span class="n">policy_name</span><span class="o">=</span><span class="s2">&quot;tftest&quot;</span><span class="p">,</span>
+    <span class="n">policy_type</span><span class="o">=</span><span class="s2">&quot;Custom&quot;</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;firstPolicyVersionId&quot;</span><span class="p">,</span> <span class="n">default</span><span class="o">.</span><span class="n">versions</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ids</strong> (<em>list</em>) – A list of policy version IDs.</p></li>
+<li><p><strong>policy_name</strong> (<em>str</em>) – The name of the policy.</p></li>
+<li><p><strong>policy_type</strong> (<em>str</em>) – The type of the policy. Valid values:<cite>Custom</cite> and <code class="docutils literal notranslate"><span class="pre">System</span></code>.</p></li>
 </ul>
 </dd>
 </dl>

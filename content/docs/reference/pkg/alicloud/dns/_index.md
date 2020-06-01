@@ -11,6 +11,7 @@ Explore the resources and functions of the dns module in the AliCloud package.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
+    <li><a href="alidnsrecord" title="AlidnsRecord"><span class="symbol resource"></span>AlidnsRecord</a></li>
     <li><a href="ddosbgpinstance" title="DdosBgpInstance"><span class="symbol resource"></span>DdosBgpInstance</a></li>
     <li><a href="ddoscooinstance" title="DdosCooInstance"><span class="symbol resource"></span>DdosCooInstance</a></li>
     <li><a href="dnsdomain" title="DnsDomain"><span class="symbol resource"></span>DnsDomain</a></li>
@@ -24,11 +25,13 @@ Explore the resources and functions of the dns module in the AliCloud package.
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
+    <li><a href="getalidnsdomaingroups" title="GetAlidnsDomainGroups"><span class="symbol function"></span>GetAlidnsDomainGroups</a></li>
     <li><a href="getdomaingroups" title="GetDomainGroups"><span class="symbol function"></span>GetDomainGroups</a></li>
     <li><a href="getdomainrecords" title="GetDomainRecords"><span class="symbol function"></span>GetDomainRecords</a></li>
     <li><a href="getdomaintxtguid" title="GetDomainTxtGuid"><span class="symbol function"></span>GetDomainTxtGuid</a></li>
     <li><a href="getdomains" title="GetDomains"><span class="symbol function"></span>GetDomains</a></li>
     <li><a href="getgroups" title="GetGroups"><span class="symbol function"></span>GetGroups</a></li>
+    <li><a href="getinstances" title="GetInstances"><span class="symbol function"></span>GetInstances</a></li>
     <li><a href="getrecords" title="GetRecords"><span class="symbol function"></span>GetRecords</a></li>
     <li><a href="getresolutionlines" title="GetResolutionLines"><span class="symbol function"></span>GetResolutionLines</a></li>
 </ul>
@@ -42,7 +45,7 @@ Explore the resources and functions of the dns module in the AliCloud package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
 	<dt>Version</dt>
-	<dd>2.6.0</dd>
+	<dd>2.7.0</dd>
 </dl>
 
 

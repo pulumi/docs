@@ -16,7 +16,7 @@ anything, please consult the source <a class="reference external" href="https://
 <span class="target" id="module-pulumi_alicloud.edas"></span><dl class="py class">
 <dt id="pulumi_alicloud.edas.Application">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.edas.</code><code class="sig-name descname">Application</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">application_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">build_pack_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">descriotion</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ecu_infos</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">group_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">health_check_url</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">logical_region_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">package_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">package_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">war_url</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.edas.Application" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides an EDAS application resource.</p>
+<dd><p>Creates an EDAS ecs application on EDAS. The application will be deployed when <code class="docutils literal notranslate"><span class="pre">group_id</span></code> and <code class="docutils literal notranslate"><span class="pre">war_url</span></code> are given.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in 1.82.0+</p>
 </div></blockquote>
@@ -193,32 +193,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_alicloud.edas.ApplicationDeployment">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.edas.</code><code class="sig-name descname">ApplicationDeployment</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">app_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">group_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">package_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">war_url</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.edas.ApplicationDeployment" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides an EDAS application deployment resource.</p>
-<blockquote>
-<div><p><strong>NOTE:</strong> Available in 1.82.0+</p>
-</div></blockquote>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
-<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
-
-<span class="n">default</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">edas</span><span class="o">.</span><span class="n">ApplicationDeployment</span><span class="p">(</span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
-    <span class="n">app_id</span><span class="o">=</span><span class="n">var</span><span class="p">[</span><span class="s2">&quot;app_id&quot;</span><span class="p">],</span>
-    <span class="n">group_id</span><span class="o">=</span><span class="n">var</span><span class="p">[</span><span class="s2">&quot;group_id&quot;</span><span class="p">],</span>
-    <span class="n">package_version</span><span class="o">=</span><span class="n">var</span><span class="p">[</span><span class="s2">&quot;package_version&quot;</span><span class="p">],</span>
-    <span class="n">war_url</span><span class="o">=</span><span class="n">var</span><span class="p">[</span><span class="s2">&quot;war_url&quot;</span><span class="p">])</span>
-</pre></div>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>app_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the application that you want to deploy.</p></li>
-<li><p><strong>group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the instance group where the application is going to be deployed. Set this parameter to all if you want to deploy the application to all groups.</p></li>
-<li><p><strong>package_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The version of the application that you want to deploy. It must be unique for every application. The length cannot exceed 64 characters. We recommended you to use a timestamp.</p></li>
-<li><p><strong>war_url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The address to store the uploaded web application (WAR) package for application deployment. This parameter is required when the deployType parameter is set as url.</p></li>
-</ul>
-</dd>
-</dl>
+<dd><p>Create a ApplicationDeployment resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] app_id: The ID of the application that you want to deploy.
+:param pulumi.Input[str] group_id: The ID of the instance group where the application is going to be deployed. Set this parameter to all if you want to deploy the application to all groups.
+:param pulumi.Input[str] package_version: The version of the application that you want to deploy. It must be unique for every application. The length cannot exceed 64 characters. We recommended you to use a timestamp.
+:param pulumi.Input[str] war_url: The address to store the uploaded web application (WAR) package for application deployment. This parameter is required when the deployType parameter is set as url.</p>
 <dl class="py attribute">
 <dt id="pulumi_alicloud.edas.ApplicationDeployment.app_id">
 <code class="sig-name descname">app_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.edas.ApplicationDeployment.app_id" title="Permalink to this definition">¶</a></dt>
@@ -311,32 +292,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_alicloud.edas.ApplicationScale">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.edas.</code><code class="sig-name descname">ApplicationScale</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">app_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">deploy_group</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ecu_infos</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">force_status</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.edas.ApplicationScale" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides an EDAS application scale resource.</p>
-<blockquote>
-<div><p><strong>NOTE:</strong> Available in 1.82.0+</p>
-</div></blockquote>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
-<span class="kn">import</span> <span class="nn">pulumi_alicloud</span> <span class="k">as</span> <span class="nn">alicloud</span>
-
-<span class="n">default</span> <span class="o">=</span> <span class="n">alicloud</span><span class="o">.</span><span class="n">edas</span><span class="o">.</span><span class="n">ApplicationScale</span><span class="p">(</span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
-    <span class="n">app_id</span><span class="o">=</span><span class="n">var</span><span class="p">[</span><span class="s2">&quot;app_id&quot;</span><span class="p">],</span>
-    <span class="n">deploy_group</span><span class="o">=</span><span class="n">var</span><span class="p">[</span><span class="s2">&quot;deploy_group&quot;</span><span class="p">],</span>
-    <span class="n">ecu_infos</span><span class="o">=</span><span class="n">var</span><span class="p">[</span><span class="s2">&quot;ecu_info&quot;</span><span class="p">],</span>
-    <span class="n">force_status</span><span class="o">=</span><span class="n">var</span><span class="p">[</span><span class="s2">&quot;force_status&quot;</span><span class="p">])</span>
-</pre></div>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>app_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the application that you want to deploy.</p></li>
-<li><p><strong>deploy_group</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the instance group to which you want to add ECS instances to scale out the application.</p></li>
-<li><p><strong>ecu_infos</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The IDs of the Elastic Compute Unit (ECU) where you want to deploy the application. Type: List.</p></li>
-<li><p><strong>force_status</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – This parameter specifies whether to forcibly remove an ECS instance where the application is deployed. It is set as true only after the ECS instance expires. In normal cases, this parameter do not need to be specified.</p></li>
-</ul>
-</dd>
-</dl>
+<dd><p>Create a ApplicationScale resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] app_id: The ID of the application that you want to deploy.
+:param pulumi.Input[str] deploy_group: The ID of the instance group to which you want to add ECS instances to scale out the application.
+:param pulumi.Input[list] ecu_infos: The IDs of the Elastic Compute Unit (ECU) where you want to deploy the application. Type: List.
+:param pulumi.Input[bool] force_status: This parameter specifies whether to forcibly remove an ECS instance where the application is deployed. It is set as true only after the ECS instance expires. In normal cases, this parameter do not need to be specified.</p>
 <dl class="py attribute">
 <dt id="pulumi_alicloud.edas.ApplicationScale.app_id">
 <code class="sig-name descname">app_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.edas.ApplicationScale.app_id" title="Permalink to this definition">¶</a></dt>
@@ -868,7 +830,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_alicloud.edas.SlbAttachment">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.edas.</code><code class="sig-name descname">SlbAttachment</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">app_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">listener_port</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">slb_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">slb_ip</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vserver_group_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.edas.SlbAttachment" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides an EDAS slb application attachment resource.</p>
+<dd><p>Binds SLB to an EDAS application.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in 1.82.0+</p>
 </div></blockquote>
