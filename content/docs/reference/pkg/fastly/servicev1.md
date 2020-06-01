@@ -18,9 +18,343 @@ The Service resource requires a domain name that is correctly set up to direct
 traffic to the Fastly service. See Fastly's guide on [Adding CNAME Records][fastly-cname]
 on their documentation site for guidance.
 
-{{% examples %}}
-{{% /examples %}}
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Basic usage
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Fastly = Pulumi.Fastly;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var demo = new Fastly.Servicev1("demo", new Fastly.Servicev1Args
+        {
+            Backends = 
+            {
+                new Fastly.Inputs.Servicev1BackendArgs
+                {
+                    Address = "127.0.0.1",
+                    Name = "localhost",
+                    Port = 80,
+                },
+            },
+            Domains = 
+            {
+                new Fastly.Inputs.Servicev1DomainArgs
+                {
+                    Comment = "demo",
+                    Name = "demo.notexample.com",
+                },
+            },
+            ForceDestroy = true,
+        });
+    }
+
+}
+```
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_fastly as fastly
+
+demo = fastly.Servicev1("demo",
+    backends=[{
+        "address": "127.0.0.1",
+        "name": "localhost",
+        "port": 80,
+    }],
+    domains=[{
+        "comment": "demo",
+        "name": "demo.notexample.com",
+    }],
+    force_destroy=True)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as fastly from "@pulumi/fastly";
+
+const demo = new fastly.Servicev1("demo", {
+    backends: [{
+        address: "127.0.0.1",
+        name: "localhost",
+        port: 80,
+    }],
+    domains: [{
+        comment: "demo",
+        name: "demo.notexample.com",
+    }],
+    forceDestroy: true,
+});
+```
+{{% /example %}}
+
+### Basic usage with custom VCL:
+{{% example csharp %}}
+```csharp
+using System.IO;
+using Pulumi;
+using Fastly = Pulumi.Fastly;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var demo = new Fastly.Servicev1("demo", new Fastly.Servicev1Args
+        {
+            Backends = 
+            {
+                new Fastly.Inputs.Servicev1BackendArgs
+                {
+                    Address = "127.0.0.1",
+                    Name = "localhost",
+                    Port = 80,
+                },
+            },
+            Domains = 
+            {
+                new Fastly.Inputs.Servicev1DomainArgs
+                {
+                    Comment = "demo",
+                    Name = "demo.notexample.com",
+                },
+            },
+            ForceDestroy = true,
+            Vcls = 
+            {
+                new Fastly.Inputs.Servicev1VclArgs
+                {
+                    Content = File.ReadAllText($"{path.Module}/my_custom_main.vcl"),
+                    Main = true,
+                    Name = "my_custom_main_vcl",
+                },
+                new Fastly.Inputs.Servicev1VclArgs
+                {
+                    Content = File.ReadAllText($"{path.Module}/my_custom_library.vcl"),
+                    Name = "my_custom_library_vcl",
+                },
+            },
+        });
+    }
+
+}
+```
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_fastly as fastly
+
+demo = fastly.Servicev1("demo",
+    backends=[{
+        "address": "127.0.0.1",
+        "name": "localhost",
+        "port": 80,
+    }],
+    domains=[{
+        "comment": "demo",
+        "name": "demo.notexample.com",
+    }],
+    force_destroy=True,
+    vcls=[
+        {
+            "content": (lambda path: open(path).read())(f"{path['module']}/my_custom_main.vcl"),
+            "main": True,
+            "name": "my_custom_main_vcl",
+        },
+        {
+            "content": (lambda path: open(path).read())(f"{path['module']}/my_custom_library.vcl"),
+            "name": "my_custom_library_vcl",
+        },
+    ])
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as fastly from "@pulumi/fastly";
+import * as fs from "fs";
+
+const demo = new fastly.Servicev1("demo", {
+    backends: [{
+        address: "127.0.0.1",
+        name: "localhost",
+        port: 80,
+    }],
+    domains: [{
+        comment: "demo",
+        name: "demo.notexample.com",
+    }],
+    forceDestroy: true,
+    vcls: [
+        {
+            content: fs.readFileSync(`./my_custom_main.vcl`, "utf-8"),
+            main: true,
+            name: "my_custom_main_vcl",
+        },
+        {
+            content: fs.readFileSync(`./my_custom_library.vcl`, "utf-8"),
+            name: "my_custom_library_vcl",
+        },
+    ],
+});
+```
+{{% /example %}}
+
+### Basic usage with custom Director
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Fastly = Pulumi.Fastly;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var demo = new Fastly.Servicev1("demo", new Fastly.Servicev1Args
+        {
+            Backends = 
+            {
+                new Fastly.Inputs.Servicev1BackendArgs
+                {
+                    Address = "127.0.0.1",
+                    Name = "origin1",
+                    Port = 80,
+                },
+                new Fastly.Inputs.Servicev1BackendArgs
+                {
+                    Address = "127.0.0.2",
+                    Name = "origin2",
+                    Port = 80,
+                },
+            },
+            Directors = 
+            {
+                new Fastly.Inputs.Servicev1DirectorArgs
+                {
+                    Backends = 
+                    {
+                        "origin1",
+                        "origin2",
+                    },
+                    Name = "mydirector",
+                    Quorum = 0,
+                    Type = 3,
+                },
+            },
+            Domains = 
+            {
+                new Fastly.Inputs.Servicev1DomainArgs
+                {
+                    Comment = "demo",
+                    Name = "demo.notexample.com",
+                },
+            },
+            ForceDestroy = true,
+        });
+    }
+
+}
+```
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_fastly as fastly
+
+demo = fastly.Servicev1("demo",
+    backends=[
+        {
+            "address": "127.0.0.1",
+            "name": "origin1",
+            "port": 80,
+        },
+        {
+            "address": "127.0.0.2",
+            "name": "origin2",
+            "port": 80,
+        },
+    ],
+    directors=[{
+        "backends": [
+            "origin1",
+            "origin2",
+        ],
+        "name": "mydirector",
+        "quorum": 0,
+        "type": 3,
+    }],
+    domains=[{
+        "comment": "demo",
+        "name": "demo.notexample.com",
+    }],
+    force_destroy=True)
+```
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as fastly from "@pulumi/fastly";
+
+const demo = new fastly.Servicev1("demo", {
+    backends: [
+        {
+            address: "127.0.0.1",
+            name: "origin1",
+            port: 80,
+        },
+        {
+            address: "127.0.0.2",
+            name: "origin2",
+            port: 80,
+        },
+    ],
+    directors: [{
+        backends: [
+            "origin1",
+            "origin2",
+        ],
+        name: "mydirector",
+        quorum: 0,
+        type: 3,
+    }],
+    domains: [{
+        comment: "demo",
+        name: "demo.notexample.com",
+    }],
+    forceDestroy: true,
+});
+```
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Servicev1 Resource {#create}
@@ -1754,7 +2088,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The latest cloned version by the provider. The value gets only set after running `pulumi up`.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1792,7 +2127,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The latest cloned version by the provider. The value gets only set after running `pulumi up`.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1830,7 +2166,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The latest cloned version by the provider. The value gets only set after running `pulumi up`.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1868,7 +2205,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The latest cloned version by the provider. The value gets only set after running `pulumi up`.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -2102,7 +2440,8 @@ Defined below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The latest cloned version by the provider. The value gets only set after running `pulumi up`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2503,7 +2842,8 @@ Defined below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The latest cloned version by the provider. The value gets only set after running `pulumi up`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2904,7 +3244,8 @@ Defined below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The latest cloned version by the provider. The value gets only set after running `pulumi up`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3305,7 +3646,8 @@ Defined below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The latest cloned version by the provider. The value gets only set after running `pulumi up`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3943,7 +4285,7 @@ Default `200`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Selected POP to serve as a "shield" for origin servers.
+    <dd>{{% md %}}Selected POP to serve as a "shield" for backends. Valid values for `shield` are included in the [`GET /datacenters`](https://docs.fastly.com/api/tools#datacenter) API response.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4229,7 +4571,7 @@ Default `200`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Selected POP to serve as a "shield" for origin servers.
+    <dd>{{% md %}}Selected POP to serve as a "shield" for backends. Valid values for `shield` are included in the [`GET /datacenters`](https://docs.fastly.com/api/tools#datacenter) API response.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4515,7 +4857,7 @@ Default `200`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Selected POP to serve as a "shield" for origin servers.
+    <dd>{{% md %}}Selected POP to serve as a "shield" for backends. Valid values for `shield` are included in the [`GET /datacenters`](https://docs.fastly.com/api/tools#datacenter) API response.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4801,7 +5143,7 @@ Default `200`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Selected POP to serve as a "shield" for origin servers.
+    <dd>{{% md %}}Selected POP to serve as a "shield" for backends. Valid values for `shield` are included in the [`GET /datacenters`](https://docs.fastly.com/api/tools#datacenter) API response.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6613,7 +6955,11 @@ see [Fastly's Documentation on Conditionals][fastly-conditionals].
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If `true`, the dictionary is a private dictionary, and items are not readable in the UI or
+via API. Default is `false`. It is important to note that changing this attribute will delete and recreate the
+dictionary, discard the current items in the dictionary. Using a write-only/private dictionary should only be done if
+the items are managed outside of the provider.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -6652,7 +6998,11 @@ see [Fastly's Documentation on Conditionals][fastly-conditionals].
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If `true`, the dictionary is a private dictionary, and items are not readable in the UI or
+via API. Default is `false`. It is important to note that changing this attribute will delete and recreate the
+dictionary, discard the current items in the dictionary. Using a write-only/private dictionary should only be done if
+the items are managed outside of the provider.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -6691,7 +7041,11 @@ see [Fastly's Documentation on Conditionals][fastly-conditionals].
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If `true`, the dictionary is a private dictionary, and items are not readable in the UI or
+via API. Default is `false`. It is important to note that changing this attribute will delete and recreate the
+dictionary, discard the current items in the dictionary. Using a write-only/private dictionary should only be done if
+the items are managed outside of the provider.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -6730,7 +7084,11 @@ see [Fastly's Documentation on Conditionals][fastly-conditionals].
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If `true`, the dictionary is a private dictionary, and items are not readable in the UI or
+via API. Default is `false`. It is important to note that changing this attribute will delete and recreate the
+dictionary, discard the current items in the dictionary. Using a write-only/private dictionary should only be done if
+the items are managed outside of the provider.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -6831,7 +7189,7 @@ see [Fastly's Documentation on Conditionals][fastly-conditionals].
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Selected POP to serve as a "shield" for origin servers.
+    <dd>{{% md %}}Selected POP to serve as a "shield" for backends. Valid values for `shield` are included in the [`GET /datacenters`](https://docs.fastly.com/api/tools#datacenter) API response.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6926,7 +7284,7 @@ see [Fastly's Documentation on Conditionals][fastly-conditionals].
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Selected POP to serve as a "shield" for origin servers.
+    <dd>{{% md %}}Selected POP to serve as a "shield" for backends. Valid values for `shield` are included in the [`GET /datacenters`](https://docs.fastly.com/api/tools#datacenter) API response.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -7021,7 +7379,7 @@ see [Fastly's Documentation on Conditionals][fastly-conditionals].
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Selected POP to serve as a "shield" for origin servers.
+    <dd>{{% md %}}Selected POP to serve as a "shield" for backends. Valid values for `shield` are included in the [`GET /datacenters`](https://docs.fastly.com/api/tools#datacenter) API response.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -7116,7 +7474,7 @@ see [Fastly's Documentation on Conditionals][fastly-conditionals].
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Selected POP to serve as a "shield" for origin servers.
+    <dd>{{% md %}}Selected POP to serve as a "shield" for backends. Valid values for `shield` are included in the [`GET /datacenters`](https://docs.fastly.com/api/tools#datacenter) API response.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

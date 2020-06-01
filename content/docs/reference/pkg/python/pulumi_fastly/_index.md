@@ -15,23 +15,29 @@ anything, please consult the source <a class="reference external" href="https://
 </div></blockquote>
 <span class="target" id="module-pulumi_fastly"></span><dl class="py class">
 <dt id="pulumi_fastly.AwaitableGetFastlyIpRangesResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_fastly.</code><code class="sig-name descname">AwaitableGetFastlyIpRangesResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cidr_blocks</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_fastly.AwaitableGetFastlyIpRangesResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_fastly.</code><code class="sig-name descname">AwaitableGetFastlyIpRangesResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cidr_blocks</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ipv6_cidr_blocks</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_fastly.AwaitableGetFastlyIpRangesResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py class">
 <dt id="pulumi_fastly.GetFastlyIpRangesResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_fastly.</code><code class="sig-name descname">GetFastlyIpRangesResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cidr_blocks</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_fastly.GetFastlyIpRangesResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_fastly.</code><code class="sig-name descname">GetFastlyIpRangesResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cidr_blocks</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ipv6_cidr_blocks</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_fastly.GetFastlyIpRangesResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getFastlyIpRanges.</p>
 <dl class="py attribute">
 <dt id="pulumi_fastly.GetFastlyIpRangesResult.cidr_blocks">
 <code class="sig-name descname">cidr_blocks</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_fastly.GetFastlyIpRangesResult.cidr_blocks" title="Permalink to this definition">¶</a></dt>
-<dd><p>The lexically ordered list of CIDR blocks.</p>
+<dd><p>The lexically ordered list of ipv4 CIDR blocks.</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt id="pulumi_fastly.GetFastlyIpRangesResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_fastly.GetFastlyIpRangesResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_fastly.GetFastlyIpRangesResult.ipv6_cidr_blocks">
+<code class="sig-name descname">ipv6_cidr_blocks</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_fastly.GetFastlyIpRangesResult.ipv6_cidr_blocks" title="Permalink to this definition">¶</a></dt>
+<dd><p>The lexically ordered list of ipv6 CIDR blocks.</p>
 </dd></dl>
 
 </dd></dl>
@@ -94,12 +100,99 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_fastly.ServiceACLEntriesv1">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_fastly.</code><code class="sig-name descname">ServiceACLEntriesv1</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">acl_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">entries</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_fastly.ServiceACLEntriesv1" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a ServiceACLEntriesv1 resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] acl_id: The ID of the ACL that the items belong to
-:param pulumi.Input[list] entries: A Set ACL entries that are applied to the service. Defined below
-:param pulumi.Input[str] service_id: The ID of the Service that the ACL belongs to</p>
+<dd><p>Defines a set of Fastly ACL entries that can be used to populate a service ACL.  This resource will populate an ACL with the entries and will track their state.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_fastly</span> <span class="k">as</span> <span class="nn">fastly</span>
+
+<span class="n">config</span> <span class="o">=</span> <span class="n">pulumi</span><span class="o">.</span><span class="n">Config</span><span class="p">()</span>
+<span class="n">myacl_name</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;myaclName&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">myacl_name</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">myacl_name</span> <span class="o">=</span> <span class="s2">&quot;My ACL&quot;</span>
+<span class="n">myservice</span> <span class="o">=</span> <span class="n">fastly</span><span class="o">.</span><span class="n">Servicev1</span><span class="p">(</span><span class="s2">&quot;myservice&quot;</span><span class="p">,</span>
+    <span class="n">domain</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;demo.notexample.com&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;comment&quot;</span><span class="p">:</span> <span class="s2">&quot;demo&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">backend</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;address&quot;</span><span class="p">:</span> <span class="s2">&quot;demo.notexample.com.s3-website-us-west-2.amazonaws.com&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;AWS S3 hosting&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;port&quot;</span><span class="p">:</span> <span class="mi">80</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">acl</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="n">myacl_name</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">force_destroy</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">entries</span> <span class="o">=</span> <span class="n">fastly</span><span class="o">.</span><span class="n">ServiceACLEntriesv1</span><span class="p">(</span><span class="s2">&quot;entries&quot;</span><span class="p">,</span>
+    <span class="n">service_id</span><span class="o">=</span><span class="n">myservice</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">acl_id</span><span class="o">=</span><span class="n">myservice</span><span class="o">.</span><span class="n">acls</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">acls</span><span class="p">:</span> <span class="p">{</span><span class="n">d</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">]:</span> <span class="n">d</span><span class="p">[</span><span class="s2">&quot;acl_id&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">acls</span><span class="p">}[</span><span class="n">myacl_name</span><span class="p">]),</span>
+    <span class="n">entry</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;ip&quot;</span><span class="p">:</span> <span class="s2">&quot;127.0.0.1&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;subnet&quot;</span><span class="p">:</span> <span class="s2">&quot;24&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;negated&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="s2">&quot;comment&quot;</span><span class="p">:</span> <span class="s2">&quot;ALC Entry 1&quot;</span><span class="p">,</span>
+    <span class="p">}])</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_fastly</span> <span class="k">as</span> <span class="nn">fastly</span>
+
+<span class="n">acl_name</span> <span class="o">=</span> <span class="s2">&quot;my_acl&quot;</span>
+<span class="n">acl_entries</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">{</span>
+        <span class="s2">&quot;ip&quot;</span><span class="p">:</span> <span class="s2">&quot;1.2.3.4&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;comment&quot;</span><span class="p">:</span> <span class="s2">&quot;acl_entry_1&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="s2">&quot;ip&quot;</span><span class="p">:</span> <span class="s2">&quot;1.2.3.5&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;comment&quot;</span><span class="p">:</span> <span class="s2">&quot;acl_entry_2&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="s2">&quot;ip&quot;</span><span class="p">:</span> <span class="s2">&quot;1.2.3.6&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;comment&quot;</span><span class="p">:</span> <span class="s2">&quot;acl_entry_3&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+<span class="p">]</span>
+<span class="n">myservice</span> <span class="o">=</span> <span class="n">fastly</span><span class="o">.</span><span class="n">Servicev1</span><span class="p">(</span><span class="s2">&quot;myservice&quot;</span><span class="p">,</span>
+    <span class="n">domain</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;demo.notexample.com&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;comment&quot;</span><span class="p">:</span> <span class="s2">&quot;demo&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">backend</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;address&quot;</span><span class="p">:</span> <span class="s2">&quot;1.2.3.4&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;localhost&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;port&quot;</span><span class="p">:</span> <span class="mi">80</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">acl</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="n">acl_name</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">force_destroy</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">entries</span> <span class="o">=</span> <span class="n">fastly</span><span class="o">.</span><span class="n">ServiceACLEntriesv1</span><span class="p">(</span><span class="s2">&quot;entries&quot;</span><span class="p">,</span>
+    <span class="n">service_id</span><span class="o">=</span><span class="n">myservice</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">acl_id</span><span class="o">=</span><span class="n">myservice</span><span class="o">.</span><span class="n">acls</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">acls</span><span class="p">:</span> <span class="p">{</span><span class="n">d</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">]:</span> <span class="n">d</span><span class="p">[</span><span class="s2">&quot;acl_id&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">acls</span><span class="p">}[</span><span class="n">acl_name</span><span class="p">]),</span>
+    <span class="n">dynamic</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;forEach&quot;</span><span class="p">:</span> <span class="p">[{</span>
+            <span class="s2">&quot;ip&quot;</span><span class="p">:</span> <span class="n">e</span><span class="p">[</span><span class="s2">&quot;ip&quot;</span><span class="p">],</span>
+            <span class="s2">&quot;comment&quot;</span><span class="p">:</span> <span class="n">e</span><span class="p">[</span><span class="s2">&quot;comment&quot;</span><span class="p">],</span>
+        <span class="p">}</span> <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">acl_entries</span><span class="p">],</span>
+        <span class="s2">&quot;content&quot;</span><span class="p">:</span> <span class="p">[{</span>
+            <span class="s2">&quot;ip&quot;</span><span class="p">:</span> <span class="n">entry</span><span class="p">[</span><span class="s2">&quot;value&quot;</span><span class="p">][</span><span class="s2">&quot;ip&quot;</span><span class="p">],</span>
+            <span class="s2">&quot;subnet&quot;</span><span class="p">:</span> <span class="mi">22</span><span class="p">,</span>
+            <span class="s2">&quot;comment&quot;</span><span class="p">:</span> <span class="n">entry</span><span class="p">[</span><span class="s2">&quot;value&quot;</span><span class="p">][</span><span class="s2">&quot;comment&quot;</span><span class="p">],</span>
+            <span class="s2">&quot;negated&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="p">}],</span>
+    <span class="p">}])</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>acl_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the ACL that the items belong to</p></li>
+<li><p><strong>entries</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A Set ACL entries that are applied to the service. Defined below</p></li>
+<li><p><strong>service_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Service that the ACL belongs to</p></li>
+</ul>
+</dd>
+</dl>
 <p>The <strong>entries</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">comment</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A personal freeform descriptive note</p></li>
@@ -201,12 +294,81 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_fastly.ServiceDictionaryItemsv1">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_fastly.</code><code class="sig-name descname">ServiceDictionaryItemsv1</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dictionary_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">items</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_fastly.ServiceDictionaryItemsv1" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a ServiceDictionaryItemsv1 resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] dictionary_id: The ID of the dictionary that the items belong to
-:param pulumi.Input[dict] items: A map representing an entry in the dictionary, (key/value)
-:param pulumi.Input[str] service_id: The ID of the service that the dictionary belongs to</p>
+<dd><p>Defines a map of Fastly dictionary items that can be used to populate a service dictionary.  This resource will populate a dictionary with the items and will track their state.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_fastly</span> <span class="k">as</span> <span class="nn">fastly</span>
+
+<span class="n">config</span> <span class="o">=</span> <span class="n">pulumi</span><span class="o">.</span><span class="n">Config</span><span class="p">()</span>
+<span class="n">mydict_name</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;mydictName&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">mydict_name</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">mydict_name</span> <span class="o">=</span> <span class="s2">&quot;My Dictionary&quot;</span>
+<span class="n">myservice</span> <span class="o">=</span> <span class="n">fastly</span><span class="o">.</span><span class="n">Servicev1</span><span class="p">(</span><span class="s2">&quot;myservice&quot;</span><span class="p">,</span>
+    <span class="n">domain</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;demo.notexample.com&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;comment&quot;</span><span class="p">:</span> <span class="s2">&quot;demo&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">backend</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;address&quot;</span><span class="p">:</span> <span class="s2">&quot;demo.notexample.com.s3-website-us-west-2.amazonaws.com&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;AWS S3 hosting&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;port&quot;</span><span class="p">:</span> <span class="mi">80</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">dictionary</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="n">mydict_name</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">force_destroy</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">items</span> <span class="o">=</span> <span class="n">fastly</span><span class="o">.</span><span class="n">ServiceDictionaryItemsv1</span><span class="p">(</span><span class="s2">&quot;items&quot;</span><span class="p">,</span>
+    <span class="n">service_id</span><span class="o">=</span><span class="n">myservice</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">dictionary_id</span><span class="o">=</span><span class="n">myservice</span><span class="o">.</span><span class="n">dictionaries</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">dictionaries</span><span class="p">:</span> <span class="p">{</span><span class="n">s</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">]:</span> <span class="n">s</span><span class="p">[</span><span class="s2">&quot;dictionary_id&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">dictionaries</span><span class="p">}[</span><span class="n">mydict_name</span><span class="p">]),</span>
+    <span class="n">items</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;key1&quot;</span><span class="p">:</span> <span class="s2">&quot;value1&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;key2&quot;</span><span class="p">:</span> <span class="s2">&quot;value2&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_fastly</span> <span class="k">as</span> <span class="nn">fastly</span>
+
+<span class="n">config</span> <span class="o">=</span> <span class="n">pulumi</span><span class="o">.</span><span class="n">Config</span><span class="p">()</span>
+<span class="n">mydict</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">get_object</span><span class="p">(</span><span class="s2">&quot;mydict&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">mydict</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">mydict</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;My Dictionary&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;items&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;key1&quot;</span><span class="p">:</span> <span class="s2">&quot;value1x&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;key2&quot;</span><span class="p">:</span> <span class="s2">&quot;value2x&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">}</span>
+<span class="n">myservice</span> <span class="o">=</span> <span class="n">fastly</span><span class="o">.</span><span class="n">Servicev1</span><span class="p">(</span><span class="s2">&quot;myservice&quot;</span><span class="p">,</span>
+    <span class="n">domain</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;demo.notexample.com&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;comment&quot;</span><span class="p">:</span> <span class="s2">&quot;demo&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">backend</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;address&quot;</span><span class="p">:</span> <span class="s2">&quot;demo.notexample.com.s3-website-us-west-2.amazonaws.com&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;AWS S3 hosting&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;port&quot;</span><span class="p">:</span> <span class="mi">80</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">dictionary</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="n">mydict</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">],</span>
+    <span class="p">}],</span>
+    <span class="n">force_destroy</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">items</span> <span class="o">=</span> <span class="n">fastly</span><span class="o">.</span><span class="n">ServiceDictionaryItemsv1</span><span class="p">(</span><span class="s2">&quot;items&quot;</span><span class="p">,</span>
+    <span class="n">service_id</span><span class="o">=</span><span class="n">myservice</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">dictionary_id</span><span class="o">=</span><span class="n">myservice</span><span class="o">.</span><span class="n">dictionaries</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">dictionaries</span><span class="p">:</span> <span class="p">{</span><span class="n">d</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">]:</span> <span class="n">d</span><span class="p">[</span><span class="s2">&quot;dictionary_id&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">dictionaries</span><span class="p">}[</span><span class="n">mydict</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">]]),</span>
+    <span class="n">items</span><span class="o">=</span><span class="n">mydict</span><span class="p">[</span><span class="s2">&quot;items&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>dictionary_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the dictionary that the items belong to</p></li>
+<li><p><strong>items</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map representing an entry in the dictionary, (key/value)</p></li>
+<li><p><strong>service_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the service that the dictionary belongs to</p></li>
+</ul>
+</dd>
+</dl>
 <dl class="py attribute">
 <dt id="pulumi_fastly.ServiceDictionaryItemsv1.dictionary_id">
 <code class="sig-name descname">dictionary_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_fastly.ServiceDictionaryItemsv1.dictionary_id" title="Permalink to this definition">¶</a></dt>
@@ -285,12 +447,87 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_fastly.ServiceDynamicSnippetContentv1">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_fastly.</code><code class="sig-name descname">ServiceDynamicSnippetContentv1</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">content</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">snippet_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_fastly.ServiceDynamicSnippetContentv1" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a ServiceDynamicSnippetContentv1 resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] content: The VCL code that specifies exactly what the snippet does.
-:param pulumi.Input[str] service_id: The ID of the service that the dynamic snippet belongs to
-:param pulumi.Input[str] snippet_id: The ID of the dynamic snippet that the content belong to</p>
+<dd><p>Defines content that represents blocks of VCL logic that is inserted into your service.  This resource will populate the content of a dynamic snippet and allow it to be manged without the creation of a new service verison.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_fastly</span> <span class="k">as</span> <span class="nn">fastly</span>
+
+<span class="n">myservice</span> <span class="o">=</span> <span class="n">fastly</span><span class="o">.</span><span class="n">Servicev1</span><span class="p">(</span><span class="s2">&quot;myservice&quot;</span><span class="p">,</span>
+    <span class="n">domain</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;snippet.fastlytestdomain.com&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;comment&quot;</span><span class="p">:</span> <span class="s2">&quot;snippet test&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">backend</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;address&quot;</span><span class="p">:</span> <span class="s2">&quot;tftesting.tftesting.net.s3-website-us-west-2.amazonaws.com&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;AWS S3 hosting&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;port&quot;</span><span class="p">:</span> <span class="mi">80</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">dynamicsnippet</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;My Dynamic Snippet&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;recv&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;priority&quot;</span><span class="p">:</span> <span class="mi">110</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">default_host</span><span class="o">=</span><span class="s2">&quot;tftesting.tftesting.net.s3-website-us-west-2.amazonaws.com&quot;</span><span class="p">,</span>
+    <span class="n">force_destroy</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">my_dyn_content</span> <span class="o">=</span> <span class="n">fastly</span><span class="o">.</span><span class="n">ServiceDynamicSnippetContentv1</span><span class="p">(</span><span class="s2">&quot;myDynContent&quot;</span><span class="p">,</span>
+    <span class="n">service_id</span><span class="o">=</span><span class="n">myservice</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">snippet_id</span><span class="o">=</span><span class="n">myservice</span><span class="o">.</span><span class="n">dynamicsnippets</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">dynamicsnippets</span><span class="p">:</span> <span class="p">{</span><span class="n">s</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">]:</span> <span class="n">s</span><span class="p">[</span><span class="s2">&quot;snippet_id&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">dynamicsnippets</span><span class="p">}[</span><span class="s2">&quot;My Dynamic Snippet&quot;</span><span class="p">]),</span>
+    <span class="n">content</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;if ( req.url ) {</span>
+<span class="s2"> set req.http.my-snippet-test-header = &quot;true&quot;;</span>
+<span class="s2">}&quot;&quot;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_fastly</span> <span class="k">as</span> <span class="nn">fastly</span>
+
+<span class="n">myservice</span> <span class="o">=</span> <span class="n">fastly</span><span class="o">.</span><span class="n">Servicev1</span><span class="p">(</span><span class="s2">&quot;myservice&quot;</span><span class="p">,</span>
+    <span class="n">domain</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;snippet.fastlytestdomain.com&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;comment&quot;</span><span class="p">:</span> <span class="s2">&quot;snippet test&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">backend</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;address&quot;</span><span class="p">:</span> <span class="s2">&quot;tftesting.tftesting.net.s3-website-us-west-2.amazonaws.com&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;AWS S3 hosting&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;port&quot;</span><span class="p">:</span> <span class="mi">80</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">dynamicsnippet</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;My Dynamic Snippet One&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;recv&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;priority&quot;</span><span class="p">:</span> <span class="mi">110</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;My Dynamic Snippet Two&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;recv&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;priority&quot;</span><span class="p">:</span> <span class="mi">110</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">],</span>
+    <span class="n">default_host</span><span class="o">=</span><span class="s2">&quot;tftesting.tftesting.net.s3-website-us-west-2.amazonaws.com&quot;</span><span class="p">,</span>
+    <span class="n">force_destroy</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">my_dyn_content_one</span> <span class="o">=</span> <span class="n">fastly</span><span class="o">.</span><span class="n">ServiceDynamicSnippetContentv1</span><span class="p">(</span><span class="s2">&quot;myDynContentOne&quot;</span><span class="p">,</span>
+    <span class="n">service_id</span><span class="o">=</span><span class="n">myservice</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">snippet_id</span><span class="o">=</span><span class="n">myservice</span><span class="o">.</span><span class="n">dynamicsnippets</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">dynamicsnippets</span><span class="p">:</span> <span class="p">{</span><span class="n">s</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">]:</span> <span class="n">s</span><span class="p">[</span><span class="s2">&quot;snippet_id&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">dynamicsnippets</span><span class="p">}[</span><span class="s2">&quot;My Dynamic Snippet One&quot;</span><span class="p">]),</span>
+    <span class="n">content</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;if ( req.url ) {</span>
+<span class="s2"> set req.http.my-snippet-test-header-one = &quot;true&quot;;</span>
+<span class="s2">}&quot;&quot;&quot;</span><span class="p">)</span>
+<span class="n">my_dyn_content_two</span> <span class="o">=</span> <span class="n">fastly</span><span class="o">.</span><span class="n">ServiceDynamicSnippetContentv1</span><span class="p">(</span><span class="s2">&quot;myDynContentTwo&quot;</span><span class="p">,</span>
+    <span class="n">service_id</span><span class="o">=</span><span class="n">myservice</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">snippet_id</span><span class="o">=</span><span class="n">myservice</span><span class="o">.</span><span class="n">dynamicsnippets</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">dynamicsnippets</span><span class="p">:</span> <span class="p">{</span><span class="n">s</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">]:</span> <span class="n">s</span><span class="p">[</span><span class="s2">&quot;snippet_id&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">dynamicsnippets</span><span class="p">}[</span><span class="s2">&quot;My Dynamic Snippet Two&quot;</span><span class="p">]),</span>
+    <span class="n">content</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;if ( req.url ) {</span>
+<span class="s2"> set req.http.my-snippet-test-header-two = &quot;true&quot;;</span>
+<span class="s2">}&quot;&quot;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>content</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The VCL code that specifies exactly what the snippet does.</p></li>
+<li><p><strong>service_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the service that the dynamic snippet belongs to</p></li>
+<li><p><strong>snippet_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the dynamic snippet that the content belong to</p></li>
+</ul>
+</dd>
+</dl>
 <dl class="py attribute">
 <dt id="pulumi_fastly.ServiceDynamicSnippetContentv1.content">
 <code class="sig-name descname">content</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_fastly.ServiceDynamicSnippetContentv1.content" title="Permalink to this definition">¶</a></dt>
@@ -375,6 +612,81 @@ and Backends.</p>
 <p>The Service resource requires a domain name that is correctly set up to direct
 traffic to the Fastly service. See Fastly’s guide on [Adding CNAME Records][fastly-cname]
 on their documentation site for guidance.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_fastly</span> <span class="k">as</span> <span class="nn">fastly</span>
+
+<span class="n">demo</span> <span class="o">=</span> <span class="n">fastly</span><span class="o">.</span><span class="n">Servicev1</span><span class="p">(</span><span class="s2">&quot;demo&quot;</span><span class="p">,</span>
+    <span class="n">backends</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;address&quot;</span><span class="p">:</span> <span class="s2">&quot;127.0.0.1&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;localhost&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;port&quot;</span><span class="p">:</span> <span class="mi">80</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">domains</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;comment&quot;</span><span class="p">:</span> <span class="s2">&quot;demo&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;demo.notexample.com&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">force_destroy</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_fastly</span> <span class="k">as</span> <span class="nn">fastly</span>
+
+<span class="n">demo</span> <span class="o">=</span> <span class="n">fastly</span><span class="o">.</span><span class="n">Servicev1</span><span class="p">(</span><span class="s2">&quot;demo&quot;</span><span class="p">,</span>
+    <span class="n">backends</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;address&quot;</span><span class="p">:</span> <span class="s2">&quot;127.0.0.1&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;localhost&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;port&quot;</span><span class="p">:</span> <span class="mi">80</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">domains</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;comment&quot;</span><span class="p">:</span> <span class="s2">&quot;demo&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;demo.notexample.com&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">force_destroy</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">vcls</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;content&quot;</span><span class="p">:</span> <span class="p">(</span><span class="k">lambda</span> <span class="n">path</span><span class="p">:</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">path</span><span class="p">[</span><span class="s1">&#39;module&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">/my_custom_main.vcl&quot;</span><span class="p">),</span>
+            <span class="s2">&quot;main&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;my_custom_main_vcl&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;content&quot;</span><span class="p">:</span> <span class="p">(</span><span class="k">lambda</span> <span class="n">path</span><span class="p">:</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">path</span><span class="p">[</span><span class="s1">&#39;module&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">/my_custom_library.vcl&quot;</span><span class="p">),</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;my_custom_library_vcl&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">])</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_fastly</span> <span class="k">as</span> <span class="nn">fastly</span>
+
+<span class="n">demo</span> <span class="o">=</span> <span class="n">fastly</span><span class="o">.</span><span class="n">Servicev1</span><span class="p">(</span><span class="s2">&quot;demo&quot;</span><span class="p">,</span>
+    <span class="n">backends</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;address&quot;</span><span class="p">:</span> <span class="s2">&quot;127.0.0.1&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;origin1&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;port&quot;</span><span class="p">:</span> <span class="mi">80</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;address&quot;</span><span class="p">:</span> <span class="s2">&quot;127.0.0.2&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;origin2&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;port&quot;</span><span class="p">:</span> <span class="mi">80</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">],</span>
+    <span class="n">directors</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;backends&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&quot;origin1&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;origin2&quot;</span><span class="p">,</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;mydirector&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;quorum&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">domains</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">&quot;comment&quot;</span><span class="p">:</span> <span class="s2">&quot;demo&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;demo.notexample.com&quot;</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="n">force_destroy</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -461,7 +773,7 @@ Default <code class="docutils literal notranslate"><span class="pre">200</span><
 <li><p><code class="docutils literal notranslate"><span class="pre">overrideHost</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The hostname to override the Host header.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The port number configured in Logentries to send logs to. Defaults to <code class="docutils literal notranslate"><span class="pre">20000</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">requestCondition</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Name of already defined <code class="docutils literal notranslate"><span class="pre">condition</span></code> to be checked during the request phase. If the condition passes then this object will be delivered. This <code class="docutils literal notranslate"><span class="pre">condition</span></code> must be of type <code class="docutils literal notranslate"><span class="pre">REQUEST</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">shield</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Selected POP to serve as a “shield” for origin servers.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">shield</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Selected POP to serve as a “shield” for backends. Valid values for <code class="docutils literal notranslate"><span class="pre">shield</span></code> are included in the <cite>``GET /datacenters`</cite> &lt;<a class="reference external" href="https://docs.fastly.com/api/tools#datacenter">https://docs.fastly.com/api/tools#datacenter</a>&gt;`_ API response.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sslCaCert</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - CA certificate attached to origin.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sslCertHostname</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Overrides ssl_hostname, but only for cert verification. Does not affect SNI at all.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sslCheckCert</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Be strict about checking SSL certs. Default <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
@@ -524,7 +836,10 @@ see [Fastly’s Documentation on Conditionals][fastly-conditionals].</p></li>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">dictionary_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the dictionary.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A unique name to identify this dictionary.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">writeOnly</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">writeOnly</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If <code class="docutils literal notranslate"><span class="pre">true</span></code>, the dictionary is a private dictionary, and items are not readable in the UI or
+via API. Default is <code class="docutils literal notranslate"><span class="pre">false</span></code>. It is important to note that changing this attribute will delete and recreate the
+dictionary, discard the current items in the dictionary. Using a write-only/private dictionary should only be done if
+the items are managed outside of the provider.</p></li>
 </ul>
 <p>The <strong>directors</strong> object supports the following:</p>
 <ul class="simple">
@@ -534,7 +849,7 @@ see [Fastly’s Documentation on Conditionals][fastly-conditionals].</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A unique name to identify this dictionary.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">quorum</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Percentage of capacity that needs to be up for the director itself to be considered up. Default <code class="docutils literal notranslate"><span class="pre">75</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">retries</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - How many backends to search if it fails. Default <code class="docutils literal notranslate"><span class="pre">5</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">shield</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Selected POP to serve as a “shield” for origin servers.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">shield</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Selected POP to serve as a “shield” for backends. Valid values for <code class="docutils literal notranslate"><span class="pre">shield</span></code> are included in the <cite>``GET /datacenters`</cite> &lt;<a class="reference external" href="https://docs.fastly.com/api/tools#datacenter">https://docs.fastly.com/api/tools#datacenter</a>&gt;`_ API response.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The location in generated VCL where the snippet should be placed (can be one of <code class="docutils literal notranslate"><span class="pre">init</span></code>, <code class="docutils literal notranslate"><span class="pre">recv</span></code>, <code class="docutils literal notranslate"><span class="pre">hit</span></code>, <code class="docutils literal notranslate"><span class="pre">miss</span></code>, <code class="docutils literal notranslate"><span class="pre">pass</span></code>, <code class="docutils literal notranslate"><span class="pre">fetch</span></code>, <code class="docutils literal notranslate"><span class="pre">error</span></code>, <code class="docutils literal notranslate"><span class="pre">deliver</span></code>, <code class="docutils literal notranslate"><span class="pre">log</span></code> or <code class="docutils literal notranslate"><span class="pre">none</span></code>).</p></li>
 </ul>
 <p>The <strong>domains</strong> object supports the following:</p>
@@ -809,7 +1124,7 @@ Default <code class="docutils literal notranslate"><span class="pre">200</span><
 <li><p><code class="docutils literal notranslate"><span class="pre">overrideHost</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The hostname to override the Host header.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The port number configured in Logentries to send logs to. Defaults to <code class="docutils literal notranslate"><span class="pre">20000</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">requestCondition</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Name of already defined <code class="docutils literal notranslate"><span class="pre">condition</span></code> to be checked during the request phase. If the condition passes then this object will be delivered. This <code class="docutils literal notranslate"><span class="pre">condition</span></code> must be of type <code class="docutils literal notranslate"><span class="pre">REQUEST</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">shield</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Selected POP to serve as a “shield” for origin servers.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">shield</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Selected POP to serve as a “shield” for backends. Valid values for <code class="docutils literal notranslate"><span class="pre">shield</span></code> are included in the <cite>``GET /datacenters`</cite> &lt;<a class="reference external" href="https://docs.fastly.com/api/tools#datacenter">https://docs.fastly.com/api/tools#datacenter</a>&gt;`_ API response.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sslCaCert</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - CA certificate attached to origin.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sslCertHostname</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Overrides ssl_hostname, but only for cert verification. Does not affect SNI at all.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sslCheckCert</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Be strict about checking SSL certs. Default <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
@@ -881,6 +1196,12 @@ see [Fastly’s Documentation on Conditionals][fastly-conditionals].</p></li>
 </dd></dl>
 
 <dl class="py attribute">
+<dt id="pulumi_fastly.Servicev1.cloned_version">
+<code class="sig-name descname">cloned_version</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_fastly.Servicev1.cloned_version" title="Permalink to this definition">¶</a></dt>
+<dd><p>The latest cloned version by the provider. The value gets only set after running <code class="docutils literal notranslate"><span class="pre">pulumi</span> <span class="pre">up</span></code>.</p>
+</dd></dl>
+
+<dl class="py attribute">
 <dt id="pulumi_fastly.Servicev1.comment">
 <code class="sig-name descname">comment</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_fastly.Servicev1.comment" title="Permalink to this definition">¶</a></dt>
 <dd><p>An optional comment about the Director.</p>
@@ -919,7 +1240,10 @@ requests.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">dictionary_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the dictionary.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A unique name to identify this dictionary.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">writeOnly</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">writeOnly</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - If <code class="docutils literal notranslate"><span class="pre">true</span></code>, the dictionary is a private dictionary, and items are not readable in the UI or
+via API. Default is <code class="docutils literal notranslate"><span class="pre">false</span></code>. It is important to note that changing this attribute will delete and recreate the
+dictionary, discard the current items in the dictionary. Using a write-only/private dictionary should only be done if
+the items are managed outside of the provider.</p></li>
 </ul>
 </dd></dl>
 
@@ -935,7 +1259,7 @@ when an item is not to be cached based on an above <code class="docutils literal
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A unique name to identify this dictionary.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">quorum</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Percentage of capacity that needs to be up for the director itself to be considered up. Default <code class="docutils literal notranslate"><span class="pre">75</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">retries</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - How many backends to search if it fails. Default <code class="docutils literal notranslate"><span class="pre">5</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">shield</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Selected POP to serve as a “shield” for origin servers.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">shield</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Selected POP to serve as a “shield” for backends. Valid values for <code class="docutils literal notranslate"><span class="pre">shield</span></code> are included in the <cite>``GET /datacenters`</cite> &lt;<a class="reference external" href="https://docs.fastly.com/api/tools#datacenter">https://docs.fastly.com/api/tools#datacenter</a>&gt;`_ API response.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The location in generated VCL where the snippet should be placed (can be one of <code class="docutils literal notranslate"><span class="pre">init</span></code>, <code class="docutils literal notranslate"><span class="pre">recv</span></code>, <code class="docutils literal notranslate"><span class="pre">hit</span></code>, <code class="docutils literal notranslate"><span class="pre">miss</span></code>, <code class="docutils literal notranslate"><span class="pre">pass</span></code>, <code class="docutils literal notranslate"><span class="pre">fetch</span></code>, <code class="docutils literal notranslate"><span class="pre">error</span></code>, <code class="docutils literal notranslate"><span class="pre">deliver</span></code>, <code class="docutils literal notranslate"><span class="pre">log</span></code> or <code class="docutils literal notranslate"><span class="pre">none</span></code>).</p></li>
 </ul>
 </dd></dl>
@@ -1304,6 +1628,7 @@ Defined below.</p></li>
 <li><p><strong>blobstorageloggings</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – An Azure Blob Storage endpoint to send streaming logs too.
 Defined below.</p></li>
 <li><p><strong>cache_settings</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A set of Cache Settings, allowing you to override</p></li>
+<li><p><strong>cloned_version</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The latest cloned version by the provider. The value gets only set after running <code class="docutils literal notranslate"><span class="pre">pulumi</span> <span class="pre">up</span></code>.</p></li>
 <li><p><strong>comment</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An optional comment about the Director.</p></li>
 <li><p><strong>conditions</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A set of conditions to add logic to any basic
 configuration object in this service. Defined below.</p></li>
@@ -1376,7 +1701,7 @@ Default <code class="docutils literal notranslate"><span class="pre">200</span><
 <li><p><code class="docutils literal notranslate"><span class="pre">overrideHost</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The hostname to override the Host header.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The port number configured in Logentries to send logs to. Defaults to <code class="docutils literal notranslate"><span class="pre">20000</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">requestCondition</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Name of already defined <code class="docutils literal notranslate"><span class="pre">condition</span></code> to be checked during the request phase. If the condition passes then this object will be delivered. This <code class="docutils literal notranslate"><span class="pre">condition</span></code> must be of type <code class="docutils literal notranslate"><span class="pre">REQUEST</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">shield</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Selected POP to serve as a “shield” for origin servers.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">shield</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Selected POP to serve as a “shield” for backends. Valid values for <code class="docutils literal notranslate"><span class="pre">shield</span></code> are included in the <cite>``GET /datacenters`</cite> &lt;<a class="reference external" href="https://docs.fastly.com/api/tools#datacenter">https://docs.fastly.com/api/tools#datacenter</a>&gt;`_ API response.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sslCaCert</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - CA certificate attached to origin.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sslCertHostname</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Overrides ssl_hostname, but only for cert verification. Does not affect SNI at all.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sslCheckCert</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Be strict about checking SSL certs. Default <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
@@ -1439,7 +1764,10 @@ see [Fastly’s Documentation on Conditionals][fastly-conditionals].</p></li>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">dictionary_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the dictionary.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A unique name to identify this dictionary.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">writeOnly</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">writeOnly</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If <code class="docutils literal notranslate"><span class="pre">true</span></code>, the dictionary is a private dictionary, and items are not readable in the UI or
+via API. Default is <code class="docutils literal notranslate"><span class="pre">false</span></code>. It is important to note that changing this attribute will delete and recreate the
+dictionary, discard the current items in the dictionary. Using a write-only/private dictionary should only be done if
+the items are managed outside of the provider.</p></li>
 </ul>
 <p>The <strong>directors</strong> object supports the following:</p>
 <ul class="simple">
@@ -1449,7 +1777,7 @@ see [Fastly’s Documentation on Conditionals][fastly-conditionals].</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A unique name to identify this dictionary.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">quorum</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Percentage of capacity that needs to be up for the director itself to be considered up. Default <code class="docutils literal notranslate"><span class="pre">75</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">retries</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - How many backends to search if it fails. Default <code class="docutils literal notranslate"><span class="pre">5</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">shield</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Selected POP to serve as a “shield” for origin servers.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">shield</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Selected POP to serve as a “shield” for backends. Valid values for <code class="docutils literal notranslate"><span class="pre">shield</span></code> are included in the <cite>``GET /datacenters`</cite> &lt;<a class="reference external" href="https://docs.fastly.com/api/tools#datacenter">https://docs.fastly.com/api/tools#datacenter</a>&gt;`_ API response.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The location in generated VCL where the snippet should be placed (can be one of <code class="docutils literal notranslate"><span class="pre">init</span></code>, <code class="docutils literal notranslate"><span class="pre">recv</span></code>, <code class="docutils literal notranslate"><span class="pre">hit</span></code>, <code class="docutils literal notranslate"><span class="pre">miss</span></code>, <code class="docutils literal notranslate"><span class="pre">pass</span></code>, <code class="docutils literal notranslate"><span class="pre">fetch</span></code>, <code class="docutils literal notranslate"><span class="pre">error</span></code>, <code class="docutils literal notranslate"><span class="pre">deliver</span></code>, <code class="docutils literal notranslate"><span class="pre">log</span></code> or <code class="docutils literal notranslate"><span class="pre">none</span></code>).</p></li>
 </ul>
 <p>The <strong>domains</strong> object supports the following:</p>
@@ -1827,6 +2155,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <span class="n">from_fastly</span> <span class="o">=</span> <span class="n">aws</span><span class="o">.</span><span class="n">ec2</span><span class="o">.</span><span class="n">SecurityGroup</span><span class="p">(</span><span class="s2">&quot;fromFastly&quot;</span><span class="p">,</span> <span class="n">ingress</span><span class="o">=</span><span class="p">[{</span>
     <span class="s2">&quot;cidr_blocks&quot;</span><span class="p">:</span> <span class="n">fastly</span><span class="o">.</span><span class="n">cidr_blocks</span><span class="p">,</span>
     <span class="s2">&quot;from_port&quot;</span><span class="p">:</span> <span class="s2">&quot;443&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;ipv6_cidr_blocks&quot;</span><span class="p">:</span> <span class="n">fastly</span><span class="o">.</span><span class="n">ipv6_cidr_blocks</span><span class="p">,</span>
     <span class="s2">&quot;protocol&quot;</span><span class="p">:</span> <span class="s2">&quot;tcp&quot;</span><span class="p">,</span>
     <span class="s2">&quot;to_port&quot;</span><span class="p">:</span> <span class="s2">&quot;443&quot;</span><span class="p">,</span>
 <span class="p">}])</span>
