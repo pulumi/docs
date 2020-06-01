@@ -47,11 +47,11 @@ main:
     # URL for embedding a URL for ungated webinars.
     youtube_url: ""
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2020-06-03T11:00:00-07:00
+    sortable_date: 2020-06-22T11:00:00-07:00
     # Duration of the webinar.
     duration: 1 hour
     # Datetime of the webinar.
-    datetime: "WED, JUNE 3, 2020, 11:00 AM PDT"
+    datetime: "MON, JUNE 22, 2020, 11:00 AM PDT"
     # Description of the webinar.
     description: |
         With Pulumi you can add infrastructure tests and policies to your CircleCI pipelines
