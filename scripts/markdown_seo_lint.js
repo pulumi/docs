@@ -261,6 +261,8 @@ const opts = {
         MD023: false,
         // Allow blank lines in blockquotes.
         MD028: false,
+        // Allow indentation in unordered lists.
+        MD007: false,
     },
 };
 
