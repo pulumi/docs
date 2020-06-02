@@ -1,7 +1,7 @@
 ---
 # Name of the webinar.
-title: "AWS - Howdy Partner on Twitch"
-meta_desc: "Pulumi VP of Engineering Lee Zen shares the ins and outs of how Pulumi supports your application and infrastructure needs."
+title: "AWS - Howdy Partner"
+meta_desc: "Watch Pulumi VP of Engineering Lee Zen builds servless applications in realtime, using both Python and TypeScript."
 
 block_external_search_index: true
 
@@ -9,7 +9,7 @@ block_external_search_index: true
 featured: false
 
 # If the video is pre-recorded or live.
-pre_recorded: false
+pre_recorded: true
 
 # If the video is part of the PulumiTV series. Setting this value to true will list the video in the "PulumiTV" section.
 pulumi_tv: false
@@ -33,7 +33,7 @@ external: true
 
 # The url slug for the webinar landing page. If this is an external
 # webinar, use the external URL as the value here.
-url_slug: "https://www.twitch.tv/aws"
+url_slug: "https://www.twitch.tv/videos/639379105"
 
 # The content of the hero section.
 hero:
