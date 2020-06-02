@@ -81,7 +81,7 @@ Pulumi is not just for developers; operators can leverage it to manage Kubernete
 
 ![Helm support](helm_manifest.gif)
 
-- **Crosswalk for Kubernetes** – Our kubernetesx library makes it easier to manage Kubernetes resources by abstracting away a lot of the boilerplate. This dramatically cuts the amount of code you need to write, while still giving you access to the full API surface if you need it. Read about kubernetesx on our [blog] ({{< relref "/blog/introducing-kx" >}}).
+- **Extension libraries** – Our kubernetesx library makes it easier to manage Kubernetes resources by abstracting away a lot of the boilerplate. This dramatically cuts the amount of code you need to write, while still giving you access to the full API surface if you need it. Read about kubernetesx on our [blog] ({{< relref "/blog/introducing-kx" >}}).
 
 - **YAML export** – Pulumi lets you [export YAML manifests]({{< relref "/blog/kubernetes-yaml-generation" >}}) from the resource definitions in your program. This can be useful for integrating with other systems that expect Kubernetes YAML.
 
