@@ -27,7 +27,7 @@ from the Amazon Certificate Manager.</p>
 This resource does not deal with validation of a certificate but can provide inputs
 for other resources implementing the validation. It does not wait for a certificate to be issued.
 Use a <code class="docutils literal notranslate"><span class="pre">acm.CertificateValidation</span></code> resource for this.</p>
-<p>Most commonly, this resource is used to together with <code class="docutils literal notranslate"><span class="pre">route53.Record</span></code> and
+<p>Most commonly, this resource is used together with <code class="docutils literal notranslate"><span class="pre">route53.Record</span></code> and
 <code class="docutils literal notranslate"><span class="pre">acm.CertificateValidation</span></code> to request a DNS validated certificate,
 deploy the required validation records and wait for validation to complete.</p>
 <p>Domain validation through E-Mail is also supported but should be avoided as it requires a manual step outside

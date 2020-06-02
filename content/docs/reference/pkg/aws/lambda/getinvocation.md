@@ -274,16 +274,16 @@ The following output properties are available:
     <dd>{{% md %}}String result of the lambda function invocation.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="resultmap_csharp">
 <a href="#resultmap_csharp" style="color: inherit; text-decoration: inherit;">Result<wbr>Map</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}This field is set only if result is a map of primitive types, where the map is string keys and string values.
-{{% /md %}}</dd>
+    <dd>{{% md %}}(**DEPRECATED**) This field is set only if result is a map of primitive types, where the map is string keys and string values.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `result` attribute with jsondecode() function{{% /md %}}</p></dd>
 
     <dt class="property-"
             title="">
@@ -344,16 +344,16 @@ The following output properties are available:
     <dd>{{% md %}}String result of the lambda function invocation.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="resultmap_go">
 <a href="#resultmap_go" style="color: inherit; text-decoration: inherit;">Result<wbr>Map</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}This field is set only if result is a map of primitive types, where the map is string keys and string values.
-{{% /md %}}</dd>
+    <dd>{{% md %}}(**DEPRECATED**) This field is set only if result is a map of primitive types, where the map is string keys and string values.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `result` attribute with jsondecode() function{{% /md %}}</p></dd>
 
     <dt class="property-"
             title="">
@@ -414,16 +414,16 @@ The following output properties are available:
     <dd>{{% md %}}String result of the lambda function invocation.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="resultmap_nodejs">
 <a href="#resultmap_nodejs" style="color: inherit; text-decoration: inherit;">result<wbr>Map</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}This field is set only if result is a map of primitive types, where the map is string keys and string values.
-{{% /md %}}</dd>
+    <dd>{{% md %}}(**DEPRECATED**) This field is set only if result is a map of primitive types, where the map is string keys and string values.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `result` attribute with jsondecode() function{{% /md %}}</p></dd>
 
     <dt class="property-"
             title="">
@@ -484,16 +484,16 @@ The following output properties are available:
     <dd>{{% md %}}String result of the lambda function invocation.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="result_map_python">
 <a href="#result_map_python" style="color: inherit; text-decoration: inherit;">result_<wbr>map</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
-    <dd>{{% md %}}This field is set only if result is a map of primitive types, where the map is string keys and string values.
-{{% /md %}}</dd>
+    <dd>{{% md %}}(**DEPRECATED**) This field is set only if result is a map of primitive types, where the map is string keys and string values.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `result` attribute with jsondecode() function{{% /md %}}</p></dd>
 
     <dt class="property-"
             title="">

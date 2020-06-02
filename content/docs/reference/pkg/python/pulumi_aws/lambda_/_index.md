@@ -1188,7 +1188,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py attribute">
 <dt id="pulumi_aws.lambda_.GetInvocationResult.result_map">
 <code class="sig-name descname">result_map</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.lambda_.GetInvocationResult.result_map" title="Permalink to this definition">¶</a></dt>
-<dd><p>This field is set only if result is a map of primitive types, where the map is string keys and string values.</p>
+<dd><p>(<strong>DEPRECATED</strong>) This field is set only if result is a map of primitive types, where the map is string keys and string values.</p>
 </dd></dl>
 
 </dd></dl>
@@ -1454,8 +1454,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_aws.lambda_.Permission">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.lambda_.</code><code class="sig-name descname">Permission</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">action</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">event_source_token</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">function</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">principal</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">qualifier</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">source_account</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">source_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">statement_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">statement_id_prefix</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.lambda_.Permission" title="Permalink to this definition">¶</a></dt>
-<dd><p>Creates a Lambda permission to allow external sources invoking the Lambda function
-(e.g. CloudWatch Event Rule, SNS or S3).</p>
+<dd><p>Gives an external source (like a CloudWatch Event Rule, SNS, or S3) permission to access the Lambda function.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_aws</span> <span class="k">as</span> <span class="nn">aws</span>
 
@@ -1552,12 +1551,11 @@ such as <code class="docutils literal notranslate"><span class="pre">events.amaz
 The permission will then apply to the specific qualified ARN.
 e.g. <code class="docutils literal notranslate"><span class="pre">arn:aws:lambda:aws-region:acct-id:function:function-name:2</span></code></p></li>
 <li><p><strong>source_account</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – This parameter is used for S3 and SES. The AWS account ID (without a hyphen) of the source owner.</p></li>
-<li><p><strong>source_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – When granting Amazon S3 or CloudWatch Events permission to
-invoke your function, you should specify this field with the Amazon Resource Name (ARN)
-for the S3 Bucket or CloudWatch Events Rule as its value.  This ensures that only events
-generated from the specified bucket or rule can invoke the function.
-API Gateway ARNs have a unique structure described
-<a class="reference external" href="http://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-control-access-using-iam-policies-to-invoke-api.html">here</a>.</p></li>
+<li><p><strong>source_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – When the principal is an AWS service, the ARN of the specific resource within that service to grant permission to.
+Without this, any resource from <code class="docutils literal notranslate"><span class="pre">principal</span></code> will be granted permission – even if that resource is from another account.
+For S3, this should be the ARN of the S3 Bucket.
+For CloudWatch Events, this should be the ARN of the CloudWatch Events Rule.
+For API Gateway, this should be the ARN of the API, as described <a class="reference external" href="https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-control-access-using-iam-policies-to-invoke-api.html">here</a>.</p></li>
 <li><p><strong>statement_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A unique statement identifier. By default generated by this provider.</p></li>
 <li><p><strong>statement_id_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A statement identifier prefix. This provider will generate a unique suffix. Conflicts with <code class="docutils literal notranslate"><span class="pre">statement_id</span></code>.</p></li>
 </ul>
@@ -1606,12 +1604,11 @@ e.g. <code class="docutils literal notranslate"><span class="pre">arn:aws:lambda
 <dl class="py attribute">
 <dt id="pulumi_aws.lambda_.Permission.source_arn">
 <code class="sig-name descname">source_arn</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.lambda_.Permission.source_arn" title="Permalink to this definition">¶</a></dt>
-<dd><p>When granting Amazon S3 or CloudWatch Events permission to
-invoke your function, you should specify this field with the Amazon Resource Name (ARN)
-for the S3 Bucket or CloudWatch Events Rule as its value.  This ensures that only events
-generated from the specified bucket or rule can invoke the function.
-API Gateway ARNs have a unique structure described
-<a class="reference external" href="http://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-control-access-using-iam-policies-to-invoke-api.html">here</a>.</p>
+<dd><p>When the principal is an AWS service, the ARN of the specific resource within that service to grant permission to.
+Without this, any resource from <code class="docutils literal notranslate"><span class="pre">principal</span></code> will be granted permission – even if that resource is from another account.
+For S3, this should be the ARN of the S3 Bucket.
+For CloudWatch Events, this should be the ARN of the CloudWatch Events Rule.
+For API Gateway, this should be the ARN of the API, as described <a class="reference external" href="https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-control-access-using-iam-policies-to-invoke-api.html">here</a>.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -1648,12 +1645,11 @@ such as <code class="docutils literal notranslate"><span class="pre">events.amaz
 The permission will then apply to the specific qualified ARN.
 e.g. <code class="docutils literal notranslate"><span class="pre">arn:aws:lambda:aws-region:acct-id:function:function-name:2</span></code></p></li>
 <li><p><strong>source_account</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – This parameter is used for S3 and SES. The AWS account ID (without a hyphen) of the source owner.</p></li>
-<li><p><strong>source_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>When granting Amazon S3 or CloudWatch Events permission to
-invoke your function, you should specify this field with the Amazon Resource Name (ARN)
-for the S3 Bucket or CloudWatch Events Rule as its value.  This ensures that only events
-generated from the specified bucket or rule can invoke the function.
-API Gateway ARNs have a unique structure described
-<a class="reference external" href="http://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-control-access-using-iam-policies-to-invoke-api.html">here</a>.</p>
+<li><p><strong>source_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>When the principal is an AWS service, the ARN of the specific resource within that service to grant permission to.
+Without this, any resource from <code class="docutils literal notranslate"><span class="pre">principal</span></code> will be granted permission – even if that resource is from another account.
+For S3, this should be the ARN of the S3 Bucket.
+For CloudWatch Events, this should be the ARN of the CloudWatch Events Rule.
+For API Gateway, this should be the ARN of the API, as described <a class="reference external" href="https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-control-access-using-iam-policies-to-invoke-api.html">here</a>.</p>
 </p></li>
 <li><p><strong>statement_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A unique statement identifier. By default generated by this provider.</p></li>
 <li><p><strong>statement_id_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A statement identifier prefix. This provider will generate a unique suffix. Conflicts with <code class="docutils literal notranslate"><span class="pre">statement_id</span></code>.</p></li>

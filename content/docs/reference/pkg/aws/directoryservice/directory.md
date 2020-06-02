@@ -2218,6 +2218,17 @@ The following state arguments are supported:
     <dd>{{% md %}}The identifier of the VPC that the directory is in.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="connectips_csharp">
+<a href="#connectips_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Ips</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The IP addresses of the AD Connector servers.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -2267,6 +2278,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The identifier of the VPC that the directory is in.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="connectips_go">
+<a href="#connectips_go" style="color: inherit; text-decoration: inherit;">Connect<wbr>Ips</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}The IP addresses of the AD Connector servers.
 {{% /md %}}</dd>
 
 </dl>
@@ -2320,6 +2342,17 @@ The following state arguments are supported:
     <dd>{{% md %}}The identifier of the VPC that the directory is in.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="connectips_nodejs">
+<a href="#connectips_nodejs" style="color: inherit; text-decoration: inherit;">connect<wbr>Ips</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}The IP addresses of the AD Connector servers.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -2369,6 +2402,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The identifier of the VPC that the directory is in.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="connectips_python">
+<a href="#connectips_python" style="color: inherit; text-decoration: inherit;">connect<wbr>Ips</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}The IP addresses of the AD Connector servers.
 {{% /md %}}</dd>
 
 </dl>

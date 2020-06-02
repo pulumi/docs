@@ -612,7 +612,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <p>The <strong>capacity_provider_strategies</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">base</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of tasks, at a minimum, to run on the specified capacity provider. Only one capacity provider in a capacity provider strategy can have a base defined.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">capacityProvider</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The short name or full Amazon Resource Name (ARN) of the capacity provider.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">capacityProvider</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The short name of the capacity provider.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">weight</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The relative percentage of the total number of launched tasks that should use the specified capacity provider.</p></li>
 </ul>
 <p>The <strong>deployment_controller</strong> object supports the following:</p>
@@ -662,7 +662,7 @@ Guide</a>.</p></li>
 <dd><p>The capacity provider strategy to use for the service. Can be one or more.  Defined below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">base</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The number of tasks, at a minimum, to run on the specified capacity provider. Only one capacity provider in a capacity provider strategy can have a base defined.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">capacityProvider</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The short name or full Amazon Resource Name (ARN) of the capacity provider.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">capacityProvider</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The short name of the capacity provider.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">weight</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The relative percentage of the total number of launched tasks that should use the specified capacity provider.</p></li>
 </ul>
 </dd></dl>
@@ -875,7 +875,7 @@ properties used to qualify the lookup.</p>
 <p>The <strong>capacity_provider_strategies</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">base</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of tasks, at a minimum, to run on the specified capacity provider. Only one capacity provider in a capacity provider strategy can have a base defined.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">capacityProvider</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The short name or full Amazon Resource Name (ARN) of the capacity provider.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">capacityProvider</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The short name of the capacity provider.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">weight</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The relative percentage of the total number of launched tasks that should use the specified capacity provider.</p></li>
 </ul>
 <p>The <strong>deployment_controller</strong> object supports the following:</p>

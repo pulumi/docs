@@ -232,6 +232,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 <p>The <strong>connect_settings</strong> object supports the following:</p>
 <ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">connectIps</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The IP addresses of the AD Connector servers.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">customerDnsIps</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The DNS IP addresses of the domain to connect to.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">customerUsername</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The username corresponding to the password provided.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">subnet_ids</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The identifiers of the subnets for the directory servers (2 subnets in 2 different AZs).</p></li>
@@ -259,6 +260,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">connect_settings</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.directoryservice.Directory.connect_settings" title="Permalink to this definition">¶</a></dt>
 <dd><p>Connector related information about the directory. Fields documented below.</p>
 <ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">connectIps</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - The IP addresses of the AD Connector servers.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">customerDnsIps</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - The DNS IP addresses of the domain to connect to.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">customerUsername</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The username corresponding to the password provided.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">subnet_ids</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - The identifiers of the subnets for the directory servers (2 subnets in 2 different AZs).</p></li>
@@ -373,6 +375,7 @@ properties used to qualify the lookup.</p>
 </dl>
 <p>The <strong>connect_settings</strong> object supports the following:</p>
 <ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">connectIps</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The IP addresses of the AD Connector servers.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">customerDnsIps</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The DNS IP addresses of the domain to connect to.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">customerUsername</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The username corresponding to the password provided.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">subnet_ids</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The identifiers of the subnets for the directory servers (2 subnets in 2 different AZs).</p></li>

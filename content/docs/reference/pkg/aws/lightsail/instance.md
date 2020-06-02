@@ -807,7 +807,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ramsize_csharp" style="color: inherit; text-decoration: inherit;">Ram<wbr>Size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -921,7 +921,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ramsize_go" style="color: inherit; text-decoration: inherit;">Ram<wbr>Size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1035,7 +1035,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ramsize_nodejs" style="color: inherit; text-decoration: inherit;">ram<wbr>Size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1437,7 +1437,7 @@ Lightsail console (cannot use `aws.ec2.KeyPair` at this time)
 <a href="#state_ramsize_csharp" style="color: inherit; text-decoration: inherit;">Ram<wbr>Size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1621,7 +1621,7 @@ Lightsail console (cannot use `aws.ec2.KeyPair` at this time)
 <a href="#state_ramsize_go" style="color: inherit; text-decoration: inherit;">Ram<wbr>Size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1805,7 +1805,7 @@ Lightsail console (cannot use `aws.ec2.KeyPair` at this time)
 <a href="#state_ramsize_nodejs" style="color: inherit; text-decoration: inherit;">ram<wbr>Size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

@@ -525,9 +525,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Specifies whether any cluster modifications
-are applied immediately, or during the next maintenance window. Default is
-`false`. See [Amazon RDS Documentation for more information.](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.DBInstance.Modifying.html)
+    <dd>{{% md %}}Specifies whether any cluster modifications are applied immediately, or during the next maintenance window. Default is `false`. See [Amazon RDS Documentation for more information.](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.DBInstance.Modifying.html)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -538,7 +536,7 @@ are applied immediately, or during the next maintenance window. Default is
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of EC2 Availability Zones for the DB cluster storage where DB cluster instances can be created. RDS automatically assigns 3 AZs if less than 3 AZs are configured, which will show as a difference requiring resource recreation next deployment. It is recommended to specify 3 AZs or use `ignore_changes` if necessary.
+    <dd>{{% md %}}A list of EC2 Availability Zones for the DB cluster storage where DB cluster instances can be created. RDS automatically assigns 3 AZs if less than 3 AZs are configured, which will show as a difference requiring resource recreation next provider update. It is recommended to specify 3 AZs or use [the `ignoreChanges` argument](https://www.pulumi.com/docs/intro/concepts/programming-model/#ignorechanges) if necessary.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -670,8 +668,7 @@ are applied immediately, or during the next maintenance window. Default is
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of log types to export to cloudwatch. If omitted, no logs will be exported.
-The following log types are supported: `audit`, `error`, `general`, `slowquery`, `postgresql` (PostgreSQL).
+    <dd>{{% md %}}List of log types to export to cloudwatch. If omitted, no logs will be exported. The following log types are supported: `audit`, `error`, `general`, `slowquery`, `postgresql` (PostgreSQL).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -715,9 +712,7 @@ The following log types are supported: `audit`, `error`, `general`, `slowquery`,
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of your final DB snapshot
-when this DB cluster is deleted. If omitted, no final snapshot will be
-made.
+    <dd>{{% md %}}The name of your final DB snapshot when this DB cluster is deleted. If omitted, no final snapshot will be made.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -772,8 +767,7 @@ made.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Password for the master DB user. Note that this may
-show up in logs, and it will be stored in the state file. Please refer to the [RDS Naming Constraints](http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Limits.html#RDS_Limits.Constraints)
+    <dd>{{% md %}}Password for the master DB user. Note that this may show up in logs, and it will be stored in the state file. Please refer to the [RDS Naming Constraints](http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Limits.html#RDS_Limits.Constraints)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -806,8 +800,7 @@ show up in logs, and it will be stored in the state file. Please refer to the [R
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The daily time range during which automated backups are created if automated backups are enabled using the BackupRetentionPeriod parameter.Time in UTC
-Default: A 30-minute window selected at random from an 8-hour block of time per region. e.g. 04:00-09:00
+    <dd>{{% md %}}The daily time range during which automated backups are created if automated backups are enabled using the BackupRetentionPeriod parameter.Time in UTC. Default: A 30-minute window selected at random from an 8-hour block of time per region. e.g. 04:00-09:00
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -916,8 +909,7 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of VPC security groups to associate
-with the Cluster
+    <dd>{{% md %}}List of VPC security groups to associate with the Cluster
 {{% /md %}}</dd>
 
 </dl>
@@ -935,9 +927,7 @@ with the Cluster
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Specifies whether any cluster modifications
-are applied immediately, or during the next maintenance window. Default is
-`false`. See [Amazon RDS Documentation for more information.](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.DBInstance.Modifying.html)
+    <dd>{{% md %}}Specifies whether any cluster modifications are applied immediately, or during the next maintenance window. Default is `false`. See [Amazon RDS Documentation for more information.](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.DBInstance.Modifying.html)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -948,7 +938,7 @@ are applied immediately, or during the next maintenance window. Default is
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}A list of EC2 Availability Zones for the DB cluster storage where DB cluster instances can be created. RDS automatically assigns 3 AZs if less than 3 AZs are configured, which will show as a difference requiring resource recreation next deployment. It is recommended to specify 3 AZs or use `ignore_changes` if necessary.
+    <dd>{{% md %}}A list of EC2 Availability Zones for the DB cluster storage where DB cluster instances can be created. RDS automatically assigns 3 AZs if less than 3 AZs are configured, which will show as a difference requiring resource recreation next provider update. It is recommended to specify 3 AZs or use [the `ignoreChanges` argument](https://www.pulumi.com/docs/intro/concepts/programming-model/#ignorechanges) if necessary.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1080,8 +1070,7 @@ are applied immediately, or during the next maintenance window. Default is
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}List of log types to export to cloudwatch. If omitted, no logs will be exported.
-The following log types are supported: `audit`, `error`, `general`, `slowquery`, `postgresql` (PostgreSQL).
+    <dd>{{% md %}}List of log types to export to cloudwatch. If omitted, no logs will be exported. The following log types are supported: `audit`, `error`, `general`, `slowquery`, `postgresql` (PostgreSQL).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1125,9 +1114,7 @@ The following log types are supported: `audit`, `error`, `general`, `slowquery`,
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of your final DB snapshot
-when this DB cluster is deleted. If omitted, no final snapshot will be
-made.
+    <dd>{{% md %}}The name of your final DB snapshot when this DB cluster is deleted. If omitted, no final snapshot will be made.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1182,8 +1169,7 @@ made.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Password for the master DB user. Note that this may
-show up in logs, and it will be stored in the state file. Please refer to the [RDS Naming Constraints](http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Limits.html#RDS_Limits.Constraints)
+    <dd>{{% md %}}Password for the master DB user. Note that this may show up in logs, and it will be stored in the state file. Please refer to the [RDS Naming Constraints](http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Limits.html#RDS_Limits.Constraints)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1216,8 +1202,7 @@ show up in logs, and it will be stored in the state file. Please refer to the [R
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The daily time range during which automated backups are created if automated backups are enabled using the BackupRetentionPeriod parameter.Time in UTC
-Default: A 30-minute window selected at random from an 8-hour block of time per region. e.g. 04:00-09:00
+    <dd>{{% md %}}The daily time range during which automated backups are created if automated backups are enabled using the BackupRetentionPeriod parameter.Time in UTC. Default: A 30-minute window selected at random from an 8-hour block of time per region. e.g. 04:00-09:00
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1326,8 +1311,7 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}List of VPC security groups to associate
-with the Cluster
+    <dd>{{% md %}}List of VPC security groups to associate with the Cluster
 {{% /md %}}</dd>
 
 </dl>
@@ -1345,9 +1329,7 @@ with the Cluster
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Specifies whether any cluster modifications
-are applied immediately, or during the next maintenance window. Default is
-`false`. See [Amazon RDS Documentation for more information.](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.DBInstance.Modifying.html)
+    <dd>{{% md %}}Specifies whether any cluster modifications are applied immediately, or during the next maintenance window. Default is `false`. See [Amazon RDS Documentation for more information.](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.DBInstance.Modifying.html)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1358,7 +1340,7 @@ are applied immediately, or during the next maintenance window. Default is
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of EC2 Availability Zones for the DB cluster storage where DB cluster instances can be created. RDS automatically assigns 3 AZs if less than 3 AZs are configured, which will show as a difference requiring resource recreation next deployment. It is recommended to specify 3 AZs or use `ignore_changes` if necessary.
+    <dd>{{% md %}}A list of EC2 Availability Zones for the DB cluster storage where DB cluster instances can be created. RDS automatically assigns 3 AZs if less than 3 AZs are configured, which will show as a difference requiring resource recreation next provider update. It is recommended to specify 3 AZs or use [the `ignoreChanges` argument](https://www.pulumi.com/docs/intro/concepts/programming-model/#ignorechanges) if necessary.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1490,8 +1472,7 @@ are applied immediately, or during the next maintenance window. Default is
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}List of log types to export to cloudwatch. If omitted, no logs will be exported.
-The following log types are supported: `audit`, `error`, `general`, `slowquery`, `postgresql` (PostgreSQL).
+    <dd>{{% md %}}List of log types to export to cloudwatch. If omitted, no logs will be exported. The following log types are supported: `audit`, `error`, `general`, `slowquery`, `postgresql` (PostgreSQL).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1535,9 +1516,7 @@ The following log types are supported: `audit`, `error`, `general`, `slowquery`,
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of your final DB snapshot
-when this DB cluster is deleted. If omitted, no final snapshot will be
-made.
+    <dd>{{% md %}}The name of your final DB snapshot when this DB cluster is deleted. If omitted, no final snapshot will be made.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1592,8 +1571,7 @@ made.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Password for the master DB user. Note that this may
-show up in logs, and it will be stored in the state file. Please refer to the [RDS Naming Constraints](http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Limits.html#RDS_Limits.Constraints)
+    <dd>{{% md %}}Password for the master DB user. Note that this may show up in logs, and it will be stored in the state file. Please refer to the [RDS Naming Constraints](http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Limits.html#RDS_Limits.Constraints)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1626,8 +1604,7 @@ show up in logs, and it will be stored in the state file. Please refer to the [R
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The daily time range during which automated backups are created if automated backups are enabled using the BackupRetentionPeriod parameter.Time in UTC
-Default: A 30-minute window selected at random from an 8-hour block of time per region. e.g. 04:00-09:00
+    <dd>{{% md %}}The daily time range during which automated backups are created if automated backups are enabled using the BackupRetentionPeriod parameter.Time in UTC. Default: A 30-minute window selected at random from an 8-hour block of time per region. e.g. 04:00-09:00
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1736,8 +1713,7 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}List of VPC security groups to associate
-with the Cluster
+    <dd>{{% md %}}List of VPC security groups to associate with the Cluster
 {{% /md %}}</dd>
 
 </dl>
@@ -1755,9 +1731,7 @@ with the Cluster
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Specifies whether any cluster modifications
-are applied immediately, or during the next maintenance window. Default is
-`false`. See [Amazon RDS Documentation for more information.](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.DBInstance.Modifying.html)
+    <dd>{{% md %}}Specifies whether any cluster modifications are applied immediately, or during the next maintenance window. Default is `false`. See [Amazon RDS Documentation for more information.](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.DBInstance.Modifying.html)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1768,7 +1742,7 @@ are applied immediately, or during the next maintenance window. Default is
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}A list of EC2 Availability Zones for the DB cluster storage where DB cluster instances can be created. RDS automatically assigns 3 AZs if less than 3 AZs are configured, which will show as a difference requiring resource recreation next deployment. It is recommended to specify 3 AZs or use `ignore_changes` if necessary.
+    <dd>{{% md %}}A list of EC2 Availability Zones for the DB cluster storage where DB cluster instances can be created. RDS automatically assigns 3 AZs if less than 3 AZs are configured, which will show as a difference requiring resource recreation next provider update. It is recommended to specify 3 AZs or use [the `ignoreChanges` argument](https://www.pulumi.com/docs/intro/concepts/programming-model/#ignorechanges) if necessary.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1900,8 +1874,7 @@ are applied immediately, or during the next maintenance window. Default is
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}List of log types to export to cloudwatch. If omitted, no logs will be exported.
-The following log types are supported: `audit`, `error`, `general`, `slowquery`, `postgresql` (PostgreSQL).
+    <dd>{{% md %}}List of log types to export to cloudwatch. If omitted, no logs will be exported. The following log types are supported: `audit`, `error`, `general`, `slowquery`, `postgresql` (PostgreSQL).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1945,9 +1918,7 @@ The following log types are supported: `audit`, `error`, `general`, `slowquery`,
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of your final DB snapshot
-when this DB cluster is deleted. If omitted, no final snapshot will be
-made.
+    <dd>{{% md %}}The name of your final DB snapshot when this DB cluster is deleted. If omitted, no final snapshot will be made.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2002,8 +1973,7 @@ made.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Password for the master DB user. Note that this may
-show up in logs, and it will be stored in the state file. Please refer to the [RDS Naming Constraints](http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Limits.html#RDS_Limits.Constraints)
+    <dd>{{% md %}}Password for the master DB user. Note that this may show up in logs, and it will be stored in the state file. Please refer to the [RDS Naming Constraints](http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Limits.html#RDS_Limits.Constraints)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2036,8 +2006,7 @@ show up in logs, and it will be stored in the state file. Please refer to the [R
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The daily time range during which automated backups are created if automated backups are enabled using the BackupRetentionPeriod parameter.Time in UTC
-Default: A 30-minute window selected at random from an 8-hour block of time per region. e.g. 04:00-09:00
+    <dd>{{% md %}}The daily time range during which automated backups are created if automated backups are enabled using the BackupRetentionPeriod parameter.Time in UTC. Default: A 30-minute window selected at random from an 8-hour block of time per region. e.g. 04:00-09:00
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2146,8 +2115,7 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}List of VPC security groups to associate
-with the Cluster
+    <dd>{{% md %}}List of VPC security groups to associate with the Cluster
 {{% /md %}}</dd>
 
 </dl>
@@ -2594,9 +2562,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Specifies whether any cluster modifications
-are applied immediately, or during the next maintenance window. Default is
-`false`. See [Amazon RDS Documentation for more information.](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.DBInstance.Modifying.html)
+    <dd>{{% md %}}Specifies whether any cluster modifications are applied immediately, or during the next maintenance window. Default is `false`. See [Amazon RDS Documentation for more information.](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.DBInstance.Modifying.html)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2618,7 +2584,7 @@ are applied immediately, or during the next maintenance window. Default is
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of EC2 Availability Zones for the DB cluster storage where DB cluster instances can be created. RDS automatically assigns 3 AZs if less than 3 AZs are configured, which will show as a difference requiring resource recreation next deployment. It is recommended to specify 3 AZs or use `ignore_changes` if necessary.
+    <dd>{{% md %}}A list of EC2 Availability Zones for the DB cluster storage where DB cluster instances can be created. RDS automatically assigns 3 AZs if less than 3 AZs are configured, which will show as a difference requiring resource recreation next provider update. It is recommended to specify 3 AZs or use [the `ignoreChanges` argument](https://www.pulumi.com/docs/intro/concepts/programming-model/#ignorechanges) if necessary.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2761,8 +2727,7 @@ are applied immediately, or during the next maintenance window. Default is
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of log types to export to cloudwatch. If omitted, no logs will be exported.
-The following log types are supported: `audit`, `error`, `general`, `slowquery`, `postgresql` (PostgreSQL).
+    <dd>{{% md %}}List of log types to export to cloudwatch. If omitted, no logs will be exported. The following log types are supported: `audit`, `error`, `general`, `slowquery`, `postgresql` (PostgreSQL).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2817,9 +2782,7 @@ The following log types are supported: `audit`, `error`, `general`, `slowquery`,
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of your final DB snapshot
-when this DB cluster is deleted. If omitted, no final snapshot will be
-made.
+    <dd>{{% md %}}The name of your final DB snapshot when this DB cluster is deleted. If omitted, no final snapshot will be made.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2885,8 +2848,7 @@ made.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Password for the master DB user. Note that this may
-show up in logs, and it will be stored in the state file. Please refer to the [RDS Naming Constraints](http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Limits.html#RDS_Limits.Constraints)
+    <dd>{{% md %}}Password for the master DB user. Note that this may show up in logs, and it will be stored in the state file. Please refer to the [RDS Naming Constraints](http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Limits.html#RDS_Limits.Constraints)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2919,8 +2881,7 @@ show up in logs, and it will be stored in the state file. Please refer to the [R
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The daily time range during which automated backups are created if automated backups are enabled using the BackupRetentionPeriod parameter.Time in UTC
-Default: A 30-minute window selected at random from an 8-hour block of time per region. e.g. 04:00-09:00
+    <dd>{{% md %}}The daily time range during which automated backups are created if automated backups are enabled using the BackupRetentionPeriod parameter.Time in UTC. Default: A 30-minute window selected at random from an 8-hour block of time per region. e.g. 04:00-09:00
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3041,8 +3002,7 @@ load-balanced across replicas
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of VPC security groups to associate
-with the Cluster
+    <dd>{{% md %}}List of VPC security groups to associate with the Cluster
 {{% /md %}}</dd>
 
 </dl>
@@ -3060,9 +3020,7 @@ with the Cluster
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Specifies whether any cluster modifications
-are applied immediately, or during the next maintenance window. Default is
-`false`. See [Amazon RDS Documentation for more information.](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.DBInstance.Modifying.html)
+    <dd>{{% md %}}Specifies whether any cluster modifications are applied immediately, or during the next maintenance window. Default is `false`. See [Amazon RDS Documentation for more information.](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.DBInstance.Modifying.html)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3084,7 +3042,7 @@ are applied immediately, or during the next maintenance window. Default is
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}A list of EC2 Availability Zones for the DB cluster storage where DB cluster instances can be created. RDS automatically assigns 3 AZs if less than 3 AZs are configured, which will show as a difference requiring resource recreation next deployment. It is recommended to specify 3 AZs or use `ignore_changes` if necessary.
+    <dd>{{% md %}}A list of EC2 Availability Zones for the DB cluster storage where DB cluster instances can be created. RDS automatically assigns 3 AZs if less than 3 AZs are configured, which will show as a difference requiring resource recreation next provider update. It is recommended to specify 3 AZs or use [the `ignoreChanges` argument](https://www.pulumi.com/docs/intro/concepts/programming-model/#ignorechanges) if necessary.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3227,8 +3185,7 @@ are applied immediately, or during the next maintenance window. Default is
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}List of log types to export to cloudwatch. If omitted, no logs will be exported.
-The following log types are supported: `audit`, `error`, `general`, `slowquery`, `postgresql` (PostgreSQL).
+    <dd>{{% md %}}List of log types to export to cloudwatch. If omitted, no logs will be exported. The following log types are supported: `audit`, `error`, `general`, `slowquery`, `postgresql` (PostgreSQL).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3283,9 +3240,7 @@ The following log types are supported: `audit`, `error`, `general`, `slowquery`,
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of your final DB snapshot
-when this DB cluster is deleted. If omitted, no final snapshot will be
-made.
+    <dd>{{% md %}}The name of your final DB snapshot when this DB cluster is deleted. If omitted, no final snapshot will be made.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3351,8 +3306,7 @@ made.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Password for the master DB user. Note that this may
-show up in logs, and it will be stored in the state file. Please refer to the [RDS Naming Constraints](http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Limits.html#RDS_Limits.Constraints)
+    <dd>{{% md %}}Password for the master DB user. Note that this may show up in logs, and it will be stored in the state file. Please refer to the [RDS Naming Constraints](http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Limits.html#RDS_Limits.Constraints)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3385,8 +3339,7 @@ show up in logs, and it will be stored in the state file. Please refer to the [R
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The daily time range during which automated backups are created if automated backups are enabled using the BackupRetentionPeriod parameter.Time in UTC
-Default: A 30-minute window selected at random from an 8-hour block of time per region. e.g. 04:00-09:00
+    <dd>{{% md %}}The daily time range during which automated backups are created if automated backups are enabled using the BackupRetentionPeriod parameter.Time in UTC. Default: A 30-minute window selected at random from an 8-hour block of time per region. e.g. 04:00-09:00
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3507,8 +3460,7 @@ load-balanced across replicas
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}List of VPC security groups to associate
-with the Cluster
+    <dd>{{% md %}}List of VPC security groups to associate with the Cluster
 {{% /md %}}</dd>
 
 </dl>
@@ -3526,9 +3478,7 @@ with the Cluster
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Specifies whether any cluster modifications
-are applied immediately, or during the next maintenance window. Default is
-`false`. See [Amazon RDS Documentation for more information.](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.DBInstance.Modifying.html)
+    <dd>{{% md %}}Specifies whether any cluster modifications are applied immediately, or during the next maintenance window. Default is `false`. See [Amazon RDS Documentation for more information.](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.DBInstance.Modifying.html)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3550,7 +3500,7 @@ are applied immediately, or during the next maintenance window. Default is
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of EC2 Availability Zones for the DB cluster storage where DB cluster instances can be created. RDS automatically assigns 3 AZs if less than 3 AZs are configured, which will show as a difference requiring resource recreation next deployment. It is recommended to specify 3 AZs or use `ignore_changes` if necessary.
+    <dd>{{% md %}}A list of EC2 Availability Zones for the DB cluster storage where DB cluster instances can be created. RDS automatically assigns 3 AZs if less than 3 AZs are configured, which will show as a difference requiring resource recreation next provider update. It is recommended to specify 3 AZs or use [the `ignoreChanges` argument](https://www.pulumi.com/docs/intro/concepts/programming-model/#ignorechanges) if necessary.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3693,8 +3643,7 @@ are applied immediately, or during the next maintenance window. Default is
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}List of log types to export to cloudwatch. If omitted, no logs will be exported.
-The following log types are supported: `audit`, `error`, `general`, `slowquery`, `postgresql` (PostgreSQL).
+    <dd>{{% md %}}List of log types to export to cloudwatch. If omitted, no logs will be exported. The following log types are supported: `audit`, `error`, `general`, `slowquery`, `postgresql` (PostgreSQL).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3749,9 +3698,7 @@ The following log types are supported: `audit`, `error`, `general`, `slowquery`,
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of your final DB snapshot
-when this DB cluster is deleted. If omitted, no final snapshot will be
-made.
+    <dd>{{% md %}}The name of your final DB snapshot when this DB cluster is deleted. If omitted, no final snapshot will be made.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3817,8 +3764,7 @@ made.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Password for the master DB user. Note that this may
-show up in logs, and it will be stored in the state file. Please refer to the [RDS Naming Constraints](http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Limits.html#RDS_Limits.Constraints)
+    <dd>{{% md %}}Password for the master DB user. Note that this may show up in logs, and it will be stored in the state file. Please refer to the [RDS Naming Constraints](http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Limits.html#RDS_Limits.Constraints)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3851,8 +3797,7 @@ show up in logs, and it will be stored in the state file. Please refer to the [R
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The daily time range during which automated backups are created if automated backups are enabled using the BackupRetentionPeriod parameter.Time in UTC
-Default: A 30-minute window selected at random from an 8-hour block of time per region. e.g. 04:00-09:00
+    <dd>{{% md %}}The daily time range during which automated backups are created if automated backups are enabled using the BackupRetentionPeriod parameter.Time in UTC. Default: A 30-minute window selected at random from an 8-hour block of time per region. e.g. 04:00-09:00
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3973,8 +3918,7 @@ load-balanced across replicas
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}List of VPC security groups to associate
-with the Cluster
+    <dd>{{% md %}}List of VPC security groups to associate with the Cluster
 {{% /md %}}</dd>
 
 </dl>
@@ -3992,9 +3936,7 @@ with the Cluster
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Specifies whether any cluster modifications
-are applied immediately, or during the next maintenance window. Default is
-`false`. See [Amazon RDS Documentation for more information.](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.DBInstance.Modifying.html)
+    <dd>{{% md %}}Specifies whether any cluster modifications are applied immediately, or during the next maintenance window. Default is `false`. See [Amazon RDS Documentation for more information.](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.DBInstance.Modifying.html)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4016,7 +3958,7 @@ are applied immediately, or during the next maintenance window. Default is
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}A list of EC2 Availability Zones for the DB cluster storage where DB cluster instances can be created. RDS automatically assigns 3 AZs if less than 3 AZs are configured, which will show as a difference requiring resource recreation next deployment. It is recommended to specify 3 AZs or use `ignore_changes` if necessary.
+    <dd>{{% md %}}A list of EC2 Availability Zones for the DB cluster storage where DB cluster instances can be created. RDS automatically assigns 3 AZs if less than 3 AZs are configured, which will show as a difference requiring resource recreation next provider update. It is recommended to specify 3 AZs or use [the `ignoreChanges` argument](https://www.pulumi.com/docs/intro/concepts/programming-model/#ignorechanges) if necessary.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4159,8 +4101,7 @@ are applied immediately, or during the next maintenance window. Default is
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}List of log types to export to cloudwatch. If omitted, no logs will be exported.
-The following log types are supported: `audit`, `error`, `general`, `slowquery`, `postgresql` (PostgreSQL).
+    <dd>{{% md %}}List of log types to export to cloudwatch. If omitted, no logs will be exported. The following log types are supported: `audit`, `error`, `general`, `slowquery`, `postgresql` (PostgreSQL).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4215,9 +4156,7 @@ The following log types are supported: `audit`, `error`, `general`, `slowquery`,
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of your final DB snapshot
-when this DB cluster is deleted. If omitted, no final snapshot will be
-made.
+    <dd>{{% md %}}The name of your final DB snapshot when this DB cluster is deleted. If omitted, no final snapshot will be made.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4283,8 +4222,7 @@ made.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Password for the master DB user. Note that this may
-show up in logs, and it will be stored in the state file. Please refer to the [RDS Naming Constraints](http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Limits.html#RDS_Limits.Constraints)
+    <dd>{{% md %}}Password for the master DB user. Note that this may show up in logs, and it will be stored in the state file. Please refer to the [RDS Naming Constraints](http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Limits.html#RDS_Limits.Constraints)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4317,8 +4255,7 @@ show up in logs, and it will be stored in the state file. Please refer to the [R
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The daily time range during which automated backups are created if automated backups are enabled using the BackupRetentionPeriod parameter.Time in UTC
-Default: A 30-minute window selected at random from an 8-hour block of time per region. e.g. 04:00-09:00
+    <dd>{{% md %}}The daily time range during which automated backups are created if automated backups are enabled using the BackupRetentionPeriod parameter.Time in UTC. Default: A 30-minute window selected at random from an 8-hour block of time per region. e.g. 04:00-09:00
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4439,8 +4376,7 @@ load-balanced across replicas
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}List of VPC security groups to associate
-with the Cluster
+    <dd>{{% md %}}List of VPC security groups to associate with the Cluster
 {{% /md %}}</dd>
 
 </dl>
