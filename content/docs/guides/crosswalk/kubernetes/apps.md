@@ -1017,7 +1017,7 @@ Coming soon.
 
 ## Learn More
 
-To learn more about Kubernetes deployment and how to work with Kubernetes and Pulumi, check out the
+To learn more about how to work with Kubernetes and Pulumi, check out the
 [Kubernetes Tutorials][k8s-tutorials] for details.
 
 [k8s-tutorials]: {{< relref "/docs/tutorials/kubernetes" >}}
