@@ -61,7 +61,7 @@ frontendService, err := corev1.NewService(ctx, “frontent”, &corev1.ServiceAr
 
 - **Readiness logic** – Pulumi includes readiness logic to help you understand when your Kubernetes resources are ready. This makes it easy to integrate Kubernetes workflows into CI systems! Unlike `kubectl apply`, Pulumi doesn’t indicate success until all of the resources are ready to go. You won’t have to use `kubectl get …” repeated to see if resources are available.
 
-![Readiness logig](rediness_logig.gif)
+![Readiness logic](readiness_logic.gif)
 
 - **Deprecation warnings** – Pulumi warns you if you’re using Kubernetes resources with deprecated apiVersions, and gives you info about which versions remove them entirely. Don’t be caught by surprise when you upgrade your clusters!
 
