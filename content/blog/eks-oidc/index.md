@@ -1,5 +1,5 @@
 ---
-date: "2020-05-29"
+date: "2020-06-02"
 title: "Access Control for Pods on Amazon EKS"
 authors: ["mike-metral"]
 tags: ["EKS", "RBAC", "Kubernetes"]
