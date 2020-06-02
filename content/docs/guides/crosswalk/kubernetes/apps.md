@@ -1,5 +1,5 @@
 ---
-title: Kubernetes App Deployment
+title: Deploy Kubernetes Apps
 meta_desc: This page gives you an overview on how to deploy Kubernetes applications to different cloud providers.
 menu:
   userguides:
@@ -8,7 +8,7 @@ menu:
     weight: 9
 ---
 
-The following are examples of Kubernetes deployment with Pulumi — how to create and use various types of Kubernetes
+The following are examples of how to create and use various types of Kubernetes
 resources, and typical apps and workloads.
 
 {{< chooser cloud "aws,azure,gcp" / >}}
