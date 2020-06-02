@@ -10,7 +10,7 @@ tags:
     - kubernetes
 ---
 
-You’ve containerized your application, and it’s running great on your desktop using Docker Compose or even Swarm. But now it’s time to test it locally with minikube and then put it into production with Kubernetes. Manifests are a bit like Compose files - it’s just YAML, right?
+You’ve containerized your application, and it’s running great on your desktop using Docker Compose or Swarm. But now it’s time to test it locally with minikube and then put it into production with Kubernetes. Manifests are a bit like Compose files - it’s just YAML, right?
 
 <!--more-->
 
