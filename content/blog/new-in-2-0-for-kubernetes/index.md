@@ -5,7 +5,7 @@ meta_desc: "New features for Kubernetes in Pulumi 2.0 managing workloads and clu
 meta_image: meta.png
 authors:
     - mike-metral
-    -levi-blackstone
+    - levi-blackstone
 tags:
     - kubernetes
 ---
@@ -101,6 +101,6 @@ Kubernetes clusters come in different shapes and sizes, and with various operati
 
 As our community continues to grow, we’re committed to improving our Kubernetes experience even further.. You can help to shape this experience directly by providing feedback on [GitHub](https://github.com/pulumi/pulumi-kubernetes/). We love to hear from our users!
 
-Learn more about how [Pulumi works with Kubernetes]({{< relref "/docs/intro/cloud-providers/kubernetes" >}}), and [Get Started]({{< relref "/docs/get-started/kubernetes/" >}}) if you're new.
+Learn more about how [Pulumi works with Kubernetes]({{< relref "/docs/intro/cloud-providers/kubernetes" >}}), and [Get Started]({{< relref "/docs/get-started/kubernetes" >}}) if you're new.
 
 You can explore more content by checking out [PulumiTV on YouTube](http://youtube.com/pulumitv), work through Kubernetes [tutorials]({{< relref "/docs/tutorials/kubernetes" >}}) to dive deeper, and join the [Community Slack](https://slack.pulumi.com/) to engage with users and the Pulumi team.
